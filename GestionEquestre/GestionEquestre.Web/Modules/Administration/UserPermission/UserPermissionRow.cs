@@ -6,7 +6,7 @@ namespace GestionEquestre.Administration.Entities
     using System;
     using System.ComponentModel;
 
-    [ConnectionKey("Default"), DisplayName("UserPermissions"), InstanceName("UserPermissions"), TwoLevelCached]
+    [ConnectionKey("GE"), DisplayName("UserPermissions"), InstanceName("UserPermissions"), TwoLevelCached]
     [ReadPermission(PermissionKeys.Security)]
     [ModifyPermission(PermissionKeys.Security)]
     public sealed class UserPermissionRow : Row, IIdRow, INameRow

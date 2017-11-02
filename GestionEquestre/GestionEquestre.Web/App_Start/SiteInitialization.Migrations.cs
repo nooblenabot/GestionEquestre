@@ -13,7 +13,7 @@
     public static partial class SiteInitialization
     { 
         private static string[] databaseKeys = new[] {
-            "Default"
+            "GE"
         };
 
         /// <summary>
@@ -151,13 +151,33 @@
 
             // safety check to ensure that we are not modifying an arbitrary database.
             // remove these lines if you want GestionEquestre migrations to run on your DB.
+            //safety check for master run
+
             if (!isOracle && cs.ConnectionString.IndexOf(typeof(SiteInitialization).Namespace +
-                    @"_" + databaseKey + "_v1", StringComparison.OrdinalIgnoreCase) < 0)
+                    @"_v1", StringComparison.OrdinalIgnoreCase) < 0)
             {
                 SkippedMigrations = true;
                 return;
             }
 
+
+            //safety check for dev only
+            /*
+            if (!isOracle && cs.ConnectionString.IndexOf(@"GEDEV", StringComparison.OrdinalIgnoreCase) < 0)
+            {
+                SkippedMigrations = true;
+                return;
+            }
+            */
+            /*
+            // original
+            if (!isOracle && cs.ConnectionString.IndexOf(typeof(SiteInitialization).Namespace +
+        @"_" + databaseKey + "_v1", StringComparison.OrdinalIgnoreCase) < 0)
+            {
+                SkippedMigrations = true;
+                return;
+            }
+            */
             string databaseType = isOracle ? "OracleManaged" : serverType;
             var connectionString = cs.ConnectionString;
 

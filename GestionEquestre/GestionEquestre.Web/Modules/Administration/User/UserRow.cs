@@ -7,7 +7,7 @@ namespace GestionEquestre.Administration.Entities
     using System;
     using System.ComponentModel;
 
-    [ConnectionKey("Default"), TableName("Users"), DisplayName("Users"), InstanceName("User"), TwoLevelCached]
+    [ConnectionKey("GE"), TableName("Users"), DisplayName("Users"), InstanceName("User"), TwoLevelCached]
     [ReadPermission(PermissionKeys.Security)]
     [ModifyPermission(PermissionKeys.Security)]
     [LookupScript("Administration.User", Permission = PermissionKeys.Security)]

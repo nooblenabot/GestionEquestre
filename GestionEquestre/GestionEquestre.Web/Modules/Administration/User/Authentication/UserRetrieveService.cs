@@ -37,7 +37,7 @@
         {
             return TwoLevelCache.Get<UserDefinition>("UserByID_" + id, TimeSpan.Zero, TimeSpan.FromDays(1), fld.GenerationKey, () =>
             {
-                using (var connection = SqlConnections.NewByKey("Default"))
+                using (var connection = SqlConnections.NewByKey("GE"))
                     return GetFirst(connection, new Criteria(fld.UserId) == Int32.Parse(id));
             });
         }
@@ -50,7 +50,7 @@
             return TwoLevelCache.Get<UserDefinition>("UserByName_" + username.ToLowerInvariant(), 
                 TimeSpan.Zero, TimeSpan.FromDays(1), fld.GenerationKey, () =>
             {
-                using (var connection = SqlConnections.NewByKey("Default"))
+                using (var connection = SqlConnections.NewByKey("GE"))
                     return GetFirst(connection, new Criteria(fld.Username) == username);
             });
         }

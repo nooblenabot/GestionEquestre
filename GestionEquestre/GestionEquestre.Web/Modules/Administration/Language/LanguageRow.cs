@@ -7,7 +7,7 @@ namespace GestionEquestre.Administration.Entities
     using System;
     using System.ComponentModel;
 
-    [ConnectionKey("Default"), DisplayName("Languages"), InstanceName("Language"), TwoLevelCached]
+    [ConnectionKey("GE"), DisplayName("Languages"), InstanceName("Language"), TwoLevelCached]
     [ReadPermission(PermissionKeys.Translation)]
     [ModifyPermission(PermissionKeys.Translation)]
     [LookupScript(typeof(LanguageLookup))]

@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewData["Title"] = Serenity.LocalText.Get("Db.Ge.CodeSexe.EntityPlural");
+}
+
+<div id="GridDiv"></div>
+
+<script type="text/javascript">
+    jQuery(function () {
+        new GestionEquestre.Ge.CodeSexeGrid($('#GridDiv'), {}).init();
+
+        Q.initFullHeightGridPage($('#GridDiv'));
+    });
+</script>

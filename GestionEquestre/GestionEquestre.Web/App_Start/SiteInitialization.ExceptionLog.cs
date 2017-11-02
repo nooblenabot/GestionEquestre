@@ -12,7 +12,7 @@
     {
         private static void InitializeExceptionLog()
         {
-            ErrorStore.Setup("GestionEquestre", new SqlErrorStore(null, "Default"));
+            ErrorStore.Setup("GestionEquestre", new SqlErrorStore(null, "GE"));
 
             ErrorStore.GetCustomData = (exception, context, data) =>
             {

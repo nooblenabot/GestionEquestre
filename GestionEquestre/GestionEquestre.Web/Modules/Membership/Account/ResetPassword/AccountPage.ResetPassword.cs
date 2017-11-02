@@ -52,7 +52,7 @@ namespace GestionEquestre.Membership.Pages
         [HttpPost, JsonFilter]
         public Result<ServiceResponse> ResetPassword(ResetPasswordRequest request)
         {
-            return this.InTransaction("Default", uow =>
+            return this.InTransaction("GE", uow =>
             {
                 request.CheckNotNull();
 
