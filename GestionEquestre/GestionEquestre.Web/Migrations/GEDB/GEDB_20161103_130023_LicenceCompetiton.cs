@@ -18,57 +18,57 @@ namespace GestionEquestre.Migrations.GEDB
                 .WithColumn("InsertUserId").AsInt32().NotNullable()
                 .WithColumn("UpdateDate").AsDateTime().Nullable()
                 .WithColumn("UpdateUserId").AsInt32().Nullable()
-                .WithColumn("Libele").AsString(50).Nullable()
+                .WithColumn("Caption").AsString(50).Nullable()
                 .WithColumn("Code").AsString(5).Nullable();
 
             addUsersColumns(IfDatabase(Utils.AllExceptOracle)
-                .Create.Table("CODE_LFC")
+                .Create.Table("SET_LFC")
                 .WithColumn("Id").AsInt16().Identity().PrimaryKey().NotNullable());
 
             addUsersColumns(IfDatabase("Oracle")
-                .Create.Table("CODE_LFC")
+                .Create.Table("SET_LFC")
                 .WithColumn("Id").AsInt16().PrimaryKey().NotNullable());
 
-            Utils.AddOracleIdentity(this, "CODE_LFC", "Id");
+            Utils.AddOracleIdentity(this, "SET_LFC", "Id");
 
-            Insert.IntoTable("CODE_LFC").Row(new
+            Insert.IntoTable("SET_LFC").Row(new
             {
                 DefaultValue = 1,
                 ReadOnly = 1,
                 InsertDate = new DateTime(2016, 11, 11),
                 InsertUserId = 1,
                 Code = "NOT",
-                Libele = "Pas de licence competition"
+                Caption = "Pas de licence competition"
             });
 
-            Insert.IntoTable("CODE_LFC").Row(new
+            Insert.IntoTable("SET_LFC").Row(new
             {
                 DefaultValue = 1,
                 ReadOnly = 1,
                 InsertDate = new DateTime(2016, 11, 11),
                 InsertUserId = 1,
                 Code = "CLUB",
-                Libele = "Licence Club"
+                Caption = "Licence Club"
             });
 
-            Insert.IntoTable("CODE_LFC").Row(new
+            Insert.IntoTable("SET_LFC").Row(new
             {
                 DefaultValue = 1,
                 ReadOnly = 1,
                 InsertDate = new DateTime(2016, 11, 11),
                 InsertUserId = 1,
                 Code = "AMA",
-                Libele = "Licence Amateur"
+                Caption = "Licence Amateur"
             });
 
-            Insert.IntoTable("CODE_LFC").Row(new
+            Insert.IntoTable("SET_LFC").Row(new
             {
                 DefaultValue = 1,
                 ReadOnly = 1,
                 InsertDate = new DateTime(2016, 11, 11),
                 InsertUserId = 1,
                 Code = "PRO",
-                Libele = "Licence Pro"
+                Caption = "Licence Pro"
             });
 
         }

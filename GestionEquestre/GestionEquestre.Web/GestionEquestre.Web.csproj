@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\packages\Microsoft.VSSDK.BuildTools.15.5.72\build\Microsoft.VSSDK.BuildTools.props" Condition="Exists('..\..\packages\Microsoft.VSSDK.BuildTools.15.5.72\build\Microsoft.VSSDK.BuildTools.props')" />
   <Import Project="..\..\packages\Microsoft.TypeScript.MSBuild.2.5.3\build\Microsoft.TypeScript.MSBuild.props" Condition="Exists('..\..\packages\Microsoft.TypeScript.MSBuild.2.5.3\build\Microsoft.TypeScript.MSBuild.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -813,18 +814,6 @@
     <Content Include="Content\toastr.scss" />
     <Content Include="Content\toastr.less" />
     <Content Include="wkhtmltopdf-license.txt" />
-    <Content Include="Modules\Ge\Adresse\AdresseIndex.cshtml" />
-    <Content Include="Modules\Ge\Cavaliers\CavaliersIndex.cshtml" />
-    <Content Include="Modules\Ge\Chevaux\ChevauxIndex.cshtml" />
-    <Content Include="Modules\Ge\CodeGalop\CodeGalopIndex.cshtml" />
-    <Content Include="Modules\Ge\CodeLfc\CodeLfcIndex.cshtml" />
-    <Content Include="Modules\Ge\CodeSexe\CodeSexeIndex.cshtml" />
-    <Content Include="Modules\Ge\CodeStuationfamille\CodeStuationfamilleIndex.cshtml" />
-    <Content Include="Modules\Ge\Comptebancaire\ComptebancaireIndex.cshtml" />
-    <Content Include="Modules\Ge\Pays\PaysIndex.cshtml" />
-    <Content Include="Modules\Ge\Personne\PersonneIndex.cshtml" />
-    <Content Include="Modules\Ge\Proprietaire\ProprietaireIndex.cshtml" />
-    <Content Include="Modules\Ge\Ville\VilleIndex.cshtml" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />
     <Content Include="Scripts\jquery-3.1.1.min.js" />
@@ -1307,90 +1296,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ClientTypes.tt</DependentUpon>
     </Content>
-    <TypeScriptCompile Include="Imports\ServerTypings\Ge.AdresseForm.ts" />
-    <TypeScriptCompile Include="Imports\ServerTypings\Ge.AdresseRow.ts" />
-    <TypeScriptCompile Include="Imports\ServerTypings\Ge.AdresseService.ts" />
-    <TypeScriptCompile Include="Imports\ServerTypings\Ge.CavaliersForm.ts" />
-    <TypeScriptCompile Include="Imports\ServerTypings\Ge.CavaliersRow.ts" />
-    <TypeScriptCompile Include="Imports\ServerTypings\Ge.CavaliersService.ts" />
-    <TypeScriptCompile Include="Imports\ServerTypings\Ge.ChevauxForm.ts" />
-    <TypeScriptCompile Include="Imports\ServerTypings\Ge.ChevauxRow.ts" />
-    <TypeScriptCompile Include="Imports\ServerTypings\Ge.ChevauxService.ts" />
-    <TypeScriptCompile Include="Imports\ServerTypings\Ge.CodeGalopForm.ts" />
-    <TypeScriptCompile Include="Imports\ServerTypings\Ge.CodeGalopRow.ts" />
-    <TypeScriptCompile Include="Imports\ServerTypings\Ge.CodeGalopService.ts" />
-    <TypeScriptCompile Include="Imports\ServerTypings\Ge.CodeLfcForm.ts" />
-    <TypeScriptCompile Include="Imports\ServerTypings\Ge.CodeLfcRow.ts" />
-    <TypeScriptCompile Include="Imports\ServerTypings\Ge.CodeLfcService.ts" />
-    <TypeScriptCompile Include="Imports\ServerTypings\Ge.CodeSexeForm.ts" />
-    <TypeScriptCompile Include="Imports\ServerTypings\Ge.CodeSexeRow.ts" />
-    <TypeScriptCompile Include="Imports\ServerTypings\Ge.CodeSexeService.ts" />
-    <TypeScriptCompile Include="Imports\ServerTypings\Ge.CodeStuationfamilleForm.ts" />
-    <TypeScriptCompile Include="Imports\ServerTypings\Ge.CodeStuationfamilleRow.ts" />
-    <TypeScriptCompile Include="Imports\ServerTypings\Ge.CodeStuationfamilleService.ts" />
-    <TypeScriptCompile Include="Imports\ServerTypings\Ge.ComptebancaireForm.ts" />
-    <TypeScriptCompile Include="Imports\ServerTypings\Ge.ComptebancaireRow.ts" />
-    <TypeScriptCompile Include="Imports\ServerTypings\Ge.ComptebancaireService.ts" />
-    <TypeScriptCompile Include="Imports\ServerTypings\Ge.PaysForm.ts" />
-    <TypeScriptCompile Include="Imports\ServerTypings\Ge.PaysRow.ts" />
-    <TypeScriptCompile Include="Imports\ServerTypings\Ge.PaysService.ts" />
-    <TypeScriptCompile Include="Imports\ServerTypings\Ge.PersonneForm.ts" />
-    <TypeScriptCompile Include="Imports\ServerTypings\Ge.PersonneRow.ts" />
-    <TypeScriptCompile Include="Imports\ServerTypings\Ge.PersonneService.ts" />
-    <TypeScriptCompile Include="Imports\ServerTypings\Ge.ProprietaireForm.ts" />
-    <TypeScriptCompile Include="Imports\ServerTypings\Ge.ProprietaireRow.ts" />
-    <TypeScriptCompile Include="Imports\ServerTypings\Ge.ProprietaireService.ts" />
-    <TypeScriptCompile Include="Imports\ServerTypings\Ge.VilleForm.ts" />
-    <TypeScriptCompile Include="Imports\ServerTypings\Ge.VilleRow.ts" />
-    <TypeScriptCompile Include="Imports\ServerTypings\Ge.VilleService.ts" />
-    <TypeScriptCompile Include="Modules\Ge\Adresse\AdresseDialog.ts" />
-    <TypeScriptCompile Include="Modules\Ge\Adresse\AdresseEditor.ts" />
-    <TypeScriptCompile Include="Modules\Ge\Adresse\AdresseEditorDialog.ts" />
-    <TypeScriptCompile Include="Modules\Ge\Adresse\AdresseGrid.ts" />
-    <TypeScriptCompile Include="Modules\Ge\Cavaliers\CavaliersDialog.ts" />
-    <TypeScriptCompile Include="Modules\Ge\Cavaliers\CavaliersEditor.ts" />
-    <TypeScriptCompile Include="Modules\Ge\Cavaliers\CavaliersEditorDialog.ts" />
-    <TypeScriptCompile Include="Modules\Ge\Cavaliers\CavaliersGrid.ts" />
-    <TypeScriptCompile Include="Modules\Ge\Chevaux\ChevauxDialog.ts" />
-    <TypeScriptCompile Include="Modules\Ge\Chevaux\ChevauxEditor.ts" />
-    <TypeScriptCompile Include="Modules\Ge\Chevaux\ChevauxEditorDialog.ts" />
-    <TypeScriptCompile Include="Modules\Ge\Chevaux\ChevauxGrid.ts" />
-    <TypeScriptCompile Include="Modules\Ge\CodeGalop\CodeGalopDialog.ts" />
-    <TypeScriptCompile Include="Modules\Ge\CodeGalop\CodeGalopEditor.ts" />
-    <TypeScriptCompile Include="Modules\Ge\CodeGalop\CodeGalopEditorDialog.ts" />
-    <TypeScriptCompile Include="Modules\Ge\CodeGalop\CodeGalopGrid.ts" />
-    <TypeScriptCompile Include="Modules\Ge\CodeLfc\CodeLfcDialog.ts" />
-    <TypeScriptCompile Include="Modules\Ge\CodeLfc\CodeLfcEditor.ts" />
-    <TypeScriptCompile Include="Modules\Ge\CodeLfc\CodeLfcEditorDialog.ts" />
-    <TypeScriptCompile Include="Modules\Ge\CodeLfc\CodeLfcGrid.ts" />
-    <TypeScriptCompile Include="Modules\Ge\CodeSexe\CodeSexeDialog.ts" />
-    <TypeScriptCompile Include="Modules\Ge\CodeSexe\CodeSexeEditor.ts" />
-    <TypeScriptCompile Include="Modules\Ge\CodeSexe\CodeSexeEditorDialog.ts" />
-    <TypeScriptCompile Include="Modules\Ge\CodeSexe\CodeSexeGrid.ts" />
-    <TypeScriptCompile Include="Modules\Ge\CodeStuationfamille\CodeStuationfamilleDialog.ts" />
-    <TypeScriptCompile Include="Modules\Ge\CodeStuationfamille\CodeStuationfamilleEditor.ts" />
-    <TypeScriptCompile Include="Modules\Ge\CodeStuationfamille\CodeStuationfamilleEditorDialog.ts" />
-    <TypeScriptCompile Include="Modules\Ge\CodeStuationfamille\CodeStuationfamilleGrid.ts" />
-    <TypeScriptCompile Include="Modules\Ge\Comptebancaire\ComptebancaireDialog.ts" />
-    <TypeScriptCompile Include="Modules\Ge\Comptebancaire\ComptebancaireEditor.ts" />
-    <TypeScriptCompile Include="Modules\Ge\Comptebancaire\ComptebancaireEditorDialog.ts" />
-    <TypeScriptCompile Include="Modules\Ge\Comptebancaire\ComptebancaireGrid.ts" />
-    <TypeScriptCompile Include="Modules\Ge\Pays\PaysDialog.ts" />
-    <TypeScriptCompile Include="Modules\Ge\Pays\PaysEditor.ts" />
-    <TypeScriptCompile Include="Modules\Ge\Pays\PaysEditorDialog.ts" />
-    <TypeScriptCompile Include="Modules\Ge\Pays\PaysGrid.ts" />
-    <TypeScriptCompile Include="Modules\Ge\Personne\PersonneDialog.ts" />
-    <TypeScriptCompile Include="Modules\Ge\Personne\PersonneEditor.ts" />
-    <TypeScriptCompile Include="Modules\Ge\Personne\PersonneEditorDialog.ts" />
-    <TypeScriptCompile Include="Modules\Ge\Personne\PersonneGrid.ts" />
-    <TypeScriptCompile Include="Modules\Ge\Proprietaire\ProprietaireDialog.ts" />
-    <TypeScriptCompile Include="Modules\Ge\Proprietaire\ProprietaireEditor.ts" />
-    <TypeScriptCompile Include="Modules\Ge\Proprietaire\ProprietaireEditorDialog.ts" />
-    <TypeScriptCompile Include="Modules\Ge\Proprietaire\ProprietaireGrid.ts" />
-    <TypeScriptCompile Include="Modules\Ge\Ville\VilleDialog.ts" />
-    <TypeScriptCompile Include="Modules\Ge\Ville\VilleEditor.ts" />
-    <TypeScriptCompile Include="Modules\Ge\Ville\VilleEditorDialog.ts" />
-    <TypeScriptCompile Include="Modules\Ge\Ville\VilleGrid.ts" />
     <TypeScriptCompile Include="node_modules\%40types\jquery\index.d.ts" />
     <TypeScriptCompile Include="node_modules\%40types\jqueryui\index.d.ts" />
     <TypeScriptCompile Include="node_modules\%40types\jquery.blockui\index.d.ts" />
@@ -1482,10 +1387,7 @@
     <Content Include="Scripts\_references.js" />
     <Content Include="Scripts\jquery.icheck.min.js.map" />
     <Content Include="Scripts\site\ScriptBundles.json" />
-    <Content Include="Scripts\site\texts\site.texts.zh-CN.json" />
     <Content Include="Scripts\site\texts\site.texts.it.json" />
-    <Content Include="Scripts\site\texts\site.texts.pt.json" />
-    <Content Include="Scripts\site\texts\site.texts.pt-BR.json" />
     <Content Include="tools\JsEngine\json2.min.js" />
     <Content Include="tools\JsEngine\MsieJavaScriptEngine.dll" />
     <Content Include="tools\JsEngine\typescriptServices.js" />
@@ -1543,24 +1445,12 @@
     <Content Include="tools\Node\node.exe" />
     <Content Include="tslint.json" />
     <Content Include="Scripts\vegas\vegas.min.js.map" />
-    <Content Include="Scripts\site\texts\site.texts.fa.json" />
-    <Content Include="Scripts\site\texts\site.texts.vi-VN.json" />
-    <Content Include="Scripts\site\texts\meeting\meeting.vi-VN.json" />
-    <Content Include="Scripts\site\texts\organization\organization.vi-VN.json" />
     <Content Include="package.json" />
     <Content Include="Scripts\SlickGrid\README.md" />
-    <Content Include="Scripts\serenity\texts\serenity.texts.zh-CN.json" />
-    <Content Include="Scripts\serenity\texts\serenity.texts.vi-VN.json" />
-    <Content Include="Scripts\serenity\texts\serenity.texts.tr.json" />
-    <Content Include="Scripts\serenity\texts\serenity.texts.ru.json" />
-    <Content Include="Scripts\serenity\texts\serenity.texts.pt.json" />
-    <Content Include="Scripts\serenity\texts\serenity.texts.pt-BR.json" />
     <Content Include="Scripts\serenity\texts\serenity.texts.it.json" />
-    <Content Include="Scripts\serenity\texts\serenity.texts.fa.json" />
-    <Content Include="Scripts\serenity\texts\serenity.texts.es.json" />
-    <Content Include="Scripts\serenity\texts\serenity.texts.de.json" />
     <Content Include="tools\Node\lessc.cmd" />
     <Content Include="tools\JsEngine\lib.d.ts_" />
+    <Content Include="Scripts\site\texts\Site.texts.Fr-FR.json" />
     <None Include="tsconfig.json" />
     <Content Include="Scripts\jvectormap\jquery-jvectormap-1.2.2.css" />
     <Content Include="Scripts\jvectormap\jquery-jvectormap-1.2.2.min.js" />
@@ -1600,9 +1490,7 @@
     <Content Include="Content\bootstrap-less\mixins\reset-text.less" />
     <Content Include="Modules\Membership\Account\SignUp\AccountSignUp.cshtml" />
     <Content Include="Modules\Membership\Account\SignUp\AccountActivateEmail.cshtml" />
-    <Content Include="Scripts\site\texts\site.texts.es.json" />
     <Content Include="Scripts\site\texts\site.texts.invariant.json" />
-    <Content Include="Scripts\site\texts\site.texts.tr.json" />
     <Content Include="Modules\Membership\Account\AccountLogin.cshtml" />
     <Content Include="Modules\Web.config" />
     <Content Include="Modules\Common\Dashboard\DashboardIndex.cshtml" />
@@ -1618,7 +1506,6 @@
     <Content Include="Views\Shared\_LayoutHead.cshtml" />
     <Content Include="Views\Shared\_LayoutNoNavigation.cshtml" />
     <Content Include="Views\Errors\ValidationError.cshtml" />
-    <Content Include="Scripts\site\texts\site.texts.de.json" />
     <Content Include="tools\Web.config" />
     <Content Include="Views\Errors\AccessDenied.cshtml" />
     <Content Include="Views\Shared\_LayoutSlim.cshtml" />
@@ -1640,6 +1527,163 @@
     <TypeScriptCompile Include="Modules\Common\Helpers\BasicProgressDialog.ts" />
     <TypeScriptCompile Include="Modules\Common\Helpers\BulkServiceAction.ts" />
     <TypeScriptCompile Include="Scripts\typings\serenity\Serenity.CoreLib.d.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.AccBankaccountRow.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.AccBankaccountService.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <Content Include="Modules\Ge\AccBankaccount\AccBankaccountIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\Ge\AccBankaccount\AccBankaccountDialog.ts" />
+    <TypeScriptCompile Include="Modules\Ge\AccBankaccount\AccBankaccountGrid.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.AccBankaccountForm.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <Content Include="wwwroot\Content\site\site.ge.less" />
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.ManAdressRow.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.ManAdressService.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <Content Include="Modules\Ge\ManAdress\ManAdressIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\Ge\ManAdress\ManAdressDialog.ts" />
+    <TypeScriptCompile Include="Modules\Ge\ManAdress\ManAdressGrid.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.ManAdressForm.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.ManCavaliersRow.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.ManCavaliersService.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <Content Include="Modules\Ge\ManCavaliers\ManCavaliersIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\Ge\ManCavaliers\ManCavaliersDialog.ts" />
+    <TypeScriptCompile Include="Modules\Ge\ManCavaliers\ManCavaliersGrid.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.ManCavaliersForm.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.ManHorsesRow.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.ManHorsesService.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <Content Include="Modules\Ge\ManHorses\ManHorsesIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\Ge\ManHorses\ManHorsesDialog.ts" />
+    <TypeScriptCompile Include="Modules\Ge\ManHorses\ManHorsesGrid.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.ManHorsesForm.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.ManOwnerRow.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.ManOwnerService.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <Content Include="Modules\Ge\ManOwner\ManOwnerIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\Ge\ManOwner\ManOwnerDialog.ts" />
+    <TypeScriptCompile Include="Modules\Ge\ManOwner\ManOwnerGrid.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.ManOwnerForm.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.ManPersonRow.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.ManPersonService.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <Content Include="Modules\Ge\ManPerson\ManPersonIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\Ge\ManPerson\ManPersonDialog.ts" />
+    <TypeScriptCompile Include="Modules\Ge\ManPerson\ManPersonGrid.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.ManPersonForm.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.SetCityRow.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.SetCityService.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <Content Include="Modules\Ge\SetCity\SetCityIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\Ge\SetCity\SetCityDialog.ts" />
+    <TypeScriptCompile Include="Modules\Ge\SetCity\SetCityGrid.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.SetCityForm.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.SetCountryRow.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.SetCountryService.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <Content Include="Modules\Ge\SetCountry\SetCountryIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\Ge\SetCountry\SetCountryDialog.ts" />
+    <TypeScriptCompile Include="Modules\Ge\SetCountry\SetCountryGrid.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.SetCountryForm.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.SetGalopRow.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.SetGalopService.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <Content Include="Modules\Ge\SetGalop\SetGalopIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\Ge\SetGalop\SetGalopDialog.ts" />
+    <TypeScriptCompile Include="Modules\Ge\SetGalop\SetGalopGrid.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.SetGalopForm.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.SetLfcRow.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.SetLfcService.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <Content Include="Modules\Ge\SetLfc\SetLfcIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\Ge\SetLfc\SetLfcDialog.ts" />
+    <TypeScriptCompile Include="Modules\Ge\SetLfc\SetLfcGrid.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.SetLfcForm.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.SetMaritalstatusRow.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.SetMaritalstatusService.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <Content Include="Modules\Ge\SetMaritalstatus\SetMaritalstatusIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\Ge\SetMaritalstatus\SetMaritalstatusDialog.ts" />
+    <TypeScriptCompile Include="Modules\Ge\SetMaritalstatus\SetMaritalstatusGrid.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.SetMaritalstatusForm.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.SetSexeRow.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.SetSexeService.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <Content Include="Modules\Ge\SetSexe\SetSexeIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\Ge\SetSexe\SetSexeDialog.ts" />
+    <TypeScriptCompile Include="Modules\Ge\SetSexe\SetSexeGrid.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.SetSexeForm.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.SetUelnorgaRow.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.SetUelnorgaService.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <Content Include="Modules\Ge\SetUelnorga\SetUelnorgaIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\Ge\SetUelnorga\SetUelnorgaDialog.ts" />
+    <TypeScriptCompile Include="Modules\Ge\SetUelnorga\SetUelnorgaGrid.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.SetUelnorgaForm.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
@@ -1662,17 +1706,18 @@
     <Compile Include="Migrations\GEDB\GEDB_20160515_072600_UserPreferences.cs" />
     <Compile Include="Migrations\GEDB\GEDB_20161029_130000_ExceptionLog.cs" />
     <Compile Include="Migrations\GEDB\GEDB_20161103_130020_Sexe.cs" />
-    <Compile Include="Migrations\GEDB\GEDB_20161103_130021_SituationFamille.cs" />
+    <Compile Include="Migrations\GEDB\GEDB_20161103_130021_MaritalStatus.cs" />
     <Compile Include="Migrations\GEDB\GEDB_20161103_130022_NiveauGalop.cs" />
     <Compile Include="Migrations\GEDB\GEDB_20161103_130023_LicenceCompetiton.cs" />
-    <Compile Include="Migrations\GEDB\GEDB_20161103_130024_CompteBancaire.cs" />
-    <Compile Include="Migrations\GEDB\GEDB_20161103_130030_Pays.cs" />
-    <Compile Include="Migrations\GEDB\GEDB_20161103_130031_Ville.cs" />
-    <Compile Include="Migrations\GEDB\GEDB_20161103_130040_Adresse.cs" />
-    <Compile Include="Migrations\GEDB\GEDB_20161103_140000_Chevaux.cs" />
-    <Compile Include="Migrations\GEDB\GEDB_20161103_140001_Personne.cs" />
+    <Compile Include="Migrations\GEDB\GEDB_20161103_130024_BankAccount.cs" />
+    <Compile Include="Migrations\GEDB\GEDB_20161103_130032_UELNOrganization.cs" />
+    <Compile Include="Migrations\GEDB\GEDB_20161103_130030_Country.cs" />
+    <Compile Include="Migrations\GEDB\GEDB_20161103_130031_City.cs" />
+    <Compile Include="Migrations\GEDB\GEDB_20161103_130040_Adress.cs" />
+    <Compile Include="Migrations\GEDB\GEDB_20161103_140000_Horses.cs" />
+    <Compile Include="Migrations\GEDB\GEDB_20161103_140001_Person.cs" />
     <Compile Include="Migrations\GEDB\GEDB_20161103_140010_Cavaliers.cs" />
-    <Compile Include="Migrations\GEDB\GEDB_20161103_140020_Proprietaire.cs" />
+    <Compile Include="Migrations\GEDB\GEDB_20161103_140020_Owners.cs" />
     <Compile Include="Modules\Administration\AdministrationNavigation.cs" />
     <Compile Include="Modules\Administration\Language\LanguageLookup.cs" />
     <Compile Include="Modules\Administration\RolePermission\RolePermissionUpdateRequest.cs" />
@@ -1776,87 +1821,7 @@
     <Compile Include="Modules\Common\UserPreference\UserPreferenceModels.cs" />
     <Compile Include="Modules\Common\UserPreference\UserPreferenceEndpoint.cs" />
     <Compile Include="Modules\Common\UserPreference\UserPreferenceRepository.cs" />
-    <Compile Include="Modules\Ge\Adresse\AdresseColumns.cs" />
-    <Compile Include="Modules\Ge\Adresse\AdresseEndpoint.cs" />
-    <Compile Include="Modules\Ge\Adresse\AdresseForm.cs" />
-    <Compile Include="Modules\Ge\Adresse\AdresseLookup.cs" />
-    <Compile Include="Modules\Ge\Adresse\AdressePage.cs" />
-    <Compile Include="Modules\Ge\Adresse\AdresseRepository.cs" />
-    <Compile Include="Modules\Ge\Adresse\AdresseRow.cs" />
-    <Compile Include="Modules\Ge\Cavaliers\CavalierLookup.cs" />
-    <Compile Include="Modules\Ge\Cavaliers\CavaliersColumns.cs" />
-    <Compile Include="Modules\Ge\Cavaliers\CavaliersEndpoint.cs" />
-    <Compile Include="Modules\Ge\Cavaliers\CavaliersForm.cs" />
-    <Compile Include="Modules\Ge\Cavaliers\CavaliersPage.cs" />
-    <Compile Include="Modules\Ge\Cavaliers\CavaliersRepository.cs" />
-    <Compile Include="Modules\Ge\Cavaliers\CavaliersRow.cs" />
-    <Compile Include="Modules\Ge\Chevaux\ChevauxColumns.cs" />
-    <Compile Include="Modules\Ge\Chevaux\ChevauxEndpoint.cs" />
-    <Compile Include="Modules\Ge\Chevaux\ChevauxForm.cs" />
-    <Compile Include="Modules\Ge\Chevaux\ChevauxLookup.cs" />
-    <Compile Include="Modules\Ge\Chevaux\ChevauxPage.cs" />
-    <Compile Include="Modules\Ge\Chevaux\ChevauxRepository.cs" />
-    <Compile Include="Modules\Ge\Chevaux\ChevauxRow.cs" />
-    <Compile Include="Modules\Ge\CodeGalop\CodeGalopColumns.cs" />
-    <Compile Include="Modules\Ge\CodeGalop\CodeGalopEndpoint.cs" />
-    <Compile Include="Modules\Ge\CodeGalop\CodeGalopForm.cs" />
-    <Compile Include="Modules\Ge\CodeGalop\CodeGalopLookup.cs" />
-    <Compile Include="Modules\Ge\CodeGalop\CodeGalopPage.cs" />
-    <Compile Include="Modules\Ge\CodeGalop\CodeGalopRepository.cs" />
-    <Compile Include="Modules\Ge\CodeGalop\CodeGalopRow.cs" />
-    <Compile Include="Modules\Ge\CodeLfc\CodeLfcColumns.cs" />
-    <Compile Include="Modules\Ge\CodeLfc\CodeLfcEndpoint.cs" />
-    <Compile Include="Modules\Ge\CodeLfc\CodeLfcForm.cs" />
-    <Compile Include="Modules\Ge\CodeLfc\CodeLFCLookup.cs" />
-    <Compile Include="Modules\Ge\CodeLfc\CodeLfcPage.cs" />
-    <Compile Include="Modules\Ge\CodeLfc\CodeLfcRepository.cs" />
-    <Compile Include="Modules\Ge\CodeLfc\CodeLfcRow.cs" />
-    <Compile Include="Modules\Ge\CodeSexe\CodeSexeColumns.cs" />
-    <Compile Include="Modules\Ge\CodeSexe\CodeSexeEndpoint.cs" />
-    <Compile Include="Modules\Ge\CodeSexe\CodeSexeForm.cs" />
-    <Compile Include="Modules\Ge\CodeSexe\CodeSexeLookup.cs" />
-    <Compile Include="Modules\Ge\CodeSexe\CodeSexePage.cs" />
-    <Compile Include="Modules\Ge\CodeSexe\CodeSexeRepository.cs" />
-    <Compile Include="Modules\Ge\CodeSexe\CodeSexeRow.cs" />
-    <Compile Include="Modules\Ge\CodeStuationfamille\CodeStuationfamilleColumns.cs" />
-    <Compile Include="Modules\Ge\CodeStuationfamille\CodeStuationfamilleEndpoint.cs" />
-    <Compile Include="Modules\Ge\CodeStuationfamille\CodeStuationfamilleForm.cs" />
-    <Compile Include="Modules\Ge\CodeStuationfamille\CodeStuationfamilleLookup.cs" />
-    <Compile Include="Modules\Ge\CodeStuationfamille\CodeStuationfamillePage.cs" />
-    <Compile Include="Modules\Ge\CodeStuationfamille\CodeStuationfamilleRepository.cs" />
-    <Compile Include="Modules\Ge\CodeStuationfamille\CodeStuationfamilleRow.cs" />
-    <Compile Include="Modules\Ge\Comptebancaire\ComptebancaireColumns.cs" />
-    <Compile Include="Modules\Ge\Comptebancaire\ComptebancaireEndpoint.cs" />
-    <Compile Include="Modules\Ge\Comptebancaire\ComptebancaireForm.cs" />
-    <Compile Include="Modules\Ge\Comptebancaire\ComptebancairePage.cs" />
-    <Compile Include="Modules\Ge\Comptebancaire\ComptebancaireRepository.cs" />
-    <Compile Include="Modules\Ge\Comptebancaire\ComptebancaireRow.cs" />
-    <Compile Include="Modules\Ge\Pays\PaysColumns.cs" />
-    <Compile Include="Modules\Ge\Pays\PaysEndpoint.cs" />
-    <Compile Include="Modules\Ge\Pays\PaysForm.cs" />
-    <Compile Include="Modules\Ge\Pays\PaysPage.cs" />
-    <Compile Include="Modules\Ge\Pays\PaysRepository.cs" />
-    <Compile Include="Modules\Ge\Pays\PaysRow.cs" />
-    <Compile Include="Modules\Ge\Personne\PersonneColumns.cs" />
-    <Compile Include="Modules\Ge\Personne\PersonneEndpoint.cs" />
-    <Compile Include="Modules\Ge\Personne\PersonneForm.cs" />
-    <Compile Include="Modules\Ge\Personne\PersonneLookup.cs" />
-    <Compile Include="Modules\Ge\Personne\PersonnePage.cs" />
-    <Compile Include="Modules\Ge\Personne\PersonneRepository.cs" />
-    <Compile Include="Modules\Ge\Personne\PersonneRow.cs" />
-    <Compile Include="Modules\Ge\Proprietaire\ProprietaireColumns.cs" />
-    <Compile Include="Modules\Ge\Proprietaire\ProprietaireEndpoint.cs" />
-    <Compile Include="Modules\Ge\Proprietaire\ProprietaireForm.cs" />
-    <Compile Include="Modules\Ge\Proprietaire\ProprietairePage.cs" />
-    <Compile Include="Modules\Ge\Proprietaire\ProprietaireRepository.cs" />
-    <Compile Include="Modules\Ge\Proprietaire\ProprietaireRow.cs" />
-    <Compile Include="Modules\Ge\Ville\VilleColumns.cs" />
-    <Compile Include="Modules\Ge\Ville\VilleEndpoint.cs" />
-    <Compile Include="Modules\Ge\Ville\VilleForm.cs" />
-    <Compile Include="Modules\Ge\Ville\VilleLookup.cs" />
-    <Compile Include="Modules\Ge\Ville\VillePage.cs" />
-    <Compile Include="Modules\Ge\Ville\VilleRepository.cs" />
-    <Compile Include="Modules\Ge\Ville\VilleRow.cs" />
+    <Compile Include="Modules\Ge\SetSexe\SetSexeLookup.cs" />
     <Compile Include="Modules\Membership\Account\ChangePassword\AccountPage.ChangePassword.cs" />
     <Compile Include="Modules\Membership\Account\EnvironmentSettings.cs" />
     <Compile Include="Modules\Membership\Account\ForgotPassword\AccountPage.ForgotPassword.cs" />
@@ -1911,9 +1876,90 @@
     <Compile Include="Modules\Administration\UserPermission\UserPermissionRow.cs" />
     <Compile Include="Modules\Administration\UserPermission\UserPermissionRepository.cs" />
     <Compile Include="Modules\Administration\UserPermission\UserPermissionEndpoint.cs" />
+    <Compile Include="Modules\Ge\AccBankaccount\AccBankaccountRow.cs" />
+    <Compile Include="Modules\Ge\AccBankaccount\AccBankaccountRepository.cs" />
+    <Compile Include="Modules\Ge\AccBankaccount\AccBankaccountEndpoint.cs" />
+    <Compile Include="Modules\Ge\AccBankaccount\AccBankaccountPage.cs" />
+    <Compile Include="Modules\Ge\AccBankaccount\AccBankaccountColumns.cs" />
+    <Compile Include="Modules\Ge\AccBankaccount\AccBankaccountForm.cs" />
+    <Compile Include="Modules\Ge\GeNavigation.cs" />
+    <Compile Include="Modules\Ge\ManAdress\ManAdressRow.cs" />
+    <Compile Include="Modules\Ge\ManAdress\ManAdressRepository.cs" />
+    <Compile Include="Modules\Ge\ManAdress\ManAdressEndpoint.cs" />
+    <Compile Include="Modules\Ge\ManAdress\ManAdressPage.cs" />
+    <Compile Include="Modules\Ge\ManAdress\ManAdressColumns.cs" />
+    <Compile Include="Modules\Ge\ManAdress\ManAdressForm.cs" />
+    <Compile Include="Modules\Ge\ManCavaliers\ManCavaliersRow.cs" />
+    <Compile Include="Modules\Ge\ManCavaliers\ManCavaliersRepository.cs" />
+    <Compile Include="Modules\Ge\ManCavaliers\ManCavaliersEndpoint.cs" />
+    <Compile Include="Modules\Ge\ManCavaliers\ManCavaliersPage.cs" />
+    <Compile Include="Modules\Ge\ManCavaliers\ManCavaliersColumns.cs" />
+    <Compile Include="Modules\Ge\ManCavaliers\ManCavaliersForm.cs" />
+    <Compile Include="Modules\Ge\ManHorses\ManHorsesRow.cs" />
+    <Compile Include="Modules\Ge\ManHorses\ManHorsesRepository.cs" />
+    <Compile Include="Modules\Ge\ManHorses\ManHorsesEndpoint.cs" />
+    <Compile Include="Modules\Ge\ManHorses\ManHorsesPage.cs" />
+    <Compile Include="Modules\Ge\ManHorses\ManHorsesColumns.cs" />
+    <Compile Include="Modules\Ge\ManHorses\ManHorsesForm.cs" />
+    <Compile Include="Modules\Ge\ManOwner\ManOwnerRow.cs" />
+    <Compile Include="Modules\Ge\ManOwner\ManOwnerRepository.cs" />
+    <Compile Include="Modules\Ge\ManOwner\ManOwnerEndpoint.cs" />
+    <Compile Include="Modules\Ge\ManOwner\ManOwnerPage.cs" />
+    <Compile Include="Modules\Ge\ManOwner\ManOwnerColumns.cs" />
+    <Compile Include="Modules\Ge\ManOwner\ManOwnerForm.cs" />
+    <Compile Include="Modules\Ge\ManPerson\ManPersonRow.cs" />
+    <Compile Include="Modules\Ge\ManPerson\ManPersonRepository.cs" />
+    <Compile Include="Modules\Ge\ManPerson\ManPersonEndpoint.cs" />
+    <Compile Include="Modules\Ge\ManPerson\ManPersonPage.cs" />
+    <Compile Include="Modules\Ge\ManPerson\ManPersonColumns.cs" />
+    <Compile Include="Modules\Ge\ManPerson\ManPersonForm.cs" />
+    <Compile Include="Modules\Ge\SetCity\SetCityRow.cs" />
+    <Compile Include="Modules\Ge\SetCity\SetCityRepository.cs" />
+    <Compile Include="Modules\Ge\SetCity\SetCityEndpoint.cs" />
+    <Compile Include="Modules\Ge\SetCity\SetCityPage.cs" />
+    <Compile Include="Modules\Ge\SetCity\SetCityColumns.cs" />
+    <Compile Include="Modules\Ge\SetCity\SetCityForm.cs" />
+    <Compile Include="Modules\Ge\SetCountry\SetCountryRow.cs" />
+    <Compile Include="Modules\Ge\SetCountry\SetCountryRepository.cs" />
+    <Compile Include="Modules\Ge\SetCountry\SetCountryEndpoint.cs" />
+    <Compile Include="Modules\Ge\SetCountry\SetCountryPage.cs" />
+    <Compile Include="Modules\Ge\SetCountry\SetCountryColumns.cs" />
+    <Compile Include="Modules\Ge\SetCountry\SetCountryForm.cs" />
+    <Compile Include="Modules\Ge\SetGalop\SetGalopRow.cs" />
+    <Compile Include="Modules\Ge\SetGalop\SetGalopRepository.cs" />
+    <Compile Include="Modules\Ge\SetGalop\SetGalopEndpoint.cs" />
+    <Compile Include="Modules\Ge\SetGalop\SetGalopPage.cs" />
+    <Compile Include="Modules\Ge\SetGalop\SetGalopColumns.cs" />
+    <Compile Include="Modules\Ge\SetGalop\SetGalopForm.cs" />
+    <Compile Include="Modules\Ge\SetLfc\SetLfcRow.cs" />
+    <Compile Include="Modules\Ge\SetLfc\SetLfcRepository.cs" />
+    <Compile Include="Modules\Ge\SetLfc\SetLfcEndpoint.cs" />
+    <Compile Include="Modules\Ge\SetLfc\SetLfcPage.cs" />
+    <Compile Include="Modules\Ge\SetLfc\SetLfcColumns.cs" />
+    <Compile Include="Modules\Ge\SetLfc\SetLfcForm.cs" />
+    <Compile Include="Modules\Ge\SetMaritalstatus\SetMaritalstatusRow.cs" />
+    <Compile Include="Modules\Ge\SetMaritalstatus\SetMaritalstatusRepository.cs" />
+    <Compile Include="Modules\Ge\SetMaritalstatus\SetMaritalstatusEndpoint.cs" />
+    <Compile Include="Modules\Ge\SetMaritalstatus\SetMaritalstatusPage.cs" />
+    <Compile Include="Modules\Ge\SetMaritalstatus\SetMaritalstatusColumns.cs" />
+    <Compile Include="Modules\Ge\SetMaritalstatus\SetMaritalstatusForm.cs" />
+    <Compile Include="Modules\Ge\SetSexe\SetSexeRow.cs" />
+    <Compile Include="Modules\Ge\SetSexe\SetSexeRepository.cs" />
+    <Compile Include="Modules\Ge\SetSexe\SetSexeEndpoint.cs" />
+    <Compile Include="Modules\Ge\SetSexe\SetSexePage.cs" />
+    <Compile Include="Modules\Ge\SetSexe\SetSexeColumns.cs" />
+    <Compile Include="Modules\Ge\SetSexe\SetSexeForm.cs" />
+    <Compile Include="Modules\Ge\SetUelnorga\SetUelnorgaRow.cs" />
+    <Compile Include="Modules\Ge\SetUelnorga\SetUelnorgaRepository.cs" />
+    <Compile Include="Modules\Ge\SetUelnorga\SetUelnorgaEndpoint.cs" />
+    <Compile Include="Modules\Ge\SetUelnorga\SetUelnorgaPage.cs" />
+    <Compile Include="Modules\Ge\SetUelnorga\SetUelnorgaColumns.cs" />
+    <Compile Include="Modules\Ge\SetUelnorga\SetUelnorgaForm.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Scripts\site\texts\meeting\" />
+    <Folder Include="Scripts\site\texts\organization\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />

@@ -18,108 +18,99 @@ namespace GestionEquestre.Migrations.GEDB
                 .WithColumn("InsertUserId").AsInt32().NotNullable()
                 .WithColumn("UpdateDate").AsDateTime().Nullable()
                 .WithColumn("UpdateUserId").AsInt32().Nullable()
-				.WithColumn("Libele").AsString(50).Nullable()
-                .WithColumn("Civilite").AsString(50).Nullable()
-				.WithColumn("LibeleUS").AsString(50).Nullable();
+				.WithColumn("Caption").AsString(50).Nullable()
+                .WithColumn("civility").AsString(50).Nullable();
 
             addUsersColumns(IfDatabase(Utils.AllExceptOracle)
-                .Create.Table("CODE_SEXE")
+                .Create.Table("SET_SEXE")
                 .WithColumn("SexeId").AsInt16().PrimaryKey().NotNullable());
 
             addUsersColumns(IfDatabase("Oracle")
-                .Create.Table("CODE_SEXE")
+                .Create.Table("SET_SEXE")
                 .WithColumn("SexeId").AsInt16().PrimaryKey().NotNullable());
 
-            Utils.AddOracleIdentity(this, "CODE_SEXE", "SexeId");
+            Utils.AddOracleIdentity(this, "SET_SEXE", "SexeId");
 
-            Insert.IntoTable("CODE_SEXE").Row(new
+            Insert.IntoTable("SET_SEXE").Row(new
             {
                 SexeId = 00,
                 DefaultValue = 1,
                 ReadOnly = 1,
                 InsertDate = new DateTime(2016, 11, 11),
                 InsertUserId = 1,
-                Libele = "Inconnu",
-                LibeleUS = "Not Know"
+                Caption = "Inconnu"
             });
 
-            Insert.IntoTable("CODE_SEXE").Row(new
+            Insert.IntoTable("SET_SEXE").Row(new
             {
                 SexeId = 10,
                 DefaultValue = 1,
                 ReadOnly = 1,
                 InsertDate = new DateTime(2016, 11, 11),
                 InsertUserId = 1,
-                Civilite = "Monsieur",
-                Libele = "Homme",
-                LibeleUS = "Male"
+                civility = "Monsieur",
+                Caption = "Homme"
             });
 
-            Insert.IntoTable("CODE_SEXE").Row(new
+            Insert.IntoTable("SET_SEXE").Row(new
             {
                 SexeId = 11,
                 DefaultValue = 1,
                 ReadOnly = 1,
                 InsertDate = new DateTime(2016, 11, 11),
                 InsertUserId = 1,
-                Libele = "Etalon",
-                LibeleUS = "Stallion"
+                Caption = "Etalon"
             });
 
-            Insert.IntoTable("CODE_SEXE").Row(new
+            Insert.IntoTable("SET_SEXE").Row(new
             {
                 SexeId = 12,
                 DefaultValue = 1,
                 ReadOnly = 1,
                 InsertDate = new DateTime(2016, 11, 11),
                 InsertUserId = 1,
-                Libele = "Hongre",
-                LibeleUS = "Gelding"
+                Caption = "Hongre"
             });
 
-            Insert.IntoTable("CODE_SEXE").Row(new
+            Insert.IntoTable("SET_SEXE").Row(new
             {
                 SexeId = 20,
                 DefaultValue = 1,
                 ReadOnly = 1,
                 InsertDate = new DateTime(2016, 11, 11),
                 InsertUserId = 1,
-                Civilite = "Madame",
-                Libele = "Femme",
-                LibeleUS = "Female"
+                civility = "Madame",
+                Caption = "Femme"
             });
 
-            Insert.IntoTable("CODE_SEXE").Row(new
+            Insert.IntoTable("SET_SEXE").Row(new
             {
                 SexeId = 21,
                 DefaultValue = 1,
                 ReadOnly = 1,
                 InsertDate = new DateTime(2016, 11, 11),
                 InsertUserId = 1,
-                Libele = "Jument",
-                LibeleUS = "Mare"
+                Caption = "Jument"
             });
 
-            Insert.IntoTable("CODE_SEXE").Row(new
+            Insert.IntoTable("SET_SEXE").Row(new
             {
                 SexeId = 22,
                 DefaultValue = 1,
                 ReadOnly = 1,
                 InsertDate = new DateTime(2016, 11, 11),
                 InsertUserId = 1,
-                Libele = "Jument Sterile",
-                LibeleUS = "Spayed Mare"
+                Caption = "Jument Sterile"
             });
 
-            Insert.IntoTable("CODE_SEXE").Row(new
+            Insert.IntoTable("SET_SEXE").Row(new
             {
                 SexeId = 30,
                 DefaultValue = 1,
                 ReadOnly = 1,
                 InsertDate = new DateTime(2016, 11, 11),
                 InsertUserId = 1,
-                Libele = "Hermaphrodite",
-                LibeleUS = "Hermaphrodite"
+                Caption = "Hermaphrodite"
             });
         }
     }

@@ -425,122 +425,69 @@ declare namespace GestionEquestre {
     }
 }
 declare namespace GestionEquestre.Ge {
-    class AdresseForm extends Serenity.PrefixedContext {
+    class AccBankaccountForm extends Serenity.PrefixedContext {
         static formKey: string;
     }
-    interface AdresseForm {
-        IsActive: Serenity.BooleanEditor;
-        NotArchive: Serenity.BooleanEditor;
-        InsertDate: Serenity.DateEditor;
-        InsertUserId: Serenity.IntegerEditor;
-        UpdateDate: Serenity.DateEditor;
-        UpdateUserId: Serenity.IntegerEditor;
-        Adresse1: Serenity.StringEditor;
-        Adresse2: Serenity.StringEditor;
-        Adresse3: Serenity.StringEditor;
-        Ville: Serenity.StringEditor;
-        Pays: Serenity.StringEditor;
-        Cedex: Serenity.StringEditor;
-        Batiment: Serenity.StringEditor;
-        Description: Serenity.StringEditor;
-        ArchiveDate: Serenity.DateEditor;
+    interface AccBankaccountForm {
+        CountryCodeIban: Serenity.StringEditor;
+        CheckDigitsIban: Serenity.StringEditor;
+        Bban: Serenity.StringEditor;
+        Bic: Serenity.StringEditor;
+        AccountOnwer: Serenity.StringEditor;
+        BankAdress: Serenity.StringEditor;
+        Cis: Serenity.StringEditor;
+        Urm: Serenity.StringEditor;
+        MandateDateSign: Serenity.DateEditor;
+        TypePayment: Serenity.IntegerEditor;
+        DateLastPrelevement: Serenity.DateEditor;
+        TypeOfLastPayment: Serenity.IntegerEditor;
     }
 }
 declare namespace GestionEquestre.Ge {
-    interface AdresseRow {
+    interface AccBankaccountRow {
         Id?: string;
-        IsActive?: boolean;
-        NotArchive?: boolean;
-        InsertDate?: string;
-        InsertUserId?: number;
-        UpdateDate?: string;
-        UpdateUserId?: number;
-        Adresse1?: string;
-        Adresse2?: string;
-        Adresse3?: string;
-        Ville?: string;
-        Pays?: string;
-        Cedex?: string;
-        Batiment?: string;
-        Description?: string;
-        ArchiveDate?: string;
-        VilleDefaultValue?: boolean;
-        VilleIsActive?: boolean;
-        VilleReadOnly?: boolean;
-        VilleInsertDate?: string;
-        VilleInsertUserId?: number;
-        VilleUpdateDate?: string;
-        VilleUpdateUserId?: number;
-        VilleCodeInsee?: string;
-        VilleLibele?: string;
-        VilleNomVille?: string;
-        VilleCodePostal?: string;
-        VillePays?: string;
-        PaysDefaultValue?: boolean;
-        PaysIsActive?: boolean;
-        PaysReadOnly?: boolean;
-        PaysInsertDate?: string;
-        PaysInsertUserId?: number;
-        PaysUpdateDate?: string;
-        PaysUpdateUserId?: number;
-        PaysLibele?: string;
-        PaysCode?: string;
-        PaysCodeUe?: number;
+        CountryCodeIban?: string;
+        CheckDigitsIban?: string;
+        Bban?: string;
+        Bic?: string;
+        AccountOnwer?: string;
+        BankAdress?: string;
+        Cis?: string;
+        Urm?: string;
+        MandateDateSign?: string;
+        TypePayment?: number;
+        DateLastPrelevement?: string;
+        TypeOfLastPayment?: number;
     }
-    namespace AdresseRow {
+    namespace AccBankaccountRow {
         const idProperty = "Id";
-        const nameProperty = "Adresse1";
-        const localTextPrefix = "Ge.Adresse";
+        const nameProperty = "CountryCodeIban";
+        const localTextPrefix = "Ge.AccBankaccount";
         namespace Fields {
             const Id: any;
-            const IsActive: any;
-            const NotArchive: any;
-            const InsertDate: any;
-            const InsertUserId: any;
-            const UpdateDate: any;
-            const UpdateUserId: any;
-            const Adresse1: any;
-            const Adresse2: any;
-            const Adresse3: any;
-            const Ville: any;
-            const Pays: any;
-            const Cedex: any;
-            const Batiment: any;
-            const Description: any;
-            const ArchiveDate: any;
-            const VilleDefaultValue: string;
-            const VilleIsActive: string;
-            const VilleReadOnly: string;
-            const VilleInsertDate: string;
-            const VilleInsertUserId: string;
-            const VilleUpdateDate: string;
-            const VilleUpdateUserId: string;
-            const VilleCodeInsee: string;
-            const VilleLibele: string;
-            const VilleNomVille: string;
-            const VilleCodePostal: string;
-            const VillePays: string;
-            const PaysDefaultValue: string;
-            const PaysIsActive: string;
-            const PaysReadOnly: string;
-            const PaysInsertDate: string;
-            const PaysInsertUserId: string;
-            const PaysUpdateDate: string;
-            const PaysUpdateUserId: string;
-            const PaysLibele: string;
-            const PaysCode: string;
-            const PaysCodeUe: string;
+            const CountryCodeIban: any;
+            const CheckDigitsIban: any;
+            const Bban: any;
+            const Bic: any;
+            const AccountOnwer: any;
+            const BankAdress: any;
+            const Cis: any;
+            const Urm: any;
+            const MandateDateSign: any;
+            const TypePayment: any;
+            const DateLastPrelevement: any;
+            const TypeOfLastPayment: any;
         }
     }
 }
 declare namespace GestionEquestre.Ge {
-    namespace AdresseService {
-        const baseUrl = "Ge/Adresse";
-        function Create(request: Serenity.SaveRequest<AdresseRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function Update(request: Serenity.SaveRequest<AdresseRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<AdresseRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<AdresseRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+    namespace AccBankaccountService {
+        const baseUrl = "Ge/AccBankaccount";
+        function Create(request: Serenity.SaveRequest<AccBankaccountRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<AccBankaccountRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<AccBankaccountRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<AccBankaccountRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
         namespace Methods {
             const Create: string;
             const Update: string;
@@ -551,11 +498,139 @@ declare namespace GestionEquestre.Ge {
     }
 }
 declare namespace GestionEquestre.Ge {
-    class CavaliersForm extends Serenity.PrefixedContext {
+    class ManAdressForm extends Serenity.PrefixedContext {
         static formKey: string;
     }
-    interface CavaliersForm {
-        Personne: Serenity.StringEditor;
+    interface ManAdressForm {
+        IsActive: Serenity.BooleanEditor;
+        NotArchive: Serenity.BooleanEditor;
+        InsertDate: Serenity.DateEditor;
+        InsertUserId: Serenity.IntegerEditor;
+        UpdateDate: Serenity.DateEditor;
+        UpdateUserId: Serenity.IntegerEditor;
+        Adress1: Serenity.StringEditor;
+        Adress2: Serenity.StringEditor;
+        Adress3: Serenity.StringEditor;
+        City: Serenity.StringEditor;
+        Country: Serenity.StringEditor;
+        Cedex: Serenity.StringEditor;
+        Building: Serenity.StringEditor;
+        Caption: Serenity.StringEditor;
+        ArchiveDate: Serenity.DateEditor;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    interface ManAdressRow {
+        Id?: string;
+        IsActive?: boolean;
+        NotArchive?: boolean;
+        InsertDate?: string;
+        InsertUserId?: number;
+        UpdateDate?: string;
+        UpdateUserId?: number;
+        Adress1?: string;
+        Adress2?: string;
+        Adress3?: string;
+        City?: string;
+        Country?: string;
+        Cedex?: string;
+        Building?: string;
+        Caption?: string;
+        ArchiveDate?: string;
+        CityDefaultValue?: boolean;
+        CityIsActive?: boolean;
+        CityReadOnly?: boolean;
+        CityInsertDate?: string;
+        CityInsertUserId?: number;
+        CityUpdateDate?: string;
+        CityUpdateUserId?: number;
+        CityFrCodeInsee?: string;
+        CityCaption?: string;
+        City1?: string;
+        CityPostCode?: string;
+        CityCountry?: string;
+        CountryDefaultValue?: boolean;
+        CountryIsActive?: boolean;
+        CountryReadOnly?: boolean;
+        CountryInsertDate?: string;
+        CountryInsertUserId?: number;
+        CountryUpdateDate?: string;
+        CountryUpdateUserId?: number;
+        Country1?: string;
+        CountryCode?: string;
+        CountryCodeUe?: number;
+        CountryIso3166Country?: string;
+    }
+    namespace ManAdressRow {
+        const idProperty = "Id";
+        const nameProperty = "Adress1";
+        const localTextPrefix = "Ge.ManAdress";
+        namespace Fields {
+            const Id: any;
+            const IsActive: any;
+            const NotArchive: any;
+            const InsertDate: any;
+            const InsertUserId: any;
+            const UpdateDate: any;
+            const UpdateUserId: any;
+            const Adress1: any;
+            const Adress2: any;
+            const Adress3: any;
+            const City: any;
+            const Country: any;
+            const Cedex: any;
+            const Building: any;
+            const Caption: any;
+            const ArchiveDate: any;
+            const CityDefaultValue: any;
+            const CityIsActive: any;
+            const CityReadOnly: any;
+            const CityInsertDate: any;
+            const CityInsertUserId: any;
+            const CityUpdateDate: any;
+            const CityUpdateUserId: any;
+            const CityFrCodeInsee: any;
+            const CityCaption: any;
+            const City1: any;
+            const CityPostCode: any;
+            const CityCountry: any;
+            const CountryDefaultValue: any;
+            const CountryIsActive: any;
+            const CountryReadOnly: any;
+            const CountryInsertDate: any;
+            const CountryInsertUserId: any;
+            const CountryUpdateDate: any;
+            const CountryUpdateUserId: any;
+            const Country1: any;
+            const CountryCode: any;
+            const CountryCodeUe: any;
+            const CountryIso3166Country: any;
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+    namespace ManAdressService {
+        const baseUrl = "Ge/ManAdress";
+        function Create(request: Serenity.SaveRequest<ManAdressRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<ManAdressRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<ManAdressRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<ManAdressRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        namespace Methods {
+            const Create: string;
+            const Update: string;
+            const Delete: string;
+            const Retrieve: string;
+            const List: string;
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class ManCavaliersForm extends Serenity.PrefixedContext {
+        static formKey: string;
+    }
+    interface ManCavaliersForm {
+        Person: Serenity.StringEditor;
         IsActive: Serenity.BooleanEditor;
         NotArchive: Serenity.BooleanEditor;
         InsertDate: Serenity.DateEditor;
@@ -566,14 +641,14 @@ declare namespace GestionEquestre.Ge {
         NiveauGalop: Serenity.IntegerEditor;
         LicenceCompetition: Serenity.IntegerEditor;
         DateCertificatMedical: Serenity.DateEditor;
-        Description: Serenity.StringEditor;
+        Caption: Serenity.StringEditor;
         ArchiveDate: Serenity.DateEditor;
     }
 }
 declare namespace GestionEquestre.Ge {
-    interface CavaliersRow {
+    interface ManCavaliersRow {
         LicFfe?: string;
-        Personne?: string;
+        Person?: string;
         IsActive?: boolean;
         NotArchive?: boolean;
         InsertDate?: string;
@@ -584,37 +659,37 @@ declare namespace GestionEquestre.Ge {
         NiveauGalop?: number;
         LicenceCompetition?: number;
         DateCertificatMedical?: string;
-        Description?: string;
+        Caption?: string;
         ArchiveDate?: string;
-        PersonneIsMorale?: boolean;
-        PersonneIsActive?: boolean;
-        PersonneNotArchive?: boolean;
-        PersonneInsertDate?: string;
-        PersonneInsertUserId?: number;
-        PersonneUpdateDate?: string;
-        PersonneUpdateUserId?: number;
-        PersonneNom?: string;
-        PersonnePrenom?: string;
-        PersonneNomJeuneFille?: string;
-        PersonneRaisonSociale?: string;
-        PersonneBirthday?: string;
-        PersonneSexe?: number;
-        PersonneSituationFamille?: number;
-        PersonneVilleNassance?: string;
-        PersonnePaysNassance?: string;
-        PersonnePaysNationalite?: string;
-        PersonnePhoto?: number[];
-        PersonneTelephonePerso?: string;
-        PersonneTelephoneMobile?: string;
-        PersonneTelephoneProf?: string;
-        PersonneTelephoneComplementaire1?: string;
-        PersonneTelephoneComplementaire2?: string;
-        PersonneEmail1?: string;
-        PersonneEmail2?: string;
-        PersonneCompteBancaire?: string;
-        PersonneIdAdresse?: string;
-        PersonneDescription?: string;
-        PersonneArchiveDate?: string;
+        PersonIsMorale?: boolean;
+        PersonIsActive?: boolean;
+        PersonNotArchive?: boolean;
+        PersonInsertDate?: string;
+        PersonInsertUserId?: number;
+        PersonUpdateDate?: string;
+        PersonUpdateUserId?: number;
+        PersonSurname?: string;
+        PersonName?: string;
+        PersonMaidenName?: string;
+        PersonBusinessName?: string;
+        PersonBirthday?: string;
+        PersonSexe?: number;
+        PersonMaritalStatus?: number;
+        PersonBirthCity?: string;
+        PersonBirthCountry?: string;
+        PersonNationality?: string;
+        PersonPhoto?: number[];
+        PersonPhone?: string;
+        PersonGsm?: string;
+        PersonWorkPhone?: string;
+        PersonOtherPhone1?: string;
+        PersonOtherPhone2?: string;
+        PersonEmail1?: string;
+        PersonEmail2?: string;
+        PersonBankAccount?: string;
+        PersonIdAdress?: string;
+        PersonCaption?: string;
+        PersonArchiveDate?: string;
         NiveauGalopDefaultValue?: boolean;
         NiveauGalopIsActive?: boolean;
         NiveauGalopReadOnly?: boolean;
@@ -622,7 +697,7 @@ declare namespace GestionEquestre.Ge {
         NiveauGalopInsertUserId?: number;
         NiveauGalopUpdateDate?: string;
         NiveauGalopUpdateUserId?: number;
-        NiveauGalopLibele?: string;
+        NiveauGalopCaption?: string;
         NiveauGalopCode?: string;
         LicenceCompetitionDefaultValue?: boolean;
         LicenceCompetitionIsActive?: boolean;
@@ -631,16 +706,16 @@ declare namespace GestionEquestre.Ge {
         LicenceCompetitionInsertUserId?: number;
         LicenceCompetitionUpdateDate?: string;
         LicenceCompetitionUpdateUserId?: number;
-        LicenceCompetitionLibele?: string;
+        LicenceCompetitionCaption?: string;
         LicenceCompetitionCode?: string;
     }
-    namespace CavaliersRow {
+    namespace ManCavaliersRow {
         const idProperty = "LicFfe";
         const nameProperty = "LicFfe";
-        const localTextPrefix = "Ge.Cavaliers";
+        const localTextPrefix = "Ge.ManCavaliers";
         namespace Fields {
             const LicFfe: any;
-            const Personne: any;
+            const Person: any;
             const IsActive: any;
             const NotArchive: any;
             const InsertDate: any;
@@ -651,66 +726,66 @@ declare namespace GestionEquestre.Ge {
             const NiveauGalop: any;
             const LicenceCompetition: any;
             const DateCertificatMedical: any;
-            const Description: any;
+            const Caption: any;
             const ArchiveDate: any;
-            const PersonneIsMorale: string;
-            const PersonneIsActive: string;
-            const PersonneNotArchive: string;
-            const PersonneInsertDate: string;
-            const PersonneInsertUserId: string;
-            const PersonneUpdateDate: string;
-            const PersonneUpdateUserId: string;
-            const PersonneNom: string;
-            const PersonnePrenom: string;
-            const PersonneNomJeuneFille: string;
-            const PersonneRaisonSociale: string;
-            const PersonneBirthday: string;
-            const PersonneSexe: string;
-            const PersonneSituationFamille: string;
-            const PersonneVilleNassance: string;
-            const PersonnePaysNassance: string;
-            const PersonnePaysNationalite: string;
-            const PersonnePhoto: string;
-            const PersonneTelephonePerso: string;
-            const PersonneTelephoneMobile: string;
-            const PersonneTelephoneProf: string;
-            const PersonneTelephoneComplementaire1: string;
-            const PersonneTelephoneComplementaire2: string;
-            const PersonneEmail1: string;
-            const PersonneEmail2: string;
-            const PersonneCompteBancaire: string;
-            const PersonneIdAdresse: string;
-            const PersonneDescription: string;
-            const PersonneArchiveDate: string;
-            const NiveauGalopDefaultValue: string;
-            const NiveauGalopIsActive: string;
-            const NiveauGalopReadOnly: string;
-            const NiveauGalopInsertDate: string;
-            const NiveauGalopInsertUserId: string;
-            const NiveauGalopUpdateDate: string;
-            const NiveauGalopUpdateUserId: string;
-            const NiveauGalopLibele: string;
-            const NiveauGalopCode: string;
-            const LicenceCompetitionDefaultValue: string;
-            const LicenceCompetitionIsActive: string;
-            const LicenceCompetitionReadOnly: string;
-            const LicenceCompetitionInsertDate: string;
-            const LicenceCompetitionInsertUserId: string;
-            const LicenceCompetitionUpdateDate: string;
-            const LicenceCompetitionUpdateUserId: string;
-            const LicenceCompetitionLibele: string;
-            const LicenceCompetitionCode: string;
+            const PersonIsMorale: any;
+            const PersonIsActive: any;
+            const PersonNotArchive: any;
+            const PersonInsertDate: any;
+            const PersonInsertUserId: any;
+            const PersonUpdateDate: any;
+            const PersonUpdateUserId: any;
+            const PersonSurname: any;
+            const PersonName: any;
+            const PersonMaidenName: any;
+            const PersonBusinessName: any;
+            const PersonBirthday: any;
+            const PersonSexe: any;
+            const PersonMaritalStatus: any;
+            const PersonBirthCity: any;
+            const PersonBirthCountry: any;
+            const PersonNationality: any;
+            const PersonPhoto: any;
+            const PersonPhone: any;
+            const PersonGsm: any;
+            const PersonWorkPhone: any;
+            const PersonOtherPhone1: any;
+            const PersonOtherPhone2: any;
+            const PersonEmail1: any;
+            const PersonEmail2: any;
+            const PersonBankAccount: any;
+            const PersonIdAdress: any;
+            const PersonCaption: any;
+            const PersonArchiveDate: any;
+            const NiveauGalopDefaultValue: any;
+            const NiveauGalopIsActive: any;
+            const NiveauGalopReadOnly: any;
+            const NiveauGalopInsertDate: any;
+            const NiveauGalopInsertUserId: any;
+            const NiveauGalopUpdateDate: any;
+            const NiveauGalopUpdateUserId: any;
+            const NiveauGalopCaption: any;
+            const NiveauGalopCode: any;
+            const LicenceCompetitionDefaultValue: any;
+            const LicenceCompetitionIsActive: any;
+            const LicenceCompetitionReadOnly: any;
+            const LicenceCompetitionInsertDate: any;
+            const LicenceCompetitionInsertUserId: any;
+            const LicenceCompetitionUpdateDate: any;
+            const LicenceCompetitionUpdateUserId: any;
+            const LicenceCompetitionCaption: any;
+            const LicenceCompetitionCode: any;
         }
     }
 }
 declare namespace GestionEquestre.Ge {
-    namespace CavaliersService {
-        const baseUrl = "Ge/Cavaliers";
-        function Create(request: Serenity.SaveRequest<CavaliersRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function Update(request: Serenity.SaveRequest<CavaliersRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<CavaliersRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<CavaliersRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+    namespace ManCavaliersService {
+        const baseUrl = "Ge/ManCavaliers";
+        function Create(request: Serenity.SaveRequest<ManCavaliersRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<ManCavaliersRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<ManCavaliersRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<ManCavaliersRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
         namespace Methods {
             const Create: string;
             const Update: string;
@@ -721,12 +796,15 @@ declare namespace GestionEquestre.Ge {
     }
 }
 declare namespace GestionEquestre.Ge {
-    class ChevauxForm extends Serenity.PrefixedContext {
+    class ManHorsesForm extends Serenity.PrefixedContext {
         static formKey: string;
     }
-    interface ChevauxForm {
+    interface ManHorsesForm {
         Sire: Serenity.StringEditor;
         CleSire: Serenity.StringEditor;
+        Hnin: Serenity.StringEditor;
+        BirthCountry: Serenity.StringEditor;
+        BirthOrganization: Serenity.StringEditor;
         Name: Serenity.StringEditor;
         IsActive: Serenity.BooleanEditor;
         NotArchive: Serenity.BooleanEditor;
@@ -736,18 +814,22 @@ declare namespace GestionEquestre.Ge {
         UpdateUserId: Serenity.IntegerEditor;
         Birthday: Serenity.DateEditor;
         Sexe: Serenity.IntegerEditor;
-        Robe: Serenity.StringEditor;
-        Transpondeur: Serenity.StringEditor;
-        SortieDefinitive: Serenity.DateEditor;
+        Color: Serenity.StringEditor;
+        Race: Serenity.StringEditor;
+        Transponder: Serenity.StringEditor;
+        FinalExit: Serenity.DateEditor;
         Description: Serenity.StringEditor;
         ArchiveDate: Serenity.DateEditor;
     }
 }
 declare namespace GestionEquestre.Ge {
-    interface ChevauxRow {
+    interface ManHorsesRow {
         Ueln?: string;
         Sire?: string;
         CleSire?: string;
+        Hnin?: string;
+        BirthCountry?: string;
+        BirthOrganization?: string;
         Name?: string;
         IsActive?: boolean;
         NotArchive?: boolean;
@@ -757,11 +839,32 @@ declare namespace GestionEquestre.Ge {
         UpdateUserId?: number;
         Birthday?: string;
         Sexe?: number;
-        Robe?: string;
-        Transpondeur?: string;
-        SortieDefinitive?: string;
+        Color?: string;
+        Race?: string;
+        Transponder?: string;
+        FinalExit?: string;
         Description?: string;
         ArchiveDate?: string;
+        BirthCountryDefaultValue?: boolean;
+        BirthCountryIsActive?: boolean;
+        BirthCountryReadOnly?: boolean;
+        BirthCountryInsertDate?: string;
+        BirthCountryInsertUserId?: number;
+        BirthCountryUpdateDate?: string;
+        BirthCountryUpdateUserId?: number;
+        BirthCountryCountry?: string;
+        BirthCountryCode?: string;
+        BirthCountryCodeUe?: number;
+        BirthCountryIso3166Country?: string;
+        BirthOrganizationDefaultValue?: boolean;
+        BirthOrganizationIsActive?: boolean;
+        BirthOrganizationReadOnly?: boolean;
+        BirthOrganizationInsertDate?: string;
+        BirthOrganizationInsertUserId?: number;
+        BirthOrganizationUpdateDate?: string;
+        BirthOrganizationUpdateUserId?: number;
+        BirthOrganizationOrganization?: string;
+        BirthOrganizationUelnOrganization?: string;
         SexeDefaultValue?: boolean;
         SexeIsActive?: boolean;
         SexeReadOnly?: boolean;
@@ -769,18 +872,20 @@ declare namespace GestionEquestre.Ge {
         SexeInsertUserId?: number;
         SexeUpdateDate?: string;
         SexeUpdateUserId?: number;
-        SexeLibele?: string;
-        SexeCivilite?: string;
-        SexeLibeleUs?: string;
+        SexeCaption?: string;
+        SexeCivility?: string;
     }
-    namespace ChevauxRow {
+    namespace ManHorsesRow {
         const idProperty = "Ueln";
         const nameProperty = "Ueln";
-        const localTextPrefix = "Ge.Chevaux";
+        const localTextPrefix = "Ge.ManHorses";
         namespace Fields {
             const Ueln: any;
             const Sire: any;
             const CleSire: any;
+            const Hnin: any;
+            const BirthCountry: any;
+            const BirthOrganization: any;
             const Name: any;
             const IsActive: any;
             const NotArchive: any;
@@ -790,32 +895,52 @@ declare namespace GestionEquestre.Ge {
             const UpdateUserId: any;
             const Birthday: any;
             const Sexe: any;
-            const Robe: any;
-            const Transpondeur: any;
-            const SortieDefinitive: any;
+            const Color: any;
+            const Race: any;
+            const Transponder: any;
+            const FinalExit: any;
             const Description: any;
             const ArchiveDate: any;
-            const SexeDefaultValue: string;
-            const SexeIsActive: string;
-            const SexeReadOnly: string;
-            const SexeInsertDate: string;
-            const SexeInsertUserId: string;
-            const SexeUpdateDate: string;
-            const SexeUpdateUserId: string;
-            const SexeLibele: string;
-            const SexeCivilite: string;
-            const SexeLibeleUs: string;
+            const BirthCountryDefaultValue: any;
+            const BirthCountryIsActive: any;
+            const BirthCountryReadOnly: any;
+            const BirthCountryInsertDate: any;
+            const BirthCountryInsertUserId: any;
+            const BirthCountryUpdateDate: any;
+            const BirthCountryUpdateUserId: any;
+            const BirthCountryCountry: any;
+            const BirthCountryCode: any;
+            const BirthCountryCodeUe: any;
+            const BirthCountryIso3166Country: any;
+            const BirthOrganizationDefaultValue: any;
+            const BirthOrganizationIsActive: any;
+            const BirthOrganizationReadOnly: any;
+            const BirthOrganizationInsertDate: any;
+            const BirthOrganizationInsertUserId: any;
+            const BirthOrganizationUpdateDate: any;
+            const BirthOrganizationUpdateUserId: any;
+            const BirthOrganizationOrganization: any;
+            const BirthOrganizationUelnOrganization: any;
+            const SexeDefaultValue: any;
+            const SexeIsActive: any;
+            const SexeReadOnly: any;
+            const SexeInsertDate: any;
+            const SexeInsertUserId: any;
+            const SexeUpdateDate: any;
+            const SexeUpdateUserId: any;
+            const SexeCaption: any;
+            const SexeCivility: any;
         }
     }
 }
 declare namespace GestionEquestre.Ge {
-    namespace ChevauxService {
-        const baseUrl = "Ge/Chevaux";
-        function Create(request: Serenity.SaveRequest<ChevauxRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function Update(request: Serenity.SaveRequest<ChevauxRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<ChevauxRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<ChevauxRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+    namespace ManHorsesService {
+        const baseUrl = "Ge/ManHorses";
+        function Create(request: Serenity.SaveRequest<ManHorsesRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<ManHorsesRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<ManHorsesRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<ManHorsesRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
         namespace Methods {
             const Create: string;
             const Update: string;
@@ -826,737 +951,42 @@ declare namespace GestionEquestre.Ge {
     }
 }
 declare namespace GestionEquestre.Ge {
-    class CodeGalopForm extends Serenity.PrefixedContext {
+    class ManOwnerForm extends Serenity.PrefixedContext {
         static formKey: string;
     }
-    interface CodeGalopForm {
-        DefaultValue: Serenity.BooleanEditor;
-        IsActive: Serenity.BooleanEditor;
-        ReadOnly: Serenity.BooleanEditor;
-        InsertDate: Serenity.DateEditor;
-        InsertUserId: Serenity.IntegerEditor;
-        UpdateDate: Serenity.DateEditor;
-        UpdateUserId: Serenity.IntegerEditor;
-        Libele: Serenity.StringEditor;
-        Code: Serenity.StringEditor;
-    }
-}
-declare namespace GestionEquestre.Ge {
-    interface CodeGalopRow {
-        Id?: number;
-        DefaultValue?: boolean;
-        IsActive?: boolean;
-        ReadOnly?: boolean;
-        InsertDate?: string;
-        InsertUserId?: number;
-        UpdateDate?: string;
-        UpdateUserId?: number;
-        Libele?: string;
-        Code?: string;
-    }
-    namespace CodeGalopRow {
-        const idProperty = "Id";
-        const nameProperty = "Libele";
-        const localTextPrefix = "Ge.CodeGalop";
-        namespace Fields {
-            const Id: any;
-            const DefaultValue: any;
-            const IsActive: any;
-            const ReadOnly: any;
-            const InsertDate: any;
-            const InsertUserId: any;
-            const UpdateDate: any;
-            const UpdateUserId: any;
-            const Libele: any;
-            const Code: any;
-        }
-    }
-}
-declare namespace GestionEquestre.Ge {
-    namespace CodeGalopService {
-        const baseUrl = "Ge/CodeGalop";
-        function Create(request: Serenity.SaveRequest<CodeGalopRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function Update(request: Serenity.SaveRequest<CodeGalopRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<CodeGalopRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<CodeGalopRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        namespace Methods {
-            const Create: string;
-            const Update: string;
-            const Delete: string;
-            const Retrieve: string;
-            const List: string;
-        }
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class CodeLfcForm extends Serenity.PrefixedContext {
-        static formKey: string;
-    }
-    interface CodeLfcForm {
-        DefaultValue: Serenity.BooleanEditor;
-        IsActive: Serenity.BooleanEditor;
-        ReadOnly: Serenity.BooleanEditor;
-        InsertDate: Serenity.DateEditor;
-        InsertUserId: Serenity.IntegerEditor;
-        UpdateDate: Serenity.DateEditor;
-        UpdateUserId: Serenity.IntegerEditor;
-        Libele: Serenity.StringEditor;
-        Code: Serenity.StringEditor;
-    }
-}
-declare namespace GestionEquestre.Ge {
-    interface CodeLfcRow {
-        Id?: number;
-        DefaultValue?: boolean;
-        IsActive?: boolean;
-        ReadOnly?: boolean;
-        InsertDate?: string;
-        InsertUserId?: number;
-        UpdateDate?: string;
-        UpdateUserId?: number;
-        Libele?: string;
-        Code?: string;
-    }
-    namespace CodeLfcRow {
-        const idProperty = "Id";
-        const nameProperty = "Libele";
-        const localTextPrefix = "Ge.CodeLfc";
-        namespace Fields {
-            const Id: any;
-            const DefaultValue: any;
-            const IsActive: any;
-            const ReadOnly: any;
-            const InsertDate: any;
-            const InsertUserId: any;
-            const UpdateDate: any;
-            const UpdateUserId: any;
-            const Libele: any;
-            const Code: any;
-        }
-    }
-}
-declare namespace GestionEquestre.Ge {
-    namespace CodeLfcService {
-        const baseUrl = "Ge/CodeLfc";
-        function Create(request: Serenity.SaveRequest<CodeLfcRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function Update(request: Serenity.SaveRequest<CodeLfcRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<CodeLfcRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<CodeLfcRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        namespace Methods {
-            const Create: string;
-            const Update: string;
-            const Delete: string;
-            const Retrieve: string;
-            const List: string;
-        }
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class CodeSexeForm extends Serenity.PrefixedContext {
-        static formKey: string;
-    }
-    interface CodeSexeForm {
-        DefaultValue: Serenity.BooleanEditor;
-        IsActive: Serenity.BooleanEditor;
-        ReadOnly: Serenity.BooleanEditor;
-        InsertDate: Serenity.DateEditor;
-        InsertUserId: Serenity.IntegerEditor;
-        UpdateDate: Serenity.DateEditor;
-        UpdateUserId: Serenity.IntegerEditor;
-        Libele: Serenity.StringEditor;
-        Civilite: Serenity.StringEditor;
-        LibeleUs: Serenity.StringEditor;
-    }
-}
-declare namespace GestionEquestre.Ge {
-    interface CodeSexeRow {
-        SexeId?: number;
-        DefaultValue?: boolean;
-        IsActive?: boolean;
-        ReadOnly?: boolean;
-        InsertDate?: string;
-        InsertUserId?: number;
-        UpdateDate?: string;
-        UpdateUserId?: number;
-        Libele?: string;
-        Civilite?: string;
-        LibeleUs?: string;
-    }
-    namespace CodeSexeRow {
-        const idProperty = "SexeId";
-        const nameProperty = "Libele";
-        const localTextPrefix = "Ge.CodeSexe";
-        namespace Fields {
-            const SexeId: any;
-            const DefaultValue: any;
-            const IsActive: any;
-            const ReadOnly: any;
-            const InsertDate: any;
-            const InsertUserId: any;
-            const UpdateDate: any;
-            const UpdateUserId: any;
-            const Libele: any;
-            const Civilite: any;
-            const LibeleUs: any;
-        }
-    }
-}
-declare namespace GestionEquestre.Ge {
-    namespace CodeSexeService {
-        const baseUrl = "Ge/CodeSexe";
-        function Create(request: Serenity.SaveRequest<CodeSexeRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function Update(request: Serenity.SaveRequest<CodeSexeRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<CodeSexeRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<CodeSexeRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        namespace Methods {
-            const Create: string;
-            const Update: string;
-            const Delete: string;
-            const Retrieve: string;
-            const List: string;
-        }
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class CodeStuationfamilleForm extends Serenity.PrefixedContext {
-        static formKey: string;
-    }
-    interface CodeStuationfamilleForm {
-        DefaultValue: Serenity.BooleanEditor;
-        IsActive: Serenity.BooleanEditor;
-        ReadOnly: Serenity.BooleanEditor;
-        InsertDate: Serenity.DateEditor;
-        InsertUserId: Serenity.IntegerEditor;
-        UpdateDate: Serenity.DateEditor;
-        UpdateUserId: Serenity.IntegerEditor;
-        Libele: Serenity.StringEditor;
-        Code: Serenity.StringEditor;
-    }
-}
-declare namespace GestionEquestre.Ge {
-    interface CodeStuationfamilleRow {
-        Id?: number;
-        DefaultValue?: boolean;
-        IsActive?: boolean;
-        ReadOnly?: boolean;
-        InsertDate?: string;
-        InsertUserId?: number;
-        UpdateDate?: string;
-        UpdateUserId?: number;
-        Libele?: string;
-        Code?: string;
-    }
-    namespace CodeStuationfamilleRow {
-        const idProperty = "Id";
-        const nameProperty = "Libele";
-        const localTextPrefix = "Ge.CodeStuationfamille";
-        namespace Fields {
-            const Id: any;
-            const DefaultValue: any;
-            const IsActive: any;
-            const ReadOnly: any;
-            const InsertDate: any;
-            const InsertUserId: any;
-            const UpdateDate: any;
-            const UpdateUserId: any;
-            const Libele: any;
-            const Code: any;
-        }
-    }
-}
-declare namespace GestionEquestre.Ge {
-    namespace CodeStuationfamilleService {
-        const baseUrl = "Ge/CodeStuationfamille";
-        function Create(request: Serenity.SaveRequest<CodeStuationfamilleRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function Update(request: Serenity.SaveRequest<CodeStuationfamilleRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<CodeStuationfamilleRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<CodeStuationfamilleRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        namespace Methods {
-            const Create: string;
-            const Update: string;
-            const Delete: string;
-            const Retrieve: string;
-            const List: string;
-        }
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class ComptebancaireForm extends Serenity.PrefixedContext {
-        static formKey: string;
-    }
-    interface ComptebancaireForm {
-        CodePaysIban: Serenity.StringEditor;
-        CleIban: Serenity.StringEditor;
-        Banque: Serenity.StringEditor;
-        Guichet: Serenity.StringEditor;
-        NumeroCompte: Serenity.StringEditor;
-        CleRib: Serenity.StringEditor;
-        EmetteurRib: Serenity.StringEditor;
-        Bic: Serenity.StringEditor;
-        TitulaireCompte: Serenity.StringEditor;
-        Domiciliation: Serenity.StringEditor;
-        CodeIcs: Serenity.StringEditor;
-        CodeRum: Serenity.StringEditor;
-        DateSignatureMandat: Serenity.DateEditor;
-        TypePrelevement: Serenity.IntegerEditor;
-        DateDernierPrelevement: Serenity.DateEditor;
-        TypeDernierPrelevement: Serenity.IntegerEditor;
-    }
-}
-declare namespace GestionEquestre.Ge {
-    interface ComptebancaireRow {
-        Id?: string;
-        CodePaysIban?: string;
-        CleIban?: string;
-        Banque?: string;
-        Guichet?: string;
-        NumeroCompte?: string;
-        CleRib?: string;
-        EmetteurRib?: string;
-        Bic?: string;
-        TitulaireCompte?: string;
-        Domiciliation?: string;
-        CodeIcs?: string;
-        CodeRum?: string;
-        DateSignatureMandat?: string;
-        TypePrelevement?: number;
-        DateDernierPrelevement?: string;
-        TypeDernierPrelevement?: number;
-    }
-    namespace ComptebancaireRow {
-        const idProperty = "Id";
-        const nameProperty = "CodePaysIban";
-        const localTextPrefix = "Ge.Comptebancaire";
-        namespace Fields {
-            const Id: any;
-            const CodePaysIban: any;
-            const CleIban: any;
-            const Banque: any;
-            const Guichet: any;
-            const NumeroCompte: any;
-            const CleRib: any;
-            const EmetteurRib: any;
-            const Bic: any;
-            const TitulaireCompte: any;
-            const Domiciliation: any;
-            const CodeIcs: any;
-            const CodeRum: any;
-            const DateSignatureMandat: any;
-            const TypePrelevement: any;
-            const DateDernierPrelevement: any;
-            const TypeDernierPrelevement: any;
-        }
-    }
-}
-declare namespace GestionEquestre.Ge {
-    namespace ComptebancaireService {
-        const baseUrl = "Ge/Comptebancaire";
-        function Create(request: Serenity.SaveRequest<ComptebancaireRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function Update(request: Serenity.SaveRequest<ComptebancaireRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<ComptebancaireRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<ComptebancaireRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        namespace Methods {
-            const Create: string;
-            const Update: string;
-            const Delete: string;
-            const Retrieve: string;
-            const List: string;
-        }
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class PaysForm extends Serenity.PrefixedContext {
-        static formKey: string;
-    }
-    interface PaysForm {
-        DefaultValue: Serenity.BooleanEditor;
-        IsActive: Serenity.BooleanEditor;
-        ReadOnly: Serenity.BooleanEditor;
-        InsertDate: Serenity.DateEditor;
-        InsertUserId: Serenity.IntegerEditor;
-        UpdateDate: Serenity.DateEditor;
-        UpdateUserId: Serenity.IntegerEditor;
-        Libele: Serenity.StringEditor;
-        Code: Serenity.StringEditor;
-        CodeUe: Serenity.IntegerEditor;
-    }
-}
-declare namespace GestionEquestre.Ge {
-    interface PaysRow {
-        Id?: string;
-        DefaultValue?: boolean;
-        IsActive?: boolean;
-        ReadOnly?: boolean;
-        InsertDate?: string;
-        InsertUserId?: number;
-        UpdateDate?: string;
-        UpdateUserId?: number;
-        Libele?: string;
-        Code?: string;
-        CodeUe?: number;
-    }
-    namespace PaysRow {
-        const idProperty = "Id";
-        const nameProperty = "Libele";
-        const localTextPrefix = "Ge.Pays";
-        namespace Fields {
-            const Id: any;
-            const DefaultValue: any;
-            const IsActive: any;
-            const ReadOnly: any;
-            const InsertDate: any;
-            const InsertUserId: any;
-            const UpdateDate: any;
-            const UpdateUserId: any;
-            const Libele: any;
-            const Code: any;
-            const CodeUe: any;
-        }
-    }
-}
-declare namespace GestionEquestre.Ge {
-    namespace PaysService {
-        const baseUrl = "Ge/Pays";
-        function Create(request: Serenity.SaveRequest<PaysRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function Update(request: Serenity.SaveRequest<PaysRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<PaysRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<PaysRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        namespace Methods {
-            const Create: string;
-            const Update: string;
-            const Delete: string;
-            const Retrieve: string;
-            const List: string;
-        }
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class PersonneForm extends Serenity.PrefixedContext {
-        static formKey: string;
-    }
-    interface PersonneForm {
-        IsMorale: Serenity.BooleanEditor;
-        IsActive: Serenity.BooleanEditor;
-        NotArchive: Serenity.BooleanEditor;
-        InsertDate: Serenity.DateEditor;
-        InsertUserId: Serenity.IntegerEditor;
-        UpdateDate: Serenity.DateEditor;
-        UpdateUserId: Serenity.IntegerEditor;
-        Nom: Serenity.StringEditor;
-        Prenom: Serenity.StringEditor;
-        NomJeuneFille: Serenity.StringEditor;
-        RaisonSociale: Serenity.StringEditor;
-        Birthday: Serenity.DateEditor;
-        Sexe: Serenity.IntegerEditor;
-        SituationFamille: Serenity.IntegerEditor;
-        VilleNassance: Serenity.StringEditor;
-        PaysNassance: Serenity.StringEditor;
-        PaysNationalite: Serenity.StringEditor;
-        Photo: Serenity.StringEditor;
-        TelephonePerso: Serenity.StringEditor;
-        TelephoneMobile: Serenity.StringEditor;
-        TelephoneProf: Serenity.StringEditor;
-        TelephoneComplementaire1: Serenity.StringEditor;
-        TelephoneComplementaire2: Serenity.StringEditor;
-        Email1: Serenity.StringEditor;
-        Email2: Serenity.StringEditor;
-        CompteBancaire: Serenity.StringEditor;
-        IdAdresse: Serenity.StringEditor;
-        Description: Serenity.StringEditor;
-        ArchiveDate: Serenity.DateEditor;
-    }
-}
-declare namespace GestionEquestre.Ge {
-    interface PersonneRow {
-        Id?: string;
-        IsMorale?: boolean;
-        IsActive?: boolean;
-        NotArchive?: boolean;
-        InsertDate?: string;
-        InsertUserId?: number;
-        UpdateDate?: string;
-        UpdateUserId?: number;
-        Nom?: string;
-        Prenom?: string;
-        NomJeuneFille?: string;
-        RaisonSociale?: string;
-        Birthday?: string;
-        Sexe?: number;
-        SituationFamille?: number;
-        VilleNassance?: string;
-        PaysNassance?: string;
-        PaysNationalite?: string;
-        Photo?: number[];
-        TelephonePerso?: string;
-        TelephoneMobile?: string;
-        TelephoneProf?: string;
-        TelephoneComplementaire1?: string;
-        TelephoneComplementaire2?: string;
-        Email1?: string;
-        Email2?: string;
-        CompteBancaire?: string;
-        IdAdresse?: string;
-        Description?: string;
-        ArchiveDate?: string;
-        SexeDefaultValue?: boolean;
-        SexeIsActive?: boolean;
-        SexeReadOnly?: boolean;
-        SexeInsertDate?: string;
-        SexeInsertUserId?: number;
-        SexeUpdateDate?: string;
-        SexeUpdateUserId?: number;
-        SexeLibele?: string;
-        SexeCivilite?: string;
-        SexeLibeleUs?: string;
-        SituationFamilleDefaultValue?: boolean;
-        SituationFamilleIsActive?: boolean;
-        SituationFamilleReadOnly?: boolean;
-        SituationFamilleInsertDate?: string;
-        SituationFamilleInsertUserId?: number;
-        SituationFamilleUpdateDate?: string;
-        SituationFamilleUpdateUserId?: number;
-        SituationFamilleLibele?: string;
-        SituationFamilleCode?: string;
-        VilleNassanceDefaultValue?: boolean;
-        VilleNassanceIsActive?: boolean;
-        VilleNassanceReadOnly?: boolean;
-        VilleNassanceInsertDate?: string;
-        VilleNassanceInsertUserId?: number;
-        VilleNassanceUpdateDate?: string;
-        VilleNassanceUpdateUserId?: number;
-        VilleNassanceCodeInsee?: string;
-        VilleNassanceLibele?: string;
-        VilleNassanceNomVille?: string;
-        VilleNassanceCodePostal?: string;
-        VilleNassancePays?: string;
-        PaysNassanceDefaultValue?: boolean;
-        PaysNassanceIsActive?: boolean;
-        PaysNassanceReadOnly?: boolean;
-        PaysNassanceInsertDate?: string;
-        PaysNassanceInsertUserId?: number;
-        PaysNassanceUpdateDate?: string;
-        PaysNassanceUpdateUserId?: number;
-        PaysNassanceLibele?: string;
-        PaysNassanceCode?: string;
-        PaysNassanceCodeUe?: number;
-        PaysNationaliteDefaultValue?: boolean;
-        PaysNationaliteIsActive?: boolean;
-        PaysNationaliteReadOnly?: boolean;
-        PaysNationaliteInsertDate?: string;
-        PaysNationaliteInsertUserId?: number;
-        PaysNationaliteUpdateDate?: string;
-        PaysNationaliteUpdateUserId?: number;
-        PaysNationaliteLibele?: string;
-        PaysNationaliteCode?: string;
-        PaysNationaliteCodeUe?: number;
-        CompteBancaireCodePaysIban?: string;
-        CompteBancaireCleIban?: string;
-        CompteBancaireBanque?: string;
-        CompteBancaireGuichet?: string;
-        CompteBancaireNumeroCompte?: string;
-        CompteBancaireCleRib?: string;
-        CompteBancaireEmetteurRib?: string;
-        CompteBancaireBic?: string;
-        CompteBancaireTitulaireCompte?: string;
-        CompteBancaireDomiciliation?: string;
-        CompteBancaireCodeIcs?: string;
-        CompteBancaireCodeRum?: string;
-        CompteBancaireDateSignatureMandat?: string;
-        CompteBancaireTypePrelevement?: number;
-        CompteBancaireDateDernierPrelevement?: string;
-        CompteBancaireTypeDernierPrelevement?: number;
-        IdAdresseIsActive?: boolean;
-        IdAdresseNotArchive?: boolean;
-        IdAdresseInsertDate?: string;
-        IdAdresseInsertUserId?: number;
-        IdAdresseUpdateDate?: string;
-        IdAdresseUpdateUserId?: number;
-        IdAdresseAdresse1?: string;
-        IdAdresseAdresse2?: string;
-        IdAdresseAdresse3?: string;
-        IdAdresseVille?: string;
-        IdAdressePays?: string;
-        IdAdresseCedex?: string;
-        IdAdresseBatiment?: string;
-        IdAdresseDescription?: string;
-        IdAdresseArchiveDate?: string;
-    }
-    namespace PersonneRow {
-        const idProperty = "Id";
-        const nameProperty = "Nom";
-        const localTextPrefix = "Ge.Personne";
-        namespace Fields {
-            const Id: any;
-            const IsMorale: any;
-            const IsActive: any;
-            const NotArchive: any;
-            const InsertDate: any;
-            const InsertUserId: any;
-            const UpdateDate: any;
-            const UpdateUserId: any;
-            const Nom: any;
-            const Prenom: any;
-            const NomJeuneFille: any;
-            const RaisonSociale: any;
-            const Birthday: any;
-            const Sexe: any;
-            const SituationFamille: any;
-            const VilleNassance: any;
-            const PaysNassance: any;
-            const PaysNationalite: any;
-            const Photo: any;
-            const TelephonePerso: any;
-            const TelephoneMobile: any;
-            const TelephoneProf: any;
-            const TelephoneComplementaire1: any;
-            const TelephoneComplementaire2: any;
-            const Email1: any;
-            const Email2: any;
-            const CompteBancaire: any;
-            const IdAdresse: any;
-            const Description: any;
-            const ArchiveDate: any;
-            const SexeDefaultValue: string;
-            const SexeIsActive: string;
-            const SexeReadOnly: string;
-            const SexeInsertDate: string;
-            const SexeInsertUserId: string;
-            const SexeUpdateDate: string;
-            const SexeUpdateUserId: string;
-            const SexeLibele: string;
-            const SexeCivilite: string;
-            const SexeLibeleUs: string;
-            const SituationFamilleDefaultValue: string;
-            const SituationFamilleIsActive: string;
-            const SituationFamilleReadOnly: string;
-            const SituationFamilleInsertDate: string;
-            const SituationFamilleInsertUserId: string;
-            const SituationFamilleUpdateDate: string;
-            const SituationFamilleUpdateUserId: string;
-            const SituationFamilleLibele: string;
-            const SituationFamilleCode: string;
-            const VilleNassanceDefaultValue: string;
-            const VilleNassanceIsActive: string;
-            const VilleNassanceReadOnly: string;
-            const VilleNassanceInsertDate: string;
-            const VilleNassanceInsertUserId: string;
-            const VilleNassanceUpdateDate: string;
-            const VilleNassanceUpdateUserId: string;
-            const VilleNassanceCodeInsee: string;
-            const VilleNassanceLibele: string;
-            const VilleNassanceNomVille: string;
-            const VilleNassanceCodePostal: string;
-            const VilleNassancePays: string;
-            const PaysNassanceDefaultValue: string;
-            const PaysNassanceIsActive: string;
-            const PaysNassanceReadOnly: string;
-            const PaysNassanceInsertDate: string;
-            const PaysNassanceInsertUserId: string;
-            const PaysNassanceUpdateDate: string;
-            const PaysNassanceUpdateUserId: string;
-            const PaysNassanceLibele: string;
-            const PaysNassanceCode: string;
-            const PaysNassanceCodeUe: string;
-            const PaysNationaliteDefaultValue: string;
-            const PaysNationaliteIsActive: string;
-            const PaysNationaliteReadOnly: string;
-            const PaysNationaliteInsertDate: string;
-            const PaysNationaliteInsertUserId: string;
-            const PaysNationaliteUpdateDate: string;
-            const PaysNationaliteUpdateUserId: string;
-            const PaysNationaliteLibele: string;
-            const PaysNationaliteCode: string;
-            const PaysNationaliteCodeUe: string;
-            const CompteBancaireCodePaysIban: string;
-            const CompteBancaireCleIban: string;
-            const CompteBancaireBanque: string;
-            const CompteBancaireGuichet: string;
-            const CompteBancaireNumeroCompte: string;
-            const CompteBancaireCleRib: string;
-            const CompteBancaireEmetteurRib: string;
-            const CompteBancaireBic: string;
-            const CompteBancaireTitulaireCompte: string;
-            const CompteBancaireDomiciliation: string;
-            const CompteBancaireCodeIcs: string;
-            const CompteBancaireCodeRum: string;
-            const CompteBancaireDateSignatureMandat: string;
-            const CompteBancaireTypePrelevement: string;
-            const CompteBancaireDateDernierPrelevement: string;
-            const CompteBancaireTypeDernierPrelevement: string;
-            const IdAdresseIsActive: string;
-            const IdAdresseNotArchive: string;
-            const IdAdresseInsertDate: string;
-            const IdAdresseInsertUserId: string;
-            const IdAdresseUpdateDate: string;
-            const IdAdresseUpdateUserId: string;
-            const IdAdresseAdresse1: string;
-            const IdAdresseAdresse2: string;
-            const IdAdresseAdresse3: string;
-            const IdAdresseVille: string;
-            const IdAdressePays: string;
-            const IdAdresseCedex: string;
-            const IdAdresseBatiment: string;
-            const IdAdresseDescription: string;
-            const IdAdresseArchiveDate: string;
-        }
-    }
-}
-declare namespace GestionEquestre.Ge {
-    namespace PersonneService {
-        const baseUrl = "Ge/Personne";
-        function Create(request: Serenity.SaveRequest<PersonneRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function Update(request: Serenity.SaveRequest<PersonneRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<PersonneRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<PersonneRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        namespace Methods {
-            const Create: string;
-            const Update: string;
-            const Delete: string;
-            const Retrieve: string;
-            const List: string;
-        }
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class ProprietaireForm extends Serenity.PrefixedContext {
-        static formKey: string;
-    }
-    interface ProprietaireForm {
-        Cheval: Serenity.StringEditor;
+    interface ManOwnerForm {
+        Horse: Serenity.StringEditor;
         Cavalier: Serenity.StringEditor;
         Part: Serenity.DecimalEditor;
     }
 }
 declare namespace GestionEquestre.Ge {
-    interface ProprietaireRow {
+    interface ManOwnerRow {
         Id?: number;
-        Cheval?: string;
+        Horse?: string;
         Cavalier?: string;
         Part?: number;
-        ChevalSire?: string;
-        ChevalCleSire?: string;
-        ChevalName?: string;
-        ChevalIsActive?: boolean;
-        ChevalNotArchive?: boolean;
-        ChevalInsertDate?: string;
-        ChevalInsertUserId?: number;
-        ChevalUpdateDate?: string;
-        ChevalUpdateUserId?: number;
-        ChevalBirthday?: string;
-        ChevalSexe?: number;
-        ChevalRobe?: string;
-        ChevalTranspondeur?: string;
-        ChevalSortieDefinitive?: string;
-        ChevalDescription?: string;
-        ChevalArchiveDate?: string;
-        CavalierPersonne?: string;
+        HorseSire?: string;
+        HorseCleSire?: string;
+        HorseHnin?: string;
+        HorseBirthCountry?: string;
+        HorseBirthOrganization?: string;
+        HorseName?: string;
+        HorseIsActive?: boolean;
+        HorseNotArchive?: boolean;
+        HorseInsertDate?: string;
+        HorseInsertUserId?: number;
+        HorseUpdateDate?: string;
+        HorseUpdateUserId?: number;
+        HorseBirthday?: string;
+        HorseSexe?: number;
+        HorseColor?: string;
+        HorseRace?: string;
+        HorseTransponder?: string;
+        HorseFinalExit?: string;
+        HorseDescription?: string;
+        HorseArchiveDate?: string;
+        CavalierPerson?: string;
         CavalierIsActive?: boolean;
         CavalierNotArchive?: boolean;
         CavalierInsertDate?: string;
@@ -1567,58 +997,62 @@ declare namespace GestionEquestre.Ge {
         CavalierNiveauGalop?: number;
         CavalierLicenceCompetition?: number;
         CavalierDateCertificatMedical?: string;
-        CavalierDescription?: string;
+        CavalierCaption?: string;
         CavalierArchiveDate?: string;
     }
-    namespace ProprietaireRow {
+    namespace ManOwnerRow {
         const idProperty = "Id";
-        const nameProperty = "Cheval";
-        const localTextPrefix = "Ge.Proprietaire";
+        const nameProperty = "Horse";
+        const localTextPrefix = "Ge.ManOwner";
         namespace Fields {
             const Id: any;
-            const Cheval: any;
+            const Horse: any;
             const Cavalier: any;
             const Part: any;
-            const ChevalSire: string;
-            const ChevalCleSire: string;
-            const ChevalName: string;
-            const ChevalIsActive: string;
-            const ChevalNotArchive: string;
-            const ChevalInsertDate: string;
-            const ChevalInsertUserId: string;
-            const ChevalUpdateDate: string;
-            const ChevalUpdateUserId: string;
-            const ChevalBirthday: string;
-            const ChevalSexe: string;
-            const ChevalRobe: string;
-            const ChevalTranspondeur: string;
-            const ChevalSortieDefinitive: string;
-            const ChevalDescription: string;
-            const ChevalArchiveDate: string;
-            const CavalierPersonne: string;
-            const CavalierIsActive: string;
-            const CavalierNotArchive: string;
-            const CavalierInsertDate: string;
-            const CavalierInsertUserId: string;
-            const CavalierUpdateDate: string;
-            const CavalierUpdateUserId: string;
-            const CavalierMilesimeLicnece: string;
-            const CavalierNiveauGalop: string;
-            const CavalierLicenceCompetition: string;
-            const CavalierDateCertificatMedical: string;
-            const CavalierDescription: string;
-            const CavalierArchiveDate: string;
+            const HorseSire: any;
+            const HorseCleSire: any;
+            const HorseHnin: any;
+            const HorseBirthCountry: any;
+            const HorseBirthOrganization: any;
+            const HorseName: any;
+            const HorseIsActive: any;
+            const HorseNotArchive: any;
+            const HorseInsertDate: any;
+            const HorseInsertUserId: any;
+            const HorseUpdateDate: any;
+            const HorseUpdateUserId: any;
+            const HorseBirthday: any;
+            const HorseSexe: any;
+            const HorseColor: any;
+            const HorseRace: any;
+            const HorseTransponder: any;
+            const HorseFinalExit: any;
+            const HorseDescription: any;
+            const HorseArchiveDate: any;
+            const CavalierPerson: any;
+            const CavalierIsActive: any;
+            const CavalierNotArchive: any;
+            const CavalierInsertDate: any;
+            const CavalierInsertUserId: any;
+            const CavalierUpdateDate: any;
+            const CavalierUpdateUserId: any;
+            const CavalierMilesimeLicnece: any;
+            const CavalierNiveauGalop: any;
+            const CavalierLicenceCompetition: any;
+            const CavalierDateCertificatMedical: any;
+            const CavalierCaption: any;
+            const CavalierArchiveDate: any;
         }
     }
 }
 declare namespace GestionEquestre.Ge {
-    namespace ProprietaireService {
-        const baseUrl = "Ge/Proprietaire";
-        function Create(request: Serenity.SaveRequest<ProprietaireRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function Update(request: Serenity.SaveRequest<ProprietaireRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<ProprietaireRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<ProprietaireRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+    namespace ManOwnerService {
+        const baseUrl = "Ge/ManOwner";
+        function Create(request: Serenity.SaveRequest<ManOwnerRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<ManOwnerRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<ManOwnerRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<ManOwnerRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
         namespace Methods {
             const Create: string;
             const Update: string;
@@ -1629,10 +1063,292 @@ declare namespace GestionEquestre.Ge {
     }
 }
 declare namespace GestionEquestre.Ge {
-    class VilleForm extends Serenity.PrefixedContext {
+    class ManPersonForm extends Serenity.PrefixedContext {
         static formKey: string;
     }
-    interface VilleForm {
+    interface ManPersonForm {
+        IsMorale: Serenity.BooleanEditor;
+        IsActive: Serenity.BooleanEditor;
+        NotArchive: Serenity.BooleanEditor;
+        InsertDate: Serenity.DateEditor;
+        InsertUserId: Serenity.IntegerEditor;
+        UpdateDate: Serenity.DateEditor;
+        UpdateUserId: Serenity.IntegerEditor;
+        Surname: Serenity.StringEditor;
+        Name: Serenity.StringEditor;
+        MaidenName: Serenity.StringEditor;
+        BusinessName: Serenity.StringEditor;
+        Birthday: Serenity.DateEditor;
+        Sexe: Serenity.IntegerEditor;
+        MaritalStatus: Serenity.IntegerEditor;
+        BirthCity: Serenity.StringEditor;
+        BirthCountry: Serenity.StringEditor;
+        Nationality: Serenity.StringEditor;
+        Photo: Serenity.StringEditor;
+        Phone: Serenity.StringEditor;
+        Gsm: Serenity.StringEditor;
+        WorkPhone: Serenity.StringEditor;
+        OtherPhone1: Serenity.StringEditor;
+        OtherPhone2: Serenity.StringEditor;
+        Email1: Serenity.StringEditor;
+        Email2: Serenity.StringEditor;
+        BankAccount: Serenity.StringEditor;
+        IdAdress: Serenity.StringEditor;
+        Caption: Serenity.StringEditor;
+        ArchiveDate: Serenity.DateEditor;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    interface ManPersonRow {
+        Id?: string;
+        IsMorale?: boolean;
+        IsActive?: boolean;
+        NotArchive?: boolean;
+        InsertDate?: string;
+        InsertUserId?: number;
+        UpdateDate?: string;
+        UpdateUserId?: number;
+        Surname?: string;
+        Name?: string;
+        MaidenName?: string;
+        BusinessName?: string;
+        Birthday?: string;
+        Sexe?: number;
+        MaritalStatus?: number;
+        BirthCity?: string;
+        BirthCountry?: string;
+        Nationality?: string;
+        Photo?: number[];
+        Phone?: string;
+        Gsm?: string;
+        WorkPhone?: string;
+        OtherPhone1?: string;
+        OtherPhone2?: string;
+        Email1?: string;
+        Email2?: string;
+        BankAccount?: string;
+        IdAdress?: string;
+        Caption?: string;
+        ArchiveDate?: string;
+        SexeDefaultValue?: boolean;
+        SexeIsActive?: boolean;
+        SexeReadOnly?: boolean;
+        SexeInsertDate?: string;
+        SexeInsertUserId?: number;
+        SexeUpdateDate?: string;
+        SexeUpdateUserId?: number;
+        SexeCaption?: string;
+        SexeCivility?: string;
+        MaritalStatusDefaultValue?: boolean;
+        MaritalStatusIsActive?: boolean;
+        MaritalStatusReadOnly?: boolean;
+        MaritalStatusInsertDate?: string;
+        MaritalStatusInsertUserId?: number;
+        MaritalStatusUpdateDate?: string;
+        MaritalStatusUpdateUserId?: number;
+        MaritalStatusCaption?: string;
+        MaritalStatusCode?: string;
+        BirthCityDefaultValue?: boolean;
+        BirthCityIsActive?: boolean;
+        BirthCityReadOnly?: boolean;
+        BirthCityInsertDate?: string;
+        BirthCityInsertUserId?: number;
+        BirthCityUpdateDate?: string;
+        BirthCityUpdateUserId?: number;
+        BirthCityFrCodeInsee?: string;
+        BirthCityCaption?: string;
+        BirthCityCity?: string;
+        BirthCityPostCode?: string;
+        BirthCityCountry?: string;
+        BirthCountryDefaultValue?: boolean;
+        BirthCountryIsActive?: boolean;
+        BirthCountryReadOnly?: boolean;
+        BirthCountryInsertDate?: string;
+        BirthCountryInsertUserId?: number;
+        BirthCountryUpdateDate?: string;
+        BirthCountryUpdateUserId?: number;
+        BirthCountryCountry?: string;
+        BirthCountryCode?: string;
+        BirthCountryCodeUe?: number;
+        BirthCountryIso3166Country?: string;
+        NationalityDefaultValue?: boolean;
+        NationalityIsActive?: boolean;
+        NationalityReadOnly?: boolean;
+        NationalityInsertDate?: string;
+        NationalityInsertUserId?: number;
+        NationalityUpdateDate?: string;
+        NationalityUpdateUserId?: number;
+        NationalityCountry?: string;
+        NationalityCode?: string;
+        NationalityCodeUe?: number;
+        NationalityIso3166Country?: string;
+        BankAccountCountryCodeIban?: string;
+        BankAccountCheckDigitsIban?: string;
+        BankAccountBban?: string;
+        BankAccountBic?: string;
+        BankAccountAccountOnwer?: string;
+        BankAccountBankAdress?: string;
+        BankAccountCis?: string;
+        BankAccountUrm?: string;
+        BankAccountMandateDateSign?: string;
+        BankAccountTypePayment?: number;
+        BankAccountDateLastPrelevement?: string;
+        BankAccountTypeOfLastPayment?: number;
+        IdAdressIsActive?: boolean;
+        IdAdressNotArchive?: boolean;
+        IdAdressInsertDate?: string;
+        IdAdressInsertUserId?: number;
+        IdAdressUpdateDate?: string;
+        IdAdressUpdateUserId?: number;
+        IdAdressAdress1?: string;
+        IdAdressAdress2?: string;
+        IdAdressAdress3?: string;
+        IdAdressCity?: string;
+        IdAdressCountry?: string;
+        IdAdressCedex?: string;
+        IdAdressBuilding?: string;
+        IdAdressCaption?: string;
+        IdAdressArchiveDate?: string;
+    }
+    namespace ManPersonRow {
+        const idProperty = "Id";
+        const nameProperty = "Surname";
+        const localTextPrefix = "Ge.ManPerson";
+        namespace Fields {
+            const Id: any;
+            const IsMorale: any;
+            const IsActive: any;
+            const NotArchive: any;
+            const InsertDate: any;
+            const InsertUserId: any;
+            const UpdateDate: any;
+            const UpdateUserId: any;
+            const Surname: any;
+            const Name: any;
+            const MaidenName: any;
+            const BusinessName: any;
+            const Birthday: any;
+            const Sexe: any;
+            const MaritalStatus: any;
+            const BirthCity: any;
+            const BirthCountry: any;
+            const Nationality: any;
+            const Photo: any;
+            const Phone: any;
+            const Gsm: any;
+            const WorkPhone: any;
+            const OtherPhone1: any;
+            const OtherPhone2: any;
+            const Email1: any;
+            const Email2: any;
+            const BankAccount: any;
+            const IdAdress: any;
+            const Caption: any;
+            const ArchiveDate: any;
+            const SexeDefaultValue: any;
+            const SexeIsActive: any;
+            const SexeReadOnly: any;
+            const SexeInsertDate: any;
+            const SexeInsertUserId: any;
+            const SexeUpdateDate: any;
+            const SexeUpdateUserId: any;
+            const SexeCaption: any;
+            const SexeCivility: any;
+            const MaritalStatusDefaultValue: any;
+            const MaritalStatusIsActive: any;
+            const MaritalStatusReadOnly: any;
+            const MaritalStatusInsertDate: any;
+            const MaritalStatusInsertUserId: any;
+            const MaritalStatusUpdateDate: any;
+            const MaritalStatusUpdateUserId: any;
+            const MaritalStatusCaption: any;
+            const MaritalStatusCode: any;
+            const BirthCityDefaultValue: any;
+            const BirthCityIsActive: any;
+            const BirthCityReadOnly: any;
+            const BirthCityInsertDate: any;
+            const BirthCityInsertUserId: any;
+            const BirthCityUpdateDate: any;
+            const BirthCityUpdateUserId: any;
+            const BirthCityFrCodeInsee: any;
+            const BirthCityCaption: any;
+            const BirthCityCity: any;
+            const BirthCityPostCode: any;
+            const BirthCityCountry: any;
+            const BirthCountryDefaultValue: any;
+            const BirthCountryIsActive: any;
+            const BirthCountryReadOnly: any;
+            const BirthCountryInsertDate: any;
+            const BirthCountryInsertUserId: any;
+            const BirthCountryUpdateDate: any;
+            const BirthCountryUpdateUserId: any;
+            const BirthCountryCountry: any;
+            const BirthCountryCode: any;
+            const BirthCountryCodeUe: any;
+            const BirthCountryIso3166Country: any;
+            const NationalityDefaultValue: any;
+            const NationalityIsActive: any;
+            const NationalityReadOnly: any;
+            const NationalityInsertDate: any;
+            const NationalityInsertUserId: any;
+            const NationalityUpdateDate: any;
+            const NationalityUpdateUserId: any;
+            const NationalityCountry: any;
+            const NationalityCode: any;
+            const NationalityCodeUe: any;
+            const NationalityIso3166Country: any;
+            const BankAccountCountryCodeIban: any;
+            const BankAccountCheckDigitsIban: any;
+            const BankAccountBban: any;
+            const BankAccountBic: any;
+            const BankAccountAccountOnwer: any;
+            const BankAccountBankAdress: any;
+            const BankAccountCis: any;
+            const BankAccountUrm: any;
+            const BankAccountMandateDateSign: any;
+            const BankAccountTypePayment: any;
+            const BankAccountDateLastPrelevement: any;
+            const BankAccountTypeOfLastPayment: any;
+            const IdAdressIsActive: any;
+            const IdAdressNotArchive: any;
+            const IdAdressInsertDate: any;
+            const IdAdressInsertUserId: any;
+            const IdAdressUpdateDate: any;
+            const IdAdressUpdateUserId: any;
+            const IdAdressAdress1: any;
+            const IdAdressAdress2: any;
+            const IdAdressAdress3: any;
+            const IdAdressCity: any;
+            const IdAdressCountry: any;
+            const IdAdressCedex: any;
+            const IdAdressBuilding: any;
+            const IdAdressCaption: any;
+            const IdAdressArchiveDate: any;
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+    namespace ManPersonService {
+        const baseUrl = "Ge/ManPerson";
+        function Create(request: Serenity.SaveRequest<ManPersonRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<ManPersonRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<ManPersonRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<ManPersonRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        namespace Methods {
+            const Create: string;
+            const Update: string;
+            const Delete: string;
+            const Retrieve: string;
+            const List: string;
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class SetCityForm extends Serenity.PrefixedContext {
+        static formKey: string;
+    }
+    interface SetCityForm {
         DefaultValue: Serenity.BooleanEditor;
         IsActive: Serenity.BooleanEditor;
         ReadOnly: Serenity.BooleanEditor;
@@ -1640,15 +1356,15 @@ declare namespace GestionEquestre.Ge {
         InsertUserId: Serenity.IntegerEditor;
         UpdateDate: Serenity.DateEditor;
         UpdateUserId: Serenity.IntegerEditor;
-        CodeInsee: Serenity.StringEditor;
-        Libele: Serenity.StringEditor;
-        NomVille: Serenity.StringEditor;
-        CodePostal: Serenity.StringEditor;
-        Pays: Serenity.StringEditor;
+        FrCodeInsee: Serenity.StringEditor;
+        Caption: Serenity.StringEditor;
+        City: Serenity.StringEditor;
+        PostCode: Serenity.StringEditor;
+        Country: Serenity.StringEditor;
     }
 }
 declare namespace GestionEquestre.Ge {
-    interface VilleRow {
+    interface SetCityRow {
         Id?: string;
         DefaultValue?: boolean;
         IsActive?: boolean;
@@ -1657,26 +1373,27 @@ declare namespace GestionEquestre.Ge {
         InsertUserId?: number;
         UpdateDate?: string;
         UpdateUserId?: number;
-        CodeInsee?: string;
-        Libele?: string;
-        NomVille?: string;
-        CodePostal?: string;
-        Pays?: string;
-        PaysDefaultValue?: boolean;
-        PaysIsActive?: boolean;
-        PaysReadOnly?: boolean;
-        PaysInsertDate?: string;
-        PaysInsertUserId?: number;
-        PaysUpdateDate?: string;
-        PaysUpdateUserId?: number;
-        PaysLibele?: string;
-        PaysCode?: string;
-        PaysCodeUe?: number;
+        FrCodeInsee?: string;
+        Caption?: string;
+        City?: string;
+        PostCode?: string;
+        Country?: string;
+        CountryDefaultValue?: boolean;
+        CountryIsActive?: boolean;
+        CountryReadOnly?: boolean;
+        CountryInsertDate?: string;
+        CountryInsertUserId?: number;
+        CountryUpdateDate?: string;
+        CountryUpdateUserId?: number;
+        Country1?: string;
+        CountryCode?: string;
+        CountryCodeUe?: number;
+        CountryIso3166Country?: string;
     }
-    namespace VilleRow {
+    namespace SetCityRow {
         const idProperty = "Id";
-        const nameProperty = "CodeInsee";
-        const localTextPrefix = "Ge.Ville";
+        const nameProperty = "FrCodeInsee";
+        const localTextPrefix = "Ge.SetCity";
         namespace Fields {
             const Id: any;
             const DefaultValue: any;
@@ -1686,32 +1403,423 @@ declare namespace GestionEquestre.Ge {
             const InsertUserId: any;
             const UpdateDate: any;
             const UpdateUserId: any;
-            const CodeInsee: any;
-            const Libele: any;
-            const NomVille: any;
-            const CodePostal: any;
-            const Pays: any;
-            const PaysDefaultValue: string;
-            const PaysIsActive: string;
-            const PaysReadOnly: string;
-            const PaysInsertDate: string;
-            const PaysInsertUserId: string;
-            const PaysUpdateDate: string;
-            const PaysUpdateUserId: string;
-            const PaysLibele: string;
-            const PaysCode: string;
-            const PaysCodeUe: string;
+            const FrCodeInsee: any;
+            const Caption: any;
+            const City: any;
+            const PostCode: any;
+            const Country: any;
+            const CountryDefaultValue: any;
+            const CountryIsActive: any;
+            const CountryReadOnly: any;
+            const CountryInsertDate: any;
+            const CountryInsertUserId: any;
+            const CountryUpdateDate: any;
+            const CountryUpdateUserId: any;
+            const Country1: any;
+            const CountryCode: any;
+            const CountryCodeUe: any;
+            const CountryIso3166Country: any;
         }
     }
 }
 declare namespace GestionEquestre.Ge {
-    namespace VilleService {
-        const baseUrl = "Ge/Ville";
-        function Create(request: Serenity.SaveRequest<VilleRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function Update(request: Serenity.SaveRequest<VilleRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<VilleRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
-        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<VilleRow>) => void, opt?: Serenity.ServiceOptions<any>): JQueryXHR;
+    namespace SetCityService {
+        const baseUrl = "Ge/SetCity";
+        function Create(request: Serenity.SaveRequest<SetCityRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<SetCityRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<SetCityRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<SetCityRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        namespace Methods {
+            const Create: string;
+            const Update: string;
+            const Delete: string;
+            const Retrieve: string;
+            const List: string;
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class SetCountryForm extends Serenity.PrefixedContext {
+        static formKey: string;
+    }
+    interface SetCountryForm {
+        DefaultValue: Serenity.BooleanEditor;
+        IsActive: Serenity.BooleanEditor;
+        ReadOnly: Serenity.BooleanEditor;
+        InsertDate: Serenity.DateEditor;
+        InsertUserId: Serenity.IntegerEditor;
+        UpdateDate: Serenity.DateEditor;
+        UpdateUserId: Serenity.IntegerEditor;
+        Country: Serenity.StringEditor;
+        Code: Serenity.StringEditor;
+        CodeUe: Serenity.IntegerEditor;
+        Iso3166Country: Serenity.StringEditor;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    interface SetCountryRow {
+        Id?: string;
+        DefaultValue?: boolean;
+        IsActive?: boolean;
+        ReadOnly?: boolean;
+        InsertDate?: string;
+        InsertUserId?: number;
+        UpdateDate?: string;
+        UpdateUserId?: number;
+        Country?: string;
+        Code?: string;
+        CodeUe?: number;
+        Iso3166Country?: string;
+    }
+    namespace SetCountryRow {
+        const idProperty = "Id";
+        const nameProperty = "Country";
+        const localTextPrefix = "Ge.SetCountry";
+        namespace Fields {
+            const Id: any;
+            const DefaultValue: any;
+            const IsActive: any;
+            const ReadOnly: any;
+            const InsertDate: any;
+            const InsertUserId: any;
+            const UpdateDate: any;
+            const UpdateUserId: any;
+            const Country: any;
+            const Code: any;
+            const CodeUe: any;
+            const Iso3166Country: any;
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+    namespace SetCountryService {
+        const baseUrl = "Ge/SetCountry";
+        function Create(request: Serenity.SaveRequest<SetCountryRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<SetCountryRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<SetCountryRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<SetCountryRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        namespace Methods {
+            const Create: string;
+            const Update: string;
+            const Delete: string;
+            const Retrieve: string;
+            const List: string;
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class SetGalopForm extends Serenity.PrefixedContext {
+        static formKey: string;
+    }
+    interface SetGalopForm {
+        DefaultValue: Serenity.BooleanEditor;
+        IsActive: Serenity.BooleanEditor;
+        ReadOnly: Serenity.BooleanEditor;
+        InsertDate: Serenity.DateEditor;
+        InsertUserId: Serenity.IntegerEditor;
+        UpdateDate: Serenity.DateEditor;
+        UpdateUserId: Serenity.IntegerEditor;
+        Caption: Serenity.StringEditor;
+        Code: Serenity.StringEditor;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    interface SetGalopRow {
+        Id?: number;
+        DefaultValue?: boolean;
+        IsActive?: boolean;
+        ReadOnly?: boolean;
+        InsertDate?: string;
+        InsertUserId?: number;
+        UpdateDate?: string;
+        UpdateUserId?: number;
+        Caption?: string;
+        Code?: string;
+    }
+    namespace SetGalopRow {
+        const idProperty = "Id";
+        const nameProperty = "Caption";
+        const localTextPrefix = "Ge.SetGalop";
+        namespace Fields {
+            const Id: any;
+            const DefaultValue: any;
+            const IsActive: any;
+            const ReadOnly: any;
+            const InsertDate: any;
+            const InsertUserId: any;
+            const UpdateDate: any;
+            const UpdateUserId: any;
+            const Caption: any;
+            const Code: any;
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+    namespace SetGalopService {
+        const baseUrl = "Ge/SetGalop";
+        function Create(request: Serenity.SaveRequest<SetGalopRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<SetGalopRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<SetGalopRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<SetGalopRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        namespace Methods {
+            const Create: string;
+            const Update: string;
+            const Delete: string;
+            const Retrieve: string;
+            const List: string;
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class SetLfcForm extends Serenity.PrefixedContext {
+        static formKey: string;
+    }
+    interface SetLfcForm {
+        DefaultValue: Serenity.BooleanEditor;
+        IsActive: Serenity.BooleanEditor;
+        ReadOnly: Serenity.BooleanEditor;
+        InsertDate: Serenity.DateEditor;
+        InsertUserId: Serenity.IntegerEditor;
+        UpdateDate: Serenity.DateEditor;
+        UpdateUserId: Serenity.IntegerEditor;
+        Caption: Serenity.StringEditor;
+        Code: Serenity.StringEditor;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    interface SetLfcRow {
+        Id?: number;
+        DefaultValue?: boolean;
+        IsActive?: boolean;
+        ReadOnly?: boolean;
+        InsertDate?: string;
+        InsertUserId?: number;
+        UpdateDate?: string;
+        UpdateUserId?: number;
+        Caption?: string;
+        Code?: string;
+    }
+    namespace SetLfcRow {
+        const idProperty = "Id";
+        const nameProperty = "Caption";
+        const localTextPrefix = "Ge.SetLfc";
+        namespace Fields {
+            const Id: any;
+            const DefaultValue: any;
+            const IsActive: any;
+            const ReadOnly: any;
+            const InsertDate: any;
+            const InsertUserId: any;
+            const UpdateDate: any;
+            const UpdateUserId: any;
+            const Caption: any;
+            const Code: any;
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+    namespace SetLfcService {
+        const baseUrl = "Ge/SetLfc";
+        function Create(request: Serenity.SaveRequest<SetLfcRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<SetLfcRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<SetLfcRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<SetLfcRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        namespace Methods {
+            const Create: string;
+            const Update: string;
+            const Delete: string;
+            const Retrieve: string;
+            const List: string;
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class SetMaritalstatusForm extends Serenity.PrefixedContext {
+        static formKey: string;
+    }
+    interface SetMaritalstatusForm {
+        DefaultValue: Serenity.BooleanEditor;
+        IsActive: Serenity.BooleanEditor;
+        ReadOnly: Serenity.BooleanEditor;
+        InsertDate: Serenity.DateEditor;
+        InsertUserId: Serenity.IntegerEditor;
+        UpdateDate: Serenity.DateEditor;
+        UpdateUserId: Serenity.IntegerEditor;
+        Caption: Serenity.StringEditor;
+        Code: Serenity.StringEditor;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    interface SetMaritalstatusRow {
+        Id?: number;
+        DefaultValue?: boolean;
+        IsActive?: boolean;
+        ReadOnly?: boolean;
+        InsertDate?: string;
+        InsertUserId?: number;
+        UpdateDate?: string;
+        UpdateUserId?: number;
+        Caption?: string;
+        Code?: string;
+    }
+    namespace SetMaritalstatusRow {
+        const idProperty = "Id";
+        const nameProperty = "Caption";
+        const localTextPrefix = "Ge.SetMaritalstatus";
+        namespace Fields {
+            const Id: any;
+            const DefaultValue: any;
+            const IsActive: any;
+            const ReadOnly: any;
+            const InsertDate: any;
+            const InsertUserId: any;
+            const UpdateDate: any;
+            const UpdateUserId: any;
+            const Caption: any;
+            const Code: any;
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+    namespace SetMaritalstatusService {
+        const baseUrl = "Ge/SetMaritalstatus";
+        function Create(request: Serenity.SaveRequest<SetMaritalstatusRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<SetMaritalstatusRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<SetMaritalstatusRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<SetMaritalstatusRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        namespace Methods {
+            const Create: string;
+            const Update: string;
+            const Delete: string;
+            const Retrieve: string;
+            const List: string;
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class SetSexeForm extends Serenity.PrefixedContext {
+        static formKey: string;
+    }
+    interface SetSexeForm {
+        DefaultValue: Serenity.BooleanEditor;
+        IsActive: Serenity.BooleanEditor;
+        ReadOnly: Serenity.BooleanEditor;
+        InsertDate: Serenity.DateEditor;
+        InsertUserId: Serenity.IntegerEditor;
+        UpdateDate: Serenity.DateEditor;
+        UpdateUserId: Serenity.IntegerEditor;
+        Caption: Serenity.StringEditor;
+        Civility: Serenity.StringEditor;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    interface SetSexeRow {
+        SexeId?: number;
+        DefaultValue?: boolean;
+        IsActive?: boolean;
+        ReadOnly?: boolean;
+        InsertDate?: string;
+        InsertUserId?: number;
+        UpdateDate?: string;
+        UpdateUserId?: number;
+        Caption?: string;
+        Civility?: string;
+    }
+    namespace SetSexeRow {
+        const idProperty = "SexeId";
+        const nameProperty = "Caption";
+        const localTextPrefix = "Ge.SetSexe";
+        namespace Fields {
+            const SexeId: any;
+            const DefaultValue: any;
+            const IsActive: any;
+            const ReadOnly: any;
+            const InsertDate: any;
+            const InsertUserId: any;
+            const UpdateDate: any;
+            const UpdateUserId: any;
+            const Caption: any;
+            const Civility: any;
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+    namespace SetSexeService {
+        const baseUrl = "Ge/SetSexe";
+        function Create(request: Serenity.SaveRequest<SetSexeRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<SetSexeRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<SetSexeRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<SetSexeRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        namespace Methods {
+            const Create: string;
+            const Update: string;
+            const Delete: string;
+            const Retrieve: string;
+            const List: string;
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class SetUelnorgaForm extends Serenity.PrefixedContext {
+        static formKey: string;
+    }
+    interface SetUelnorgaForm {
+        DefaultValue: Serenity.BooleanEditor;
+        IsActive: Serenity.BooleanEditor;
+        ReadOnly: Serenity.BooleanEditor;
+        InsertDate: Serenity.DateEditor;
+        InsertUserId: Serenity.IntegerEditor;
+        UpdateDate: Serenity.DateEditor;
+        UpdateUserId: Serenity.IntegerEditor;
+        Organization: Serenity.StringEditor;
+        UelnOrganization: Serenity.StringEditor;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    interface SetUelnorgaRow {
+        Id?: string;
+        DefaultValue?: boolean;
+        IsActive?: boolean;
+        ReadOnly?: boolean;
+        InsertDate?: string;
+        InsertUserId?: number;
+        UpdateDate?: string;
+        UpdateUserId?: number;
+        Organization?: string;
+        UelnOrganization?: string;
+    }
+    namespace SetUelnorgaRow {
+        const idProperty = "Id";
+        const nameProperty = "Organization";
+        const localTextPrefix = "Ge.SetUelnorga";
+        namespace Fields {
+            const Id: any;
+            const DefaultValue: any;
+            const IsActive: any;
+            const ReadOnly: any;
+            const InsertDate: any;
+            const InsertUserId: any;
+            const UpdateDate: any;
+            const UpdateUserId: any;
+            const Organization: any;
+            const UelnOrganization: any;
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+    namespace SetUelnorgaService {
+        const baseUrl = "Ge/SetUelnorga";
+        function Create(request: Serenity.SaveRequest<SetUelnorgaRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<SetUelnorgaRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<SetUelnorgaRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<SetUelnorgaRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
         namespace Methods {
             const Create: string;
             const Update: string;
@@ -2224,36 +2332,19 @@ declare namespace GestionEquestre.Common {
     }
 }
 declare namespace GestionEquestre.Ge {
-    class AdresseDialog extends Serenity.EntityDialog<AdresseRow, any> {
+    class AccBankaccountDialog extends Serenity.EntityDialog<AccBankaccountRow, any> {
         protected getFormKey(): string;
         protected getIdProperty(): string;
         protected getLocalTextPrefix(): string;
         protected getNameProperty(): string;
         protected getService(): string;
-        protected form: AdresseForm;
-        dialogOpen(): void;
+        protected form: AccBankaccountForm;
     }
 }
 declare namespace GestionEquestre.Ge {
-    class AdresseEditor extends Common.GridEditorBase<AdresseRow> {
+    class AccBankaccountGrid extends Serenity.EntityGrid<AccBankaccountRow, any> {
         protected getColumnsKey(): string;
-        protected getDialogType(): typeof AdresseEditorDialog;
-        protected getLocalTextPrefix(): string;
-        constructor(container: JQuery);
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class AdresseEditorDialog extends Common.GridEditorDialog<AdresseRow> {
-        protected getFormKey(): string;
-        protected getLocalTextPrefix(): string;
-        protected getNameProperty(): string;
-        protected form: AdresseForm;
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class AdresseGrid extends Serenity.EntityGrid<AdresseRow, any> {
-        protected getColumnsKey(): string;
-        protected getDialogType(): typeof AdresseDialog;
+        protected getDialogType(): typeof AccBankaccountDialog;
         protected getIdProperty(): string;
         protected getLocalTextPrefix(): string;
         protected getService(): string;
@@ -2261,36 +2352,19 @@ declare namespace GestionEquestre.Ge {
     }
 }
 declare namespace GestionEquestre.Ge {
-    class CavaliersDialog extends Serenity.EntityDialog<CavaliersRow, any> {
+    class ManAdressDialog extends Serenity.EntityDialog<ManAdressRow, any> {
         protected getFormKey(): string;
         protected getIdProperty(): string;
         protected getLocalTextPrefix(): string;
         protected getNameProperty(): string;
         protected getService(): string;
-        protected form: CavaliersForm;
-        dialogOpen(): void;
+        protected form: ManAdressForm;
     }
 }
 declare namespace GestionEquestre.Ge {
-    class CavaliersEditor extends Common.GridEditorBase<CavaliersRow> {
+    class ManAdressGrid extends Serenity.EntityGrid<ManAdressRow, any> {
         protected getColumnsKey(): string;
-        protected getDialogType(): typeof CavaliersEditorDialog;
-        protected getLocalTextPrefix(): string;
-        constructor(container: JQuery);
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class CavaliersEditorDialog extends Common.GridEditorDialog<CavaliersRow> {
-        protected getFormKey(): string;
-        protected getLocalTextPrefix(): string;
-        protected getNameProperty(): string;
-        protected form: CavaliersForm;
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class CavaliersGrid extends Serenity.EntityGrid<CavaliersRow, any> {
-        protected getColumnsKey(): string;
-        protected getDialogType(): typeof CavaliersDialog;
+        protected getDialogType(): typeof ManAdressDialog;
         protected getIdProperty(): string;
         protected getLocalTextPrefix(): string;
         protected getService(): string;
@@ -2298,36 +2372,19 @@ declare namespace GestionEquestre.Ge {
     }
 }
 declare namespace GestionEquestre.Ge {
-    class ChevauxDialog extends Serenity.EntityDialog<ChevauxRow, any> {
+    class ManCavaliersDialog extends Serenity.EntityDialog<ManCavaliersRow, any> {
         protected getFormKey(): string;
         protected getIdProperty(): string;
         protected getLocalTextPrefix(): string;
         protected getNameProperty(): string;
         protected getService(): string;
-        protected form: ChevauxForm;
-        dialogOpen(): void;
+        protected form: ManCavaliersForm;
     }
 }
 declare namespace GestionEquestre.Ge {
-    class ChevauxEditor extends Common.GridEditorBase<ChevauxRow> {
+    class ManCavaliersGrid extends Serenity.EntityGrid<ManCavaliersRow, any> {
         protected getColumnsKey(): string;
-        protected getDialogType(): typeof ChevauxEditorDialog;
-        protected getLocalTextPrefix(): string;
-        constructor(container: JQuery);
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class ChevauxEditorDialog extends Common.GridEditorDialog<ChevauxRow> {
-        protected getFormKey(): string;
-        protected getLocalTextPrefix(): string;
-        protected getNameProperty(): string;
-        protected form: ChevauxForm;
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class ChevauxGrid extends Serenity.EntityGrid<ChevauxRow, any> {
-        protected getColumnsKey(): string;
-        protected getDialogType(): typeof ChevauxDialog;
+        protected getDialogType(): typeof ManCavaliersDialog;
         protected getIdProperty(): string;
         protected getLocalTextPrefix(): string;
         protected getService(): string;
@@ -2335,36 +2392,19 @@ declare namespace GestionEquestre.Ge {
     }
 }
 declare namespace GestionEquestre.Ge {
-    class CodeGalopDialog extends Serenity.EntityDialog<CodeGalopRow, any> {
+    class ManHorsesDialog extends Serenity.EntityDialog<ManHorsesRow, any> {
         protected getFormKey(): string;
         protected getIdProperty(): string;
         protected getLocalTextPrefix(): string;
         protected getNameProperty(): string;
         protected getService(): string;
-        protected form: CodeGalopForm;
-        dialogOpen(): void;
+        protected form: ManHorsesForm;
     }
 }
 declare namespace GestionEquestre.Ge {
-    class CodeGalopEditor extends Common.GridEditorBase<CodeGalopRow> {
+    class ManHorsesGrid extends Serenity.EntityGrid<ManHorsesRow, any> {
         protected getColumnsKey(): string;
-        protected getDialogType(): typeof CodeGalopEditorDialog;
-        protected getLocalTextPrefix(): string;
-        constructor(container: JQuery);
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class CodeGalopEditorDialog extends Common.GridEditorDialog<CodeGalopRow> {
-        protected getFormKey(): string;
-        protected getLocalTextPrefix(): string;
-        protected getNameProperty(): string;
-        protected form: CodeGalopForm;
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class CodeGalopGrid extends Serenity.EntityGrid<CodeGalopRow, any> {
-        protected getColumnsKey(): string;
-        protected getDialogType(): typeof CodeGalopDialog;
+        protected getDialogType(): typeof ManHorsesDialog;
         protected getIdProperty(): string;
         protected getLocalTextPrefix(): string;
         protected getService(): string;
@@ -2372,36 +2412,19 @@ declare namespace GestionEquestre.Ge {
     }
 }
 declare namespace GestionEquestre.Ge {
-    class CodeLfcDialog extends Serenity.EntityDialog<CodeLfcRow, any> {
+    class ManOwnerDialog extends Serenity.EntityDialog<ManOwnerRow, any> {
         protected getFormKey(): string;
         protected getIdProperty(): string;
         protected getLocalTextPrefix(): string;
         protected getNameProperty(): string;
         protected getService(): string;
-        protected form: CodeLfcForm;
-        dialogOpen(): void;
+        protected form: ManOwnerForm;
     }
 }
 declare namespace GestionEquestre.Ge {
-    class CodeLfcEditor extends Common.GridEditorBase<CodeLfcRow> {
+    class ManOwnerGrid extends Serenity.EntityGrid<ManOwnerRow, any> {
         protected getColumnsKey(): string;
-        protected getDialogType(): typeof CodeLfcEditorDialog;
-        protected getLocalTextPrefix(): string;
-        constructor(container: JQuery);
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class CodeLfcEditorDialog extends Common.GridEditorDialog<CodeLfcRow> {
-        protected getFormKey(): string;
-        protected getLocalTextPrefix(): string;
-        protected getNameProperty(): string;
-        protected form: CodeLfcForm;
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class CodeLfcGrid extends Serenity.EntityGrid<CodeLfcRow, any> {
-        protected getColumnsKey(): string;
-        protected getDialogType(): typeof CodeLfcDialog;
+        protected getDialogType(): typeof ManOwnerDialog;
         protected getIdProperty(): string;
         protected getLocalTextPrefix(): string;
         protected getService(): string;
@@ -2409,36 +2432,19 @@ declare namespace GestionEquestre.Ge {
     }
 }
 declare namespace GestionEquestre.Ge {
-    class CodeSexeDialog extends Serenity.EntityDialog<CodeSexeRow, any> {
+    class ManPersonDialog extends Serenity.EntityDialog<ManPersonRow, any> {
         protected getFormKey(): string;
         protected getIdProperty(): string;
         protected getLocalTextPrefix(): string;
         protected getNameProperty(): string;
         protected getService(): string;
-        protected form: CodeSexeForm;
-        dialogOpen(): void;
+        protected form: ManPersonForm;
     }
 }
 declare namespace GestionEquestre.Ge {
-    class CodeSexeEditor extends Common.GridEditorBase<CodeSexeRow> {
+    class ManPersonGrid extends Serenity.EntityGrid<ManPersonRow, any> {
         protected getColumnsKey(): string;
-        protected getDialogType(): typeof CodeSexeEditorDialog;
-        protected getLocalTextPrefix(): string;
-        constructor(container: JQuery);
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class CodeSexeEditorDialog extends Common.GridEditorDialog<CodeSexeRow> {
-        protected getFormKey(): string;
-        protected getLocalTextPrefix(): string;
-        protected getNameProperty(): string;
-        protected form: CodeSexeForm;
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class CodeSexeGrid extends Serenity.EntityGrid<CodeSexeRow, any> {
-        protected getColumnsKey(): string;
-        protected getDialogType(): typeof CodeSexeDialog;
+        protected getDialogType(): typeof ManPersonDialog;
         protected getIdProperty(): string;
         protected getLocalTextPrefix(): string;
         protected getService(): string;
@@ -2446,36 +2452,19 @@ declare namespace GestionEquestre.Ge {
     }
 }
 declare namespace GestionEquestre.Ge {
-    class CodeStuationfamilleDialog extends Serenity.EntityDialog<CodeStuationfamilleRow, any> {
+    class SetCityDialog extends Serenity.EntityDialog<SetCityRow, any> {
         protected getFormKey(): string;
         protected getIdProperty(): string;
         protected getLocalTextPrefix(): string;
         protected getNameProperty(): string;
         protected getService(): string;
-        protected form: CodeStuationfamilleForm;
-        dialogOpen(): void;
+        protected form: SetCityForm;
     }
 }
 declare namespace GestionEquestre.Ge {
-    class CodeStuationfamilleEditor extends Common.GridEditorBase<CodeStuationfamilleRow> {
+    class SetCityGrid extends Serenity.EntityGrid<SetCityRow, any> {
         protected getColumnsKey(): string;
-        protected getDialogType(): typeof CodeStuationfamilleEditorDialog;
-        protected getLocalTextPrefix(): string;
-        constructor(container: JQuery);
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class CodeStuationfamilleEditorDialog extends Common.GridEditorDialog<CodeStuationfamilleRow> {
-        protected getFormKey(): string;
-        protected getLocalTextPrefix(): string;
-        protected getNameProperty(): string;
-        protected form: CodeStuationfamilleForm;
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class CodeStuationfamilleGrid extends Serenity.EntityGrid<CodeStuationfamilleRow, any> {
-        protected getColumnsKey(): string;
-        protected getDialogType(): typeof CodeStuationfamilleDialog;
+        protected getDialogType(): typeof SetCityDialog;
         protected getIdProperty(): string;
         protected getLocalTextPrefix(): string;
         protected getService(): string;
@@ -2483,36 +2472,19 @@ declare namespace GestionEquestre.Ge {
     }
 }
 declare namespace GestionEquestre.Ge {
-    class ComptebancaireDialog extends Serenity.EntityDialog<ComptebancaireRow, any> {
+    class SetCountryDialog extends Serenity.EntityDialog<SetCountryRow, any> {
         protected getFormKey(): string;
         protected getIdProperty(): string;
         protected getLocalTextPrefix(): string;
         protected getNameProperty(): string;
         protected getService(): string;
-        protected form: ComptebancaireForm;
-        dialogOpen(): void;
+        protected form: SetCountryForm;
     }
 }
 declare namespace GestionEquestre.Ge {
-    class ComptebancaireEditor extends Common.GridEditorBase<ComptebancaireRow> {
+    class SetCountryGrid extends Serenity.EntityGrid<SetCountryRow, any> {
         protected getColumnsKey(): string;
-        protected getDialogType(): typeof ComptebancaireEditorDialog;
-        protected getLocalTextPrefix(): string;
-        constructor(container: JQuery);
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class ComptebancaireEditorDialog extends Common.GridEditorDialog<ComptebancaireRow> {
-        protected getFormKey(): string;
-        protected getLocalTextPrefix(): string;
-        protected getNameProperty(): string;
-        protected form: ComptebancaireForm;
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class ComptebancaireGrid extends Serenity.EntityGrid<ComptebancaireRow, any> {
-        protected getColumnsKey(): string;
-        protected getDialogType(): typeof ComptebancaireDialog;
+        protected getDialogType(): typeof SetCountryDialog;
         protected getIdProperty(): string;
         protected getLocalTextPrefix(): string;
         protected getService(): string;
@@ -2520,36 +2492,19 @@ declare namespace GestionEquestre.Ge {
     }
 }
 declare namespace GestionEquestre.Ge {
-    class PaysDialog extends Serenity.EntityDialog<PaysRow, any> {
+    class SetGalopDialog extends Serenity.EntityDialog<SetGalopRow, any> {
         protected getFormKey(): string;
         protected getIdProperty(): string;
         protected getLocalTextPrefix(): string;
         protected getNameProperty(): string;
         protected getService(): string;
-        protected form: PaysForm;
-        dialogOpen(): void;
+        protected form: SetGalopForm;
     }
 }
 declare namespace GestionEquestre.Ge {
-    class PaysEditor extends Common.GridEditorBase<PaysRow> {
+    class SetGalopGrid extends Serenity.EntityGrid<SetGalopRow, any> {
         protected getColumnsKey(): string;
-        protected getDialogType(): typeof PaysEditorDialog;
-        protected getLocalTextPrefix(): string;
-        constructor(container: JQuery);
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class PaysEditorDialog extends Common.GridEditorDialog<PaysRow> {
-        protected getFormKey(): string;
-        protected getLocalTextPrefix(): string;
-        protected getNameProperty(): string;
-        protected form: PaysForm;
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class PaysGrid extends Serenity.EntityGrid<PaysRow, any> {
-        protected getColumnsKey(): string;
-        protected getDialogType(): typeof PaysDialog;
+        protected getDialogType(): typeof SetGalopDialog;
         protected getIdProperty(): string;
         protected getLocalTextPrefix(): string;
         protected getService(): string;
@@ -2557,36 +2512,19 @@ declare namespace GestionEquestre.Ge {
     }
 }
 declare namespace GestionEquestre.Ge {
-    class PersonneDialog extends Serenity.EntityDialog<PersonneRow, any> {
+    class SetLfcDialog extends Serenity.EntityDialog<SetLfcRow, any> {
         protected getFormKey(): string;
         protected getIdProperty(): string;
         protected getLocalTextPrefix(): string;
         protected getNameProperty(): string;
         protected getService(): string;
-        protected form: PersonneForm;
-        dialogOpen(): void;
+        protected form: SetLfcForm;
     }
 }
 declare namespace GestionEquestre.Ge {
-    class PersonneEditor extends Common.GridEditorBase<PersonneRow> {
+    class SetLfcGrid extends Serenity.EntityGrid<SetLfcRow, any> {
         protected getColumnsKey(): string;
-        protected getDialogType(): typeof PersonneEditorDialog;
-        protected getLocalTextPrefix(): string;
-        constructor(container: JQuery);
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class PersonneEditorDialog extends Common.GridEditorDialog<PersonneRow> {
-        protected getFormKey(): string;
-        protected getLocalTextPrefix(): string;
-        protected getNameProperty(): string;
-        protected form: PersonneForm;
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class PersonneGrid extends Serenity.EntityGrid<PersonneRow, any> {
-        protected getColumnsKey(): string;
-        protected getDialogType(): typeof PersonneDialog;
+        protected getDialogType(): typeof SetLfcDialog;
         protected getIdProperty(): string;
         protected getLocalTextPrefix(): string;
         protected getService(): string;
@@ -2594,36 +2532,19 @@ declare namespace GestionEquestre.Ge {
     }
 }
 declare namespace GestionEquestre.Ge {
-    class ProprietaireDialog extends Serenity.EntityDialog<ProprietaireRow, any> {
+    class SetMaritalstatusDialog extends Serenity.EntityDialog<SetMaritalstatusRow, any> {
         protected getFormKey(): string;
         protected getIdProperty(): string;
         protected getLocalTextPrefix(): string;
         protected getNameProperty(): string;
         protected getService(): string;
-        protected form: ProprietaireForm;
-        dialogOpen(): void;
+        protected form: SetMaritalstatusForm;
     }
 }
 declare namespace GestionEquestre.Ge {
-    class ProprietaireEditor extends Common.GridEditorBase<ProprietaireRow> {
+    class SetMaritalstatusGrid extends Serenity.EntityGrid<SetMaritalstatusRow, any> {
         protected getColumnsKey(): string;
-        protected getDialogType(): typeof ProprietaireEditorDialog;
-        protected getLocalTextPrefix(): string;
-        constructor(container: JQuery);
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class ProprietaireEditorDialog extends Common.GridEditorDialog<ProprietaireRow> {
-        protected getFormKey(): string;
-        protected getLocalTextPrefix(): string;
-        protected getNameProperty(): string;
-        protected form: ProprietaireForm;
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class ProprietaireGrid extends Serenity.EntityGrid<ProprietaireRow, any> {
-        protected getColumnsKey(): string;
-        protected getDialogType(): typeof ProprietaireDialog;
+        protected getDialogType(): typeof SetMaritalstatusDialog;
         protected getIdProperty(): string;
         protected getLocalTextPrefix(): string;
         protected getService(): string;
@@ -2631,36 +2552,39 @@ declare namespace GestionEquestre.Ge {
     }
 }
 declare namespace GestionEquestre.Ge {
-    class VilleDialog extends Serenity.EntityDialog<VilleRow, any> {
+    class SetSexeDialog extends Serenity.EntityDialog<SetSexeRow, any> {
         protected getFormKey(): string;
         protected getIdProperty(): string;
         protected getLocalTextPrefix(): string;
         protected getNameProperty(): string;
         protected getService(): string;
-        protected form: VilleForm;
-        dialogOpen(): void;
+        protected form: SetSexeForm;
     }
 }
 declare namespace GestionEquestre.Ge {
-    class VilleEditor extends Common.GridEditorBase<VilleRow> {
+    class SetSexeGrid extends Serenity.EntityGrid<SetSexeRow, any> {
         protected getColumnsKey(): string;
-        protected getDialogType(): typeof VilleEditorDialog;
+        protected getDialogType(): typeof SetSexeDialog;
+        protected getIdProperty(): string;
         protected getLocalTextPrefix(): string;
+        protected getService(): string;
         constructor(container: JQuery);
     }
 }
 declare namespace GestionEquestre.Ge {
-    class VilleEditorDialog extends Common.GridEditorDialog<VilleRow> {
+    class SetUelnorgaDialog extends Serenity.EntityDialog<SetUelnorgaRow, any> {
         protected getFormKey(): string;
+        protected getIdProperty(): string;
         protected getLocalTextPrefix(): string;
         protected getNameProperty(): string;
-        protected form: VilleForm;
+        protected getService(): string;
+        protected form: SetUelnorgaForm;
     }
 }
 declare namespace GestionEquestre.Ge {
-    class VilleGrid extends Serenity.EntityGrid<VilleRow, any> {
+    class SetUelnorgaGrid extends Serenity.EntityGrid<SetUelnorgaRow, any> {
         protected getColumnsKey(): string;
-        protected getDialogType(): typeof VilleDialog;
+        protected getDialogType(): typeof SetUelnorgaDialog;
         protected getIdProperty(): string;
         protected getLocalTextPrefix(): string;
         protected getService(): string;
