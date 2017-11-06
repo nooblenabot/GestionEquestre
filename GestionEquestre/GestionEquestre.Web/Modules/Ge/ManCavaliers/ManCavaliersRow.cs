@@ -299,12 +299,6 @@ namespace GestionEquestre.Ge.Entities
             get { return Fields.NiveauGalopIsActive[this]; }
             set { Fields.NiveauGalopIsActive[this] = value; }
         }
-        [DisplayName("Niveau Galop Read Only"), Expression("jNiveauGalop.[ReadOnly]")]
-        public Boolean? NiveauGalopReadOnly
-        {
-            get { return Fields.NiveauGalopReadOnly[this]; }
-            set { Fields.NiveauGalopReadOnly[this] = value; }
-        }
         [DisplayName("Niveau Galop Insert Date"), Expression("jNiveauGalop.[InsertDate]")]
         public DateTime? NiveauGalopInsertDate
         {
@@ -352,12 +346,6 @@ namespace GestionEquestre.Ge.Entities
         {
             get { return Fields.LicenceCompetitionIsActive[this]; }
             set { Fields.LicenceCompetitionIsActive[this] = value; }
-        }
-        [DisplayName("Licence Competition Read Only"), Expression("jLicenceCompetition.[ReadOnly]")]
-        public Boolean? LicenceCompetitionReadOnly
-        {
-            get { return Fields.LicenceCompetitionReadOnly[this]; }
-            set { Fields.LicenceCompetitionReadOnly[this] = value; }
         }
         [DisplayName("Licence Competition Insert Date"), Expression("jLicenceCompetition.[InsertDate]")]
         public DateTime? LicenceCompetitionInsertDate
@@ -461,7 +449,6 @@ namespace GestionEquestre.Ge.Entities
 
             public BooleanField NiveauGalopDefaultValue;
             public BooleanField NiveauGalopIsActive;
-            public BooleanField NiveauGalopReadOnly;
             public DateTimeField NiveauGalopInsertDate;
             public Int32Field NiveauGalopInsertUserId;
             public DateTimeField NiveauGalopUpdateDate;
@@ -471,7 +458,6 @@ namespace GestionEquestre.Ge.Entities
 
             public BooleanField LicenceCompetitionDefaultValue;
             public BooleanField LicenceCompetitionIsActive;
-            public BooleanField LicenceCompetitionReadOnly;
             public DateTimeField LicenceCompetitionInsertDate;
             public Int32Field LicenceCompetitionInsertUserId;
             public DateTimeField LicenceCompetitionUpdateDate;

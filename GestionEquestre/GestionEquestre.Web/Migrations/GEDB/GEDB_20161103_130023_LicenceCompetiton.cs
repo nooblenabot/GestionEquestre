@@ -13,7 +13,6 @@ namespace GestionEquestre.Migrations.GEDB
             Action<ICreateTableWithColumnSyntax> addUsersColumns = expr => expr
                 .WithColumn("DefaultValue").AsBoolean().NotNullable().WithDefaultValue(0)
                 .WithColumn("IsActive").AsBoolean().NotNullable().WithDefaultValue(1)
-                .WithColumn("ReadOnly").AsBoolean().NotNullable().WithDefaultValue(0)
                 .WithColumn("InsertDate").AsDateTime().NotNullable()
                 .WithColumn("InsertUserId").AsInt32().NotNullable()
                 .WithColumn("UpdateDate").AsDateTime().Nullable()
@@ -34,7 +33,6 @@ namespace GestionEquestre.Migrations.GEDB
             Insert.IntoTable("SET_LFC").Row(new
             {
                 DefaultValue = 1,
-                ReadOnly = 1,
                 InsertDate = new DateTime(2016, 11, 11),
                 InsertUserId = 1,
                 Code = "NOT",
@@ -44,7 +42,6 @@ namespace GestionEquestre.Migrations.GEDB
             Insert.IntoTable("SET_LFC").Row(new
             {
                 DefaultValue = 1,
-                ReadOnly = 1,
                 InsertDate = new DateTime(2016, 11, 11),
                 InsertUserId = 1,
                 Code = "CLUB",
@@ -54,7 +51,6 @@ namespace GestionEquestre.Migrations.GEDB
             Insert.IntoTable("SET_LFC").Row(new
             {
                 DefaultValue = 1,
-                ReadOnly = 1,
                 InsertDate = new DateTime(2016, 11, 11),
                 InsertUserId = 1,
                 Code = "AMA",
@@ -64,7 +60,6 @@ namespace GestionEquestre.Migrations.GEDB
             Insert.IntoTable("SET_LFC").Row(new
             {
                 DefaultValue = 1,
-                ReadOnly = 1,
                 InsertDate = new DateTime(2016, 11, 11),
                 InsertUserId = 1,
                 Code = "PRO",

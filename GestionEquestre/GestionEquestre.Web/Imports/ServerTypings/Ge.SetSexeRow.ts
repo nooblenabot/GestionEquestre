@@ -4,7 +4,6 @@ namespace GestionEquestre.Ge {
         SexeId?: number;
         DefaultValue?: boolean;
         IsActive?: boolean;
-        ReadOnly?: boolean;
         InsertDate?: string;
         InsertUserId?: number;
         UpdateDate?: string;
@@ -22,7 +21,6 @@ namespace GestionEquestre.Ge {
             export declare const SexeId;
             export declare const DefaultValue;
             export declare const IsActive;
-            export declare const ReadOnly;
             export declare const InsertDate;
             export declare const InsertUserId;
             export declare const UpdateDate;
@@ -35,7 +33,6 @@ namespace GestionEquestre.Ge {
             'SexeId',
             'DefaultValue',
             'IsActive',
-            'ReadOnly',
             'InsertDate',
             'InsertUserId',
             'UpdateDate',

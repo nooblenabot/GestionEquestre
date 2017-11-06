@@ -36,13 +36,6 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.IsActive[this] = value; }
         }
 
-        [DisplayName("Read Only"), NotNull]
-        public Boolean? ReadOnly
-        {
-            get { return Fields.ReadOnly[this]; }
-            set { Fields.ReadOnly[this] = value; }
-        }
-
         [DisplayName("Insert Date"), NotNull]
         public DateTime? InsertDate
         {
@@ -118,12 +111,6 @@ namespace GestionEquestre.Ge.Entities
             get { return Fields.CountryIsActive[this]; }
             set { Fields.CountryIsActive[this] = value; }
         }
-        [DisplayName("Country Read Only"), Expression("jCountry.[ReadOnly]")]
-        public Boolean? CountryReadOnly
-        {
-            get { return Fields.CountryReadOnly[this]; }
-            set { Fields.CountryReadOnly[this] = value; }
-        }
         [DisplayName("Country Insert Date"), Expression("jCountry.[InsertDate]")]
         public DateTime? CountryInsertDate
         {
@@ -194,7 +181,6 @@ namespace GestionEquestre.Ge.Entities
             public GuidField Id;
             public BooleanField DefaultValue;
             public BooleanField IsActive;
-            public BooleanField ReadOnly;
             public DateTimeField InsertDate;
             public Int32Field InsertUserId;
             public DateTimeField UpdateDate;
@@ -207,7 +193,6 @@ namespace GestionEquestre.Ge.Entities
 
             public BooleanField CountryDefaultValue;
             public BooleanField CountryIsActive;
-            public BooleanField CountryReadOnly;
             public DateTimeField CountryInsertDate;
             public Int32Field CountryInsertUserId;
             public DateTimeField CountryUpdateDate;

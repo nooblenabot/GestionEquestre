@@ -33,7 +33,6 @@ namespace GestionEquestre.Ge {
         ArchiveDate?: string;
         SexeDefaultValue?: boolean;
         SexeIsActive?: boolean;
-        SexeReadOnly?: boolean;
         SexeInsertDate?: string;
         SexeInsertUserId?: number;
         SexeUpdateDate?: string;
@@ -42,7 +41,6 @@ namespace GestionEquestre.Ge {
         SexeCivility?: string;
         MaritalStatusDefaultValue?: boolean;
         MaritalStatusIsActive?: boolean;
-        MaritalStatusReadOnly?: boolean;
         MaritalStatusInsertDate?: string;
         MaritalStatusInsertUserId?: number;
         MaritalStatusUpdateDate?: string;
@@ -51,7 +49,6 @@ namespace GestionEquestre.Ge {
         MaritalStatusCode?: string;
         BirthCityDefaultValue?: boolean;
         BirthCityIsActive?: boolean;
-        BirthCityReadOnly?: boolean;
         BirthCityInsertDate?: string;
         BirthCityInsertUserId?: number;
         BirthCityUpdateDate?: string;
@@ -63,7 +60,6 @@ namespace GestionEquestre.Ge {
         BirthCityCountry?: string;
         BirthCountryDefaultValue?: boolean;
         BirthCountryIsActive?: boolean;
-        BirthCountryReadOnly?: boolean;
         BirthCountryInsertDate?: string;
         BirthCountryInsertUserId?: number;
         BirthCountryUpdateDate?: string;
@@ -74,7 +70,6 @@ namespace GestionEquestre.Ge {
         BirthCountryIso3166Country?: string;
         NationalityDefaultValue?: boolean;
         NationalityIsActive?: boolean;
-        NationalityReadOnly?: boolean;
         NationalityInsertDate?: string;
         NationalityInsertUserId?: number;
         NationalityUpdateDate?: string;
@@ -150,7 +145,6 @@ namespace GestionEquestre.Ge {
             export declare const ArchiveDate;
             export declare const SexeDefaultValue;
             export declare const SexeIsActive;
-            export declare const SexeReadOnly;
             export declare const SexeInsertDate;
             export declare const SexeInsertUserId;
             export declare const SexeUpdateDate;
@@ -159,7 +153,6 @@ namespace GestionEquestre.Ge {
             export declare const SexeCivility;
             export declare const MaritalStatusDefaultValue;
             export declare const MaritalStatusIsActive;
-            export declare const MaritalStatusReadOnly;
             export declare const MaritalStatusInsertDate;
             export declare const MaritalStatusInsertUserId;
             export declare const MaritalStatusUpdateDate;
@@ -168,7 +161,6 @@ namespace GestionEquestre.Ge {
             export declare const MaritalStatusCode;
             export declare const BirthCityDefaultValue;
             export declare const BirthCityIsActive;
-            export declare const BirthCityReadOnly;
             export declare const BirthCityInsertDate;
             export declare const BirthCityInsertUserId;
             export declare const BirthCityUpdateDate;
@@ -180,7 +172,6 @@ namespace GestionEquestre.Ge {
             export declare const BirthCityCountry;
             export declare const BirthCountryDefaultValue;
             export declare const BirthCountryIsActive;
-            export declare const BirthCountryReadOnly;
             export declare const BirthCountryInsertDate;
             export declare const BirthCountryInsertUserId;
             export declare const BirthCountryUpdateDate;
@@ -191,7 +182,6 @@ namespace GestionEquestre.Ge {
             export declare const BirthCountryIso3166Country;
             export declare const NationalityDefaultValue;
             export declare const NationalityIsActive;
-            export declare const NationalityReadOnly;
             export declare const NationalityInsertDate;
             export declare const NationalityInsertUserId;
             export declare const NationalityUpdateDate;
@@ -262,7 +252,6 @@ namespace GestionEquestre.Ge {
             'ArchiveDate',
             'SexeDefaultValue',
             'SexeIsActive',
-            'SexeReadOnly',
             'SexeInsertDate',
             'SexeInsertUserId',
             'SexeUpdateDate',
@@ -271,7 +260,6 @@ namespace GestionEquestre.Ge {
             'SexeCivility',
             'MaritalStatusDefaultValue',
             'MaritalStatusIsActive',
-            'MaritalStatusReadOnly',
             'MaritalStatusInsertDate',
             'MaritalStatusInsertUserId',
             'MaritalStatusUpdateDate',
@@ -280,7 +268,6 @@ namespace GestionEquestre.Ge {
             'MaritalStatusCode',
             'BirthCityDefaultValue',
             'BirthCityIsActive',
-            'BirthCityReadOnly',
             'BirthCityInsertDate',
             'BirthCityInsertUserId',
             'BirthCityUpdateDate',
@@ -292,7 +279,6 @@ namespace GestionEquestre.Ge {
             'BirthCityCountry',
             'BirthCountryDefaultValue',
             'BirthCountryIsActive',
-            'BirthCountryReadOnly',
             'BirthCountryInsertDate',
             'BirthCountryInsertUserId',
             'BirthCountryUpdateDate',
@@ -303,7 +289,6 @@ namespace GestionEquestre.Ge {
             'BirthCountryIso3166Country',
             'NationalityDefaultValue',
             'NationalityIsActive',
-            'NationalityReadOnly',
             'NationalityInsertDate',
             'NationalityInsertUserId',
             'NationalityUpdateDate',

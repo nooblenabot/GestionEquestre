@@ -10,7 +10,7 @@ namespace GestionEquestre.Ge.Entities
     using System.IO;
 
     [ConnectionKey("GE"), TableName("[dbo].[SET_SEXE]")]
-    [DisplayName("Set Sexe"), InstanceName("Set Sexe"), TwoLevelCached]
+    [DisplayName("Settings Sexe"), InstanceName("Set Sexe"), TwoLevelCached]
     [ReadPermission("Administration:General")]
     [ModifyPermission("Administration:General")]
     public sealed class SetSexeRow : Row, IIdRow, INameRow
@@ -22,7 +22,7 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.SexeId[this] = value; }
         }
 
-        [DisplayName("Default Value"), NotNull]
+        [DisplayName("Default Value"), NotNull, Updatable(false), Insertable(false)]
         public Boolean? DefaultValue
         {
             get { return Fields.DefaultValue[this]; }
@@ -36,13 +36,6 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.IsActive[this] = value; }
         }
 
-        [DisplayName("Read Only"), NotNull]
-        public Boolean? ReadOnly
-        {
-            get { return Fields.ReadOnly[this]; }
-            set { Fields.ReadOnly[this] = value; }
-        }
-
         [DisplayName("Insert Date"), NotNull]
         public DateTime? InsertDate
         {
@@ -50,7 +43,7 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.InsertDate[this] = value; }
         }
 
-        [DisplayName("Insert User Id"), NotNull]
+        [DisplayName("Insert User Id"), NotNull, Updatable(false)]
         public Int32? InsertUserId
         {
             get { return Fields.InsertUserId[this]; }
@@ -71,7 +64,7 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.UpdateUserId[this] = value; }
         }
 
-        [DisplayName("Caption"), Size(50), QuickSearch]
+        [DisplayName("Caption"), Size(50), LookupInclude, QuickSearch]
         public String Caption
         {
             get { return Fields.Caption[this]; }
@@ -107,7 +100,6 @@ namespace GestionEquestre.Ge.Entities
             public Int16Field SexeId;
             public BooleanField DefaultValue;
             public BooleanField IsActive;
-            public BooleanField ReadOnly;
             public DateTimeField InsertDate;
             public Int32Field InsertUserId;
             public DateTimeField UpdateDate;

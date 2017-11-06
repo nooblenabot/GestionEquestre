@@ -237,12 +237,6 @@ namespace GestionEquestre.Ge.Entities
             get { return Fields.SexeIsActive[this]; }
             set { Fields.SexeIsActive[this] = value; }
         }
-        [DisplayName("Sexe Read Only"), Expression("jSexe.[ReadOnly]")]
-        public Boolean? SexeReadOnly
-        {
-            get { return Fields.SexeReadOnly[this]; }
-            set { Fields.SexeReadOnly[this] = value; }
-        }
         [DisplayName("Sexe Insert Date"), Expression("jSexe.[InsertDate]")]
         public DateTime? SexeInsertDate
         {
@@ -291,12 +285,6 @@ namespace GestionEquestre.Ge.Entities
             get { return Fields.MaritalStatusIsActive[this]; }
             set { Fields.MaritalStatusIsActive[this] = value; }
         }
-        [DisplayName("Marital Status Read Only"), Expression("jMaritalStatus.[ReadOnly]")]
-        public Boolean? MaritalStatusReadOnly
-        {
-            get { return Fields.MaritalStatusReadOnly[this]; }
-            set { Fields.MaritalStatusReadOnly[this] = value; }
-        }
         [DisplayName("Marital Status Insert Date"), Expression("jMaritalStatus.[InsertDate]")]
         public DateTime? MaritalStatusInsertDate
         {
@@ -344,12 +332,6 @@ namespace GestionEquestre.Ge.Entities
         {
             get { return Fields.BirthCityIsActive[this]; }
             set { Fields.BirthCityIsActive[this] = value; }
-        }
-        [DisplayName("Birth City Read Only"), Expression("jBirthCity.[ReadOnly]")]
-        public Boolean? BirthCityReadOnly
-        {
-            get { return Fields.BirthCityReadOnly[this]; }
-            set { Fields.BirthCityReadOnly[this] = value; }
         }
         [DisplayName("Birth City Insert Date"), Expression("jBirthCity.[InsertDate]")]
         public DateTime? BirthCityInsertDate
@@ -417,12 +399,6 @@ namespace GestionEquestre.Ge.Entities
             get { return Fields.BirthCountryIsActive[this]; }
             set { Fields.BirthCountryIsActive[this] = value; }
         }
-        [DisplayName("Birth Country Read Only"), Expression("jBirthCountry.[ReadOnly]")]
-        public Boolean? BirthCountryReadOnly
-        {
-            get { return Fields.BirthCountryReadOnly[this]; }
-            set { Fields.BirthCountryReadOnly[this] = value; }
-        }
         [DisplayName("Birth Country Insert Date"), Expression("jBirthCountry.[InsertDate]")]
         public DateTime? BirthCountryInsertDate
         {
@@ -482,12 +458,6 @@ namespace GestionEquestre.Ge.Entities
         {
             get { return Fields.NationalityIsActive[this]; }
             set { Fields.NationalityIsActive[this] = value; }
-        }
-        [DisplayName("Nationality Read Only"), Expression("jNationality.[ReadOnly]")]
-        public Boolean? NationalityReadOnly
-        {
-            get { return Fields.NationalityReadOnly[this]; }
-            set { Fields.NationalityReadOnly[this] = value; }
         }
         [DisplayName("Nationality Insert Date"), Expression("jNationality.[InsertDate]")]
         public DateTime? NationalityInsertDate
@@ -751,7 +721,6 @@ namespace GestionEquestre.Ge.Entities
 
             public BooleanField SexeDefaultValue;
             public BooleanField SexeIsActive;
-            public BooleanField SexeReadOnly;
             public DateTimeField SexeInsertDate;
             public Int32Field SexeInsertUserId;
             public DateTimeField SexeUpdateDate;
@@ -761,7 +730,6 @@ namespace GestionEquestre.Ge.Entities
 
             public BooleanField MaritalStatusDefaultValue;
             public BooleanField MaritalStatusIsActive;
-            public BooleanField MaritalStatusReadOnly;
             public DateTimeField MaritalStatusInsertDate;
             public Int32Field MaritalStatusInsertUserId;
             public DateTimeField MaritalStatusUpdateDate;
@@ -771,7 +739,6 @@ namespace GestionEquestre.Ge.Entities
 
             public BooleanField BirthCityDefaultValue;
             public BooleanField BirthCityIsActive;
-            public BooleanField BirthCityReadOnly;
             public DateTimeField BirthCityInsertDate;
             public Int32Field BirthCityInsertUserId;
             public DateTimeField BirthCityUpdateDate;
@@ -784,7 +751,6 @@ namespace GestionEquestre.Ge.Entities
 
             public BooleanField BirthCountryDefaultValue;
             public BooleanField BirthCountryIsActive;
-            public BooleanField BirthCountryReadOnly;
             public DateTimeField BirthCountryInsertDate;
             public Int32Field BirthCountryInsertUserId;
             public DateTimeField BirthCountryUpdateDate;
@@ -796,7 +762,6 @@ namespace GestionEquestre.Ge.Entities
 
             public BooleanField NationalityDefaultValue;
             public BooleanField NationalityIsActive;
-            public BooleanField NationalityReadOnly;
             public DateTimeField NationalityInsertDate;
             public Int32Field NationalityInsertUserId;
             public DateTimeField NationalityUpdateDate;

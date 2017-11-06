@@ -539,7 +539,6 @@ declare namespace GestionEquestre.Ge {
         ArchiveDate?: string;
         CityDefaultValue?: boolean;
         CityIsActive?: boolean;
-        CityReadOnly?: boolean;
         CityInsertDate?: string;
         CityInsertUserId?: number;
         CityUpdateDate?: string;
@@ -551,7 +550,6 @@ declare namespace GestionEquestre.Ge {
         CityCountry?: string;
         CountryDefaultValue?: boolean;
         CountryIsActive?: boolean;
-        CountryReadOnly?: boolean;
         CountryInsertDate?: string;
         CountryInsertUserId?: number;
         CountryUpdateDate?: string;
@@ -584,7 +582,6 @@ declare namespace GestionEquestre.Ge {
             const ArchiveDate: any;
             const CityDefaultValue: any;
             const CityIsActive: any;
-            const CityReadOnly: any;
             const CityInsertDate: any;
             const CityInsertUserId: any;
             const CityUpdateDate: any;
@@ -596,7 +593,6 @@ declare namespace GestionEquestre.Ge {
             const CityCountry: any;
             const CountryDefaultValue: any;
             const CountryIsActive: any;
-            const CountryReadOnly: any;
             const CountryInsertDate: any;
             const CountryInsertUserId: any;
             const CountryUpdateDate: any;
@@ -692,7 +688,6 @@ declare namespace GestionEquestre.Ge {
         PersonArchiveDate?: string;
         NiveauGalopDefaultValue?: boolean;
         NiveauGalopIsActive?: boolean;
-        NiveauGalopReadOnly?: boolean;
         NiveauGalopInsertDate?: string;
         NiveauGalopInsertUserId?: number;
         NiveauGalopUpdateDate?: string;
@@ -701,7 +696,6 @@ declare namespace GestionEquestre.Ge {
         NiveauGalopCode?: string;
         LicenceCompetitionDefaultValue?: boolean;
         LicenceCompetitionIsActive?: boolean;
-        LicenceCompetitionReadOnly?: boolean;
         LicenceCompetitionInsertDate?: string;
         LicenceCompetitionInsertUserId?: number;
         LicenceCompetitionUpdateDate?: string;
@@ -759,7 +753,6 @@ declare namespace GestionEquestre.Ge {
             const PersonArchiveDate: any;
             const NiveauGalopDefaultValue: any;
             const NiveauGalopIsActive: any;
-            const NiveauGalopReadOnly: any;
             const NiveauGalopInsertDate: any;
             const NiveauGalopInsertUserId: any;
             const NiveauGalopUpdateDate: any;
@@ -768,7 +761,6 @@ declare namespace GestionEquestre.Ge {
             const NiveauGalopCode: any;
             const LicenceCompetitionDefaultValue: any;
             const LicenceCompetitionIsActive: any;
-            const LicenceCompetitionReadOnly: any;
             const LicenceCompetitionInsertDate: any;
             const LicenceCompetitionInsertUserId: any;
             const LicenceCompetitionUpdateDate: any;
@@ -847,7 +839,6 @@ declare namespace GestionEquestre.Ge {
         ArchiveDate?: string;
         BirthCountryDefaultValue?: boolean;
         BirthCountryIsActive?: boolean;
-        BirthCountryReadOnly?: boolean;
         BirthCountryInsertDate?: string;
         BirthCountryInsertUserId?: number;
         BirthCountryUpdateDate?: string;
@@ -858,7 +849,6 @@ declare namespace GestionEquestre.Ge {
         BirthCountryIso3166Country?: string;
         BirthOrganizationDefaultValue?: boolean;
         BirthOrganizationIsActive?: boolean;
-        BirthOrganizationReadOnly?: boolean;
         BirthOrganizationInsertDate?: string;
         BirthOrganizationInsertUserId?: number;
         BirthOrganizationUpdateDate?: string;
@@ -867,7 +857,6 @@ declare namespace GestionEquestre.Ge {
         BirthOrganizationUelnOrganization?: string;
         SexeDefaultValue?: boolean;
         SexeIsActive?: boolean;
-        SexeReadOnly?: boolean;
         SexeInsertDate?: string;
         SexeInsertUserId?: number;
         SexeUpdateDate?: string;
@@ -903,7 +892,6 @@ declare namespace GestionEquestre.Ge {
             const ArchiveDate: any;
             const BirthCountryDefaultValue: any;
             const BirthCountryIsActive: any;
-            const BirthCountryReadOnly: any;
             const BirthCountryInsertDate: any;
             const BirthCountryInsertUserId: any;
             const BirthCountryUpdateDate: any;
@@ -914,7 +902,6 @@ declare namespace GestionEquestre.Ge {
             const BirthCountryIso3166Country: any;
             const BirthOrganizationDefaultValue: any;
             const BirthOrganizationIsActive: any;
-            const BirthOrganizationReadOnly: any;
             const BirthOrganizationInsertDate: any;
             const BirthOrganizationInsertUserId: any;
             const BirthOrganizationUpdateDate: any;
@@ -923,7 +910,6 @@ declare namespace GestionEquestre.Ge {
             const BirthOrganizationUelnOrganization: any;
             const SexeDefaultValue: any;
             const SexeIsActive: any;
-            const SexeReadOnly: any;
             const SexeInsertDate: any;
             const SexeInsertUserId: any;
             const SexeUpdateDate: any;
@@ -1132,7 +1118,6 @@ declare namespace GestionEquestre.Ge {
         ArchiveDate?: string;
         SexeDefaultValue?: boolean;
         SexeIsActive?: boolean;
-        SexeReadOnly?: boolean;
         SexeInsertDate?: string;
         SexeInsertUserId?: number;
         SexeUpdateDate?: string;
@@ -1141,7 +1126,6 @@ declare namespace GestionEquestre.Ge {
         SexeCivility?: string;
         MaritalStatusDefaultValue?: boolean;
         MaritalStatusIsActive?: boolean;
-        MaritalStatusReadOnly?: boolean;
         MaritalStatusInsertDate?: string;
         MaritalStatusInsertUserId?: number;
         MaritalStatusUpdateDate?: string;
@@ -1150,7 +1134,6 @@ declare namespace GestionEquestre.Ge {
         MaritalStatusCode?: string;
         BirthCityDefaultValue?: boolean;
         BirthCityIsActive?: boolean;
-        BirthCityReadOnly?: boolean;
         BirthCityInsertDate?: string;
         BirthCityInsertUserId?: number;
         BirthCityUpdateDate?: string;
@@ -1162,7 +1145,6 @@ declare namespace GestionEquestre.Ge {
         BirthCityCountry?: string;
         BirthCountryDefaultValue?: boolean;
         BirthCountryIsActive?: boolean;
-        BirthCountryReadOnly?: boolean;
         BirthCountryInsertDate?: string;
         BirthCountryInsertUserId?: number;
         BirthCountryUpdateDate?: string;
@@ -1173,7 +1155,6 @@ declare namespace GestionEquestre.Ge {
         BirthCountryIso3166Country?: string;
         NationalityDefaultValue?: boolean;
         NationalityIsActive?: boolean;
-        NationalityReadOnly?: boolean;
         NationalityInsertDate?: string;
         NationalityInsertUserId?: number;
         NationalityUpdateDate?: string;
@@ -1247,7 +1228,6 @@ declare namespace GestionEquestre.Ge {
             const ArchiveDate: any;
             const SexeDefaultValue: any;
             const SexeIsActive: any;
-            const SexeReadOnly: any;
             const SexeInsertDate: any;
             const SexeInsertUserId: any;
             const SexeUpdateDate: any;
@@ -1256,7 +1236,6 @@ declare namespace GestionEquestre.Ge {
             const SexeCivility: any;
             const MaritalStatusDefaultValue: any;
             const MaritalStatusIsActive: any;
-            const MaritalStatusReadOnly: any;
             const MaritalStatusInsertDate: any;
             const MaritalStatusInsertUserId: any;
             const MaritalStatusUpdateDate: any;
@@ -1265,7 +1244,6 @@ declare namespace GestionEquestre.Ge {
             const MaritalStatusCode: any;
             const BirthCityDefaultValue: any;
             const BirthCityIsActive: any;
-            const BirthCityReadOnly: any;
             const BirthCityInsertDate: any;
             const BirthCityInsertUserId: any;
             const BirthCityUpdateDate: any;
@@ -1277,7 +1255,6 @@ declare namespace GestionEquestre.Ge {
             const BirthCityCountry: any;
             const BirthCountryDefaultValue: any;
             const BirthCountryIsActive: any;
-            const BirthCountryReadOnly: any;
             const BirthCountryInsertDate: any;
             const BirthCountryInsertUserId: any;
             const BirthCountryUpdateDate: any;
@@ -1288,7 +1265,6 @@ declare namespace GestionEquestre.Ge {
             const BirthCountryIso3166Country: any;
             const NationalityDefaultValue: any;
             const NationalityIsActive: any;
-            const NationalityReadOnly: any;
             const NationalityInsertDate: any;
             const NationalityInsertUserId: any;
             const NationalityUpdateDate: any;
@@ -1351,7 +1327,6 @@ declare namespace GestionEquestre.Ge {
     interface SetCityForm {
         DefaultValue: Serenity.BooleanEditor;
         IsActive: Serenity.BooleanEditor;
-        ReadOnly: Serenity.BooleanEditor;
         InsertDate: Serenity.DateEditor;
         InsertUserId: Serenity.IntegerEditor;
         UpdateDate: Serenity.DateEditor;
@@ -1368,7 +1343,6 @@ declare namespace GestionEquestre.Ge {
         Id?: string;
         DefaultValue?: boolean;
         IsActive?: boolean;
-        ReadOnly?: boolean;
         InsertDate?: string;
         InsertUserId?: number;
         UpdateDate?: string;
@@ -1380,7 +1354,6 @@ declare namespace GestionEquestre.Ge {
         Country?: string;
         CountryDefaultValue?: boolean;
         CountryIsActive?: boolean;
-        CountryReadOnly?: boolean;
         CountryInsertDate?: string;
         CountryInsertUserId?: number;
         CountryUpdateDate?: string;
@@ -1398,7 +1371,6 @@ declare namespace GestionEquestre.Ge {
             const Id: any;
             const DefaultValue: any;
             const IsActive: any;
-            const ReadOnly: any;
             const InsertDate: any;
             const InsertUserId: any;
             const UpdateDate: any;
@@ -1410,7 +1382,6 @@ declare namespace GestionEquestre.Ge {
             const Country: any;
             const CountryDefaultValue: any;
             const CountryIsActive: any;
-            const CountryReadOnly: any;
             const CountryInsertDate: any;
             const CountryInsertUserId: any;
             const CountryUpdateDate: any;
@@ -1446,7 +1417,6 @@ declare namespace GestionEquestre.Ge {
     interface SetCountryForm {
         DefaultValue: Serenity.BooleanEditor;
         IsActive: Serenity.BooleanEditor;
-        ReadOnly: Serenity.BooleanEditor;
         InsertDate: Serenity.DateEditor;
         InsertUserId: Serenity.IntegerEditor;
         UpdateDate: Serenity.DateEditor;
@@ -1462,7 +1432,6 @@ declare namespace GestionEquestre.Ge {
         Id?: string;
         DefaultValue?: boolean;
         IsActive?: boolean;
-        ReadOnly?: boolean;
         InsertDate?: string;
         InsertUserId?: number;
         UpdateDate?: string;
@@ -1480,7 +1449,6 @@ declare namespace GestionEquestre.Ge {
             const Id: any;
             const DefaultValue: any;
             const IsActive: any;
-            const ReadOnly: any;
             const InsertDate: any;
             const InsertUserId: any;
             const UpdateDate: any;
@@ -1516,7 +1484,6 @@ declare namespace GestionEquestre.Ge {
     interface SetGalopForm {
         DefaultValue: Serenity.BooleanEditor;
         IsActive: Serenity.BooleanEditor;
-        ReadOnly: Serenity.BooleanEditor;
         InsertDate: Serenity.DateEditor;
         InsertUserId: Serenity.IntegerEditor;
         UpdateDate: Serenity.DateEditor;
@@ -1530,7 +1497,6 @@ declare namespace GestionEquestre.Ge {
         Id?: number;
         DefaultValue?: boolean;
         IsActive?: boolean;
-        ReadOnly?: boolean;
         InsertDate?: string;
         InsertUserId?: number;
         UpdateDate?: string;
@@ -1546,7 +1512,6 @@ declare namespace GestionEquestre.Ge {
             const Id: any;
             const DefaultValue: any;
             const IsActive: any;
-            const ReadOnly: any;
             const InsertDate: any;
             const InsertUserId: any;
             const UpdateDate: any;
@@ -1580,7 +1545,6 @@ declare namespace GestionEquestre.Ge {
     interface SetLfcForm {
         DefaultValue: Serenity.BooleanEditor;
         IsActive: Serenity.BooleanEditor;
-        ReadOnly: Serenity.BooleanEditor;
         InsertDate: Serenity.DateEditor;
         InsertUserId: Serenity.IntegerEditor;
         UpdateDate: Serenity.DateEditor;
@@ -1594,7 +1558,6 @@ declare namespace GestionEquestre.Ge {
         Id?: number;
         DefaultValue?: boolean;
         IsActive?: boolean;
-        ReadOnly?: boolean;
         InsertDate?: string;
         InsertUserId?: number;
         UpdateDate?: string;
@@ -1610,7 +1573,6 @@ declare namespace GestionEquestre.Ge {
             const Id: any;
             const DefaultValue: any;
             const IsActive: any;
-            const ReadOnly: any;
             const InsertDate: any;
             const InsertUserId: any;
             const UpdateDate: any;
@@ -1644,7 +1606,6 @@ declare namespace GestionEquestre.Ge {
     interface SetMaritalstatusForm {
         DefaultValue: Serenity.BooleanEditor;
         IsActive: Serenity.BooleanEditor;
-        ReadOnly: Serenity.BooleanEditor;
         InsertDate: Serenity.DateEditor;
         InsertUserId: Serenity.IntegerEditor;
         UpdateDate: Serenity.DateEditor;
@@ -1658,7 +1619,6 @@ declare namespace GestionEquestre.Ge {
         Id?: number;
         DefaultValue?: boolean;
         IsActive?: boolean;
-        ReadOnly?: boolean;
         InsertDate?: string;
         InsertUserId?: number;
         UpdateDate?: string;
@@ -1674,7 +1634,6 @@ declare namespace GestionEquestre.Ge {
             const Id: any;
             const DefaultValue: any;
             const IsActive: any;
-            const ReadOnly: any;
             const InsertDate: any;
             const InsertUserId: any;
             const UpdateDate: any;
@@ -1708,7 +1667,6 @@ declare namespace GestionEquestre.Ge {
     interface SetSexeForm {
         DefaultValue: Serenity.BooleanEditor;
         IsActive: Serenity.BooleanEditor;
-        ReadOnly: Serenity.BooleanEditor;
         InsertDate: Serenity.DateEditor;
         InsertUserId: Serenity.IntegerEditor;
         UpdateDate: Serenity.DateEditor;
@@ -1722,7 +1680,6 @@ declare namespace GestionEquestre.Ge {
         SexeId?: number;
         DefaultValue?: boolean;
         IsActive?: boolean;
-        ReadOnly?: boolean;
         InsertDate?: string;
         InsertUserId?: number;
         UpdateDate?: string;
@@ -1738,7 +1695,6 @@ declare namespace GestionEquestre.Ge {
             const SexeId: any;
             const DefaultValue: any;
             const IsActive: any;
-            const ReadOnly: any;
             const InsertDate: any;
             const InsertUserId: any;
             const UpdateDate: any;
@@ -1772,7 +1728,6 @@ declare namespace GestionEquestre.Ge {
     interface SetUelnorgaForm {
         DefaultValue: Serenity.BooleanEditor;
         IsActive: Serenity.BooleanEditor;
-        ReadOnly: Serenity.BooleanEditor;
         InsertDate: Serenity.DateEditor;
         InsertUserId: Serenity.IntegerEditor;
         UpdateDate: Serenity.DateEditor;
@@ -1786,7 +1741,6 @@ declare namespace GestionEquestre.Ge {
         Id?: string;
         DefaultValue?: boolean;
         IsActive?: boolean;
-        ReadOnly?: boolean;
         InsertDate?: string;
         InsertUserId?: number;
         UpdateDate?: string;
@@ -1802,7 +1756,6 @@ declare namespace GestionEquestre.Ge {
             const Id: any;
             const DefaultValue: any;
             const IsActive: any;
-            const ReadOnly: any;
             const InsertDate: any;
             const InsertUserId: any;
             const UpdateDate: any;

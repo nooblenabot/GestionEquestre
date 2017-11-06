@@ -7,7 +7,6 @@ namespace GestionEquestre.Ge {
     export interface SetCountryForm {
         DefaultValue: Serenity.BooleanEditor;
         IsActive: Serenity.BooleanEditor;
-        ReadOnly: Serenity.BooleanEditor;
         InsertDate: Serenity.DateEditor;
         InsertUserId: Serenity.IntegerEditor;
         UpdateDate: Serenity.DateEditor;
@@ -21,7 +20,6 @@ namespace GestionEquestre.Ge {
     [,
         ['DefaultValue', () => Serenity.BooleanEditor],
         ['IsActive', () => Serenity.BooleanEditor],
-        ['ReadOnly', () => Serenity.BooleanEditor],
         ['InsertDate', () => Serenity.DateEditor],
         ['InsertUserId', () => Serenity.IntegerEditor],
         ['UpdateDate', () => Serenity.DateEditor],

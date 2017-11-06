@@ -24,7 +24,6 @@ namespace GestionEquestre.Ge {
         ArchiveDate?: string;
         BirthCountryDefaultValue?: boolean;
         BirthCountryIsActive?: boolean;
-        BirthCountryReadOnly?: boolean;
         BirthCountryInsertDate?: string;
         BirthCountryInsertUserId?: number;
         BirthCountryUpdateDate?: string;
@@ -35,7 +34,6 @@ namespace GestionEquestre.Ge {
         BirthCountryIso3166Country?: string;
         BirthOrganizationDefaultValue?: boolean;
         BirthOrganizationIsActive?: boolean;
-        BirthOrganizationReadOnly?: boolean;
         BirthOrganizationInsertDate?: string;
         BirthOrganizationInsertUserId?: number;
         BirthOrganizationUpdateDate?: string;
@@ -44,7 +42,6 @@ namespace GestionEquestre.Ge {
         BirthOrganizationUelnOrganization?: string;
         SexeDefaultValue?: boolean;
         SexeIsActive?: boolean;
-        SexeReadOnly?: boolean;
         SexeInsertDate?: string;
         SexeInsertUserId?: number;
         SexeUpdateDate?: string;
@@ -82,7 +79,6 @@ namespace GestionEquestre.Ge {
             export declare const ArchiveDate;
             export declare const BirthCountryDefaultValue;
             export declare const BirthCountryIsActive;
-            export declare const BirthCountryReadOnly;
             export declare const BirthCountryInsertDate;
             export declare const BirthCountryInsertUserId;
             export declare const BirthCountryUpdateDate;
@@ -93,7 +89,6 @@ namespace GestionEquestre.Ge {
             export declare const BirthCountryIso3166Country;
             export declare const BirthOrganizationDefaultValue;
             export declare const BirthOrganizationIsActive;
-            export declare const BirthOrganizationReadOnly;
             export declare const BirthOrganizationInsertDate;
             export declare const BirthOrganizationInsertUserId;
             export declare const BirthOrganizationUpdateDate;
@@ -102,7 +97,6 @@ namespace GestionEquestre.Ge {
             export declare const BirthOrganizationUelnOrganization;
             export declare const SexeDefaultValue;
             export declare const SexeIsActive;
-            export declare const SexeReadOnly;
             export declare const SexeInsertDate;
             export declare const SexeInsertUserId;
             export declare const SexeUpdateDate;
@@ -135,7 +129,6 @@ namespace GestionEquestre.Ge {
             'ArchiveDate',
             'BirthCountryDefaultValue',
             'BirthCountryIsActive',
-            'BirthCountryReadOnly',
             'BirthCountryInsertDate',
             'BirthCountryInsertUserId',
             'BirthCountryUpdateDate',
@@ -146,7 +139,6 @@ namespace GestionEquestre.Ge {
             'BirthCountryIso3166Country',
             'BirthOrganizationDefaultValue',
             'BirthOrganizationIsActive',
-            'BirthOrganizationReadOnly',
             'BirthOrganizationInsertDate',
             'BirthOrganizationInsertUserId',
             'BirthOrganizationUpdateDate',
@@ -155,7 +147,6 @@ namespace GestionEquestre.Ge {
             'BirthOrganizationUelnOrganization',
             'SexeDefaultValue',
             'SexeIsActive',
-            'SexeReadOnly',
             'SexeInsertDate',
             'SexeInsertUserId',
             'SexeUpdateDate',

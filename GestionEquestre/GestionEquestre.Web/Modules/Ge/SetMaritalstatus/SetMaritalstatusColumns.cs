@@ -17,7 +17,6 @@ namespace GestionEquestre.Ge.Columns
         public Int16 Id { get; set; }
         public Boolean DefaultValue { get; set; }
         public Boolean IsActive { get; set; }
-        public Boolean ReadOnly { get; set; }
         public DateTime InsertDate { get; set; }
         public Int32 InsertUserId { get; set; }
         public DateTime UpdateDate { get; set; }

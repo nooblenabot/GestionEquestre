@@ -13,7 +13,6 @@ namespace GestionEquestre.Migrations.GEDB
             Action<ICreateTableWithColumnSyntax> addUsersColumns = expr => expr
                 .WithColumn("DefaultValue").AsBoolean().NotNullable().WithDefaultValue(0)
                 .WithColumn("IsActive").AsBoolean().NotNullable().WithDefaultValue(1)
-                .WithColumn("ReadOnly").AsBoolean().NotNullable().WithDefaultValue(0)
                 .WithColumn("InsertDate").AsDateTime().NotNullable()
                 .WithColumn("InsertUserId").AsInt32().NotNullable()
                 .WithColumn("UpdateDate").AsDateTime().Nullable()
@@ -35,7 +34,6 @@ namespace GestionEquestre.Migrations.GEDB
             {
                 SexeId = 00,
                 DefaultValue = 1,
-                ReadOnly = 1,
                 InsertDate = new DateTime(2016, 11, 11),
                 InsertUserId = 1,
                 Caption = "Inconnu"
@@ -45,7 +43,6 @@ namespace GestionEquestre.Migrations.GEDB
             {
                 SexeId = 10,
                 DefaultValue = 1,
-                ReadOnly = 1,
                 InsertDate = new DateTime(2016, 11, 11),
                 InsertUserId = 1,
                 civility = "Monsieur",
@@ -56,7 +53,6 @@ namespace GestionEquestre.Migrations.GEDB
             {
                 SexeId = 11,
                 DefaultValue = 1,
-                ReadOnly = 1,
                 InsertDate = new DateTime(2016, 11, 11),
                 InsertUserId = 1,
                 Caption = "Etalon"
@@ -66,7 +62,6 @@ namespace GestionEquestre.Migrations.GEDB
             {
                 SexeId = 12,
                 DefaultValue = 1,
-                ReadOnly = 1,
                 InsertDate = new DateTime(2016, 11, 11),
                 InsertUserId = 1,
                 Caption = "Hongre"
@@ -76,7 +71,6 @@ namespace GestionEquestre.Migrations.GEDB
             {
                 SexeId = 20,
                 DefaultValue = 1,
-                ReadOnly = 1,
                 InsertDate = new DateTime(2016, 11, 11),
                 InsertUserId = 1,
                 civility = "Madame",
@@ -87,7 +81,6 @@ namespace GestionEquestre.Migrations.GEDB
             {
                 SexeId = 21,
                 DefaultValue = 1,
-                ReadOnly = 1,
                 InsertDate = new DateTime(2016, 11, 11),
                 InsertUserId = 1,
                 Caption = "Jument"
@@ -97,7 +90,6 @@ namespace GestionEquestre.Migrations.GEDB
             {
                 SexeId = 22,
                 DefaultValue = 1,
-                ReadOnly = 1,
                 InsertDate = new DateTime(2016, 11, 11),
                 InsertUserId = 1,
                 Caption = "Jument Sterile"
@@ -107,7 +99,6 @@ namespace GestionEquestre.Migrations.GEDB
             {
                 SexeId = 30,
                 DefaultValue = 1,
-                ReadOnly = 1,
                 InsertDate = new DateTime(2016, 11, 11),
                 InsertUserId = 1,
                 Caption = "Hermaphrodite"

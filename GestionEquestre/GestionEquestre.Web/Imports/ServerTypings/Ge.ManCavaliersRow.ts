@@ -46,7 +46,6 @@ namespace GestionEquestre.Ge {
         PersonArchiveDate?: string;
         NiveauGalopDefaultValue?: boolean;
         NiveauGalopIsActive?: boolean;
-        NiveauGalopReadOnly?: boolean;
         NiveauGalopInsertDate?: string;
         NiveauGalopInsertUserId?: number;
         NiveauGalopUpdateDate?: string;
@@ -55,7 +54,6 @@ namespace GestionEquestre.Ge {
         NiveauGalopCode?: string;
         LicenceCompetitionDefaultValue?: boolean;
         LicenceCompetitionIsActive?: boolean;
-        LicenceCompetitionReadOnly?: boolean;
         LicenceCompetitionInsertDate?: string;
         LicenceCompetitionInsertUserId?: number;
         LicenceCompetitionUpdateDate?: string;
@@ -115,7 +113,6 @@ namespace GestionEquestre.Ge {
             export declare const PersonArchiveDate;
             export declare const NiveauGalopDefaultValue;
             export declare const NiveauGalopIsActive;
-            export declare const NiveauGalopReadOnly;
             export declare const NiveauGalopInsertDate;
             export declare const NiveauGalopInsertUserId;
             export declare const NiveauGalopUpdateDate;
@@ -124,7 +121,6 @@ namespace GestionEquestre.Ge {
             export declare const NiveauGalopCode;
             export declare const LicenceCompetitionDefaultValue;
             export declare const LicenceCompetitionIsActive;
-            export declare const LicenceCompetitionReadOnly;
             export declare const LicenceCompetitionInsertDate;
             export declare const LicenceCompetitionInsertUserId;
             export declare const LicenceCompetitionUpdateDate;
@@ -179,7 +175,6 @@ namespace GestionEquestre.Ge {
             'PersonArchiveDate',
             'NiveauGalopDefaultValue',
             'NiveauGalopIsActive',
-            'NiveauGalopReadOnly',
             'NiveauGalopInsertDate',
             'NiveauGalopInsertUserId',
             'NiveauGalopUpdateDate',
@@ -188,7 +183,6 @@ namespace GestionEquestre.Ge {
             'NiveauGalopCode',
             'LicenceCompetitionDefaultValue',
             'LicenceCompetitionIsActive',
-            'LicenceCompetitionReadOnly',
             'LicenceCompetitionInsertDate',
             'LicenceCompetitionInsertUserId',
             'LicenceCompetitionUpdateDate',

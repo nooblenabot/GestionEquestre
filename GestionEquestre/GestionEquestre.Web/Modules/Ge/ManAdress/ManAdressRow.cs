@@ -139,12 +139,6 @@ namespace GestionEquestre.Ge.Entities
             get { return Fields.CityIsActive[this]; }
             set { Fields.CityIsActive[this] = value; }
         }
-        [DisplayName("City Read Only"), Expression("jCity.[ReadOnly]")]
-        public Boolean? CityReadOnly
-        {
-            get { return Fields.CityReadOnly[this]; }
-            set { Fields.CityReadOnly[this] = value; }
-        }
         [DisplayName("City Insert Date"), Expression("jCity.[InsertDate]")]
         public DateTime? CityInsertDate
         {
@@ -210,12 +204,6 @@ namespace GestionEquestre.Ge.Entities
         {
             get { return Fields.CountryIsActive[this]; }
             set { Fields.CountryIsActive[this] = value; }
-        }
-        [DisplayName("Country Read Only"), Expression("jCountry.[ReadOnly]")]
-        public Boolean? CountryReadOnly
-        {
-            get { return Fields.CountryReadOnly[this]; }
-            set { Fields.CountryReadOnly[this] = value; }
         }
         [DisplayName("Country Insert Date"), Expression("jCountry.[InsertDate]")]
         public DateTime? CountryInsertDate
@@ -303,7 +291,6 @@ namespace GestionEquestre.Ge.Entities
 
             public BooleanField CityDefaultValue;
             public BooleanField CityIsActive;
-            public BooleanField CityReadOnly;
             public DateTimeField CityInsertDate;
             public Int32Field CityInsertUserId;
             public DateTimeField CityUpdateDate;
@@ -316,7 +303,6 @@ namespace GestionEquestre.Ge.Entities
 
             public BooleanField CountryDefaultValue;
             public BooleanField CountryIsActive;
-            public BooleanField CountryReadOnly;
             public DateTimeField CountryInsertDate;
             public Int32Field CountryInsertUserId;
             public DateTimeField CountryUpdateDate;

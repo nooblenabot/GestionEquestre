@@ -19,7 +19,6 @@ namespace GestionEquestre.Ge {
         ArchiveDate?: string;
         CityDefaultValue?: boolean;
         CityIsActive?: boolean;
-        CityReadOnly?: boolean;
         CityInsertDate?: string;
         CityInsertUserId?: number;
         CityUpdateDate?: string;
@@ -31,7 +30,6 @@ namespace GestionEquestre.Ge {
         CityCountry?: string;
         CountryDefaultValue?: boolean;
         CountryIsActive?: boolean;
-        CountryReadOnly?: boolean;
         CountryInsertDate?: string;
         CountryInsertUserId?: number;
         CountryUpdateDate?: string;
@@ -66,7 +64,6 @@ namespace GestionEquestre.Ge {
             export declare const ArchiveDate;
             export declare const CityDefaultValue;
             export declare const CityIsActive;
-            export declare const CityReadOnly;
             export declare const CityInsertDate;
             export declare const CityInsertUserId;
             export declare const CityUpdateDate;
@@ -78,7 +75,6 @@ namespace GestionEquestre.Ge {
             export declare const CityCountry;
             export declare const CountryDefaultValue;
             export declare const CountryIsActive;
-            export declare const CountryReadOnly;
             export declare const CountryInsertDate;
             export declare const CountryInsertUserId;
             export declare const CountryUpdateDate;
@@ -108,7 +104,6 @@ namespace GestionEquestre.Ge {
             'ArchiveDate',
             'CityDefaultValue',
             'CityIsActive',
-            'CityReadOnly',
             'CityInsertDate',
             'CityInsertUserId',
             'CityUpdateDate',
@@ -120,7 +115,6 @@ namespace GestionEquestre.Ge {
             'CityCountry',
             'CountryDefaultValue',
             'CountryIsActive',
-            'CountryReadOnly',
             'CountryInsertDate',
             'CountryInsertUserId',
             'CountryUpdateDate',

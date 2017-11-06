@@ -4,7 +4,6 @@ namespace GestionEquestre.Ge {
         Id?: string;
         DefaultValue?: boolean;
         IsActive?: boolean;
-        ReadOnly?: boolean;
         InsertDate?: string;
         InsertUserId?: number;
         UpdateDate?: string;
@@ -16,7 +15,6 @@ namespace GestionEquestre.Ge {
         Country?: string;
         CountryDefaultValue?: boolean;
         CountryIsActive?: boolean;
-        CountryReadOnly?: boolean;
         CountryInsertDate?: string;
         CountryInsertUserId?: number;
         CountryUpdateDate?: string;
@@ -36,7 +34,6 @@ namespace GestionEquestre.Ge {
             export declare const Id;
             export declare const DefaultValue;
             export declare const IsActive;
-            export declare const ReadOnly;
             export declare const InsertDate;
             export declare const InsertUserId;
             export declare const UpdateDate;
@@ -48,7 +45,6 @@ namespace GestionEquestre.Ge {
             export declare const Country;
             export declare const CountryDefaultValue;
             export declare const CountryIsActive;
-            export declare const CountryReadOnly;
             export declare const CountryInsertDate;
             export declare const CountryInsertUserId;
             export declare const CountryUpdateDate;
@@ -63,7 +59,6 @@ namespace GestionEquestre.Ge {
             'Id',
             'DefaultValue',
             'IsActive',
-            'ReadOnly',
             'InsertDate',
             'InsertUserId',
             'UpdateDate',
@@ -75,7 +70,6 @@ namespace GestionEquestre.Ge {
             'Country',
             'CountryDefaultValue',
             'CountryIsActive',
-            'CountryReadOnly',
             'CountryInsertDate',
             'CountryInsertUserId',
             'CountryUpdateDate',
