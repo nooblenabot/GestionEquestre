@@ -425,6 +425,8 @@ declare namespace GestionEquestre {
     }
 }
 declare namespace GestionEquestre.Ge {
+}
+declare namespace GestionEquestre.Ge {
     class AccBankaccountForm extends Serenity.PrefixedContext {
         static formKey: string;
     }
@@ -464,19 +466,19 @@ declare namespace GestionEquestre.Ge {
         const nameProperty = "CountryCodeIban";
         const localTextPrefix = "Ge.AccBankaccount";
         namespace Fields {
-            const Id: any;
-            const CountryCodeIban: any;
-            const CheckDigitsIban: any;
-            const Bban: any;
-            const Bic: any;
-            const AccountOnwer: any;
-            const BankAdress: any;
-            const Cis: any;
-            const Urm: any;
-            const MandateDateSign: any;
-            const TypePayment: any;
-            const DateLastPrelevement: any;
-            const TypeOfLastPayment: any;
+            const Id: string;
+            const CountryCodeIban: string;
+            const CheckDigitsIban: string;
+            const Bban: string;
+            const Bic: string;
+            const AccountOnwer: string;
+            const BankAdress: string;
+            const Cis: string;
+            const Urm: string;
+            const MandateDateSign: string;
+            const TypePayment: string;
+            const DateLastPrelevement: string;
+            const TypeOfLastPayment: string;
         }
     }
 }
@@ -496,6 +498,348 @@ declare namespace GestionEquestre.Ge {
             const List: string;
         }
     }
+}
+declare namespace GestionEquestre.Ge {
+    class LinkFolderCavalierForm extends Serenity.PrefixedContext {
+        static formKey: string;
+    }
+    interface LinkFolderCavalierForm {
+        Folder: Serenity.IntegerEditor;
+        Cavalier: Serenity.StringEditor;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    interface LinkFolderCavalierRow {
+        Id?: number;
+        Folder?: number;
+        Cavalier?: string;
+        FolderIsActive?: boolean;
+        FolderNotArchive?: boolean;
+        FolderInsertDate?: string;
+        FolderInsertUserId?: number;
+        FolderUpdateDate?: string;
+        FolderUpdateUserId?: number;
+        FolderCaption?: string;
+        FolderArchiveDate?: string;
+        FolderNumber?: number;
+        FolderCreateeDate?: string;
+        FolderCloseRaison?: string;
+        FolderCloseDate?: string;
+        FolderEstablishment?: number;
+        FolderComment?: string;
+        CavalierPerson?: string;
+        CavalierIsActive?: boolean;
+        CavalierNotArchive?: boolean;
+        CavalierInsertDate?: string;
+        CavalierInsertUserId?: number;
+        CavalierUpdateDate?: string;
+        CavalierUpdateUserId?: number;
+        CavalierMilesimeLicnece?: string;
+        CavalierNiveauGalop?: number;
+        CavalierLicenceCompetition?: number;
+        CavalierDateCertificatMedical?: string;
+        CavalierCaption?: string;
+        CavalierArchiveDate?: string;
+    }
+    namespace LinkFolderCavalierRow {
+        const idProperty = "Id";
+        const nameProperty = "Cavalier";
+        const localTextPrefix = "Ge.LinkFolderCavalier";
+        namespace Fields {
+            const Id: any;
+            const Folder: any;
+            const Cavalier: any;
+            const FolderIsActive: any;
+            const FolderNotArchive: any;
+            const FolderInsertDate: any;
+            const FolderInsertUserId: any;
+            const FolderUpdateDate: any;
+            const FolderUpdateUserId: any;
+            const FolderCaption: any;
+            const FolderArchiveDate: any;
+            const FolderNumber: any;
+            const FolderCreateeDate: any;
+            const FolderCloseRaison: any;
+            const FolderCloseDate: any;
+            const FolderEstablishment: any;
+            const FolderComment: any;
+            const CavalierPerson: any;
+            const CavalierIsActive: any;
+            const CavalierNotArchive: any;
+            const CavalierInsertDate: any;
+            const CavalierInsertUserId: any;
+            const CavalierUpdateDate: any;
+            const CavalierUpdateUserId: any;
+            const CavalierMilesimeLicnece: any;
+            const CavalierNiveauGalop: any;
+            const CavalierLicenceCompetition: any;
+            const CavalierDateCertificatMedical: any;
+            const CavalierCaption: any;
+            const CavalierArchiveDate: any;
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+    namespace LinkFolderCavalierService {
+        const baseUrl = "Ge/LinkFolderCavalier";
+        function Create(request: Serenity.SaveRequest<LinkFolderCavalierRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<LinkFolderCavalierRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<LinkFolderCavalierRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<LinkFolderCavalierRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        namespace Methods {
+            const Create: string;
+            const Update: string;
+            const Delete: string;
+            const Retrieve: string;
+            const List: string;
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class LinkFolderHorseForm extends Serenity.PrefixedContext {
+        static formKey: string;
+    }
+    interface LinkFolderHorseForm {
+        Folder: Serenity.IntegerEditor;
+        Horse: Serenity.StringEditor;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    interface LinkFolderHorseRow {
+        Id?: number;
+        Folder?: number;
+        Horse?: string;
+        FolderIsActive?: boolean;
+        FolderNotArchive?: boolean;
+        FolderInsertDate?: string;
+        FolderInsertUserId?: number;
+        FolderUpdateDate?: string;
+        FolderUpdateUserId?: number;
+        FolderCaption?: string;
+        FolderArchiveDate?: string;
+        FolderNumber?: number;
+        FolderCreateeDate?: string;
+        FolderCloseRaison?: string;
+        FolderCloseDate?: string;
+        FolderEstablishment?: number;
+        FolderComment?: string;
+        HorseSire?: string;
+        HorseCleSire?: string;
+        HorseHnin?: string;
+        HorseBirthCountry?: string;
+        HorseBirthOrganization?: string;
+        HorseName?: string;
+        HorseIsActive?: boolean;
+        HorseNotArchive?: boolean;
+        HorseInsertDate?: string;
+        HorseInsertUserId?: number;
+        HorseUpdateDate?: string;
+        HorseUpdateUserId?: number;
+        HorseBirthday?: string;
+        HorseSexe?: number;
+        HorseColor?: string;
+        HorseRace?: string;
+        HorseTransponder?: string;
+        HorseFinalExit?: string;
+        HorseDescription?: string;
+        HorseArchiveDate?: string;
+    }
+    namespace LinkFolderHorseRow {
+        const idProperty = "Id";
+        const nameProperty = "Horse";
+        const localTextPrefix = "Ge.LinkFolderHorse";
+        namespace Fields {
+            const Id: any;
+            const Folder: any;
+            const Horse: any;
+            const FolderIsActive: any;
+            const FolderNotArchive: any;
+            const FolderInsertDate: any;
+            const FolderInsertUserId: any;
+            const FolderUpdateDate: any;
+            const FolderUpdateUserId: any;
+            const FolderCaption: any;
+            const FolderArchiveDate: any;
+            const FolderNumber: any;
+            const FolderCreateeDate: any;
+            const FolderCloseRaison: any;
+            const FolderCloseDate: any;
+            const FolderEstablishment: any;
+            const FolderComment: any;
+            const HorseSire: any;
+            const HorseCleSire: any;
+            const HorseHnin: any;
+            const HorseBirthCountry: any;
+            const HorseBirthOrganization: any;
+            const HorseName: any;
+            const HorseIsActive: any;
+            const HorseNotArchive: any;
+            const HorseInsertDate: any;
+            const HorseInsertUserId: any;
+            const HorseUpdateDate: any;
+            const HorseUpdateUserId: any;
+            const HorseBirthday: any;
+            const HorseSexe: any;
+            const HorseColor: any;
+            const HorseRace: any;
+            const HorseTransponder: any;
+            const HorseFinalExit: any;
+            const HorseDescription: any;
+            const HorseArchiveDate: any;
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+    namespace LinkFolderHorseService {
+        const baseUrl = "Ge/LinkFolderHorse";
+        function Create(request: Serenity.SaveRequest<LinkFolderHorseRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<LinkFolderHorseRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<LinkFolderHorseRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<LinkFolderHorseRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        namespace Methods {
+            const Create: string;
+            const Update: string;
+            const Delete: string;
+            const Retrieve: string;
+            const List: string;
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class LinkFolderPersonForm extends Serenity.PrefixedContext {
+        static formKey: string;
+    }
+    interface LinkFolderPersonForm {
+        Folder: Serenity.IntegerEditor;
+        PersonId: Serenity.StringEditor;
+        Caption: Serenity.StringEditor;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    interface LinkFolderPersonRow {
+        Id?: number;
+        Folder?: number;
+        PersonId?: string;
+        Caption?: string;
+        FolderIsActive?: boolean;
+        FolderNotArchive?: boolean;
+        FolderInsertDate?: string;
+        FolderInsertUserId?: number;
+        FolderUpdateDate?: string;
+        FolderUpdateUserId?: number;
+        FolderCaption?: string;
+        FolderArchiveDate?: string;
+        FolderNumber?: number;
+        FolderCreateeDate?: string;
+        FolderCloseRaison?: string;
+        FolderCloseDate?: string;
+        FolderEstablishment?: number;
+        FolderComment?: string;
+        PersonIsMorale?: boolean;
+        PersonIsActive?: boolean;
+        PersonNotArchive?: boolean;
+        PersonInsertDate?: string;
+        PersonInsertUserId?: number;
+        PersonUpdateDate?: string;
+        PersonUpdateUserId?: number;
+        PersonSurname?: string;
+        PersonName?: string;
+        PersonMaidenName?: string;
+        PersonBusinessName?: string;
+        PersonBirthday?: string;
+        PersonSexe?: number;
+        PersonMaritalStatus?: number;
+        PersonBirthCity?: string;
+        PersonBirthCountry?: string;
+        PersonNationality?: string;
+        PersonPhoto?: number[];
+        PersonPhone?: string;
+        PersonGsm?: string;
+        PersonWorkPhone?: string;
+        PersonOtherPhone1?: string;
+        PersonOtherPhone2?: string;
+        PersonEmail1?: string;
+        PersonEmail2?: string;
+        PersonBankAccount?: string;
+        PersonIdAdress?: string;
+        PersonCaption?: string;
+        PersonArchiveDate?: string;
+    }
+    namespace LinkFolderPersonRow {
+        const idProperty = "Id";
+        const nameProperty = "Caption";
+        const localTextPrefix = "Ge.LinkFolderPerson";
+        namespace Fields {
+            const Id: any;
+            const Folder: any;
+            const PersonId: any;
+            const Caption: any;
+            const FolderIsActive: any;
+            const FolderNotArchive: any;
+            const FolderInsertDate: any;
+            const FolderInsertUserId: any;
+            const FolderUpdateDate: any;
+            const FolderUpdateUserId: any;
+            const FolderCaption: any;
+            const FolderArchiveDate: any;
+            const FolderNumber: any;
+            const FolderCreateeDate: any;
+            const FolderCloseRaison: any;
+            const FolderCloseDate: any;
+            const FolderEstablishment: any;
+            const FolderComment: any;
+            const PersonIsMorale: any;
+            const PersonIsActive: any;
+            const PersonNotArchive: any;
+            const PersonInsertDate: any;
+            const PersonInsertUserId: any;
+            const PersonUpdateDate: any;
+            const PersonUpdateUserId: any;
+            const PersonSurname: any;
+            const PersonName: any;
+            const PersonMaidenName: any;
+            const PersonBusinessName: any;
+            const PersonBirthday: any;
+            const PersonSexe: any;
+            const PersonMaritalStatus: any;
+            const PersonBirthCity: any;
+            const PersonBirthCountry: any;
+            const PersonNationality: any;
+            const PersonPhoto: any;
+            const PersonPhone: any;
+            const PersonGsm: any;
+            const PersonWorkPhone: any;
+            const PersonOtherPhone1: any;
+            const PersonOtherPhone2: any;
+            const PersonEmail1: any;
+            const PersonEmail2: any;
+            const PersonBankAccount: any;
+            const PersonIdAdress: any;
+            const PersonCaption: any;
+            const PersonArchiveDate: any;
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+    namespace LinkFolderPersonService {
+        const baseUrl = "Ge/LinkFolderPerson";
+        function Create(request: Serenity.SaveRequest<LinkFolderPersonRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<LinkFolderPersonRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<LinkFolderPersonRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<LinkFolderPersonRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        namespace Methods {
+            const Create: string;
+            const Update: string;
+            const Delete: string;
+            const Retrieve: string;
+            const List: string;
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
 }
 declare namespace GestionEquestre.Ge {
     class ManAdressForm extends Serenity.PrefixedContext {
@@ -564,43 +908,43 @@ declare namespace GestionEquestre.Ge {
         const nameProperty = "Adress1";
         const localTextPrefix = "Ge.ManAdress";
         namespace Fields {
-            const Id: any;
-            const IsActive: any;
-            const NotArchive: any;
-            const InsertDate: any;
-            const InsertUserId: any;
-            const UpdateDate: any;
-            const UpdateUserId: any;
-            const Adress1: any;
-            const Adress2: any;
-            const Adress3: any;
-            const City: any;
-            const Country: any;
-            const Cedex: any;
-            const Building: any;
-            const Caption: any;
-            const ArchiveDate: any;
-            const CityDefaultValue: any;
-            const CityIsActive: any;
-            const CityInsertDate: any;
-            const CityInsertUserId: any;
-            const CityUpdateDate: any;
-            const CityUpdateUserId: any;
-            const CityFrCodeInsee: any;
-            const CityCaption: any;
-            const City1: any;
-            const CityPostCode: any;
-            const CityCountry: any;
-            const CountryDefaultValue: any;
-            const CountryIsActive: any;
-            const CountryInsertDate: any;
-            const CountryInsertUserId: any;
-            const CountryUpdateDate: any;
-            const CountryUpdateUserId: any;
-            const Country1: any;
-            const CountryCode: any;
-            const CountryCodeUe: any;
-            const CountryIso3166Country: any;
+            const Id: string;
+            const IsActive: string;
+            const NotArchive: string;
+            const InsertDate: string;
+            const InsertUserId: string;
+            const UpdateDate: string;
+            const UpdateUserId: string;
+            const Adress1: string;
+            const Adress2: string;
+            const Adress3: string;
+            const City: string;
+            const Country: string;
+            const Cedex: string;
+            const Building: string;
+            const Caption: string;
+            const ArchiveDate: string;
+            const CityDefaultValue: string;
+            const CityIsActive: string;
+            const CityInsertDate: string;
+            const CityInsertUserId: string;
+            const CityUpdateDate: string;
+            const CityUpdateUserId: string;
+            const CityFrCodeInsee: string;
+            const CityCaption: string;
+            const City1: string;
+            const CityPostCode: string;
+            const CityCountry: string;
+            const CountryDefaultValue: string;
+            const CountryIsActive: string;
+            const CountryInsertDate: string;
+            const CountryInsertUserId: string;
+            const CountryUpdateDate: string;
+            const CountryUpdateUserId: string;
+            const Country1: string;
+            const CountryCode: string;
+            const CountryCodeUe: string;
+            const CountryIso3166Country: string;
         }
     }
 }
@@ -620,6 +964,8 @@ declare namespace GestionEquestre.Ge {
             const List: string;
         }
     }
+}
+declare namespace GestionEquestre.Ge {
 }
 declare namespace GestionEquestre.Ge {
     class ManCavaliersForm extends Serenity.PrefixedContext {
@@ -708,65 +1054,65 @@ declare namespace GestionEquestre.Ge {
         const nameProperty = "LicFfe";
         const localTextPrefix = "Ge.ManCavaliers";
         namespace Fields {
-            const LicFfe: any;
-            const Person: any;
-            const IsActive: any;
-            const NotArchive: any;
-            const InsertDate: any;
-            const InsertUserId: any;
-            const UpdateDate: any;
-            const UpdateUserId: any;
-            const MilesimeLicnece: any;
-            const NiveauGalop: any;
-            const LicenceCompetition: any;
-            const DateCertificatMedical: any;
-            const Caption: any;
-            const ArchiveDate: any;
-            const PersonIsMorale: any;
-            const PersonIsActive: any;
-            const PersonNotArchive: any;
-            const PersonInsertDate: any;
-            const PersonInsertUserId: any;
-            const PersonUpdateDate: any;
-            const PersonUpdateUserId: any;
-            const PersonSurname: any;
-            const PersonName: any;
-            const PersonMaidenName: any;
-            const PersonBusinessName: any;
-            const PersonBirthday: any;
-            const PersonSexe: any;
-            const PersonMaritalStatus: any;
-            const PersonBirthCity: any;
-            const PersonBirthCountry: any;
-            const PersonNationality: any;
-            const PersonPhoto: any;
-            const PersonPhone: any;
-            const PersonGsm: any;
-            const PersonWorkPhone: any;
-            const PersonOtherPhone1: any;
-            const PersonOtherPhone2: any;
-            const PersonEmail1: any;
-            const PersonEmail2: any;
-            const PersonBankAccount: any;
-            const PersonIdAdress: any;
-            const PersonCaption: any;
-            const PersonArchiveDate: any;
-            const NiveauGalopDefaultValue: any;
-            const NiveauGalopIsActive: any;
-            const NiveauGalopInsertDate: any;
-            const NiveauGalopInsertUserId: any;
-            const NiveauGalopUpdateDate: any;
-            const NiveauGalopUpdateUserId: any;
-            const NiveauGalopCaption: any;
-            const NiveauGalopCode: any;
-            const LicenceCompetitionDefaultValue: any;
-            const LicenceCompetitionIsActive: any;
-            const LicenceCompetitionInsertDate: any;
-            const LicenceCompetitionInsertUserId: any;
-            const LicenceCompetitionUpdateDate: any;
-            const LicenceCompetitionUpdateUserId: any;
-            const LicenceCompetitionCaption: any;
-            const LicenceCompetitionCode: any;
+            const LicFfe: string;
+            const Person: string;
+            const IsActive: string;
+            const NotArchive: string;
+            const InsertDate: string;
+            const InsertUserId: string;
+            const UpdateDate: string;
+            const UpdateUserId: string;
+            const MilesimeLicnece: string;
+            const NiveauGalop: string;
+            const LicenceCompetition: string;
+            const DateCertificatMedical: string;
+            const Caption: string;
+            const ArchiveDate: string;
+            const PersonIsMorale: string;
+            const PersonIsActive: string;
+            const PersonNotArchive: string;
+            const PersonInsertDate: string;
+            const PersonInsertUserId: string;
+            const PersonUpdateDate: string;
+            const PersonUpdateUserId: string;
+            const PersonSurname: string;
+            const PersonName: string;
+            const PersonMaidenName: string;
+            const PersonBusinessName: string;
+            const PersonBirthday: string;
+            const PersonSexe: string;
+            const PersonMaritalStatus: string;
+            const PersonBirthCity: string;
+            const PersonBirthCountry: string;
+            const PersonNationality: string;
+            const PersonPhoto: string;
+            const PersonPhone: string;
+            const PersonGsm: string;
+            const PersonWorkPhone: string;
+            const PersonOtherPhone1: string;
+            const PersonOtherPhone2: string;
+            const PersonEmail1: string;
+            const PersonEmail2: string;
+            const PersonBankAccount: string;
+            const PersonIdAdress: string;
+            const PersonCaption: string;
+            const PersonArchiveDate: string;
+            const NiveauGalopDefaultValue: string;
+            const NiveauGalopIsActive: string;
+            const NiveauGalopInsertDate: string;
+            const NiveauGalopInsertUserId: string;
+            const NiveauGalopUpdateDate: string;
+            const NiveauGalopUpdateUserId: string;
+            const NiveauGalopCaption: string;
+            const NiveauGalopCode: string;
+            const LicenceCompetitionDefaultValue: string;
+            const LicenceCompetitionIsActive: string;
+            const LicenceCompetitionInsertDate: string;
+            const LicenceCompetitionInsertUserId: string;
+            const LicenceCompetitionUpdateDate: string;
+            const LicenceCompetitionUpdateUserId: string;
+            const LicenceCompetitionCaption: string;
+            const LicenceCompetitionCode: string;
         }
     }
 }
@@ -786,6 +1132,87 @@ declare namespace GestionEquestre.Ge {
             const List: string;
         }
     }
+}
+declare namespace GestionEquestre.Ge {
+    class ManFolderForm extends Serenity.PrefixedContext {
+        static formKey: string;
+    }
+    interface ManFolderForm {
+        IsActive: Serenity.BooleanEditor;
+        NotArchive: Serenity.BooleanEditor;
+        InsertDate: Serenity.DateEditor;
+        InsertUserId: Serenity.IntegerEditor;
+        UpdateDate: Serenity.DateEditor;
+        UpdateUserId: Serenity.IntegerEditor;
+        Caption: Serenity.StringEditor;
+        ArchiveDate: Serenity.DateEditor;
+        Number: Serenity.IntegerEditor;
+        CreateeDate: Serenity.DateEditor;
+        CloseRaison: Serenity.StringEditor;
+        CloseDate: Serenity.DateEditor;
+        Establishment: Serenity.IntegerEditor;
+        Comment: Serenity.StringEditor;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    interface ManFolderRow {
+        Id?: number;
+        IsActive?: boolean;
+        NotArchive?: boolean;
+        InsertDate?: string;
+        InsertUserId?: number;
+        UpdateDate?: string;
+        UpdateUserId?: number;
+        Caption?: string;
+        ArchiveDate?: string;
+        Number?: number;
+        CreateeDate?: string;
+        CloseRaison?: string;
+        CloseDate?: string;
+        Establishment?: number;
+        Comment?: string;
+    }
+    namespace ManFolderRow {
+        const idProperty = "Id";
+        const nameProperty = "Caption";
+        const localTextPrefix = "Ge.ManFolder";
+        namespace Fields {
+            const Id: any;
+            const IsActive: any;
+            const NotArchive: any;
+            const InsertDate: any;
+            const InsertUserId: any;
+            const UpdateDate: any;
+            const UpdateUserId: any;
+            const Caption: any;
+            const ArchiveDate: any;
+            const Number: any;
+            const CreateeDate: any;
+            const CloseRaison: any;
+            const CloseDate: any;
+            const Establishment: any;
+            const Comment: any;
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+    namespace ManFolderService {
+        const baseUrl = "Ge/ManFolder";
+        function Create(request: Serenity.SaveRequest<ManFolderRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<ManFolderRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<ManFolderRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<ManFolderRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        namespace Methods {
+            const Create: string;
+            const Update: string;
+            const Delete: string;
+            const Retrieve: string;
+            const List: string;
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
 }
 declare namespace GestionEquestre.Ge {
     class ManHorsesForm extends Serenity.PrefixedContext {
@@ -869,53 +1296,53 @@ declare namespace GestionEquestre.Ge {
         const nameProperty = "Ueln";
         const localTextPrefix = "Ge.ManHorses";
         namespace Fields {
-            const Ueln: any;
-            const Sire: any;
-            const CleSire: any;
-            const Hnin: any;
-            const BirthCountry: any;
-            const BirthOrganization: any;
-            const Name: any;
-            const IsActive: any;
-            const NotArchive: any;
-            const InsertDate: any;
-            const InsertUserId: any;
-            const UpdateDate: any;
-            const UpdateUserId: any;
-            const Birthday: any;
-            const Sexe: any;
-            const Color: any;
-            const Race: any;
-            const Transponder: any;
-            const FinalExit: any;
-            const Description: any;
-            const ArchiveDate: any;
-            const BirthCountryDefaultValue: any;
-            const BirthCountryIsActive: any;
-            const BirthCountryInsertDate: any;
-            const BirthCountryInsertUserId: any;
-            const BirthCountryUpdateDate: any;
-            const BirthCountryUpdateUserId: any;
-            const BirthCountryCountry: any;
-            const BirthCountryCode: any;
-            const BirthCountryCodeUe: any;
-            const BirthCountryIso3166Country: any;
-            const BirthOrganizationDefaultValue: any;
-            const BirthOrganizationIsActive: any;
-            const BirthOrganizationInsertDate: any;
-            const BirthOrganizationInsertUserId: any;
-            const BirthOrganizationUpdateDate: any;
-            const BirthOrganizationUpdateUserId: any;
-            const BirthOrganizationOrganization: any;
-            const BirthOrganizationUelnOrganization: any;
-            const SexeDefaultValue: any;
-            const SexeIsActive: any;
-            const SexeInsertDate: any;
-            const SexeInsertUserId: any;
-            const SexeUpdateDate: any;
-            const SexeUpdateUserId: any;
-            const SexeCaption: any;
-            const SexeCivility: any;
+            const Ueln: string;
+            const Sire: string;
+            const CleSire: string;
+            const Hnin: string;
+            const BirthCountry: string;
+            const BirthOrganization: string;
+            const Name: string;
+            const IsActive: string;
+            const NotArchive: string;
+            const InsertDate: string;
+            const InsertUserId: string;
+            const UpdateDate: string;
+            const UpdateUserId: string;
+            const Birthday: string;
+            const Sexe: string;
+            const Color: string;
+            const Race: string;
+            const Transponder: string;
+            const FinalExit: string;
+            const Description: string;
+            const ArchiveDate: string;
+            const BirthCountryDefaultValue: string;
+            const BirthCountryIsActive: string;
+            const BirthCountryInsertDate: string;
+            const BirthCountryInsertUserId: string;
+            const BirthCountryUpdateDate: string;
+            const BirthCountryUpdateUserId: string;
+            const BirthCountryCountry: string;
+            const BirthCountryCode: string;
+            const BirthCountryCodeUe: string;
+            const BirthCountryIso3166Country: string;
+            const BirthOrganizationDefaultValue: string;
+            const BirthOrganizationIsActive: string;
+            const BirthOrganizationInsertDate: string;
+            const BirthOrganizationInsertUserId: string;
+            const BirthOrganizationUpdateDate: string;
+            const BirthOrganizationUpdateUserId: string;
+            const BirthOrganizationOrganization: string;
+            const BirthOrganizationUelnOrganization: string;
+            const SexeDefaultValue: string;
+            const SexeIsActive: string;
+            const SexeInsertDate: string;
+            const SexeInsertUserId: string;
+            const SexeUpdateDate: string;
+            const SexeUpdateUserId: string;
+            const SexeCaption: string;
+            const SexeCivility: string;
         }
     }
 }
@@ -935,6 +1362,8 @@ declare namespace GestionEquestre.Ge {
             const List: string;
         }
     }
+}
+declare namespace GestionEquestre.Ge {
 }
 declare namespace GestionEquestre.Ge {
     class ManOwnerForm extends Serenity.PrefixedContext {
@@ -991,43 +1420,43 @@ declare namespace GestionEquestre.Ge {
         const nameProperty = "Horse";
         const localTextPrefix = "Ge.ManOwner";
         namespace Fields {
-            const Id: any;
-            const Horse: any;
-            const Cavalier: any;
-            const Part: any;
-            const HorseSire: any;
-            const HorseCleSire: any;
-            const HorseHnin: any;
-            const HorseBirthCountry: any;
-            const HorseBirthOrganization: any;
-            const HorseName: any;
-            const HorseIsActive: any;
-            const HorseNotArchive: any;
-            const HorseInsertDate: any;
-            const HorseInsertUserId: any;
-            const HorseUpdateDate: any;
-            const HorseUpdateUserId: any;
-            const HorseBirthday: any;
-            const HorseSexe: any;
-            const HorseColor: any;
-            const HorseRace: any;
-            const HorseTransponder: any;
-            const HorseFinalExit: any;
-            const HorseDescription: any;
-            const HorseArchiveDate: any;
-            const CavalierPerson: any;
-            const CavalierIsActive: any;
-            const CavalierNotArchive: any;
-            const CavalierInsertDate: any;
-            const CavalierInsertUserId: any;
-            const CavalierUpdateDate: any;
-            const CavalierUpdateUserId: any;
-            const CavalierMilesimeLicnece: any;
-            const CavalierNiveauGalop: any;
-            const CavalierLicenceCompetition: any;
-            const CavalierDateCertificatMedical: any;
-            const CavalierCaption: any;
-            const CavalierArchiveDate: any;
+            const Id: string;
+            const Horse: string;
+            const Cavalier: string;
+            const Part: string;
+            const HorseSire: string;
+            const HorseCleSire: string;
+            const HorseHnin: string;
+            const HorseBirthCountry: string;
+            const HorseBirthOrganization: string;
+            const HorseName: string;
+            const HorseIsActive: string;
+            const HorseNotArchive: string;
+            const HorseInsertDate: string;
+            const HorseInsertUserId: string;
+            const HorseUpdateDate: string;
+            const HorseUpdateUserId: string;
+            const HorseBirthday: string;
+            const HorseSexe: string;
+            const HorseColor: string;
+            const HorseRace: string;
+            const HorseTransponder: string;
+            const HorseFinalExit: string;
+            const HorseDescription: string;
+            const HorseArchiveDate: string;
+            const CavalierPerson: string;
+            const CavalierIsActive: string;
+            const CavalierNotArchive: string;
+            const CavalierInsertDate: string;
+            const CavalierInsertUserId: string;
+            const CavalierUpdateDate: string;
+            const CavalierUpdateUserId: string;
+            const CavalierMilesimeLicnece: string;
+            const CavalierNiveauGalop: string;
+            const CavalierLicenceCompetition: string;
+            const CavalierDateCertificatMedical: string;
+            const CavalierCaption: string;
+            const CavalierArchiveDate: string;
         }
     }
 }
@@ -1047,6 +1476,8 @@ declare namespace GestionEquestre.Ge {
             const List: string;
         }
     }
+}
+declare namespace GestionEquestre.Ge {
 }
 declare namespace GestionEquestre.Ge {
     class ManPersonForm extends Serenity.PrefixedContext {
@@ -1196,110 +1627,110 @@ declare namespace GestionEquestre.Ge {
         const nameProperty = "Surname";
         const localTextPrefix = "Ge.ManPerson";
         namespace Fields {
-            const Id: any;
-            const IsMorale: any;
-            const IsActive: any;
-            const NotArchive: any;
-            const InsertDate: any;
-            const InsertUserId: any;
-            const UpdateDate: any;
-            const UpdateUserId: any;
-            const Surname: any;
-            const Name: any;
-            const MaidenName: any;
-            const BusinessName: any;
-            const Birthday: any;
-            const Sexe: any;
-            const MaritalStatus: any;
-            const BirthCity: any;
-            const BirthCountry: any;
-            const Nationality: any;
-            const Photo: any;
-            const Phone: any;
-            const Gsm: any;
-            const WorkPhone: any;
-            const OtherPhone1: any;
-            const OtherPhone2: any;
-            const Email1: any;
-            const Email2: any;
-            const BankAccount: any;
-            const IdAdress: any;
-            const Caption: any;
-            const ArchiveDate: any;
-            const SexeDefaultValue: any;
-            const SexeIsActive: any;
-            const SexeInsertDate: any;
-            const SexeInsertUserId: any;
-            const SexeUpdateDate: any;
-            const SexeUpdateUserId: any;
-            const SexeCaption: any;
-            const SexeCivility: any;
-            const MaritalStatusDefaultValue: any;
-            const MaritalStatusIsActive: any;
-            const MaritalStatusInsertDate: any;
-            const MaritalStatusInsertUserId: any;
-            const MaritalStatusUpdateDate: any;
-            const MaritalStatusUpdateUserId: any;
-            const MaritalStatusCaption: any;
-            const MaritalStatusCode: any;
-            const BirthCityDefaultValue: any;
-            const BirthCityIsActive: any;
-            const BirthCityInsertDate: any;
-            const BirthCityInsertUserId: any;
-            const BirthCityUpdateDate: any;
-            const BirthCityUpdateUserId: any;
-            const BirthCityFrCodeInsee: any;
-            const BirthCityCaption: any;
-            const BirthCityCity: any;
-            const BirthCityPostCode: any;
-            const BirthCityCountry: any;
-            const BirthCountryDefaultValue: any;
-            const BirthCountryIsActive: any;
-            const BirthCountryInsertDate: any;
-            const BirthCountryInsertUserId: any;
-            const BirthCountryUpdateDate: any;
-            const BirthCountryUpdateUserId: any;
-            const BirthCountryCountry: any;
-            const BirthCountryCode: any;
-            const BirthCountryCodeUe: any;
-            const BirthCountryIso3166Country: any;
-            const NationalityDefaultValue: any;
-            const NationalityIsActive: any;
-            const NationalityInsertDate: any;
-            const NationalityInsertUserId: any;
-            const NationalityUpdateDate: any;
-            const NationalityUpdateUserId: any;
-            const NationalityCountry: any;
-            const NationalityCode: any;
-            const NationalityCodeUe: any;
-            const NationalityIso3166Country: any;
-            const BankAccountCountryCodeIban: any;
-            const BankAccountCheckDigitsIban: any;
-            const BankAccountBban: any;
-            const BankAccountBic: any;
-            const BankAccountAccountOnwer: any;
-            const BankAccountBankAdress: any;
-            const BankAccountCis: any;
-            const BankAccountUrm: any;
-            const BankAccountMandateDateSign: any;
-            const BankAccountTypePayment: any;
-            const BankAccountDateLastPrelevement: any;
-            const BankAccountTypeOfLastPayment: any;
-            const IdAdressIsActive: any;
-            const IdAdressNotArchive: any;
-            const IdAdressInsertDate: any;
-            const IdAdressInsertUserId: any;
-            const IdAdressUpdateDate: any;
-            const IdAdressUpdateUserId: any;
-            const IdAdressAdress1: any;
-            const IdAdressAdress2: any;
-            const IdAdressAdress3: any;
-            const IdAdressCity: any;
-            const IdAdressCountry: any;
-            const IdAdressCedex: any;
-            const IdAdressBuilding: any;
-            const IdAdressCaption: any;
-            const IdAdressArchiveDate: any;
+            const Id: string;
+            const IsMorale: string;
+            const IsActive: string;
+            const NotArchive: string;
+            const InsertDate: string;
+            const InsertUserId: string;
+            const UpdateDate: string;
+            const UpdateUserId: string;
+            const Surname: string;
+            const Name: string;
+            const MaidenName: string;
+            const BusinessName: string;
+            const Birthday: string;
+            const Sexe: string;
+            const MaritalStatus: string;
+            const BirthCity: string;
+            const BirthCountry: string;
+            const Nationality: string;
+            const Photo: string;
+            const Phone: string;
+            const Gsm: string;
+            const WorkPhone: string;
+            const OtherPhone1: string;
+            const OtherPhone2: string;
+            const Email1: string;
+            const Email2: string;
+            const BankAccount: string;
+            const IdAdress: string;
+            const Caption: string;
+            const ArchiveDate: string;
+            const SexeDefaultValue: string;
+            const SexeIsActive: string;
+            const SexeInsertDate: string;
+            const SexeInsertUserId: string;
+            const SexeUpdateDate: string;
+            const SexeUpdateUserId: string;
+            const SexeCaption: string;
+            const SexeCivility: string;
+            const MaritalStatusDefaultValue: string;
+            const MaritalStatusIsActive: string;
+            const MaritalStatusInsertDate: string;
+            const MaritalStatusInsertUserId: string;
+            const MaritalStatusUpdateDate: string;
+            const MaritalStatusUpdateUserId: string;
+            const MaritalStatusCaption: string;
+            const MaritalStatusCode: string;
+            const BirthCityDefaultValue: string;
+            const BirthCityIsActive: string;
+            const BirthCityInsertDate: string;
+            const BirthCityInsertUserId: string;
+            const BirthCityUpdateDate: string;
+            const BirthCityUpdateUserId: string;
+            const BirthCityFrCodeInsee: string;
+            const BirthCityCaption: string;
+            const BirthCityCity: string;
+            const BirthCityPostCode: string;
+            const BirthCityCountry: string;
+            const BirthCountryDefaultValue: string;
+            const BirthCountryIsActive: string;
+            const BirthCountryInsertDate: string;
+            const BirthCountryInsertUserId: string;
+            const BirthCountryUpdateDate: string;
+            const BirthCountryUpdateUserId: string;
+            const BirthCountryCountry: string;
+            const BirthCountryCode: string;
+            const BirthCountryCodeUe: string;
+            const BirthCountryIso3166Country: string;
+            const NationalityDefaultValue: string;
+            const NationalityIsActive: string;
+            const NationalityInsertDate: string;
+            const NationalityInsertUserId: string;
+            const NationalityUpdateDate: string;
+            const NationalityUpdateUserId: string;
+            const NationalityCountry: string;
+            const NationalityCode: string;
+            const NationalityCodeUe: string;
+            const NationalityIso3166Country: string;
+            const BankAccountCountryCodeIban: string;
+            const BankAccountCheckDigitsIban: string;
+            const BankAccountBban: string;
+            const BankAccountBic: string;
+            const BankAccountAccountOnwer: string;
+            const BankAccountBankAdress: string;
+            const BankAccountCis: string;
+            const BankAccountUrm: string;
+            const BankAccountMandateDateSign: string;
+            const BankAccountTypePayment: string;
+            const BankAccountDateLastPrelevement: string;
+            const BankAccountTypeOfLastPayment: string;
+            const IdAdressIsActive: string;
+            const IdAdressNotArchive: string;
+            const IdAdressInsertDate: string;
+            const IdAdressInsertUserId: string;
+            const IdAdressUpdateDate: string;
+            const IdAdressUpdateUserId: string;
+            const IdAdressAdress1: string;
+            const IdAdressAdress2: string;
+            const IdAdressAdress3: string;
+            const IdAdressCity: string;
+            const IdAdressCountry: string;
+            const IdAdressCedex: string;
+            const IdAdressBuilding: string;
+            const IdAdressCaption: string;
+            const IdAdressArchiveDate: string;
         }
     }
 }
@@ -1319,6 +1750,8 @@ declare namespace GestionEquestre.Ge {
             const List: string;
         }
     }
+}
+declare namespace GestionEquestre.Ge {
 }
 declare namespace GestionEquestre.Ge {
     class SetCityForm extends Serenity.PrefixedContext {
@@ -1367,29 +1800,31 @@ declare namespace GestionEquestre.Ge {
         const idProperty = "Id";
         const nameProperty = "FrCodeInsee";
         const localTextPrefix = "Ge.SetCity";
+        const lookupKey = "Ge.SetCity";
+        function getLookup(): Q.Lookup<SetCityRow>;
         namespace Fields {
-            const Id: any;
-            const DefaultValue: any;
-            const IsActive: any;
-            const InsertDate: any;
-            const InsertUserId: any;
-            const UpdateDate: any;
-            const UpdateUserId: any;
-            const FrCodeInsee: any;
-            const Caption: any;
-            const City: any;
-            const PostCode: any;
-            const Country: any;
-            const CountryDefaultValue: any;
-            const CountryIsActive: any;
-            const CountryInsertDate: any;
-            const CountryInsertUserId: any;
-            const CountryUpdateDate: any;
-            const CountryUpdateUserId: any;
-            const Country1: any;
-            const CountryCode: any;
-            const CountryCodeUe: any;
-            const CountryIso3166Country: any;
+            const Id: string;
+            const DefaultValue: string;
+            const IsActive: string;
+            const InsertDate: string;
+            const InsertUserId: string;
+            const UpdateDate: string;
+            const UpdateUserId: string;
+            const FrCodeInsee: string;
+            const Caption: string;
+            const City: string;
+            const PostCode: string;
+            const Country: string;
+            const CountryDefaultValue: string;
+            const CountryIsActive: string;
+            const CountryInsertDate: string;
+            const CountryInsertUserId: string;
+            const CountryUpdateDate: string;
+            const CountryUpdateUserId: string;
+            const Country1: string;
+            const CountryCode: string;
+            const CountryCodeUe: string;
+            const CountryIso3166Country: string;
         }
     }
 }
@@ -1409,6 +1844,8 @@ declare namespace GestionEquestre.Ge {
             const List: string;
         }
     }
+}
+declare namespace GestionEquestre.Ge {
 }
 declare namespace GestionEquestre.Ge {
     class SetCountryForm extends Serenity.PrefixedContext {
@@ -1445,18 +1882,20 @@ declare namespace GestionEquestre.Ge {
         const idProperty = "Id";
         const nameProperty = "Country";
         const localTextPrefix = "Ge.SetCountry";
+        const lookupKey = "Ge.SetCountry";
+        function getLookup(): Q.Lookup<SetCountryRow>;
         namespace Fields {
-            const Id: any;
-            const DefaultValue: any;
-            const IsActive: any;
-            const InsertDate: any;
-            const InsertUserId: any;
-            const UpdateDate: any;
-            const UpdateUserId: any;
-            const Country: any;
-            const Code: any;
-            const CodeUe: any;
-            const Iso3166Country: any;
+            const Id: string;
+            const DefaultValue: string;
+            const IsActive: string;
+            const InsertDate: string;
+            const InsertUserId: string;
+            const UpdateDate: string;
+            const UpdateUserId: string;
+            const Country: string;
+            const Code: string;
+            const CodeUe: string;
+            const Iso3166Country: string;
         }
     }
 }
@@ -1476,6 +1915,8 @@ declare namespace GestionEquestre.Ge {
             const List: string;
         }
     }
+}
+declare namespace GestionEquestre.Ge {
 }
 declare namespace GestionEquestre.Ge {
     class SetGalopForm extends Serenity.PrefixedContext {
@@ -1508,16 +1949,18 @@ declare namespace GestionEquestre.Ge {
         const idProperty = "Id";
         const nameProperty = "Caption";
         const localTextPrefix = "Ge.SetGalop";
+        const lookupKey = "Ge.SetGalop";
+        function getLookup(): Q.Lookup<SetGalopRow>;
         namespace Fields {
-            const Id: any;
-            const DefaultValue: any;
-            const IsActive: any;
-            const InsertDate: any;
-            const InsertUserId: any;
-            const UpdateDate: any;
-            const UpdateUserId: any;
-            const Caption: any;
-            const Code: any;
+            const Id: string;
+            const DefaultValue: string;
+            const IsActive: string;
+            const InsertDate: string;
+            const InsertUserId: string;
+            const UpdateDate: string;
+            const UpdateUserId: string;
+            const Caption: string;
+            const Code: string;
         }
     }
 }
@@ -1537,6 +1980,8 @@ declare namespace GestionEquestre.Ge {
             const List: string;
         }
     }
+}
+declare namespace GestionEquestre.Ge {
 }
 declare namespace GestionEquestre.Ge {
     class SetLfcForm extends Serenity.PrefixedContext {
@@ -1569,16 +2014,18 @@ declare namespace GestionEquestre.Ge {
         const idProperty = "Id";
         const nameProperty = "Caption";
         const localTextPrefix = "Ge.SetLfc";
+        const lookupKey = "Ge.SetLfc";
+        function getLookup(): Q.Lookup<SetLfcRow>;
         namespace Fields {
-            const Id: any;
-            const DefaultValue: any;
-            const IsActive: any;
-            const InsertDate: any;
-            const InsertUserId: any;
-            const UpdateDate: any;
-            const UpdateUserId: any;
-            const Caption: any;
-            const Code: any;
+            const Id: string;
+            const DefaultValue: string;
+            const IsActive: string;
+            const InsertDate: string;
+            const InsertUserId: string;
+            const UpdateDate: string;
+            const UpdateUserId: string;
+            const Caption: string;
+            const Code: string;
         }
     }
 }
@@ -1598,6 +2045,8 @@ declare namespace GestionEquestre.Ge {
             const List: string;
         }
     }
+}
+declare namespace GestionEquestre.Ge {
 }
 declare namespace GestionEquestre.Ge {
     class SetMaritalstatusForm extends Serenity.PrefixedContext {
@@ -1630,16 +2079,18 @@ declare namespace GestionEquestre.Ge {
         const idProperty = "Id";
         const nameProperty = "Caption";
         const localTextPrefix = "Ge.SetMaritalstatus";
+        const lookupKey = "Ge.SetMaritalstatus";
+        function getLookup(): Q.Lookup<SetMaritalstatusRow>;
         namespace Fields {
-            const Id: any;
-            const DefaultValue: any;
-            const IsActive: any;
-            const InsertDate: any;
-            const InsertUserId: any;
-            const UpdateDate: any;
-            const UpdateUserId: any;
-            const Caption: any;
-            const Code: any;
+            const Id: string;
+            const DefaultValue: string;
+            const IsActive: string;
+            const InsertDate: string;
+            const InsertUserId: string;
+            const UpdateDate: string;
+            const UpdateUserId: string;
+            const Caption: string;
+            const Code: string;
         }
     }
 }
@@ -1659,6 +2110,8 @@ declare namespace GestionEquestre.Ge {
             const List: string;
         }
     }
+}
+declare namespace GestionEquestre.Ge {
 }
 declare namespace GestionEquestre.Ge {
     class SetSexeForm extends Serenity.PrefixedContext {
@@ -1691,16 +2144,18 @@ declare namespace GestionEquestre.Ge {
         const idProperty = "SexeId";
         const nameProperty = "Caption";
         const localTextPrefix = "Ge.SetSexe";
+        const lookupKey = "Ge.SexeHorses";
+        function getLookup(): Q.Lookup<SetSexeRow>;
         namespace Fields {
-            const SexeId: any;
-            const DefaultValue: any;
-            const IsActive: any;
-            const InsertDate: any;
-            const InsertUserId: any;
-            const UpdateDate: any;
-            const UpdateUserId: any;
-            const Caption: any;
-            const Civility: any;
+            const SexeId: string;
+            const DefaultValue: string;
+            const IsActive: string;
+            const InsertDate: string;
+            const InsertUserId: string;
+            const UpdateDate: string;
+            const UpdateUserId: string;
+            const Caption: string;
+            const Civility: string;
         }
     }
 }
@@ -1720,6 +2175,8 @@ declare namespace GestionEquestre.Ge {
             const List: string;
         }
     }
+}
+declare namespace GestionEquestre.Ge {
 }
 declare namespace GestionEquestre.Ge {
     class SetUelnorgaForm extends Serenity.PrefixedContext {
@@ -1752,16 +2209,18 @@ declare namespace GestionEquestre.Ge {
         const idProperty = "Id";
         const nameProperty = "Organization";
         const localTextPrefix = "Ge.SetUelnorga";
+        const lookupKey = "Ge.SetUelnorga";
+        function getLookup(): Q.Lookup<SetUelnorgaRow>;
         namespace Fields {
-            const Id: any;
-            const DefaultValue: any;
-            const IsActive: any;
-            const InsertDate: any;
-            const InsertUserId: any;
-            const UpdateDate: any;
-            const UpdateUserId: any;
-            const Organization: any;
-            const UelnOrganization: any;
+            const Id: string;
+            const DefaultValue: string;
+            const IsActive: string;
+            const InsertDate: string;
+            const InsertUserId: string;
+            const UpdateDate: string;
+            const UpdateUserId: string;
+            const Organization: string;
+            const UelnOrganization: string;
         }
     }
 }
@@ -2305,6 +2764,66 @@ declare namespace GestionEquestre.Ge {
     }
 }
 declare namespace GestionEquestre.Ge {
+    class LinkFolderCavalierDialog extends Serenity.EntityDialog<LinkFolderCavalierRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: LinkFolderCavalierForm;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class LinkFolderCavalierGrid extends Serenity.EntityGrid<LinkFolderCavalierRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof LinkFolderCavalierDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class LinkFolderHorseDialog extends Serenity.EntityDialog<LinkFolderHorseRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: LinkFolderHorseForm;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class LinkFolderHorseGrid extends Serenity.EntityGrid<LinkFolderHorseRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof LinkFolderHorseDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class LinkFolderPersonDialog extends Serenity.EntityDialog<LinkFolderPersonRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: LinkFolderPersonForm;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class LinkFolderPersonGrid extends Serenity.EntityGrid<LinkFolderPersonRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof LinkFolderPersonDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+    }
+}
+declare namespace GestionEquestre.Ge {
     class ManAdressDialog extends Serenity.EntityDialog<ManAdressRow, any> {
         protected getFormKey(): string;
         protected getIdProperty(): string;
@@ -2338,6 +2857,26 @@ declare namespace GestionEquestre.Ge {
     class ManCavaliersGrid extends Serenity.EntityGrid<ManCavaliersRow, any> {
         protected getColumnsKey(): string;
         protected getDialogType(): typeof ManCavaliersDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class ManFolderDialog extends Serenity.EntityDialog<ManFolderRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: ManFolderForm;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class ManFolderGrid extends Serenity.EntityGrid<ManFolderRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof ManFolderDialog;
         protected getIdProperty(): string;
         protected getLocalTextPrefix(): string;
         protected getService(): string;

@@ -1,5 +1,4 @@
-﻿
-namespace GestionEquestre.Ge {
+﻿namespace GestionEquestre.Ge {
     export interface SetLfcRow {
         Id?: number;
         DefaultValue?: boolean;
@@ -16,29 +15,35 @@ namespace GestionEquestre.Ge {
         export const idProperty = 'Id';
         export const nameProperty = 'Caption';
         export const localTextPrefix = 'Ge.SetLfc';
+        export const lookupKey = 'Ge.SetLfc';
+
+        export function getLookup(): Q.Lookup<SetLfcRow> {
+            return Q.getLookup<SetLfcRow>('Ge.SetLfc');
+        }
 
         export namespace Fields {
-            export declare const Id;
-            export declare const DefaultValue;
-            export declare const IsActive;
-            export declare const InsertDate;
-            export declare const InsertUserId;
-            export declare const UpdateDate;
-            export declare const UpdateUserId;
-            export declare const Caption;
-            export declare const Code;
+            export declare const Id: string;
+            export declare const DefaultValue: string;
+            export declare const IsActive: string;
+            export declare const InsertDate: string;
+            export declare const InsertUserId: string;
+            export declare const UpdateDate: string;
+            export declare const UpdateUserId: string;
+            export declare const Caption: string;
+            export declare const Code: string;
         }
 
         [
-            'Id',
-            'DefaultValue',
-            'IsActive',
-            'InsertDate',
-            'InsertUserId',
-            'UpdateDate',
-            'UpdateUserId',
-            'Caption',
+            'Id', 
+            'DefaultValue', 
+            'IsActive', 
+            'InsertDate', 
+            'InsertUserId', 
+            'UpdateDate', 
+            'UpdateUserId', 
+            'Caption', 
             'Code'
         ].forEach(x => (<any>Fields)[x] = x);
     }
 }
+

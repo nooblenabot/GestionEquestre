@@ -1,5 +1,4 @@
-﻿
-namespace GestionEquestre.Ge {
+﻿namespace GestionEquestre.Ge {
     export interface ManHorsesRow {
         Ueln?: string;
         Sire?: string;
@@ -56,103 +55,104 @@ namespace GestionEquestre.Ge {
         export const localTextPrefix = 'Ge.ManHorses';
 
         export namespace Fields {
-            export declare const Ueln;
-            export declare const Sire;
-            export declare const CleSire;
-            export declare const Hnin;
-            export declare const BirthCountry;
-            export declare const BirthOrganization;
-            export declare const Name;
-            export declare const IsActive;
-            export declare const NotArchive;
-            export declare const InsertDate;
-            export declare const InsertUserId;
-            export declare const UpdateDate;
-            export declare const UpdateUserId;
-            export declare const Birthday;
-            export declare const Sexe;
-            export declare const Color;
-            export declare const Race;
-            export declare const Transponder;
-            export declare const FinalExit;
-            export declare const Description;
-            export declare const ArchiveDate;
-            export declare const BirthCountryDefaultValue;
-            export declare const BirthCountryIsActive;
-            export declare const BirthCountryInsertDate;
-            export declare const BirthCountryInsertUserId;
-            export declare const BirthCountryUpdateDate;
-            export declare const BirthCountryUpdateUserId;
-            export declare const BirthCountryCountry;
-            export declare const BirthCountryCode;
-            export declare const BirthCountryCodeUe;
-            export declare const BirthCountryIso3166Country;
-            export declare const BirthOrganizationDefaultValue;
-            export declare const BirthOrganizationIsActive;
-            export declare const BirthOrganizationInsertDate;
-            export declare const BirthOrganizationInsertUserId;
-            export declare const BirthOrganizationUpdateDate;
-            export declare const BirthOrganizationUpdateUserId;
-            export declare const BirthOrganizationOrganization;
-            export declare const BirthOrganizationUelnOrganization;
-            export declare const SexeDefaultValue;
-            export declare const SexeIsActive;
-            export declare const SexeInsertDate;
-            export declare const SexeInsertUserId;
-            export declare const SexeUpdateDate;
-            export declare const SexeUpdateUserId;
-            export declare const SexeCaption;
-            export declare const SexeCivility;
+            export declare const Ueln: string;
+            export declare const Sire: string;
+            export declare const CleSire: string;
+            export declare const Hnin: string;
+            export declare const BirthCountry: string;
+            export declare const BirthOrganization: string;
+            export declare const Name: string;
+            export declare const IsActive: string;
+            export declare const NotArchive: string;
+            export declare const InsertDate: string;
+            export declare const InsertUserId: string;
+            export declare const UpdateDate: string;
+            export declare const UpdateUserId: string;
+            export declare const Birthday: string;
+            export declare const Sexe: string;
+            export declare const Color: string;
+            export declare const Race: string;
+            export declare const Transponder: string;
+            export declare const FinalExit: string;
+            export declare const Description: string;
+            export declare const ArchiveDate: string;
+            export declare const BirthCountryDefaultValue: string;
+            export declare const BirthCountryIsActive: string;
+            export declare const BirthCountryInsertDate: string;
+            export declare const BirthCountryInsertUserId: string;
+            export declare const BirthCountryUpdateDate: string;
+            export declare const BirthCountryUpdateUserId: string;
+            export declare const BirthCountryCountry: string;
+            export declare const BirthCountryCode: string;
+            export declare const BirthCountryCodeUe: string;
+            export declare const BirthCountryIso3166Country: string;
+            export declare const BirthOrganizationDefaultValue: string;
+            export declare const BirthOrganizationIsActive: string;
+            export declare const BirthOrganizationInsertDate: string;
+            export declare const BirthOrganizationInsertUserId: string;
+            export declare const BirthOrganizationUpdateDate: string;
+            export declare const BirthOrganizationUpdateUserId: string;
+            export declare const BirthOrganizationOrganization: string;
+            export declare const BirthOrganizationUelnOrganization: string;
+            export declare const SexeDefaultValue: string;
+            export declare const SexeIsActive: string;
+            export declare const SexeInsertDate: string;
+            export declare const SexeInsertUserId: string;
+            export declare const SexeUpdateDate: string;
+            export declare const SexeUpdateUserId: string;
+            export declare const SexeCaption: string;
+            export declare const SexeCivility: string;
         }
 
         [
-            'Ueln',
-            'Sire',
-            'CleSire',
-            'Hnin',
-            'BirthCountry',
-            'BirthOrganization',
-            'Name',
-            'IsActive',
-            'NotArchive',
-            'InsertDate',
-            'InsertUserId',
-            'UpdateDate',
-            'UpdateUserId',
-            'Birthday',
-            'Sexe',
-            'Color',
-            'Race',
-            'Transponder',
-            'FinalExit',
-            'Description',
-            'ArchiveDate',
-            'BirthCountryDefaultValue',
-            'BirthCountryIsActive',
-            'BirthCountryInsertDate',
-            'BirthCountryInsertUserId',
-            'BirthCountryUpdateDate',
-            'BirthCountryUpdateUserId',
-            'BirthCountryCountry',
-            'BirthCountryCode',
-            'BirthCountryCodeUe',
-            'BirthCountryIso3166Country',
-            'BirthOrganizationDefaultValue',
-            'BirthOrganizationIsActive',
-            'BirthOrganizationInsertDate',
-            'BirthOrganizationInsertUserId',
-            'BirthOrganizationUpdateDate',
-            'BirthOrganizationUpdateUserId',
-            'BirthOrganizationOrganization',
-            'BirthOrganizationUelnOrganization',
-            'SexeDefaultValue',
-            'SexeIsActive',
-            'SexeInsertDate',
-            'SexeInsertUserId',
-            'SexeUpdateDate',
-            'SexeUpdateUserId',
-            'SexeCaption',
+            'Ueln', 
+            'Sire', 
+            'CleSire', 
+            'Hnin', 
+            'BirthCountry', 
+            'BirthOrganization', 
+            'Name', 
+            'IsActive', 
+            'NotArchive', 
+            'InsertDate', 
+            'InsertUserId', 
+            'UpdateDate', 
+            'UpdateUserId', 
+            'Birthday', 
+            'Sexe', 
+            'Color', 
+            'Race', 
+            'Transponder', 
+            'FinalExit', 
+            'Description', 
+            'ArchiveDate', 
+            'BirthCountryDefaultValue', 
+            'BirthCountryIsActive', 
+            'BirthCountryInsertDate', 
+            'BirthCountryInsertUserId', 
+            'BirthCountryUpdateDate', 
+            'BirthCountryUpdateUserId', 
+            'BirthCountryCountry', 
+            'BirthCountryCode', 
+            'BirthCountryCodeUe', 
+            'BirthCountryIso3166Country', 
+            'BirthOrganizationDefaultValue', 
+            'BirthOrganizationIsActive', 
+            'BirthOrganizationInsertDate', 
+            'BirthOrganizationInsertUserId', 
+            'BirthOrganizationUpdateDate', 
+            'BirthOrganizationUpdateUserId', 
+            'BirthOrganizationOrganization', 
+            'BirthOrganizationUelnOrganization', 
+            'SexeDefaultValue', 
+            'SexeIsActive', 
+            'SexeInsertDate', 
+            'SexeInsertUserId', 
+            'SexeUpdateDate', 
+            'SexeUpdateUserId', 
+            'SexeCaption', 
             'SexeCivility'
         ].forEach(x => (<any>Fields)[x] = x);
     }
 }
+

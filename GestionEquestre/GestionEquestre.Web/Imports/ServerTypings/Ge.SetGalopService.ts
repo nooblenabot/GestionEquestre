@@ -1,5 +1,4 @@
-﻿
-namespace GestionEquestre.Ge {
+﻿namespace GestionEquestre.Ge {
     export namespace SetGalopService {
         export const baseUrl = 'Ge/SetGalop';
 
@@ -24,10 +23,11 @@ namespace GestionEquestre.Ge {
             'Retrieve', 
             'List'
         ].forEach(x => {
-            (<any>SetGalopService)[x] = function (r, s, o) { 
-                return Q.serviceRequest(baseUrl + '/' + x, r, s, o); 
+            (<any>SetGalopService)[x] = function (r, s, o) {
+                return Q.serviceRequest(baseUrl + '/' + x, r, s, o);
             };
             (<any>Methods)[x] = baseUrl + '/' + x;
         });
     }
 }
+

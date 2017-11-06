@@ -1,5 +1,4 @@
-﻿
-namespace GestionEquestre.Ge {
+﻿namespace GestionEquestre.Ge {
     export interface ManOwnerRow {
         Id?: number;
         Horse?: string;
@@ -46,83 +45,84 @@ namespace GestionEquestre.Ge {
         export const localTextPrefix = 'Ge.ManOwner';
 
         export namespace Fields {
-            export declare const Id;
-            export declare const Horse;
-            export declare const Cavalier;
-            export declare const Part;
-            export declare const HorseSire;
-            export declare const HorseCleSire;
-            export declare const HorseHnin;
-            export declare const HorseBirthCountry;
-            export declare const HorseBirthOrganization;
-            export declare const HorseName;
-            export declare const HorseIsActive;
-            export declare const HorseNotArchive;
-            export declare const HorseInsertDate;
-            export declare const HorseInsertUserId;
-            export declare const HorseUpdateDate;
-            export declare const HorseUpdateUserId;
-            export declare const HorseBirthday;
-            export declare const HorseSexe;
-            export declare const HorseColor;
-            export declare const HorseRace;
-            export declare const HorseTransponder;
-            export declare const HorseFinalExit;
-            export declare const HorseDescription;
-            export declare const HorseArchiveDate;
-            export declare const CavalierPerson;
-            export declare const CavalierIsActive;
-            export declare const CavalierNotArchive;
-            export declare const CavalierInsertDate;
-            export declare const CavalierInsertUserId;
-            export declare const CavalierUpdateDate;
-            export declare const CavalierUpdateUserId;
-            export declare const CavalierMilesimeLicnece;
-            export declare const CavalierNiveauGalop;
-            export declare const CavalierLicenceCompetition;
-            export declare const CavalierDateCertificatMedical;
-            export declare const CavalierCaption;
-            export declare const CavalierArchiveDate;
+            export declare const Id: string;
+            export declare const Horse: string;
+            export declare const Cavalier: string;
+            export declare const Part: string;
+            export declare const HorseSire: string;
+            export declare const HorseCleSire: string;
+            export declare const HorseHnin: string;
+            export declare const HorseBirthCountry: string;
+            export declare const HorseBirthOrganization: string;
+            export declare const HorseName: string;
+            export declare const HorseIsActive: string;
+            export declare const HorseNotArchive: string;
+            export declare const HorseInsertDate: string;
+            export declare const HorseInsertUserId: string;
+            export declare const HorseUpdateDate: string;
+            export declare const HorseUpdateUserId: string;
+            export declare const HorseBirthday: string;
+            export declare const HorseSexe: string;
+            export declare const HorseColor: string;
+            export declare const HorseRace: string;
+            export declare const HorseTransponder: string;
+            export declare const HorseFinalExit: string;
+            export declare const HorseDescription: string;
+            export declare const HorseArchiveDate: string;
+            export declare const CavalierPerson: string;
+            export declare const CavalierIsActive: string;
+            export declare const CavalierNotArchive: string;
+            export declare const CavalierInsertDate: string;
+            export declare const CavalierInsertUserId: string;
+            export declare const CavalierUpdateDate: string;
+            export declare const CavalierUpdateUserId: string;
+            export declare const CavalierMilesimeLicnece: string;
+            export declare const CavalierNiveauGalop: string;
+            export declare const CavalierLicenceCompetition: string;
+            export declare const CavalierDateCertificatMedical: string;
+            export declare const CavalierCaption: string;
+            export declare const CavalierArchiveDate: string;
         }
 
         [
-            'Id',
-            'Horse',
-            'Cavalier',
-            'Part',
-            'HorseSire',
-            'HorseCleSire',
-            'HorseHnin',
-            'HorseBirthCountry',
-            'HorseBirthOrganization',
-            'HorseName',
-            'HorseIsActive',
-            'HorseNotArchive',
-            'HorseInsertDate',
-            'HorseInsertUserId',
-            'HorseUpdateDate',
-            'HorseUpdateUserId',
-            'HorseBirthday',
-            'HorseSexe',
-            'HorseColor',
-            'HorseRace',
-            'HorseTransponder',
-            'HorseFinalExit',
-            'HorseDescription',
-            'HorseArchiveDate',
-            'CavalierPerson',
-            'CavalierIsActive',
-            'CavalierNotArchive',
-            'CavalierInsertDate',
-            'CavalierInsertUserId',
-            'CavalierUpdateDate',
-            'CavalierUpdateUserId',
-            'CavalierMilesimeLicnece',
-            'CavalierNiveauGalop',
-            'CavalierLicenceCompetition',
-            'CavalierDateCertificatMedical',
-            'CavalierCaption',
+            'Id', 
+            'Horse', 
+            'Cavalier', 
+            'Part', 
+            'HorseSire', 
+            'HorseCleSire', 
+            'HorseHnin', 
+            'HorseBirthCountry', 
+            'HorseBirthOrganization', 
+            'HorseName', 
+            'HorseIsActive', 
+            'HorseNotArchive', 
+            'HorseInsertDate', 
+            'HorseInsertUserId', 
+            'HorseUpdateDate', 
+            'HorseUpdateUserId', 
+            'HorseBirthday', 
+            'HorseSexe', 
+            'HorseColor', 
+            'HorseRace', 
+            'HorseTransponder', 
+            'HorseFinalExit', 
+            'HorseDescription', 
+            'HorseArchiveDate', 
+            'CavalierPerson', 
+            'CavalierIsActive', 
+            'CavalierNotArchive', 
+            'CavalierInsertDate', 
+            'CavalierInsertUserId', 
+            'CavalierUpdateDate', 
+            'CavalierUpdateUserId', 
+            'CavalierMilesimeLicnece', 
+            'CavalierNiveauGalop', 
+            'CavalierLicenceCompetition', 
+            'CavalierDateCertificatMedical', 
+            'CavalierCaption', 
             'CavalierArchiveDate'
         ].forEach(x => (<any>Fields)[x] = x);
     }
 }
+

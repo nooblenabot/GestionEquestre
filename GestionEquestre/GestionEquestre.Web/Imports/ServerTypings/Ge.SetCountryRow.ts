@@ -1,5 +1,4 @@
-﻿
-namespace GestionEquestre.Ge {
+﻿namespace GestionEquestre.Ge {
     export interface SetCountryRow {
         Id?: string;
         DefaultValue?: boolean;
@@ -18,33 +17,39 @@ namespace GestionEquestre.Ge {
         export const idProperty = 'Id';
         export const nameProperty = 'Country';
         export const localTextPrefix = 'Ge.SetCountry';
+        export const lookupKey = 'Ge.SetCountry';
+
+        export function getLookup(): Q.Lookup<SetCountryRow> {
+            return Q.getLookup<SetCountryRow>('Ge.SetCountry');
+        }
 
         export namespace Fields {
-            export declare const Id;
-            export declare const DefaultValue;
-            export declare const IsActive;
-            export declare const InsertDate;
-            export declare const InsertUserId;
-            export declare const UpdateDate;
-            export declare const UpdateUserId;
-            export declare const Country;
-            export declare const Code;
-            export declare const CodeUe;
-            export declare const Iso3166Country;
+            export declare const Id: string;
+            export declare const DefaultValue: string;
+            export declare const IsActive: string;
+            export declare const InsertDate: string;
+            export declare const InsertUserId: string;
+            export declare const UpdateDate: string;
+            export declare const UpdateUserId: string;
+            export declare const Country: string;
+            export declare const Code: string;
+            export declare const CodeUe: string;
+            export declare const Iso3166Country: string;
         }
 
         [
-            'Id',
-            'DefaultValue',
-            'IsActive',
-            'InsertDate',
-            'InsertUserId',
-            'UpdateDate',
-            'UpdateUserId',
-            'Country',
-            'Code',
-            'CodeUe',
+            'Id', 
+            'DefaultValue', 
+            'IsActive', 
+            'InsertDate', 
+            'InsertUserId', 
+            'UpdateDate', 
+            'UpdateUserId', 
+            'Country', 
+            'Code', 
+            'CodeUe', 
             'Iso3166Country'
         ].forEach(x => (<any>Fields)[x] = x);
     }
 }
+

@@ -1,5 +1,4 @@
-﻿
-namespace GestionEquestre.Ge {
+﻿namespace GestionEquestre.Ge {
     export interface SetUelnorgaRow {
         Id?: string;
         DefaultValue?: boolean;
@@ -16,29 +15,35 @@ namespace GestionEquestre.Ge {
         export const idProperty = 'Id';
         export const nameProperty = 'Organization';
         export const localTextPrefix = 'Ge.SetUelnorga';
+        export const lookupKey = 'Ge.SetUelnorga';
+
+        export function getLookup(): Q.Lookup<SetUelnorgaRow> {
+            return Q.getLookup<SetUelnorgaRow>('Ge.SetUelnorga');
+        }
 
         export namespace Fields {
-            export declare const Id;
-            export declare const DefaultValue;
-            export declare const IsActive;
-            export declare const InsertDate;
-            export declare const InsertUserId;
-            export declare const UpdateDate;
-            export declare const UpdateUserId;
-            export declare const Organization;
-            export declare const UelnOrganization;
+            export declare const Id: string;
+            export declare const DefaultValue: string;
+            export declare const IsActive: string;
+            export declare const InsertDate: string;
+            export declare const InsertUserId: string;
+            export declare const UpdateDate: string;
+            export declare const UpdateUserId: string;
+            export declare const Organization: string;
+            export declare const UelnOrganization: string;
         }
 
         [
-            'Id',
-            'DefaultValue',
-            'IsActive',
-            'InsertDate',
-            'InsertUserId',
-            'UpdateDate',
-            'UpdateUserId',
-            'Organization',
+            'Id', 
+            'DefaultValue', 
+            'IsActive', 
+            'InsertDate', 
+            'InsertUserId', 
+            'UpdateDate', 
+            'UpdateUserId', 
+            'Organization', 
             'UelnOrganization'
         ].forEach(x => (<any>Fields)[x] = x);
     }
 }
+

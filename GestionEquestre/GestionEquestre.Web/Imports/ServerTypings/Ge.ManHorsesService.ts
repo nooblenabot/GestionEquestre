@@ -1,5 +1,4 @@
-﻿
-namespace GestionEquestre.Ge {
+﻿namespace GestionEquestre.Ge {
     export namespace ManHorsesService {
         export const baseUrl = 'Ge/ManHorses';
 
@@ -24,10 +23,11 @@ namespace GestionEquestre.Ge {
             'Retrieve', 
             'List'
         ].forEach(x => {
-            (<any>ManHorsesService)[x] = function (r, s, o) { 
-                return Q.serviceRequest(baseUrl + '/' + x, r, s, o); 
+            (<any>ManHorsesService)[x] = function (r, s, o) {
+                return Q.serviceRequest(baseUrl + '/' + x, r, s, o);
             };
             (<any>Methods)[x] = baseUrl + '/' + x;
         });
     }
 }
+

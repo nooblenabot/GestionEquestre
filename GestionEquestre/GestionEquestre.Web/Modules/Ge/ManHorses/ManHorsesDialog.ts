@@ -10,7 +10,7 @@ namespace GestionEquestre.Ge {
         protected getNameProperty() { return ManHorsesRow.nameProperty; }
         protected getService() { return ManHorsesService.baseUrl; }
 
-       protected form = new ManHorsesForm(this.idPrefix);
+        protected form = new ManHorsesForm(this.idPrefix);
 
     }
 }

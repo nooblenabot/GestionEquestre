@@ -1,5 +1,4 @@
-﻿
-namespace GestionEquestre.Ge {
+﻿namespace GestionEquestre.Ge {
     export interface SetCityRow {
         Id?: string;
         DefaultValue?: boolean;
@@ -29,55 +28,61 @@ namespace GestionEquestre.Ge {
         export const idProperty = 'Id';
         export const nameProperty = 'FrCodeInsee';
         export const localTextPrefix = 'Ge.SetCity';
+        export const lookupKey = 'Ge.SetCity';
+
+        export function getLookup(): Q.Lookup<SetCityRow> {
+            return Q.getLookup<SetCityRow>('Ge.SetCity');
+        }
 
         export namespace Fields {
-            export declare const Id;
-            export declare const DefaultValue;
-            export declare const IsActive;
-            export declare const InsertDate;
-            export declare const InsertUserId;
-            export declare const UpdateDate;
-            export declare const UpdateUserId;
-            export declare const FrCodeInsee;
-            export declare const Caption;
-            export declare const City;
-            export declare const PostCode;
-            export declare const Country;
-            export declare const CountryDefaultValue;
-            export declare const CountryIsActive;
-            export declare const CountryInsertDate;
-            export declare const CountryInsertUserId;
-            export declare const CountryUpdateDate;
-            export declare const CountryUpdateUserId;
-            export declare const Country1;
-            export declare const CountryCode;
-            export declare const CountryCodeUe;
-            export declare const CountryIso3166Country;
+            export declare const Id: string;
+            export declare const DefaultValue: string;
+            export declare const IsActive: string;
+            export declare const InsertDate: string;
+            export declare const InsertUserId: string;
+            export declare const UpdateDate: string;
+            export declare const UpdateUserId: string;
+            export declare const FrCodeInsee: string;
+            export declare const Caption: string;
+            export declare const City: string;
+            export declare const PostCode: string;
+            export declare const Country: string;
+            export declare const CountryDefaultValue: string;
+            export declare const CountryIsActive: string;
+            export declare const CountryInsertDate: string;
+            export declare const CountryInsertUserId: string;
+            export declare const CountryUpdateDate: string;
+            export declare const CountryUpdateUserId: string;
+            export declare const Country1: string;
+            export declare const CountryCode: string;
+            export declare const CountryCodeUe: string;
+            export declare const CountryIso3166Country: string;
         }
 
         [
-            'Id',
-            'DefaultValue',
-            'IsActive',
-            'InsertDate',
-            'InsertUserId',
-            'UpdateDate',
-            'UpdateUserId',
-            'FrCodeInsee',
-            'Caption',
-            'City',
-            'PostCode',
-            'Country',
-            'CountryDefaultValue',
-            'CountryIsActive',
-            'CountryInsertDate',
-            'CountryInsertUserId',
-            'CountryUpdateDate',
-            'CountryUpdateUserId',
-            'Country1',
-            'CountryCode',
-            'CountryCodeUe',
+            'Id', 
+            'DefaultValue', 
+            'IsActive', 
+            'InsertDate', 
+            'InsertUserId', 
+            'UpdateDate', 
+            'UpdateUserId', 
+            'FrCodeInsee', 
+            'Caption', 
+            'City', 
+            'PostCode', 
+            'Country', 
+            'CountryDefaultValue', 
+            'CountryIsActive', 
+            'CountryInsertDate', 
+            'CountryInsertUserId', 
+            'CountryUpdateDate', 
+            'CountryUpdateUserId', 
+            'Country1', 
+            'CountryCode', 
+            'CountryCodeUe', 
             'CountryIso3166Country'
         ].forEach(x => (<any>Fields)[x] = x);
     }
 }
+

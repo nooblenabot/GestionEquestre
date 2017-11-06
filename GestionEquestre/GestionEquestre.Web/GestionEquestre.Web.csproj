@@ -814,6 +814,7 @@
     <Content Include="Content\toastr.scss" />
     <Content Include="Content\toastr.less" />
     <Content Include="wkhtmltopdf-license.txt" />
+    <Content Include="Modules\Ge\ManHorses\ManHorsesIndex.cshtml" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />
     <Content Include="Scripts\jquery-3.1.1.min.js" />
@@ -1296,6 +1297,56 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ClientTypes.tt</DependentUpon>
     </Content>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.AccBankaccountColumns.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.ManAdressColumns.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.ManCavaliersColumns.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.ManHorsesColumns.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.ManHorsesForm.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.ManHorsesRow.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.ManHorsesService.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.ManOwnerColumns.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.ManPersonColumns.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.SetCityColumns.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.SetCountryColumns.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.SetGalopColumns.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.SetLfcColumns.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.SetMaritalstatusColumns.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.SetSexeColumns.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.SetUelnorgaColumns.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Modules\Ge\ManHorses\ManHorsesDialog.ts" />
+    <TypeScriptCompile Include="Modules\Ge\ManHorses\ManHorsesGrid.ts" />
     <TypeScriptCompile Include="node_modules\%40types\jquery\index.d.ts" />
     <TypeScriptCompile Include="node_modules\%40types\jqueryui\index.d.ts" />
     <TypeScriptCompile Include="node_modules\%40types\jquery.blockui\index.d.ts" />
@@ -1564,18 +1615,6 @@
     <TypeScriptCompile Include="Imports\ServerTypings\Ge.ManCavaliersForm.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
-    <TypeScriptCompile Include="Imports\ServerTypings\Ge.ManHorsesRow.ts">
-      <DependentUpon>ServerTypings.tt</DependentUpon>
-    </TypeScriptCompile>
-    <TypeScriptCompile Include="Imports\ServerTypings\Ge.ManHorsesService.ts">
-      <DependentUpon>ServerTypings.tt</DependentUpon>
-    </TypeScriptCompile>
-    <Content Include="Modules\Ge\ManHorses\ManHorsesIndex.cshtml" />
-    <TypeScriptCompile Include="Modules\Ge\ManHorses\ManHorsesDialog.ts" />
-    <TypeScriptCompile Include="Modules\Ge\ManHorses\ManHorsesGrid.ts" />
-    <TypeScriptCompile Include="Imports\ServerTypings\Ge.ManHorsesForm.ts">
-      <DependentUpon>ServerTypings.tt</DependentUpon>
-    </TypeScriptCompile>
     <TypeScriptCompile Include="Imports\ServerTypings\Ge.ManOwnerRow.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
@@ -1684,6 +1723,30 @@
     <TypeScriptCompile Include="Imports\ServerTypings\Ge.SetUelnorgaForm.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.LinkFolderCavalierRow.ts">  <DependentUpon>ServerTypings.tt</DependentUpon></TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.LinkFolderCavalierService.ts">  <DependentUpon>ServerTypings.tt</DependentUpon></TypeScriptCompile>
+    <Content Include="Modules\Ge\LinkFolderCavalier\LinkFolderCavalierIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\Ge\LinkFolderCavalier\LinkFolderCavalierDialog.ts" />
+    <TypeScriptCompile Include="Modules\Ge\LinkFolderCavalier\LinkFolderCavalierGrid.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.LinkFolderCavalierForm.ts">  <DependentUpon>ServerTypings.tt</DependentUpon></TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.LinkFolderHorseRow.ts">  <DependentUpon>ServerTypings.tt</DependentUpon></TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.LinkFolderHorseService.ts">  <DependentUpon>ServerTypings.tt</DependentUpon></TypeScriptCompile>
+    <Content Include="Modules\Ge\LinkFolderHorse\LinkFolderHorseIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\Ge\LinkFolderHorse\LinkFolderHorseDialog.ts" />
+    <TypeScriptCompile Include="Modules\Ge\LinkFolderHorse\LinkFolderHorseGrid.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.LinkFolderHorseForm.ts">  <DependentUpon>ServerTypings.tt</DependentUpon></TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.LinkFolderPersonRow.ts">  <DependentUpon>ServerTypings.tt</DependentUpon></TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.LinkFolderPersonService.ts">  <DependentUpon>ServerTypings.tt</DependentUpon></TypeScriptCompile>
+    <Content Include="Modules\Ge\LinkFolderPerson\LinkFolderPersonIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\Ge\LinkFolderPerson\LinkFolderPersonDialog.ts" />
+    <TypeScriptCompile Include="Modules\Ge\LinkFolderPerson\LinkFolderPersonGrid.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.LinkFolderPersonForm.ts">  <DependentUpon>ServerTypings.tt</DependentUpon></TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.ManFolderRow.ts">  <DependentUpon>ServerTypings.tt</DependentUpon></TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.ManFolderService.ts">  <DependentUpon>ServerTypings.tt</DependentUpon></TypeScriptCompile>
+    <Content Include="Modules\Ge\ManFolder\ManFolderIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\Ge\ManFolder\ManFolderDialog.ts" />
+    <TypeScriptCompile Include="Modules\Ge\ManFolder\ManFolderGrid.ts" />
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.ManFolderForm.ts">  <DependentUpon>ServerTypings.tt</DependentUpon></TypeScriptCompile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
@@ -1717,6 +1780,10 @@
     <Compile Include="Migrations\GEDB\GEDB_20161103_140000_Horses.cs" />
     <Compile Include="Migrations\GEDB\GEDB_20161103_140001_Person.cs" />
     <Compile Include="Migrations\GEDB\GEDB_20161103_140010_Cavaliers.cs" />
+    <Compile Include="Migrations\GEDB\GEDB_20161103_140042_Folders_Person.cs" />
+    <Compile Include="Migrations\GEDB\GEDB_20161103_140042_Folders_Cavalier.cs" />
+    <Compile Include="Migrations\GEDB\GEDB_20161103_140041_Folders_Horses.cs" />
+    <Compile Include="Migrations\GEDB\GEDB_20161103_140040_Folder.cs" />
     <Compile Include="Migrations\GEDB\GEDB_20161103_140020_Owners.cs" />
     <Compile Include="Modules\Administration\AdministrationNavigation.cs" />
     <Compile Include="Modules\Administration\Language\LanguageLookup.cs" />
@@ -1748,55 +1815,7 @@
     <Compile Include="Imports\ClientTypes\Administration.RoleCheckEditorAttribute.cs">
       <DependentUpon>ClientTypes.tt</DependentUpon>
     </Compile>
-    <Compile Include="Imports\ClientTypes\BasicSamples.ChangingLookupTextEditorAttribute.cs">
-      <DependentUpon>ClientTypes.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Imports\ClientTypes\BasicSamples.FilteredLookupDetailEditorAttribute.cs">
-      <DependentUpon>ClientTypes.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Imports\ClientTypes\BasicSamples.HardcodedValuesEditorAttribute.cs">
-      <DependentUpon>ClientTypes.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Imports\ClientTypes\BasicSamples.InlineImageFormatterAttribute.cs">
-      <DependentUpon>ClientTypes.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Imports\ClientTypes\BasicSamples.ProduceSeafoodCategoryEditorAttribute.cs">
-      <DependentUpon>ClientTypes.tt</DependentUpon>
-    </Compile>
     <Compile Include="Imports\ClientTypes\Common.EnumSelectFormatterAttribute.cs">
-      <DependentUpon>ClientTypes.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Imports\ClientTypes\Meeting.MeetingAttendeeEditorAttribute.cs">
-      <DependentUpon>ClientTypes.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Imports\ClientTypes\Northwind.CustomerEditorAttribute.cs">
-      <DependentUpon>ClientTypes.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Imports\ClientTypes\Northwind.EmployeeFormatterAttribute.cs">
-      <DependentUpon>ClientTypes.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Imports\ClientTypes\Northwind.EmployeeListFormatterAttribute.cs">
-      <DependentUpon>ClientTypes.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Imports\ClientTypes\Northwind.FreightFormatterAttribute.cs">
-      <DependentUpon>ClientTypes.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Imports\ClientTypes\Northwind.NotesEditorAttribute.cs">
-      <DependentUpon>ClientTypes.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Imports\ClientTypes\Northwind.OrderDetailsEditorAttribute.cs">
-      <DependentUpon>ClientTypes.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Imports\ClientTypes\Northwind.PhoneEditorAttribute.cs">
-      <DependentUpon>ClientTypes.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Imports\ClientTypes\Northwind.ShipperFormatterAttribute.cs">
-      <DependentUpon>ClientTypes.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Imports\ClientTypes\Organization.BusinessUnitEditorAttribute.cs">
-      <DependentUpon>ClientTypes.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Imports\ClientTypes\StaticTextBlockAttribute.cs">
       <DependentUpon>ClientTypes.tt</DependentUpon>
     </Compile>
     <Compile Include="Migrations\MigrationUtils.cs" />
@@ -1821,7 +1840,19 @@
     <Compile Include="Modules\Common\UserPreference\UserPreferenceModels.cs" />
     <Compile Include="Modules\Common\UserPreference\UserPreferenceEndpoint.cs" />
     <Compile Include="Modules\Common\UserPreference\UserPreferenceRepository.cs" />
+    <Compile Include="Modules\Ge\ManHorses\ManHorsesColumns.cs" />
+    <Compile Include="Modules\Ge\ManHorses\ManHorsesEndpoint.cs" />
+    <Compile Include="Modules\Ge\ManHorses\ManHorsesForm.cs" />
+    <Compile Include="Modules\Ge\ManHorses\ManHorsesPage.cs" />
+    <Compile Include="Modules\Ge\ManHorses\ManHorsesRepository.cs" />
+    <Compile Include="Modules\Ge\ManHorses\ManHorsesRow.cs" />
+    <Compile Include="Modules\Ge\SetCity\SetCityLookup.cs" />
+    <Compile Include="Modules\Ge\SetCountry\SetCountryLookup.cs" />
+    <Compile Include="Modules\Ge\SetGalop\SetGalopLookup.cs" />
+    <Compile Include="Modules\Ge\SetLfc\SetLFCLookup.cs" />
+    <Compile Include="Modules\Ge\SetMaritalstatus\SetMaritalStatusLookup.cs" />
     <Compile Include="Modules\Ge\SetSexe\SetSexeLookup.cs" />
+    <Compile Include="Modules\Ge\SetUelnorga\SetUelnorgaLookup.cs" />
     <Compile Include="Modules\Membership\Account\ChangePassword\AccountPage.ChangePassword.cs" />
     <Compile Include="Modules\Membership\Account\EnvironmentSettings.cs" />
     <Compile Include="Modules\Membership\Account\ForgotPassword\AccountPage.ForgotPassword.cs" />
@@ -1895,12 +1926,6 @@
     <Compile Include="Modules\Ge\ManCavaliers\ManCavaliersPage.cs" />
     <Compile Include="Modules\Ge\ManCavaliers\ManCavaliersColumns.cs" />
     <Compile Include="Modules\Ge\ManCavaliers\ManCavaliersForm.cs" />
-    <Compile Include="Modules\Ge\ManHorses\ManHorsesRow.cs" />
-    <Compile Include="Modules\Ge\ManHorses\ManHorsesRepository.cs" />
-    <Compile Include="Modules\Ge\ManHorses\ManHorsesEndpoint.cs" />
-    <Compile Include="Modules\Ge\ManHorses\ManHorsesPage.cs" />
-    <Compile Include="Modules\Ge\ManHorses\ManHorsesColumns.cs" />
-    <Compile Include="Modules\Ge\ManHorses\ManHorsesForm.cs" />
     <Compile Include="Modules\Ge\ManOwner\ManOwnerRow.cs" />
     <Compile Include="Modules\Ge\ManOwner\ManOwnerRepository.cs" />
     <Compile Include="Modules\Ge\ManOwner\ManOwnerEndpoint.cs" />
@@ -1955,6 +1980,30 @@
     <Compile Include="Modules\Ge\SetUelnorga\SetUelnorgaPage.cs" />
     <Compile Include="Modules\Ge\SetUelnorga\SetUelnorgaColumns.cs" />
     <Compile Include="Modules\Ge\SetUelnorga\SetUelnorgaForm.cs" />
+    <Compile Include="Modules\Ge\LinkFolderCavalier\LinkFolderCavalierRow.cs" />
+    <Compile Include="Modules\Ge\LinkFolderCavalier\LinkFolderCavalierRepository.cs" />
+    <Compile Include="Modules\Ge\LinkFolderCavalier\LinkFolderCavalierEndpoint.cs" />
+    <Compile Include="Modules\Ge\LinkFolderCavalier\LinkFolderCavalierPage.cs" />
+    <Compile Include="Modules\Ge\LinkFolderCavalier\LinkFolderCavalierColumns.cs" />
+    <Compile Include="Modules\Ge\LinkFolderCavalier\LinkFolderCavalierForm.cs" />
+    <Compile Include="Modules\Ge\LinkFolderHorse\LinkFolderHorseRow.cs" />
+    <Compile Include="Modules\Ge\LinkFolderHorse\LinkFolderHorseRepository.cs" />
+    <Compile Include="Modules\Ge\LinkFolderHorse\LinkFolderHorseEndpoint.cs" />
+    <Compile Include="Modules\Ge\LinkFolderHorse\LinkFolderHorsePage.cs" />
+    <Compile Include="Modules\Ge\LinkFolderHorse\LinkFolderHorseColumns.cs" />
+    <Compile Include="Modules\Ge\LinkFolderHorse\LinkFolderHorseForm.cs" />
+    <Compile Include="Modules\Ge\LinkFolderPerson\LinkFolderPersonRow.cs" />
+    <Compile Include="Modules\Ge\LinkFolderPerson\LinkFolderPersonRepository.cs" />
+    <Compile Include="Modules\Ge\LinkFolderPerson\LinkFolderPersonEndpoint.cs" />
+    <Compile Include="Modules\Ge\LinkFolderPerson\LinkFolderPersonPage.cs" />
+    <Compile Include="Modules\Ge\LinkFolderPerson\LinkFolderPersonColumns.cs" />
+    <Compile Include="Modules\Ge\LinkFolderPerson\LinkFolderPersonForm.cs" />
+    <Compile Include="Modules\Ge\ManFolder\ManFolderRow.cs" />
+    <Compile Include="Modules\Ge\ManFolder\ManFolderRepository.cs" />
+    <Compile Include="Modules\Ge\ManFolder\ManFolderEndpoint.cs" />
+    <Compile Include="Modules\Ge\ManFolder\ManFolderPage.cs" />
+    <Compile Include="Modules\Ge\ManFolder\ManFolderColumns.cs" />
+    <Compile Include="Modules\Ge\ManFolder\ManFolderForm.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

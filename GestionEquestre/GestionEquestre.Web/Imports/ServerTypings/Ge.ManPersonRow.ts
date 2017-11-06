@@ -1,5 +1,4 @@
-﻿
-namespace GestionEquestre.Ge {
+﻿namespace GestionEquestre.Ge {
     export interface ManPersonRow {
         Id?: string;
         IsMorale?: boolean;
@@ -113,217 +112,218 @@ namespace GestionEquestre.Ge {
         export const localTextPrefix = 'Ge.ManPerson';
 
         export namespace Fields {
-            export declare const Id;
-            export declare const IsMorale;
-            export declare const IsActive;
-            export declare const NotArchive;
-            export declare const InsertDate;
-            export declare const InsertUserId;
-            export declare const UpdateDate;
-            export declare const UpdateUserId;
-            export declare const Surname;
-            export declare const Name;
-            export declare const MaidenName;
-            export declare const BusinessName;
-            export declare const Birthday;
-            export declare const Sexe;
-            export declare const MaritalStatus;
-            export declare const BirthCity;
-            export declare const BirthCountry;
-            export declare const Nationality;
-            export declare const Photo;
-            export declare const Phone;
-            export declare const Gsm;
-            export declare const WorkPhone;
-            export declare const OtherPhone1;
-            export declare const OtherPhone2;
-            export declare const Email1;
-            export declare const Email2;
-            export declare const BankAccount;
-            export declare const IdAdress;
-            export declare const Caption;
-            export declare const ArchiveDate;
-            export declare const SexeDefaultValue;
-            export declare const SexeIsActive;
-            export declare const SexeInsertDate;
-            export declare const SexeInsertUserId;
-            export declare const SexeUpdateDate;
-            export declare const SexeUpdateUserId;
-            export declare const SexeCaption;
-            export declare const SexeCivility;
-            export declare const MaritalStatusDefaultValue;
-            export declare const MaritalStatusIsActive;
-            export declare const MaritalStatusInsertDate;
-            export declare const MaritalStatusInsertUserId;
-            export declare const MaritalStatusUpdateDate;
-            export declare const MaritalStatusUpdateUserId;
-            export declare const MaritalStatusCaption;
-            export declare const MaritalStatusCode;
-            export declare const BirthCityDefaultValue;
-            export declare const BirthCityIsActive;
-            export declare const BirthCityInsertDate;
-            export declare const BirthCityInsertUserId;
-            export declare const BirthCityUpdateDate;
-            export declare const BirthCityUpdateUserId;
-            export declare const BirthCityFrCodeInsee;
-            export declare const BirthCityCaption;
-            export declare const BirthCityCity;
-            export declare const BirthCityPostCode;
-            export declare const BirthCityCountry;
-            export declare const BirthCountryDefaultValue;
-            export declare const BirthCountryIsActive;
-            export declare const BirthCountryInsertDate;
-            export declare const BirthCountryInsertUserId;
-            export declare const BirthCountryUpdateDate;
-            export declare const BirthCountryUpdateUserId;
-            export declare const BirthCountryCountry;
-            export declare const BirthCountryCode;
-            export declare const BirthCountryCodeUe;
-            export declare const BirthCountryIso3166Country;
-            export declare const NationalityDefaultValue;
-            export declare const NationalityIsActive;
-            export declare const NationalityInsertDate;
-            export declare const NationalityInsertUserId;
-            export declare const NationalityUpdateDate;
-            export declare const NationalityUpdateUserId;
-            export declare const NationalityCountry;
-            export declare const NationalityCode;
-            export declare const NationalityCodeUe;
-            export declare const NationalityIso3166Country;
-            export declare const BankAccountCountryCodeIban;
-            export declare const BankAccountCheckDigitsIban;
-            export declare const BankAccountBban;
-            export declare const BankAccountBic;
-            export declare const BankAccountAccountOnwer;
-            export declare const BankAccountBankAdress;
-            export declare const BankAccountCis;
-            export declare const BankAccountUrm;
-            export declare const BankAccountMandateDateSign;
-            export declare const BankAccountTypePayment;
-            export declare const BankAccountDateLastPrelevement;
-            export declare const BankAccountTypeOfLastPayment;
-            export declare const IdAdressIsActive;
-            export declare const IdAdressNotArchive;
-            export declare const IdAdressInsertDate;
-            export declare const IdAdressInsertUserId;
-            export declare const IdAdressUpdateDate;
-            export declare const IdAdressUpdateUserId;
-            export declare const IdAdressAdress1;
-            export declare const IdAdressAdress2;
-            export declare const IdAdressAdress3;
-            export declare const IdAdressCity;
-            export declare const IdAdressCountry;
-            export declare const IdAdressCedex;
-            export declare const IdAdressBuilding;
-            export declare const IdAdressCaption;
-            export declare const IdAdressArchiveDate;
+            export declare const Id: string;
+            export declare const IsMorale: string;
+            export declare const IsActive: string;
+            export declare const NotArchive: string;
+            export declare const InsertDate: string;
+            export declare const InsertUserId: string;
+            export declare const UpdateDate: string;
+            export declare const UpdateUserId: string;
+            export declare const Surname: string;
+            export declare const Name: string;
+            export declare const MaidenName: string;
+            export declare const BusinessName: string;
+            export declare const Birthday: string;
+            export declare const Sexe: string;
+            export declare const MaritalStatus: string;
+            export declare const BirthCity: string;
+            export declare const BirthCountry: string;
+            export declare const Nationality: string;
+            export declare const Photo: string;
+            export declare const Phone: string;
+            export declare const Gsm: string;
+            export declare const WorkPhone: string;
+            export declare const OtherPhone1: string;
+            export declare const OtherPhone2: string;
+            export declare const Email1: string;
+            export declare const Email2: string;
+            export declare const BankAccount: string;
+            export declare const IdAdress: string;
+            export declare const Caption: string;
+            export declare const ArchiveDate: string;
+            export declare const SexeDefaultValue: string;
+            export declare const SexeIsActive: string;
+            export declare const SexeInsertDate: string;
+            export declare const SexeInsertUserId: string;
+            export declare const SexeUpdateDate: string;
+            export declare const SexeUpdateUserId: string;
+            export declare const SexeCaption: string;
+            export declare const SexeCivility: string;
+            export declare const MaritalStatusDefaultValue: string;
+            export declare const MaritalStatusIsActive: string;
+            export declare const MaritalStatusInsertDate: string;
+            export declare const MaritalStatusInsertUserId: string;
+            export declare const MaritalStatusUpdateDate: string;
+            export declare const MaritalStatusUpdateUserId: string;
+            export declare const MaritalStatusCaption: string;
+            export declare const MaritalStatusCode: string;
+            export declare const BirthCityDefaultValue: string;
+            export declare const BirthCityIsActive: string;
+            export declare const BirthCityInsertDate: string;
+            export declare const BirthCityInsertUserId: string;
+            export declare const BirthCityUpdateDate: string;
+            export declare const BirthCityUpdateUserId: string;
+            export declare const BirthCityFrCodeInsee: string;
+            export declare const BirthCityCaption: string;
+            export declare const BirthCityCity: string;
+            export declare const BirthCityPostCode: string;
+            export declare const BirthCityCountry: string;
+            export declare const BirthCountryDefaultValue: string;
+            export declare const BirthCountryIsActive: string;
+            export declare const BirthCountryInsertDate: string;
+            export declare const BirthCountryInsertUserId: string;
+            export declare const BirthCountryUpdateDate: string;
+            export declare const BirthCountryUpdateUserId: string;
+            export declare const BirthCountryCountry: string;
+            export declare const BirthCountryCode: string;
+            export declare const BirthCountryCodeUe: string;
+            export declare const BirthCountryIso3166Country: string;
+            export declare const NationalityDefaultValue: string;
+            export declare const NationalityIsActive: string;
+            export declare const NationalityInsertDate: string;
+            export declare const NationalityInsertUserId: string;
+            export declare const NationalityUpdateDate: string;
+            export declare const NationalityUpdateUserId: string;
+            export declare const NationalityCountry: string;
+            export declare const NationalityCode: string;
+            export declare const NationalityCodeUe: string;
+            export declare const NationalityIso3166Country: string;
+            export declare const BankAccountCountryCodeIban: string;
+            export declare const BankAccountCheckDigitsIban: string;
+            export declare const BankAccountBban: string;
+            export declare const BankAccountBic: string;
+            export declare const BankAccountAccountOnwer: string;
+            export declare const BankAccountBankAdress: string;
+            export declare const BankAccountCis: string;
+            export declare const BankAccountUrm: string;
+            export declare const BankAccountMandateDateSign: string;
+            export declare const BankAccountTypePayment: string;
+            export declare const BankAccountDateLastPrelevement: string;
+            export declare const BankAccountTypeOfLastPayment: string;
+            export declare const IdAdressIsActive: string;
+            export declare const IdAdressNotArchive: string;
+            export declare const IdAdressInsertDate: string;
+            export declare const IdAdressInsertUserId: string;
+            export declare const IdAdressUpdateDate: string;
+            export declare const IdAdressUpdateUserId: string;
+            export declare const IdAdressAdress1: string;
+            export declare const IdAdressAdress2: string;
+            export declare const IdAdressAdress3: string;
+            export declare const IdAdressCity: string;
+            export declare const IdAdressCountry: string;
+            export declare const IdAdressCedex: string;
+            export declare const IdAdressBuilding: string;
+            export declare const IdAdressCaption: string;
+            export declare const IdAdressArchiveDate: string;
         }
 
         [
-            'Id',
-            'IsMorale',
-            'IsActive',
-            'NotArchive',
-            'InsertDate',
-            'InsertUserId',
-            'UpdateDate',
-            'UpdateUserId',
-            'Surname',
-            'Name',
-            'MaidenName',
-            'BusinessName',
-            'Birthday',
-            'Sexe',
-            'MaritalStatus',
-            'BirthCity',
-            'BirthCountry',
-            'Nationality',
-            'Photo',
-            'Phone',
-            'Gsm',
-            'WorkPhone',
-            'OtherPhone1',
-            'OtherPhone2',
-            'Email1',
-            'Email2',
-            'BankAccount',
-            'IdAdress',
-            'Caption',
-            'ArchiveDate',
-            'SexeDefaultValue',
-            'SexeIsActive',
-            'SexeInsertDate',
-            'SexeInsertUserId',
-            'SexeUpdateDate',
-            'SexeUpdateUserId',
-            'SexeCaption',
-            'SexeCivility',
-            'MaritalStatusDefaultValue',
-            'MaritalStatusIsActive',
-            'MaritalStatusInsertDate',
-            'MaritalStatusInsertUserId',
-            'MaritalStatusUpdateDate',
-            'MaritalStatusUpdateUserId',
-            'MaritalStatusCaption',
-            'MaritalStatusCode',
-            'BirthCityDefaultValue',
-            'BirthCityIsActive',
-            'BirthCityInsertDate',
-            'BirthCityInsertUserId',
-            'BirthCityUpdateDate',
-            'BirthCityUpdateUserId',
-            'BirthCityFrCodeInsee',
-            'BirthCityCaption',
-            'BirthCityCity',
-            'BirthCityPostCode',
-            'BirthCityCountry',
-            'BirthCountryDefaultValue',
-            'BirthCountryIsActive',
-            'BirthCountryInsertDate',
-            'BirthCountryInsertUserId',
-            'BirthCountryUpdateDate',
-            'BirthCountryUpdateUserId',
-            'BirthCountryCountry',
-            'BirthCountryCode',
-            'BirthCountryCodeUe',
-            'BirthCountryIso3166Country',
-            'NationalityDefaultValue',
-            'NationalityIsActive',
-            'NationalityInsertDate',
-            'NationalityInsertUserId',
-            'NationalityUpdateDate',
-            'NationalityUpdateUserId',
-            'NationalityCountry',
-            'NationalityCode',
-            'NationalityCodeUe',
-            'NationalityIso3166Country',
-            'BankAccountCountryCodeIban',
-            'BankAccountCheckDigitsIban',
-            'BankAccountBban',
-            'BankAccountBic',
-            'BankAccountAccountOnwer',
-            'BankAccountBankAdress',
-            'BankAccountCis',
-            'BankAccountUrm',
-            'BankAccountMandateDateSign',
-            'BankAccountTypePayment',
-            'BankAccountDateLastPrelevement',
-            'BankAccountTypeOfLastPayment',
-            'IdAdressIsActive',
-            'IdAdressNotArchive',
-            'IdAdressInsertDate',
-            'IdAdressInsertUserId',
-            'IdAdressUpdateDate',
-            'IdAdressUpdateUserId',
-            'IdAdressAdress1',
-            'IdAdressAdress2',
-            'IdAdressAdress3',
-            'IdAdressCity',
-            'IdAdressCountry',
-            'IdAdressCedex',
-            'IdAdressBuilding',
-            'IdAdressCaption',
+            'Id', 
+            'IsMorale', 
+            'IsActive', 
+            'NotArchive', 
+            'InsertDate', 
+            'InsertUserId', 
+            'UpdateDate', 
+            'UpdateUserId', 
+            'Surname', 
+            'Name', 
+            'MaidenName', 
+            'BusinessName', 
+            'Birthday', 
+            'Sexe', 
+            'MaritalStatus', 
+            'BirthCity', 
+            'BirthCountry', 
+            'Nationality', 
+            'Photo', 
+            'Phone', 
+            'Gsm', 
+            'WorkPhone', 
+            'OtherPhone1', 
+            'OtherPhone2', 
+            'Email1', 
+            'Email2', 
+            'BankAccount', 
+            'IdAdress', 
+            'Caption', 
+            'ArchiveDate', 
+            'SexeDefaultValue', 
+            'SexeIsActive', 
+            'SexeInsertDate', 
+            'SexeInsertUserId', 
+            'SexeUpdateDate', 
+            'SexeUpdateUserId', 
+            'SexeCaption', 
+            'SexeCivility', 
+            'MaritalStatusDefaultValue', 
+            'MaritalStatusIsActive', 
+            'MaritalStatusInsertDate', 
+            'MaritalStatusInsertUserId', 
+            'MaritalStatusUpdateDate', 
+            'MaritalStatusUpdateUserId', 
+            'MaritalStatusCaption', 
+            'MaritalStatusCode', 
+            'BirthCityDefaultValue', 
+            'BirthCityIsActive', 
+            'BirthCityInsertDate', 
+            'BirthCityInsertUserId', 
+            'BirthCityUpdateDate', 
+            'BirthCityUpdateUserId', 
+            'BirthCityFrCodeInsee', 
+            'BirthCityCaption', 
+            'BirthCityCity', 
+            'BirthCityPostCode', 
+            'BirthCityCountry', 
+            'BirthCountryDefaultValue', 
+            'BirthCountryIsActive', 
+            'BirthCountryInsertDate', 
+            'BirthCountryInsertUserId', 
+            'BirthCountryUpdateDate', 
+            'BirthCountryUpdateUserId', 
+            'BirthCountryCountry', 
+            'BirthCountryCode', 
+            'BirthCountryCodeUe', 
+            'BirthCountryIso3166Country', 
+            'NationalityDefaultValue', 
+            'NationalityIsActive', 
+            'NationalityInsertDate', 
+            'NationalityInsertUserId', 
+            'NationalityUpdateDate', 
+            'NationalityUpdateUserId', 
+            'NationalityCountry', 
+            'NationalityCode', 
+            'NationalityCodeUe', 
+            'NationalityIso3166Country', 
+            'BankAccountCountryCodeIban', 
+            'BankAccountCheckDigitsIban', 
+            'BankAccountBban', 
+            'BankAccountBic', 
+            'BankAccountAccountOnwer', 
+            'BankAccountBankAdress', 
+            'BankAccountCis', 
+            'BankAccountUrm', 
+            'BankAccountMandateDateSign', 
+            'BankAccountTypePayment', 
+            'BankAccountDateLastPrelevement', 
+            'BankAccountTypeOfLastPayment', 
+            'IdAdressIsActive', 
+            'IdAdressNotArchive', 
+            'IdAdressInsertDate', 
+            'IdAdressInsertUserId', 
+            'IdAdressUpdateDate', 
+            'IdAdressUpdateUserId', 
+            'IdAdressAdress1', 
+            'IdAdressAdress2', 
+            'IdAdressAdress3', 
+            'IdAdressCity', 
+            'IdAdressCountry', 
+            'IdAdressCedex', 
+            'IdAdressBuilding', 
+            'IdAdressCaption', 
             'IdAdressArchiveDate'
         ].forEach(x => (<any>Fields)[x] = x);
     }
 }
+

@@ -115,7 +115,7 @@ namespace GestionEquestre.Ge.Entities
 
         [DisplayName("Sexe"), ForeignKey("[dbo].[SET_SEXE]", "SexeId"), LeftJoin("jSexe"), TextualField("SexeCaption")]
         [LookupEditor(typeof(Ge.Scripts.SexeHorsesLookup), MinimumResultsForSearch = 1, InplaceAdd = false)]
-        public Int16? Sexe
+                public Int16? Sexe
         {
             get { return Fields.Sexe[this]; }
             set { Fields.Sexe[this] = value; }

@@ -1,5 +1,4 @@
-﻿
-namespace GestionEquestre.Ge {
+﻿namespace GestionEquestre.Ge {
     export interface SetSexeRow {
         SexeId?: number;
         DefaultValue?: boolean;
@@ -16,29 +15,35 @@ namespace GestionEquestre.Ge {
         export const idProperty = 'SexeId';
         export const nameProperty = 'Caption';
         export const localTextPrefix = 'Ge.SetSexe';
+        export const lookupKey = 'Ge.SexeHorses';
+
+        export function getLookup(): Q.Lookup<SetSexeRow> {
+            return Q.getLookup<SetSexeRow>('Ge.SexeHorses');
+        }
 
         export namespace Fields {
-            export declare const SexeId;
-            export declare const DefaultValue;
-            export declare const IsActive;
-            export declare const InsertDate;
-            export declare const InsertUserId;
-            export declare const UpdateDate;
-            export declare const UpdateUserId;
-            export declare const Caption;
-            export declare const Civility;
+            export declare const SexeId: string;
+            export declare const DefaultValue: string;
+            export declare const IsActive: string;
+            export declare const InsertDate: string;
+            export declare const InsertUserId: string;
+            export declare const UpdateDate: string;
+            export declare const UpdateUserId: string;
+            export declare const Caption: string;
+            export declare const Civility: string;
         }
 
         [
-            'SexeId',
-            'DefaultValue',
-            'IsActive',
-            'InsertDate',
-            'InsertUserId',
-            'UpdateDate',
-            'UpdateUserId',
-            'Caption',
+            'SexeId', 
+            'DefaultValue', 
+            'IsActive', 
+            'InsertDate', 
+            'InsertUserId', 
+            'UpdateDate', 
+            'UpdateUserId', 
+            'Caption', 
             'Civility'
         ].forEach(x => (<any>Fields)[x] = x);
     }
 }
+

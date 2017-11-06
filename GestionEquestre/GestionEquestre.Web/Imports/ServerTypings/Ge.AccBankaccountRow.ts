@@ -1,5 +1,4 @@
-﻿
-namespace GestionEquestre.Ge {
+﻿namespace GestionEquestre.Ge {
     export interface AccBankaccountRow {
         Id?: string;
         CountryCodeIban?: string;
@@ -22,35 +21,36 @@ namespace GestionEquestre.Ge {
         export const localTextPrefix = 'Ge.AccBankaccount';
 
         export namespace Fields {
-            export declare const Id;
-            export declare const CountryCodeIban;
-            export declare const CheckDigitsIban;
-            export declare const Bban;
-            export declare const Bic;
-            export declare const AccountOnwer;
-            export declare const BankAdress;
-            export declare const Cis;
-            export declare const Urm;
-            export declare const MandateDateSign;
-            export declare const TypePayment;
-            export declare const DateLastPrelevement;
-            export declare const TypeOfLastPayment;
+            export declare const Id: string;
+            export declare const CountryCodeIban: string;
+            export declare const CheckDigitsIban: string;
+            export declare const Bban: string;
+            export declare const Bic: string;
+            export declare const AccountOnwer: string;
+            export declare const BankAdress: string;
+            export declare const Cis: string;
+            export declare const Urm: string;
+            export declare const MandateDateSign: string;
+            export declare const TypePayment: string;
+            export declare const DateLastPrelevement: string;
+            export declare const TypeOfLastPayment: string;
         }
 
         [
-            'Id',
-            'CountryCodeIban',
-            'CheckDigitsIban',
-            'Bban',
-            'Bic',
-            'AccountOnwer',
-            'BankAdress',
-            'Cis',
-            'Urm',
-            'MandateDateSign',
-            'TypePayment',
-            'DateLastPrelevement',
+            'Id', 
+            'CountryCodeIban', 
+            'CheckDigitsIban', 
+            'Bban', 
+            'Bic', 
+            'AccountOnwer', 
+            'BankAdress', 
+            'Cis', 
+            'Urm', 
+            'MandateDateSign', 
+            'TypePayment', 
+            'DateLastPrelevement', 
             'TypeOfLastPayment'
         ].forEach(x => (<any>Fields)[x] = x);
     }
 }
+
