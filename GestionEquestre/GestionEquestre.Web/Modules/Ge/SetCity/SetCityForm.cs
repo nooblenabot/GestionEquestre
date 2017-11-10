@@ -23,6 +23,6 @@ namespace GestionEquestre.Ge.Forms
         public String Caption { get; set; }
         public String City { get; set; }
         public String PostCode { get; set; }
-        public Guid Country { get; set; }
+        public Int16 Country { get; set; }
     }
 }

@@ -14,7 +14,7 @@ namespace GestionEquestre.Migrations.GEDB
                 .WithColumn("SIRE").AsFixedLengthString(8).Nullable()
                 .WithColumn("CLE_SIRE").AsFixedLengthString(1).Nullable()
                 .WithColumn("HNIN").AsFixedLengthString(9).NotNullable()
-                .WithColumn("BirthCountry").AsGuid().NotNullable()
+                .WithColumn("BirthCountry").AsString().NotNullable()
                 .WithColumn("BirthOrganization").AsGuid().NotNullable()
                 .WithColumn("Name").AsString(100).NotNullable()
                 .WithColumn("IsActive").AsBoolean().NotNullable().WithDefaultValue(1)
@@ -43,7 +43,7 @@ namespace GestionEquestre.Migrations.GEDB
             Utils.AddOracleIdentity(this, "MAN_HORSES", "UELN");
 
             Create.ForeignKey("FK_HORSE_SEXE").FromTable("MAN_HORSES").ForeignColumn("Sexe").ToTable("SET_SEXE").PrimaryColumn("SexeId");
-            Create.ForeignKey("FK_HORSE_COUNTRY").FromTable("MAN_HORSES").ForeignColumn("BirthCountry").ToTable("SET_COUNTRY").PrimaryColumn("Id");
+            Create.ForeignKey("FK_HORSE_COUNTRY").FromTable("MAN_HORSES").ForeignColumn("BirthCountry").ToTable("SET_COUNTRY").PrimaryColumn("ISOcode");
             Create.ForeignKey("FK_HORSE_ORGANIZATION").FromTable("MAN_HORSES").ForeignColumn("BirthOrganization").ToTable("SET_UELNORGA").PrimaryColumn("Id");
         }
     }

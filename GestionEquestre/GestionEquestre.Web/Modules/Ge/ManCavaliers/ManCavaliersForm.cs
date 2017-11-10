@@ -13,6 +13,7 @@ namespace GestionEquestre.Ge.Forms
     [BasedOnRow(typeof(Entities.ManCavaliersRow))]
     public class ManCavaliersForm
     {
+        public String LicFfe { get; set; }
         public Guid Person { get; set; }
         public Boolean IsActive { get; set; }
         public Boolean NotArchive { get; set; }

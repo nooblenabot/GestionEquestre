@@ -54,6 +54,21 @@ namespace MVC
                 public const string AccBankaccountIndex = "~/Modules/Ge/AccBankaccount/AccBankaccountIndex.cshtml";
             }
 
+            public static class LinkFolderCavalier
+            {
+                public const string LinkFolderCavalierIndex = "~/Modules/Ge/LinkFolderCavalier/LinkFolderCavalierIndex.cshtml";
+            }
+
+            public static class LinkFolderHorse
+            {
+                public const string LinkFolderHorseIndex = "~/Modules/Ge/LinkFolderHorse/LinkFolderHorseIndex.cshtml";
+            }
+
+            public static class LinkFolderPerson
+            {
+                public const string LinkFolderPersonIndex = "~/Modules/Ge/LinkFolderPerson/LinkFolderPersonIndex.cshtml";
+            }
+
             public static class ManAdress
             {
                 public const string ManAdressIndex = "~/Modules/Ge/ManAdress/ManAdressIndex.cshtml";
@@ -62,6 +77,11 @@ namespace MVC
             public static class ManCavaliers
             {
                 public const string ManCavaliersIndex = "~/Modules/Ge/ManCavaliers/ManCavaliersIndex.cshtml";
+            }
+
+            public static class ManFolder
+            {
+                public const string ManFolderIndex = "~/Modules/Ge/ManFolder/ManFolderIndex.cshtml";
             }
 
             public static class ManHorses

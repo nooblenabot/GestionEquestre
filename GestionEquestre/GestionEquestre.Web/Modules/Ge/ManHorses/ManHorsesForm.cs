@@ -13,10 +13,11 @@ namespace GestionEquestre.Ge.Forms
     [BasedOnRow(typeof(Entities.ManHorsesRow))]
     public class ManHorsesForm
     {
+        public String Ueln { get; set; }
         public String Sire { get; set; }
         public String CleSire { get; set; }
         public String Hnin { get; set; }
-        public Guid BirthCountry { get; set; }
+        public String BirthCountry { get; set; }
         public Guid BirthOrganization { get; set; }
         public String Name { get; set; }
         public Boolean IsActive { get; set; }

@@ -65,6 +65,11 @@
         export const idProperty = 'LicFfe';
         export const nameProperty = 'LicFfe';
         export const localTextPrefix = 'Ge.ManCavaliers';
+        export const lookupKey = 'Ge.ManCavalier';
+
+        export function getLookup(): Q.Lookup<ManCavaliersRow> {
+            return Q.getLookup<ManCavaliersRow>('Ge.ManCavalier');
+        }
 
         export namespace Fields {
             export declare const LicFfe: string;

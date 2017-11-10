@@ -21,7 +21,7 @@ namespace GestionEquestre.Migrations.GEDB
                 .WithColumn("Caption").AsString(50).Nullable()
                 .WithColumn("City").AsString(50).Nullable()
                 .WithColumn("PostCode").AsString(6).Nullable()
-                .WithColumn("Country").AsGuid().Nullable();
+                .WithColumn("Country").AsInt16().Nullable();
 
             addUsersColumns(IfDatabase(Utils.AllExceptOracle)
                 .Create.Table("SET_CITY")
@@ -46,6 +46,7 @@ namespace GestionEquestre.Migrations.GEDB
                 FRCodeINSEE = "42279",
                 Caption = "Saint-Just-Saint-Rambert",
                 City = "Saint-Just-Saint-Rambert",
+                Country = "75",
                 PostCode = "42170"
             });
 
@@ -57,6 +58,7 @@ namespace GestionEquestre.Migrations.GEDB
                 FRCodeINSEE = "42095",
                 Caption = "Firminy",
                 City = "Firminy",
+                Country = "75",
                 PostCode = "42700"
             });
 
@@ -68,6 +70,7 @@ namespace GestionEquestre.Migrations.GEDB
                 FRCodeINSEE = "42218",
                 Caption = "Saint-Etienne",
                 City = "Saint-Etienne",
+                Country = "75",
                 PostCode = "42000"
             });
 
@@ -79,6 +82,7 @@ namespace GestionEquestre.Migrations.GEDB
                 FRCodeINSEE = "69318",
                 Caption = "Lyon 2 arrondissement",
                 City = "Lyon",
+                Country = "75",
                 PostCode = "69002"
             });
 

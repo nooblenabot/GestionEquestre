@@ -17,52 +17,65 @@ namespace GestionEquestre.Migrations.GEDB
                 .WithColumn("InsertUserId").AsInt32().NotNullable()
                 .WithColumn("UpdateDate").AsDateTime().Nullable()
                 .WithColumn("UpdateUserId").AsInt32().Nullable()
-                .WithColumn("Country").AsString(50).Nullable()
-                .WithColumn("Code").AsString(3).Nullable()
+                .WithColumn("Name_FR_fr").AsString(50).NotNullable()
+                .WithColumn("Name_EN_gb").AsString(50).NotNullable()
+                .WithColumn("alpha3").AsString(3).NotNullable().Unique()
+                .WithColumn("alpha2").AsString(2).NotNullable().Unique()
                 .WithColumn("CodeUE").AsInt16().Nullable()
-                .WithColumn("ISO3166Country").AsFixedLengthString(3).Nullable();
+                .WithColumn("ISOcode").AsString(3).NotNullable().Unique();
 
             addUsersColumns(IfDatabase(Utils.AllExceptOracle)
                 .Create.Table("SET_COUNTRY")
-                .WithColumn("Id").AsGuid().WithDefaultValue(SystemMethods.NewSequentialId).PrimaryKey().NotNullable());
+                .WithColumn("Id").AsInt16().PrimaryKey().Unique().NotNullable());
 
             addUsersColumns(IfDatabase("Oracle")
                 .Create.Table("SET_COUNTRY")
-                .WithColumn("Id").AsGuid().PrimaryKey().NotNullable());
+                .WithColumn("Id").AsInt16().PrimaryKey().Unique().NotNullable());
 
             Utils.AddOracleIdentity(this, "SET_COUNTRY", "Id");
 
+            //   Execute.EmbeddedScript("Insert_Contry.sql");
+
             Insert.IntoTable("SET_COUNTRY").Row(new
             {
+                Id = "75",
                 DefaultValue = 1,
                 InsertDate = new DateTime(2016, 11, 11),
                 InsertUserId = 1,
-                Code = "FRA",
-                Country = "France",
+                alpha3 = "FRA",
+                alpha2 = "FR",
+                Name_FR_fr = "France",
+                Name_EN_gb = "France",
                 CodeUE = "1",
-                ISO3166Country = "250"
+                ISOcode = "250"
             });
 
             Insert.IntoTable("SET_COUNTRY").Row(new
             {
+                Id = "140",
                 DefaultValue = 1,
                 InsertDate = new DateTime(2016, 11, 11),
                 InsertUserId = 1,
-                Code = "MCO",
-                Country = "Monaco",
+                alpha3 = "MCO",
+                alpha2 = "MC",
+                Name_FR_fr = "Monaco",
+                Name_EN_gb = "Monaco",
                 CodeUE = "9",
-                ISO3166Country = "492"
+                ISOcode = "492"
             });
 
             Insert.IntoTable("SET_COUNTRY").Row(new
             {
+                Id = "18",
                 DefaultValue = 1,
                 InsertDate = new DateTime(2016, 11, 11),
                 InsertUserId = 1,
-                Code = "BEL",
-                Country = "Belgique",
+                alpha3 = "BEL",
+                alpha2 = "BE",
+                Name_FR_fr = "Belgique",
+                Name_EN_gb = "Belgique",
                 CodeUE = "2",
-                ISO3166Country = "056"
+                ISOcode = "056"
             });
         }
     }

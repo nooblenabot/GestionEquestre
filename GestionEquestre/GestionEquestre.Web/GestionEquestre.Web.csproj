@@ -1300,10 +1300,22 @@
     <TypeScriptCompile Include="Imports\ServerTypings\Ge.AccBankaccountColumns.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.LinkFolderCavalierColumns.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.LinkFolderHorseColumns.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.LinkFolderPersonColumns.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="Imports\ServerTypings\Ge.ManAdressColumns.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
     <TypeScriptCompile Include="Imports\ServerTypings\Ge.ManCavaliersColumns.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.ManFolderColumns.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
     <TypeScriptCompile Include="Imports\ServerTypings\Ge.ManHorsesColumns.ts">
@@ -1723,30 +1735,54 @@
     <TypeScriptCompile Include="Imports\ServerTypings\Ge.SetUelnorgaForm.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
-    <TypeScriptCompile Include="Imports\ServerTypings\Ge.LinkFolderCavalierRow.ts">  <DependentUpon>ServerTypings.tt</DependentUpon></TypeScriptCompile>
-    <TypeScriptCompile Include="Imports\ServerTypings\Ge.LinkFolderCavalierService.ts">  <DependentUpon>ServerTypings.tt</DependentUpon></TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.LinkFolderCavalierRow.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.LinkFolderCavalierService.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
     <Content Include="Modules\Ge\LinkFolderCavalier\LinkFolderCavalierIndex.cshtml" />
     <TypeScriptCompile Include="Modules\Ge\LinkFolderCavalier\LinkFolderCavalierDialog.ts" />
     <TypeScriptCompile Include="Modules\Ge\LinkFolderCavalier\LinkFolderCavalierGrid.ts" />
-    <TypeScriptCompile Include="Imports\ServerTypings\Ge.LinkFolderCavalierForm.ts">  <DependentUpon>ServerTypings.tt</DependentUpon></TypeScriptCompile>
-    <TypeScriptCompile Include="Imports\ServerTypings\Ge.LinkFolderHorseRow.ts">  <DependentUpon>ServerTypings.tt</DependentUpon></TypeScriptCompile>
-    <TypeScriptCompile Include="Imports\ServerTypings\Ge.LinkFolderHorseService.ts">  <DependentUpon>ServerTypings.tt</DependentUpon></TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.LinkFolderCavalierForm.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.LinkFolderHorseRow.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.LinkFolderHorseService.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
     <Content Include="Modules\Ge\LinkFolderHorse\LinkFolderHorseIndex.cshtml" />
     <TypeScriptCompile Include="Modules\Ge\LinkFolderHorse\LinkFolderHorseDialog.ts" />
     <TypeScriptCompile Include="Modules\Ge\LinkFolderHorse\LinkFolderHorseGrid.ts" />
-    <TypeScriptCompile Include="Imports\ServerTypings\Ge.LinkFolderHorseForm.ts">  <DependentUpon>ServerTypings.tt</DependentUpon></TypeScriptCompile>
-    <TypeScriptCompile Include="Imports\ServerTypings\Ge.LinkFolderPersonRow.ts">  <DependentUpon>ServerTypings.tt</DependentUpon></TypeScriptCompile>
-    <TypeScriptCompile Include="Imports\ServerTypings\Ge.LinkFolderPersonService.ts">  <DependentUpon>ServerTypings.tt</DependentUpon></TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.LinkFolderHorseForm.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.LinkFolderPersonRow.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.LinkFolderPersonService.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
     <Content Include="Modules\Ge\LinkFolderPerson\LinkFolderPersonIndex.cshtml" />
     <TypeScriptCompile Include="Modules\Ge\LinkFolderPerson\LinkFolderPersonDialog.ts" />
     <TypeScriptCompile Include="Modules\Ge\LinkFolderPerson\LinkFolderPersonGrid.ts" />
-    <TypeScriptCompile Include="Imports\ServerTypings\Ge.LinkFolderPersonForm.ts">  <DependentUpon>ServerTypings.tt</DependentUpon></TypeScriptCompile>
-    <TypeScriptCompile Include="Imports\ServerTypings\Ge.ManFolderRow.ts">  <DependentUpon>ServerTypings.tt</DependentUpon></TypeScriptCompile>
-    <TypeScriptCompile Include="Imports\ServerTypings\Ge.ManFolderService.ts">  <DependentUpon>ServerTypings.tt</DependentUpon></TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.LinkFolderPersonForm.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.ManFolderRow.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.ManFolderService.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
     <Content Include="Modules\Ge\ManFolder\ManFolderIndex.cshtml" />
     <TypeScriptCompile Include="Modules\Ge\ManFolder\ManFolderDialog.ts" />
     <TypeScriptCompile Include="Modules\Ge\ManFolder\ManFolderGrid.ts" />
-    <TypeScriptCompile Include="Imports\ServerTypings\Ge.ManFolderForm.ts">  <DependentUpon>ServerTypings.tt</DependentUpon></TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.ManFolderForm.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
@@ -1846,6 +1882,8 @@
     <Compile Include="Modules\Ge\ManHorses\ManHorsesPage.cs" />
     <Compile Include="Modules\Ge\ManHorses\ManHorsesRepository.cs" />
     <Compile Include="Modules\Ge\ManHorses\ManHorsesRow.cs" />
+    <Compile Include="Modules\Ge\ManCavaliers\SetCavalierLookup.cs" />
+    <Compile Include="Modules\Ge\ManPerson\ManPersonLookup.cs" />
     <Compile Include="Modules\Ge\SetCity\SetCityLookup.cs" />
     <Compile Include="Modules\Ge\SetCountry\SetCountryLookup.cs" />
     <Compile Include="Modules\Ge\SetGalop\SetGalopLookup.cs" />

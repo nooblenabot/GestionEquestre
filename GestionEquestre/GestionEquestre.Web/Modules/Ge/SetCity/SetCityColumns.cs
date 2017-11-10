@@ -26,6 +26,6 @@ namespace GestionEquestre.Ge.Columns
         public String Caption { get; set; }
         public String City { get; set; }
         public String PostCode { get; set; }
-        public String Country1 { get; set; }
+        public String CountryName_FR_fr { get; set; }
     }
 }

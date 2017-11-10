@@ -18,12 +18,14 @@ namespace GestionEquestre.Ge.Scripts
         protected override void PrepareQuery(SqlQuery query)
         {
             var fld = Entities.SetCityRow.Fields;
+            var Cld = Entities.SetCountryRow.Fields;
             query.Distinct(true)
                 .Select(fld.Id, fld.Caption,fld.PostCode)
                 .Where(
                 new Criteria(fld.IsActive) == 1
-                & new Criteria(fld.CountryIsActive) == 1
-                //& new Criteria(fld.Country1)
+              //  & new Criteria(fld.CountryIsActive) == 1
+              //  & new Criteria(Cld.IsActive) == 1
+               // & new Criteria(Cld.Id, fld.Country)
                 );
         }
 

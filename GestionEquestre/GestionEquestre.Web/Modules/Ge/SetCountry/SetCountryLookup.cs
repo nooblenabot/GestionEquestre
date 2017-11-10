@@ -8,10 +8,10 @@ namespace GestionEquestre.Ge.Scripts
     [LookupScript("Ge.SetCountry")]
     public class SetCountryLookup : RowLookupScript<Entities.SetCountryRow>
     {
-       public SetCountryLookup()
+        public SetCountryLookup()
         {
             IdField = Entities.SetCountryRow.Fields.Id.PropertyName;
-            TextField = Entities.SetCountryRow.Fields.Country.PropertyName;
+            TextField = Entities.SetCountryRow.Fields.Name_FR_fr.PropertyName;
 
         }
 
@@ -19,7 +19,32 @@ namespace GestionEquestre.Ge.Scripts
         {
             var fld = Entities.SetCountryRow.Fields;
             query.Distinct(true)
-                .Select(fld.Id, fld.Country,fld.Iso3166Country)
+                .Select(fld.Id, fld.Name_FR_fr, fld.ISOcode)
+                .Where(
+                new Criteria(fld.IsActive) == 1
+                );
+        }
+        protected override void ApplyOrder(SqlQuery query)
+        {
+
+        }
+
+    }
+    [LookupScript("Ge.SetCountry")]
+    public class SetCISOcodeLookup : RowLookupScript<Entities.SetCountryRow>
+    {
+        public SetCISOcodeLookup()
+        {
+            IdField = Entities.SetCountryRow.Fields.ISOcode.PropertyName;
+            TextField = Entities.SetCountryRow.Fields.Name_FR_fr.PropertyName;
+
+        }
+
+        protected override void PrepareQuery(SqlQuery query)
+        {
+            var fld = Entities.SetCountryRow.Fields;
+            query.Distinct(true)
+                .Select(fld.Id, fld.Name_FR_fr, fld.ISOcode)
                 .Where(
                 new Criteria(fld.IsActive) == 1
                 );

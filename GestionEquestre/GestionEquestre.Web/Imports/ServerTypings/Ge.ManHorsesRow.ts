@@ -4,7 +4,7 @@
         Sire?: string;
         CleSire?: string;
         Hnin?: string;
-        BirthCountry?: string;
+        BirthCountry?: number;
         BirthOrganization?: string;
         Name?: string;
         IsActive?: boolean;
@@ -27,10 +27,9 @@
         BirthCountryInsertUserId?: number;
         BirthCountryUpdateDate?: string;
         BirthCountryUpdateUserId?: number;
-        BirthCountryCountry?: string;
-        BirthCountryCode?: string;
-        BirthCountryCodeUe?: number;
-        BirthCountryIso3166Country?: string;
+        BirthCountryName_FR_fr?: string;
+        BirthCountryalpha3?: string;
+        BirthCountryISOcode?: number;
         BirthOrganizationDefaultValue?: boolean;
         BirthOrganizationIsActive?: boolean;
         BirthOrganizationInsertDate?: string;
@@ -82,10 +81,9 @@
             export declare const BirthCountryInsertUserId: string;
             export declare const BirthCountryUpdateDate: string;
             export declare const BirthCountryUpdateUserId: string;
-            export declare const BirthCountryCountry: string;
-            export declare const BirthCountryCode: string;
-            export declare const BirthCountryCodeUe: string;
-            export declare const BirthCountryIso3166Country: string;
+            export declare const BirthCountryName_FR_fr: string;
+            export declare const BirthCountryalpha3: string;
+            export declare const BirthCountryISOcode: string;
             export declare const BirthOrganizationDefaultValue: string;
             export declare const BirthOrganizationIsActive: string;
             export declare const BirthOrganizationInsertDate: string;
@@ -132,10 +130,9 @@
             'BirthCountryInsertUserId', 
             'BirthCountryUpdateDate', 
             'BirthCountryUpdateUserId', 
-            'BirthCountryCountry', 
-            'BirthCountryCode', 
-            'BirthCountryCodeUe', 
-            'BirthCountryIso3166Country', 
+            'BirthCountryName_FR_fr', 
+            'BirthCountryalpha3', 
+            'BirthCountryISOcode', 
             'BirthOrganizationDefaultValue', 
             'BirthOrganizationIsActive', 
             'BirthOrganizationInsertDate', 

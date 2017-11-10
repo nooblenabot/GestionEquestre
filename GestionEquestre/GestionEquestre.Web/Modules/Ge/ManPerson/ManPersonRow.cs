@@ -128,14 +128,14 @@ namespace GestionEquestre.Ge.Entities
         }
 
         [DisplayName("Birth Country"), ForeignKey("[dbo].[SET_COUNTRY]", "Id"), LeftJoin("jBirthCountry"), TextualField("BirthCountryCountry")]
-        public Guid? BirthCountry
+        public Int16? BirthCountry
         {
             get { return Fields.BirthCountry[this]; }
             set { Fields.BirthCountry[this] = value; }
         }
 
         [DisplayName("Nationality"), Column("nationality"), ForeignKey("[dbo].[SET_COUNTRY]", "Id"), LeftJoin("jNationality"), TextualField("NationalityCountry")]
-        public Guid? Nationality
+        public Int16? Nationality
         {
             get { return Fields.Nationality[this]; }
             set { Fields.Nationality[this] = value; }
@@ -704,8 +704,8 @@ namespace GestionEquestre.Ge.Entities
             public Int16Field Sexe;
             public Int16Field MaritalStatus;
             public GuidField BirthCity;
-            public GuidField BirthCountry;
-            public GuidField Nationality;
+            public Int16Field BirthCountry;
+            public Int16Field Nationality;
             public StreamField Photo;
             public StringField Phone;
             public StringField Gsm;

@@ -16,7 +16,7 @@ namespace GestionEquestre.Ge.Entities
     public sealed class SetCountryRow : Row, IIdRow, INameRow
     {
         [DisplayName("Id"), PrimaryKey]
-        public Guid? Id
+        public Int16? Id
         {
             get { return Fields.Id[this]; }
             set { Fields.Id[this] = value; }
@@ -64,18 +64,32 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.UpdateUserId[this] = value; }
         }
 
-        [DisplayName("Country"), Size(50), QuickSearch]
-        public String Country
+        [DisplayName("Name FR"), Size(50), QuickSearch]
+        public String Name_FR_fr
         {
-            get { return Fields.Country[this]; }
-            set { Fields.Country[this] = value; }
+            get { return Fields.Name_FR_fr[this]; }
+            set { Fields.Name_FR_fr[this] = value; }
         }
 
-        [DisplayName("Code"), Size(3)]
-        public String Code
+        [DisplayName("Name EN"), Size(50), QuickSearch]
+        public String Name_EN_gb
         {
-            get { return Fields.Code[this]; }
-            set { Fields.Code[this] = value; }
+            get { return Fields.Name_EN_gb[this]; }
+            set { Fields.Name_EN_gb[this] = value; }
+        }
+
+                [DisplayName("alpha3"), Size(3), NotNull]
+        public String alpha3
+        {
+            get { return Fields.alpha3[this]; }
+            set { Fields.alpha3[this] = value; }
+        }
+
+        [DisplayName("alpha2"), Size(2), NotNull]
+        public String alpha2
+        {
+            get { return Fields.alpha2[this]; }
+            set { Fields.alpha2[this] = value; }
         }
 
         [DisplayName("Code Ue"), Column("CodeUE")]
@@ -85,11 +99,11 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.CodeUe[this] = value; }
         }
 
-        [DisplayName("Iso3166 Country"), Column("ISO3166Country"), Size(3)]
-        public String Iso3166Country
+        [DisplayName("ISOcode"), Column("ISOcode"), Size(3),LookupInclude]
+        public String ISOcode
         {
-            get { return Fields.Iso3166Country[this]; }
-            set { Fields.Iso3166Country[this] = value; }
+            get { return Fields.ISOcode[this]; }
+            set { Fields.ISOcode[this] = value; }
         }
 
         IIdField IIdRow.IdField
@@ -99,7 +113,7 @@ namespace GestionEquestre.Ge.Entities
 
         StringField INameRow.NameField
         {
-            get { return Fields.Country; }
+            get { return Fields.Name_FR_fr; }
         }
 
         public static readonly RowFields Fields = new RowFields().Init();
@@ -111,17 +125,19 @@ namespace GestionEquestre.Ge.Entities
 
         public class RowFields : RowFieldsBase
         {
-            public GuidField Id;
+            public Int16Field Id;
             public BooleanField DefaultValue;
             public BooleanField IsActive;
             public DateTimeField InsertDate;
             public Int32Field InsertUserId;
             public DateTimeField UpdateDate;
             public Int32Field UpdateUserId;
-            public StringField Country;
-            public StringField Code;
+            public StringField Name_FR_fr;
+            public StringField Name_EN_gb; 
+            public StringField alpha3;
+            public StringField alpha2;
             public Int16Field CodeUe;
-            public StringField Iso3166Country;
+            public StringField ISOcode;
 
             public RowFields()
                 : base()

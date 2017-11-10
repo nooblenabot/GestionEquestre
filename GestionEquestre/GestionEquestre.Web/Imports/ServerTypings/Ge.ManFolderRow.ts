@@ -1,5 +1,4 @@
-﻿
-namespace GestionEquestre.Ge {
+﻿namespace GestionEquestre.Ge {
     export interface ManFolderRow {
         Id?: number;
         IsActive?: boolean;
@@ -24,39 +23,40 @@ namespace GestionEquestre.Ge {
         export const localTextPrefix = 'Ge.ManFolder';
 
         export namespace Fields {
-            export declare const Id;
-            export declare const IsActive;
-            export declare const NotArchive;
-            export declare const InsertDate;
-            export declare const InsertUserId;
-            export declare const UpdateDate;
-            export declare const UpdateUserId;
-            export declare const Caption;
-            export declare const ArchiveDate;
-            export declare const Number;
-            export declare const CreateeDate;
-            export declare const CloseRaison;
-            export declare const CloseDate;
-            export declare const Establishment;
-            export declare const Comment;
+            export declare const Id: string;
+            export declare const IsActive: string;
+            export declare const NotArchive: string;
+            export declare const InsertDate: string;
+            export declare const InsertUserId: string;
+            export declare const UpdateDate: string;
+            export declare const UpdateUserId: string;
+            export declare const Caption: string;
+            export declare const ArchiveDate: string;
+            export declare const Number: string;
+            export declare const CreateeDate: string;
+            export declare const CloseRaison: string;
+            export declare const CloseDate: string;
+            export declare const Establishment: string;
+            export declare const Comment: string;
         }
 
         [
-            'Id',
-            'IsActive',
-            'NotArchive',
-            'InsertDate',
-            'InsertUserId',
-            'UpdateDate',
-            'UpdateUserId',
-            'Caption',
-            'ArchiveDate',
-            'Number',
-            'CreateeDate',
-            'CloseRaison',
-            'CloseDate',
-            'Establishment',
+            'Id', 
+            'IsActive', 
+            'NotArchive', 
+            'InsertDate', 
+            'InsertUserId', 
+            'UpdateDate', 
+            'UpdateUserId', 
+            'Caption', 
+            'ArchiveDate', 
+            'Number', 
+            'CreateeDate', 
+            'CloseRaison', 
+            'CloseDate', 
+            'Establishment', 
             'Comment'
         ].forEach(x => (<any>Fields)[x] = x);
     }
 }
+

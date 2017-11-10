@@ -15,7 +15,9 @@ namespace GestionEquestre.Ge.Entities
     [ModifyPermission("Administration:General")]
     public sealed class ManHorsesRow : Row, IIdRow, INameRow
     {
-        [DisplayName("Ueln"), Column("UELN"), Size(15), PrimaryKey, QuickSearch]
+        [DisplayName("Ueln"), Column("UELN"), Size(15), PrimaryKey, QuickSearch,]
+      //  [Expression("T0.[BirthCountry] + T0.[BirthOrganization]  + T0.[Hnin]")]
+        [Expression("T0.[BirthCountry] + T0.[Hnin]")]
         public String Ueln
         {
             get { return Fields.Ueln[this]; }
@@ -43,14 +45,16 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.Hnin[this] = value; }
         }
 
-        [DisplayName("Birth Country"), NotNull, ForeignKey("[dbo].[SET_COUNTRY]", "Id"), LeftJoin("jBirthCountry"), TextualField("BirthCountryCountry")]
-        public Guid? BirthCountry
+        [DisplayName("Birth Country"), NotNull, ForeignKey("[dbo].[SET_COUNTRY]", "ISOcode"), LeftJoin("jBirthCountry"), TextualField("BirthCountryCountry")]
+        [LookupEditor(typeof(Scripts.SetCISOcodeLookup), MinimumResultsForSearch = 1, InplaceAdd = false)]
+        public String BirthCountry
         {
             get { return Fields.BirthCountry[this]; }
             set { Fields.BirthCountry[this] = value; }
         }
 
         [DisplayName("Birth Organization"), NotNull, ForeignKey("[dbo].[SET_UELNORGA]", "Id"), LeftJoin("jBirthOrganization"), TextualField("BirthOrganizationOrganization")]
+        [LookupEditor(typeof(Ge.Scripts.SetUelnorgaLookup), MinimumResultsForSearch = 1, InplaceAdd = false)]
         public Guid? BirthOrganization
         {
             get { return Fields.BirthOrganization[this]; }
@@ -199,29 +203,23 @@ namespace GestionEquestre.Ge.Entities
             get { return Fields.BirthCountryUpdateUserId[this]; }
             set { Fields.BirthCountryUpdateUserId[this] = value; }
         }
-        [DisplayName("Birth Country Country"), Expression("jBirthCountry.[Country]")]
-        public String BirthCountryCountry
+        [DisplayName("Birth Country Country"), Expression("jBirthCountry.[Name_FR_fr]")]
+        public String BirthCountryName_FR_fr
         {
-            get { return Fields.BirthCountryCountry[this]; }
-            set { Fields.BirthCountryCountry[this] = value; }
+            get { return Fields.BirthCountryName_FR_fr[this]; }
+            set { Fields.BirthCountryName_FR_fr[this] = value; }
         }
-        [DisplayName("Birth Country Code"), Expression("jBirthCountry.[Code]")]
-        public String BirthCountryCode
+        [DisplayName("Birth Country alpha3"), Expression("jBirthCountry.[alpha3]")]
+        public String BirthCountryalpha3
         {
-            get { return Fields.BirthCountryCode[this]; }
-            set { Fields.BirthCountryCode[this] = value; }
+            get { return Fields.BirthCountryalpha3[this]; }
+            set { Fields.BirthCountryalpha3[this] = value; }
         }
-        [DisplayName("Birth Country Code Ue"), Expression("jBirthCountry.[CodeUE]")]
-        public Int16? BirthCountryCodeUe
+        [DisplayName("Birth Country ISOcode"), Expression("jBirthCountry.[ISOcode]")]
+        public String BirthCountryISOcode
         {
-            get { return Fields.BirthCountryCodeUe[this]; }
-            set { Fields.BirthCountryCodeUe[this] = value; }
-        }
-        [DisplayName("Birth Country Iso3166 Country"), Expression("jBirthCountry.[ISO3166Country]")]
-        public String BirthCountryIso3166Country
-        {
-            get { return Fields.BirthCountryIso3166Country[this]; }
-            set { Fields.BirthCountryIso3166Country[this] = value; }
+            get { return Fields.BirthCountryISOcode[this]; }
+            set { Fields.BirthCountryISOcode[this] = value; }
         }
         [DisplayName("Birth Organization Default Value"), Expression("jBirthOrganization.[DefaultValue]")]
         public Boolean? BirthOrganizationDefaultValue
@@ -342,7 +340,7 @@ namespace GestionEquestre.Ge.Entities
             public StringField Sire;
             public StringField CleSire;
             public StringField Hnin;
-            public GuidField BirthCountry;
+            public StringField BirthCountry;
             public GuidField BirthOrganization;
             public StringField Name;
             public BooleanField IsActive;
@@ -366,10 +364,9 @@ namespace GestionEquestre.Ge.Entities
             public Int32Field BirthCountryInsertUserId;
             public DateTimeField BirthCountryUpdateDate;
             public Int32Field BirthCountryUpdateUserId;
-            public StringField BirthCountryCountry;
-            public StringField BirthCountryCode;
-            public Int16Field BirthCountryCodeUe;
-            public StringField BirthCountryIso3166Country;
+            public StringField BirthCountryName_FR_fr;
+            public StringField BirthCountryalpha3;
+            public StringField BirthCountryISOcode;
 
             public BooleanField BirthOrganizationDefaultValue;
             public BooleanField BirthOrganizationIsActive;

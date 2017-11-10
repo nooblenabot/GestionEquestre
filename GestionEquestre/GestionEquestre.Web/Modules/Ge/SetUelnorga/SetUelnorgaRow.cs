@@ -37,6 +37,7 @@ namespace GestionEquestre.Ge.Entities
         }
 
         [DisplayName("Insert Date"), NotNull]
+        [DateTimeKind(DateTimeKind.Utc)]
         public DateTime? InsertDate
         {
             get { return Fields.InsertDate[this]; }
@@ -44,20 +45,22 @@ namespace GestionEquestre.Ge.Entities
         }
 
         [DisplayName("Insert User Id"), NotNull]
+       
+        [LookupEditor(typeof(Administration.Entities.UserRow), InplaceAdd = true)]
         public Int32? InsertUserId
         {
             get { return Fields.InsertUserId[this]; }
             set { Fields.InsertUserId[this] = value; }
         }
 
-        [DisplayName("Update Date")]
+        [DisplayName("Update Date"),HideOnInsert]
         public DateTime? UpdateDate
         {
             get { return Fields.UpdateDate[this]; }
             set { Fields.UpdateDate[this] = value; }
         }
 
-        [DisplayName("Update User Id")]
+        [DisplayName("Update User Id"),HideOnInsert]
         public Int32? UpdateUserId
         {
             get { return Fields.UpdateUserId[this]; }
@@ -71,7 +74,7 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.Organization[this] = value; }
         }
 
-        [DisplayName("Ueln Organization"), Column("UELNOrganization"), Size(3)]
+        [DisplayName("Ueln Code"), Column("UELNOrganization"), Size(3)]
         public String UelnOrganization
         {
             get { return Fields.UelnOrganization[this]; }

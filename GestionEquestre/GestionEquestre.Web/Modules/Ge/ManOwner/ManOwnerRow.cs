@@ -23,6 +23,7 @@ namespace GestionEquestre.Ge.Entities
         }
 
         [DisplayName("Horse"), Size(15), NotNull, ForeignKey("[dbo].[MAN_HORSES]", "UELN"), LeftJoin("jHorse"), QuickSearch, TextualField("HorseSire")]
+       // [LookupEditor(typeof(Ge.Scripts.SexeHorsesLookup), MinimumResultsForSearch = 1, InplaceAdd = false)]
         public String Horse
         {
             get { return Fields.Horse[this]; }
@@ -30,6 +31,7 @@ namespace GestionEquestre.Ge.Entities
         }
 
         [DisplayName("Cavalier"), Size(10), ForeignKey("[dbo].[MAN_CAVALIERS]", "LIC_FFE"), LeftJoin("jCavalier"), TextualField("CavalierCaption")]
+        [LookupEditor(typeof(Ge.Scripts.SexeHorsesLookup), MinimumResultsForSearch = 1, InplaceAdd = false)]
         public String Cavalier
         {
             get { return Fields.Cavalier[this]; }

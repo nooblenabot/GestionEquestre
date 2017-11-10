@@ -23,6 +23,7 @@ namespace GestionEquestre.Ge.Entities
         }
 
         [DisplayName("Person"), NotNull, ForeignKey("[dbo].[MAN_PERSON]", "Id"), LeftJoin("jPerson"), TextualField("PersonSurname")]
+        [LookupEditor(typeof(Ge.Scripts.ManPersonActiveLookup), MinimumResultsForSearch = 1, InplaceAdd = false)]
         public Guid? Person
         {
             get { return Fields.Person[this]; }
@@ -79,6 +80,7 @@ namespace GestionEquestre.Ge.Entities
         }
 
         [DisplayName("Niveau Galop"), ForeignKey("[dbo].[SET_GALOP]", "Id"), LeftJoin("jNiveauGalop"), TextualField("NiveauGalopCaption")]
+        [LookupEditor(typeof(Ge.Scripts.SetGalopLookup), MinimumResultsForSearch = 1, InplaceAdd = false)]
         public Int16? NiveauGalop
         {
             get { return Fields.NiveauGalop[this]; }
@@ -86,6 +88,7 @@ namespace GestionEquestre.Ge.Entities
         }
 
         [DisplayName("Licence Competition"), ForeignKey("[dbo].[SET_LFC]", "Id"), LeftJoin("jLicenceCompetition"), TextualField("LicenceCompetitionCaption")]
+        [LookupEditor(typeof(Ge.Scripts.SetLfcLookup), MinimumResultsForSearch = 1, InplaceAdd = false)]
         public Int16? LicenceCompetition
         {
             get { return Fields.LicenceCompetition[this]; }

@@ -13,12 +13,13 @@ namespace GestionEquestre.Ge.Columns
     [BasedOnRow(typeof(Entities.ManHorsesRow))]
     public class ManHorsesColumns
     {
-        [EditLink, DisplayName("Db.Shared.RecordId"), AlignRight]
+       // [EditLink, DisplayName("Db.Shared.RecordId"), AlignRight]
+        [EditLink, AlignRight]
         public String Ueln { get; set; }
         public String Sire { get; set; }
         public String CleSire { get; set; }
         public String Hnin { get; set; }
-        public String BirthCountryCountry { get; set; }
+        public String BirthCountryName_FR_fr { get; set; }
         public String BirthOrganizationOrganization { get; set; }
         public String Name { get; set; }
         public Boolean IsActive { get; set; }

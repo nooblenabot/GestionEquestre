@@ -14,7 +14,7 @@ namespace GestionEquestre.Ge.Columns
     public class SetCountryColumns
     {
         [EditLink, DisplayName("Db.Shared.RecordId"), AlignRight]
-        public Guid Id { get; set; }
+        public Int16 Id { get; set; }
         public Boolean DefaultValue { get; set; }
         public Boolean IsActive { get; set; }
         public DateTime InsertDate { get; set; }
@@ -22,9 +22,11 @@ namespace GestionEquestre.Ge.Columns
         public DateTime UpdateDate { get; set; }
         public Int32 UpdateUserId { get; set; }
         [EditLink]
-        public String Country { get; set; }
-        public String Code { get; set; }
+        public String Name_FR_fr { get; set; }
+        public String Name_EN_gb { get; set; }
+        public String alpha3 { get; set; }
+        public String alpha2 { get; set; }
         public Int16 CodeUe { get; set; }
-        public String Iso3166Country { get; set; }
+        public String ISOcode { get; set; }
     }
 }

@@ -21,7 +21,7 @@ namespace GestionEquestre.Migrations.GEDB
                 .WithColumn("Adress_2").AsString(50).Nullable()
                 .WithColumn("Adress_3").AsString(50).Nullable()
                 .WithColumn("City").AsGuid().Nullable()
-                .WithColumn("Country").AsGuid().Nullable()
+                .WithColumn("Country").AsInt16().Nullable()
                 .WithColumn("Cedex").AsString(50).Nullable()
                 .WithColumn("building").AsString(20).Nullable()
                 .WithColumn("Caption").AsString(200).Nullable()

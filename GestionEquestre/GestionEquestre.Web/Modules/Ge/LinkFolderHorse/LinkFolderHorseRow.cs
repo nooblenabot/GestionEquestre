@@ -23,6 +23,7 @@ namespace GestionEquestre.Ge.Entities
         }
 
         [DisplayName("Folder"), NotNull, ForeignKey("[dbo].[MAN_FOLDER]", "Id"), LeftJoin("jFolder"), TextualField("FolderCaption")]
+        //        [LookupEditor(typeof(Ge.Scripts.SexeHorsesLookup), MinimumResultsForSearch = 1, InplaceAdd = false)]
         public Int32? Folder
         {
             get { return Fields.Folder[this]; }
@@ -30,6 +31,7 @@ namespace GestionEquestre.Ge.Entities
         }
 
         [DisplayName("Horse"), Size(15), NotNull, ForeignKey("[dbo].[MAN_HORSES]", "UELN"), LeftJoin("jHorse"), QuickSearch, TextualField("HorseSire")]
+        [LookupEditor(typeof(Ge.Scripts.SexeHorsesLookup), MinimumResultsForSearch = 1, InplaceAdd = false)]
         public String Horse
         {
             get { return Fields.Horse[this]; }

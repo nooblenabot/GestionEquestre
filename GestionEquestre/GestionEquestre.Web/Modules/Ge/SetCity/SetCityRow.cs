@@ -92,8 +92,8 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.PostCode[this] = value; }
         }
 
-        [DisplayName("Country"), ForeignKey("[dbo].[SET_COUNTRY]", "Id"), LeftJoin("jCountry"), TextualField("Country1")]
-        public Guid? Country
+        [DisplayName("Country"), ForeignKey("[dbo].[SET_COUNTRY]", "Id"), LeftJoin("jCountry"), TextualField("CountryName_FR_fr")]
+        public Int16? Country
         {
             get { return Fields.Country[this]; }
             set { Fields.Country[this] = value; }
@@ -135,17 +135,17 @@ namespace GestionEquestre.Ge.Entities
             get { return Fields.CountryUpdateUserId[this]; }
             set { Fields.CountryUpdateUserId[this] = value; }
         }
-        [DisplayName("Country"), Expression("jCountry.[Country]")]
-        public String Country1
+        [DisplayName("Country FR"), Expression("jCountry.[Name_FR_fr]")]
+        public String CountryName_FR_fr
         {
-            get { return Fields.Country1[this]; }
-            set { Fields.Country1[this] = value; }
+            get { return Fields.CountryName_FR_fr[this]; }
+            set { Fields.CountryName_FR_fr[this] = value; }
         }
-        [DisplayName("Country Code"), Expression("jCountry.[Code]")]
-        public String CountryCode
+        [DisplayName("Country Code alpha3"), Expression("jCountry.[alpha3]")]
+        public String Countryalpha3
         {
-            get { return Fields.CountryCode[this]; }
-            set { Fields.CountryCode[this] = value; }
+            get { return Fields.Countryalpha3[this]; }
+            set { Fields.Countryalpha3[this] = value; }
         }
         [DisplayName("Country Code Ue"), Expression("jCountry.[CodeUE]")]
         public Int16? CountryCodeUe
@@ -153,11 +153,11 @@ namespace GestionEquestre.Ge.Entities
             get { return Fields.CountryCodeUe[this]; }
             set { Fields.CountryCodeUe[this] = value; }
         }
-        [DisplayName("Country Iso3166 Country"), Expression("jCountry.[ISO3166Country]")]
-        public String CountryIso3166Country
+        [DisplayName("Country ISOcode"), Expression("jCountry.[ISOcode]")]
+        public Int16? CountryISOcode
         {
-            get { return Fields.CountryIso3166Country[this]; }
-            set { Fields.CountryIso3166Country[this] = value; }
+            get { return Fields.CountryISOcode[this]; }
+            set { Fields.CountryISOcode[this] = value; }
         }
         IIdField IIdRow.IdField
         {
@@ -189,7 +189,7 @@ namespace GestionEquestre.Ge.Entities
             public StringField Caption;
             public StringField City;
             public StringField PostCode;
-            public GuidField Country;
+            public Int16Field Country;
 
             public BooleanField CountryDefaultValue;
             public BooleanField CountryIsActive;
@@ -197,10 +197,12 @@ namespace GestionEquestre.Ge.Entities
             public Int32Field CountryInsertUserId;
             public DateTimeField CountryUpdateDate;
             public Int32Field CountryUpdateUserId;
-            public StringField Country1;
-            public StringField CountryCode;
+            public StringField CountryName_FR_fr;
+       //     public StringField CountryName_EN_gb;
+            public StringField Countryalpha3;
+        //    public StringField Countryalpha2;
             public Int16Field CountryCodeUe;
-            public StringField CountryIso3166Country;
+            public Int16Field CountryISOcode;
 
             public RowFields()
                 : base()

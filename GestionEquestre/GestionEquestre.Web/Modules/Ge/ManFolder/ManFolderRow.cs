@@ -107,6 +107,7 @@ namespace GestionEquestre.Ge.Entities
         }
 
         [DisplayName("Establishment"), Column("establishment"), NotNull]
+        [LookupEditor(typeof(Ge.Scripts.SexeHorsesLookup), MinimumResultsForSearch = 1, InplaceAdd = false)]
         public Int32? Establishment
         {
             get { return Fields.Establishment[this]; }

@@ -16,8 +16,8 @@
         Sexe?: number;
         MaritalStatus?: number;
         BirthCity?: string;
-        BirthCountry?: string;
-        Nationality?: string;
+        BirthCountry?: number;
+        Nationality?: number;
         Photo?: number[];
         Phone?: string;
         Gsm?: string;
@@ -110,6 +110,11 @@
         export const idProperty = 'Id';
         export const nameProperty = 'Surname';
         export const localTextPrefix = 'Ge.ManPerson';
+        export const lookupKey = 'Ge.ManPerson';
+
+        export function getLookup(): Q.Lookup<ManPersonRow> {
+            return Q.getLookup<ManPersonRow>('Ge.ManPerson');
+        }
 
         export namespace Fields {
             export declare const Id: string;

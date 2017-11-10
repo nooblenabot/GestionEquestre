@@ -500,12 +500,14 @@ declare namespace GestionEquestre.Ge {
     }
 }
 declare namespace GestionEquestre.Ge {
+}
+declare namespace GestionEquestre.Ge {
     class LinkFolderCavalierForm extends Serenity.PrefixedContext {
         static formKey: string;
     }
     interface LinkFolderCavalierForm {
         Folder: Serenity.IntegerEditor;
-        Cavalier: Serenity.StringEditor;
+        Cavalier: Serenity.LookupEditor;
     }
 }
 declare namespace GestionEquestre.Ge {
@@ -546,36 +548,36 @@ declare namespace GestionEquestre.Ge {
         const nameProperty = "Cavalier";
         const localTextPrefix = "Ge.LinkFolderCavalier";
         namespace Fields {
-            const Id: any;
-            const Folder: any;
-            const Cavalier: any;
-            const FolderIsActive: any;
-            const FolderNotArchive: any;
-            const FolderInsertDate: any;
-            const FolderInsertUserId: any;
-            const FolderUpdateDate: any;
-            const FolderUpdateUserId: any;
-            const FolderCaption: any;
-            const FolderArchiveDate: any;
-            const FolderNumber: any;
-            const FolderCreateeDate: any;
-            const FolderCloseRaison: any;
-            const FolderCloseDate: any;
-            const FolderEstablishment: any;
-            const FolderComment: any;
-            const CavalierPerson: any;
-            const CavalierIsActive: any;
-            const CavalierNotArchive: any;
-            const CavalierInsertDate: any;
-            const CavalierInsertUserId: any;
-            const CavalierUpdateDate: any;
-            const CavalierUpdateUserId: any;
-            const CavalierMilesimeLicnece: any;
-            const CavalierNiveauGalop: any;
-            const CavalierLicenceCompetition: any;
-            const CavalierDateCertificatMedical: any;
-            const CavalierCaption: any;
-            const CavalierArchiveDate: any;
+            const Id: string;
+            const Folder: string;
+            const Cavalier: string;
+            const FolderIsActive: string;
+            const FolderNotArchive: string;
+            const FolderInsertDate: string;
+            const FolderInsertUserId: string;
+            const FolderUpdateDate: string;
+            const FolderUpdateUserId: string;
+            const FolderCaption: string;
+            const FolderArchiveDate: string;
+            const FolderNumber: string;
+            const FolderCreateeDate: string;
+            const FolderCloseRaison: string;
+            const FolderCloseDate: string;
+            const FolderEstablishment: string;
+            const FolderComment: string;
+            const CavalierPerson: string;
+            const CavalierIsActive: string;
+            const CavalierNotArchive: string;
+            const CavalierInsertDate: string;
+            const CavalierInsertUserId: string;
+            const CavalierUpdateDate: string;
+            const CavalierUpdateUserId: string;
+            const CavalierMilesimeLicnece: string;
+            const CavalierNiveauGalop: string;
+            const CavalierLicenceCompetition: string;
+            const CavalierDateCertificatMedical: string;
+            const CavalierCaption: string;
+            const CavalierArchiveDate: string;
         }
     }
 }
@@ -597,12 +599,14 @@ declare namespace GestionEquestre.Ge {
     }
 }
 declare namespace GestionEquestre.Ge {
+}
+declare namespace GestionEquestre.Ge {
     class LinkFolderHorseForm extends Serenity.PrefixedContext {
         static formKey: string;
     }
     interface LinkFolderHorseForm {
         Folder: Serenity.IntegerEditor;
-        Horse: Serenity.StringEditor;
+        Horse: Serenity.LookupEditor;
     }
 }
 declare namespace GestionEquestre.Ge {
@@ -650,43 +654,43 @@ declare namespace GestionEquestre.Ge {
         const nameProperty = "Horse";
         const localTextPrefix = "Ge.LinkFolderHorse";
         namespace Fields {
-            const Id: any;
-            const Folder: any;
-            const Horse: any;
-            const FolderIsActive: any;
-            const FolderNotArchive: any;
-            const FolderInsertDate: any;
-            const FolderInsertUserId: any;
-            const FolderUpdateDate: any;
-            const FolderUpdateUserId: any;
-            const FolderCaption: any;
-            const FolderArchiveDate: any;
-            const FolderNumber: any;
-            const FolderCreateeDate: any;
-            const FolderCloseRaison: any;
-            const FolderCloseDate: any;
-            const FolderEstablishment: any;
-            const FolderComment: any;
-            const HorseSire: any;
-            const HorseCleSire: any;
-            const HorseHnin: any;
-            const HorseBirthCountry: any;
-            const HorseBirthOrganization: any;
-            const HorseName: any;
-            const HorseIsActive: any;
-            const HorseNotArchive: any;
-            const HorseInsertDate: any;
-            const HorseInsertUserId: any;
-            const HorseUpdateDate: any;
-            const HorseUpdateUserId: any;
-            const HorseBirthday: any;
-            const HorseSexe: any;
-            const HorseColor: any;
-            const HorseRace: any;
-            const HorseTransponder: any;
-            const HorseFinalExit: any;
-            const HorseDescription: any;
-            const HorseArchiveDate: any;
+            const Id: string;
+            const Folder: string;
+            const Horse: string;
+            const FolderIsActive: string;
+            const FolderNotArchive: string;
+            const FolderInsertDate: string;
+            const FolderInsertUserId: string;
+            const FolderUpdateDate: string;
+            const FolderUpdateUserId: string;
+            const FolderCaption: string;
+            const FolderArchiveDate: string;
+            const FolderNumber: string;
+            const FolderCreateeDate: string;
+            const FolderCloseRaison: string;
+            const FolderCloseDate: string;
+            const FolderEstablishment: string;
+            const FolderComment: string;
+            const HorseSire: string;
+            const HorseCleSire: string;
+            const HorseHnin: string;
+            const HorseBirthCountry: string;
+            const HorseBirthOrganization: string;
+            const HorseName: string;
+            const HorseIsActive: string;
+            const HorseNotArchive: string;
+            const HorseInsertDate: string;
+            const HorseInsertUserId: string;
+            const HorseUpdateDate: string;
+            const HorseUpdateUserId: string;
+            const HorseBirthday: string;
+            const HorseSexe: string;
+            const HorseColor: string;
+            const HorseRace: string;
+            const HorseTransponder: string;
+            const HorseFinalExit: string;
+            const HorseDescription: string;
+            const HorseArchiveDate: string;
         }
     }
 }
@@ -708,12 +712,14 @@ declare namespace GestionEquestre.Ge {
     }
 }
 declare namespace GestionEquestre.Ge {
+}
+declare namespace GestionEquestre.Ge {
     class LinkFolderPersonForm extends Serenity.PrefixedContext {
         static formKey: string;
     }
     interface LinkFolderPersonForm {
         Folder: Serenity.IntegerEditor;
-        PersonId: Serenity.StringEditor;
+        PersonId: Serenity.LookupEditor;
         Caption: Serenity.StringEditor;
     }
 }
@@ -772,53 +778,53 @@ declare namespace GestionEquestre.Ge {
         const nameProperty = "Caption";
         const localTextPrefix = "Ge.LinkFolderPerson";
         namespace Fields {
-            const Id: any;
-            const Folder: any;
-            const PersonId: any;
-            const Caption: any;
-            const FolderIsActive: any;
-            const FolderNotArchive: any;
-            const FolderInsertDate: any;
-            const FolderInsertUserId: any;
-            const FolderUpdateDate: any;
-            const FolderUpdateUserId: any;
-            const FolderCaption: any;
-            const FolderArchiveDate: any;
-            const FolderNumber: any;
-            const FolderCreateeDate: any;
-            const FolderCloseRaison: any;
-            const FolderCloseDate: any;
-            const FolderEstablishment: any;
-            const FolderComment: any;
-            const PersonIsMorale: any;
-            const PersonIsActive: any;
-            const PersonNotArchive: any;
-            const PersonInsertDate: any;
-            const PersonInsertUserId: any;
-            const PersonUpdateDate: any;
-            const PersonUpdateUserId: any;
-            const PersonSurname: any;
-            const PersonName: any;
-            const PersonMaidenName: any;
-            const PersonBusinessName: any;
-            const PersonBirthday: any;
-            const PersonSexe: any;
-            const PersonMaritalStatus: any;
-            const PersonBirthCity: any;
-            const PersonBirthCountry: any;
-            const PersonNationality: any;
-            const PersonPhoto: any;
-            const PersonPhone: any;
-            const PersonGsm: any;
-            const PersonWorkPhone: any;
-            const PersonOtherPhone1: any;
-            const PersonOtherPhone2: any;
-            const PersonEmail1: any;
-            const PersonEmail2: any;
-            const PersonBankAccount: any;
-            const PersonIdAdress: any;
-            const PersonCaption: any;
-            const PersonArchiveDate: any;
+            const Id: string;
+            const Folder: string;
+            const PersonId: string;
+            const Caption: string;
+            const FolderIsActive: string;
+            const FolderNotArchive: string;
+            const FolderInsertDate: string;
+            const FolderInsertUserId: string;
+            const FolderUpdateDate: string;
+            const FolderUpdateUserId: string;
+            const FolderCaption: string;
+            const FolderArchiveDate: string;
+            const FolderNumber: string;
+            const FolderCreateeDate: string;
+            const FolderCloseRaison: string;
+            const FolderCloseDate: string;
+            const FolderEstablishment: string;
+            const FolderComment: string;
+            const PersonIsMorale: string;
+            const PersonIsActive: string;
+            const PersonNotArchive: string;
+            const PersonInsertDate: string;
+            const PersonInsertUserId: string;
+            const PersonUpdateDate: string;
+            const PersonUpdateUserId: string;
+            const PersonSurname: string;
+            const PersonName: string;
+            const PersonMaidenName: string;
+            const PersonBusinessName: string;
+            const PersonBirthday: string;
+            const PersonSexe: string;
+            const PersonMaritalStatus: string;
+            const PersonBirthCity: string;
+            const PersonBirthCountry: string;
+            const PersonNationality: string;
+            const PersonPhoto: string;
+            const PersonPhone: string;
+            const PersonGsm: string;
+            const PersonWorkPhone: string;
+            const PersonOtherPhone1: string;
+            const PersonOtherPhone2: string;
+            const PersonEmail1: string;
+            const PersonEmail2: string;
+            const PersonBankAccount: string;
+            const PersonIdAdress: string;
+            const PersonCaption: string;
+            const PersonArchiveDate: string;
         }
     }
 }
@@ -972,7 +978,8 @@ declare namespace GestionEquestre.Ge {
         static formKey: string;
     }
     interface ManCavaliersForm {
-        Person: Serenity.StringEditor;
+        LicFfe: Serenity.StringEditor;
+        Person: Serenity.LookupEditor;
         IsActive: Serenity.BooleanEditor;
         NotArchive: Serenity.BooleanEditor;
         InsertDate: Serenity.DateEditor;
@@ -980,8 +987,8 @@ declare namespace GestionEquestre.Ge {
         UpdateDate: Serenity.DateEditor;
         UpdateUserId: Serenity.IntegerEditor;
         MilesimeLicnece: Serenity.DateEditor;
-        NiveauGalop: Serenity.IntegerEditor;
-        LicenceCompetition: Serenity.IntegerEditor;
+        NiveauGalop: Serenity.LookupEditor;
+        LicenceCompetition: Serenity.LookupEditor;
         DateCertificatMedical: Serenity.DateEditor;
         Caption: Serenity.StringEditor;
         ArchiveDate: Serenity.DateEditor;
@@ -1053,6 +1060,8 @@ declare namespace GestionEquestre.Ge {
         const idProperty = "LicFfe";
         const nameProperty = "LicFfe";
         const localTextPrefix = "Ge.ManCavaliers";
+        const lookupKey = "Ge.ManCavalier";
+        function getLookup(): Q.Lookup<ManCavaliersRow>;
         namespace Fields {
             const LicFfe: string;
             const Person: string;
@@ -1134,6 +1143,8 @@ declare namespace GestionEquestre.Ge {
     }
 }
 declare namespace GestionEquestre.Ge {
+}
+declare namespace GestionEquestre.Ge {
     class ManFolderForm extends Serenity.PrefixedContext {
         static formKey: string;
     }
@@ -1150,7 +1161,7 @@ declare namespace GestionEquestre.Ge {
         CreateeDate: Serenity.DateEditor;
         CloseRaison: Serenity.StringEditor;
         CloseDate: Serenity.DateEditor;
-        Establishment: Serenity.IntegerEditor;
+        Establishment: Serenity.LookupEditor;
         Comment: Serenity.StringEditor;
     }
 }
@@ -1177,21 +1188,21 @@ declare namespace GestionEquestre.Ge {
         const nameProperty = "Caption";
         const localTextPrefix = "Ge.ManFolder";
         namespace Fields {
-            const Id: any;
-            const IsActive: any;
-            const NotArchive: any;
-            const InsertDate: any;
-            const InsertUserId: any;
-            const UpdateDate: any;
-            const UpdateUserId: any;
-            const Caption: any;
-            const ArchiveDate: any;
-            const Number: any;
-            const CreateeDate: any;
-            const CloseRaison: any;
-            const CloseDate: any;
-            const Establishment: any;
-            const Comment: any;
+            const Id: string;
+            const IsActive: string;
+            const NotArchive: string;
+            const InsertDate: string;
+            const InsertUserId: string;
+            const UpdateDate: string;
+            const UpdateUserId: string;
+            const Caption: string;
+            const ArchiveDate: string;
+            const Number: string;
+            const CreateeDate: string;
+            const CloseRaison: string;
+            const CloseDate: string;
+            const Establishment: string;
+            const Comment: string;
         }
     }
 }
@@ -1219,11 +1230,12 @@ declare namespace GestionEquestre.Ge {
         static formKey: string;
     }
     interface ManHorsesForm {
+        Ueln: Serenity.StringEditor;
         Sire: Serenity.StringEditor;
         CleSire: Serenity.StringEditor;
         Hnin: Serenity.StringEditor;
-        BirthCountry: Serenity.StringEditor;
-        BirthOrganization: Serenity.StringEditor;
+        BirthCountry: Serenity.LookupEditor;
+        BirthOrganization: Serenity.LookupEditor;
         Name: Serenity.StringEditor;
         IsActive: Serenity.BooleanEditor;
         NotArchive: Serenity.BooleanEditor;
@@ -1232,7 +1244,7 @@ declare namespace GestionEquestre.Ge {
         UpdateDate: Serenity.DateEditor;
         UpdateUserId: Serenity.IntegerEditor;
         Birthday: Serenity.DateEditor;
-        Sexe: Serenity.IntegerEditor;
+        Sexe: Serenity.LookupEditor;
         Color: Serenity.StringEditor;
         Race: Serenity.StringEditor;
         Transponder: Serenity.StringEditor;
@@ -1247,7 +1259,7 @@ declare namespace GestionEquestre.Ge {
         Sire?: string;
         CleSire?: string;
         Hnin?: string;
-        BirthCountry?: string;
+        BirthCountry?: number;
         BirthOrganization?: string;
         Name?: string;
         IsActive?: boolean;
@@ -1270,10 +1282,9 @@ declare namespace GestionEquestre.Ge {
         BirthCountryInsertUserId?: number;
         BirthCountryUpdateDate?: string;
         BirthCountryUpdateUserId?: number;
-        BirthCountryCountry?: string;
-        BirthCountryCode?: string;
-        BirthCountryCodeUe?: number;
-        BirthCountryIso3166Country?: string;
+        BirthCountryName_FR_fr?: string;
+        BirthCountryalpha3?: string;
+        BirthCountryISOcode?: number;
         BirthOrganizationDefaultValue?: boolean;
         BirthOrganizationIsActive?: boolean;
         BirthOrganizationInsertDate?: string;
@@ -1323,10 +1334,9 @@ declare namespace GestionEquestre.Ge {
             const BirthCountryInsertUserId: string;
             const BirthCountryUpdateDate: string;
             const BirthCountryUpdateUserId: string;
-            const BirthCountryCountry: string;
-            const BirthCountryCode: string;
-            const BirthCountryCodeUe: string;
-            const BirthCountryIso3166Country: string;
+            const BirthCountryName_FR_fr: string;
+            const BirthCountryalpha3: string;
+            const BirthCountryISOcode: string;
             const BirthOrganizationDefaultValue: string;
             const BirthOrganizationIsActive: string;
             const BirthOrganizationInsertDate: string;
@@ -1371,7 +1381,7 @@ declare namespace GestionEquestre.Ge {
     }
     interface ManOwnerForm {
         Horse: Serenity.StringEditor;
-        Cavalier: Serenity.StringEditor;
+        Cavalier: Serenity.LookupEditor;
         Part: Serenity.DecimalEditor;
     }
 }
@@ -1533,8 +1543,8 @@ declare namespace GestionEquestre.Ge {
         Sexe?: number;
         MaritalStatus?: number;
         BirthCity?: string;
-        BirthCountry?: string;
-        Nationality?: string;
+        BirthCountry?: number;
+        Nationality?: number;
         Photo?: number[];
         Phone?: string;
         Gsm?: string;
@@ -1626,6 +1636,8 @@ declare namespace GestionEquestre.Ge {
         const idProperty = "Id";
         const nameProperty = "Surname";
         const localTextPrefix = "Ge.ManPerson";
+        const lookupKey = "Ge.ManPerson";
+        function getLookup(): Q.Lookup<ManPersonRow>;
         namespace Fields {
             const Id: string;
             const IsMorale: string;
@@ -1768,7 +1780,7 @@ declare namespace GestionEquestre.Ge {
         Caption: Serenity.StringEditor;
         City: Serenity.StringEditor;
         PostCode: Serenity.StringEditor;
-        Country: Serenity.StringEditor;
+        Country: Serenity.IntegerEditor;
     }
 }
 declare namespace GestionEquestre.Ge {
@@ -1784,17 +1796,17 @@ declare namespace GestionEquestre.Ge {
         Caption?: string;
         City?: string;
         PostCode?: string;
-        Country?: string;
+        Country?: number;
         CountryDefaultValue?: boolean;
         CountryIsActive?: boolean;
         CountryInsertDate?: string;
         CountryInsertUserId?: number;
         CountryUpdateDate?: string;
         CountryUpdateUserId?: number;
-        Country1?: string;
-        CountryCode?: string;
+        CountryName_FR_fr?: string;
+        Countryalpha3?: string;
         CountryCodeUe?: number;
-        CountryIso3166Country?: string;
+        CountryISOcode?: number;
     }
     namespace SetCityRow {
         const idProperty = "Id";
@@ -1821,10 +1833,10 @@ declare namespace GestionEquestre.Ge {
             const CountryInsertUserId: string;
             const CountryUpdateDate: string;
             const CountryUpdateUserId: string;
-            const Country1: string;
-            const CountryCode: string;
+            const CountryName_FR_fr: string;
+            const Countryalpha3: string;
             const CountryCodeUe: string;
-            const CountryIso3166Country: string;
+            const CountryISOcode: string;
         }
     }
 }
@@ -1858,29 +1870,33 @@ declare namespace GestionEquestre.Ge {
         InsertUserId: Serenity.IntegerEditor;
         UpdateDate: Serenity.DateEditor;
         UpdateUserId: Serenity.IntegerEditor;
-        Country: Serenity.StringEditor;
-        Code: Serenity.StringEditor;
+        Name_FR_fr: Serenity.StringEditor;
+        Name_EN_gb: Serenity.StringEditor;
+        alpha3: Serenity.StringEditor;
+        alpha2: Serenity.StringEditor;
         CodeUe: Serenity.IntegerEditor;
-        Iso3166Country: Serenity.StringEditor;
+        ISOcode: Serenity.IntegerEditor;
     }
 }
 declare namespace GestionEquestre.Ge {
     interface SetCountryRow {
-        Id?: string;
+        Id?: number;
         DefaultValue?: boolean;
         IsActive?: boolean;
         InsertDate?: string;
         InsertUserId?: number;
         UpdateDate?: string;
         UpdateUserId?: number;
-        Country?: string;
-        Code?: string;
+        Name_FR_fr?: string;
+        Name_EN_gb?: string;
+        alpha3?: string;
+        alpha2?: string;
         CodeUe?: number;
-        Iso3166Country?: string;
+        ISOcode?: number;
     }
     namespace SetCountryRow {
         const idProperty = "Id";
-        const nameProperty = "Country";
+        const nameProperty = "Name_FR_fr";
         const localTextPrefix = "Ge.SetCountry";
         const lookupKey = "Ge.SetCountry";
         function getLookup(): Q.Lookup<SetCountryRow>;
@@ -1892,10 +1908,12 @@ declare namespace GestionEquestre.Ge {
             const InsertUserId: string;
             const UpdateDate: string;
             const UpdateUserId: string;
-            const Country: string;
-            const Code: string;
+            const Name_FR_fr: string;
+            const Name_EN_gb: string;
+            const alpha3: string;
+            const alpha2: string;
             const CodeUe: string;
-            const Iso3166Country: string;
+            const ISOcode: string;
         }
     }
 }
@@ -2186,7 +2204,7 @@ declare namespace GestionEquestre.Ge {
         DefaultValue: Serenity.BooleanEditor;
         IsActive: Serenity.BooleanEditor;
         InsertDate: Serenity.DateEditor;
-        InsertUserId: Serenity.IntegerEditor;
+        InsertUserId: Serenity.LookupEditor;
         UpdateDate: Serenity.DateEditor;
         UpdateUserId: Serenity.IntegerEditor;
         Organization: Serenity.StringEditor;

@@ -11,17 +11,17 @@
         Caption?: string;
         City?: string;
         PostCode?: string;
-        Country?: string;
+        Country?: number;
         CountryDefaultValue?: boolean;
         CountryIsActive?: boolean;
         CountryInsertDate?: string;
         CountryInsertUserId?: number;
         CountryUpdateDate?: string;
         CountryUpdateUserId?: number;
-        Country1?: string;
-        CountryCode?: string;
+        CountryName_FR_fr?: string;
+        Countryalpha3?: string;
         CountryCodeUe?: number;
-        CountryIso3166Country?: string;
+        CountryISOcode?: number;
     }
 
     export namespace SetCityRow {
@@ -53,10 +53,10 @@
             export declare const CountryInsertUserId: string;
             export declare const CountryUpdateDate: string;
             export declare const CountryUpdateUserId: string;
-            export declare const Country1: string;
-            export declare const CountryCode: string;
+            export declare const CountryName_FR_fr: string;
+            export declare const Countryalpha3: string;
             export declare const CountryCodeUe: string;
-            export declare const CountryIso3166Country: string;
+            export declare const CountryISOcode: string;
         }
 
         [
@@ -78,10 +78,10 @@
             'CountryInsertUserId', 
             'CountryUpdateDate', 
             'CountryUpdateUserId', 
-            'Country1', 
-            'CountryCode', 
+            'CountryName_FR_fr', 
+            'Countryalpha3', 
             'CountryCodeUe', 
-            'CountryIso3166Country'
+            'CountryISOcode'
         ].forEach(x => (<any>Fields)[x] = x);
     }
 }

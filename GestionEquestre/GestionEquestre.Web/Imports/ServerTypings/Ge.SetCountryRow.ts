@@ -1,21 +1,23 @@
 ﻿namespace GestionEquestre.Ge {
     export interface SetCountryRow {
-        Id?: string;
+        Id?: number;
         DefaultValue?: boolean;
         IsActive?: boolean;
         InsertDate?: string;
         InsertUserId?: number;
         UpdateDate?: string;
         UpdateUserId?: number;
-        Country?: string;
-        Code?: string;
+        Name_FR_fr?: string;
+        Name_EN_gb?: string;
+        alpha3?: string;
+        alpha2?: string;
         CodeUe?: number;
-        Iso3166Country?: string;
+        ISOcode?: number;
     }
 
     export namespace SetCountryRow {
         export const idProperty = 'Id';
-        export const nameProperty = 'Country';
+        export const nameProperty = 'Name_FR_fr';
         export const localTextPrefix = 'Ge.SetCountry';
         export const lookupKey = 'Ge.SetCountry';
 
@@ -31,10 +33,12 @@
             export declare const InsertUserId: string;
             export declare const UpdateDate: string;
             export declare const UpdateUserId: string;
-            export declare const Country: string;
-            export declare const Code: string;
+            export declare const Name_FR_fr: string;
+            export declare const Name_EN_gb: string;
+            export declare const alpha3: string;
+            export declare const alpha2: string;
             export declare const CodeUe: string;
-            export declare const Iso3166Country: string;
+            export declare const ISOcode: string;
         }
 
         [
@@ -45,10 +49,12 @@
             'InsertUserId', 
             'UpdateDate', 
             'UpdateUserId', 
-            'Country', 
-            'Code', 
+            'Name_FR_fr', 
+            'Name_EN_gb', 
+            'alpha3', 
+            'alpha2', 
             'CodeUe', 
-            'Iso3166Country'
+            'ISOcode'
         ].forEach(x => (<any>Fields)[x] = x);
     }
 }

@@ -504,16 +504,7 @@ var GestionEquestre;
         }(Serenity.PrefixedContext));
         LinkFolderCavalierForm.formKey = 'Ge.LinkFolderCavalier';
         Ge.LinkFolderCavalierForm = LinkFolderCavalierForm;
-        [,
-            ['Folder', function () { return Serenity.IntegerEditor; }],
-            ['Cavalier', function () { return Serenity.StringEditor; }]
-        ].forEach(function (x) { return Object.defineProperty(LinkFolderCavalierForm.prototype, x[0], {
-            get: function () {
-                return this.w(x[0], x[1]());
-            },
-            enumerable: true,
-            configurable: true
-        }); });
+        [['Folder', function () { return Serenity.IntegerEditor; }], ['Cavalier', function () { return Serenity.LookupEditor; }]].forEach(function (x) { return Object.defineProperty(LinkFolderCavalierForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
     })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
 })(GestionEquestre || (GestionEquestre = {}));
 var GestionEquestre;
@@ -601,16 +592,7 @@ var GestionEquestre;
         }(Serenity.PrefixedContext));
         LinkFolderHorseForm.formKey = 'Ge.LinkFolderHorse';
         Ge.LinkFolderHorseForm = LinkFolderHorseForm;
-        [,
-            ['Folder', function () { return Serenity.IntegerEditor; }],
-            ['Horse', function () { return Serenity.StringEditor; }]
-        ].forEach(function (x) { return Object.defineProperty(LinkFolderHorseForm.prototype, x[0], {
-            get: function () {
-                return this.w(x[0], x[1]());
-            },
-            enumerable: true,
-            configurable: true
-        }); });
+        [['Folder', function () { return Serenity.IntegerEditor; }], ['Horse', function () { return Serenity.LookupEditor; }]].forEach(function (x) { return Object.defineProperty(LinkFolderHorseForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
     })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
 })(GestionEquestre || (GestionEquestre = {}));
 var GestionEquestre;
@@ -705,17 +687,7 @@ var GestionEquestre;
         }(Serenity.PrefixedContext));
         LinkFolderPersonForm.formKey = 'Ge.LinkFolderPerson';
         Ge.LinkFolderPersonForm = LinkFolderPersonForm;
-        [,
-            ['Folder', function () { return Serenity.IntegerEditor; }],
-            ['PersonId', function () { return Serenity.StringEditor; }],
-            ['Caption', function () { return Serenity.StringEditor; }]
-        ].forEach(function (x) { return Object.defineProperty(LinkFolderPersonForm.prototype, x[0], {
-            get: function () {
-                return this.w(x[0], x[1]());
-            },
-            enumerable: true,
-            configurable: true
-        }); });
+        [['Folder', function () { return Serenity.IntegerEditor; }], ['PersonId', function () { return Serenity.LookupEditor; }], ['Caption', function () { return Serenity.StringEditor; }]].forEach(function (x) { return Object.defineProperty(LinkFolderPersonForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
     })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
 })(GestionEquestre || (GestionEquestre = {}));
 var GestionEquestre;
@@ -915,7 +887,7 @@ var GestionEquestre;
         }(Serenity.PrefixedContext));
         ManCavaliersForm.formKey = 'Ge.ManCavaliers';
         Ge.ManCavaliersForm = ManCavaliersForm;
-        [['Person', function () { return Serenity.StringEditor; }], ['IsActive', function () { return Serenity.BooleanEditor; }], ['NotArchive', function () { return Serenity.BooleanEditor; }], ['InsertDate', function () { return Serenity.DateEditor; }], ['InsertUserId', function () { return Serenity.IntegerEditor; }], ['UpdateDate', function () { return Serenity.DateEditor; }], ['UpdateUserId', function () { return Serenity.IntegerEditor; }], ['MilesimeLicnece', function () { return Serenity.DateEditor; }], ['NiveauGalop', function () { return Serenity.IntegerEditor; }], ['LicenceCompetition', function () { return Serenity.IntegerEditor; }], ['DateCertificatMedical', function () { return Serenity.DateEditor; }], ['Caption', function () { return Serenity.StringEditor; }], ['ArchiveDate', function () { return Serenity.DateEditor; }]].forEach(function (x) { return Object.defineProperty(ManCavaliersForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
+        [['LicFfe', function () { return Serenity.StringEditor; }], ['Person', function () { return Serenity.LookupEditor; }], ['IsActive', function () { return Serenity.BooleanEditor; }], ['NotArchive', function () { return Serenity.BooleanEditor; }], ['InsertDate', function () { return Serenity.DateEditor; }], ['InsertUserId', function () { return Serenity.IntegerEditor; }], ['UpdateDate', function () { return Serenity.DateEditor; }], ['UpdateUserId', function () { return Serenity.IntegerEditor; }], ['MilesimeLicnece', function () { return Serenity.DateEditor; }], ['NiveauGalop', function () { return Serenity.LookupEditor; }], ['LicenceCompetition', function () { return Serenity.LookupEditor; }], ['DateCertificatMedical', function () { return Serenity.DateEditor; }], ['Caption', function () { return Serenity.StringEditor; }], ['ArchiveDate', function () { return Serenity.DateEditor; }]].forEach(function (x) { return Object.defineProperty(ManCavaliersForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
     })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
 })(GestionEquestre || (GestionEquestre = {}));
 var GestionEquestre;
@@ -927,6 +899,11 @@ var GestionEquestre;
             ManCavaliersRow.idProperty = 'LicFfe';
             ManCavaliersRow.nameProperty = 'LicFfe';
             ManCavaliersRow.localTextPrefix = 'Ge.ManCavaliers';
+            ManCavaliersRow.lookupKey = 'Ge.ManCavalier';
+            function getLookup() {
+                return Q.getLookup('Ge.ManCavalier');
+            }
+            ManCavaliersRow.getLookup = getLookup;
             var Fields;
             (function (Fields) {
             })(Fields = ManCavaliersRow.Fields || (ManCavaliersRow.Fields = {}));
@@ -1032,28 +1009,7 @@ var GestionEquestre;
         }(Serenity.PrefixedContext));
         ManFolderForm.formKey = 'Ge.ManFolder';
         Ge.ManFolderForm = ManFolderForm;
-        [,
-            ['IsActive', function () { return Serenity.BooleanEditor; }],
-            ['NotArchive', function () { return Serenity.BooleanEditor; }],
-            ['InsertDate', function () { return Serenity.DateEditor; }],
-            ['InsertUserId', function () { return Serenity.IntegerEditor; }],
-            ['UpdateDate', function () { return Serenity.DateEditor; }],
-            ['UpdateUserId', function () { return Serenity.IntegerEditor; }],
-            ['Caption', function () { return Serenity.StringEditor; }],
-            ['ArchiveDate', function () { return Serenity.DateEditor; }],
-            ['Number', function () { return Serenity.IntegerEditor; }],
-            ['CreateeDate', function () { return Serenity.DateEditor; }],
-            ['CloseRaison', function () { return Serenity.StringEditor; }],
-            ['CloseDate', function () { return Serenity.DateEditor; }],
-            ['Establishment', function () { return Serenity.IntegerEditor; }],
-            ['Comment', function () { return Serenity.StringEditor; }]
-        ].forEach(function (x) { return Object.defineProperty(ManFolderForm.prototype, x[0], {
-            get: function () {
-                return this.w(x[0], x[1]());
-            },
-            enumerable: true,
-            configurable: true
-        }); });
+        [['IsActive', function () { return Serenity.BooleanEditor; }], ['NotArchive', function () { return Serenity.BooleanEditor; }], ['InsertDate', function () { return Serenity.DateEditor; }], ['InsertUserId', function () { return Serenity.IntegerEditor; }], ['UpdateDate', function () { return Serenity.DateEditor; }], ['UpdateUserId', function () { return Serenity.IntegerEditor; }], ['Caption', function () { return Serenity.StringEditor; }], ['ArchiveDate', function () { return Serenity.DateEditor; }], ['Number', function () { return Serenity.IntegerEditor; }], ['CreateeDate', function () { return Serenity.DateEditor; }], ['CloseRaison', function () { return Serenity.StringEditor; }], ['CloseDate', function () { return Serenity.DateEditor; }], ['Establishment', function () { return Serenity.LookupEditor; }], ['Comment', function () { return Serenity.StringEditor; }]].forEach(function (x) { return Object.defineProperty(ManFolderForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
     })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
 })(GestionEquestre || (GestionEquestre = {}));
 var GestionEquestre;
@@ -1126,7 +1082,7 @@ var GestionEquestre;
         }(Serenity.PrefixedContext));
         ManHorsesForm.formKey = 'Ge.ManHorses';
         Ge.ManHorsesForm = ManHorsesForm;
-        [['Sire', function () { return Serenity.StringEditor; }], ['CleSire', function () { return Serenity.StringEditor; }], ['Hnin', function () { return Serenity.StringEditor; }], ['BirthCountry', function () { return Serenity.StringEditor; }], ['BirthOrganization', function () { return Serenity.StringEditor; }], ['Name', function () { return Serenity.StringEditor; }], ['IsActive', function () { return Serenity.BooleanEditor; }], ['NotArchive', function () { return Serenity.BooleanEditor; }], ['InsertDate', function () { return Serenity.DateEditor; }], ['InsertUserId', function () { return Serenity.IntegerEditor; }], ['UpdateDate', function () { return Serenity.DateEditor; }], ['UpdateUserId', function () { return Serenity.IntegerEditor; }], ['Birthday', function () { return Serenity.DateEditor; }], ['Sexe', function () { return Serenity.IntegerEditor; }], ['Color', function () { return Serenity.StringEditor; }], ['Race', function () { return Serenity.StringEditor; }], ['Transponder', function () { return Serenity.StringEditor; }], ['FinalExit', function () { return Serenity.DateEditor; }], ['Description', function () { return Serenity.StringEditor; }], ['ArchiveDate', function () { return Serenity.DateEditor; }]].forEach(function (x) { return Object.defineProperty(ManHorsesForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
+        [['Ueln', function () { return Serenity.StringEditor; }], ['Sire', function () { return Serenity.StringEditor; }], ['CleSire', function () { return Serenity.StringEditor; }], ['Hnin', function () { return Serenity.StringEditor; }], ['BirthCountry', function () { return Serenity.LookupEditor; }], ['BirthOrganization', function () { return Serenity.LookupEditor; }], ['Name', function () { return Serenity.StringEditor; }], ['IsActive', function () { return Serenity.BooleanEditor; }], ['NotArchive', function () { return Serenity.BooleanEditor; }], ['InsertDate', function () { return Serenity.DateEditor; }], ['InsertUserId', function () { return Serenity.IntegerEditor; }], ['UpdateDate', function () { return Serenity.DateEditor; }], ['UpdateUserId', function () { return Serenity.IntegerEditor; }], ['Birthday', function () { return Serenity.DateEditor; }], ['Sexe', function () { return Serenity.LookupEditor; }], ['Color', function () { return Serenity.StringEditor; }], ['Race', function () { return Serenity.StringEditor; }], ['Transponder', function () { return Serenity.StringEditor; }], ['FinalExit', function () { return Serenity.DateEditor; }], ['Description', function () { return Serenity.StringEditor; }], ['ArchiveDate', function () { return Serenity.DateEditor; }]].forEach(function (x) { return Object.defineProperty(ManHorsesForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
     })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
 })(GestionEquestre || (GestionEquestre = {}));
 var GestionEquestre;
@@ -1169,10 +1125,9 @@ var GestionEquestre;
                 'BirthCountryInsertUserId',
                 'BirthCountryUpdateDate',
                 'BirthCountryUpdateUserId',
-                'BirthCountryCountry',
-                'BirthCountryCode',
-                'BirthCountryCodeUe',
-                'BirthCountryIso3166Country',
+                'BirthCountryName_FR_fr',
+                'BirthCountryalpha3',
+                'BirthCountryISOcode',
                 'BirthOrganizationDefaultValue',
                 'BirthOrganizationIsActive',
                 'BirthOrganizationInsertDate',
@@ -1231,7 +1186,7 @@ var GestionEquestre;
         }(Serenity.PrefixedContext));
         ManOwnerForm.formKey = 'Ge.ManOwner';
         Ge.ManOwnerForm = ManOwnerForm;
-        [['Horse', function () { return Serenity.StringEditor; }], ['Cavalier', function () { return Serenity.StringEditor; }], ['Part', function () { return Serenity.DecimalEditor; }]].forEach(function (x) { return Object.defineProperty(ManOwnerForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
+        [['Horse', function () { return Serenity.StringEditor; }], ['Cavalier', function () { return Serenity.LookupEditor; }], ['Part', function () { return Serenity.DecimalEditor; }]].forEach(function (x) { return Object.defineProperty(ManOwnerForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
     })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
 })(GestionEquestre || (GestionEquestre = {}));
 var GestionEquestre;
@@ -1338,6 +1293,11 @@ var GestionEquestre;
             ManPersonRow.idProperty = 'Id';
             ManPersonRow.nameProperty = 'Surname';
             ManPersonRow.localTextPrefix = 'Ge.ManPerson';
+            ManPersonRow.lookupKey = 'Ge.ManPerson';
+            function getLookup() {
+                return Q.getLookup('Ge.ManPerson');
+            }
+            ManPersonRow.getLookup = getLookup;
             var Fields;
             (function (Fields) {
             })(Fields = ManPersonRow.Fields || (ManPersonRow.Fields = {}));
@@ -1488,7 +1448,7 @@ var GestionEquestre;
         }(Serenity.PrefixedContext));
         SetCityForm.formKey = 'Ge.SetCity';
         Ge.SetCityForm = SetCityForm;
-        [['DefaultValue', function () { return Serenity.BooleanEditor; }], ['IsActive', function () { return Serenity.BooleanEditor; }], ['InsertDate', function () { return Serenity.DateEditor; }], ['InsertUserId', function () { return Serenity.IntegerEditor; }], ['UpdateDate', function () { return Serenity.DateEditor; }], ['UpdateUserId', function () { return Serenity.IntegerEditor; }], ['FrCodeInsee', function () { return Serenity.StringEditor; }], ['Caption', function () { return Serenity.StringEditor; }], ['City', function () { return Serenity.StringEditor; }], ['PostCode', function () { return Serenity.StringEditor; }], ['Country', function () { return Serenity.StringEditor; }]].forEach(function (x) { return Object.defineProperty(SetCityForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
+        [['DefaultValue', function () { return Serenity.BooleanEditor; }], ['IsActive', function () { return Serenity.BooleanEditor; }], ['InsertDate', function () { return Serenity.DateEditor; }], ['InsertUserId', function () { return Serenity.IntegerEditor; }], ['UpdateDate', function () { return Serenity.DateEditor; }], ['UpdateUserId', function () { return Serenity.IntegerEditor; }], ['FrCodeInsee', function () { return Serenity.StringEditor; }], ['Caption', function () { return Serenity.StringEditor; }], ['City', function () { return Serenity.StringEditor; }], ['PostCode', function () { return Serenity.StringEditor; }], ['Country', function () { return Serenity.IntegerEditor; }]].forEach(function (x) { return Object.defineProperty(SetCityForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
     })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
 })(GestionEquestre || (GestionEquestre = {}));
 var GestionEquestre;
@@ -1527,10 +1487,10 @@ var GestionEquestre;
                 'CountryInsertUserId',
                 'CountryUpdateDate',
                 'CountryUpdateUserId',
-                'Country1',
-                'CountryCode',
+                'CountryName_FR_fr',
+                'Countryalpha3',
                 'CountryCodeUe',
-                'CountryIso3166Country'
+                'CountryISOcode'
             ].forEach(function (x) { return Fields[x] = x; });
         })(SetCityRow = Ge.SetCityRow || (Ge.SetCityRow = {}));
     })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
@@ -1573,7 +1533,7 @@ var GestionEquestre;
         }(Serenity.PrefixedContext));
         SetCountryForm.formKey = 'Ge.SetCountry';
         Ge.SetCountryForm = SetCountryForm;
-        [['DefaultValue', function () { return Serenity.BooleanEditor; }], ['IsActive', function () { return Serenity.BooleanEditor; }], ['InsertDate', function () { return Serenity.DateEditor; }], ['InsertUserId', function () { return Serenity.IntegerEditor; }], ['UpdateDate', function () { return Serenity.DateEditor; }], ['UpdateUserId', function () { return Serenity.IntegerEditor; }], ['Country', function () { return Serenity.StringEditor; }], ['Code', function () { return Serenity.StringEditor; }], ['CodeUe', function () { return Serenity.IntegerEditor; }], ['Iso3166Country', function () { return Serenity.StringEditor; }]].forEach(function (x) { return Object.defineProperty(SetCountryForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
+        [['DefaultValue', function () { return Serenity.BooleanEditor; }], ['IsActive', function () { return Serenity.BooleanEditor; }], ['InsertDate', function () { return Serenity.DateEditor; }], ['InsertUserId', function () { return Serenity.IntegerEditor; }], ['UpdateDate', function () { return Serenity.DateEditor; }], ['UpdateUserId', function () { return Serenity.IntegerEditor; }], ['Name_FR_fr', function () { return Serenity.StringEditor; }], ['Name_EN_gb', function () { return Serenity.StringEditor; }], ['alpha3', function () { return Serenity.StringEditor; }], ['alpha2', function () { return Serenity.StringEditor; }], ['CodeUe', function () { return Serenity.IntegerEditor; }], ['ISOcode', function () { return Serenity.IntegerEditor; }]].forEach(function (x) { return Object.defineProperty(SetCountryForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
     })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
 })(GestionEquestre || (GestionEquestre = {}));
 var GestionEquestre;
@@ -1583,7 +1543,7 @@ var GestionEquestre;
         var SetCountryRow;
         (function (SetCountryRow) {
             SetCountryRow.idProperty = 'Id';
-            SetCountryRow.nameProperty = 'Country';
+            SetCountryRow.nameProperty = 'Name_FR_fr';
             SetCountryRow.localTextPrefix = 'Ge.SetCountry';
             SetCountryRow.lookupKey = 'Ge.SetCountry';
             function getLookup() {
@@ -1601,10 +1561,12 @@ var GestionEquestre;
                 'InsertUserId',
                 'UpdateDate',
                 'UpdateUserId',
-                'Country',
-                'Code',
+                'Name_FR_fr',
+                'Name_EN_gb',
+                'alpha3',
+                'alpha2',
                 'CodeUe',
-                'Iso3166Country'
+                'ISOcode'
             ].forEach(function (x) { return Fields[x] = x; });
         })(SetCountryRow = Ge.SetCountryRow || (Ge.SetCountryRow = {}));
     })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
@@ -1935,7 +1897,7 @@ var GestionEquestre;
         }(Serenity.PrefixedContext));
         SetUelnorgaForm.formKey = 'Ge.SetUelnorga';
         Ge.SetUelnorgaForm = SetUelnorgaForm;
-        [['DefaultValue', function () { return Serenity.BooleanEditor; }], ['IsActive', function () { return Serenity.BooleanEditor; }], ['InsertDate', function () { return Serenity.DateEditor; }], ['InsertUserId', function () { return Serenity.IntegerEditor; }], ['UpdateDate', function () { return Serenity.DateEditor; }], ['UpdateUserId', function () { return Serenity.IntegerEditor; }], ['Organization', function () { return Serenity.StringEditor; }], ['UelnOrganization', function () { return Serenity.StringEditor; }]].forEach(function (x) { return Object.defineProperty(SetUelnorgaForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
+        [['DefaultValue', function () { return Serenity.BooleanEditor; }], ['IsActive', function () { return Serenity.BooleanEditor; }], ['InsertDate', function () { return Serenity.DateEditor; }], ['InsertUserId', function () { return Serenity.LookupEditor; }], ['UpdateDate', function () { return Serenity.DateEditor; }], ['UpdateUserId', function () { return Serenity.IntegerEditor; }], ['Organization', function () { return Serenity.StringEditor; }], ['UelnOrganization', function () { return Serenity.StringEditor; }]].forEach(function (x) { return Object.defineProperty(SetUelnorgaForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
     })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
 })(GestionEquestre || (GestionEquestre = {}));
 var GestionEquestre;
