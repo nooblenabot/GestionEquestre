@@ -9,17 +9,17 @@ namespace GestionEquestre.Ge.Entities
     using System.ComponentModel;
     using System.IO;
 
-    [ConnectionKey("GE"), TableName("[dbo].[SET_GALOP]")]
-    [DisplayName("Set Galop"), InstanceName("Set Galop"), TwoLevelCached]
+    [ConnectionKey("GE"), TableName("[dbo].[SET_SEXE]")]
+    [DisplayName("Settings Sexe"), InstanceName("Set Sexe"), TwoLevelCached]
     [ReadPermission("Administration:General")]
     [ModifyPermission("Administration:General")]
-    public sealed class SetGalopRow : Row, IIdRow, INameRow
+    public sealed class SetSexeRow : Row, IIdRow, INameRow
     {
-        [DisplayName("Id"), Identity]
-        public Int16? Id
+        [DisplayName("Sexe Id"), PrimaryKey,LookupInclude, NotNull]
+        public Int16? SexeId
         {
-            get { return Fields.Id[this]; }
-            set { Fields.Id[this] = value; }
+            get { return Fields.SexeId[this]; }
+            set { Fields.SexeId[this] = value; }
         }
 
         [DisplayName("Default Value"), NotNull, Updatable(false), HideOnInsert]
@@ -36,7 +36,7 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.IsActive[this] = value; }
         }
 
-        [DisplayName("Insert Date"), HideOnInsert, Updatable(false), DateTimeFormatter]
+        [DisplayName("Insert Date") ,HideOnInsert, Updatable(false), DateTimeFormatter]
         public DateTime? InsertDate
         {
             get { return Fields.InsertDate[this]; }
@@ -50,7 +50,7 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.InsertUserId[this] = value; }
         }
 
-        [DisplayName("Update Date"), HideOnInsert, DateTimeFormatter]
+        [DisplayName("Update Date"),HideOnInsert, DateTimeFormatter]
         public DateTime? UpdateDate
         {
             get { return Fields.UpdateDate[this]; }
@@ -64,28 +64,28 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.UpdateUserId[this] = value; }
         }
 
-        [DisplayName("Caption"), Size(50), QuickSearch]
+        [DisplayName("Caption"), Size(50), LookupInclude, QuickSearch]
         public String Caption
         {
             get { return Fields.Caption[this]; }
             set { Fields.Caption[this] = value; }
         }
 
-        [DisplayName("Code"), Size(5)]
-        public String Code
+        [DisplayName("Civility"), Column("civility"), Size(50)]
+        public String Civility
         {
-            get { return Fields.Code[this]; }
-            set { Fields.Code[this] = value; }
+            get { return Fields.Civility[this]; }
+            set { Fields.Civility[this] = value; }
         }
 
-        [DisplayName("Username"), Expression("jIUser.[Username]")]
+        [DisplayName("Username"), Expression("jIUser.[Username]"), HideOnInsert, Updatable(false)]
         public String InsertUsername
         {
             get { return Fields.InsertUsername[this]; }
             set { Fields.InsertUsername[this] = value; }
         }
 
-        [DisplayName("Username"), Expression("jUUser.[Username]")]
+        [DisplayName("Username"), Expression("jUUser.[Username]"), HideOnInsert]
         public String UpdateUsername
         {
             get { return Fields.UpdateUsername[this]; }
@@ -94,7 +94,7 @@ namespace GestionEquestre.Ge.Entities
 
         IIdField IIdRow.IdField
         {
-            get { return Fields.Id; }
+            get { return Fields.SexeId; }
         }
 
         StringField INameRow.NameField
@@ -104,14 +104,14 @@ namespace GestionEquestre.Ge.Entities
 
         public static readonly RowFields Fields = new RowFields().Init();
 
-        public SetGalopRow()
+        public SetSexeRow()
             : base(Fields)
         {
         }
 
         public class RowFields : RowFieldsBase
         {
-            public Int16Field Id;
+            public Int16Field SexeId;
             public BooleanField DefaultValue;
             public BooleanField IsActive;
             public DateTimeField InsertDate;
@@ -119,7 +119,7 @@ namespace GestionEquestre.Ge.Entities
             public DateTimeField UpdateDate;
             public Int32Field UpdateUserId;
             public StringField Caption;
-            public StringField Code;
+            public StringField Civility;
 
             public StringField InsertUsername;
             public StringField UpdateUsername;
@@ -127,7 +127,7 @@ namespace GestionEquestre.Ge.Entities
             public RowFields()
                 : base()
             {
-                LocalTextPrefix = "Ge.SetGalop";
+                LocalTextPrefix = "Ge.SetSexe";
             }
         }
     }

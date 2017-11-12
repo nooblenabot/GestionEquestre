@@ -1657,9 +1657,9 @@
     <TypeScriptCompile Include="Imports\ServerTypings\Ge.SetCityService.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
-    <Content Include="Modules\Ge\SetCity\SetCityIndex.cshtml" />
-    <TypeScriptCompile Include="Modules\Ge\SetCity\SetCityDialog.ts" />
-    <TypeScriptCompile Include="Modules\Ge\SetCity\SetCityGrid.ts" />
+    <Content Include="Modules\Ge\Administration\GlobalsSettings\SetCity\SetCityIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\Ge\Administration\GlobalsSettings\SetCity\SetCityDialog.ts" />
+    <TypeScriptCompile Include="Modules\Ge\Administration\GlobalsSettings\SetCity\SetCityGrid.ts" />
     <TypeScriptCompile Include="Imports\ServerTypings\Ge.SetCityForm.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
@@ -1669,9 +1669,9 @@
     <TypeScriptCompile Include="Imports\ServerTypings\Ge.SetCountryService.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
-    <Content Include="Modules\Ge\SetCountry\SetCountryIndex.cshtml" />
-    <TypeScriptCompile Include="Modules\Ge\SetCountry\SetCountryDialog.ts" />
-    <TypeScriptCompile Include="Modules\Ge\SetCountry\SetCountryGrid.ts" />
+    <Content Include="Modules\Ge\Administration\GlobalsSettings\SetCountry\SetCountryIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\Ge\Administration\GlobalsSettings\SetCountry\SetCountryDialog.ts" />
+    <TypeScriptCompile Include="Modules\Ge\Administration\GlobalsSettings\SetCountry\SetCountryGrid.ts" />
     <TypeScriptCompile Include="Imports\ServerTypings\Ge.SetCountryForm.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
@@ -1681,9 +1681,9 @@
     <TypeScriptCompile Include="Imports\ServerTypings\Ge.SetGalopService.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
-    <Content Include="Modules\Ge\SetGalop\SetGalopIndex.cshtml" />
-    <TypeScriptCompile Include="Modules\Ge\SetGalop\SetGalopDialog.ts" />
-    <TypeScriptCompile Include="Modules\Ge\SetGalop\SetGalopGrid.ts" />
+    <Content Include="Modules\Ge\Administration\GlobalsSettings\SetGalop\SetGalopIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\Ge\Administration\GlobalsSettings\SetGalop\SetGalopDialog.ts" />
+    <TypeScriptCompile Include="Modules\Ge\Administration\GlobalsSettings\SetGalop\SetGalopGrid.ts" />
     <TypeScriptCompile Include="Imports\ServerTypings\Ge.SetGalopForm.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
@@ -1693,9 +1693,9 @@
     <TypeScriptCompile Include="Imports\ServerTypings\Ge.SetLfcService.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
-    <Content Include="Modules\Ge\SetLfc\SetLfcIndex.cshtml" />
-    <TypeScriptCompile Include="Modules\Ge\SetLfc\SetLfcDialog.ts" />
-    <TypeScriptCompile Include="Modules\Ge\SetLfc\SetLfcGrid.ts" />
+    <Content Include="Modules\Ge\Administration\GlobalsSettings\SetLfc\SetLfcIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\Ge\Administration\GlobalsSettings\SetLfc\SetLfcDialog.ts" />
+    <TypeScriptCompile Include="Modules\Ge\Administration\GlobalsSettings\SetLfc\SetLfcGrid.ts" />
     <TypeScriptCompile Include="Imports\ServerTypings\Ge.SetLfcForm.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
@@ -1705,9 +1705,9 @@
     <TypeScriptCompile Include="Imports\ServerTypings\Ge.SetMaritalstatusService.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
-    <Content Include="Modules\Ge\SetMaritalstatus\SetMaritalstatusIndex.cshtml" />
-    <TypeScriptCompile Include="Modules\Ge\SetMaritalstatus\SetMaritalstatusDialog.ts" />
-    <TypeScriptCompile Include="Modules\Ge\SetMaritalstatus\SetMaritalstatusGrid.ts" />
+    <Content Include="Modules\Ge\Administration\GlobalsSettings\SetMaritalstatus\SetMaritalstatusIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\Ge\Administration\GlobalsSettings\SetMaritalstatus\SetMaritalstatusDialog.ts" />
+    <TypeScriptCompile Include="Modules\Ge\Administration\GlobalsSettings\SetMaritalstatus\SetMaritalstatusGrid.ts" />
     <TypeScriptCompile Include="Imports\ServerTypings\Ge.SetMaritalstatusForm.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
@@ -1717,9 +1717,9 @@
     <TypeScriptCompile Include="Imports\ServerTypings\Ge.SetSexeService.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
-    <Content Include="Modules\Ge\SetSexe\SetSexeIndex.cshtml" />
-    <TypeScriptCompile Include="Modules\Ge\SetSexe\SetSexeDialog.ts" />
-    <TypeScriptCompile Include="Modules\Ge\SetSexe\SetSexeGrid.ts" />
+    <Content Include="Modules\Ge\Administration\GlobalsSettings\SetSexe\SetSexeIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\Ge\Administration\GlobalsSettings\SetSexe\SetSexeDialog.ts" />
+    <TypeScriptCompile Include="Modules\Ge\Administration\GlobalsSettings\SetSexe\SetSexeGrid.ts" />
     <TypeScriptCompile Include="Imports\ServerTypings\Ge.SetSexeForm.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
@@ -1729,9 +1729,9 @@
     <TypeScriptCompile Include="Imports\ServerTypings\Ge.SetUelnorgaService.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
-    <Content Include="Modules\Ge\SetUelnorga\SetUelnorgaIndex.cshtml" />
-    <TypeScriptCompile Include="Modules\Ge\SetUelnorga\SetUelnorgaDialog.ts" />
-    <TypeScriptCompile Include="Modules\Ge\SetUelnorga\SetUelnorgaGrid.ts" />
+    <Content Include="Modules\Ge\Administration\GlobalsSettings\SetUelnorga\SetUelnorgaIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\Ge\Administration\GlobalsSettings\SetUelnorga\SetUelnorgaDialog.ts" />
+    <TypeScriptCompile Include="Modules\Ge\Administration\GlobalsSettings\SetUelnorga\SetUelnorgaGrid.ts" />
     <TypeScriptCompile Include="Imports\ServerTypings\Ge.SetUelnorgaForm.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
@@ -1884,13 +1884,13 @@
     <Compile Include="Modules\Ge\ManHorses\ManHorsesRow.cs" />
     <Compile Include="Modules\Ge\ManCavaliers\ManCavalierLookup.cs" />
     <Compile Include="Modules\Ge\ManPerson\ManPersonLookup.cs" />
-    <Compile Include="Modules\Ge\SetCity\SetCityLookup.cs" />
-    <Compile Include="Modules\Ge\SetCountry\SetCountryLookup.cs" />
-    <Compile Include="Modules\Ge\SetGalop\SetGalopLookup.cs" />
-    <Compile Include="Modules\Ge\SetLfc\SetLFCLookup.cs" />
-    <Compile Include="Modules\Ge\SetMaritalstatus\SetMaritalStatusLookup.cs" />
-    <Compile Include="Modules\Ge\SetSexe\SetSexeLookup.cs" />
-    <Compile Include="Modules\Ge\SetUelnorga\SetUelnorgaLookup.cs" />
+    <Compile Include="Modules\Ge\Administration\GlobalsSettings\SetCity\SetCityLookup.cs" />
+    <Compile Include="Modules\Ge\Administration\GlobalsSettings\SetCountry\SetCountryLookup.cs" />
+    <Compile Include="Modules\Ge\Administration\GlobalsSettings\SetGalop\SetGalopLookup.cs" />
+    <Compile Include="Modules\Ge\Administration\GlobalsSettings\SetLfc\SetLFCLookup.cs" />
+    <Compile Include="Modules\Ge\Administration\GlobalsSettings\SetMaritalstatus\SetMaritalStatusLookup.cs" />
+    <Compile Include="Modules\Ge\Administration\GlobalsSettings\SetSexe\SetSexeLookup.cs" />
+    <Compile Include="Modules\Ge\Administration\GlobalsSettings\SetUelnorga\SetUelnorgaLookup.cs" />
     <Compile Include="Modules\Membership\Account\ChangePassword\AccountPage.ChangePassword.cs" />
     <Compile Include="Modules\Membership\Account\EnvironmentSettings.cs" />
     <Compile Include="Modules\Membership\Account\ForgotPassword\AccountPage.ForgotPassword.cs" />
@@ -1976,48 +1976,48 @@
     <Compile Include="Modules\Ge\ManPerson\ManPersonPage.cs" />
     <Compile Include="Modules\Ge\ManPerson\ManPersonColumns.cs" />
     <Compile Include="Modules\Ge\ManPerson\ManPersonForm.cs" />
-    <Compile Include="Modules\Ge\SetCity\SetCityRow.cs" />
-    <Compile Include="Modules\Ge\SetCity\SetCityRepository.cs" />
-    <Compile Include="Modules\Ge\SetCity\SetCityEndpoint.cs" />
-    <Compile Include="Modules\Ge\SetCity\SetCityPage.cs" />
-    <Compile Include="Modules\Ge\SetCity\SetCityColumns.cs" />
-    <Compile Include="Modules\Ge\SetCity\SetCityForm.cs" />
-    <Compile Include="Modules\Ge\SetCountry\SetCountryRow.cs" />
-    <Compile Include="Modules\Ge\SetCountry\SetCountryRepository.cs" />
-    <Compile Include="Modules\Ge\SetCountry\SetCountryEndpoint.cs" />
-    <Compile Include="Modules\Ge\SetCountry\SetCountryPage.cs" />
-    <Compile Include="Modules\Ge\SetCountry\SetCountryColumns.cs" />
-    <Compile Include="Modules\Ge\SetCountry\SetCountryForm.cs" />
-    <Compile Include="Modules\Ge\SetGalop\SetGalopRow.cs" />
-    <Compile Include="Modules\Ge\SetGalop\SetGalopRepository.cs" />
-    <Compile Include="Modules\Ge\SetGalop\SetGalopEndpoint.cs" />
-    <Compile Include="Modules\Ge\SetGalop\SetGalopPage.cs" />
-    <Compile Include="Modules\Ge\SetGalop\SetGalopColumns.cs" />
-    <Compile Include="Modules\Ge\SetGalop\SetGalopForm.cs" />
-    <Compile Include="Modules\Ge\SetLfc\SetLfcRow.cs" />
-    <Compile Include="Modules\Ge\SetLfc\SetLfcRepository.cs" />
-    <Compile Include="Modules\Ge\SetLfc\SetLfcEndpoint.cs" />
-    <Compile Include="Modules\Ge\SetLfc\SetLfcPage.cs" />
-    <Compile Include="Modules\Ge\SetLfc\SetLfcColumns.cs" />
-    <Compile Include="Modules\Ge\SetLfc\SetLfcForm.cs" />
-    <Compile Include="Modules\Ge\SetMaritalstatus\SetMaritalstatusRow.cs" />
-    <Compile Include="Modules\Ge\SetMaritalstatus\SetMaritalstatusRepository.cs" />
-    <Compile Include="Modules\Ge\SetMaritalstatus\SetMaritalstatusEndpoint.cs" />
-    <Compile Include="Modules\Ge\SetMaritalstatus\SetMaritalstatusPage.cs" />
-    <Compile Include="Modules\Ge\SetMaritalstatus\SetMaritalstatusColumns.cs" />
-    <Compile Include="Modules\Ge\SetMaritalstatus\SetMaritalstatusForm.cs" />
-    <Compile Include="Modules\Ge\SetSexe\SetSexeRow.cs" />
-    <Compile Include="Modules\Ge\SetSexe\SetSexeRepository.cs" />
-    <Compile Include="Modules\Ge\SetSexe\SetSexeEndpoint.cs" />
-    <Compile Include="Modules\Ge\SetSexe\SetSexePage.cs" />
-    <Compile Include="Modules\Ge\SetSexe\SetSexeColumns.cs" />
-    <Compile Include="Modules\Ge\SetSexe\SetSexeForm.cs" />
-    <Compile Include="Modules\Ge\SetUelnorga\SetUelnorgaRow.cs" />
-    <Compile Include="Modules\Ge\SetUelnorga\SetUelnorgaRepository.cs" />
-    <Compile Include="Modules\Ge\SetUelnorga\SetUelnorgaEndpoint.cs" />
-    <Compile Include="Modules\Ge\SetUelnorga\SetUelnorgaPage.cs" />
-    <Compile Include="Modules\Ge\SetUelnorga\SetUelnorgaColumns.cs" />
-    <Compile Include="Modules\Ge\SetUelnorga\SetUelnorgaForm.cs" />
+    <Compile Include="Modules\Ge\Administration\GlobalsSettings\SetCity\SetCityRow.cs" />
+    <Compile Include="Modules\Ge\Administration\GlobalsSettings\SetCity\SetCityRepository.cs" />
+    <Compile Include="Modules\Ge\Administration\GlobalsSettings\SetCity\SetCityEndpoint.cs" />
+    <Compile Include="Modules\Ge\Administration\GlobalsSettings\SetCity\SetCityPage.cs" />
+    <Compile Include="Modules\Ge\Administration\GlobalsSettings\SetCity\SetCityColumns.cs" />
+    <Compile Include="Modules\Ge\Administration\GlobalsSettings\SetCity\SetCityForm.cs" />
+    <Compile Include="Modules\Ge\Administration\GlobalsSettings\SetCountry\SetCountryRow.cs" />
+    <Compile Include="Modules\Ge\Administration\GlobalsSettings\SetCountry\SetCountryRepository.cs" />
+    <Compile Include="Modules\Ge\Administration\GlobalsSettings\SetCountry\SetCountryEndpoint.cs" />
+    <Compile Include="Modules\Ge\Administration\GlobalsSettings\SetCountry\SetCountryPage.cs" />
+    <Compile Include="Modules\Ge\Administration\GlobalsSettings\SetCountry\SetCountryColumns.cs" />
+    <Compile Include="Modules\Ge\Administration\GlobalsSettings\SetCountry\SetCountryForm.cs" />
+    <Compile Include="Modules\Ge\Administration\GlobalsSettings\SetGalop\SetGalopRow.cs" />
+    <Compile Include="Modules\Ge\Administration\GlobalsSettings\SetGalop\SetGalopRepository.cs" />
+    <Compile Include="Modules\Ge\Administration\GlobalsSettings\SetGalop\SetGalopEndpoint.cs" />
+    <Compile Include="Modules\Ge\Administration\GlobalsSettings\SetGalop\SetGalopPage.cs" />
+    <Compile Include="Modules\Ge\Administration\GlobalsSettings\SetGalop\SetGalopColumns.cs" />
+    <Compile Include="Modules\Ge\Administration\GlobalsSettings\SetGalop\SetGalopForm.cs" />
+    <Compile Include="Modules\Ge\Administration\GlobalsSettings\SetLfc\SetLfcRow.cs" />
+    <Compile Include="Modules\Ge\Administration\GlobalsSettings\SetLfc\SetLfcRepository.cs" />
+    <Compile Include="Modules\Ge\Administration\GlobalsSettings\SetLfc\SetLfcEndpoint.cs" />
+    <Compile Include="Modules\Ge\Administration\GlobalsSettings\SetLfc\SetLfcPage.cs" />
+    <Compile Include="Modules\Ge\Administration\GlobalsSettings\SetLfc\SetLfcColumns.cs" />
+    <Compile Include="Modules\Ge\Administration\GlobalsSettings\SetLfc\SetLfcForm.cs" />
+    <Compile Include="Modules\Ge\Administration\GlobalsSettings\SetMaritalstatus\SetMaritalstatusRow.cs" />
+    <Compile Include="Modules\Ge\Administration\GlobalsSettings\SetMaritalstatus\SetMaritalstatusRepository.cs" />
+    <Compile Include="Modules\Ge\Administration\GlobalsSettings\SetMaritalstatus\SetMaritalstatusEndpoint.cs" />
+    <Compile Include="Modules\Ge\Administration\GlobalsSettings\SetMaritalstatus\SetMaritalstatusPage.cs" />
+    <Compile Include="Modules\Ge\Administration\GlobalsSettings\SetMaritalstatus\SetMaritalstatusColumns.cs" />
+    <Compile Include="Modules\Ge\Administration\GlobalsSettings\SetMaritalstatus\SetMaritalstatusForm.cs" />
+    <Compile Include="Modules\Ge\Administration\GlobalsSettings\SetSexe\SetSexeRow.cs" />
+    <Compile Include="Modules\Ge\Administration\GlobalsSettings\SetSexe\SetSexeRepository.cs" />
+    <Compile Include="Modules\Ge\Administration\GlobalsSettings\SetSexe\SetSexeEndpoint.cs" />
+    <Compile Include="Modules\Ge\Administration\GlobalsSettings\SetSexe\SetSexePage.cs" />
+    <Compile Include="Modules\Ge\Administration\GlobalsSettings\SetSexe\SetSexeColumns.cs" />
+    <Compile Include="Modules\Ge\Administration\GlobalsSettings\SetSexe\SetSexeForm.cs" />
+    <Compile Include="Modules\Ge\Administration\GlobalsSettings\SetUelnorga\SetUelnorgaRow.cs" />
+    <Compile Include="Modules\Ge\Administration\GlobalsSettings\SetUelnorga\SetUelnorgaRepository.cs" />
+    <Compile Include="Modules\Ge\Administration\GlobalsSettings\SetUelnorga\SetUelnorgaEndpoint.cs" />
+    <Compile Include="Modules\Ge\Administration\GlobalsSettings\SetUelnorga\SetUelnorgaPage.cs" />
+    <Compile Include="Modules\Ge\Administration\GlobalsSettings\SetUelnorga\SetUelnorgaColumns.cs" />
+    <Compile Include="Modules\Ge\Administration\GlobalsSettings\SetUelnorga\SetUelnorgaForm.cs" />
     <Compile Include="Modules\Ge\LinkFolderCavalier\LinkFolderCavalierRow.cs" />
     <Compile Include="Modules\Ge\LinkFolderCavalier\LinkFolderCavalierRepository.cs" />
     <Compile Include="Modules\Ge\LinkFolderCavalier\LinkFolderCavalierEndpoint.cs" />

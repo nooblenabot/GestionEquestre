@@ -127,7 +127,7 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.BirthCity[this] = value; }
         }
 
-        [DisplayName("Birth Country"), ForeignKey("[dbo].[SET_COUNTRY]", "Id"), LeftJoin("jBirthCountry"), TextualField("BirthCountryCountry")]
+        [DisplayName("Birth Country"), ForeignKey("[dbo].[SET_COUNTRY]", "Id"), LeftJoin("jBirthCountry"), TextualField("BirthCountryNameFr")]
         public Int16? BirthCountry
         {
             get { return Fields.BirthCountry[this]; }
@@ -226,20 +226,23 @@ namespace GestionEquestre.Ge.Entities
         }
 
         #region champs relationnels
-        [DisplayName("Username"), Expression("jIUser.[Username]")]
+        #region Username
+        [DisplayName("Username"), Expression("jIUser.[Username]"), HideOnInsert,Updatable(false)]
         public String InsertUsername
         {
             get { return Fields.InsertUsername[this]; }
             set { Fields.InsertUsername[this] = value; }
         }
 
-        [DisplayName("Username"), Expression("jUUser.[Username]")]
+        [DisplayName("Username"), Expression("jUUser.[Username]"), HideOnInsert]
         public String UpdateUsername
         {
             get { return Fields.UpdateUsername[this]; }
             set { Fields.UpdateUsername[this] = value; }
         }
+        #endregion
 
+        #region sexe
         [DisplayName("Sexe Default Value"), Expression("jSexe.[DefaultValue]")]
         public Boolean? SexeDefaultValue
         {
@@ -288,6 +291,9 @@ namespace GestionEquestre.Ge.Entities
             get { return Fields.SexeCivility[this]; }
             set { Fields.SexeCivility[this] = value; }
         }
+        #endregion
+
+        #region Marital Status
         [DisplayName("Marital Status Default Value"), Expression("jMaritalStatus.[DefaultValue]")]
         public Boolean? MaritalStatusDefaultValue
         {
@@ -336,6 +342,9 @@ namespace GestionEquestre.Ge.Entities
             get { return Fields.MaritalStatusCode[this]; }
             set { Fields.MaritalStatusCode[this] = value; }
         }
+        #endregion
+
+        #region Birth City
         [DisplayName("Birth City Default Value"), Expression("jBirthCity.[DefaultValue]")]
         public Boolean? BirthCityDefaultValue
         {
@@ -402,6 +411,9 @@ namespace GestionEquestre.Ge.Entities
             get { return Fields.BirthCityCountry[this]; }
             set { Fields.BirthCityCountry[this] = value; }
         }
+        #endregion
+
+        #region Birth country
         [DisplayName("Birth Country Default Value"), Expression("jBirthCountry.[DefaultValue]")]
         public Boolean? BirthCountryDefaultValue
         {
@@ -438,17 +450,29 @@ namespace GestionEquestre.Ge.Entities
             get { return Fields.BirthCountryUpdateUserId[this]; }
             set { Fields.BirthCountryUpdateUserId[this] = value; }
         }
-        [DisplayName("Birth Country Country"), Expression("jBirthCountry.[Country]")]
-        public String BirthCountryCountry
+        [DisplayName("Birth Country FR"), Expression("jBirthCountry.[Name_FR_fr]")]
+        public String BirthCountryName_FR_fr
         {
-            get { return Fields.BirthCountryCountry[this]; }
-            set { Fields.BirthCountryCountry[this] = value; }
+            get { return Fields.BirthCountryName_FR_fr[this]; }
+            set { Fields.BirthCountryName_FR_fr[this] = value; }
         }
-        [DisplayName("Birth Country Code"), Expression("jBirthCountry.[Code]")]
-        public String BirthCountryCode
+        [DisplayName("BirthCountry Name EN"), Expression("jBirthCountry.[Name_EN_gb]")]
+        public String BirthCountryName_EN_gb
         {
-            get { return Fields.BirthCountryCode[this]; }
-            set { Fields.BirthCountryCode[this] = value; }
+            get { return Fields.BirthCountryName_EN_gb[this]; }
+            set { Fields.BirthCountryName_EN_gb[this] = value; }
+        }
+        [DisplayName("Birth Country Code alpha3"), Expression("jBirthCountry.[alpha3]")]
+        public String BirthCountryalpha3
+        {
+            get { return Fields.BirthCountryalpha3[this]; }
+            set { Fields.BirthCountryalpha3[this] = value; }
+        }
+        [DisplayName("Birth Country alpha2"), Expression("jBirthCountry.[alpha2]")]
+        public String BirthCountryalpha2
+        {
+            get { return Fields.BirthCountryalpha2[this]; }
+            set { Fields.BirthCountryalpha2[this] = value; }
         }
         [DisplayName("Birth Country Code Ue"), Expression("jBirthCountry.[CodeUE]")]
         public Int16? BirthCountryCodeUe
@@ -456,12 +480,15 @@ namespace GestionEquestre.Ge.Entities
             get { return Fields.BirthCountryCodeUe[this]; }
             set { Fields.BirthCountryCodeUe[this] = value; }
         }
-        [DisplayName("Birth Country Iso3166 Country"), Expression("jBirthCountry.[ISO3166Country]")]
-        public String BirthCountryIso3166Country
+        [DisplayName("Birth Country ISOcode"), Expression("jBirthCountry.[ISOcode]")]
+        public String BirthCountryISOcode
         {
-            get { return Fields.BirthCountryIso3166Country[this]; }
-            set { Fields.BirthCountryIso3166Country[this] = value; }
+            get { return Fields.BirthCountryISOcode[this]; }
+            set { Fields.BirthCountryISOcode[this] = value; }
         }
+        #endregion
+
+        #region nationality
         [DisplayName("Nationality Default Value"), Expression("jNationality.[DefaultValue]")]
         public Boolean? NationalityDefaultValue
         {
@@ -498,30 +525,49 @@ namespace GestionEquestre.Ge.Entities
             get { return Fields.NationalityUpdateUserId[this]; }
             set { Fields.NationalityUpdateUserId[this] = value; }
         }
-        [DisplayName("Nationality Country"), Expression("jNationality.[Country]")]
-        public String NationalityCountry
+        [DisplayName("Nationality Name FR"), Expression("jNationality.[Name_FR_fr]")]
+        public String NationalityName_FR_fr
         {
-            get { return Fields.NationalityCountry[this]; }
-            set { Fields.NationalityCountry[this] = value; }
+            get { return Fields.NationalityName_FR_fr[this]; }
+            set { Fields.NationalityName_FR_fr[this] = value; }
         }
-        [DisplayName("Nationality Code"), Expression("jNationality.[Code]")]
-        public String NationalityCode
+        [DisplayName("Nationality Name EN"), Expression("jNationality.[Name_EN_gb]")]
+        public String NationalityName_EN_gb
         {
-            get { return Fields.NationalityCode[this]; }
-            set { Fields.NationalityCode[this] = value; }
+            get { return Fields.NationalityName_EN_gb[this]; }
+            set { Fields.NationalityName_EN_gb[this] = value; }
         }
-        [DisplayName("Nationality Code Ue"), Expression("jNationality.[CodeUE]")]
+
+        [DisplayName("Nationality alpha3"), Expression("jNationality.[alpha3]")]
+        public String Nationalityalpha3
+        {
+            get { return Fields.Nationalityalpha3[this]; }
+            set { Fields.Nationalityalpha3[this] = value; }
+        }
+
+        [DisplayName("Nationality alpha2"), Expression("jNationality.[alpha2]")]
+        public String Nationalityalpha2
+        {
+            get { return Fields.Nationalityalpha2[this]; }
+            set { Fields.Nationalityalpha2[this] = value; }
+        }
+
+        [DisplayName("Nationality Code Ue"), Expression("jNationality.[CodeUe]")]
         public Int16? NationalityCodeUe
         {
             get { return Fields.NationalityCodeUe[this]; }
             set { Fields.NationalityCodeUe[this] = value; }
         }
-        [DisplayName("Nationality Iso3166 Country"), Expression("jNationality.[ISO3166Country]")]
-        public String NationalityIso3166Country
+
+        [DisplayName("Nationality ISOcode"), Expression("jNationality.[ISOcode]")]
+        public String NationalityISOcode
         {
-            get { return Fields.NationalityIso3166Country[this]; }
-            set { Fields.NationalityIso3166Country[this] = value; }
+            get { return Fields.NationalityISOcode[this]; }
+            set { Fields.NationalityISOcode[this] = value; }
         }
+        #endregion
+
+        #region Bankaccount
         [DisplayName("Bank Account Country Code Iban"), Expression("jBankAccount.[CountryCodeIBAN]")]
         public String BankAccountCountryCodeIban
         {
@@ -594,6 +640,9 @@ namespace GestionEquestre.Ge.Entities
             get { return Fields.BankAccountTypeOfLastPayment[this]; }
             set { Fields.BankAccountTypeOfLastPayment[this] = value; }
         }
+        #endregion
+
+        #region adress
         [DisplayName("Id Adress Is Active"), Expression("jIdAdress.[IsActive]")]
         public Boolean? IdAdressIsActive
         {
@@ -684,6 +733,7 @@ namespace GestionEquestre.Ge.Entities
             get { return Fields.IdAdressArchiveDate[this]; }
             set { Fields.IdAdressArchiveDate[this] = value; }
         }
+        #endregion
 
         #endregion
 
@@ -776,10 +826,12 @@ namespace GestionEquestre.Ge.Entities
             public Int32Field BirthCountryInsertUserId;
             public DateTimeField BirthCountryUpdateDate;
             public Int32Field BirthCountryUpdateUserId;
-            public StringField BirthCountryCountry;
-            public StringField BirthCountryCode;
+            public StringField BirthCountryName_FR_fr;
+            public StringField BirthCountryName_EN_gb;
+            public StringField BirthCountryalpha3;
+            public StringField BirthCountryalpha2;
             public Int16Field BirthCountryCodeUe;
-            public StringField BirthCountryIso3166Country;
+            public StringField BirthCountryISOcode;
 
             public BooleanField NationalityDefaultValue;
             public BooleanField NationalityIsActive;
@@ -787,10 +839,12 @@ namespace GestionEquestre.Ge.Entities
             public Int32Field NationalityInsertUserId;
             public DateTimeField NationalityUpdateDate;
             public Int32Field NationalityUpdateUserId;
-            public StringField NationalityCountry;
-            public StringField NationalityCode;
+            public StringField NationalityName_FR_fr;
+            public StringField NationalityName_EN_gb;
+            public StringField Nationalityalpha3;
+            public StringField Nationalityalpha2;
             public Int16Field NationalityCodeUe;
-            public StringField NationalityIso3166Country;
+            public StringField NationalityISOcode;
 
             public StringField BankAccountCountryCodeIban;
             public StringField BankAccountCheckDigitsIban;

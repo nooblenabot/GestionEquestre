@@ -9,17 +9,17 @@ namespace GestionEquestre.Ge.Entities
     using System.ComponentModel;
     using System.IO;
 
-    [ConnectionKey("GE"), TableName("[dbo].[SET_SEXE]")]
-    [DisplayName("Settings Sexe"), InstanceName("Set Sexe"), TwoLevelCached]
+    [ConnectionKey("GE"), TableName("[dbo].[SET_COUNTRY]")]
+    [DisplayName("Set Country"), InstanceName("Set Country"), TwoLevelCached]
     [ReadPermission("Administration:General")]
     [ModifyPermission("Administration:General")]
-    public sealed class SetSexeRow : Row, IIdRow, INameRow
+    public sealed class SetCountryRow : Row, IIdRow, INameRow
     {
-        [DisplayName("Sexe Id"), PrimaryKey,LookupInclude, NotNull]
-        public Int16? SexeId
+        [DisplayName("Id"), PrimaryKey]
+        public Int16? Id
         {
-            get { return Fields.SexeId[this]; }
-            set { Fields.SexeId[this] = value; }
+            get { return Fields.Id[this]; }
+            set { Fields.Id[this] = value; }
         }
 
         [DisplayName("Default Value"), NotNull, Updatable(false), HideOnInsert]
@@ -36,7 +36,7 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.IsActive[this] = value; }
         }
 
-        [DisplayName("Insert Date") ,HideOnInsert, Updatable(false), DateTimeFormatter]
+        [DisplayName("Insert Date"), HideOnInsert, Updatable(false), DateTimeFormatter]
         public DateTime? InsertDate
         {
             get { return Fields.InsertDate[this]; }
@@ -50,7 +50,7 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.InsertUserId[this] = value; }
         }
 
-        [DisplayName("Update Date"),HideOnInsert, DateTimeFormatter]
+        [DisplayName("Update Date"), HideOnInsert, DateTimeFormatter]
         public DateTime? UpdateDate
         {
             get { return Fields.UpdateDate[this]; }
@@ -64,28 +64,56 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.UpdateUserId[this] = value; }
         }
 
-        [DisplayName("Caption"), Size(50), LookupInclude, QuickSearch]
-        public String Caption
+        [DisplayName("Name FR"), Size(50), QuickSearch]
+        public String Name_FR_fr
         {
-            get { return Fields.Caption[this]; }
-            set { Fields.Caption[this] = value; }
+            get { return Fields.Name_FR_fr[this]; }
+            set { Fields.Name_FR_fr[this] = value; }
         }
 
-        [DisplayName("Civility"), Column("civility"), Size(50)]
-        public String Civility
+        [DisplayName("Name EN"), Size(50), QuickSearch]
+        public String Name_EN_gb
         {
-            get { return Fields.Civility[this]; }
-            set { Fields.Civility[this] = value; }
+            get { return Fields.Name_EN_gb[this]; }
+            set { Fields.Name_EN_gb[this] = value; }
         }
 
-        [DisplayName("Username"), Expression("jIUser.[Username]")]
+                [DisplayName("alpha3"), Size(3), NotNull]
+        public String alpha3
+        {
+            get { return Fields.alpha3[this]; }
+            set { Fields.alpha3[this] = value; }
+        }
+
+        [DisplayName("alpha2"), Size(2), NotNull]
+        public String alpha2
+        {
+            get { return Fields.alpha2[this]; }
+            set { Fields.alpha2[this] = value; }
+        }
+
+        [DisplayName("Code Ue"), Column("CodeUE")]
+        public Int16? CodeUe
+        {
+            get { return Fields.CodeUe[this]; }
+            set { Fields.CodeUe[this] = value; }
+        }
+
+        [DisplayName("ISOcode"), Column("ISOcode"), Size(3),LookupInclude]
+        public String ISOcode
+        {
+            get { return Fields.ISOcode[this]; }
+            set { Fields.ISOcode[this] = value; }
+        }
+
+        [DisplayName("Username"), Expression("jIUser.[Username]"), HideOnInsert, Updatable(false)]
         public String InsertUsername
         {
             get { return Fields.InsertUsername[this]; }
             set { Fields.InsertUsername[this] = value; }
         }
 
-        [DisplayName("Username"), Expression("jUUser.[Username]")]
+        [DisplayName("Username"), Expression("jUUser.[Username]"), HideOnInsert]
         public String UpdateUsername
         {
             get { return Fields.UpdateUsername[this]; }
@@ -94,32 +122,36 @@ namespace GestionEquestre.Ge.Entities
 
         IIdField IIdRow.IdField
         {
-            get { return Fields.SexeId; }
+            get { return Fields.Id; }
         }
 
         StringField INameRow.NameField
         {
-            get { return Fields.Caption; }
+            get { return Fields.Name_FR_fr; }
         }
 
         public static readonly RowFields Fields = new RowFields().Init();
 
-        public SetSexeRow()
+        public SetCountryRow()
             : base(Fields)
         {
         }
 
         public class RowFields : RowFieldsBase
         {
-            public Int16Field SexeId;
+            public Int16Field Id;
             public BooleanField DefaultValue;
             public BooleanField IsActive;
             public DateTimeField InsertDate;
             public Int32Field InsertUserId;
             public DateTimeField UpdateDate;
             public Int32Field UpdateUserId;
-            public StringField Caption;
-            public StringField Civility;
+            public StringField Name_FR_fr;
+            public StringField Name_EN_gb; 
+            public StringField alpha3;
+            public StringField alpha2;
+            public Int16Field CodeUe;
+            public StringField ISOcode;
 
             public StringField InsertUsername;
             public StringField UpdateUsername;
@@ -127,7 +159,7 @@ namespace GestionEquestre.Ge.Entities
             public RowFields()
                 : base()
             {
-                LocalTextPrefix = "Ge.SetSexe";
+                LocalTextPrefix = "Ge.SetCountry";
             }
         }
     }

@@ -9,11 +9,11 @@ namespace GestionEquestre.Ge.Entities
     using System.ComponentModel;
     using System.IO;
 
-    [ConnectionKey("GE"), TableName("[dbo].[SET_LFC]")]
-    [DisplayName("Set Lfc"), InstanceName("Set Lfc"), TwoLevelCached]
+    [ConnectionKey("GE"), TableName("[dbo].[SET_GALOP]")]
+    [DisplayName("Set Galop"), InstanceName("Set Galop"), TwoLevelCached]
     [ReadPermission("Administration:General")]
     [ModifyPermission("Administration:General")]
-    public sealed class SetLfcRow : Row, IIdRow, INameRow
+    public sealed class SetGalopRow : Row, IIdRow, INameRow
     {
         [DisplayName("Id"), Identity]
         public Int16? Id
@@ -78,14 +78,14 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.Code[this] = value; }
         }
 
-        [DisplayName("Username"), Expression("jIUser.[Username]")]
+        [DisplayName("Username"), Expression("jIUser.[Username]"), HideOnInsert, Updatable(false)]
         public String InsertUsername
         {
             get { return Fields.InsertUsername[this]; }
             set { Fields.InsertUsername[this] = value; }
         }
 
-        [DisplayName("Username"), Expression("jUUser.[Username]")]
+        [DisplayName("Username"), Expression("jUUser.[Username]"), HideOnInsert]
         public String UpdateUsername
         {
             get { return Fields.UpdateUsername[this]; }
@@ -104,7 +104,7 @@ namespace GestionEquestre.Ge.Entities
 
         public static readonly RowFields Fields = new RowFields().Init();
 
-        public SetLfcRow()
+        public SetGalopRow()
             : base(Fields)
         {
         }
@@ -121,14 +121,13 @@ namespace GestionEquestre.Ge.Entities
             public StringField Caption;
             public StringField Code;
 
-
             public StringField InsertUsername;
             public StringField UpdateUsername;
 
             public RowFields()
                 : base()
             {
-                LocalTextPrefix = "Ge.SetLfc";
+                LocalTextPrefix = "Ge.SetGalop";
             }
         }
     }

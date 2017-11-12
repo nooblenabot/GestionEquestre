@@ -20,8 +20,10 @@ namespace GestionEquestre.Ge.Forms
         public DateTime InsertDate { get; set; }
         //  public Int32 InsertUserId { get; set; }
         public String InsertUsername { get; set; }
+        [Updatable(false)]
         public DateTime UpdateDate { get; set; }
         //public Int32 UpdateUserId { get; set; }
+        [Updatable(false)]
         public String UpdateUsername { get; set; }
         public DateTime MilesimeLicnece { get; set; }
         public Int16 NiveauGalop { get; set; }

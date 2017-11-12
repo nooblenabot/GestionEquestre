@@ -116,14 +116,14 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.ArchiveDate[this] = value; }
         }
 
-        [DisplayName("Username"), Expression("jIUser.[Username]")]
+        [DisplayName("Username"), Expression("jIUser.[Username]"), HideOnInsert, Updatable(false)]
         public String InsertUsername
         {
             get { return Fields.InsertUsername[this]; }
             set { Fields.InsertUsername[this] = value; }
         }
 
-        [DisplayName("Username"), Expression("jUUser.[Username]")]
+        [DisplayName("Username"), Expression("jUUser.[Username]"), HideOnInsert]
         public String UpdateUsername
         {
             get { return Fields.UpdateUsername[this]; }

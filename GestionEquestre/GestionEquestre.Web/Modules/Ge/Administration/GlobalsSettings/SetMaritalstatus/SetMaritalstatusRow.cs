@@ -9,13 +9,13 @@ namespace GestionEquestre.Ge.Entities
     using System.ComponentModel;
     using System.IO;
 
-    [ConnectionKey("GE"), TableName("[dbo].[SET_COUNTRY]")]
-    [DisplayName("Set Country"), InstanceName("Set Country"), TwoLevelCached]
+    [ConnectionKey("GE"), TableName("[dbo].[SET_MARITALSTATUS]")]
+    [DisplayName("Set Maritalstatus"), InstanceName("Set Maritalstatus"), TwoLevelCached]
     [ReadPermission("Administration:General")]
     [ModifyPermission("Administration:General")]
-    public sealed class SetCountryRow : Row, IIdRow, INameRow
+    public sealed class SetMaritalstatusRow : Row, IIdRow, INameRow
     {
-        [DisplayName("Id"), PrimaryKey]
+        [DisplayName("Id"), Identity]
         public Int16? Id
         {
             get { return Fields.Id[this]; }
@@ -64,56 +64,28 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.UpdateUserId[this] = value; }
         }
 
-        [DisplayName("Name FR"), Size(50), QuickSearch]
-        public String Name_FR_fr
+        [DisplayName("Caption"), Size(50), QuickSearch]
+        public String Caption
         {
-            get { return Fields.Name_FR_fr[this]; }
-            set { Fields.Name_FR_fr[this] = value; }
+            get { return Fields.Caption[this]; }
+            set { Fields.Caption[this] = value; }
         }
 
-        [DisplayName("Name EN"), Size(50), QuickSearch]
-        public String Name_EN_gb
+        [DisplayName("Code"), Size(5)]
+        public String Code
         {
-            get { return Fields.Name_EN_gb[this]; }
-            set { Fields.Name_EN_gb[this] = value; }
+            get { return Fields.Code[this]; }
+            set { Fields.Code[this] = value; }
         }
 
-                [DisplayName("alpha3"), Size(3), NotNull]
-        public String alpha3
-        {
-            get { return Fields.alpha3[this]; }
-            set { Fields.alpha3[this] = value; }
-        }
-
-        [DisplayName("alpha2"), Size(2), NotNull]
-        public String alpha2
-        {
-            get { return Fields.alpha2[this]; }
-            set { Fields.alpha2[this] = value; }
-        }
-
-        [DisplayName("Code Ue"), Column("CodeUE")]
-        public Int16? CodeUe
-        {
-            get { return Fields.CodeUe[this]; }
-            set { Fields.CodeUe[this] = value; }
-        }
-
-        [DisplayName("ISOcode"), Column("ISOcode"), Size(3),LookupInclude]
-        public String ISOcode
-        {
-            get { return Fields.ISOcode[this]; }
-            set { Fields.ISOcode[this] = value; }
-        }
-
-        [DisplayName("Username"), Expression("jIUser.[Username]")]
+        [DisplayName("Username"), Expression("jIUser.[Username]"), HideOnInsert, Updatable(false)]
         public String InsertUsername
         {
             get { return Fields.InsertUsername[this]; }
             set { Fields.InsertUsername[this] = value; }
         }
 
-        [DisplayName("Username"), Expression("jUUser.[Username]")]
+        [DisplayName("Username"), Expression("jUUser.[Username]"), HideOnInsert]
         public String UpdateUsername
         {
             get { return Fields.UpdateUsername[this]; }
@@ -127,12 +99,12 @@ namespace GestionEquestre.Ge.Entities
 
         StringField INameRow.NameField
         {
-            get { return Fields.Name_FR_fr; }
+            get { return Fields.Caption; }
         }
 
         public static readonly RowFields Fields = new RowFields().Init();
 
-        public SetCountryRow()
+        public SetMaritalstatusRow()
             : base(Fields)
         {
         }
@@ -146,20 +118,16 @@ namespace GestionEquestre.Ge.Entities
             public Int32Field InsertUserId;
             public DateTimeField UpdateDate;
             public Int32Field UpdateUserId;
-            public StringField Name_FR_fr;
-            public StringField Name_EN_gb; 
-            public StringField alpha3;
-            public StringField alpha2;
-            public Int16Field CodeUe;
-            public StringField ISOcode;
+            public StringField Caption;
+            public StringField Code;
+
 
             public StringField InsertUsername;
             public StringField UpdateUsername;
-
             public RowFields()
                 : base()
             {
-                LocalTextPrefix = "Ge.SetCountry";
+                LocalTextPrefix = "Ge.SetMaritalstatus";
             }
         }
     }

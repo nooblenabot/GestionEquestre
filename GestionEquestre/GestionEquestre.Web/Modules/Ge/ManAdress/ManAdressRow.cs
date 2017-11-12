@@ -92,7 +92,7 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.City[this] = value; }
         }
 
-        [DisplayName("Country"), ForeignKey("[dbo].[SET_COUNTRY]", "Id"), LeftJoin("jCountry"), TextualField("Country1")]
+        [DisplayName("Country"), ForeignKey("[dbo].[SET_COUNTRY]", "Id"), LeftJoin("jCountry"), TextualField("Country")]
         public Int16? Country
         {
             get { return Fields.Country[this]; }
@@ -127,14 +127,14 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.ArchiveDate[this] = value; }
         }
 
-        [DisplayName("Username"), Expression("jIUser.[Username]")]
+        [DisplayName("Username"), Expression("jIUser.[Username]"),HideOnInsert, Updatable(false)]
         public String InsertUsername
         {
             get { return Fields.InsertUsername[this]; }
             set { Fields.InsertUsername[this] = value; }
         }
 
-        [DisplayName("Username"), Expression("jUUser.[Username]")]
+        [DisplayName("Username"), Expression("jUUser.[Username]"), HideOnInsert]
         public String UpdateUsername
         {
             get { return Fields.UpdateUsername[this]; }
@@ -243,29 +243,46 @@ namespace GestionEquestre.Ge.Entities
             get { return Fields.CountryUpdateUserId[this]; }
             set { Fields.CountryUpdateUserId[this] = value; }
         }
-        [DisplayName("Country"), Expression("jCountry.[Country]")]
-        public String Country1
+        [DisplayName("Country Name FR"), Expression("jCountry.[Name_FR_fr]")]
+        public String CountryName_FR_fr
         {
-            get { return Fields.Country1[this]; }
-            set { Fields.Country1[this] = value; }
+            get { return Fields.CountryName_FR_fr[this]; }
+            set { Fields.CountryName_FR_fr[this] = value; }
         }
-        [DisplayName("Country Code"), Expression("jCountry.[Code]")]
-        public String CountryCode
+
+        [DisplayName("Country Name EN"), Expression("jCountry.[Name_EN_gb]")]
+        public String CountryName_EN_gb
         {
-            get { return Fields.CountryCode[this]; }
-            set { Fields.CountryCode[this] = value; }
+            get { return Fields.CountryName_EN_gb[this]; }
+            set { Fields.CountryName_EN_gb[this] = value; }
         }
-        [DisplayName("Country Code Ue"), Expression("jCountry.[CodeUE]")]
+
+        [DisplayName("Country alpha3"), Expression("jCountry.[alpha3]")]
+        public String Countryalpha3
+        {
+            get { return Fields.Countryalpha3[this]; }
+            set { Fields.Countryalpha3[this] = value; }
+        }
+
+        [DisplayName("Country alpha2"), Expression("jCountry.[alpha2]")]
+        public String Countryalpha2
+        {
+            get { return Fields.Countryalpha2[this]; }
+            set { Fields.Countryalpha2[this] = value; }
+        }
+
+        [DisplayName("Country Code Ue"), Expression("jCountry.[CodeUe]")]
         public Int16? CountryCodeUe
         {
             get { return Fields.CountryCodeUe[this]; }
             set { Fields.CountryCodeUe[this] = value; }
         }
-        [DisplayName("Country Iso3166 Country"), Expression("jCountry.[ISO3166Country]")]
-        public String CountryIso3166Country
+
+        [DisplayName("Country ISOcode"), Expression("jCountry.[ISOcode]")]
+        public String CountryISOcode
         {
-            get { return Fields.CountryIso3166Country[this]; }
-            set { Fields.CountryIso3166Country[this] = value; }
+            get { return Fields.CountryISOcode[this]; }
+            set { Fields.CountryISOcode[this] = value; }
         }
         IIdField IIdRow.IdField
         {
@@ -324,10 +341,12 @@ namespace GestionEquestre.Ge.Entities
             public Int32Field CountryInsertUserId;
             public DateTimeField CountryUpdateDate;
             public Int32Field CountryUpdateUserId;
-            public StringField Country1;
-            public StringField CountryCode;
+            public StringField CountryName_FR_fr;
+            public StringField CountryName_EN_gb;
+            public StringField Countryalpha3;
+            public StringField Countryalpha2;
             public Int16Field CountryCodeUe;
-            public StringField CountryIso3166Country;
+            public StringField CountryISOcode;
 
             public RowFields()
                 : base()
