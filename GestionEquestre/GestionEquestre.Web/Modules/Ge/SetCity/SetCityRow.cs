@@ -16,7 +16,7 @@ namespace GestionEquestre.Ge.Entities
     public sealed class SetCityRow : Row, IIdRow, INameRow
     {
         [DisplayName("Id"), PrimaryKey]
-        public Guid? Id
+        public Int64? Id
         {
             get { return Fields.Id[this]; }
             set { Fields.Id[this] = value; }
@@ -154,7 +154,7 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.CountryCodeUe[this] = value; }
         }
         [DisplayName("Country ISOcode"), Expression("jCountry.[ISOcode]")]
-        public Int16? CountryISOcode
+        public String CountryISOcode
         {
             get { return Fields.CountryISOcode[this]; }
             set { Fields.CountryISOcode[this] = value; }
@@ -178,7 +178,7 @@ namespace GestionEquestre.Ge.Entities
 
         public class RowFields : RowFieldsBase
         {
-            public GuidField Id;
+            public Int64Field Id;
             public BooleanField DefaultValue;
             public BooleanField IsActive;
             public DateTimeField InsertDate;
@@ -202,7 +202,7 @@ namespace GestionEquestre.Ge.Entities
             public StringField Countryalpha3;
         //    public StringField Countryalpha2;
             public Int16Field CountryCodeUe;
-            public Int16Field CountryISOcode;
+            public StringField CountryISOcode;
 
             public RowFields()
                 : base()

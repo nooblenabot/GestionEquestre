@@ -16,7 +16,7 @@ namespace GestionEquestre.Ge.Entities
     public sealed class LinkFolderCavalierRow : Row, IIdRow, INameRow
     {
         [DisplayName("Id"), Identity]
-        public Int32? Id
+        public Int64? Id
         {
             get { return Fields.Id[this]; }
             set { Fields.Id[this] = value; }
@@ -24,7 +24,7 @@ namespace GestionEquestre.Ge.Entities
 
         [DisplayName("Folder"), NotNull, ForeignKey("[dbo].[MAN_FOLDER]", "Id"), LeftJoin("jFolder"), TextualField("FolderCaption")]
      //   [LookupEditor(typeof(Ge.Scripts.SexeHorsesLookup), MinimumResultsForSearch = 1, InplaceAdd = false)]
-        public Int32? Folder
+        public Int64? Folder
         {
             get { return Fields.Folder[this]; }
             set { Fields.Folder[this] = value; }
@@ -123,7 +123,7 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.FolderComment[this] = value; }
         }
         [DisplayName("Cavalier Person"), Expression("jCavalier.[Person]")]
-        public Guid? CavalierPerson
+        public Int64? CavalierPerson
         {
             get { return Fields.CavalierPerson[this]; }
             set { Fields.CavalierPerson[this] = value; }
@@ -219,8 +219,8 @@ namespace GestionEquestre.Ge.Entities
 
         public class RowFields : RowFieldsBase
         {
-            public Int32Field Id;
-            public Int32Field Folder;
+            public Int64Field Id;
+            public Int64Field Folder;
             public StringField Cavalier;
 
             public BooleanField FolderIsActive;
@@ -238,7 +238,7 @@ namespace GestionEquestre.Ge.Entities
             public Int32Field FolderEstablishment;
             public StringField FolderComment;
 
-            public GuidField CavalierPerson;
+            public Int64Field CavalierPerson;
             public BooleanField CavalierIsActive;
             public BooleanField CavalierNotArchive;
             public DateTimeField CavalierInsertDate;

@@ -28,11 +28,11 @@ namespace GestionEquestre.Migrations.GEDB
 
             addUsersColumns(IfDatabase(Utils.AllExceptOracle)
                 .Create.Table("MAN_FOLDER")
-                .WithColumn("Id").AsInt32().PrimaryKey().NotNullable());
+                .WithColumn("Id").AsInt64().PrimaryKey().NotNullable());
 
             addUsersColumns(IfDatabase("Oracle")
                 .Create.Table("MAN_FOLDER")
-                .WithColumn("Id").AsGuid().PrimaryKey().NotNullable());
+                .WithColumn("Id").AsInt64().PrimaryKey().NotNullable());
 
             Utils.AddOracleIdentity(this, "MAN_FOLDER", "Id");
 

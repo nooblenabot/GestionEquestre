@@ -16,7 +16,7 @@ namespace GestionEquestre.Ge.Entities
     public sealed class AccBankaccountRow : Row, IIdRow, INameRow
     {
         [DisplayName("Id"), PrimaryKey]
-        public Guid? Id
+        public Int64? Id
         {
             get { return Fields.Id[this]; }
             set { Fields.Id[this] = value; }
@@ -125,7 +125,7 @@ namespace GestionEquestre.Ge.Entities
 
         public class RowFields : RowFieldsBase
         {
-            public GuidField Id;
+            public Int64Field Id;
             public StringField CountryCodeIban;
             public StringField CheckDigitsIban;
             public StringField Bban;

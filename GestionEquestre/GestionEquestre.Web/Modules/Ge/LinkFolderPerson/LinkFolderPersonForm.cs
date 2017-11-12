@@ -13,8 +13,8 @@ namespace GestionEquestre.Ge.Forms
     [BasedOnRow(typeof(Entities.LinkFolderPersonRow))]
     public class LinkFolderPersonForm
     {
-        public Int32 Folder { get; set; }
-        public Guid PersonId { get; set; }
+        public Int64 Folder { get; set; }
+        public Int64 PersonId { get; set; }
         public String Caption { get; set; }
     }
 }

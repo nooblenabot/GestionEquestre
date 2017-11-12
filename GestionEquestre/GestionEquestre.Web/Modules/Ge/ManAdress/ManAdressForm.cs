@@ -22,8 +22,8 @@ namespace GestionEquestre.Ge.Forms
         public String Adress1 { get; set; }
         public String Adress2 { get; set; }
         public String Adress3 { get; set; }
-        public Guid City { get; set; }
-        public Guid Country { get; set; }
+        public Int64 City { get; set; }
+        public Int16 Country { get; set; }
         public String Cedex { get; set; }
         public String Building { get; set; }
         public String Caption { get; set; }

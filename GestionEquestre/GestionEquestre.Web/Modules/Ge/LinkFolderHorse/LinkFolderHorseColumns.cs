@@ -14,7 +14,7 @@ namespace GestionEquestre.Ge.Columns
     public class LinkFolderHorseColumns
     {
         [EditLink, DisplayName("Db.Shared.RecordId"), AlignRight]
-        public Int32 Id { get; set; }
+        public Int64 Id { get; set; }
         public String FolderCaption { get; set; }
         [EditLink]
         public String HorseSire { get; set; }

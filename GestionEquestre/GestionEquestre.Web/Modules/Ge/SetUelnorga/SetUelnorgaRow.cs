@@ -16,13 +16,13 @@ namespace GestionEquestre.Ge.Entities
     public sealed class SetUelnorgaRow : Row, IIdRow, INameRow
     {
         [DisplayName("Id"), PrimaryKey]
-        public Guid? Id
+        public Int32? Id
         {
             get { return Fields.Id[this]; }
             set { Fields.Id[this] = value; }
         }
 
-        [DisplayName("Default Value"), NotNull]
+        [DisplayName("Default Value"), NotNull, Updatable(false), Insertable(false)]
         public Boolean? DefaultValue
         {
             get { return Fields.DefaultValue[this]; }
@@ -36,17 +36,14 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.IsActive[this] = value; }
         }
 
-        [DisplayName("Insert Date"), NotNull]
-        [DateTimeKind(DateTimeKind.Utc)]
+        [DisplayName("Insert Date"),Updatable(false)]
         public DateTime? InsertDate
         {
             get { return Fields.InsertDate[this]; }
             set { Fields.InsertDate[this] = value; }
         }
 
-        [DisplayName("Insert User Id"), NotNull]
-       
-        [LookupEditor(typeof(Administration.Entities.UserRow), InplaceAdd = true)]
+        [DisplayName("Insert User Id"),Updatable(false), ForeignKey("[dbo].[Users]", "UserId"), LeftJoin("jIUser"), TextualField("InsertUsername")]
         public Int32? InsertUserId
         {
             get { return Fields.InsertUserId[this]; }
@@ -60,7 +57,7 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.UpdateDate[this] = value; }
         }
 
-        [DisplayName("Update User Id"),HideOnInsert]
+        [DisplayName("Update User Id"),HideOnInsert, ForeignKey("[dbo].[Users]", "UserId"), LeftJoin("jUUser"), TextualField("UpdateUsername")]
         public Int32? UpdateUserId
         {
             get { return Fields.UpdateUserId[this]; }
@@ -74,11 +71,25 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.Organization[this] = value; }
         }
 
-        [DisplayName("Ueln Code"), Column("UELNOrganization"), Size(3)]
-        public String UelnOrganization
+        [DisplayName("Ueln Code"), Column("UELNCode"), Size(3)]
+        public String UelnCode
         {
-            get { return Fields.UelnOrganization[this]; }
-            set { Fields.UelnOrganization[this] = value; }
+            get { return Fields.UelnCode[this]; }
+            set { Fields.UelnCode[this] = value; }
+        }
+
+        [DisplayName("Username"), Expression("jIUser.[Username]")]
+        public String InsertUsername
+        {
+            get { return Fields.InsertUsername[this]; }
+            set { Fields.InsertUsername[this] = value; }
+        }
+        
+        [DisplayName("Username"), Expression("jUUser.[Username]")]
+        public String UpdateUsername
+        {
+            get { return Fields.UpdateUsername[this]; }
+            set { Fields.UpdateUsername[this] = value; }
         }
 
         IIdField IIdRow.IdField
@@ -100,7 +111,7 @@ namespace GestionEquestre.Ge.Entities
 
         public class RowFields : RowFieldsBase
         {
-            public GuidField Id;
+            public Int32Field Id;
             public BooleanField DefaultValue;
             public BooleanField IsActive;
             public DateTimeField InsertDate;
@@ -108,7 +119,11 @@ namespace GestionEquestre.Ge.Entities
             public DateTimeField UpdateDate;
             public Int32Field UpdateUserId;
             public StringField Organization;
-            public StringField UelnOrganization;
+            public StringField UelnCode;
+
+            public StringField InsertUsername;
+            public StringField UpdateUsername;
+
 
             public RowFields()
                 : base()

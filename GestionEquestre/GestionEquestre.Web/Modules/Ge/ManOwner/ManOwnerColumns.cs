@@ -14,7 +14,7 @@ namespace GestionEquestre.Ge.Columns
     public class ManOwnerColumns
     {
         [EditLink, DisplayName("Db.Shared.RecordId"), AlignRight]
-        public Int32 Id { get; set; }
+        public Int64 Id { get; set; }
         [EditLink]
         public String HorseSire { get; set; }
         public String CavalierCaption { get; set; }

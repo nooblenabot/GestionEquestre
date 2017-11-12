@@ -14,7 +14,7 @@ namespace GestionEquestre.Ge.Columns
     public class ManPersonColumns
     {
         [EditLink, DisplayName("Db.Shared.RecordId"), AlignRight]
-        public Guid Id { get; set; }
+        public Int64 Id { get; set; }
         public Boolean IsMorale { get; set; }
         public Boolean IsActive { get; set; }
         public Boolean NotArchive { get; set; }

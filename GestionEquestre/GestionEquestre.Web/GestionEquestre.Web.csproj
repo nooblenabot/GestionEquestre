@@ -1882,7 +1882,7 @@
     <Compile Include="Modules\Ge\ManHorses\ManHorsesPage.cs" />
     <Compile Include="Modules\Ge\ManHorses\ManHorsesRepository.cs" />
     <Compile Include="Modules\Ge\ManHorses\ManHorsesRow.cs" />
-    <Compile Include="Modules\Ge\ManCavaliers\SetCavalierLookup.cs" />
+    <Compile Include="Modules\Ge\ManCavaliers\ManCavalierLookup.cs" />
     <Compile Include="Modules\Ge\ManPerson\ManPersonLookup.cs" />
     <Compile Include="Modules\Ge\SetCity\SetCityLookup.cs" />
     <Compile Include="Modules\Ge\SetCountry\SetCountryLookup.cs" />

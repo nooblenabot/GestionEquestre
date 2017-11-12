@@ -16,7 +16,7 @@ namespace GestionEquestre.Ge.Entities
     public sealed class ManAdressRow : Row, IIdRow, INameRow
     {
         [DisplayName("Id"), PrimaryKey]
-        public Guid? Id
+        public Int64? Id
         {
             get { return Fields.Id[this]; }
             set { Fields.Id[this] = value; }
@@ -86,14 +86,14 @@ namespace GestionEquestre.Ge.Entities
         }
 
         [DisplayName("City"), ForeignKey("[dbo].[SET_CITY]", "Id"), LeftJoin("jCity"), TextualField("CityFrCodeInsee")]
-        public Guid? City
+        public Int64? City
         {
             get { return Fields.City[this]; }
             set { Fields.City[this] = value; }
         }
 
         [DisplayName("Country"), ForeignKey("[dbo].[SET_COUNTRY]", "Id"), LeftJoin("jCountry"), TextualField("Country1")]
-        public Guid? Country
+        public Int16? Country
         {
             get { return Fields.Country[this]; }
             set { Fields.Country[this] = value; }
@@ -188,7 +188,7 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.CityPostCode[this] = value; }
         }
         [DisplayName("City Country"), Expression("jCity.[Country]")]
-        public Guid? CityCountry
+        public Int16? CityCountry
         {
             get { return Fields.CityCountry[this]; }
             set { Fields.CityCountry[this] = value; }
@@ -272,7 +272,7 @@ namespace GestionEquestre.Ge.Entities
 
         public class RowFields : RowFieldsBase
         {
-            public GuidField Id;
+            public Int64Field Id;
             public BooleanField IsActive;
             public BooleanField NotArchive;
             public DateTimeField InsertDate;
@@ -282,8 +282,8 @@ namespace GestionEquestre.Ge.Entities
             public StringField Adress1;
             public StringField Adress2;
             public StringField Adress3;
-            public GuidField City;
-            public GuidField Country;
+            public Int64Field City;
+            public Int16Field Country;
             public StringField Cedex;
             public StringField Building;
             public StringField Caption;
@@ -299,7 +299,7 @@ namespace GestionEquestre.Ge.Entities
             public StringField CityCaption;
             public StringField City1;
             public StringField CityPostCode;
-            public GuidField CityCountry;
+            public Int16Field CityCountry;
 
             public BooleanField CountryDefaultValue;
             public BooleanField CountryIsActive;

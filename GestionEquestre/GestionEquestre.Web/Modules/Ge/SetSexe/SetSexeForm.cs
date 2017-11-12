@@ -13,6 +13,7 @@ namespace GestionEquestre.Ge.Forms
     [BasedOnRow(typeof(Entities.SetSexeRow))]
     public class SetSexeForm
     {
+        public Int16 ID { get; set; }
         public Boolean DefaultValue { get; set; }
         public Boolean IsActive { get; set; }
         public DateTime InsertDate { get; set; }

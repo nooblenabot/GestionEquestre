@@ -14,7 +14,7 @@ namespace GestionEquestre.Ge.Columns
     public class AccBankaccountColumns
     {
         [EditLink, DisplayName("Db.Shared.RecordId"), AlignRight]
-        public Guid Id { get; set; }
+        public Int64 Id { get; set; }
         [EditLink]
         public String CountryCodeIban { get; set; }
         public String CheckDigitsIban { get; set; }

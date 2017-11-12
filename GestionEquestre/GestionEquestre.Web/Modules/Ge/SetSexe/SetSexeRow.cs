@@ -15,7 +15,7 @@ namespace GestionEquestre.Ge.Entities
     [ModifyPermission("Administration:General")]
     public sealed class SetSexeRow : Row, IIdRow, INameRow
     {
-        [DisplayName("Sexe Id"), PrimaryKey,LookupInclude]
+        [DisplayName("Sexe Id"), PrimaryKey,LookupInclude, NotNull]
         public Int16? SexeId
         {
             get { return Fields.SexeId[this]; }
@@ -36,28 +36,28 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.IsActive[this] = value; }
         }
 
-        [DisplayName("Insert Date"), NotNull]
+        [DisplayName("Insert Date"), Updatable(false)]
         public DateTime? InsertDate
         {
             get { return Fields.InsertDate[this]; }
             set { Fields.InsertDate[this] = value; }
         }
 
-        [DisplayName("Insert User Id"), NotNull, Updatable(false)]
+        [DisplayName("Insert User Id"), Updatable(false), ForeignKey("[dbo].[Users]", "UserId"), LeftJoin("jUser"), TextualField("UserDisplayName")]
         public Int32? InsertUserId
         {
             get { return Fields.InsertUserId[this]; }
             set { Fields.InsertUserId[this] = value; }
         }
 
-        [DisplayName("Update Date")]
+        [DisplayName("Update Date"),HideOnInsert]
         public DateTime? UpdateDate
         {
             get { return Fields.UpdateDate[this]; }
             set { Fields.UpdateDate[this] = value; }
         }
 
-        [DisplayName("Update User Id")]
+        [DisplayName("Update User Id"),HideOnInsert]
         public Int32? UpdateUserId
         {
             get { return Fields.UpdateUserId[this]; }
@@ -76,6 +76,13 @@ namespace GestionEquestre.Ge.Entities
         {
             get { return Fields.Civility[this]; }
             set { Fields.Civility[this] = value; }
+        }
+
+        [DisplayName("Username"), Expression("jUser.[Username]")]
+        public String UserUsername
+        {
+            get { return Fields.UserUsername[this]; }
+            set { Fields.UserUsername[this] = value; }
         }
 
         IIdField IIdRow.IdField
@@ -106,6 +113,8 @@ namespace GestionEquestre.Ge.Entities
             public Int32Field UpdateUserId;
             public StringField Caption;
             public StringField Civility;
+
+            public StringField  UserUsername;
 
             public RowFields()
                 : base()

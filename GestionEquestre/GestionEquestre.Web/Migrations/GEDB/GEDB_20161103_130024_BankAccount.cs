@@ -26,11 +26,12 @@ namespace GestionEquestre.Migrations.GEDB
 
             addUsersColumns(IfDatabase(Utils.AllExceptOracle)
                 .Create.Table("ACC_BANKACCOUNT")
-                .WithColumn("Id").AsGuid().WithDefaultValue(SystemMethods.NewSequentialId).PrimaryKey().NotNullable());
+             //   .WithColumn("Id").AsInt64().WithDefaultValue(SystemMethods.NewSequentialId).PrimaryKey().NotNullable());
+                .WithColumn("Id").AsInt64().PrimaryKey().NotNullable());
 
             addUsersColumns(IfDatabase("Oracle")
                 .Create.Table("ACC_BANKACCOUNT")
-                .WithColumn("Id").AsGuid().PrimaryKey().NotNullable());
+                .WithColumn("Id").AsInt64().PrimaryKey().NotNullable());
 
             Utils.AddOracleIdentity(this, "ACC_BANKACCOUNT", "Id");
 

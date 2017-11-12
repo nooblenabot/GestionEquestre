@@ -16,7 +16,7 @@ namespace GestionEquestre.Ge.Entities
     public sealed class ManPersonRow : Row, IIdRow, INameRow
     {
         [DisplayName("Id"), PrimaryKey]
-        public Guid? Id
+        public Int64? Id
         {
             get { return Fields.Id[this]; }
             set { Fields.Id[this] = value; }
@@ -121,7 +121,7 @@ namespace GestionEquestre.Ge.Entities
         }
 
         [DisplayName("Birth City"), ForeignKey("[dbo].[SET_CITY]", "Id"), LeftJoin("jBirthCity"), TextualField("BirthCityFrCodeInsee")]
-        public Guid? BirthCity
+        public Int64? BirthCity
         {
             get { return Fields.BirthCity[this]; }
             set { Fields.BirthCity[this] = value; }
@@ -198,14 +198,14 @@ namespace GestionEquestre.Ge.Entities
         }
 
         [DisplayName("Bank Account"), ForeignKey("[dbo].[ACC_BANKACCOUNT]", "Id"), LeftJoin("jBankAccount"), TextualField("BankAccountCountryCodeIban")]
-        public Guid? BankAccount
+        public Int64? BankAccount
         {
             get { return Fields.BankAccount[this]; }
             set { Fields.BankAccount[this] = value; }
         }
 
         [DisplayName("Id Adress"), ForeignKey("[dbo].[MAN_ADRESS]", "Id"), LeftJoin("jIdAdress"), TextualField("IdAdressAdress1")]
-        public Guid? IdAdress
+        public Int64? IdAdress
         {
             get { return Fields.IdAdress[this]; }
             set { Fields.IdAdress[this] = value; }
@@ -382,7 +382,7 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.BirthCityPostCode[this] = value; }
         }
         [DisplayName("Birth City Country"), Expression("jBirthCity.[Country]")]
-        public Guid? BirthCityCountry
+        public Int16? BirthCityCountry
         {
             get { return Fields.BirthCityCountry[this]; }
             set { Fields.BirthCityCountry[this] = value; }
@@ -634,13 +634,13 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.IdAdressAdress3[this] = value; }
         }
         [DisplayName("Id Adress City"), Expression("jIdAdress.[City]")]
-        public Guid? IdAdressCity
+        public Int64? IdAdressCity
         {
             get { return Fields.IdAdressCity[this]; }
             set { Fields.IdAdressCity[this] = value; }
         }
         [DisplayName("Id Adress Country"), Expression("jIdAdress.[Country]")]
-        public Guid? IdAdressCountry
+        public Int16? IdAdressCountry
         {
             get { return Fields.IdAdressCountry[this]; }
             set { Fields.IdAdressCountry[this] = value; }
@@ -688,7 +688,7 @@ namespace GestionEquestre.Ge.Entities
 
         public class RowFields : RowFieldsBase
         {
-            public GuidField Id;
+            public Int64Field Id;
             public BooleanField IsMorale;
             public BooleanField IsActive;
             public BooleanField NotArchive;
@@ -703,7 +703,7 @@ namespace GestionEquestre.Ge.Entities
             public DateTimeField Birthday;
             public Int16Field Sexe;
             public Int16Field MaritalStatus;
-            public GuidField BirthCity;
+            public Int64Field BirthCity;
             public Int16Field BirthCountry;
             public Int16Field Nationality;
             public StreamField Photo;
@@ -714,8 +714,8 @@ namespace GestionEquestre.Ge.Entities
             public StringField OtherPhone2;
             public StringField Email1;
             public StringField Email2;
-            public GuidField BankAccount;
-            public GuidField IdAdress;
+            public Int64Field BankAccount;
+            public Int64Field IdAdress;
             public StringField Caption;
             public DateTimeField ArchiveDate;
 
@@ -747,7 +747,7 @@ namespace GestionEquestre.Ge.Entities
             public StringField BirthCityCaption;
             public StringField BirthCityCity;
             public StringField BirthCityPostCode;
-            public GuidField BirthCityCountry;
+            public Int16Field BirthCityCountry;
 
             public BooleanField BirthCountryDefaultValue;
             public BooleanField BirthCountryIsActive;
@@ -793,8 +793,8 @@ namespace GestionEquestre.Ge.Entities
             public StringField IdAdressAdress1;
             public StringField IdAdressAdress2;
             public StringField IdAdressAdress3;
-            public GuidField IdAdressCity;
-            public GuidField IdAdressCountry;
+            public Int64Field IdAdressCity;
+            public Int16Field IdAdressCountry;
             public StringField IdAdressCedex;
             public StringField IdAdressBuilding;
             public StringField IdAdressCaption;

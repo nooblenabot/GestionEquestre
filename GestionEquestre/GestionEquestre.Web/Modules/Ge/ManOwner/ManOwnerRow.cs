@@ -16,7 +16,7 @@ namespace GestionEquestre.Ge.Entities
     public sealed class ManOwnerRow : Row, IIdRow, INameRow
     {
         [DisplayName("Id"), Identity]
-        public Int32? Id
+        public Int64? Id
         {
             get { return Fields.Id[this]; }
             set { Fields.Id[this] = value; }
@@ -64,13 +64,13 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.HorseHnin[this] = value; }
         }
         [DisplayName("Horse Birth Country"), Expression("jHorse.[BirthCountry]")]
-        public Guid? HorseBirthCountry
+        public Int16? HorseBirthCountry
         {
             get { return Fields.HorseBirthCountry[this]; }
             set { Fields.HorseBirthCountry[this] = value; }
         }
         [DisplayName("Horse Birth Organization"), Expression("jHorse.[BirthOrganization]")]
-        public Guid? HorseBirthOrganization
+        public Int64? HorseBirthOrganization
         {
             get { return Fields.HorseBirthOrganization[this]; }
             set { Fields.HorseBirthOrganization[this] = value; }
@@ -166,7 +166,7 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.HorseArchiveDate[this] = value; }
         }
         [DisplayName("Cavalier Person"), Expression("jCavalier.[Person]")]
-        public Guid? CavalierPerson
+        public Int64? CavalierPerson
         {
             get { return Fields.CavalierPerson[this]; }
             set { Fields.CavalierPerson[this] = value; }
@@ -262,7 +262,7 @@ namespace GestionEquestre.Ge.Entities
 
         public class RowFields : RowFieldsBase
         {
-            public Int32Field Id;
+            public Int64Field Id;
             public StringField Horse;
             public StringField Cavalier;
             public SingleField Part;
@@ -270,8 +270,8 @@ namespace GestionEquestre.Ge.Entities
             public StringField HorseSire;
             public StringField HorseCleSire;
             public StringField HorseHnin;
-            public GuidField HorseBirthCountry;
-            public GuidField HorseBirthOrganization;
+            public Int16Field HorseBirthCountry;
+            public Int64Field HorseBirthOrganization;
             public StringField HorseName;
             public BooleanField HorseIsActive;
             public BooleanField HorseNotArchive;
@@ -288,7 +288,7 @@ namespace GestionEquestre.Ge.Entities
             public StringField HorseDescription;
             public DateTimeField HorseArchiveDate;
 
-            public GuidField CavalierPerson;
+            public Int64Field CavalierPerson;
             public BooleanField CavalierIsActive;
             public BooleanField CavalierNotArchive;
             public DateTimeField CavalierInsertDate;

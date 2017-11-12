@@ -14,7 +14,7 @@ namespace GestionEquestre.Ge.Columns
     public class SetCityColumns
     {
         [EditLink, DisplayName("Db.Shared.RecordId"), AlignRight]
-        public Guid Id { get; set; }
+        public Int64 Id { get; set; }
         public Boolean DefaultValue { get; set; }
         public Boolean IsActive { get; set; }
         public DateTime InsertDate { get; set; }

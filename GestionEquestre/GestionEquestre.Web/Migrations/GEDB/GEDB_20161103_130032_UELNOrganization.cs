@@ -18,15 +18,15 @@ namespace GestionEquestre.Migrations.GEDB
                 .WithColumn("UpdateDate").AsDateTime().Nullable()
                 .WithColumn("UpdateUserId").AsInt32().Nullable()
                 .WithColumn("Organization").AsString(80).Nullable()
-                .WithColumn("UELNOrganization").AsString(3).Nullable();
+                .WithColumn("UELNCode").AsString(3).Nullable();
 
             addUsersColumns(IfDatabase(Utils.AllExceptOracle)
                 .Create.Table("SET_UELNORGA")
-                .WithColumn("Id").AsGuid().WithDefaultValue(SystemMethods.NewSequentialId).PrimaryKey().NotNullable());
+                .WithColumn("Id").AsInt32().Identity().PrimaryKey().NotNullable());
 
             addUsersColumns(IfDatabase("Oracle")
                 .Create.Table("SET_UELNORGA")
-                .WithColumn("Id").AsGuid().PrimaryKey().NotNullable());
+                .WithColumn("Id").AsInt32().PrimaryKey().NotNullable());
 
             Utils.AddOracleIdentity(this, "SET_UELNORGA", "Id");
 
@@ -35,7 +35,7 @@ namespace GestionEquestre.Migrations.GEDB
                 DefaultValue = 1,
                 InsertDate = new DateTime(2016, 11, 11),
                 InsertUserId = 1,
-                UELNOrganization = "001",
+                UELNCode = "001",
                 Organization = "IFCE",
             });
 

@@ -16,7 +16,7 @@ namespace GestionEquestre.Ge.Entities
     public sealed class ManFolderRow : Row, IIdRow, INameRow
     {
         [DisplayName("Id"), PrimaryKey]
-        public Int32? Id
+        public Int64? Id
         {
             get { return Fields.Id[this]; }
             set { Fields.Id[this] = value; }
@@ -140,7 +140,7 @@ namespace GestionEquestre.Ge.Entities
 
         public class RowFields : RowFieldsBase
         {
-            public Int32Field Id;
+            public Int64Field Id;
             public BooleanField IsActive;
             public BooleanField NotArchive;
             public DateTimeField InsertDate;

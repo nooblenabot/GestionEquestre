@@ -18,7 +18,7 @@ namespace GestionEquestre.Ge.Forms
         public String CleSire { get; set; }
         public String Hnin { get; set; }
         public String BirthCountry { get; set; }
-        public Guid BirthOrganization { get; set; }
+        public Int32 BirthOrganization { get; set; }
         public String Name { get; set; }
         public Boolean IsActive { get; set; }
         public Boolean NotArchive { get; set; }

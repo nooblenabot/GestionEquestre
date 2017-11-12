@@ -14,7 +14,7 @@ namespace GestionEquestre.Ge.Forms
     public class ManCavaliersForm
     {
         public String LicFfe { get; set; }
-        public Guid Person { get; set; }
+        public Int64 Person { get; set; }
         public Boolean IsActive { get; set; }
         public Boolean NotArchive { get; set; }
         public DateTime InsertDate { get; set; }

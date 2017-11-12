@@ -11,7 +11,7 @@ namespace GestionEquestre.Migrations.GEDB
         public override void Up()
         {
             Action<ICreateTableWithColumnSyntax> addUsersColumns = expr => expr
-                .WithColumn("Person").AsGuid().NotNullable()
+                .WithColumn("Person").AsInt64().NotNullable()
                 .WithColumn("IsActive").AsBoolean().NotNullable().WithDefaultValue(1)
                 .WithColumn("NotArchive").AsBoolean().NotNullable().WithDefaultValue(1)
                 .WithColumn("InsertDate").AsDateTime().NotNullable()

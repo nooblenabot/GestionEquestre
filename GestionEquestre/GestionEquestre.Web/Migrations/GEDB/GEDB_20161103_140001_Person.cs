@@ -25,7 +25,7 @@ namespace GestionEquestre.Migrations.GEDB
                 .WithColumn("Birthday").AsDate().Nullable()
                 .WithColumn("Sexe").AsInt16().Nullable().WithDefaultValue(00)
                 .WithColumn("MaritalStatus").AsInt16().Nullable()
-                .WithColumn("BirthCity").AsGuid().Nullable()
+                .WithColumn("BirthCity").AsInt64().Nullable()
                 .WithColumn("BirthCountry").AsInt16().Nullable()
                 .WithColumn("nationality").AsInt16().Nullable()
                 .WithColumn("Photo").AsBinary().Nullable()
@@ -36,18 +36,18 @@ namespace GestionEquestre.Migrations.GEDB
                 .WithColumn("OtherPhone2").AsString(20).Nullable()
                 .WithColumn("Email1").AsString(80).Nullable()
                 .WithColumn("Email2").AsString(80).Nullable()
-                .WithColumn("BankAccount").AsGuid().Nullable()
-                .WithColumn("IdAdress").AsGuid().Nullable()
+                .WithColumn("BankAccount").AsInt64().Nullable()
+                .WithColumn("IdAdress").AsInt64().Nullable()
                 .WithColumn("Caption").AsString(200).Nullable()
                 .WithColumn("ArchiveDate").AsDateTime().Nullable();
 
             addUsersColumns(IfDatabase(Utils.AllExceptOracle)
                 .Create.Table("MAN_PERSON")
-                .WithColumn("Id").AsGuid().WithDefaultValue(SystemMethods.NewSequentialId).PrimaryKey().NotNullable());
+                .WithColumn("Id").AsInt64().PrimaryKey().NotNullable());
 
             addUsersColumns(IfDatabase("Oracle")
                 .Create.Table("MAN_PERSON")
-                .WithColumn("Id").AsGuid().PrimaryKey().NotNullable());
+                .WithColumn("Id").AsInt64().PrimaryKey().NotNullable());
 
             Utils.AddOracleIdentity(this, "MAN_PERSON", "Id");
 

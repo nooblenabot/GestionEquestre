@@ -24,7 +24,7 @@ namespace GestionEquestre.Ge.Entities
 
         [DisplayName("Person"), NotNull, ForeignKey("[dbo].[MAN_PERSON]", "Id"), LeftJoin("jPerson"), TextualField("PersonSurname")]
         [LookupEditor(typeof(Ge.Scripts.ManPersonActiveLookup), MinimumResultsForSearch = 1, InplaceAdd = false)]
-        public Guid? Person
+        public Int64? Person
         {
             get { return Fields.Person[this]; }
             set { Fields.Person[this] = value; }
@@ -201,19 +201,19 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.PersonMaritalStatus[this] = value; }
         }
         [DisplayName("Person Birth City"), Expression("jPerson.[BirthCity]")]
-        public Guid? PersonBirthCity
+        public Int64? PersonBirthCity
         {
             get { return Fields.PersonBirthCity[this]; }
             set { Fields.PersonBirthCity[this] = value; }
         }
         [DisplayName("Person Birth Country"), Expression("jPerson.[BirthCountry]")]
-        public Guid? PersonBirthCountry
+        public Int16? PersonBirthCountry
         {
             get { return Fields.PersonBirthCountry[this]; }
             set { Fields.PersonBirthCountry[this] = value; }
         }
         [DisplayName("Person Nationality"), Expression("jPerson.[nationality]")]
-        public Guid? PersonNationality
+        public Int16? PersonNationality
         {
             get { return Fields.PersonNationality[this]; }
             set { Fields.PersonNationality[this] = value; }
@@ -267,13 +267,13 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.PersonEmail2[this] = value; }
         }
         [DisplayName("Person Bank Account"), Expression("jPerson.[BankAccount]")]
-        public Guid? PersonBankAccount
+        public Int64? PersonBankAccount
         {
             get { return Fields.PersonBankAccount[this]; }
             set { Fields.PersonBankAccount[this] = value; }
         }
         [DisplayName("Person Id Adress"), Expression("jPerson.[IdAdress]")]
-        public Guid? PersonIdAdress
+        public Int64? PersonIdAdress
         {
             get { return Fields.PersonIdAdress[this]; }
             set { Fields.PersonIdAdress[this] = value; }
@@ -406,7 +406,7 @@ namespace GestionEquestre.Ge.Entities
         public class RowFields : RowFieldsBase
         {
             public StringField LicFfe;
-            public GuidField Person;
+            public Int64Field Person;
             public BooleanField IsActive;
             public BooleanField NotArchive;
             public DateTimeField InsertDate;
@@ -434,9 +434,9 @@ namespace GestionEquestre.Ge.Entities
             public DateTimeField PersonBirthday;
             public Int16Field PersonSexe;
             public Int16Field PersonMaritalStatus;
-            public GuidField PersonBirthCity;
-            public GuidField PersonBirthCountry;
-            public GuidField PersonNationality;
+            public Int64Field PersonBirthCity;
+            public Int16Field PersonBirthCountry;
+            public Int16Field PersonNationality;
             public StreamField PersonPhoto;
             public StringField PersonPhone;
             public StringField PersonGsm;
@@ -445,8 +445,8 @@ namespace GestionEquestre.Ge.Entities
             public StringField PersonOtherPhone2;
             public StringField PersonEmail1;
             public StringField PersonEmail2;
-            public GuidField PersonBankAccount;
-            public GuidField PersonIdAdress;
+            public Int64Field PersonBankAccount;
+            public Int64Field PersonIdAdress;
             public StringField PersonCaption;
             public DateTimeField PersonArchiveDate;
 

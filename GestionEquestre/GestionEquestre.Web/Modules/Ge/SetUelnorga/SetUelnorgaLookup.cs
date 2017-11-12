@@ -11,8 +11,8 @@ namespace GestionEquestre.Ge.Scripts
        public SetUelnorgaLookup()
         {
             IdField = Entities.SetUelnorgaRow.Fields.Id.PropertyName;
-          //  TextField = Entities.SetUelnorgaRow.Fields.Organization.PropertyName + "(" + Entities.SetUelnorgaRow.Fields.UelnOrganization.PropertyName + ")";
-            TextField = Entities.SetUelnorgaRow.Fields.Organization.PropertyName;
+        //   TextField = string.Concat(Entities.SetUelnorgaRow.Fields.Organization.PropertyName,Entities.SetUelnorgaRow.Fields.UelnCode.PropertyName);
+           TextField = Entities.SetUelnorgaRow.Fields.Organization.PropertyName;
 
         }
 
@@ -20,7 +20,7 @@ namespace GestionEquestre.Ge.Scripts
         {
             var fld = Entities.SetUelnorgaRow.Fields;
             query.Distinct(true)
-                .Select(fld.Id, fld.Organization, fld.UelnOrganization)
+                .Select(fld.Id, fld.Organization, fld.UelnCode)
                 .Where(
                 new Criteria(fld.IsActive) == 1
                 );

@@ -20,7 +20,7 @@ namespace GestionEquestre.Migrations.GEDB
                 .WithColumn("Adress_1").AsString(50).Nullable()
                 .WithColumn("Adress_2").AsString(50).Nullable()
                 .WithColumn("Adress_3").AsString(50).Nullable()
-                .WithColumn("City").AsGuid().Nullable()
+                .WithColumn("City").AsInt64().Nullable()
                 .WithColumn("Country").AsInt16().Nullable()
                 .WithColumn("Cedex").AsString(50).Nullable()
                 .WithColumn("building").AsString(20).Nullable()
@@ -29,11 +29,11 @@ namespace GestionEquestre.Migrations.GEDB
 
             addUsersColumns(IfDatabase(Utils.AllExceptOracle)
                 .Create.Table("MAN_ADRESS")
-                .WithColumn("Id").AsGuid().WithDefaultValue(SystemMethods.NewSequentialId).PrimaryKey().NotNullable());
+                .WithColumn("Id").AsInt64().PrimaryKey().NotNullable());
 
             addUsersColumns(IfDatabase("Oracle")
                 .Create.Table("MAN_ADRESS")
-                .WithColumn("Id").AsGuid().PrimaryKey().NotNullable());
+                .WithColumn("Id").AsInt64().PrimaryKey().NotNullable());
 
             Utils.AddOracleIdentity(this, "MAN_ADRESS", "Id");
 

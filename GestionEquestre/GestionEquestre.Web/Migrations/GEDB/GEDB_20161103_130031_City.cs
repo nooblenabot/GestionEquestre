@@ -25,11 +25,11 @@ namespace GestionEquestre.Migrations.GEDB
 
             addUsersColumns(IfDatabase(Utils.AllExceptOracle)
                 .Create.Table("SET_CITY")
-                .WithColumn("Id").AsGuid().WithDefaultValue(SystemMethods.NewSequentialId).PrimaryKey().NotNullable());
+                .WithColumn("Id").AsInt64().Identity().PrimaryKey().NotNullable());
 
             addUsersColumns(IfDatabase("Oracle")
                 .Create.Table("SET_CITY")
-                .WithColumn("Id").AsGuid().PrimaryKey().NotNullable());
+                .WithColumn("Id").AsInt64().PrimaryKey().NotNullable());
 
             Utils.AddOracleIdentity(this, "SET_CITY", "Id");
 

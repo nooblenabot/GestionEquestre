@@ -16,8 +16,6 @@ namespace GestionEquestre.Ge.Entities
     public sealed class ManHorsesRow : Row, IIdRow, INameRow
     {
         [DisplayName("Ueln"), Column("UELN"), Size(15), PrimaryKey, QuickSearch,]
-      //  [Expression("T0.[BirthCountry] + T0.[BirthOrganization]  + T0.[Hnin]")]
-        [Expression("T0.[BirthCountry] + T0.[Hnin]")]
         public String Ueln
         {
             get { return Fields.Ueln[this]; }
@@ -45,7 +43,7 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.Hnin[this] = value; }
         }
 
-        [DisplayName("Birth Country"), NotNull, ForeignKey("[dbo].[SET_COUNTRY]", "ISOcode"), LeftJoin("jBirthCountry"), TextualField("BirthCountryCountry")]
+        [DisplayName("Birth Country"), NotNull, ForeignKey("[dbo].[SET_COUNTRY]", "ISOcode"), LeftJoin("jBirthCountry"), TextualField("BirthCountryName_FR_fr")]
         [LookupEditor(typeof(Scripts.SetCISOcodeLookup), MinimumResultsForSearch = 1, InplaceAdd = false)]
         public String BirthCountry
         {
@@ -55,7 +53,7 @@ namespace GestionEquestre.Ge.Entities
 
         [DisplayName("Birth Organization"), NotNull, ForeignKey("[dbo].[SET_UELNORGA]", "Id"), LeftJoin("jBirthOrganization"), TextualField("BirthOrganizationOrganization")]
         [LookupEditor(typeof(Ge.Scripts.SetUelnorgaLookup), MinimumResultsForSearch = 1, InplaceAdd = false)]
-        public Guid? BirthOrganization
+        public Int32? BirthOrganization
         {
             get { return Fields.BirthOrganization[this]; }
             set { Fields.BirthOrganization[this] = value; }
@@ -82,28 +80,28 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.NotArchive[this] = value; }
         }
 
-        [DisplayName("Insert Date"), NotNull]
+        [DisplayName("Insert Date"), Updatable(false),DateTimeFormatter ]
         public DateTime? InsertDate
         {
             get { return Fields.InsertDate[this]; }
             set { Fields.InsertDate[this] = value; }
         }
 
-        [DisplayName("Insert User Id"), NotNull]
+        [DisplayName("Insert User Id"),Updatable(false)]
         public Int32? InsertUserId
         {
             get { return Fields.InsertUserId[this]; }
             set { Fields.InsertUserId[this] = value; }
         }
 
-        [DisplayName("Update Date")]
+        [DisplayName("Update Date"), HideOnInsert]
         public DateTime? UpdateDate
         {
             get { return Fields.UpdateDate[this]; }
             set { Fields.UpdateDate[this] = value; }
         }
 
-        [DisplayName("Update User Id")]
+        [DisplayName("Update User Id"), HideOnInsert]
         public Int32? UpdateUserId
         {
             get { return Fields.UpdateUserId[this]; }
@@ -263,11 +261,11 @@ namespace GestionEquestre.Ge.Entities
             get { return Fields.BirthOrganizationOrganization[this]; }
             set { Fields.BirthOrganizationOrganization[this] = value; }
         }
-        [DisplayName("Birth Organization Ueln Organization"), Expression("jBirthOrganization.[UELNOrganization]")]
-        public String BirthOrganizationUelnOrganization
+        [DisplayName("Birth Organization Ueln Code"), Expression("jBirthOrganization.[UELNCode]")]
+        public String BirthOrganizationUelnCode
         {
-            get { return Fields.BirthOrganizationUelnOrganization[this]; }
-            set { Fields.BirthOrganizationUelnOrganization[this] = value; }
+            get { return Fields.BirthOrganizationUelnCode[this]; }
+            set { Fields.BirthOrganizationUelnCode[this] = value; }
         }
         [DisplayName("Sexe Default Value"), Expression("jSexe.[DefaultValue]")]
         public Boolean? SexeDefaultValue
@@ -341,7 +339,7 @@ namespace GestionEquestre.Ge.Entities
             public StringField CleSire;
             public StringField Hnin;
             public StringField BirthCountry;
-            public GuidField BirthOrganization;
+            public Int32Field BirthOrganization;
             public StringField Name;
             public BooleanField IsActive;
             public BooleanField NotArchive;
@@ -375,7 +373,7 @@ namespace GestionEquestre.Ge.Entities
             public DateTimeField BirthOrganizationUpdateDate;
             public Int32Field BirthOrganizationUpdateUserId;
             public StringField BirthOrganizationOrganization;
-            public StringField BirthOrganizationUelnOrganization;
+            public StringField BirthOrganizationUelnCode;
 
             public BooleanField SexeDefaultValue;
             public BooleanField SexeIsActive;

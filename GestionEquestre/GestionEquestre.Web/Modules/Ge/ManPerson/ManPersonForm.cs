@@ -27,9 +27,9 @@ namespace GestionEquestre.Ge.Forms
         public DateTime Birthday { get; set; }
         public Int16 Sexe { get; set; }
         public Int16 MaritalStatus { get; set; }
-        public Guid BirthCity { get; set; }
-        public Guid BirthCountry { get; set; }
-        public Guid Nationality { get; set; }
+        public Int64 BirthCity { get; set; }
+        public Int16 BirthCountry { get; set; }
+        public Int16 Nationality { get; set; }
         public Stream Photo { get; set; }
         public String Phone { get; set; }
         public String Gsm { get; set; }
@@ -38,8 +38,8 @@ namespace GestionEquestre.Ge.Forms
         public String OtherPhone2 { get; set; }
         public String Email1 { get; set; }
         public String Email2 { get; set; }
-        public Guid BankAccount { get; set; }
-        public Guid IdAdress { get; set; }
+        public Int64 BankAccount { get; set; }
+        public Int64 IdAdress { get; set; }
         public String Caption { get; set; }
         public DateTime ArchiveDate { get; set; }
     }

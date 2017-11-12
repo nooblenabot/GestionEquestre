@@ -13,7 +13,7 @@ namespace GestionEquestre.Ge.Forms
     [BasedOnRow(typeof(Entities.LinkFolderHorseRow))]
     public class LinkFolderHorseForm
     {
-        public Int32 Folder { get; set; }
+        public Int64 Folder { get; set; }
         public String Horse { get; set; }
     }
 }

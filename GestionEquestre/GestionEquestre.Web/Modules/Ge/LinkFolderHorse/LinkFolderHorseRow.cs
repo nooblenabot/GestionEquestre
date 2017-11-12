@@ -16,7 +16,7 @@ namespace GestionEquestre.Ge.Entities
     public sealed class LinkFolderHorseRow : Row, IIdRow, INameRow
     {
         [DisplayName("Id"), Identity]
-        public Int32? Id
+        public Int64? Id
         {
             get { return Fields.Id[this]; }
             set { Fields.Id[this] = value; }
@@ -24,7 +24,7 @@ namespace GestionEquestre.Ge.Entities
 
         [DisplayName("Folder"), NotNull, ForeignKey("[dbo].[MAN_FOLDER]", "Id"), LeftJoin("jFolder"), TextualField("FolderCaption")]
         //        [LookupEditor(typeof(Ge.Scripts.SexeHorsesLookup), MinimumResultsForSearch = 1, InplaceAdd = false)]
-        public Int32? Folder
+        public Int64? Folder
         {
             get { return Fields.Folder[this]; }
             set { Fields.Folder[this] = value; }
@@ -141,13 +141,13 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.HorseHnin[this] = value; }
         }
         [DisplayName("Horse Birth Country"), Expression("jHorse.[BirthCountry]")]
-        public Guid? HorseBirthCountry
+        public Int16? HorseBirthCountry
         {
             get { return Fields.HorseBirthCountry[this]; }
             set { Fields.HorseBirthCountry[this] = value; }
         }
         [DisplayName("Horse Birth Organization"), Expression("jHorse.[BirthOrganization]")]
-        public Guid? HorseBirthOrganization
+        public Int64? HorseBirthOrganization
         {
             get { return Fields.HorseBirthOrganization[this]; }
             set { Fields.HorseBirthOrganization[this] = value; }
@@ -261,8 +261,8 @@ namespace GestionEquestre.Ge.Entities
 
         public class RowFields : RowFieldsBase
         {
-            public Int32Field Id;
-            public Int32Field Folder;
+            public Int64Field Id;
+            public Int64Field Folder;
             public StringField Horse;
 
             public BooleanField FolderIsActive;
@@ -283,8 +283,8 @@ namespace GestionEquestre.Ge.Entities
             public StringField HorseSire;
             public StringField HorseCleSire;
             public StringField HorseHnin;
-            public GuidField HorseBirthCountry;
-            public GuidField HorseBirthOrganization;
+            public Int16Field HorseBirthCountry;
+            public Int64Field HorseBirthOrganization;
             public StringField HorseName;
             public BooleanField HorseIsActive;
             public BooleanField HorseNotArchive;

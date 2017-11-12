@@ -37,7 +37,25 @@ namespace GestionEquestre.Ge.Repositories
             return new MyListHandler().Process(connection, request);
         }
 
-        private class MySaveHandler : SaveRequestHandler<MyRow> { }
+        private class MySaveHandler : SaveRequestHandler<MyRow>
+        {
+            protected override void BeforeSave()
+            {
+              /*                base.BeforeSave();
+                if (base.IsCreate)
+                {
+                    base.Row.InsertUserId = Convert.ToInt32(Authorization.UserId);
+                    base.Row.InsertDate = DateTime.Now;
+                }
+                else
+                {
+                    base.Row.UpdateUserId = Convert.ToInt32(Authorization.UserId);
+                    base.Row.UpdateDate = DateTime.Now;
+                }
+                */
+            }
+       
+        }
         private class MyDeleteHandler : DeleteRequestHandler<MyRow> { }
         private class MyRetrieveHandler : RetrieveRequestHandler<MyRow> { }
         private class MyListHandler : ListRequestHandler<MyRow> { }

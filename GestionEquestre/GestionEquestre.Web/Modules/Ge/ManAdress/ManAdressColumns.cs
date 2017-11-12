@@ -14,7 +14,7 @@ namespace GestionEquestre.Ge.Columns
     public class ManAdressColumns
     {
         [EditLink, DisplayName("Db.Shared.RecordId"), AlignRight]
-        public Guid Id { get; set; }
+        public Int64 Id { get; set; }
         public Boolean IsActive { get; set; }
         public Boolean NotArchive { get; set; }
         public DateTime InsertDate { get; set; }
