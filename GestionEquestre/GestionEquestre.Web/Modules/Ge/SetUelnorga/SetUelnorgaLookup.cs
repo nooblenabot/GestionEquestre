@@ -11,8 +11,8 @@ namespace GestionEquestre.Ge.Scripts
        public SetUelnorgaLookup()
         {
             IdField = Entities.SetUelnorgaRow.Fields.Id.PropertyName;
-        //   TextField = string.Concat(Entities.SetUelnorgaRow.Fields.Organization.PropertyName,Entities.SetUelnorgaRow.Fields.UelnCode.PropertyName);
-           TextField = Entities.SetUelnorgaRow.Fields.Organization.PropertyName;
+          //TextField = string.Concat(Entities.SetUelnorgaRow.Fields.Organization.PropertyName, Entities.SetUelnorgaRow.Fields.UelnCode.PropertyName);
+            TextField = Entities.SetUelnorgaRow.Fields.Organization.PropertyName;
 
         }
 

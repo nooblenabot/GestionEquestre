@@ -28,7 +28,7 @@ namespace GestionEquestre.Migrations.GEDB
 
             addUsersColumns(IfDatabase(Utils.AllExceptOracle)
                 .Create.Table("MAN_FOLDER")
-                .WithColumn("Id").AsInt64().PrimaryKey().NotNullable());
+                .WithColumn("Id").AsInt64().Identity().PrimaryKey().NotNullable());
 
             addUsersColumns(IfDatabase("Oracle")
                 .Create.Table("MAN_FOLDER")

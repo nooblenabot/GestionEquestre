@@ -22,7 +22,7 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.SexeId[this] = value; }
         }
 
-        [DisplayName("Default Value"), NotNull, Updatable(false), Insertable(false)]
+        [DisplayName("Default Value"), NotNull, Updatable(false), HideOnInsert]
         public Boolean? DefaultValue
         {
             get { return Fields.DefaultValue[this]; }
@@ -36,28 +36,28 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.IsActive[this] = value; }
         }
 
-        [DisplayName("Insert Date"), Updatable(false)]
+        [DisplayName("Insert Date") ,HideOnInsert, Updatable(false), DateTimeFormatter]
         public DateTime? InsertDate
         {
             get { return Fields.InsertDate[this]; }
             set { Fields.InsertDate[this] = value; }
         }
 
-        [DisplayName("Insert User Id"), Updatable(false), ForeignKey("[dbo].[Users]", "UserId"), LeftJoin("jUser"), TextualField("UserDisplayName")]
+        [DisplayName("Insert User Id"), HideOnInsert, Updatable(false), ForeignKey("[dbo].[Users]", "UserId"), LeftJoin("jIUser"), TextualField("InsertUsername")]
         public Int32? InsertUserId
         {
             get { return Fields.InsertUserId[this]; }
             set { Fields.InsertUserId[this] = value; }
         }
 
-        [DisplayName("Update Date"),HideOnInsert]
+        [DisplayName("Update Date"),HideOnInsert, DateTimeFormatter]
         public DateTime? UpdateDate
         {
             get { return Fields.UpdateDate[this]; }
             set { Fields.UpdateDate[this] = value; }
         }
 
-        [DisplayName("Update User Id"),HideOnInsert]
+        [DisplayName("Update User Id"), HideOnInsert, ForeignKey("[dbo].[Users]", "UserId"), LeftJoin("jUUser"), TextualField("UpdateUsername")]
         public Int32? UpdateUserId
         {
             get { return Fields.UpdateUserId[this]; }
@@ -78,11 +78,18 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.Civility[this] = value; }
         }
 
-        [DisplayName("Username"), Expression("jUser.[Username]")]
-        public String UserUsername
+        [DisplayName("Username"), Expression("jIUser.[Username]")]
+        public String InsertUsername
         {
-            get { return Fields.UserUsername[this]; }
-            set { Fields.UserUsername[this] = value; }
+            get { return Fields.InsertUsername[this]; }
+            set { Fields.InsertUsername[this] = value; }
+        }
+
+        [DisplayName("Username"), Expression("jUUser.[Username]")]
+        public String UpdateUsername
+        {
+            get { return Fields.UpdateUsername[this]; }
+            set { Fields.UpdateUsername[this] = value; }
         }
 
         IIdField IIdRow.IdField
@@ -114,7 +121,8 @@ namespace GestionEquestre.Ge.Entities
             public StringField Caption;
             public StringField Civility;
 
-            public StringField  UserUsername;
+            public StringField InsertUsername;
+            public StringField UpdateUsername;
 
             public RowFields()
                 : base()

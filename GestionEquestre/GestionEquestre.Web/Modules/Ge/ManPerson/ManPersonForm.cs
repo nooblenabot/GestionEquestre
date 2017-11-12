@@ -17,9 +17,11 @@ namespace GestionEquestre.Ge.Forms
         public Boolean IsActive { get; set; }
         public Boolean NotArchive { get; set; }
         public DateTime InsertDate { get; set; }
-        public Int32 InsertUserId { get; set; }
+        //  public Int32 InsertUserId { get; set; }
+        public String InsertUsername { get; set; }
         public DateTime UpdateDate { get; set; }
-        public Int32 UpdateUserId { get; set; }
+        //public Int32 UpdateUserId { get; set; }
+        public String UpdateUsername { get; set; }
         public String Surname { get; set; }
         public String Name { get; set; }
         public String MaidenName { get; set; }

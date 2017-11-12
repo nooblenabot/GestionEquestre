@@ -80,28 +80,28 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.NotArchive[this] = value; }
         }
 
-        [DisplayName("Insert Date"), Updatable(false),DateTimeFormatter ]
+        [DisplayName("Insert Date"), HideOnInsert, Updatable(false), DateTimeFormatter]
         public DateTime? InsertDate
         {
             get { return Fields.InsertDate[this]; }
             set { Fields.InsertDate[this] = value; }
         }
 
-        [DisplayName("Insert User Id"),Updatable(false)]
+        [DisplayName("Insert User Id"), HideOnInsert, Updatable(false), ForeignKey("[dbo].[Users]", "UserId"), LeftJoin("jIUser"), TextualField("InsertUsername")]
         public Int32? InsertUserId
         {
             get { return Fields.InsertUserId[this]; }
             set { Fields.InsertUserId[this] = value; }
         }
 
-        [DisplayName("Update Date"), HideOnInsert]
+        [DisplayName("Update Date"), HideOnInsert, DateTimeFormatter]
         public DateTime? UpdateDate
         {
             get { return Fields.UpdateDate[this]; }
             set { Fields.UpdateDate[this] = value; }
         }
 
-        [DisplayName("Update User Id"), HideOnInsert]
+        [DisplayName("Update User Id"), HideOnInsert, ForeignKey("[dbo].[Users]", "UserId"), LeftJoin("jUUser"), TextualField("UpdateUsername")]
         public Int32? UpdateUserId
         {
             get { return Fields.UpdateUserId[this]; }
@@ -163,6 +163,20 @@ namespace GestionEquestre.Ge.Entities
         {
             get { return Fields.ArchiveDate[this]; }
             set { Fields.ArchiveDate[this] = value; }
+        }
+
+        [DisplayName("Username"), Expression("jIUser.[Username]")]
+        public String InsertUsername
+        {
+            get { return Fields.InsertUsername[this]; }
+            set { Fields.InsertUsername[this] = value; }
+        }
+
+        [DisplayName("Username"), Expression("jUUser.[Username]")]
+        public String UpdateUsername
+        {
+            get { return Fields.UpdateUsername[this]; }
+            set { Fields.UpdateUsername[this] = value; }
         }
 
         [DisplayName("Birth Country Default Value"), Expression("jBirthCountry.[DefaultValue]")]
@@ -355,6 +369,9 @@ namespace GestionEquestre.Ge.Entities
             public DateTimeField FinalExit;
             public StringField Description;
             public DateTimeField ArchiveDate;
+
+            public StringField InsertUsername;
+            public StringField UpdateUsername;
 
             public BooleanField BirthCountryDefaultValue;
             public BooleanField BirthCountryIsActive;

@@ -36,28 +36,28 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.NotArchive[this] = value; }
         }
 
-        [DisplayName("Insert Date"), NotNull]
+        [DisplayName("Insert Date"), HideOnInsert, Updatable(false), DateTimeFormatter]
         public DateTime? InsertDate
         {
             get { return Fields.InsertDate[this]; }
             set { Fields.InsertDate[this] = value; }
         }
 
-        [DisplayName("Insert User Id"), NotNull]
+        [DisplayName("Insert User Id"), HideOnInsert, Updatable(false), ForeignKey("[dbo].[Users]", "UserId"), LeftJoin("jIUser"), TextualField("InsertUsername")]
         public Int32? InsertUserId
         {
             get { return Fields.InsertUserId[this]; }
             set { Fields.InsertUserId[this] = value; }
         }
 
-        [DisplayName("Update Date")]
+        [DisplayName("Update Date"), HideOnInsert, DateTimeFormatter]
         public DateTime? UpdateDate
         {
             get { return Fields.UpdateDate[this]; }
             set { Fields.UpdateDate[this] = value; }
         }
 
-        [DisplayName("Update User Id")]
+        [DisplayName("Update User Id"), HideOnInsert, ForeignKey("[dbo].[Users]", "UserId"), LeftJoin("jUUser"), TextualField("UpdateUsername")]
         public Int32? UpdateUserId
         {
             get { return Fields.UpdateUserId[this]; }
@@ -121,6 +121,20 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.Comment[this] = value; }
         }
 
+        [DisplayName("Username"), Expression("jIUser.[Username]")]
+        public String InsertUsername
+        {
+            get { return Fields.InsertUsername[this]; }
+            set { Fields.InsertUsername[this] = value; }
+        }
+
+        [DisplayName("Username"), Expression("jUUser.[Username]")]
+        public String UpdateUsername
+        {
+            get { return Fields.UpdateUsername[this]; }
+            set { Fields.UpdateUsername[this] = value; }
+        }
+
         IIdField IIdRow.IdField
         {
             get { return Fields.Id; }
@@ -155,6 +169,9 @@ namespace GestionEquestre.Ge.Entities
             public DateTimeField CloseDate;
             public Int32Field Establishment;
             public StringField Comment;
+            
+            public StringField InsertUsername;
+            public StringField UpdateUsername;
 
             public RowFields()
                 : base()

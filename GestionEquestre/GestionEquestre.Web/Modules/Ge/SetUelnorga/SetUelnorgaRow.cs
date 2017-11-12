@@ -22,7 +22,7 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.Id[this] = value; }
         }
 
-        [DisplayName("Default Value"), NotNull, Updatable(false), Insertable(false)]
+        [DisplayName("Default Value"), NotNull, Updatable(false), HideOnInsert]
         public Boolean? DefaultValue
         {
             get { return Fields.DefaultValue[this]; }
@@ -36,21 +36,21 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.IsActive[this] = value; }
         }
 
-        [DisplayName("Insert Date"),Updatable(false)]
+        [DisplayName("Insert Date"), HideOnInsert,Updatable(false), DateTimeFormatter]
         public DateTime? InsertDate
         {
             get { return Fields.InsertDate[this]; }
             set { Fields.InsertDate[this] = value; }
         }
 
-        [DisplayName("Insert User Id"),Updatable(false), ForeignKey("[dbo].[Users]", "UserId"), LeftJoin("jIUser"), TextualField("InsertUsername")]
+        [DisplayName("Insert User Id"),HideOnInsert,Updatable(false), ForeignKey("[dbo].[Users]", "UserId"), LeftJoin("jIUser"), TextualField("InsertUsername")]
         public Int32? InsertUserId
         {
             get { return Fields.InsertUserId[this]; }
             set { Fields.InsertUserId[this] = value; }
         }
 
-        [DisplayName("Update Date"),HideOnInsert]
+        [DisplayName("Update Date"),HideOnInsert, DateTimeFormatter]
         public DateTime? UpdateDate
         {
             get { return Fields.UpdateDate[this]; }
@@ -71,7 +71,7 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.Organization[this] = value; }
         }
 
-        [DisplayName("Ueln Code"), Column("UELNCode"), Size(3)]
+        [DisplayName("Ueln Code"), Column("UELNCode"), Size(3),LookupInclude]
         public String UelnCode
         {
             get { return Fields.UelnCode[this]; }

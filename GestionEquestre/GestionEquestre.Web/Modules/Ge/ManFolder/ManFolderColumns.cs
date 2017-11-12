@@ -18,9 +18,11 @@ namespace GestionEquestre.Ge.Columns
         public Boolean IsActive { get; set; }
         public Boolean NotArchive { get; set; }
         public DateTime InsertDate { get; set; }
-        public Int32 InsertUserId { get; set; }
+        //public Int32 InsertUserId { get; set; }
+        public String InsertUsername { get; set; }
         public DateTime UpdateDate { get; set; }
-        public Int32 UpdateUserId { get; set; }
+        // public Int32 UpdateUserId { get; set; }
+        public String UpdateUsername { get; set; }
         [EditLink]
         public String Caption { get; set; }
         public DateTime ArchiveDate { get; set; }

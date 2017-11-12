@@ -26,7 +26,7 @@ namespace GestionEquestre.Migrations.GEDB
 
             addUsersColumns(IfDatabase(Utils.AllExceptOracle)
                 .Create.Table("SET_COUNTRY")
-                .WithColumn("Id").AsInt16().PrimaryKey().Unique().NotNullable());
+                .WithColumn("Id").AsInt16().Identity().PrimaryKey().NotNullable());
 
             addUsersColumns(IfDatabase("Oracle")
                 .Create.Table("SET_COUNTRY")
