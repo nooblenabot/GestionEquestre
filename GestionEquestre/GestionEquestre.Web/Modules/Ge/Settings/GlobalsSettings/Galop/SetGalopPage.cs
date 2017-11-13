@@ -5,13 +5,13 @@ namespace GestionEquestre.Ge.Pages
     using Serenity.Web;
     using System.Web.Mvc;
 
-    [RoutePrefix("Ge/SetGalop"), Route("{action=index}")]
+    [RoutePrefix("Ge/Settings/GlobalsSettings/Galop"), Route("{action=index}")]
     [PageAuthorize(typeof(Entities.SetGalopRow))]
     public class SetGalopController : Controller
     {
         public ActionResult Index()
         {
-            return View("~/Modules/Ge/SetGalop/SetGalopIndex.cshtml");
+            return View("~/Modules/Ge/Settings/GlobalsSettings/Galop/SetGalopIndex.cshtml");
         }
     }
 }

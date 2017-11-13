@@ -25,6 +25,7 @@ namespace GestionEquestre.Ge.Columns
         public String UpdateUsername { get; set; }
         [EditLink]
         public String Caption { get; set; }
+        public String C { get; set; }
         public String Civility { get; set; }
     }
 }

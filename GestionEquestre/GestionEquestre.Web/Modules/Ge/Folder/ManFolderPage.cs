@@ -11,7 +11,7 @@ namespace GestionEquestre.Ge.Pages
     {
         public ActionResult Index()
         {
-            return View("~/Modules/Ge/ManFolder/ManFolderIndex.cshtml");
+            return View("~/Modules/Ge/Folder/ManFolderIndex.cshtml");
         }
     }
 }

@@ -26,6 +26,7 @@ namespace GestionEquestre.Migrations.GEDB
                 .WithColumn("Email2").AsString(80).Nullable()
                 .WithColumn("BankAccount").AsInt64().Nullable()
                 .WithColumn("IdAdress").AsInt64().Nullable()
+                .WithColumn("FR_Siren").AsString(9).Nullable()
                 .WithColumn("Caption").AsString(200).Nullable()
                 .WithColumn("ArchiveDate").AsDateTime().Nullable();
 

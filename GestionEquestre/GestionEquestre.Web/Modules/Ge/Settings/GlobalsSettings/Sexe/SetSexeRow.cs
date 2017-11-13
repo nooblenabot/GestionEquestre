@@ -13,6 +13,7 @@ namespace GestionEquestre.Ge.Entities
     [DisplayName("Settings Sexe"), InstanceName("Set Sexe"), TwoLevelCached]
     [ReadPermission("Administration:General")]
     [ModifyPermission("Administration:General")]
+    [LocalizationRow(typeof(SetSexeLangRow))]
     public sealed class SetSexeRow : Row, IIdRow, INameRow
     {
         [DisplayName("Sexe Id"), PrimaryKey,LookupInclude, NotNull]

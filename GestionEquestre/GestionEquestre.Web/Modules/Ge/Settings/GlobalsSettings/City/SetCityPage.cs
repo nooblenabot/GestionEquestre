@@ -5,13 +5,13 @@ namespace GestionEquestre.Ge.Pages
     using Serenity.Web;
     using System.Web.Mvc;
 
-    [RoutePrefix("Ge/SetCity"), Route("{action=index}")]
+    [RoutePrefix("Ge/Settings/GlobalsSettings/City"), Route("{action=index}")]
     [PageAuthorize(typeof(Entities.SetCityRow))]
     public class SetCityController : Controller
     {
         public ActionResult Index()
         {
-            return View("~/Modules/Ge/SetCity/SetCityIndex.cshtml");
+            return View("~/Modules/Ge/Settings/GlobalsSettings/City/SetCityIndex.cshtml");
         }
     }
 }

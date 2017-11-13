@@ -5,13 +5,13 @@ namespace GestionEquestre.Ge.Pages
     using Serenity.Web;
     using System.Web.Mvc;
 
-    [RoutePrefix("Ge/ManAdress"), Route("{action=index}")]
+    [RoutePrefix("Management/Adress"), Route("{action=index}")]
     [PageAuthorize(typeof(Entities.ManAdressRow))]
     public class ManAdressController : Controller
     {
         public ActionResult Index()
         {
-            return View("~/Modules/Ge/ManAdress/ManAdressIndex.cshtml");
+            return View("~/Modules/Ge/Management/Adress/ManAdressIndex.cshtml");
         }
     }
 }
