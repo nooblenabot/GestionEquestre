@@ -13,6 +13,7 @@ namespace GestionEquestre.Ge.Entities
     [DisplayName("Man Horses"), InstanceName("Man Horses"), TwoLevelCached]
     [ReadPermission("Administration:General")]
     [ModifyPermission("Administration:General")]
+    [LookupScript("Ge.Horses")]
     public sealed class ManHorsesRow : Row, IIdRow, INameRow
     {
         [DisplayName("Ueln"), Column("UELN"), Size(15), PrimaryKey, QuickSearch,]
@@ -59,7 +60,7 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.BirthOrganization[this] = value; }
         }
 
-        [DisplayName("Name"), Size(100), NotNull]
+        [DisplayName("Name"), Size(100), NotNull,LookupInclude]
         public String Name
         {
             get { return Fields.Name[this]; }

@@ -8,13 +8,13 @@
         DefaultValue: Serenity.BooleanEditor;
         IsActive: Serenity.BooleanEditor;
         InsertDate: Serenity.DateEditor;
-        InsertUserId: Serenity.LookupEditor;
+        InsertUsername: Serenity.StringEditor;
         UpdateDate: Serenity.DateEditor;
-        UpdateUserId: Serenity.IntegerEditor;
+        UpdateUsername: Serenity.StringEditor;
         Organization: Serenity.StringEditor;
-        UelnOrganization: Serenity.StringEditor;
+        UelnCode: Serenity.StringEditor;
     }
 
-    [['DefaultValue', () => Serenity.BooleanEditor], ['IsActive', () => Serenity.BooleanEditor], ['InsertDate', () => Serenity.DateEditor], ['InsertUserId', () => Serenity.LookupEditor], ['UpdateDate', () => Serenity.DateEditor], ['UpdateUserId', () => Serenity.IntegerEditor], ['Organization', () => Serenity.StringEditor], ['UelnOrganization', () => Serenity.StringEditor]].forEach(x => Object.defineProperty(SetUelnorgaForm.prototype, <string>x[0], { get: function () { return this.w(x[0], (x[1] as any)()); }, enumerable: true, configurable: true }));
+    [['DefaultValue', () => Serenity.BooleanEditor], ['IsActive', () => Serenity.BooleanEditor], ['InsertDate', () => Serenity.DateEditor], ['InsertUsername', () => Serenity.StringEditor], ['UpdateDate', () => Serenity.DateEditor], ['UpdateUsername', () => Serenity.StringEditor], ['Organization', () => Serenity.StringEditor], ['UelnCode', () => Serenity.StringEditor]].forEach(x => Object.defineProperty(SetUelnorgaForm.prototype, <string>x[0], { get: function () { return this.w(x[0], (x[1] as any)()); }, enumerable: true, configurable: true }));
 }
 

@@ -1,6 +1,6 @@
 ﻿namespace GestionEquestre.Ge {
     export interface SetCityRow {
-        Id?: string;
+        Id?: number;
         DefaultValue?: boolean;
         IsActive?: boolean;
         InsertDate?: string;
@@ -12,6 +12,8 @@
         City?: string;
         PostCode?: string;
         Country?: number;
+        InsertUsername?: string;
+        UpdateUsername?: string;
         CountryDefaultValue?: boolean;
         CountryIsActive?: boolean;
         CountryInsertDate?: string;
@@ -21,7 +23,7 @@
         CountryName_FR_fr?: string;
         Countryalpha3?: string;
         CountryCodeUe?: number;
-        CountryISOcode?: number;
+        CountryISOcode?: string;
     }
 
     export namespace SetCityRow {
@@ -47,6 +49,8 @@
             export declare const City: string;
             export declare const PostCode: string;
             export declare const Country: string;
+            export declare const InsertUsername: string;
+            export declare const UpdateUsername: string;
             export declare const CountryDefaultValue: string;
             export declare const CountryIsActive: string;
             export declare const CountryInsertDate: string;
@@ -72,6 +76,8 @@
             'City', 
             'PostCode', 
             'Country', 
+            'InsertUsername', 
+            'UpdateUsername', 
             'CountryDefaultValue', 
             'CountryIsActive', 
             'CountryInsertDate', 

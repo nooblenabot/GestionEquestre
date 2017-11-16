@@ -17,7 +17,7 @@
         FolderCloseDate?: string;
         FolderEstablishment?: number;
         FolderComment?: string;
-        CavalierPerson?: string;
+        CavalierPerson?: number;
         CavalierIsActive?: boolean;
         CavalierNotArchive?: boolean;
         CavalierInsertDate?: string;

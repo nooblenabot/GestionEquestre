@@ -569,6 +569,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\ionicons.svg" />
     <Content Include="fonts\Simple-Line-Icons.svg" />
+    <Content Include="Modules\Ge\Folder\ManFolderDialog.Template.html" />
     <Content Include="Modules\Membership\Account\SignUp\AccountSignUp.AdminLTE.cshtml" />
     <Content Include="Imports\Web.config" />
     <Content Include="Migrations\Web.config" />
@@ -1300,6 +1301,9 @@
     <TypeScriptCompile Include="Imports\ServerTypings\Ge.AccBankaccountColumns.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.CorCorporateColumns.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="Imports\ServerTypings\Ge.LinkFolderCavalierColumns.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
@@ -1357,6 +1361,7 @@
     <TypeScriptCompile Include="Imports\ServerTypings\Ge.SetUelnorgaColumns.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
+    <TypeScriptCompile Include="Modules\Ge\Folder\LinkFolderHorse\LinkFolderHorseEditor.ts" />
     <TypeScriptCompile Include="Modules\Ge\Management\Horses\ManHorsesDialog.ts" />
     <TypeScriptCompile Include="Modules\Ge\Management\Horses\ManHorsesGrid.ts" />
     <TypeScriptCompile Include="node_modules\%40types\jquery\index.d.ts" />
@@ -1753,9 +1758,7 @@
     <TypeScriptCompile Include="Imports\ServerTypings\Ge.LinkFolderHorseService.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
-    <Content Include="Modules\Ge\LinkFolderHorse\LinkFolderHorseIndex.cshtml" />
-    <TypeScriptCompile Include="Modules\Ge\LinkFolderHorse\LinkFolderHorseDialog.ts" />
-    <TypeScriptCompile Include="Modules\Ge\LinkFolderHorse\LinkFolderHorseGrid.ts" />
+    <TypeScriptCompile Include="Modules\Ge\Folder\LinkFolderHorse\LinkFolderHorseDialog.ts" />
     <TypeScriptCompile Include="Imports\ServerTypings\Ge.LinkFolderHorseForm.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
@@ -1814,6 +1817,9 @@
     <Compile Include="App_Start\SiteInitialization.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\ClientTypes\Ge.LinkFolderHorseEditorAttribute.cs">
+      <DependentUpon>ClientTypes.tt</DependentUpon>
     </Compile>
     <Compile Include="Migrations\GEDB\GEDB_20141103_140000_Initial.cs" />
     <Compile Include="Migrations\GEDB\GEDB_20141111_113000_Permissions.cs" />
@@ -1892,6 +1898,7 @@
     <Compile Include="Modules\Common\UserPreference\UserPreferenceModels.cs" />
     <Compile Include="Modules\Common\UserPreference\UserPreferenceEndpoint.cs" />
     <Compile Include="Modules\Common\UserPreference\UserPreferenceRepository.cs" />
+    <Compile Include="Modules\Ge\Folder\ManFolderLookup.cs" />
     <Compile Include="Modules\Ge\Management\Horses\ManHorsesColumns.cs" />
     <Compile Include="Modules\Ge\Management\Horses\ManHorsesEndpoint.cs" />
     <Compile Include="Modules\Ge\Management\Horses\ManHorsesForm.cs" />
@@ -1899,6 +1906,7 @@
     <Compile Include="Modules\Ge\Management\Horses\ManHorsesRepository.cs" />
     <Compile Include="Modules\Ge\Management\Horses\ManHorsesRow.cs" />
     <Compile Include="Modules\Ge\Management\Cavaliers\ManCavalierLookup.cs" />
+    <Compile Include="Modules\Ge\Management\Horses\ManHorsesLookup.cs" />
     <Compile Include="Modules\Ge\Management\Person\ManPersonLookup.cs" />
     <Compile Include="Modules\Ge\Settings\GlobalsSettings\City\SetCityLookup.cs" />
     <Compile Include="Modules\Ge\Settings\GlobalsSettings\Country\SetCountryLookup.cs" />
@@ -2040,12 +2048,11 @@
     <Compile Include="Modules\Ge\LinkFolderCavalier\LinkFolderCavalierPage.cs" />
     <Compile Include="Modules\Ge\LinkFolderCavalier\LinkFolderCavalierColumns.cs" />
     <Compile Include="Modules\Ge\LinkFolderCavalier\LinkFolderCavalierForm.cs" />
-    <Compile Include="Modules\Ge\LinkFolderHorse\LinkFolderHorseRow.cs" />
-    <Compile Include="Modules\Ge\LinkFolderHorse\LinkFolderHorseRepository.cs" />
-    <Compile Include="Modules\Ge\LinkFolderHorse\LinkFolderHorseEndpoint.cs" />
-    <Compile Include="Modules\Ge\LinkFolderHorse\LinkFolderHorsePage.cs" />
-    <Compile Include="Modules\Ge\LinkFolderHorse\LinkFolderHorseColumns.cs" />
-    <Compile Include="Modules\Ge\LinkFolderHorse\LinkFolderHorseForm.cs" />
+    <Compile Include="Modules\Ge\Folder\LinkFolderHorse\LinkFolderHorseRow.cs" />
+    <Compile Include="Modules\Ge\Folder\LinkFolderHorse\LinkFolderHorseRepository.cs" />
+    <Compile Include="Modules\Ge\Folder\LinkFolderHorse\LinkFolderHorseEndpoint.cs" />
+    <Compile Include="Modules\Ge\Folder\LinkFolderHorse\LinkFolderHorseColumns.cs" />
+    <Compile Include="Modules\Ge\Folder\LinkFolderHorse\LinkFolderHorseForm.cs" />
     <Compile Include="Modules\Ge\LinkFolderPerson\LinkFolderPersonRow.cs" />
     <Compile Include="Modules\Ge\LinkFolderPerson\LinkFolderPersonRepository.cs" />
     <Compile Include="Modules\Ge\LinkFolderPerson\LinkFolderPersonEndpoint.cs" />

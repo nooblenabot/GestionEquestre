@@ -7,8 +7,8 @@
         HorseSire?: string;
         HorseCleSire?: string;
         HorseHnin?: string;
-        HorseBirthCountry?: string;
-        HorseBirthOrganization?: string;
+        HorseBirthCountry?: number;
+        HorseBirthOrganization?: number;
         HorseName?: string;
         HorseIsActive?: boolean;
         HorseNotArchive?: boolean;
@@ -24,7 +24,7 @@
         HorseFinalExit?: string;
         HorseDescription?: string;
         HorseArchiveDate?: string;
-        CavalierPerson?: string;
+        CavalierPerson?: number;
         CavalierIsActive?: boolean;
         CavalierNotArchive?: boolean;
         CavalierInsertDate?: string;

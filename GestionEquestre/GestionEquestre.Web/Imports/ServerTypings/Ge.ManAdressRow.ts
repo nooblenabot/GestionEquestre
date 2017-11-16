@@ -1,6 +1,6 @@
 ﻿namespace GestionEquestre.Ge {
     export interface ManAdressRow {
-        Id?: string;
+        Id?: number;
         IsActive?: boolean;
         NotArchive?: boolean;
         InsertDate?: string;
@@ -10,12 +10,14 @@
         Adress1?: string;
         Adress2?: string;
         Adress3?: string;
-        City?: string;
-        Country?: string;
+        City?: number;
+        Country?: number;
         Cedex?: string;
         Building?: string;
         Caption?: string;
         ArchiveDate?: string;
+        InsertUsername?: string;
+        UpdateUsername?: string;
         CityDefaultValue?: boolean;
         CityIsActive?: boolean;
         CityInsertDate?: string;
@@ -26,17 +28,19 @@
         CityCaption?: string;
         City1?: string;
         CityPostCode?: string;
-        CityCountry?: string;
+        CityCountry?: number;
         CountryDefaultValue?: boolean;
         CountryIsActive?: boolean;
         CountryInsertDate?: string;
         CountryInsertUserId?: number;
         CountryUpdateDate?: string;
         CountryUpdateUserId?: number;
-        Country1?: string;
-        CountryCode?: string;
+        CountryName_FR_fr?: string;
+        CountryName_EN_gb?: string;
+        Countryalpha3?: string;
+        Countryalpha2?: string;
         CountryCodeUe?: number;
-        CountryIso3166Country?: string;
+        CountryISOcode?: string;
     }
 
     export namespace ManAdressRow {
@@ -61,6 +65,8 @@
             export declare const Building: string;
             export declare const Caption: string;
             export declare const ArchiveDate: string;
+            export declare const InsertUsername: string;
+            export declare const UpdateUsername: string;
             export declare const CityDefaultValue: string;
             export declare const CityIsActive: string;
             export declare const CityInsertDate: string;
@@ -78,10 +84,12 @@
             export declare const CountryInsertUserId: string;
             export declare const CountryUpdateDate: string;
             export declare const CountryUpdateUserId: string;
-            export declare const Country1: string;
-            export declare const CountryCode: string;
+            export declare const CountryName_FR_fr: string;
+            export declare const CountryName_EN_gb: string;
+            export declare const Countryalpha3: string;
+            export declare const Countryalpha2: string;
             export declare const CountryCodeUe: string;
-            export declare const CountryIso3166Country: string;
+            export declare const CountryISOcode: string;
         }
 
         [
@@ -101,6 +109,8 @@
             'Building', 
             'Caption', 
             'ArchiveDate', 
+            'InsertUsername', 
+            'UpdateUsername', 
             'CityDefaultValue', 
             'CityIsActive', 
             'CityInsertDate', 
@@ -118,10 +128,12 @@
             'CountryInsertUserId', 
             'CountryUpdateDate', 
             'CountryUpdateUserId', 
-            'Country1', 
-            'CountryCode', 
+            'CountryName_FR_fr', 
+            'CountryName_EN_gb', 
+            'Countryalpha3', 
+            'Countryalpha2', 
             'CountryCodeUe', 
-            'CountryIso3166Country'
+            'CountryISOcode'
         ].forEach(x => (<any>Fields)[x] = x);
     }
 }

@@ -1,7 +1,7 @@
 ﻿namespace GestionEquestre.Ge {
     export interface ManCavaliersRow {
         LicFfe?: string;
-        Person?: string;
+        Person?: number;
         IsActive?: boolean;
         NotArchive?: boolean;
         InsertDate?: string;
@@ -14,6 +14,8 @@
         DateCertificatMedical?: string;
         Caption?: string;
         ArchiveDate?: string;
+        InsertUsername?: string;
+        UpdateUsername?: string;
         PersonIsMorale?: boolean;
         PersonIsActive?: boolean;
         PersonNotArchive?: boolean;
@@ -28,9 +30,9 @@
         PersonBirthday?: string;
         PersonSexe?: number;
         PersonMaritalStatus?: number;
-        PersonBirthCity?: string;
-        PersonBirthCountry?: string;
-        PersonNationality?: string;
+        PersonBirthCity?: number;
+        PersonBirthCountry?: number;
+        PersonNationality?: number;
         PersonPhoto?: number[];
         PersonPhone?: string;
         PersonGsm?: string;
@@ -39,8 +41,8 @@
         PersonOtherPhone2?: string;
         PersonEmail1?: string;
         PersonEmail2?: string;
-        PersonBankAccount?: string;
-        PersonIdAdress?: string;
+        PersonBankAccount?: number;
+        PersonIdAdress?: number;
         PersonCaption?: string;
         PersonArchiveDate?: string;
         NiveauGalopDefaultValue?: boolean;
@@ -86,6 +88,8 @@
             export declare const DateCertificatMedical: string;
             export declare const Caption: string;
             export declare const ArchiveDate: string;
+            export declare const InsertUsername: string;
+            export declare const UpdateUsername: string;
             export declare const PersonIsMorale: string;
             export declare const PersonIsActive: string;
             export declare const PersonNotArchive: string;
@@ -148,6 +152,8 @@
             'DateCertificatMedical', 
             'Caption', 
             'ArchiveDate', 
+            'InsertUsername', 
+            'UpdateUsername', 
             'PersonIsMorale', 
             'PersonIsActive', 
             'PersonNotArchive', 

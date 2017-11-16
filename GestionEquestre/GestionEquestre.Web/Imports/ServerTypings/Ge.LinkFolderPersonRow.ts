@@ -2,7 +2,7 @@
     export interface LinkFolderPersonRow {
         Id?: number;
         Folder?: number;
-        PersonId?: string;
+        PersonId?: number;
         Caption?: string;
         FolderIsActive?: boolean;
         FolderNotArchive?: boolean;
@@ -32,9 +32,9 @@
         PersonBirthday?: string;
         PersonSexe?: number;
         PersonMaritalStatus?: number;
-        PersonBirthCity?: string;
-        PersonBirthCountry?: string;
-        PersonNationality?: string;
+        PersonBirthCity?: number;
+        PersonBirthCountry?: number;
+        PersonNationality?: number;
         PersonPhoto?: number[];
         PersonPhone?: string;
         PersonGsm?: string;
@@ -43,8 +43,8 @@
         PersonOtherPhone2?: string;
         PersonEmail1?: string;
         PersonEmail2?: string;
-        PersonBankAccount?: string;
-        PersonIdAdress?: string;
+        PersonBankAccount?: number;
+        PersonIdAdress?: number;
         PersonCaption?: string;
         PersonArchiveDate?: string;
     }

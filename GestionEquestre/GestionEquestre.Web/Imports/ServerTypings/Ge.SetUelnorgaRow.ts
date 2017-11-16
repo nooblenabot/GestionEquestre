@@ -1,6 +1,6 @@
 ﻿namespace GestionEquestre.Ge {
     export interface SetUelnorgaRow {
-        Id?: string;
+        Id?: number;
         DefaultValue?: boolean;
         IsActive?: boolean;
         InsertDate?: string;
@@ -8,7 +8,9 @@
         UpdateDate?: string;
         UpdateUserId?: number;
         Organization?: string;
-        UelnOrganization?: string;
+        UelnCode?: string;
+        InsertUsername?: string;
+        UpdateUsername?: string;
     }
 
     export namespace SetUelnorgaRow {
@@ -30,7 +32,9 @@
             export declare const UpdateDate: string;
             export declare const UpdateUserId: string;
             export declare const Organization: string;
-            export declare const UelnOrganization: string;
+            export declare const UelnCode: string;
+            export declare const InsertUsername: string;
+            export declare const UpdateUsername: string;
         }
 
         [
@@ -42,7 +46,9 @@
             'UpdateDate', 
             'UpdateUserId', 
             'Organization', 
-            'UelnOrganization'
+            'UelnCode', 
+            'InsertUsername', 
+            'UpdateUsername'
         ].forEach(x => (<any>Fields)[x] = x);
     }
 }

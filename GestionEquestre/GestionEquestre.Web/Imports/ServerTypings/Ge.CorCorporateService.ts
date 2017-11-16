@@ -1,5 +1,4 @@
-﻿
-namespace GestionEquestre.Ge {
+﻿namespace GestionEquestre.Ge {
     export namespace CorCorporateService {
         export const baseUrl = 'Ge/CorCorporate';
 
@@ -24,10 +23,11 @@ namespace GestionEquestre.Ge {
             'Retrieve', 
             'List'
         ].forEach(x => {
-            (<any>CorCorporateService)[x] = function (r, s, o) { 
-                return Q.serviceRequest(baseUrl + '/' + x, r, s, o); 
+            (<any>CorCorporateService)[x] = function (r, s, o) {
+                return Q.serviceRequest(baseUrl + '/' + x, r, s, o);
             };
             (<any>Methods)[x] = baseUrl + '/' + x;
         });
     }
 }
+

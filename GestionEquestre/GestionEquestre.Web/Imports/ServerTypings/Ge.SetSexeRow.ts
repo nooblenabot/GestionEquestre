@@ -9,6 +9,8 @@
         UpdateUserId?: number;
         Caption?: string;
         Civility?: string;
+        InsertUsername?: string;
+        UpdateUsername?: string;
     }
 
     export namespace SetSexeRow {
@@ -31,6 +33,8 @@
             export declare const UpdateUserId: string;
             export declare const Caption: string;
             export declare const Civility: string;
+            export declare const InsertUsername: string;
+            export declare const UpdateUsername: string;
         }
 
         [
@@ -42,7 +46,9 @@
             'UpdateDate', 
             'UpdateUserId', 
             'Caption', 
-            'Civility'
+            'Civility', 
+            'InsertUsername', 
+            'UpdateUsername'
         ].forEach(x => (<any>Fields)[x] = x);
     }
 }

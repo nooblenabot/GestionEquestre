@@ -8,17 +8,17 @@
         DefaultValue: Serenity.BooleanEditor;
         IsActive: Serenity.BooleanEditor;
         InsertDate: Serenity.DateEditor;
-        InsertUserId: Serenity.IntegerEditor;
+        InsertUsername: Serenity.StringEditor;
         UpdateDate: Serenity.DateEditor;
-        UpdateUserId: Serenity.IntegerEditor;
+        UpdateUsername: Serenity.StringEditor;
         Name_FR_fr: Serenity.StringEditor;
         Name_EN_gb: Serenity.StringEditor;
         alpha3: Serenity.StringEditor;
         alpha2: Serenity.StringEditor;
         CodeUe: Serenity.IntegerEditor;
-        ISOcode: Serenity.IntegerEditor;
+        ISOcode: Serenity.StringEditor;
     }
 
-    [['DefaultValue', () => Serenity.BooleanEditor], ['IsActive', () => Serenity.BooleanEditor], ['InsertDate', () => Serenity.DateEditor], ['InsertUserId', () => Serenity.IntegerEditor], ['UpdateDate', () => Serenity.DateEditor], ['UpdateUserId', () => Serenity.IntegerEditor], ['Name_FR_fr', () => Serenity.StringEditor], ['Name_EN_gb', () => Serenity.StringEditor], ['alpha3', () => Serenity.StringEditor], ['alpha2', () => Serenity.StringEditor], ['CodeUe', () => Serenity.IntegerEditor], ['ISOcode', () => Serenity.IntegerEditor]].forEach(x => Object.defineProperty(SetCountryForm.prototype, <string>x[0], { get: function () { return this.w(x[0], (x[1] as any)()); }, enumerable: true, configurable: true }));
+    [['DefaultValue', () => Serenity.BooleanEditor], ['IsActive', () => Serenity.BooleanEditor], ['InsertDate', () => Serenity.DateEditor], ['InsertUsername', () => Serenity.StringEditor], ['UpdateDate', () => Serenity.DateEditor], ['UpdateUsername', () => Serenity.StringEditor], ['Name_FR_fr', () => Serenity.StringEditor], ['Name_EN_gb', () => Serenity.StringEditor], ['alpha3', () => Serenity.StringEditor], ['alpha2', () => Serenity.StringEditor], ['CodeUe', () => Serenity.IntegerEditor], ['ISOcode', () => Serenity.StringEditor]].forEach(x => Object.defineProperty(SetCountryForm.prototype, <string>x[0], { get: function () { return this.w(x[0], (x[1] as any)()); }, enumerable: true, configurable: true }));
 }
 

@@ -5,11 +5,11 @@
     }
 
     export interface LinkFolderPersonForm {
-        Folder: Serenity.IntegerEditor;
+        Folder: Serenity.StringEditor;
         PersonId: Serenity.LookupEditor;
         Caption: Serenity.StringEditor;
     }
 
-    [['Folder', () => Serenity.IntegerEditor], ['PersonId', () => Serenity.LookupEditor], ['Caption', () => Serenity.StringEditor]].forEach(x => Object.defineProperty(LinkFolderPersonForm.prototype, <string>x[0], { get: function () { return this.w(x[0], (x[1] as any)()); }, enumerable: true, configurable: true }));
+    [['Folder', () => Serenity.StringEditor], ['PersonId', () => Serenity.LookupEditor], ['Caption', () => Serenity.StringEditor]].forEach(x => Object.defineProperty(LinkFolderPersonForm.prototype, <string>x[0], { get: function () { return this.w(x[0], (x[1] as any)()); }, enumerable: true, configurable: true }));
 }
 

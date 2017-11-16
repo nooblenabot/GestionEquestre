@@ -1,6 +1,6 @@
 ﻿namespace GestionEquestre.Ge {
     export interface ManPersonRow {
-        Id?: string;
+        Id?: number;
         IsMorale?: boolean;
         IsActive?: boolean;
         NotArchive?: boolean;
@@ -15,7 +15,7 @@
         Birthday?: string;
         Sexe?: number;
         MaritalStatus?: number;
-        BirthCity?: string;
+        BirthCity?: number;
         BirthCountry?: number;
         Nationality?: number;
         Photo?: number[];
@@ -26,10 +26,12 @@
         OtherPhone2?: string;
         Email1?: string;
         Email2?: string;
-        BankAccount?: string;
-        IdAdress?: string;
+        BankAccount?: number;
+        IdAdress?: number;
         Caption?: string;
         ArchiveDate?: string;
+        InsertUsername?: string;
+        UpdateUsername?: string;
         SexeDefaultValue?: boolean;
         SexeIsActive?: boolean;
         SexeInsertDate?: string;
@@ -56,27 +58,31 @@
         BirthCityCaption?: string;
         BirthCityCity?: string;
         BirthCityPostCode?: string;
-        BirthCityCountry?: string;
+        BirthCityCountry?: number;
         BirthCountryDefaultValue?: boolean;
         BirthCountryIsActive?: boolean;
         BirthCountryInsertDate?: string;
         BirthCountryInsertUserId?: number;
         BirthCountryUpdateDate?: string;
         BirthCountryUpdateUserId?: number;
-        BirthCountryCountry?: string;
-        BirthCountryCode?: string;
+        BirthCountryName_FR_fr?: string;
+        BirthCountryName_EN_gb?: string;
+        BirthCountryalpha3?: string;
+        BirthCountryalpha2?: string;
         BirthCountryCodeUe?: number;
-        BirthCountryIso3166Country?: string;
+        BirthCountryISOcode?: string;
         NationalityDefaultValue?: boolean;
         NationalityIsActive?: boolean;
         NationalityInsertDate?: string;
         NationalityInsertUserId?: number;
         NationalityUpdateDate?: string;
         NationalityUpdateUserId?: number;
-        NationalityCountry?: string;
-        NationalityCode?: string;
+        NationalityName_FR_fr?: string;
+        NationalityName_EN_gb?: string;
+        Nationalityalpha3?: string;
+        Nationalityalpha2?: string;
         NationalityCodeUe?: number;
-        NationalityIso3166Country?: string;
+        NationalityISOcode?: string;
         BankAccountCountryCodeIban?: string;
         BankAccountCheckDigitsIban?: string;
         BankAccountBban?: string;
@@ -98,8 +104,8 @@
         IdAdressAdress1?: string;
         IdAdressAdress2?: string;
         IdAdressAdress3?: string;
-        IdAdressCity?: string;
-        IdAdressCountry?: string;
+        IdAdressCity?: number;
+        IdAdressCountry?: number;
         IdAdressCedex?: string;
         IdAdressBuilding?: string;
         IdAdressCaption?: string;
@@ -147,6 +153,8 @@
             export declare const IdAdress: string;
             export declare const Caption: string;
             export declare const ArchiveDate: string;
+            export declare const InsertUsername: string;
+            export declare const UpdateUsername: string;
             export declare const SexeDefaultValue: string;
             export declare const SexeIsActive: string;
             export declare const SexeInsertDate: string;
@@ -180,20 +188,24 @@
             export declare const BirthCountryInsertUserId: string;
             export declare const BirthCountryUpdateDate: string;
             export declare const BirthCountryUpdateUserId: string;
-            export declare const BirthCountryCountry: string;
-            export declare const BirthCountryCode: string;
+            export declare const BirthCountryName_FR_fr: string;
+            export declare const BirthCountryName_EN_gb: string;
+            export declare const BirthCountryalpha3: string;
+            export declare const BirthCountryalpha2: string;
             export declare const BirthCountryCodeUe: string;
-            export declare const BirthCountryIso3166Country: string;
+            export declare const BirthCountryISOcode: string;
             export declare const NationalityDefaultValue: string;
             export declare const NationalityIsActive: string;
             export declare const NationalityInsertDate: string;
             export declare const NationalityInsertUserId: string;
             export declare const NationalityUpdateDate: string;
             export declare const NationalityUpdateUserId: string;
-            export declare const NationalityCountry: string;
-            export declare const NationalityCode: string;
+            export declare const NationalityName_FR_fr: string;
+            export declare const NationalityName_EN_gb: string;
+            export declare const Nationalityalpha3: string;
+            export declare const Nationalityalpha2: string;
             export declare const NationalityCodeUe: string;
-            export declare const NationalityIso3166Country: string;
+            export declare const NationalityISOcode: string;
             export declare const BankAccountCountryCodeIban: string;
             export declare const BankAccountCheckDigitsIban: string;
             export declare const BankAccountBban: string;
@@ -254,6 +266,8 @@
             'IdAdress', 
             'Caption', 
             'ArchiveDate', 
+            'InsertUsername', 
+            'UpdateUsername', 
             'SexeDefaultValue', 
             'SexeIsActive', 
             'SexeInsertDate', 
@@ -287,20 +301,24 @@
             'BirthCountryInsertUserId', 
             'BirthCountryUpdateDate', 
             'BirthCountryUpdateUserId', 
-            'BirthCountryCountry', 
-            'BirthCountryCode', 
+            'BirthCountryName_FR_fr', 
+            'BirthCountryName_EN_gb', 
+            'BirthCountryalpha3', 
+            'BirthCountryalpha2', 
             'BirthCountryCodeUe', 
-            'BirthCountryIso3166Country', 
+            'BirthCountryISOcode', 
             'NationalityDefaultValue', 
             'NationalityIsActive', 
             'NationalityInsertDate', 
             'NationalityInsertUserId', 
             'NationalityUpdateDate', 
             'NationalityUpdateUserId', 
-            'NationalityCountry', 
-            'NationalityCode', 
+            'NationalityName_FR_fr', 
+            'NationalityName_EN_gb', 
+            'Nationalityalpha3', 
+            'Nationalityalpha2', 
             'NationalityCodeUe', 
-            'NationalityIso3166Country', 
+            'NationalityISOcode', 
             'BankAccountCountryCodeIban', 
             'BankAccountCheckDigitsIban', 
             'BankAccountBban', 

@@ -10,9 +10,9 @@
         IsActive: Serenity.BooleanEditor;
         NotArchive: Serenity.BooleanEditor;
         InsertDate: Serenity.DateEditor;
-        InsertUserId: Serenity.IntegerEditor;
+        InsertUsername: Serenity.StringEditor;
         UpdateDate: Serenity.DateEditor;
-        UpdateUserId: Serenity.IntegerEditor;
+        UpdateUsername: Serenity.StringEditor;
         MilesimeLicnece: Serenity.DateEditor;
         NiveauGalop: Serenity.LookupEditor;
         LicenceCompetition: Serenity.LookupEditor;
@@ -21,6 +21,6 @@
         ArchiveDate: Serenity.DateEditor;
     }
 
-    [['LicFfe', () => Serenity.StringEditor], ['Person', () => Serenity.LookupEditor], ['IsActive', () => Serenity.BooleanEditor], ['NotArchive', () => Serenity.BooleanEditor], ['InsertDate', () => Serenity.DateEditor], ['InsertUserId', () => Serenity.IntegerEditor], ['UpdateDate', () => Serenity.DateEditor], ['UpdateUserId', () => Serenity.IntegerEditor], ['MilesimeLicnece', () => Serenity.DateEditor], ['NiveauGalop', () => Serenity.LookupEditor], ['LicenceCompetition', () => Serenity.LookupEditor], ['DateCertificatMedical', () => Serenity.DateEditor], ['Caption', () => Serenity.StringEditor], ['ArchiveDate', () => Serenity.DateEditor]].forEach(x => Object.defineProperty(ManCavaliersForm.prototype, <string>x[0], { get: function () { return this.w(x[0], (x[1] as any)()); }, enumerable: true, configurable: true }));
+    [['LicFfe', () => Serenity.StringEditor], ['Person', () => Serenity.LookupEditor], ['IsActive', () => Serenity.BooleanEditor], ['NotArchive', () => Serenity.BooleanEditor], ['InsertDate', () => Serenity.DateEditor], ['InsertUsername', () => Serenity.StringEditor], ['UpdateDate', () => Serenity.DateEditor], ['UpdateUsername', () => Serenity.StringEditor], ['MilesimeLicnece', () => Serenity.DateEditor], ['NiveauGalop', () => Serenity.LookupEditor], ['LicenceCompetition', () => Serenity.LookupEditor], ['DateCertificatMedical', () => Serenity.DateEditor], ['Caption', () => Serenity.StringEditor], ['ArchiveDate', () => Serenity.DateEditor]].forEach(x => Object.defineProperty(ManCavaliersForm.prototype, <string>x[0], { get: function () { return this.w(x[0], (x[1] as any)()); }, enumerable: true, configurable: true }));
 }
 

@@ -504,31 +504,7 @@ var GestionEquestre;
         }(Serenity.PrefixedContext));
         CorCorporateForm.formKey = 'Ge.CorCorporate';
         Ge.CorCorporateForm = CorCorporateForm;
-        [,
-            ['IsActive', function () { return Serenity.BooleanEditor; }],
-            ['NotArchive', function () { return Serenity.BooleanEditor; }],
-            ['InsertDate', function () { return Serenity.DateEditor; }],
-            ['InsertUserId', function () { return Serenity.IntegerEditor; }],
-            ['UpdateDate', function () { return Serenity.DateEditor; }],
-            ['UpdateUserId', function () { return Serenity.IntegerEditor; }],
-            ['Name', function () { return Serenity.StringEditor; }],
-            ['Phone', function () { return Serenity.StringEditor; }],
-            ['Gsm', function () { return Serenity.StringEditor; }],
-            ['OtherPhone1', function () { return Serenity.StringEditor; }],
-            ['Email1', function () { return Serenity.StringEditor; }],
-            ['Email2', function () { return Serenity.StringEditor; }],
-            ['BankAccount', function () { return Serenity.IntegerEditor; }],
-            ['IdAdress', function () { return Serenity.IntegerEditor; }],
-            ['FrSiren', function () { return Serenity.StringEditor; }],
-            ['Caption', function () { return Serenity.StringEditor; }],
-            ['ArchiveDate', function () { return Serenity.DateEditor; }]
-        ].forEach(function (x) { return Object.defineProperty(CorCorporateForm.prototype, x[0], {
-            get: function () {
-                return this.w(x[0], x[1]());
-            },
-            enumerable: true,
-            configurable: true
-        }); });
+        [['IsActive', function () { return Serenity.BooleanEditor; }], ['NotArchive', function () { return Serenity.BooleanEditor; }], ['InsertDate', function () { return Serenity.DateEditor; }], ['InsertUserId', function () { return Serenity.IntegerEditor; }], ['UpdateDate', function () { return Serenity.DateEditor; }], ['UpdateUserId', function () { return Serenity.IntegerEditor; }], ['Name', function () { return Serenity.StringEditor; }], ['Phone', function () { return Serenity.StringEditor; }], ['Gsm', function () { return Serenity.StringEditor; }], ['OtherPhone1', function () { return Serenity.StringEditor; }], ['Email1', function () { return Serenity.StringEditor; }], ['Email2', function () { return Serenity.StringEditor; }], ['BankAccount', function () { return Serenity.StringEditor; }], ['IdAdress', function () { return Serenity.StringEditor; }], ['FrSiren', function () { return Serenity.StringEditor; }], ['Caption', function () { return Serenity.StringEditor; }], ['ArchiveDate', function () { return Serenity.DateEditor; }]].forEach(function (x) { return Object.defineProperty(CorCorporateForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
     })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
 })(GestionEquestre || (GestionEquestre = {}));
 var GestionEquestre;
@@ -631,7 +607,7 @@ var GestionEquestre;
         }(Serenity.PrefixedContext));
         LinkFolderCavalierForm.formKey = 'Ge.LinkFolderCavalier';
         Ge.LinkFolderCavalierForm = LinkFolderCavalierForm;
-        [['Folder', function () { return Serenity.IntegerEditor; }], ['Cavalier', function () { return Serenity.LookupEditor; }]].forEach(function (x) { return Object.defineProperty(LinkFolderCavalierForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
+        [['Folder', function () { return Serenity.StringEditor; }], ['Cavalier', function () { return Serenity.LookupEditor; }]].forEach(function (x) { return Object.defineProperty(LinkFolderCavalierForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
     })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
 })(GestionEquestre || (GestionEquestre = {}));
 var GestionEquestre;
@@ -719,7 +695,7 @@ var GestionEquestre;
         }(Serenity.PrefixedContext));
         LinkFolderHorseForm.formKey = 'Ge.LinkFolderHorse';
         Ge.LinkFolderHorseForm = LinkFolderHorseForm;
-        [['Folder', function () { return Serenity.IntegerEditor; }], ['Horse', function () { return Serenity.LookupEditor; }]].forEach(function (x) { return Object.defineProperty(LinkFolderHorseForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
+        [['Horse', function () { return Serenity.LookupEditor; }]].forEach(function (x) { return Object.defineProperty(LinkFolderHorseForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
     })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
 })(GestionEquestre || (GestionEquestre = {}));
 var GestionEquestre;
@@ -738,40 +714,7 @@ var GestionEquestre;
                 'Id',
                 'Folder',
                 'Horse',
-                'FolderIsActive',
-                'FolderNotArchive',
-                'FolderInsertDate',
-                'FolderInsertUserId',
-                'FolderUpdateDate',
-                'FolderUpdateUserId',
-                'FolderCaption',
-                'FolderArchiveDate',
-                'FolderNumber',
-                'FolderCreateeDate',
-                'FolderCloseRaison',
-                'FolderCloseDate',
-                'FolderEstablishment',
-                'FolderComment',
-                'HorseSire',
-                'HorseCleSire',
-                'HorseHnin',
-                'HorseBirthCountry',
-                'HorseBirthOrganization',
-                'HorseName',
-                'HorseIsActive',
-                'HorseNotArchive',
-                'HorseInsertDate',
-                'HorseInsertUserId',
-                'HorseUpdateDate',
-                'HorseUpdateUserId',
-                'HorseBirthday',
-                'HorseSexe',
-                'HorseColor',
-                'HorseRace',
-                'HorseTransponder',
-                'HorseFinalExit',
-                'HorseDescription',
-                'HorseArchiveDate'
+                'HorseName'
             ].forEach(function (x) { return Fields[x] = x; });
         })(LinkFolderHorseRow = Ge.LinkFolderHorseRow || (Ge.LinkFolderHorseRow = {}));
     })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
@@ -814,7 +757,7 @@ var GestionEquestre;
         }(Serenity.PrefixedContext));
         LinkFolderPersonForm.formKey = 'Ge.LinkFolderPerson';
         Ge.LinkFolderPersonForm = LinkFolderPersonForm;
-        [['Folder', function () { return Serenity.IntegerEditor; }], ['PersonId', function () { return Serenity.LookupEditor; }], ['Caption', function () { return Serenity.StringEditor; }]].forEach(function (x) { return Object.defineProperty(LinkFolderPersonForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
+        [['Folder', function () { return Serenity.StringEditor; }], ['PersonId', function () { return Serenity.LookupEditor; }], ['Caption', function () { return Serenity.StringEditor; }]].forEach(function (x) { return Object.defineProperty(LinkFolderPersonForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
     })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
 })(GestionEquestre || (GestionEquestre = {}));
 var GestionEquestre;
@@ -919,7 +862,7 @@ var GestionEquestre;
         }(Serenity.PrefixedContext));
         ManAdressForm.formKey = 'Ge.ManAdress';
         Ge.ManAdressForm = ManAdressForm;
-        [['IsActive', function () { return Serenity.BooleanEditor; }], ['NotArchive', function () { return Serenity.BooleanEditor; }], ['InsertDate', function () { return Serenity.DateEditor; }], ['InsertUserId', function () { return Serenity.IntegerEditor; }], ['UpdateDate', function () { return Serenity.DateEditor; }], ['UpdateUserId', function () { return Serenity.IntegerEditor; }], ['Adress1', function () { return Serenity.StringEditor; }], ['Adress2', function () { return Serenity.StringEditor; }], ['Adress3', function () { return Serenity.StringEditor; }], ['City', function () { return Serenity.StringEditor; }], ['Country', function () { return Serenity.StringEditor; }], ['Cedex', function () { return Serenity.StringEditor; }], ['Building', function () { return Serenity.StringEditor; }], ['Caption', function () { return Serenity.StringEditor; }], ['ArchiveDate', function () { return Serenity.DateEditor; }]].forEach(function (x) { return Object.defineProperty(ManAdressForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
+        [['IsActive', function () { return Serenity.BooleanEditor; }], ['NotArchive', function () { return Serenity.BooleanEditor; }], ['InsertDate', function () { return Serenity.DateEditor; }], ['InsertUsername', function () { return Serenity.StringEditor; }], ['UpdateDate', function () { return Serenity.DateEditor; }], ['UpdateUsername', function () { return Serenity.StringEditor; }], ['Adress1', function () { return Serenity.StringEditor; }], ['Adress2', function () { return Serenity.StringEditor; }], ['Adress3', function () { return Serenity.StringEditor; }], ['City', function () { return Serenity.StringEditor; }], ['Country', function () { return Serenity.IntegerEditor; }], ['Cedex', function () { return Serenity.StringEditor; }], ['Building', function () { return Serenity.StringEditor; }], ['Caption', function () { return Serenity.StringEditor; }], ['ArchiveDate', function () { return Serenity.DateEditor; }]].forEach(function (x) { return Object.defineProperty(ManAdressForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
     })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
 })(GestionEquestre || (GestionEquestre = {}));
 var GestionEquestre;
@@ -951,6 +894,8 @@ var GestionEquestre;
                 'Building',
                 'Caption',
                 'ArchiveDate',
+                'InsertUsername',
+                'UpdateUsername',
                 'CityDefaultValue',
                 'CityIsActive',
                 'CityInsertDate',
@@ -968,10 +913,12 @@ var GestionEquestre;
                 'CountryInsertUserId',
                 'CountryUpdateDate',
                 'CountryUpdateUserId',
-                'Country1',
-                'CountryCode',
+                'CountryName_FR_fr',
+                'CountryName_EN_gb',
+                'Countryalpha3',
+                'Countryalpha2',
                 'CountryCodeUe',
-                'CountryIso3166Country'
+                'CountryISOcode'
             ].forEach(function (x) { return Fields[x] = x; });
         })(ManAdressRow = Ge.ManAdressRow || (Ge.ManAdressRow = {}));
     })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
@@ -1014,7 +961,7 @@ var GestionEquestre;
         }(Serenity.PrefixedContext));
         ManCavaliersForm.formKey = 'Ge.ManCavaliers';
         Ge.ManCavaliersForm = ManCavaliersForm;
-        [['LicFfe', function () { return Serenity.StringEditor; }], ['Person', function () { return Serenity.LookupEditor; }], ['IsActive', function () { return Serenity.BooleanEditor; }], ['NotArchive', function () { return Serenity.BooleanEditor; }], ['InsertDate', function () { return Serenity.DateEditor; }], ['InsertUserId', function () { return Serenity.IntegerEditor; }], ['UpdateDate', function () { return Serenity.DateEditor; }], ['UpdateUserId', function () { return Serenity.IntegerEditor; }], ['MilesimeLicnece', function () { return Serenity.DateEditor; }], ['NiveauGalop', function () { return Serenity.LookupEditor; }], ['LicenceCompetition', function () { return Serenity.LookupEditor; }], ['DateCertificatMedical', function () { return Serenity.DateEditor; }], ['Caption', function () { return Serenity.StringEditor; }], ['ArchiveDate', function () { return Serenity.DateEditor; }]].forEach(function (x) { return Object.defineProperty(ManCavaliersForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
+        [['LicFfe', function () { return Serenity.StringEditor; }], ['Person', function () { return Serenity.LookupEditor; }], ['IsActive', function () { return Serenity.BooleanEditor; }], ['NotArchive', function () { return Serenity.BooleanEditor; }], ['InsertDate', function () { return Serenity.DateEditor; }], ['InsertUsername', function () { return Serenity.StringEditor; }], ['UpdateDate', function () { return Serenity.DateEditor; }], ['UpdateUsername', function () { return Serenity.StringEditor; }], ['MilesimeLicnece', function () { return Serenity.DateEditor; }], ['NiveauGalop', function () { return Serenity.LookupEditor; }], ['LicenceCompetition', function () { return Serenity.LookupEditor; }], ['DateCertificatMedical', function () { return Serenity.DateEditor; }], ['Caption', function () { return Serenity.StringEditor; }], ['ArchiveDate', function () { return Serenity.DateEditor; }]].forEach(function (x) { return Object.defineProperty(ManCavaliersForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
     })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
 })(GestionEquestre || (GestionEquestre = {}));
 var GestionEquestre;
@@ -1049,6 +996,8 @@ var GestionEquestre;
                 'DateCertificatMedical',
                 'Caption',
                 'ArchiveDate',
+                'InsertUsername',
+                'UpdateUsername',
                 'PersonIsMorale',
                 'PersonIsActive',
                 'PersonNotArchive',
@@ -1136,7 +1085,7 @@ var GestionEquestre;
         }(Serenity.PrefixedContext));
         ManFolderForm.formKey = 'Ge.ManFolder';
         Ge.ManFolderForm = ManFolderForm;
-        [['IsActive', function () { return Serenity.BooleanEditor; }], ['NotArchive', function () { return Serenity.BooleanEditor; }], ['InsertDate', function () { return Serenity.DateEditor; }], ['InsertUserId', function () { return Serenity.IntegerEditor; }], ['UpdateDate', function () { return Serenity.DateEditor; }], ['UpdateUserId', function () { return Serenity.IntegerEditor; }], ['Caption', function () { return Serenity.StringEditor; }], ['ArchiveDate', function () { return Serenity.DateEditor; }], ['Number', function () { return Serenity.IntegerEditor; }], ['CreateeDate', function () { return Serenity.DateEditor; }], ['CloseRaison', function () { return Serenity.StringEditor; }], ['CloseDate', function () { return Serenity.DateEditor; }], ['Establishment', function () { return Serenity.LookupEditor; }], ['Comment', function () { return Serenity.StringEditor; }]].forEach(function (x) { return Object.defineProperty(ManFolderForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
+        [['Id', function () { return Serenity.StringEditor; }], ['IsActive', function () { return Serenity.BooleanEditor; }], ['NotArchive', function () { return Serenity.BooleanEditor; }], ['InsertDate', function () { return Serenity.DateEditor; }], ['InsertUsername', function () { return Serenity.StringEditor; }], ['UpdateDate', function () { return Serenity.DateEditor; }], ['UpdateUsername', function () { return Serenity.StringEditor; }], ['Caption', function () { return Serenity.StringEditor; }], ['ArchiveDate', function () { return Serenity.DateEditor; }], ['Number', function () { return Serenity.IntegerEditor; }], ['CreateeDate', function () { return Serenity.DateEditor; }], ['CloseRaison', function () { return Serenity.StringEditor; }], ['CloseDate', function () { return Serenity.DateEditor; }], ['Establishment', function () { return Serenity.LookupEditor; }], ['Comment', function () { return Serenity.StringEditor; }], ['Horses', function () { return Ge.LinkFolderHorseEditor; }]].forEach(function (x) { return Object.defineProperty(ManFolderForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
     })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
 })(GestionEquestre || (GestionEquestre = {}));
 var GestionEquestre;
@@ -1148,6 +1097,11 @@ var GestionEquestre;
             ManFolderRow.idProperty = 'Id';
             ManFolderRow.nameProperty = 'Caption';
             ManFolderRow.localTextPrefix = 'Ge.ManFolder';
+            ManFolderRow.lookupKey = 'Ge.Folders';
+            function getLookup() {
+                return Q.getLookup('Ge.Folders');
+            }
+            ManFolderRow.getLookup = getLookup;
             var Fields;
             (function (Fields) {
             })(Fields = ManFolderRow.Fields || (ManFolderRow.Fields = {}));
@@ -1166,7 +1120,10 @@ var GestionEquestre;
                 'CloseRaison',
                 'CloseDate',
                 'Establishment',
-                'Comment'
+                'Comment',
+                'Horses',
+                'InsertUsername',
+                'UpdateUsername'
             ].forEach(function (x) { return Fields[x] = x; });
         })(ManFolderRow = Ge.ManFolderRow || (Ge.ManFolderRow = {}));
     })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
@@ -1209,7 +1166,7 @@ var GestionEquestre;
         }(Serenity.PrefixedContext));
         ManHorsesForm.formKey = 'Ge.ManHorses';
         Ge.ManHorsesForm = ManHorsesForm;
-        [['Ueln', function () { return Serenity.StringEditor; }], ['Sire', function () { return Serenity.StringEditor; }], ['CleSire', function () { return Serenity.StringEditor; }], ['Hnin', function () { return Serenity.StringEditor; }], ['BirthCountry', function () { return Serenity.LookupEditor; }], ['BirthOrganization', function () { return Serenity.LookupEditor; }], ['Name', function () { return Serenity.StringEditor; }], ['IsActive', function () { return Serenity.BooleanEditor; }], ['NotArchive', function () { return Serenity.BooleanEditor; }], ['InsertDate', function () { return Serenity.DateEditor; }], ['InsertUserId', function () { return Serenity.IntegerEditor; }], ['UpdateDate', function () { return Serenity.DateEditor; }], ['UpdateUserId', function () { return Serenity.IntegerEditor; }], ['Birthday', function () { return Serenity.DateEditor; }], ['Sexe', function () { return Serenity.LookupEditor; }], ['Color', function () { return Serenity.StringEditor; }], ['Race', function () { return Serenity.StringEditor; }], ['Transponder', function () { return Serenity.StringEditor; }], ['FinalExit', function () { return Serenity.DateEditor; }], ['Description', function () { return Serenity.StringEditor; }], ['ArchiveDate', function () { return Serenity.DateEditor; }]].forEach(function (x) { return Object.defineProperty(ManHorsesForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
+        [['Ueln', function () { return Serenity.StringEditor; }], ['Sire', function () { return Serenity.StringEditor; }], ['CleSire', function () { return Serenity.StringEditor; }], ['Hnin', function () { return Serenity.StringEditor; }], ['BirthCountry', function () { return Serenity.LookupEditor; }], ['BirthOrganization', function () { return Serenity.LookupEditor; }], ['Name', function () { return Serenity.StringEditor; }], ['IsActive', function () { return Serenity.BooleanEditor; }], ['NotArchive', function () { return Serenity.BooleanEditor; }], ['InsertDate', function () { return Serenity.DateEditor; }], ['InsertUsername', function () { return Serenity.StringEditor; }], ['UpdateDate', function () { return Serenity.DateEditor; }], ['UpdateUsername', function () { return Serenity.StringEditor; }], ['Birthday', function () { return Serenity.DateEditor; }], ['Sexe', function () { return Serenity.LookupEditor; }], ['Color', function () { return Serenity.StringEditor; }], ['Race', function () { return Serenity.StringEditor; }], ['Transponder', function () { return Serenity.StringEditor; }], ['FinalExit', function () { return Serenity.DateEditor; }], ['Description', function () { return Serenity.StringEditor; }], ['ArchiveDate', function () { return Serenity.DateEditor; }]].forEach(function (x) { return Object.defineProperty(ManHorsesForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
     })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
 })(GestionEquestre || (GestionEquestre = {}));
 var GestionEquestre;
@@ -1221,6 +1178,11 @@ var GestionEquestre;
             ManHorsesRow.idProperty = 'Ueln';
             ManHorsesRow.nameProperty = 'Ueln';
             ManHorsesRow.localTextPrefix = 'Ge.ManHorses';
+            ManHorsesRow.lookupKey = 'Ge.Horses';
+            function getLookup() {
+                return Q.getLookup('Ge.Horses');
+            }
+            ManHorsesRow.getLookup = getLookup;
             var Fields;
             (function (Fields) {
             })(Fields = ManHorsesRow.Fields || (ManHorsesRow.Fields = {}));
@@ -1246,6 +1208,8 @@ var GestionEquestre;
                 'FinalExit',
                 'Description',
                 'ArchiveDate',
+                'InsertUsername',
+                'UpdateUsername',
                 'BirthCountryDefaultValue',
                 'BirthCountryIsActive',
                 'BirthCountryInsertDate',
@@ -1262,7 +1226,7 @@ var GestionEquestre;
                 'BirthOrganizationUpdateDate',
                 'BirthOrganizationUpdateUserId',
                 'BirthOrganizationOrganization',
-                'BirthOrganizationUelnOrganization',
+                'BirthOrganizationUelnCode',
                 'SexeDefaultValue',
                 'SexeIsActive',
                 'SexeInsertDate',
@@ -1408,7 +1372,7 @@ var GestionEquestre;
         }(Serenity.PrefixedContext));
         ManPersonForm.formKey = 'Ge.ManPerson';
         Ge.ManPersonForm = ManPersonForm;
-        [['IsMorale', function () { return Serenity.BooleanEditor; }], ['IsActive', function () { return Serenity.BooleanEditor; }], ['NotArchive', function () { return Serenity.BooleanEditor; }], ['InsertDate', function () { return Serenity.DateEditor; }], ['InsertUserId', function () { return Serenity.IntegerEditor; }], ['UpdateDate', function () { return Serenity.DateEditor; }], ['UpdateUserId', function () { return Serenity.IntegerEditor; }], ['Surname', function () { return Serenity.StringEditor; }], ['Name', function () { return Serenity.StringEditor; }], ['MaidenName', function () { return Serenity.StringEditor; }], ['BusinessName', function () { return Serenity.StringEditor; }], ['Birthday', function () { return Serenity.DateEditor; }], ['Sexe', function () { return Serenity.IntegerEditor; }], ['MaritalStatus', function () { return Serenity.IntegerEditor; }], ['BirthCity', function () { return Serenity.StringEditor; }], ['BirthCountry', function () { return Serenity.StringEditor; }], ['Nationality', function () { return Serenity.StringEditor; }], ['Photo', function () { return Serenity.StringEditor; }], ['Phone', function () { return Serenity.StringEditor; }], ['Gsm', function () { return Serenity.StringEditor; }], ['WorkPhone', function () { return Serenity.StringEditor; }], ['OtherPhone1', function () { return Serenity.StringEditor; }], ['OtherPhone2', function () { return Serenity.StringEditor; }], ['Email1', function () { return Serenity.StringEditor; }], ['Email2', function () { return Serenity.StringEditor; }], ['BankAccount', function () { return Serenity.StringEditor; }], ['IdAdress', function () { return Serenity.StringEditor; }], ['Caption', function () { return Serenity.StringEditor; }], ['ArchiveDate', function () { return Serenity.DateEditor; }]].forEach(function (x) { return Object.defineProperty(ManPersonForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
+        [['IsMorale', function () { return Serenity.BooleanEditor; }], ['IsActive', function () { return Serenity.BooleanEditor; }], ['NotArchive', function () { return Serenity.BooleanEditor; }], ['InsertDate', function () { return Serenity.DateEditor; }], ['InsertUsername', function () { return Serenity.StringEditor; }], ['UpdateDate', function () { return Serenity.DateEditor; }], ['UpdateUsername', function () { return Serenity.StringEditor; }], ['Surname', function () { return Serenity.StringEditor; }], ['Name', function () { return Serenity.StringEditor; }], ['MaidenName', function () { return Serenity.StringEditor; }], ['BusinessName', function () { return Serenity.StringEditor; }], ['Birthday', function () { return Serenity.DateEditor; }], ['Sexe', function () { return Serenity.LookupEditor; }], ['MaritalStatus', function () { return Serenity.LookupEditor; }], ['BirthCity', function () { return Serenity.LookupEditor; }], ['BirthCountry', function () { return Serenity.LookupEditor; }], ['Nationality', function () { return Serenity.LookupEditor; }], ['Photo', function () { return Serenity.ImageUploadEditor; }], ['Phone', function () { return Serenity.StringEditor; }], ['Gsm', function () { return Serenity.StringEditor; }], ['WorkPhone', function () { return Serenity.StringEditor; }], ['OtherPhone1', function () { return Serenity.StringEditor; }], ['OtherPhone2', function () { return Serenity.StringEditor; }], ['Email1', function () { return Serenity.StringEditor; }], ['Email2', function () { return Serenity.StringEditor; }], ['BankAccount', function () { return Serenity.StringEditor; }], ['IdAdress', function () { return Serenity.StringEditor; }], ['Caption', function () { return Serenity.StringEditor; }], ['ArchiveDate', function () { return Serenity.DateEditor; }]].forEach(function (x) { return Object.defineProperty(ManPersonForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
     })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
 })(GestionEquestre || (GestionEquestre = {}));
 var GestionEquestre;
@@ -1459,6 +1423,8 @@ var GestionEquestre;
                 'IdAdress',
                 'Caption',
                 'ArchiveDate',
+                'InsertUsername',
+                'UpdateUsername',
                 'SexeDefaultValue',
                 'SexeIsActive',
                 'SexeInsertDate',
@@ -1492,20 +1458,24 @@ var GestionEquestre;
                 'BirthCountryInsertUserId',
                 'BirthCountryUpdateDate',
                 'BirthCountryUpdateUserId',
-                'BirthCountryCountry',
-                'BirthCountryCode',
+                'BirthCountryName_FR_fr',
+                'BirthCountryName_EN_gb',
+                'BirthCountryalpha3',
+                'BirthCountryalpha2',
                 'BirthCountryCodeUe',
-                'BirthCountryIso3166Country',
+                'BirthCountryISOcode',
                 'NationalityDefaultValue',
                 'NationalityIsActive',
                 'NationalityInsertDate',
                 'NationalityInsertUserId',
                 'NationalityUpdateDate',
                 'NationalityUpdateUserId',
-                'NationalityCountry',
-                'NationalityCode',
+                'NationalityName_FR_fr',
+                'NationalityName_EN_gb',
+                'Nationalityalpha3',
+                'Nationalityalpha2',
                 'NationalityCodeUe',
-                'NationalityIso3166Country',
+                'NationalityISOcode',
                 'BankAccountCountryCodeIban',
                 'BankAccountCheckDigitsIban',
                 'BankAccountBban',
@@ -1575,7 +1545,7 @@ var GestionEquestre;
         }(Serenity.PrefixedContext));
         SetCityForm.formKey = 'Ge.SetCity';
         Ge.SetCityForm = SetCityForm;
-        [['DefaultValue', function () { return Serenity.BooleanEditor; }], ['IsActive', function () { return Serenity.BooleanEditor; }], ['InsertDate', function () { return Serenity.DateEditor; }], ['InsertUserId', function () { return Serenity.IntegerEditor; }], ['UpdateDate', function () { return Serenity.DateEditor; }], ['UpdateUserId', function () { return Serenity.IntegerEditor; }], ['FrCodeInsee', function () { return Serenity.StringEditor; }], ['Caption', function () { return Serenity.StringEditor; }], ['City', function () { return Serenity.StringEditor; }], ['PostCode', function () { return Serenity.StringEditor; }], ['Country', function () { return Serenity.IntegerEditor; }]].forEach(function (x) { return Object.defineProperty(SetCityForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
+        [['DefaultValue', function () { return Serenity.BooleanEditor; }], ['IsActive', function () { return Serenity.BooleanEditor; }], ['InsertDate', function () { return Serenity.DateEditor; }], ['InsertUsername', function () { return Serenity.StringEditor; }], ['UpdateDate', function () { return Serenity.DateEditor; }], ['UpdateUsername', function () { return Serenity.StringEditor; }], ['FrCodeInsee', function () { return Serenity.StringEditor; }], ['Caption', function () { return Serenity.StringEditor; }], ['City', function () { return Serenity.StringEditor; }], ['PostCode', function () { return Serenity.StringEditor; }], ['Country', function () { return Serenity.IntegerEditor; }]].forEach(function (x) { return Object.defineProperty(SetCityForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
     })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
 })(GestionEquestre || (GestionEquestre = {}));
 var GestionEquestre;
@@ -1608,6 +1578,8 @@ var GestionEquestre;
                 'City',
                 'PostCode',
                 'Country',
+                'InsertUsername',
+                'UpdateUsername',
                 'CountryDefaultValue',
                 'CountryIsActive',
                 'CountryInsertDate',
@@ -1660,7 +1632,7 @@ var GestionEquestre;
         }(Serenity.PrefixedContext));
         SetCountryForm.formKey = 'Ge.SetCountry';
         Ge.SetCountryForm = SetCountryForm;
-        [['DefaultValue', function () { return Serenity.BooleanEditor; }], ['IsActive', function () { return Serenity.BooleanEditor; }], ['InsertDate', function () { return Serenity.DateEditor; }], ['InsertUserId', function () { return Serenity.IntegerEditor; }], ['UpdateDate', function () { return Serenity.DateEditor; }], ['UpdateUserId', function () { return Serenity.IntegerEditor; }], ['Name_FR_fr', function () { return Serenity.StringEditor; }], ['Name_EN_gb', function () { return Serenity.StringEditor; }], ['alpha3', function () { return Serenity.StringEditor; }], ['alpha2', function () { return Serenity.StringEditor; }], ['CodeUe', function () { return Serenity.IntegerEditor; }], ['ISOcode', function () { return Serenity.IntegerEditor; }]].forEach(function (x) { return Object.defineProperty(SetCountryForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
+        [['DefaultValue', function () { return Serenity.BooleanEditor; }], ['IsActive', function () { return Serenity.BooleanEditor; }], ['InsertDate', function () { return Serenity.DateEditor; }], ['InsertUsername', function () { return Serenity.StringEditor; }], ['UpdateDate', function () { return Serenity.DateEditor; }], ['UpdateUsername', function () { return Serenity.StringEditor; }], ['Name_FR_fr', function () { return Serenity.StringEditor; }], ['Name_EN_gb', function () { return Serenity.StringEditor; }], ['alpha3', function () { return Serenity.StringEditor; }], ['alpha2', function () { return Serenity.StringEditor; }], ['CodeUe', function () { return Serenity.IntegerEditor; }], ['ISOcode', function () { return Serenity.StringEditor; }]].forEach(function (x) { return Object.defineProperty(SetCountryForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
     })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
 })(GestionEquestre || (GestionEquestre = {}));
 var GestionEquestre;
@@ -1693,7 +1665,9 @@ var GestionEquestre;
                 'alpha3',
                 'alpha2',
                 'CodeUe',
-                'ISOcode'
+                'ISOcode',
+                'InsertUsername',
+                'UpdateUsername'
             ].forEach(function (x) { return Fields[x] = x; });
         })(SetCountryRow = Ge.SetCountryRow || (Ge.SetCountryRow = {}));
     })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
@@ -1736,7 +1710,7 @@ var GestionEquestre;
         }(Serenity.PrefixedContext));
         SetGalopForm.formKey = 'Ge.SetGalop';
         Ge.SetGalopForm = SetGalopForm;
-        [['DefaultValue', function () { return Serenity.BooleanEditor; }], ['IsActive', function () { return Serenity.BooleanEditor; }], ['InsertDate', function () { return Serenity.DateEditor; }], ['InsertUserId', function () { return Serenity.IntegerEditor; }], ['UpdateDate', function () { return Serenity.DateEditor; }], ['UpdateUserId', function () { return Serenity.IntegerEditor; }], ['Caption', function () { return Serenity.StringEditor; }], ['Code', function () { return Serenity.StringEditor; }]].forEach(function (x) { return Object.defineProperty(SetGalopForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
+        [['DefaultValue', function () { return Serenity.BooleanEditor; }], ['IsActive', function () { return Serenity.BooleanEditor; }], ['InsertDate', function () { return Serenity.DateEditor; }], ['InsertUsername', function () { return Serenity.StringEditor; }], ['UpdateDate', function () { return Serenity.DateEditor; }], ['UpdateUsername', function () { return Serenity.StringEditor; }], ['Caption', function () { return Serenity.StringEditor; }], ['Code', function () { return Serenity.StringEditor; }]].forEach(function (x) { return Object.defineProperty(SetGalopForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
     })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
 })(GestionEquestre || (GestionEquestre = {}));
 var GestionEquestre;
@@ -1765,7 +1739,9 @@ var GestionEquestre;
                 'UpdateDate',
                 'UpdateUserId',
                 'Caption',
-                'Code'
+                'Code',
+                'InsertUsername',
+                'UpdateUsername'
             ].forEach(function (x) { return Fields[x] = x; });
         })(SetGalopRow = Ge.SetGalopRow || (Ge.SetGalopRow = {}));
     })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
@@ -1808,7 +1784,7 @@ var GestionEquestre;
         }(Serenity.PrefixedContext));
         SetLfcForm.formKey = 'Ge.SetLfc';
         Ge.SetLfcForm = SetLfcForm;
-        [['DefaultValue', function () { return Serenity.BooleanEditor; }], ['IsActive', function () { return Serenity.BooleanEditor; }], ['InsertDate', function () { return Serenity.DateEditor; }], ['InsertUserId', function () { return Serenity.IntegerEditor; }], ['UpdateDate', function () { return Serenity.DateEditor; }], ['UpdateUserId', function () { return Serenity.IntegerEditor; }], ['Caption', function () { return Serenity.StringEditor; }], ['Code', function () { return Serenity.StringEditor; }]].forEach(function (x) { return Object.defineProperty(SetLfcForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
+        [['DefaultValue', function () { return Serenity.BooleanEditor; }], ['IsActive', function () { return Serenity.BooleanEditor; }], ['InsertDate', function () { return Serenity.DateEditor; }], ['InsertUsername', function () { return Serenity.StringEditor; }], ['UpdateDate', function () { return Serenity.DateEditor; }], ['UpdateUsername', function () { return Serenity.StringEditor; }], ['Caption', function () { return Serenity.StringEditor; }], ['Code', function () { return Serenity.StringEditor; }]].forEach(function (x) { return Object.defineProperty(SetLfcForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
     })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
 })(GestionEquestre || (GestionEquestre = {}));
 var GestionEquestre;
@@ -1837,7 +1813,9 @@ var GestionEquestre;
                 'UpdateDate',
                 'UpdateUserId',
                 'Caption',
-                'Code'
+                'Code',
+                'InsertUsername',
+                'UpdateUsername'
             ].forEach(function (x) { return Fields[x] = x; });
         })(SetLfcRow = Ge.SetLfcRow || (Ge.SetLfcRow = {}));
     })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
@@ -1880,7 +1858,7 @@ var GestionEquestre;
         }(Serenity.PrefixedContext));
         SetMaritalstatusForm.formKey = 'Ge.SetMaritalstatus';
         Ge.SetMaritalstatusForm = SetMaritalstatusForm;
-        [['DefaultValue', function () { return Serenity.BooleanEditor; }], ['IsActive', function () { return Serenity.BooleanEditor; }], ['InsertDate', function () { return Serenity.DateEditor; }], ['InsertUserId', function () { return Serenity.IntegerEditor; }], ['UpdateDate', function () { return Serenity.DateEditor; }], ['UpdateUserId', function () { return Serenity.IntegerEditor; }], ['Caption', function () { return Serenity.StringEditor; }], ['Code', function () { return Serenity.StringEditor; }]].forEach(function (x) { return Object.defineProperty(SetMaritalstatusForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
+        [['DefaultValue', function () { return Serenity.BooleanEditor; }], ['IsActive', function () { return Serenity.BooleanEditor; }], ['InsertDate', function () { return Serenity.DateEditor; }], ['InsertUsername', function () { return Serenity.StringEditor; }], ['UpdateDate', function () { return Serenity.DateEditor; }], ['UpdateUsername', function () { return Serenity.StringEditor; }], ['Caption', function () { return Serenity.StringEditor; }], ['Code', function () { return Serenity.StringEditor; }]].forEach(function (x) { return Object.defineProperty(SetMaritalstatusForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
     })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
 })(GestionEquestre || (GestionEquestre = {}));
 var GestionEquestre;
@@ -1909,7 +1887,9 @@ var GestionEquestre;
                 'UpdateDate',
                 'UpdateUserId',
                 'Caption',
-                'Code'
+                'Code',
+                'InsertUsername',
+                'UpdateUsername'
             ].forEach(function (x) { return Fields[x] = x; });
         })(SetMaritalstatusRow = Ge.SetMaritalstatusRow || (Ge.SetMaritalstatusRow = {}));
     })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
@@ -1952,7 +1932,7 @@ var GestionEquestre;
         }(Serenity.PrefixedContext));
         SetSexeForm.formKey = 'Ge.SetSexe';
         Ge.SetSexeForm = SetSexeForm;
-        [['DefaultValue', function () { return Serenity.BooleanEditor; }], ['IsActive', function () { return Serenity.BooleanEditor; }], ['InsertDate', function () { return Serenity.DateEditor; }], ['InsertUserId', function () { return Serenity.IntegerEditor; }], ['UpdateDate', function () { return Serenity.DateEditor; }], ['UpdateUserId', function () { return Serenity.IntegerEditor; }], ['Caption', function () { return Serenity.StringEditor; }], ['Civility', function () { return Serenity.StringEditor; }]].forEach(function (x) { return Object.defineProperty(SetSexeForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
+        [['ID', function () { return Serenity.IntegerEditor; }], ['DefaultValue', function () { return Serenity.BooleanEditor; }], ['IsActive', function () { return Serenity.BooleanEditor; }], ['InsertDate', function () { return Serenity.DateEditor; }], ['InsertUsername', function () { return Serenity.StringEditor; }], ['UpdateDate', function () { return Serenity.DateEditor; }], ['UpdateUsername', function () { return Serenity.StringEditor; }], ['Caption', function () { return Serenity.StringEditor; }], ['Civility', function () { return Serenity.StringEditor; }]].forEach(function (x) { return Object.defineProperty(SetSexeForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
     })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
 })(GestionEquestre || (GestionEquestre = {}));
 var GestionEquestre;
@@ -2010,7 +1990,9 @@ var GestionEquestre;
                 'UpdateDate',
                 'UpdateUserId',
                 'Caption',
-                'Civility'
+                'Civility',
+                'InsertUsername',
+                'UpdateUsername'
             ].forEach(function (x) { return Fields[x] = x; });
         })(SetSexeRow = Ge.SetSexeRow || (Ge.SetSexeRow = {}));
     })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
@@ -2053,7 +2035,7 @@ var GestionEquestre;
         }(Serenity.PrefixedContext));
         SetUelnorgaForm.formKey = 'Ge.SetUelnorga';
         Ge.SetUelnorgaForm = SetUelnorgaForm;
-        [['DefaultValue', function () { return Serenity.BooleanEditor; }], ['IsActive', function () { return Serenity.BooleanEditor; }], ['InsertDate', function () { return Serenity.DateEditor; }], ['InsertUserId', function () { return Serenity.LookupEditor; }], ['UpdateDate', function () { return Serenity.DateEditor; }], ['UpdateUserId', function () { return Serenity.IntegerEditor; }], ['Organization', function () { return Serenity.StringEditor; }], ['UelnOrganization', function () { return Serenity.StringEditor; }]].forEach(function (x) { return Object.defineProperty(SetUelnorgaForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
+        [['DefaultValue', function () { return Serenity.BooleanEditor; }], ['IsActive', function () { return Serenity.BooleanEditor; }], ['InsertDate', function () { return Serenity.DateEditor; }], ['InsertUsername', function () { return Serenity.StringEditor; }], ['UpdateDate', function () { return Serenity.DateEditor; }], ['UpdateUsername', function () { return Serenity.StringEditor; }], ['Organization', function () { return Serenity.StringEditor; }], ['UelnCode', function () { return Serenity.StringEditor; }]].forEach(function (x) { return Object.defineProperty(SetUelnorgaForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
     })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
 })(GestionEquestre || (GestionEquestre = {}));
 var GestionEquestre;
@@ -2082,7 +2064,9 @@ var GestionEquestre;
                 'UpdateDate',
                 'UpdateUserId',
                 'Organization',
-                'UelnOrganization'
+                'UelnCode',
+                'InsertUsername',
+                'UpdateUsername'
             ].forEach(function (x) { return Fields[x] = x; });
         })(SetUelnorgaRow = Ge.SetUelnorgaRow || (Ge.SetUelnorgaRow = {}));
     })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
@@ -4301,6 +4285,528 @@ var GestionEquestre;
 (function (GestionEquestre) {
     var Ge;
     (function (Ge) {
+        var CorCorporateDialog = (function (_super) {
+            __extends(CorCorporateDialog, _super);
+            function CorCorporateDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new Ge.CorCorporateForm(_this.idPrefix);
+                return _this;
+            }
+            CorCorporateDialog.prototype.getFormKey = function () { return Ge.CorCorporateForm.formKey; };
+            CorCorporateDialog.prototype.getIdProperty = function () { return Ge.CorCorporateRow.idProperty; };
+            CorCorporateDialog.prototype.getLocalTextPrefix = function () { return Ge.CorCorporateRow.localTextPrefix; };
+            CorCorporateDialog.prototype.getNameProperty = function () { return Ge.CorCorporateRow.nameProperty; };
+            CorCorporateDialog.prototype.getService = function () { return Ge.CorCorporateService.baseUrl; };
+            return CorCorporateDialog;
+        }(Serenity.EntityDialog));
+        CorCorporateDialog = __decorate([
+            Serenity.Decorators.registerClass(),
+            Serenity.Decorators.responsive()
+        ], CorCorporateDialog);
+        Ge.CorCorporateDialog = CorCorporateDialog;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var CorCorporateGrid = (function (_super) {
+            __extends(CorCorporateGrid, _super);
+            function CorCorporateGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            CorCorporateGrid.prototype.getColumnsKey = function () { return 'Ge.CorCorporate'; };
+            CorCorporateGrid.prototype.getDialogType = function () { return Ge.CorCorporateDialog; };
+            CorCorporateGrid.prototype.getIdProperty = function () { return Ge.CorCorporateRow.idProperty; };
+            CorCorporateGrid.prototype.getLocalTextPrefix = function () { return Ge.CorCorporateRow.localTextPrefix; };
+            CorCorporateGrid.prototype.getService = function () { return Ge.CorCorporateService.baseUrl; };
+            return CorCorporateGrid;
+        }(Serenity.EntityGrid));
+        CorCorporateGrid = __decorate([
+            Serenity.Decorators.registerClass()
+        ], CorCorporateGrid);
+        Ge.CorCorporateGrid = CorCorporateGrid;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+/// <reference path="../../../Common/Helpers/GridEditorDialog.ts" />
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var LinkFolderHorseEditDialog = (function (_super) {
+            __extends(LinkFolderHorseEditDialog, _super);
+            function LinkFolderHorseEditDialog() {
+                var _this = _super.call(this) || this;
+                _this.form = new Ge.LinkFolderHorseForm(_this.idPrefix);
+                return _this;
+            }
+            LinkFolderHorseEditDialog.prototype.getFormKey = function () { return Ge.LinkFolderHorseForm.formKey; };
+            LinkFolderHorseEditDialog.prototype.getLocalTextPrefix = function () { return Ge.LinkFolderHorseRow.localTextPrefix; };
+            LinkFolderHorseEditDialog.prototype.getNameProperty = function () { return Ge.LinkFolderHorseRow.nameProperty; };
+            return LinkFolderHorseEditDialog;
+        }(GestionEquestre.Common.GridEditorDialog));
+        LinkFolderHorseEditDialog = __decorate([
+            Serenity.Decorators.registerClass(),
+            Serenity.Decorators.responsive()
+        ], LinkFolderHorseEditDialog);
+        Ge.LinkFolderHorseEditDialog = LinkFolderHorseEditDialog;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+/// <reference path="../../../Common/Helpers/GridEditorBase.ts" />
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var LinkFolderHorseEditor = (function (_super) {
+            __extends(LinkFolderHorseEditor, _super);
+            function LinkFolderHorseEditor(container) {
+                return _super.call(this, container) || this;
+            }
+            LinkFolderHorseEditor.prototype.getColumnsKey = function () { return 'Ge.LinkFolderHorse'; };
+            LinkFolderHorseEditor.prototype.getDialogType = function () { return Ge.LinkFolderHorseEditDialog; };
+            LinkFolderHorseEditor.prototype.getLocalTextPrefix = function () { return Ge.LinkFolderHorseRow.localTextPrefix; };
+            LinkFolderHorseEditor.prototype.getAddButtonCaption = function () {
+                return "Add";
+            };
+            LinkFolderHorseEditor.prototype.getColumns = function () {
+                var columns = _super.prototype.getColumns.call(this);
+                columns.unshift({
+                    field: 'Delete Row',
+                    name: '',
+                    format: function (ctx) { return '<a class="inline-action delete-row" title="delete">' +
+                        '<i class="fa fa-trash-o text-red"></i></a>'; },
+                    width: 24,
+                    minWidth: 24,
+                    maxWidth: 24
+                });
+                var fld = Ge.LinkFolderHorseRow.Fields;
+                Q.first(columns, function (x) { return x.field == fld.Horse; }).format =
+                    function (ctx) { return "<a href=\"javascript:;\" class=\"Horse-link\">" + Q.htmlEncode(ctx.value) + "</a>"; };
+                return columns;
+            };
+            LinkFolderHorseEditor.prototype.onClick = function (e, row, cell) {
+                var _this = this;
+                if (e.isDefaultPrevented())
+                    return;
+                var item = this.itemAt(row);
+                var target = $(e.target);
+                if (target.parent().hasClass('inline-action'))
+                    target = target.parent();
+                if (target.hasClass('inline-action')) {
+                    e.preventDefault();
+                    if (target.hasClass('delete-row')) {
+                        Q.confirm('Delete record?', function () {
+                            Ge.LinkFolderHorseService.Delete({
+                                EntityId: item.Id,
+                            }, function (response) {
+                                _this.refresh();
+                            });
+                        });
+                    }
+                }
+                e.preventDefault();
+                var Horse = Q.first(Ge.ManHorsesRow.getLookup().items, function (x) { return x.Ueln == item.Horse; });
+                new Ge.ManHorsesDialog().loadByIdAndOpenDialog(Horse.Ueln);
+            };
+            LinkFolderHorseEditor.prototype.validateEntity = function (row, id) {
+                if (!_super.prototype.validateEntity.call(this, row, id))
+                    return false;
+                row.HorseName = Ge.ManHorsesRow.getLookup().itemById[row.Horse].Name;
+                return true;
+            };
+            return LinkFolderHorseEditor;
+        }(GestionEquestre.Common.GridEditorBase));
+        LinkFolderHorseEditor = __decorate([
+            Serenity.Decorators.registerEditor()
+        ], LinkFolderHorseEditor);
+        Ge.LinkFolderHorseEditor = LinkFolderHorseEditor;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var ManFolderDialog = (function (_super) {
+            __extends(ManFolderDialog, _super);
+            //private FolderHorseGrid: LinkFolderHorseGrid;
+            function ManFolderDialog() {
+                var _this = _super.call(this) || this;
+                _this.form = new Ge.ManFolderForm(_this.idPrefix);
+                return _this;
+                //this.FolderHorseGrid = new LinkFolderHorseGrid(this.byId("FolderHorseGrid"));
+                //this.tabs.on('tabsactivate', (e, i) => {
+                //    this.arrange();
+                //});
+            }
+            ManFolderDialog.prototype.getFormKey = function () { return Ge.ManFolderForm.formKey; };
+            ManFolderDialog.prototype.getIdProperty = function () { return Ge.ManFolderRow.idProperty; };
+            ManFolderDialog.prototype.getLocalTextPrefix = function () { return Ge.ManFolderRow.localTextPrefix; };
+            ManFolderDialog.prototype.getNameProperty = function () { return Ge.ManFolderRow.nameProperty; };
+            ManFolderDialog.prototype.getService = function () { return Ge.ManFolderService.baseUrl; };
+            return ManFolderDialog;
+        }(Serenity.EntityDialog));
+        ManFolderDialog = __decorate([
+            Serenity.Decorators.registerClass(),
+            Serenity.Decorators.responsive()
+        ], ManFolderDialog);
+        Ge.ManFolderDialog = ManFolderDialog;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var ManFolderGrid = (function (_super) {
+            __extends(ManFolderGrid, _super);
+            function ManFolderGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            ManFolderGrid.prototype.getColumnsKey = function () { return 'Ge.ManFolder'; };
+            ManFolderGrid.prototype.getDialogType = function () { return Ge.ManFolderDialog; };
+            ManFolderGrid.prototype.getIdProperty = function () { return Ge.ManFolderRow.idProperty; };
+            ManFolderGrid.prototype.getLocalTextPrefix = function () { return Ge.ManFolderRow.localTextPrefix; };
+            ManFolderGrid.prototype.getService = function () { return Ge.ManFolderService.baseUrl; };
+            return ManFolderGrid;
+        }(Serenity.EntityGrid));
+        ManFolderGrid = __decorate([
+            Serenity.Decorators.registerClass()
+        ], ManFolderGrid);
+        Ge.ManFolderGrid = ManFolderGrid;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var LinkFolderCavalierDialog = (function (_super) {
+            __extends(LinkFolderCavalierDialog, _super);
+            function LinkFolderCavalierDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new Ge.LinkFolderCavalierForm(_this.idPrefix);
+                return _this;
+            }
+            LinkFolderCavalierDialog.prototype.getFormKey = function () { return Ge.LinkFolderCavalierForm.formKey; };
+            LinkFolderCavalierDialog.prototype.getIdProperty = function () { return Ge.LinkFolderCavalierRow.idProperty; };
+            LinkFolderCavalierDialog.prototype.getLocalTextPrefix = function () { return Ge.LinkFolderCavalierRow.localTextPrefix; };
+            LinkFolderCavalierDialog.prototype.getNameProperty = function () { return Ge.LinkFolderCavalierRow.nameProperty; };
+            LinkFolderCavalierDialog.prototype.getService = function () { return Ge.LinkFolderCavalierService.baseUrl; };
+            return LinkFolderCavalierDialog;
+        }(Serenity.EntityDialog));
+        LinkFolderCavalierDialog = __decorate([
+            Serenity.Decorators.registerClass(),
+            Serenity.Decorators.responsive()
+        ], LinkFolderCavalierDialog);
+        Ge.LinkFolderCavalierDialog = LinkFolderCavalierDialog;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var LinkFolderCavalierGrid = (function (_super) {
+            __extends(LinkFolderCavalierGrid, _super);
+            function LinkFolderCavalierGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            LinkFolderCavalierGrid.prototype.getColumnsKey = function () { return 'Ge.LinkFolderCavalier'; };
+            LinkFolderCavalierGrid.prototype.getDialogType = function () { return Ge.LinkFolderCavalierDialog; };
+            LinkFolderCavalierGrid.prototype.getIdProperty = function () { return Ge.LinkFolderCavalierRow.idProperty; };
+            LinkFolderCavalierGrid.prototype.getLocalTextPrefix = function () { return Ge.LinkFolderCavalierRow.localTextPrefix; };
+            LinkFolderCavalierGrid.prototype.getService = function () { return Ge.LinkFolderCavalierService.baseUrl; };
+            return LinkFolderCavalierGrid;
+        }(Serenity.EntityGrid));
+        LinkFolderCavalierGrid = __decorate([
+            Serenity.Decorators.registerClass()
+        ], LinkFolderCavalierGrid);
+        Ge.LinkFolderCavalierGrid = LinkFolderCavalierGrid;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var LinkFolderPersonDialog = (function (_super) {
+            __extends(LinkFolderPersonDialog, _super);
+            function LinkFolderPersonDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new Ge.LinkFolderPersonForm(_this.idPrefix);
+                return _this;
+            }
+            LinkFolderPersonDialog.prototype.getFormKey = function () { return Ge.LinkFolderPersonForm.formKey; };
+            LinkFolderPersonDialog.prototype.getIdProperty = function () { return Ge.LinkFolderPersonRow.idProperty; };
+            LinkFolderPersonDialog.prototype.getLocalTextPrefix = function () { return Ge.LinkFolderPersonRow.localTextPrefix; };
+            LinkFolderPersonDialog.prototype.getNameProperty = function () { return Ge.LinkFolderPersonRow.nameProperty; };
+            LinkFolderPersonDialog.prototype.getService = function () { return Ge.LinkFolderPersonService.baseUrl; };
+            return LinkFolderPersonDialog;
+        }(Serenity.EntityDialog));
+        LinkFolderPersonDialog = __decorate([
+            Serenity.Decorators.registerClass(),
+            Serenity.Decorators.responsive()
+        ], LinkFolderPersonDialog);
+        Ge.LinkFolderPersonDialog = LinkFolderPersonDialog;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var LinkFolderPersonGrid = (function (_super) {
+            __extends(LinkFolderPersonGrid, _super);
+            function LinkFolderPersonGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            LinkFolderPersonGrid.prototype.getColumnsKey = function () { return 'Ge.LinkFolderPerson'; };
+            LinkFolderPersonGrid.prototype.getDialogType = function () { return Ge.LinkFolderPersonDialog; };
+            LinkFolderPersonGrid.prototype.getIdProperty = function () { return Ge.LinkFolderPersonRow.idProperty; };
+            LinkFolderPersonGrid.prototype.getLocalTextPrefix = function () { return Ge.LinkFolderPersonRow.localTextPrefix; };
+            LinkFolderPersonGrid.prototype.getService = function () { return Ge.LinkFolderPersonService.baseUrl; };
+            return LinkFolderPersonGrid;
+        }(Serenity.EntityGrid));
+        LinkFolderPersonGrid = __decorate([
+            Serenity.Decorators.registerClass()
+        ], LinkFolderPersonGrid);
+        Ge.LinkFolderPersonGrid = LinkFolderPersonGrid;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var ManAdressDialog = (function (_super) {
+            __extends(ManAdressDialog, _super);
+            function ManAdressDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new Ge.ManAdressForm(_this.idPrefix);
+                return _this;
+            }
+            ManAdressDialog.prototype.getFormKey = function () { return Ge.ManAdressForm.formKey; };
+            ManAdressDialog.prototype.getIdProperty = function () { return Ge.ManAdressRow.idProperty; };
+            ManAdressDialog.prototype.getLocalTextPrefix = function () { return Ge.ManAdressRow.localTextPrefix; };
+            ManAdressDialog.prototype.getNameProperty = function () { return Ge.ManAdressRow.nameProperty; };
+            ManAdressDialog.prototype.getService = function () { return Ge.ManAdressService.baseUrl; };
+            return ManAdressDialog;
+        }(Serenity.EntityDialog));
+        ManAdressDialog = __decorate([
+            Serenity.Decorators.registerClass(),
+            Serenity.Decorators.responsive()
+        ], ManAdressDialog);
+        Ge.ManAdressDialog = ManAdressDialog;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var ManAdressGrid = (function (_super) {
+            __extends(ManAdressGrid, _super);
+            function ManAdressGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            ManAdressGrid.prototype.getColumnsKey = function () { return 'Ge.ManAdress'; };
+            ManAdressGrid.prototype.getDialogType = function () { return Ge.ManAdressDialog; };
+            ManAdressGrid.prototype.getIdProperty = function () { return Ge.ManAdressRow.idProperty; };
+            ManAdressGrid.prototype.getLocalTextPrefix = function () { return Ge.ManAdressRow.localTextPrefix; };
+            ManAdressGrid.prototype.getService = function () { return Ge.ManAdressService.baseUrl; };
+            return ManAdressGrid;
+        }(Serenity.EntityGrid));
+        ManAdressGrid = __decorate([
+            Serenity.Decorators.registerClass()
+        ], ManAdressGrid);
+        Ge.ManAdressGrid = ManAdressGrid;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var ManCavaliersDialog = (function (_super) {
+            __extends(ManCavaliersDialog, _super);
+            function ManCavaliersDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new Ge.ManCavaliersForm(_this.idPrefix);
+                return _this;
+            }
+            ManCavaliersDialog.prototype.getFormKey = function () { return Ge.ManCavaliersForm.formKey; };
+            ManCavaliersDialog.prototype.getIdProperty = function () { return Ge.ManCavaliersRow.idProperty; };
+            ManCavaliersDialog.prototype.getLocalTextPrefix = function () { return Ge.ManCavaliersRow.localTextPrefix; };
+            ManCavaliersDialog.prototype.getNameProperty = function () { return Ge.ManCavaliersRow.nameProperty; };
+            ManCavaliersDialog.prototype.getService = function () { return Ge.ManCavaliersService.baseUrl; };
+            return ManCavaliersDialog;
+        }(Serenity.EntityDialog));
+        ManCavaliersDialog = __decorate([
+            Serenity.Decorators.registerClass(),
+            Serenity.Decorators.responsive()
+        ], ManCavaliersDialog);
+        Ge.ManCavaliersDialog = ManCavaliersDialog;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var ManCavaliersGrid = (function (_super) {
+            __extends(ManCavaliersGrid, _super);
+            function ManCavaliersGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            ManCavaliersGrid.prototype.getColumnsKey = function () { return 'Ge.ManCavaliers'; };
+            ManCavaliersGrid.prototype.getDialogType = function () { return Ge.ManCavaliersDialog; };
+            ManCavaliersGrid.prototype.getIdProperty = function () { return Ge.ManCavaliersRow.idProperty; };
+            ManCavaliersGrid.prototype.getLocalTextPrefix = function () { return Ge.ManCavaliersRow.localTextPrefix; };
+            ManCavaliersGrid.prototype.getService = function () { return Ge.ManCavaliersService.baseUrl; };
+            return ManCavaliersGrid;
+        }(Serenity.EntityGrid));
+        ManCavaliersGrid = __decorate([
+            Serenity.Decorators.registerClass()
+        ], ManCavaliersGrid);
+        Ge.ManCavaliersGrid = ManCavaliersGrid;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var ManHorsesDialog = (function (_super) {
+            __extends(ManHorsesDialog, _super);
+            function ManHorsesDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new Ge.ManHorsesForm(_this.idPrefix);
+                return _this;
+            }
+            ManHorsesDialog.prototype.getFormKey = function () { return Ge.ManHorsesForm.formKey; };
+            ManHorsesDialog.prototype.getIdProperty = function () { return Ge.ManHorsesRow.idProperty; };
+            ManHorsesDialog.prototype.getLocalTextPrefix = function () { return Ge.ManHorsesRow.localTextPrefix; };
+            ManHorsesDialog.prototype.getNameProperty = function () { return Ge.ManHorsesRow.nameProperty; };
+            ManHorsesDialog.prototype.getService = function () { return Ge.ManHorsesService.baseUrl; };
+            return ManHorsesDialog;
+        }(Serenity.EntityDialog));
+        ManHorsesDialog = __decorate([
+            Serenity.Decorators.registerClass(),
+            Serenity.Decorators.responsive()
+        ], ManHorsesDialog);
+        Ge.ManHorsesDialog = ManHorsesDialog;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var ManHorsesGrid = (function (_super) {
+            __extends(ManHorsesGrid, _super);
+            function ManHorsesGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            ManHorsesGrid.prototype.getColumnsKey = function () { return 'Ge.ManHorses'; };
+            ManHorsesGrid.prototype.getDialogType = function () { return Ge.ManHorsesDialog; };
+            ManHorsesGrid.prototype.getIdProperty = function () { return Ge.ManHorsesRow.idProperty; };
+            ManHorsesGrid.prototype.getLocalTextPrefix = function () { return Ge.ManHorsesRow.localTextPrefix; };
+            ManHorsesGrid.prototype.getService = function () { return Ge.ManHorsesService.baseUrl; };
+            return ManHorsesGrid;
+        }(Serenity.EntityGrid));
+        ManHorsesGrid = __decorate([
+            Serenity.Decorators.registerClass()
+        ], ManHorsesGrid);
+        Ge.ManHorsesGrid = ManHorsesGrid;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var ManOwnerDialog = (function (_super) {
+            __extends(ManOwnerDialog, _super);
+            function ManOwnerDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new Ge.ManOwnerForm(_this.idPrefix);
+                return _this;
+            }
+            ManOwnerDialog.prototype.getFormKey = function () { return Ge.ManOwnerForm.formKey; };
+            ManOwnerDialog.prototype.getIdProperty = function () { return Ge.ManOwnerRow.idProperty; };
+            ManOwnerDialog.prototype.getLocalTextPrefix = function () { return Ge.ManOwnerRow.localTextPrefix; };
+            ManOwnerDialog.prototype.getNameProperty = function () { return Ge.ManOwnerRow.nameProperty; };
+            ManOwnerDialog.prototype.getService = function () { return Ge.ManOwnerService.baseUrl; };
+            return ManOwnerDialog;
+        }(Serenity.EntityDialog));
+        ManOwnerDialog = __decorate([
+            Serenity.Decorators.registerClass(),
+            Serenity.Decorators.responsive()
+        ], ManOwnerDialog);
+        Ge.ManOwnerDialog = ManOwnerDialog;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var ManOwnerGrid = (function (_super) {
+            __extends(ManOwnerGrid, _super);
+            function ManOwnerGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            ManOwnerGrid.prototype.getColumnsKey = function () { return 'Ge.ManOwner'; };
+            ManOwnerGrid.prototype.getDialogType = function () { return Ge.ManOwnerDialog; };
+            ManOwnerGrid.prototype.getIdProperty = function () { return Ge.ManOwnerRow.idProperty; };
+            ManOwnerGrid.prototype.getLocalTextPrefix = function () { return Ge.ManOwnerRow.localTextPrefix; };
+            ManOwnerGrid.prototype.getService = function () { return Ge.ManOwnerService.baseUrl; };
+            return ManOwnerGrid;
+        }(Serenity.EntityGrid));
+        ManOwnerGrid = __decorate([
+            Serenity.Decorators.registerClass()
+        ], ManOwnerGrid);
+        Ge.ManOwnerGrid = ManOwnerGrid;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var ManPersonDialog = (function (_super) {
+            __extends(ManPersonDialog, _super);
+            function ManPersonDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new Ge.ManPersonForm(_this.idPrefix);
+                return _this;
+            }
+            ManPersonDialog.prototype.getFormKey = function () { return Ge.ManPersonForm.formKey; };
+            ManPersonDialog.prototype.getIdProperty = function () { return Ge.ManPersonRow.idProperty; };
+            ManPersonDialog.prototype.getLocalTextPrefix = function () { return Ge.ManPersonRow.localTextPrefix; };
+            ManPersonDialog.prototype.getNameProperty = function () { return Ge.ManPersonRow.nameProperty; };
+            ManPersonDialog.prototype.getService = function () { return Ge.ManPersonService.baseUrl; };
+            return ManPersonDialog;
+        }(Serenity.EntityDialog));
+        ManPersonDialog = __decorate([
+            Serenity.Decorators.registerClass(),
+            Serenity.Decorators.responsive()
+        ], ManPersonDialog);
+        Ge.ManPersonDialog = ManPersonDialog;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var ManPersonGrid = (function (_super) {
+            __extends(ManPersonGrid, _super);
+            function ManPersonGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            ManPersonGrid.prototype.getColumnsKey = function () { return 'Ge.ManPerson'; };
+            ManPersonGrid.prototype.getDialogType = function () { return Ge.ManPersonDialog; };
+            ManPersonGrid.prototype.getIdProperty = function () { return Ge.ManPersonRow.idProperty; };
+            ManPersonGrid.prototype.getLocalTextPrefix = function () { return Ge.ManPersonRow.localTextPrefix; };
+            ManPersonGrid.prototype.getService = function () { return Ge.ManPersonService.baseUrl; };
+            return ManPersonGrid;
+        }(Serenity.EntityGrid));
+        ManPersonGrid = __decorate([
+            Serenity.Decorators.registerClass()
+        ], ManPersonGrid);
+        Ge.ManPersonGrid = ManPersonGrid;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
         var SetCityDialog = (function (_super) {
             __extends(SetCityDialog, _super);
             function SetCityDialog() {
@@ -4624,476 +5130,6 @@ var GestionEquestre;
             Serenity.Decorators.registerClass()
         ], SetUelnorgaGrid);
         Ge.SetUelnorgaGrid = SetUelnorgaGrid;
-    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
-})(GestionEquestre || (GestionEquestre = {}));
-var GestionEquestre;
-(function (GestionEquestre) {
-    var Ge;
-    (function (Ge) {
-        var CorCorporateDialog = (function (_super) {
-            __extends(CorCorporateDialog, _super);
-            function CorCorporateDialog() {
-                var _this = _super !== null && _super.apply(this, arguments) || this;
-                _this.form = new Ge.CorCorporateForm(_this.idPrefix);
-                return _this;
-            }
-            CorCorporateDialog.prototype.getFormKey = function () { return Ge.CorCorporateForm.formKey; };
-            CorCorporateDialog.prototype.getIdProperty = function () { return Ge.CorCorporateRow.idProperty; };
-            CorCorporateDialog.prototype.getLocalTextPrefix = function () { return Ge.CorCorporateRow.localTextPrefix; };
-            CorCorporateDialog.prototype.getNameProperty = function () { return Ge.CorCorporateRow.nameProperty; };
-            CorCorporateDialog.prototype.getService = function () { return Ge.CorCorporateService.baseUrl; };
-            return CorCorporateDialog;
-        }(Serenity.EntityDialog));
-        CorCorporateDialog = __decorate([
-            Serenity.Decorators.registerClass(),
-            Serenity.Decorators.responsive()
-        ], CorCorporateDialog);
-        Ge.CorCorporateDialog = CorCorporateDialog;
-    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
-})(GestionEquestre || (GestionEquestre = {}));
-var GestionEquestre;
-(function (GestionEquestre) {
-    var Ge;
-    (function (Ge) {
-        var CorCorporateGrid = (function (_super) {
-            __extends(CorCorporateGrid, _super);
-            function CorCorporateGrid(container) {
-                return _super.call(this, container) || this;
-            }
-            CorCorporateGrid.prototype.getColumnsKey = function () { return 'Ge.CorCorporate'; };
-            CorCorporateGrid.prototype.getDialogType = function () { return Ge.CorCorporateDialog; };
-            CorCorporateGrid.prototype.getIdProperty = function () { return Ge.CorCorporateRow.idProperty; };
-            CorCorporateGrid.prototype.getLocalTextPrefix = function () { return Ge.CorCorporateRow.localTextPrefix; };
-            CorCorporateGrid.prototype.getService = function () { return Ge.CorCorporateService.baseUrl; };
-            return CorCorporateGrid;
-        }(Serenity.EntityGrid));
-        CorCorporateGrid = __decorate([
-            Serenity.Decorators.registerClass()
-        ], CorCorporateGrid);
-        Ge.CorCorporateGrid = CorCorporateGrid;
-    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
-})(GestionEquestre || (GestionEquestre = {}));
-var GestionEquestre;
-(function (GestionEquestre) {
-    var Ge;
-    (function (Ge) {
-        var LinkFolderCavalierDialog = (function (_super) {
-            __extends(LinkFolderCavalierDialog, _super);
-            function LinkFolderCavalierDialog() {
-                var _this = _super !== null && _super.apply(this, arguments) || this;
-                _this.form = new Ge.LinkFolderCavalierForm(_this.idPrefix);
-                return _this;
-            }
-            LinkFolderCavalierDialog.prototype.getFormKey = function () { return Ge.LinkFolderCavalierForm.formKey; };
-            LinkFolderCavalierDialog.prototype.getIdProperty = function () { return Ge.LinkFolderCavalierRow.idProperty; };
-            LinkFolderCavalierDialog.prototype.getLocalTextPrefix = function () { return Ge.LinkFolderCavalierRow.localTextPrefix; };
-            LinkFolderCavalierDialog.prototype.getNameProperty = function () { return Ge.LinkFolderCavalierRow.nameProperty; };
-            LinkFolderCavalierDialog.prototype.getService = function () { return Ge.LinkFolderCavalierService.baseUrl; };
-            return LinkFolderCavalierDialog;
-        }(Serenity.EntityDialog));
-        LinkFolderCavalierDialog = __decorate([
-            Serenity.Decorators.registerClass(),
-            Serenity.Decorators.responsive()
-        ], LinkFolderCavalierDialog);
-        Ge.LinkFolderCavalierDialog = LinkFolderCavalierDialog;
-    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
-})(GestionEquestre || (GestionEquestre = {}));
-var GestionEquestre;
-(function (GestionEquestre) {
-    var Ge;
-    (function (Ge) {
-        var LinkFolderCavalierGrid = (function (_super) {
-            __extends(LinkFolderCavalierGrid, _super);
-            function LinkFolderCavalierGrid(container) {
-                return _super.call(this, container) || this;
-            }
-            LinkFolderCavalierGrid.prototype.getColumnsKey = function () { return 'Ge.LinkFolderCavalier'; };
-            LinkFolderCavalierGrid.prototype.getDialogType = function () { return Ge.LinkFolderCavalierDialog; };
-            LinkFolderCavalierGrid.prototype.getIdProperty = function () { return Ge.LinkFolderCavalierRow.idProperty; };
-            LinkFolderCavalierGrid.prototype.getLocalTextPrefix = function () { return Ge.LinkFolderCavalierRow.localTextPrefix; };
-            LinkFolderCavalierGrid.prototype.getService = function () { return Ge.LinkFolderCavalierService.baseUrl; };
-            return LinkFolderCavalierGrid;
-        }(Serenity.EntityGrid));
-        LinkFolderCavalierGrid = __decorate([
-            Serenity.Decorators.registerClass()
-        ], LinkFolderCavalierGrid);
-        Ge.LinkFolderCavalierGrid = LinkFolderCavalierGrid;
-    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
-})(GestionEquestre || (GestionEquestre = {}));
-var GestionEquestre;
-(function (GestionEquestre) {
-    var Ge;
-    (function (Ge) {
-        var LinkFolderHorseDialog = (function (_super) {
-            __extends(LinkFolderHorseDialog, _super);
-            function LinkFolderHorseDialog() {
-                var _this = _super !== null && _super.apply(this, arguments) || this;
-                _this.form = new Ge.LinkFolderHorseForm(_this.idPrefix);
-                return _this;
-            }
-            LinkFolderHorseDialog.prototype.getFormKey = function () { return Ge.LinkFolderHorseForm.formKey; };
-            LinkFolderHorseDialog.prototype.getIdProperty = function () { return Ge.LinkFolderHorseRow.idProperty; };
-            LinkFolderHorseDialog.prototype.getLocalTextPrefix = function () { return Ge.LinkFolderHorseRow.localTextPrefix; };
-            LinkFolderHorseDialog.prototype.getNameProperty = function () { return Ge.LinkFolderHorseRow.nameProperty; };
-            LinkFolderHorseDialog.prototype.getService = function () { return Ge.LinkFolderHorseService.baseUrl; };
-            return LinkFolderHorseDialog;
-        }(Serenity.EntityDialog));
-        LinkFolderHorseDialog = __decorate([
-            Serenity.Decorators.registerClass(),
-            Serenity.Decorators.responsive()
-        ], LinkFolderHorseDialog);
-        Ge.LinkFolderHorseDialog = LinkFolderHorseDialog;
-    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
-})(GestionEquestre || (GestionEquestre = {}));
-var GestionEquestre;
-(function (GestionEquestre) {
-    var Ge;
-    (function (Ge) {
-        var LinkFolderHorseGrid = (function (_super) {
-            __extends(LinkFolderHorseGrid, _super);
-            function LinkFolderHorseGrid(container) {
-                return _super.call(this, container) || this;
-            }
-            LinkFolderHorseGrid.prototype.getColumnsKey = function () { return 'Ge.LinkFolderHorse'; };
-            LinkFolderHorseGrid.prototype.getDialogType = function () { return Ge.LinkFolderHorseDialog; };
-            LinkFolderHorseGrid.prototype.getIdProperty = function () { return Ge.LinkFolderHorseRow.idProperty; };
-            LinkFolderHorseGrid.prototype.getLocalTextPrefix = function () { return Ge.LinkFolderHorseRow.localTextPrefix; };
-            LinkFolderHorseGrid.prototype.getService = function () { return Ge.LinkFolderHorseService.baseUrl; };
-            return LinkFolderHorseGrid;
-        }(Serenity.EntityGrid));
-        LinkFolderHorseGrid = __decorate([
-            Serenity.Decorators.registerClass()
-        ], LinkFolderHorseGrid);
-        Ge.LinkFolderHorseGrid = LinkFolderHorseGrid;
-    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
-})(GestionEquestre || (GestionEquestre = {}));
-var GestionEquestre;
-(function (GestionEquestre) {
-    var Ge;
-    (function (Ge) {
-        var LinkFolderPersonDialog = (function (_super) {
-            __extends(LinkFolderPersonDialog, _super);
-            function LinkFolderPersonDialog() {
-                var _this = _super !== null && _super.apply(this, arguments) || this;
-                _this.form = new Ge.LinkFolderPersonForm(_this.idPrefix);
-                return _this;
-            }
-            LinkFolderPersonDialog.prototype.getFormKey = function () { return Ge.LinkFolderPersonForm.formKey; };
-            LinkFolderPersonDialog.prototype.getIdProperty = function () { return Ge.LinkFolderPersonRow.idProperty; };
-            LinkFolderPersonDialog.prototype.getLocalTextPrefix = function () { return Ge.LinkFolderPersonRow.localTextPrefix; };
-            LinkFolderPersonDialog.prototype.getNameProperty = function () { return Ge.LinkFolderPersonRow.nameProperty; };
-            LinkFolderPersonDialog.prototype.getService = function () { return Ge.LinkFolderPersonService.baseUrl; };
-            return LinkFolderPersonDialog;
-        }(Serenity.EntityDialog));
-        LinkFolderPersonDialog = __decorate([
-            Serenity.Decorators.registerClass(),
-            Serenity.Decorators.responsive()
-        ], LinkFolderPersonDialog);
-        Ge.LinkFolderPersonDialog = LinkFolderPersonDialog;
-    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
-})(GestionEquestre || (GestionEquestre = {}));
-var GestionEquestre;
-(function (GestionEquestre) {
-    var Ge;
-    (function (Ge) {
-        var LinkFolderPersonGrid = (function (_super) {
-            __extends(LinkFolderPersonGrid, _super);
-            function LinkFolderPersonGrid(container) {
-                return _super.call(this, container) || this;
-            }
-            LinkFolderPersonGrid.prototype.getColumnsKey = function () { return 'Ge.LinkFolderPerson'; };
-            LinkFolderPersonGrid.prototype.getDialogType = function () { return Ge.LinkFolderPersonDialog; };
-            LinkFolderPersonGrid.prototype.getIdProperty = function () { return Ge.LinkFolderPersonRow.idProperty; };
-            LinkFolderPersonGrid.prototype.getLocalTextPrefix = function () { return Ge.LinkFolderPersonRow.localTextPrefix; };
-            LinkFolderPersonGrid.prototype.getService = function () { return Ge.LinkFolderPersonService.baseUrl; };
-            return LinkFolderPersonGrid;
-        }(Serenity.EntityGrid));
-        LinkFolderPersonGrid = __decorate([
-            Serenity.Decorators.registerClass()
-        ], LinkFolderPersonGrid);
-        Ge.LinkFolderPersonGrid = LinkFolderPersonGrid;
-    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
-})(GestionEquestre || (GestionEquestre = {}));
-var GestionEquestre;
-(function (GestionEquestre) {
-    var Ge;
-    (function (Ge) {
-        var ManAdressDialog = (function (_super) {
-            __extends(ManAdressDialog, _super);
-            function ManAdressDialog() {
-                var _this = _super !== null && _super.apply(this, arguments) || this;
-                _this.form = new Ge.ManAdressForm(_this.idPrefix);
-                return _this;
-            }
-            ManAdressDialog.prototype.getFormKey = function () { return Ge.ManAdressForm.formKey; };
-            ManAdressDialog.prototype.getIdProperty = function () { return Ge.ManAdressRow.idProperty; };
-            ManAdressDialog.prototype.getLocalTextPrefix = function () { return Ge.ManAdressRow.localTextPrefix; };
-            ManAdressDialog.prototype.getNameProperty = function () { return Ge.ManAdressRow.nameProperty; };
-            ManAdressDialog.prototype.getService = function () { return Ge.ManAdressService.baseUrl; };
-            return ManAdressDialog;
-        }(Serenity.EntityDialog));
-        ManAdressDialog = __decorate([
-            Serenity.Decorators.registerClass(),
-            Serenity.Decorators.responsive()
-        ], ManAdressDialog);
-        Ge.ManAdressDialog = ManAdressDialog;
-    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
-})(GestionEquestre || (GestionEquestre = {}));
-var GestionEquestre;
-(function (GestionEquestre) {
-    var Ge;
-    (function (Ge) {
-        var ManAdressGrid = (function (_super) {
-            __extends(ManAdressGrid, _super);
-            function ManAdressGrid(container) {
-                return _super.call(this, container) || this;
-            }
-            ManAdressGrid.prototype.getColumnsKey = function () { return 'Ge.ManAdress'; };
-            ManAdressGrid.prototype.getDialogType = function () { return Ge.ManAdressDialog; };
-            ManAdressGrid.prototype.getIdProperty = function () { return Ge.ManAdressRow.idProperty; };
-            ManAdressGrid.prototype.getLocalTextPrefix = function () { return Ge.ManAdressRow.localTextPrefix; };
-            ManAdressGrid.prototype.getService = function () { return Ge.ManAdressService.baseUrl; };
-            return ManAdressGrid;
-        }(Serenity.EntityGrid));
-        ManAdressGrid = __decorate([
-            Serenity.Decorators.registerClass()
-        ], ManAdressGrid);
-        Ge.ManAdressGrid = ManAdressGrid;
-    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
-})(GestionEquestre || (GestionEquestre = {}));
-var GestionEquestre;
-(function (GestionEquestre) {
-    var Ge;
-    (function (Ge) {
-        var ManCavaliersDialog = (function (_super) {
-            __extends(ManCavaliersDialog, _super);
-            function ManCavaliersDialog() {
-                var _this = _super !== null && _super.apply(this, arguments) || this;
-                _this.form = new Ge.ManCavaliersForm(_this.idPrefix);
-                return _this;
-            }
-            ManCavaliersDialog.prototype.getFormKey = function () { return Ge.ManCavaliersForm.formKey; };
-            ManCavaliersDialog.prototype.getIdProperty = function () { return Ge.ManCavaliersRow.idProperty; };
-            ManCavaliersDialog.prototype.getLocalTextPrefix = function () { return Ge.ManCavaliersRow.localTextPrefix; };
-            ManCavaliersDialog.prototype.getNameProperty = function () { return Ge.ManCavaliersRow.nameProperty; };
-            ManCavaliersDialog.prototype.getService = function () { return Ge.ManCavaliersService.baseUrl; };
-            return ManCavaliersDialog;
-        }(Serenity.EntityDialog));
-        ManCavaliersDialog = __decorate([
-            Serenity.Decorators.registerClass(),
-            Serenity.Decorators.responsive()
-        ], ManCavaliersDialog);
-        Ge.ManCavaliersDialog = ManCavaliersDialog;
-    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
-})(GestionEquestre || (GestionEquestre = {}));
-var GestionEquestre;
-(function (GestionEquestre) {
-    var Ge;
-    (function (Ge) {
-        var ManCavaliersGrid = (function (_super) {
-            __extends(ManCavaliersGrid, _super);
-            function ManCavaliersGrid(container) {
-                return _super.call(this, container) || this;
-            }
-            ManCavaliersGrid.prototype.getColumnsKey = function () { return 'Ge.ManCavaliers'; };
-            ManCavaliersGrid.prototype.getDialogType = function () { return Ge.ManCavaliersDialog; };
-            ManCavaliersGrid.prototype.getIdProperty = function () { return Ge.ManCavaliersRow.idProperty; };
-            ManCavaliersGrid.prototype.getLocalTextPrefix = function () { return Ge.ManCavaliersRow.localTextPrefix; };
-            ManCavaliersGrid.prototype.getService = function () { return Ge.ManCavaliersService.baseUrl; };
-            return ManCavaliersGrid;
-        }(Serenity.EntityGrid));
-        ManCavaliersGrid = __decorate([
-            Serenity.Decorators.registerClass()
-        ], ManCavaliersGrid);
-        Ge.ManCavaliersGrid = ManCavaliersGrid;
-    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
-})(GestionEquestre || (GestionEquestre = {}));
-var GestionEquestre;
-(function (GestionEquestre) {
-    var Ge;
-    (function (Ge) {
-        var ManHorsesDialog = (function (_super) {
-            __extends(ManHorsesDialog, _super);
-            function ManHorsesDialog() {
-                var _this = _super !== null && _super.apply(this, arguments) || this;
-                _this.form = new Ge.ManHorsesForm(_this.idPrefix);
-                return _this;
-            }
-            ManHorsesDialog.prototype.getFormKey = function () { return Ge.ManHorsesForm.formKey; };
-            ManHorsesDialog.prototype.getIdProperty = function () { return Ge.ManHorsesRow.idProperty; };
-            ManHorsesDialog.prototype.getLocalTextPrefix = function () { return Ge.ManHorsesRow.localTextPrefix; };
-            ManHorsesDialog.prototype.getNameProperty = function () { return Ge.ManHorsesRow.nameProperty; };
-            ManHorsesDialog.prototype.getService = function () { return Ge.ManHorsesService.baseUrl; };
-            return ManHorsesDialog;
-        }(Serenity.EntityDialog));
-        ManHorsesDialog = __decorate([
-            Serenity.Decorators.registerClass(),
-            Serenity.Decorators.responsive()
-        ], ManHorsesDialog);
-        Ge.ManHorsesDialog = ManHorsesDialog;
-    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
-})(GestionEquestre || (GestionEquestre = {}));
-var GestionEquestre;
-(function (GestionEquestre) {
-    var Ge;
-    (function (Ge) {
-        var ManHorsesGrid = (function (_super) {
-            __extends(ManHorsesGrid, _super);
-            function ManHorsesGrid(container) {
-                return _super.call(this, container) || this;
-            }
-            ManHorsesGrid.prototype.getColumnsKey = function () { return 'Ge.ManHorses'; };
-            ManHorsesGrid.prototype.getDialogType = function () { return Ge.ManHorsesDialog; };
-            ManHorsesGrid.prototype.getIdProperty = function () { return Ge.ManHorsesRow.idProperty; };
-            ManHorsesGrid.prototype.getLocalTextPrefix = function () { return Ge.ManHorsesRow.localTextPrefix; };
-            ManHorsesGrid.prototype.getService = function () { return Ge.ManHorsesService.baseUrl; };
-            return ManHorsesGrid;
-        }(Serenity.EntityGrid));
-        ManHorsesGrid = __decorate([
-            Serenity.Decorators.registerClass()
-        ], ManHorsesGrid);
-        Ge.ManHorsesGrid = ManHorsesGrid;
-    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
-})(GestionEquestre || (GestionEquestre = {}));
-var GestionEquestre;
-(function (GestionEquestre) {
-    var Ge;
-    (function (Ge) {
-        var ManOwnerDialog = (function (_super) {
-            __extends(ManOwnerDialog, _super);
-            function ManOwnerDialog() {
-                var _this = _super !== null && _super.apply(this, arguments) || this;
-                _this.form = new Ge.ManOwnerForm(_this.idPrefix);
-                return _this;
-            }
-            ManOwnerDialog.prototype.getFormKey = function () { return Ge.ManOwnerForm.formKey; };
-            ManOwnerDialog.prototype.getIdProperty = function () { return Ge.ManOwnerRow.idProperty; };
-            ManOwnerDialog.prototype.getLocalTextPrefix = function () { return Ge.ManOwnerRow.localTextPrefix; };
-            ManOwnerDialog.prototype.getNameProperty = function () { return Ge.ManOwnerRow.nameProperty; };
-            ManOwnerDialog.prototype.getService = function () { return Ge.ManOwnerService.baseUrl; };
-            return ManOwnerDialog;
-        }(Serenity.EntityDialog));
-        ManOwnerDialog = __decorate([
-            Serenity.Decorators.registerClass(),
-            Serenity.Decorators.responsive()
-        ], ManOwnerDialog);
-        Ge.ManOwnerDialog = ManOwnerDialog;
-    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
-})(GestionEquestre || (GestionEquestre = {}));
-var GestionEquestre;
-(function (GestionEquestre) {
-    var Ge;
-    (function (Ge) {
-        var ManOwnerGrid = (function (_super) {
-            __extends(ManOwnerGrid, _super);
-            function ManOwnerGrid(container) {
-                return _super.call(this, container) || this;
-            }
-            ManOwnerGrid.prototype.getColumnsKey = function () { return 'Ge.ManOwner'; };
-            ManOwnerGrid.prototype.getDialogType = function () { return Ge.ManOwnerDialog; };
-            ManOwnerGrid.prototype.getIdProperty = function () { return Ge.ManOwnerRow.idProperty; };
-            ManOwnerGrid.prototype.getLocalTextPrefix = function () { return Ge.ManOwnerRow.localTextPrefix; };
-            ManOwnerGrid.prototype.getService = function () { return Ge.ManOwnerService.baseUrl; };
-            return ManOwnerGrid;
-        }(Serenity.EntityGrid));
-        ManOwnerGrid = __decorate([
-            Serenity.Decorators.registerClass()
-        ], ManOwnerGrid);
-        Ge.ManOwnerGrid = ManOwnerGrid;
-    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
-})(GestionEquestre || (GestionEquestre = {}));
-var GestionEquestre;
-(function (GestionEquestre) {
-    var Ge;
-    (function (Ge) {
-        var ManPersonDialog = (function (_super) {
-            __extends(ManPersonDialog, _super);
-            function ManPersonDialog() {
-                var _this = _super !== null && _super.apply(this, arguments) || this;
-                _this.form = new Ge.ManPersonForm(_this.idPrefix);
-                return _this;
-            }
-            ManPersonDialog.prototype.getFormKey = function () { return Ge.ManPersonForm.formKey; };
-            ManPersonDialog.prototype.getIdProperty = function () { return Ge.ManPersonRow.idProperty; };
-            ManPersonDialog.prototype.getLocalTextPrefix = function () { return Ge.ManPersonRow.localTextPrefix; };
-            ManPersonDialog.prototype.getNameProperty = function () { return Ge.ManPersonRow.nameProperty; };
-            ManPersonDialog.prototype.getService = function () { return Ge.ManPersonService.baseUrl; };
-            return ManPersonDialog;
-        }(Serenity.EntityDialog));
-        ManPersonDialog = __decorate([
-            Serenity.Decorators.registerClass(),
-            Serenity.Decorators.responsive()
-        ], ManPersonDialog);
-        Ge.ManPersonDialog = ManPersonDialog;
-    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
-})(GestionEquestre || (GestionEquestre = {}));
-var GestionEquestre;
-(function (GestionEquestre) {
-    var Ge;
-    (function (Ge) {
-        var ManPersonGrid = (function (_super) {
-            __extends(ManPersonGrid, _super);
-            function ManPersonGrid(container) {
-                return _super.call(this, container) || this;
-            }
-            ManPersonGrid.prototype.getColumnsKey = function () { return 'Ge.ManPerson'; };
-            ManPersonGrid.prototype.getDialogType = function () { return Ge.ManPersonDialog; };
-            ManPersonGrid.prototype.getIdProperty = function () { return Ge.ManPersonRow.idProperty; };
-            ManPersonGrid.prototype.getLocalTextPrefix = function () { return Ge.ManPersonRow.localTextPrefix; };
-            ManPersonGrid.prototype.getService = function () { return Ge.ManPersonService.baseUrl; };
-            return ManPersonGrid;
-        }(Serenity.EntityGrid));
-        ManPersonGrid = __decorate([
-            Serenity.Decorators.registerClass()
-        ], ManPersonGrid);
-        Ge.ManPersonGrid = ManPersonGrid;
-    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
-})(GestionEquestre || (GestionEquestre = {}));
-var GestionEquestre;
-(function (GestionEquestre) {
-    var Ge;
-    (function (Ge) {
-        var ManFolderDialog = (function (_super) {
-            __extends(ManFolderDialog, _super);
-            function ManFolderDialog() {
-                var _this = _super !== null && _super.apply(this, arguments) || this;
-                _this.form = new Ge.ManFolderForm(_this.idPrefix);
-                return _this;
-            }
-            ManFolderDialog.prototype.getFormKey = function () { return Ge.ManFolderForm.formKey; };
-            ManFolderDialog.prototype.getIdProperty = function () { return Ge.ManFolderRow.idProperty; };
-            ManFolderDialog.prototype.getLocalTextPrefix = function () { return Ge.ManFolderRow.localTextPrefix; };
-            ManFolderDialog.prototype.getNameProperty = function () { return Ge.ManFolderRow.nameProperty; };
-            ManFolderDialog.prototype.getService = function () { return Ge.ManFolderService.baseUrl; };
-            return ManFolderDialog;
-        }(Serenity.EntityDialog));
-        ManFolderDialog = __decorate([
-            Serenity.Decorators.registerClass(),
-            Serenity.Decorators.responsive()
-        ], ManFolderDialog);
-        Ge.ManFolderDialog = ManFolderDialog;
-    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
-})(GestionEquestre || (GestionEquestre = {}));
-var GestionEquestre;
-(function (GestionEquestre) {
-    var Ge;
-    (function (Ge) {
-        var ManFolderGrid = (function (_super) {
-            __extends(ManFolderGrid, _super);
-            function ManFolderGrid(container) {
-                return _super.call(this, container) || this;
-            }
-            ManFolderGrid.prototype.getColumnsKey = function () { return 'Ge.ManFolder'; };
-            ManFolderGrid.prototype.getDialogType = function () { return Ge.ManFolderDialog; };
-            ManFolderGrid.prototype.getIdProperty = function () { return Ge.ManFolderRow.idProperty; };
-            ManFolderGrid.prototype.getLocalTextPrefix = function () { return Ge.ManFolderRow.localTextPrefix; };
-            ManFolderGrid.prototype.getService = function () { return Ge.ManFolderService.baseUrl; };
-            return ManFolderGrid;
-        }(Serenity.EntityGrid));
-        ManFolderGrid = __decorate([
-            Serenity.Decorators.registerClass()
-        ], ManFolderGrid);
-        Ge.ManFolderGrid = ManFolderGrid;
     })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
 })(GestionEquestre || (GestionEquestre = {}));
 var GestionEquestre;

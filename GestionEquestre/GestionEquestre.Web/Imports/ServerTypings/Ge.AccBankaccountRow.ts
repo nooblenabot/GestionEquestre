@@ -1,6 +1,6 @@
 ﻿namespace GestionEquestre.Ge {
     export interface AccBankaccountRow {
-        Id?: string;
+        Id?: number;
         CountryCodeIban?: string;
         CheckDigitsIban?: string;
         Bban?: string;

@@ -11,6 +11,8 @@ namespace GestionEquestre.Ge {
 
         constructor(container: JQuery) {
             super(container);
+
         }
+
     }
 }

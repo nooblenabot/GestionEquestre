@@ -13,6 +13,9 @@ namespace GestionEquestre.Ge.Forms
     [BasedOnRow(typeof(Entities.ManFolderRow))]
     public class ManFolderForm
     {
+        [Tab("Info")]
+        [ReadOnly(true),Insertable(false)]
+        public Int64 Id { get; set; }
         public Boolean IsActive { get; set; }
         public Boolean NotArchive { get; set; }
         public DateTime InsertDate { get; set; }
@@ -31,5 +34,10 @@ namespace GestionEquestre.Ge.Forms
         public DateTime CloseDate { get; set; }
         public Int32 Establishment { get; set; }
         public String Comment { get; set; }
+
+        [Tab("Shipping")]
+        [Category("Info")]
+        [LinkFolderHorseEditor]
+        public List<Entities.LinkFolderHorseRow> Horses { get; set; }
     }
 }

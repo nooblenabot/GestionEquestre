@@ -1,3 +1,22 @@
 {
-  "Authorization.AccessDenied": "non auto"
+  "Authorization.AccessDenied": "non auto",
+  "Controls.ColumnPickerDialog.HiddenColumns": "Collones masquees",
+  "Controls.ColumnPickerDialog.HideHint": "masquer",
+  "Controls.ColumnPickerDialog.ShowHint": "afficher",
+  "Controls.Pager.PageStatus": "afficher {from} a {to} sur {total} total",
+  "Controls.PropertyGrid.RequiredHint": "ce champ est requis",
+  "Navigation.Administration": "Administration",
+  "Navigation.Administration/Languages": "Langues",
+  "Navigation.Administration/Roles": "Roles",
+  "Navigation.Administration/Translations": "Traductions",
+  "Navigation.Administration/User Management": "Utilisateurs",
+  "Navigation.Folders": "Dossiers",
+  "Navigation.LogoutLink": "Quitter",
+  "Navigation.Management": "Gestion",
+  "Navigation.Management/Adress": "Adresses",
+  "Navigation.Management/Cavaliers": "Cavaliers",
+  "Navigation.Management/Horses": "Chevaux",
+  "Navigation.Management/Owner": "Proprietaires",
+  "Navigation.Management/Person": "Personnes",
+  "Navigation.Settings": "Parametres"
 }

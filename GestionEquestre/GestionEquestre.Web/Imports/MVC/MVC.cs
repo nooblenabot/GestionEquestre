@@ -54,14 +54,19 @@ namespace MVC
                 public const string AccBankaccountIndex = "~/Modules/Ge/AccBankaccount/AccBankaccountIndex.cshtml";
             }
 
+            public static class CorCorporate
+            {
+                public const string CorCorporateIndex = "~/Modules/Ge/CorCorporate/CorCorporateIndex.cshtml";
+            }
+
+            public static class Folder
+            {
+                public const string ManFolderIndex = "~/Modules/Ge/Folder/ManFolderIndex.cshtml";
+            }
+
             public static class LinkFolderCavalier
             {
                 public const string LinkFolderCavalierIndex = "~/Modules/Ge/LinkFolderCavalier/LinkFolderCavalierIndex.cshtml";
-            }
-
-            public static class LinkFolderHorse
-            {
-                public const string LinkFolderHorseIndex = "~/Modules/Ge/LinkFolderHorse/LinkFolderHorseIndex.cshtml";
             }
 
             public static class LinkFolderPerson
@@ -69,69 +74,74 @@ namespace MVC
                 public const string LinkFolderPersonIndex = "~/Modules/Ge/LinkFolderPerson/LinkFolderPersonIndex.cshtml";
             }
 
-            public static class ManAdress
+            public static class Management
             {
-                public const string ManAdressIndex = "~/Modules/Ge/ManAdress/ManAdressIndex.cshtml";
+                public static class Adress
+                {
+                    public const string ManAdressIndex = "~/Modules/Ge/Management/Adress/ManAdressIndex.cshtml";
+                }
+
+                public static class Cavaliers
+                {
+                    public const string ManCavaliersIndex = "~/Modules/Ge/Management/Cavaliers/ManCavaliersIndex.cshtml";
+                }
+
+                public static class Horses
+                {
+                    public const string ManHorsesIndex = "~/Modules/Ge/Management/Horses/ManHorsesIndex.cshtml";
+                }
+
+                public static class Owner
+                {
+                    public const string ManOwnerIndex = "~/Modules/Ge/Management/Owner/ManOwnerIndex.cshtml";
+                }
+
+                public static class Person
+                {
+                    public const string ManPersonIndex = "~/Modules/Ge/Management/Person/ManPersonIndex.cshtml";
+                }
+
             }
 
-            public static class ManCavaliers
+            public static class Settings
             {
-                public const string ManCavaliersIndex = "~/Modules/Ge/ManCavaliers/ManCavaliersIndex.cshtml";
-            }
+                public static class GlobalsSettings
+                {
+                    public static class City
+                    {
+                        public const string SetCityIndex = "~/Modules/Ge/Settings/GlobalsSettings/City/SetCityIndex.cshtml";
+                    }
 
-            public static class ManFolder
-            {
-                public const string ManFolderIndex = "~/Modules/Ge/ManFolder/ManFolderIndex.cshtml";
-            }
+                    public static class Country
+                    {
+                        public const string SetCountryIndex = "~/Modules/Ge/Settings/GlobalsSettings/Country/SetCountryIndex.cshtml";
+                    }
 
-            public static class ManHorses
-            {
-                public const string ManHorsesIndex = "~/Modules/Ge/ManHorses/ManHorsesIndex.cshtml";
-            }
+                    public static class Galop
+                    {
+                        public const string SetGalopIndex = "~/Modules/Ge/Settings/GlobalsSettings/Galop/SetGalopIndex.cshtml";
+                    }
 
-            public static class ManOwner
-            {
-                public const string ManOwnerIndex = "~/Modules/Ge/ManOwner/ManOwnerIndex.cshtml";
-            }
+                    public static class Lfc
+                    {
+                        public const string SetLfcIndex = "~/Modules/Ge/Settings/GlobalsSettings/Lfc/SetLfcIndex.cshtml";
+                    }
 
-            public static class ManPerson
-            {
-                public const string ManPersonIndex = "~/Modules/Ge/ManPerson/ManPersonIndex.cshtml";
-            }
+                    public static class Maritalstatus
+                    {
+                        public const string SetMaritalstatusIndex = "~/Modules/Ge/Settings/GlobalsSettings/Maritalstatus/SetMaritalstatusIndex.cshtml";
+                    }
 
-            public static class SetCity
-            {
-                public const string SetCityIndex = "~/Modules/Ge/SetCity/SetCityIndex.cshtml";
-            }
+                    public static class Sexe
+                    {
+                        public const string SetSexeIndex = "~/Modules/Ge/Settings/GlobalsSettings/Sexe/SetSexeIndex.cshtml";
+                    }
 
-            public static class SetCountry
-            {
-                public const string SetCountryIndex = "~/Modules/Ge/SetCountry/SetCountryIndex.cshtml";
-            }
-
-            public static class SetGalop
-            {
-                public const string SetGalopIndex = "~/Modules/Ge/SetGalop/SetGalopIndex.cshtml";
-            }
-
-            public static class SetLfc
-            {
-                public const string SetLfcIndex = "~/Modules/Ge/SetLfc/SetLfcIndex.cshtml";
-            }
-
-            public static class SetMaritalstatus
-            {
-                public const string SetMaritalstatusIndex = "~/Modules/Ge/SetMaritalstatus/SetMaritalstatusIndex.cshtml";
-            }
-
-            public static class SetSexe
-            {
-                public const string SetSexeIndex = "~/Modules/Ge/SetSexe/SetSexeIndex.cshtml";
-            }
-
-            public static class SetUelnorga
-            {
-                public const string SetUelnorgaIndex = "~/Modules/Ge/SetUelnorga/SetUelnorgaIndex.cshtml";
+                    public static class Uelnorga
+                    {
+                        public const string SetUelnorgaIndex = "~/Modules/Ge/Settings/GlobalsSettings/Uelnorga/SetUelnorgaIndex.cshtml";
+                    }
+                }
             }
 
         }

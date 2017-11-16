@@ -12,7 +12,9 @@
         alpha3?: string;
         alpha2?: string;
         CodeUe?: number;
-        ISOcode?: number;
+        ISOcode?: string;
+        InsertUsername?: string;
+        UpdateUsername?: string;
     }
 
     export namespace SetCountryRow {
@@ -39,6 +41,8 @@
             export declare const alpha2: string;
             export declare const CodeUe: string;
             export declare const ISOcode: string;
+            export declare const InsertUsername: string;
+            export declare const UpdateUsername: string;
         }
 
         [
@@ -54,7 +58,9 @@
             'alpha3', 
             'alpha2', 
             'CodeUe', 
-            'ISOcode'
+            'ISOcode', 
+            'InsertUsername', 
+            'UpdateUsername'
         ].forEach(x => (<any>Fields)[x] = x);
     }
 }

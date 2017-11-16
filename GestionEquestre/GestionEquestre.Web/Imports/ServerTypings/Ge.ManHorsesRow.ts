@@ -4,8 +4,8 @@
         Sire?: string;
         CleSire?: string;
         Hnin?: string;
-        BirthCountry?: number;
-        BirthOrganization?: string;
+        BirthCountry?: string;
+        BirthOrganization?: number;
         Name?: string;
         IsActive?: boolean;
         NotArchive?: boolean;
@@ -21,6 +21,8 @@
         FinalExit?: string;
         Description?: string;
         ArchiveDate?: string;
+        InsertUsername?: string;
+        UpdateUsername?: string;
         BirthCountryDefaultValue?: boolean;
         BirthCountryIsActive?: boolean;
         BirthCountryInsertDate?: string;
@@ -29,7 +31,7 @@
         BirthCountryUpdateUserId?: number;
         BirthCountryName_FR_fr?: string;
         BirthCountryalpha3?: string;
-        BirthCountryISOcode?: number;
+        BirthCountryISOcode?: string;
         BirthOrganizationDefaultValue?: boolean;
         BirthOrganizationIsActive?: boolean;
         BirthOrganizationInsertDate?: string;
@@ -37,7 +39,7 @@
         BirthOrganizationUpdateDate?: string;
         BirthOrganizationUpdateUserId?: number;
         BirthOrganizationOrganization?: string;
-        BirthOrganizationUelnOrganization?: string;
+        BirthOrganizationUelnCode?: string;
         SexeDefaultValue?: boolean;
         SexeIsActive?: boolean;
         SexeInsertDate?: string;
@@ -52,6 +54,11 @@
         export const idProperty = 'Ueln';
         export const nameProperty = 'Ueln';
         export const localTextPrefix = 'Ge.ManHorses';
+        export const lookupKey = 'Ge.Horses';
+
+        export function getLookup(): Q.Lookup<ManHorsesRow> {
+            return Q.getLookup<ManHorsesRow>('Ge.Horses');
+        }
 
         export namespace Fields {
             export declare const Ueln: string;
@@ -75,6 +82,8 @@
             export declare const FinalExit: string;
             export declare const Description: string;
             export declare const ArchiveDate: string;
+            export declare const InsertUsername: string;
+            export declare const UpdateUsername: string;
             export declare const BirthCountryDefaultValue: string;
             export declare const BirthCountryIsActive: string;
             export declare const BirthCountryInsertDate: string;
@@ -91,7 +100,7 @@
             export declare const BirthOrganizationUpdateDate: string;
             export declare const BirthOrganizationUpdateUserId: string;
             export declare const BirthOrganizationOrganization: string;
-            export declare const BirthOrganizationUelnOrganization: string;
+            export declare const BirthOrganizationUelnCode: string;
             export declare const SexeDefaultValue: string;
             export declare const SexeIsActive: string;
             export declare const SexeInsertDate: string;
@@ -124,6 +133,8 @@
             'FinalExit', 
             'Description', 
             'ArchiveDate', 
+            'InsertUsername', 
+            'UpdateUsername', 
             'BirthCountryDefaultValue', 
             'BirthCountryIsActive', 
             'BirthCountryInsertDate', 
@@ -140,7 +151,7 @@
             'BirthOrganizationUpdateDate', 
             'BirthOrganizationUpdateUserId', 
             'BirthOrganizationOrganization', 
-            'BirthOrganizationUelnOrganization', 
+            'BirthOrganizationUelnCode', 
             'SexeDefaultValue', 
             'SexeIsActive', 
             'SexeInsertDate', 

@@ -5,12 +5,13 @@
     }
 
     export interface ManFolderForm {
+        Id: Serenity.StringEditor;
         IsActive: Serenity.BooleanEditor;
         NotArchive: Serenity.BooleanEditor;
         InsertDate: Serenity.DateEditor;
-        InsertUserId: Serenity.IntegerEditor;
+        InsertUsername: Serenity.StringEditor;
         UpdateDate: Serenity.DateEditor;
-        UpdateUserId: Serenity.IntegerEditor;
+        UpdateUsername: Serenity.StringEditor;
         Caption: Serenity.StringEditor;
         ArchiveDate: Serenity.DateEditor;
         Number: Serenity.IntegerEditor;
@@ -19,8 +20,9 @@
         CloseDate: Serenity.DateEditor;
         Establishment: Serenity.LookupEditor;
         Comment: Serenity.StringEditor;
+        Horses: LinkFolderHorseEditor;
     }
 
-    [['IsActive', () => Serenity.BooleanEditor], ['NotArchive', () => Serenity.BooleanEditor], ['InsertDate', () => Serenity.DateEditor], ['InsertUserId', () => Serenity.IntegerEditor], ['UpdateDate', () => Serenity.DateEditor], ['UpdateUserId', () => Serenity.IntegerEditor], ['Caption', () => Serenity.StringEditor], ['ArchiveDate', () => Serenity.DateEditor], ['Number', () => Serenity.IntegerEditor], ['CreateeDate', () => Serenity.DateEditor], ['CloseRaison', () => Serenity.StringEditor], ['CloseDate', () => Serenity.DateEditor], ['Establishment', () => Serenity.LookupEditor], ['Comment', () => Serenity.StringEditor]].forEach(x => Object.defineProperty(ManFolderForm.prototype, <string>x[0], { get: function () { return this.w(x[0], (x[1] as any)()); }, enumerable: true, configurable: true }));
+    [['Id', () => Serenity.StringEditor], ['IsActive', () => Serenity.BooleanEditor], ['NotArchive', () => Serenity.BooleanEditor], ['InsertDate', () => Serenity.DateEditor], ['InsertUsername', () => Serenity.StringEditor], ['UpdateDate', () => Serenity.DateEditor], ['UpdateUsername', () => Serenity.StringEditor], ['Caption', () => Serenity.StringEditor], ['ArchiveDate', () => Serenity.DateEditor], ['Number', () => Serenity.IntegerEditor], ['CreateeDate', () => Serenity.DateEditor], ['CloseRaison', () => Serenity.StringEditor], ['CloseDate', () => Serenity.DateEditor], ['Establishment', () => Serenity.LookupEditor], ['Comment', () => Serenity.StringEditor], ['Horses', () => LinkFolderHorseEditor]].forEach(x => Object.defineProperty(ManFolderForm.prototype, <string>x[0], { get: function () { return this.w(x[0], (x[1] as any)()); }, enumerable: true, configurable: true }));
 }
 

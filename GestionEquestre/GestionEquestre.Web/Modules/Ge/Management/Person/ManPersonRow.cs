@@ -29,14 +29,14 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.IsMorale[this] = value; }
         }
 
-        [DisplayName("Is Active"), NotNull]
+        [DisplayName("Is Active"), NotNull,HideOnInsert]
         public Boolean? IsActive
         {
             get { return Fields.IsActive[this]; }
             set { Fields.IsActive[this] = value; }
         }
 
-        [DisplayName("Not Archive"), NotNull]
+        [DisplayName("Not Archive"), NotNull,HideOnInsert]
         public Boolean? NotArchive
         {
             get { return Fields.NotArchive[this]; }
@@ -107,6 +107,7 @@ namespace GestionEquestre.Ge.Entities
         }
 
         [DisplayName("Sexe"), ForeignKey("[dbo].[SET_SEXE]", "SexeId"), LeftJoin("jSexe"), TextualField("SexeCaption")]
+        [LookupEditor(typeof(Ge.Scripts.SexePersonLookup), MinimumResultsForSearch = 1, InplaceAdd = false)]
         public Int16? Sexe
         {
             get { return Fields.Sexe[this]; }
@@ -114,6 +115,7 @@ namespace GestionEquestre.Ge.Entities
         }
 
         [DisplayName("Marital Status"), ForeignKey("[dbo].[SET_MARITALSTATUS]", "Id"), LeftJoin("jMaritalStatus"), TextualField("MaritalStatusCaption")]
+        [LookupEditor(typeof(Ge.Scripts.SetMaritalstatusLookup), MinimumResultsForSearch = 1, InplaceAdd = false)]
         public Int16? MaritalStatus
         {
             get { return Fields.MaritalStatus[this]; }
@@ -121,6 +123,7 @@ namespace GestionEquestre.Ge.Entities
         }
 
         [DisplayName("Birth City"), ForeignKey("[dbo].[SET_CITY]", "Id"), LeftJoin("jBirthCity"), TextualField("BirthCityFrCodeInsee")]
+        [LookupEditor(typeof(Ge.Scripts.SetCityLookup), MinimumResultsForSearch = 1, InplaceAdd = true)]
         public Int64? BirthCity
         {
             get { return Fields.BirthCity[this]; }
@@ -128,6 +131,7 @@ namespace GestionEquestre.Ge.Entities
         }
 
         [DisplayName("Birth Country"), ForeignKey("[dbo].[SET_COUNTRY]", "Id"), LeftJoin("jBirthCountry"), TextualField("BirthCountryNameFr")]
+        [LookupEditor(typeof(Ge.Scripts.SetCountryLookup), MinimumResultsForSearch = 1, InplaceAdd = false)]
         public Int16? BirthCountry
         {
             get { return Fields.BirthCountry[this]; }
@@ -135,6 +139,7 @@ namespace GestionEquestre.Ge.Entities
         }
 
         [DisplayName("Nationality"), Column("nationality"), ForeignKey("[dbo].[SET_COUNTRY]", "Id"), LeftJoin("jNationality"), TextualField("NationalityCountry")]
+        [LookupEditor(typeof(Ge.Scripts.SetCountryLookup), MinimumResultsForSearch = 1, InplaceAdd = false)]
         public Int16? Nationality
         {
             get { return Fields.Nationality[this]; }
@@ -142,6 +147,7 @@ namespace GestionEquestre.Ge.Entities
         }
 
         [DisplayName("Photo"), Size(8000)]
+        [ImageUploadEditor(FilenameFormat = "PersonImage/~", CopyToHistory = true)]
         public Stream Photo
         {
             get { return Fields.Photo[this]; }
@@ -218,7 +224,7 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.Caption[this] = value; }
         }
 
-        [DisplayName("Archive Date")]
+        [DisplayName("Archive Date"),HideOnInsert,Updatable(false), DateTimeFormatter]
         public DateTime? ArchiveDate
         {
             get { return Fields.ArchiveDate[this]; }

@@ -15,12 +15,20 @@
         CloseDate?: string;
         Establishment?: number;
         Comment?: string;
+        Horses?: LinkFolderHorseRow[];
+        InsertUsername?: string;
+        UpdateUsername?: string;
     }
 
     export namespace ManFolderRow {
         export const idProperty = 'Id';
         export const nameProperty = 'Caption';
         export const localTextPrefix = 'Ge.ManFolder';
+        export const lookupKey = 'Ge.Folders';
+
+        export function getLookup(): Q.Lookup<ManFolderRow> {
+            return Q.getLookup<ManFolderRow>('Ge.Folders');
+        }
 
         export namespace Fields {
             export declare const Id: string;
@@ -38,6 +46,9 @@
             export declare const CloseDate: string;
             export declare const Establishment: string;
             export declare const Comment: string;
+            export declare const Horses: string;
+            export declare const InsertUsername: string;
+            export declare const UpdateUsername: string;
         }
 
         [
@@ -55,7 +66,10 @@
             'CloseRaison', 
             'CloseDate', 
             'Establishment', 
-            'Comment'
+            'Comment', 
+            'Horses', 
+            'InsertUsername', 
+            'UpdateUsername'
         ].forEach(x => (<any>Fields)[x] = x);
     }
 }
