@@ -12,22 +12,25 @@ namespace GestionEquestre.Ge {
 
         protected form = new ManFolderForm(this.idPrefix);
 
-        //private FolderHorseGrid: LinkFolderHorseGrid;
+        private FolderHorseGrid: LinkFolderHorseGrid;
+        private FolderCavalierGrid: LinkFolderCavalierGrid;
+        private FolderPersonGrid: LinkFolderPersonGrid;
+        private loadedState: string;
 
         constructor() {
             super();
 
-            //this.FolderHorseGrid = new LinkFolderHorseGrid(this.byId("FolderHorseGrid"));
-
-            //this.tabs.on('tabsactivate', (e, i) => {
-            //    this.arrange();
-            //});
+            this.FolderHorseGrid = new LinkFolderHorseGrid(this.byId("FolderHorseGrid"));
+            this.FolderCavalierGrid = new LinkFolderCavalierGrid(this.byId("FolderCavalierGrid"));
+            this.FolderPersonGrid = new LinkFolderPersonGrid(this.byId("FolderPersonGrid"));
         }
 
-        //protected afterLoadEntity() {
-        //    super.afterLoadEntity();
-        //    this.FolderHorseGrid.Folder = this.entityId;
-        //    var FID = this.entityId;
-        //}
+        loadEntity(entity: ManFolderRow) {
+            super.loadEntity(entity);
+
+            Serenity.TabsExtensions.setDisabled(this.tabs, 'Horses', this.isNewOrDeleted());
+
+            this.FolderHorseGrid.Folder = entity.Id;
+        }
     }
 }

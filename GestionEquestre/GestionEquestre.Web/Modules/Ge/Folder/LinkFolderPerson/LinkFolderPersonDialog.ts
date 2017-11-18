@@ -3,10 +3,9 @@ namespace GestionEquestre.Ge {
 
     @Serenity.Decorators.registerClass()
     @Serenity.Decorators.responsive()
-    export class LinkFolderHorseDialog extends Serenity.EntityDialog<LinkFolderHorseDialog, any> {
+    export class LinkFolderPersonDialog extends Serenity.EntityDialog<LinkFolderPersonDialog,any> {
         constructor() {
             super();
-        }     
-         
-   }
+        }   
+    }
 }

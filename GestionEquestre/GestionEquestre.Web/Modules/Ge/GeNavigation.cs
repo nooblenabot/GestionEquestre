@@ -3,8 +3,6 @@ using MyPages = GestionEquestre.Ge.Pages;
 using Administration = GestionEquestre.Administration.Pages;
 
 [assembly: NavigationLink(int.MaxValue, "Ge/Acc Bankaccount", typeof(MyPages.AccBankaccountController), icon: null)]
-[assembly: NavigationLink(int.MaxValue, "Ge/Link Folder Cavalier", typeof(MyPages.LinkFolderCavalierController), icon: null)]
-[assembly: NavigationLink(int.MaxValue, "Ge/Link Folder Person", typeof(MyPages.LinkFolderPersonController), icon: null)]
 [assembly: NavigationLink(int.MaxValue, "Ge/Cor Corporate", typeof(MyPages.CorCorporateController), icon: null)]
 
 [assembly: NavigationLink(1001, "Folders", typeof(MyPages.ManFolderController), icon: "fa-folder")]

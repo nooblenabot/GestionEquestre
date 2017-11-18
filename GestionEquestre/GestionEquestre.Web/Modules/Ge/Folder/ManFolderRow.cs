@@ -7,14 +7,14 @@ namespace GestionEquestre.Ge.Entities
     using Serenity.Data.Mapping;
     using System;
     using System.ComponentModel;
-    using System.Collections.Generic;
+    //using System.Collections.Generic;
     using System.IO;
 
     [ConnectionKey("GE"), TableName("[dbo].[MAN_FOLDER]")]
     [DisplayName("Man Folder"), InstanceName("Man Folder"), TwoLevelCached]
     [ReadPermission("Administration:General")]
     [ModifyPermission("Administration:General")]
-    [LookupScript("Ge.Folders")]
+    //[LookupScript("Ge.Folders")]
     public sealed class ManFolderRow : Row, IIdRow, INameRow
     {
         [DisplayName("Id"), Identity,PrimaryKey, QuickSearch]
@@ -125,13 +125,13 @@ namespace GestionEquestre.Ge.Entities
 
         #region others filds
 
-        [MasterDetailRelation(foreignKey: "Folder", IncludeColumns = "HorseName")]
-        [DisplayName("Cast List"), NotMapped]
-        public List<LinkFolderHorseRow> Horses
-        {
-            get { return Fields.Horses[this]; }
-            set { Fields.Horses[this] = value; }
-        }
+        //[MasterDetailRelation(foreignKey: "Folder", IncludeColumns = "HorseName")]
+        //[DisplayName("Cast List"), NotMapped]
+        //public List<LinkFolderHorseRow> Horses
+        //{
+        //    get { return Fields.Horses[this]; }
+        //    set { Fields.Horses[this] = value; }
+        //}
 
         [DisplayName("Username"), Expression("jIUser.[Username]"), HideOnInsert, Updatable(false)]
         public String InsertUsername
@@ -183,7 +183,7 @@ namespace GestionEquestre.Ge.Entities
             public Int32Field Establishment;
             public StringField Comment;
 
-            public readonly RowListField<LinkFolderHorseRow> Horses;
+            //public readonly RowListField<LinkFolderHorseRow> Horses;
 
             public StringField InsertUsername;
             public StringField UpdateUsername;

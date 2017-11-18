@@ -35,9 +35,9 @@ namespace GestionEquestre.Ge.Forms
         public Int32 Establishment { get; set; }
         public String Comment { get; set; }
 
-        [Tab("Shipping")]
-        [Category("Info")]
-        [LinkFolderHorseEditor]
-        public List<Entities.LinkFolderHorseRow> Horses { get; set; }
+        //[Tab("Shipping")]
+        //[Category("Info")]
+        //[LinkFolderHorseEditor]
+        //public List<Entities.LinkFolderHorseRow> Horses { get; set; }
     }
 }

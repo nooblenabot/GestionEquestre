@@ -659,33 +659,7 @@ declare namespace GestionEquestre.Ge {
         Id?: number;
         Folder?: number;
         Cavalier?: string;
-        FolderIsActive?: boolean;
-        FolderNotArchive?: boolean;
-        FolderInsertDate?: string;
-        FolderInsertUserId?: number;
-        FolderUpdateDate?: string;
-        FolderUpdateUserId?: number;
-        FolderCaption?: string;
-        FolderArchiveDate?: string;
-        FolderNumber?: number;
-        FolderCreateeDate?: string;
-        FolderCloseRaison?: string;
-        FolderCloseDate?: string;
-        FolderEstablishment?: number;
-        FolderComment?: string;
         CavalierPerson?: number;
-        CavalierIsActive?: boolean;
-        CavalierNotArchive?: boolean;
-        CavalierInsertDate?: string;
-        CavalierInsertUserId?: number;
-        CavalierUpdateDate?: string;
-        CavalierUpdateUserId?: number;
-        CavalierMilesimeLicnece?: string;
-        CavalierNiveauGalop?: number;
-        CavalierLicenceCompetition?: number;
-        CavalierDateCertificatMedical?: string;
-        CavalierCaption?: string;
-        CavalierArchiveDate?: string;
     }
     namespace LinkFolderCavalierRow {
         const idProperty = "Id";
@@ -695,33 +669,7 @@ declare namespace GestionEquestre.Ge {
             const Id: string;
             const Folder: string;
             const Cavalier: string;
-            const FolderIsActive: string;
-            const FolderNotArchive: string;
-            const FolderInsertDate: string;
-            const FolderInsertUserId: string;
-            const FolderUpdateDate: string;
-            const FolderUpdateUserId: string;
-            const FolderCaption: string;
-            const FolderArchiveDate: string;
-            const FolderNumber: string;
-            const FolderCreateeDate: string;
-            const FolderCloseRaison: string;
-            const FolderCloseDate: string;
-            const FolderEstablishment: string;
-            const FolderComment: string;
             const CavalierPerson: string;
-            const CavalierIsActive: string;
-            const CavalierNotArchive: string;
-            const CavalierInsertDate: string;
-            const CavalierInsertUserId: string;
-            const CavalierUpdateDate: string;
-            const CavalierUpdateUserId: string;
-            const CavalierMilesimeLicnece: string;
-            const CavalierNiveauGalop: string;
-            const CavalierLicenceCompetition: string;
-            const CavalierDateCertificatMedical: string;
-            const CavalierCaption: string;
-            const CavalierArchiveDate: string;
         }
     }
 }
@@ -749,6 +697,7 @@ declare namespace GestionEquestre.Ge {
         static formKey: string;
     }
     interface LinkFolderHorseForm {
+        Folder: Serenity.StringEditor;
         Horse: Serenity.LookupEditor;
     }
 }
@@ -796,7 +745,7 @@ declare namespace GestionEquestre.Ge {
     }
     interface LinkFolderPersonForm {
         Folder: Serenity.StringEditor;
-        PersonId: Serenity.LookupEditor;
+        PersonSurname: Serenity.LookupEditor;
         Caption: Serenity.StringEditor;
     }
 }
@@ -806,49 +755,12 @@ declare namespace GestionEquestre.Ge {
         Folder?: number;
         PersonId?: number;
         Caption?: string;
-        FolderIsActive?: boolean;
-        FolderNotArchive?: boolean;
-        FolderInsertDate?: string;
-        FolderInsertUserId?: number;
-        FolderUpdateDate?: string;
-        FolderUpdateUserId?: number;
-        FolderCaption?: string;
-        FolderArchiveDate?: string;
-        FolderNumber?: number;
-        FolderCreateeDate?: string;
-        FolderCloseRaison?: string;
-        FolderCloseDate?: string;
-        FolderEstablishment?: number;
-        FolderComment?: string;
         PersonIsMorale?: boolean;
-        PersonIsActive?: boolean;
-        PersonNotArchive?: boolean;
-        PersonInsertDate?: string;
-        PersonInsertUserId?: number;
-        PersonUpdateDate?: string;
-        PersonUpdateUserId?: number;
         PersonSurname?: string;
         PersonName?: string;
         PersonMaidenName?: string;
         PersonBusinessName?: string;
-        PersonBirthday?: string;
-        PersonSexe?: number;
-        PersonMaritalStatus?: number;
-        PersonBirthCity?: number;
-        PersonBirthCountry?: number;
-        PersonNationality?: number;
-        PersonPhoto?: number[];
-        PersonPhone?: string;
-        PersonGsm?: string;
-        PersonWorkPhone?: string;
-        PersonOtherPhone1?: string;
-        PersonOtherPhone2?: string;
-        PersonEmail1?: string;
-        PersonEmail2?: string;
-        PersonBankAccount?: number;
-        PersonIdAdress?: number;
         PersonCaption?: string;
-        PersonArchiveDate?: string;
     }
     namespace LinkFolderPersonRow {
         const idProperty = "Id";
@@ -859,49 +771,12 @@ declare namespace GestionEquestre.Ge {
             const Folder: string;
             const PersonId: string;
             const Caption: string;
-            const FolderIsActive: string;
-            const FolderNotArchive: string;
-            const FolderInsertDate: string;
-            const FolderInsertUserId: string;
-            const FolderUpdateDate: string;
-            const FolderUpdateUserId: string;
-            const FolderCaption: string;
-            const FolderArchiveDate: string;
-            const FolderNumber: string;
-            const FolderCreateeDate: string;
-            const FolderCloseRaison: string;
-            const FolderCloseDate: string;
-            const FolderEstablishment: string;
-            const FolderComment: string;
             const PersonIsMorale: string;
-            const PersonIsActive: string;
-            const PersonNotArchive: string;
-            const PersonInsertDate: string;
-            const PersonInsertUserId: string;
-            const PersonUpdateDate: string;
-            const PersonUpdateUserId: string;
             const PersonSurname: string;
             const PersonName: string;
             const PersonMaidenName: string;
             const PersonBusinessName: string;
-            const PersonBirthday: string;
-            const PersonSexe: string;
-            const PersonMaritalStatus: string;
-            const PersonBirthCity: string;
-            const PersonBirthCountry: string;
-            const PersonNationality: string;
-            const PersonPhoto: string;
-            const PersonPhone: string;
-            const PersonGsm: string;
-            const PersonWorkPhone: string;
-            const PersonOtherPhone1: string;
-            const PersonOtherPhone2: string;
-            const PersonEmail1: string;
-            const PersonEmail2: string;
-            const PersonBankAccount: string;
-            const PersonIdAdress: string;
             const PersonCaption: string;
-            const PersonArchiveDate: string;
         }
     }
 }
@@ -1147,7 +1022,7 @@ declare namespace GestionEquestre.Ge {
         const idProperty = "LicFfe";
         const nameProperty = "LicFfe";
         const localTextPrefix = "Ge.ManCavaliers";
-        const lookupKey = "Ge.ManCavalier";
+        const lookupKey = "Ge.Cavaliers";
         function getLookup(): Q.Lookup<ManCavaliersRow>;
         namespace Fields {
             const LicFfe: string;
@@ -1253,7 +1128,6 @@ declare namespace GestionEquestre.Ge {
         CloseDate: Serenity.DateEditor;
         Establishment: Serenity.LookupEditor;
         Comment: Serenity.StringEditor;
-        Horses: LinkFolderHorseEditor;
     }
 }
 declare namespace GestionEquestre.Ge {
@@ -1273,7 +1147,6 @@ declare namespace GestionEquestre.Ge {
         CloseDate?: string;
         Establishment?: number;
         Comment?: string;
-        Horses?: LinkFolderHorseRow[];
         InsertUsername?: string;
         UpdateUsername?: string;
     }
@@ -1281,7 +1154,7 @@ declare namespace GestionEquestre.Ge {
         const idProperty = "Id";
         const nameProperty = "Caption";
         const localTextPrefix = "Ge.ManFolder";
-        const lookupKey = "Ge.Folders";
+        const lookupKey = "Ge.ManFolder";
         function getLookup(): Q.Lookup<ManFolderRow>;
         namespace Fields {
             const Id: string;
@@ -1299,7 +1172,6 @@ declare namespace GestionEquestre.Ge {
             const CloseDate: string;
             const Establishment: string;
             const Comment: string;
-            const Horses: string;
             const InsertUsername: string;
             const UpdateUsername: string;
         }
@@ -1747,7 +1619,7 @@ declare namespace GestionEquestre.Ge {
         const idProperty = "Id";
         const nameProperty = "Surname";
         const localTextPrefix = "Ge.ManPerson";
-        const lookupKey = "Ge.ManPerson";
+        const lookupKey = "Ge.Persons";
         function getLookup(): Q.Lookup<ManPersonRow>;
         namespace Fields {
             const Id: string;
@@ -2963,47 +2835,6 @@ declare namespace GestionEquestre.Ge {
     }
 }
 declare namespace GestionEquestre.Ge {
-    class CorCorporateDialog extends Serenity.EntityDialog<CorCorporateRow, any> {
-        protected getFormKey(): string;
-        protected getIdProperty(): string;
-        protected getLocalTextPrefix(): string;
-        protected getNameProperty(): string;
-        protected getService(): string;
-        protected form: CorCorporateForm;
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class CorCorporateGrid extends Serenity.EntityGrid<CorCorporateRow, any> {
-        protected getColumnsKey(): string;
-        protected getDialogType(): typeof CorCorporateDialog;
-        protected getIdProperty(): string;
-        protected getLocalTextPrefix(): string;
-        protected getService(): string;
-        constructor(container: JQuery);
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class LinkFolderHorseEditDialog extends Common.GridEditorDialog<LinkFolderHorseRow> {
-        protected getFormKey(): string;
-        protected getLocalTextPrefix(): string;
-        protected getNameProperty(): string;
-        protected form: LinkFolderHorseForm;
-        constructor();
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class LinkFolderHorseEditor extends Common.GridEditorBase<LinkFolderHorseRow> {
-        protected getColumnsKey(): string;
-        protected getDialogType(): typeof LinkFolderHorseEditDialog;
-        protected getLocalTextPrefix(): string;
-        constructor(container: JQuery);
-        protected getAddButtonCaption(): string;
-        protected getColumns(): Slick.Column[];
-        protected onClick(e: JQueryEventObject, row: number, cell: number): void;
-        protected validateEntity(row: any, id: any): boolean;
-    }
-}
-declare namespace GestionEquestre.Ge {
     class ManFolderDialog extends Serenity.EntityDialog<ManFolderRow, any> {
         protected getFormKey(): string;
         protected getIdProperty(): string;
@@ -3011,6 +2842,16 @@ declare namespace GestionEquestre.Ge {
         protected getNameProperty(): string;
         protected getService(): string;
         protected form: ManFolderForm;
+        private FolderHorseGrid;
+        private FolderCavalierGrid;
+        private FolderPersonGrid;
+        private loadedState;
+        constructor();
+        loadEntity(entity: ManFolderRow): void;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class LinkFolderCavalierDialog extends Serenity.EntityDialog<LinkFolderCavalierDialog, any> {
         constructor();
     }
 }
@@ -3025,43 +2866,73 @@ declare namespace GestionEquestre.Ge {
     }
 }
 declare namespace GestionEquestre.Ge {
-    class LinkFolderCavalierDialog extends Serenity.EntityDialog<LinkFolderCavalierRow, any> {
-        protected getFormKey(): string;
-        protected getIdProperty(): string;
-        protected getLocalTextPrefix(): string;
-        protected getNameProperty(): string;
-        protected getService(): string;
-        protected form: LinkFolderCavalierForm;
-    }
-}
-declare namespace GestionEquestre.Ge {
     class LinkFolderCavalierGrid extends Serenity.EntityGrid<LinkFolderCavalierRow, any> {
         protected getColumnsKey(): string;
-        protected getDialogType(): typeof LinkFolderCavalierDialog;
         protected getIdProperty(): string;
         protected getLocalTextPrefix(): string;
-        protected getService(): string;
         constructor(container: JQuery);
+        protected getColumns(): Slick.Column[];
+        protected onClick(e: JQueryEventObject, row: number, cell: number): void;
+        protected editItem(entityOrId: any): void;
+        protected initEntityDialog(itemType: any, dialog: any): void;
+        protected createQuickSearchInput(): void;
+        protected getButtons(): Serenity.ToolButton[];
+        protected addButtonClick(): void;
+        protected getInitialTitle(): any;
+        protected usePager(): boolean;
+        protected getGridCanLoad(): boolean;
+        private _Folder;
+        Folder: number;
     }
 }
 declare namespace GestionEquestre.Ge {
-    class LinkFolderPersonDialog extends Serenity.EntityDialog<LinkFolderPersonRow, any> {
-        protected getFormKey(): string;
+    class LinkFolderHorseDialog extends Serenity.EntityDialog<LinkFolderHorseDialog, any> {
+        constructor();
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class LinkFolderHorseGrid extends Serenity.EntityGrid<LinkFolderHorseRow, any> {
+        protected getColumnsKey(): string;
         protected getIdProperty(): string;
         protected getLocalTextPrefix(): string;
-        protected getNameProperty(): string;
-        protected getService(): string;
-        protected form: LinkFolderPersonForm;
+        constructor(container: JQuery);
+        protected getColumns(): Slick.Column[];
+        protected onClick(e: JQueryEventObject, row: number, cell: number): void;
+        protected editItem(entityOrId: any): void;
+        protected initEntityDialog(itemType: any, dialog: any): void;
+        protected createQuickSearchInput(): void;
+        protected getButtons(): Serenity.ToolButton[];
+        protected addButtonClick(): void;
+        protected getInitialTitle(): any;
+        protected usePager(): boolean;
+        protected getGridCanLoad(): boolean;
+        private _Folder;
+        Folder: number;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class LinkFolderPersonDialog extends Serenity.EntityDialog<LinkFolderPersonDialog, any> {
+        constructor();
     }
 }
 declare namespace GestionEquestre.Ge {
     class LinkFolderPersonGrid extends Serenity.EntityGrid<LinkFolderPersonRow, any> {
         protected getColumnsKey(): string;
-        protected getDialogType(): typeof LinkFolderPersonDialog;
         protected getIdProperty(): string;
         protected getLocalTextPrefix(): string;
-        protected getService(): string;
         constructor(container: JQuery);
+        protected getColumns(): Slick.Column[];
+        protected onClick(e: JQueryEventObject, row: number, cell: number): void;
+        protected editItem(entityOrId: any): void;
+        protected initEntityDialog(itemType: any, dialog: any): void;
+        protected createQuickSearchInput(): void;
+        protected getButtons(): Serenity.ToolButton[];
+        protected addButtonClick(): void;
+        protected getInitialTitle(): any;
+        protected usePager(): boolean;
+        protected getGridCanLoad(): boolean;
+        private _Folder;
+        Folder: number;
     }
 }
 declare namespace GestionEquestre.Ge {
@@ -3158,6 +3029,26 @@ declare namespace GestionEquestre.Ge {
     class ManPersonGrid extends Serenity.EntityGrid<ManPersonRow, any> {
         protected getColumnsKey(): string;
         protected getDialogType(): typeof ManPersonDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class CorCorporateDialog extends Serenity.EntityDialog<CorCorporateRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: CorCorporateForm;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class CorCorporateGrid extends Serenity.EntityGrid<CorCorporateRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof CorCorporateDialog;
         protected getIdProperty(): string;
         protected getLocalTextPrefix(): string;
         protected getService(): string;

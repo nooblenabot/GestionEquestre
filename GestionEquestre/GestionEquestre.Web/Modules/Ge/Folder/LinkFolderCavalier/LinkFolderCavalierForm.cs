@@ -9,13 +9,12 @@ namespace GestionEquestre.Ge.Forms
     using System.Collections.Generic;
     using System.IO;
 
-    [FormScript("Ge.LinkFolderHorse")]
-    [BasedOnRow(typeof(Entities.LinkFolderHorseRow))]
-    public class LinkFolderHorseForm
+    [FormScript("Ge.LinkFolderCavalier")]
+    [BasedOnRow(typeof(Entities.LinkFolderCavalierRow))]
+    public class LinkFolderCavalierForm
     {
         [Hidden]
         public Int64 Folder { get; set; }
-        [LookupEditor(typeof(Ge.Scripts.HorsesLookup), MinimumResultsForSearch = 1, InplaceAdd = true)]
-        public String Horse { get; set; }
+        public String Cavalier { get; set; }
     }
 }

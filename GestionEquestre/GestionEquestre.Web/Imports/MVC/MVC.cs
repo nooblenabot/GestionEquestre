@@ -54,24 +54,9 @@ namespace MVC
                 public const string AccBankaccountIndex = "~/Modules/Ge/AccBankaccount/AccBankaccountIndex.cshtml";
             }
 
-            public static class CorCorporate
-            {
-                public const string CorCorporateIndex = "~/Modules/Ge/CorCorporate/CorCorporateIndex.cshtml";
-            }
-
             public static class Folder
             {
                 public const string ManFolderIndex = "~/Modules/Ge/Folder/ManFolderIndex.cshtml";
-            }
-
-            public static class LinkFolderCavalier
-            {
-                public const string LinkFolderCavalierIndex = "~/Modules/Ge/LinkFolderCavalier/LinkFolderCavalierIndex.cshtml";
-            }
-
-            public static class LinkFolderPerson
-            {
-                public const string LinkFolderPersonIndex = "~/Modules/Ge/LinkFolderPerson/LinkFolderPersonIndex.cshtml";
             }
 
             public static class Management
@@ -105,6 +90,11 @@ namespace MVC
 
             public static class Settings
             {
+                public static class CorCorporate
+                {
+                    public const string CorCorporateIndex = "~/Modules/Ge/Settings/CorCorporate/CorCorporateIndex.cshtml";
+                }
+
                 public static class GlobalsSettings
                 {
                     public static class City

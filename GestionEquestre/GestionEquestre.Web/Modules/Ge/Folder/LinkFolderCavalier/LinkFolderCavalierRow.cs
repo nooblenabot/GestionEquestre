@@ -9,11 +9,11 @@ namespace GestionEquestre.Ge.Entities
     using System.ComponentModel;
     using System.IO;
 
-    [ConnectionKey("GE"), TableName("[dbo].[LINK_FOLDER_HORSE]")]
-    [DisplayName("Link Folder Horse"), InstanceName("Link Folder Horse"), TwoLevelCached]
+    [ConnectionKey("GE"), TableName("[dbo].[LINK_FOLDER_CAVALIER]")]
+    [DisplayName("Link Folder Cavalier"), InstanceName("Link Folder Cavalier"), TwoLevelCached]
     [ReadPermission("Administration:General")]
     [ModifyPermission("Administration:General")]
-    public sealed class LinkFolderHorseRow : Row, IIdRow, INameRow
+    public sealed class LinkFolderCavalierRow : Row, IIdRow, INameRow
     {
         [DisplayName("Id"), Identity]
         public Int64? Id
@@ -22,28 +22,26 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.Id[this] = value; }
         }
 
-        [DisplayName("Folder"),PrimaryKey, ForeignKey(typeof(ManFolderRow), "Id"),LeftJoin("jFolder")]
+        [DisplayName("Folder"), PrimaryKey, ForeignKey(typeof(ManFolderRow), "Id"), LeftJoin("jFolder")]
         public Int64? Folder
         {
             get { return Fields.Folder[this]; }
             set { Fields.Folder[this] = value; }
         }
 
-        [DisplayName("Horse"), Size(15), NotNull, ForeignKey("[dbo].[MAN_HORSES]", "UELN"), LeftJoin("jHorse"), QuickSearch, TextualField("Horse")]
-        [LookupEditor(typeof(ManHorsesRow))]
-        public String Horse
+        [DisplayName("Cavalier"), Size(10), ForeignKey("[dbo].[MAN_CAVALIERS]", "LIC_FFE"), LeftJoin("jCavalier"), QuickSearch, TextualField("CavalierLicNumber")]
+        [LookupEditor(typeof(ManCavaliersRow))]
+        public String Cavalier
         {
-            get { return Fields.Horse[this]; }
-            set { Fields.Horse[this] = value; }
+            get { return Fields.Cavalier[this]; }
+            set { Fields.Cavalier[this] = value; }
         }
-
-        [DisplayName("Horse Name"), Expression("jHorse.[Name]")]
-        public String HorseName
+        [DisplayName("Cavalier Person"), Expression("jCavalier.[Person]")]
+        public Int64? CavalierPerson
         {
-            get { return Fields.HorseName[this]; }
-            set { Fields.HorseName[this] = value; }
+            get { return Fields.CavalierPerson[this]; }
+            set { Fields.CavalierPerson[this] = value; }
         }
-
         IIdField IIdRow.IdField
         {
             get { return Fields.Id; }
@@ -51,12 +49,12 @@ namespace GestionEquestre.Ge.Entities
 
         StringField INameRow.NameField
         {
-            get { return Fields.Horse; }
+            get { return Fields.Cavalier; }
         }
 
         public static readonly RowFields Fields = new RowFields().Init();
 
-        public LinkFolderHorseRow()
+        public LinkFolderCavalierRow()
             : base(Fields)
         {
         }
@@ -65,14 +63,14 @@ namespace GestionEquestre.Ge.Entities
         {
             public Int64Field Id;
             public Int64Field Folder;
-            public StringField Horse;
+            public StringField Cavalier;
 
-            public StringField HorseName;
+            public Int64Field CavalierPerson;
 
             public RowFields()
                 : base()
             {
-                LocalTextPrefix = "Ge.LinkFolderHorse";
+                LocalTextPrefix = "Ge.LinkFolderCavalier";
             }
         }
     }

@@ -116,10 +116,10 @@
         export const idProperty = 'Id';
         export const nameProperty = 'Surname';
         export const localTextPrefix = 'Ge.ManPerson';
-        export const lookupKey = 'Ge.ManPerson';
+        export const lookupKey = 'Ge.Persons';
 
         export function getLookup(): Q.Lookup<ManPersonRow> {
-            return Q.getLookup<ManPersonRow>('Ge.ManPerson');
+            return Q.getLookup<ManPersonRow>('Ge.Persons');
         }
 
         export namespace Fields {

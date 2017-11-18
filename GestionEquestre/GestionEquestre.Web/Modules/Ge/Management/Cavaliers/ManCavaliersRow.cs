@@ -13,6 +13,7 @@ namespace GestionEquestre.Ge.Entities
     [DisplayName("Man Cavaliers"), InstanceName("Man Cavaliers"), TwoLevelCached]
     [ReadPermission("Administration:General")]
     [ModifyPermission("Administration:General")]
+    [LookupScript("Ge.Cavaliers")]
     public sealed class ManCavaliersRow : Row, IIdRow, INameRow
     {
         [DisplayName("Lic Ffe"), Column("LIC_FFE"), Size(10), PrimaryKey, QuickSearch]
@@ -23,7 +24,7 @@ namespace GestionEquestre.Ge.Entities
         }
 
         [DisplayName("Person"), NotNull, ForeignKey("[dbo].[MAN_PERSON]", "Id"), LeftJoin("jPerson"), TextualField("PersonSurname")]
-        [LookupEditor(typeof(Ge.Scripts.ManPersonActiveLookup), MinimumResultsForSearch = 1, InplaceAdd = false)]
+        [LookupEditor(typeof(Ge.Scripts.ManPersonActiveLookup), MinimumResultsForSearch = 1, InplaceAdd = false),LookupInclude]
         public Int64? Person
         {
             get { return Fields.Person[this]; }
@@ -172,25 +173,25 @@ namespace GestionEquestre.Ge.Entities
             get { return Fields.PersonUpdateUserId[this]; }
             set { Fields.PersonUpdateUserId[this] = value; }
         }
-        [DisplayName("Person Surname"), Expression("jPerson.[Surname]")]
+        [DisplayName("Person Surname"), Expression("jPerson.[Surname]"), LookupInclude]
         public String PersonSurname
         {
             get { return Fields.PersonSurname[this]; }
             set { Fields.PersonSurname[this] = value; }
         }
-        [DisplayName("Person Name"), Expression("jPerson.[Name]")]
+        [DisplayName("Person Name"), Expression("jPerson.[Name]"),LookupInclude]
         public String PersonName
         {
             get { return Fields.PersonName[this]; }
             set { Fields.PersonName[this] = value; }
         }
-        [DisplayName("Person Maiden Name"), Expression("jPerson.[MaidenName]")]
+        [DisplayName("Person Maiden Name"), Expression("jPerson.[MaidenName]"),LookupInclude]
         public String PersonMaidenName
         {
             get { return Fields.PersonMaidenName[this]; }
             set { Fields.PersonMaidenName[this] = value; }
         }
-        [DisplayName("Person Business Name"), Expression("jPerson.[BusinessName]")]
+        [DisplayName("Person Business Name"), Expression("jPerson.[BusinessName]"),LookupInclude]
         public String PersonBusinessName
         {
             get { return Fields.PersonBusinessName[this]; }

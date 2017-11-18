@@ -13,9 +13,10 @@ namespace GestionEquestre.Ge.Entities
     [DisplayName("Man Person"), InstanceName("Man Person"), TwoLevelCached]
     [ReadPermission("Administration:General")]
     [ModifyPermission("Administration:General")]
+    [LookupScript("Ge.Persons")]
     public sealed class ManPersonRow : Row, IIdRow, INameRow
     {
-        [DisplayName("Id"), PrimaryKey]
+        [DisplayName("Id"), PrimaryKey, QuickSearch]
         public Int64? Id
         {
             get { return Fields.Id[this]; }
@@ -71,28 +72,28 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.UpdateUserId[this] = value; }
         }
 
-        [DisplayName("Surname"), Size(50), QuickSearch]
+        [DisplayName("Surname"), Size(50), LookupInclude]
         public String Surname
         {
             get { return Fields.Surname[this]; }
             set { Fields.Surname[this] = value; }
         }
 
-        [DisplayName("Name"), Size(50)]
+        [DisplayName("Name"), Size(50),LookupInclude]
         public String Name
         {
             get { return Fields.Name[this]; }
             set { Fields.Name[this] = value; }
         }
 
-        [DisplayName("Maiden Name"), Size(50)]
+        [DisplayName("Maiden Name"), Size(50),LookupInclude]
         public String MaidenName
         {
             get { return Fields.MaidenName[this]; }
             set { Fields.MaidenName[this] = value; }
         }
 
-        [DisplayName("Business Name"), Size(200)]
+        [DisplayName("Business Name"), Size(200),LookupInclude]
         public String BusinessName
         {
             get { return Fields.BusinessName[this]; }

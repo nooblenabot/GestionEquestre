@@ -13,9 +13,7 @@ namespace GestionEquestre.Ge.Columns
     [BasedOnRow(typeof(Entities.LinkFolderPersonRow))]
     public class LinkFolderPersonColumns
     {
-        [EditLink, DisplayName("Db.Shared.RecordId"), AlignRight]
-        public Int64 Id { get; set; }
-        public String FolderCaption { get; set; }
+        [EditLink]
         public String PersonSurname { get; set; }
         [EditLink]
         public String Caption { get; set; }

@@ -46,6 +46,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <IncludeIisSettings>false</IncludeIisSettings>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -1361,7 +1362,7 @@
     <TypeScriptCompile Include="Imports\ServerTypings\Ge.SetUelnorgaColumns.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
-    <TypeScriptCompile Include="Modules\Ge\Folder\LinkFolderHorse\LinkFolderHorseEditor.ts" />
+    <TypeScriptCompile Include="Modules\Ge\Folder\LinkFolderHorse\LinkFolderHorseGrid.ts" />
     <TypeScriptCompile Include="Modules\Ge\Management\Horses\ManHorsesDialog.ts" />
     <TypeScriptCompile Include="Modules\Ge\Management\Horses\ManHorsesGrid.ts" />
     <TypeScriptCompile Include="node_modules\%40types\jquery\index.d.ts" />
@@ -1746,9 +1747,8 @@
     <TypeScriptCompile Include="Imports\ServerTypings\Ge.LinkFolderCavalierService.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
-    <Content Include="Modules\Ge\LinkFolderCavalier\LinkFolderCavalierIndex.cshtml" />
-    <TypeScriptCompile Include="Modules\Ge\LinkFolderCavalier\LinkFolderCavalierDialog.ts" />
-    <TypeScriptCompile Include="Modules\Ge\LinkFolderCavalier\LinkFolderCavalierGrid.ts" />
+    <TypeScriptCompile Include="Modules\Ge\Folder\LinkFolderCavalier\LinkFolderCavalierDialog.ts" />
+    <TypeScriptCompile Include="Modules\Ge\Folder\LinkFolderCavalier\LinkFolderCavalierGrid.ts" />
     <TypeScriptCompile Include="Imports\ServerTypings\Ge.LinkFolderCavalierForm.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
@@ -1768,9 +1768,8 @@
     <TypeScriptCompile Include="Imports\ServerTypings\Ge.LinkFolderPersonService.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
-    <Content Include="Modules\Ge\LinkFolderPerson\LinkFolderPersonIndex.cshtml" />
-    <TypeScriptCompile Include="Modules\Ge\LinkFolderPerson\LinkFolderPersonDialog.ts" />
-    <TypeScriptCompile Include="Modules\Ge\LinkFolderPerson\LinkFolderPersonGrid.ts" />
+    <TypeScriptCompile Include="Modules\Ge\Folder\LinkFolderPerson\LinkFolderPersonDialog.ts" />
+    <TypeScriptCompile Include="Modules\Ge\Folder\LinkFolderPerson\LinkFolderPersonGrid.ts" />
     <TypeScriptCompile Include="Imports\ServerTypings\Ge.LinkFolderPersonForm.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
@@ -1795,9 +1794,9 @@
     <TypeScriptCompile Include="Imports\ServerTypings\Ge.CorCorporateService.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
-    <Content Include="Modules\Ge\CorCorporate\CorCorporateIndex.cshtml" />
-    <TypeScriptCompile Include="Modules\Ge\CorCorporate\CorCorporateDialog.ts" />
-    <TypeScriptCompile Include="Modules\Ge\CorCorporate\CorCorporateGrid.ts" />
+    <Content Include="Modules\Ge\Settings\CorCorporate\CorCorporateIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\Ge\Settings\CorCorporate\CorCorporateDialog.ts" />
+    <TypeScriptCompile Include="Modules\Ge\Settings\CorCorporate\CorCorporateGrid.ts" />
     <TypeScriptCompile Include="Imports\ServerTypings\Ge.CorCorporateForm.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
@@ -1817,9 +1816,6 @@
     <Compile Include="App_Start\SiteInitialization.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="Imports\ClientTypes\Ge.LinkFolderHorseEditorAttribute.cs">
-      <DependentUpon>ClientTypes.tt</DependentUpon>
     </Compile>
     <Compile Include="Migrations\GEDB\GEDB_20141103_140000_Initial.cs" />
     <Compile Include="Migrations\GEDB\GEDB_20141111_113000_Permissions.cs" />
@@ -2042,23 +2038,21 @@
     <Compile Include="Modules\Ge\Settings\GlobalsSettings\Uelnorga\SetUelnorgaPage.cs" />
     <Compile Include="Modules\Ge\Settings\GlobalsSettings\Uelnorga\SetUelnorgaColumns.cs" />
     <Compile Include="Modules\Ge\Settings\GlobalsSettings\Uelnorga\SetUelnorgaForm.cs" />
-    <Compile Include="Modules\Ge\LinkFolderCavalier\LinkFolderCavalierRow.cs" />
-    <Compile Include="Modules\Ge\LinkFolderCavalier\LinkFolderCavalierRepository.cs" />
-    <Compile Include="Modules\Ge\LinkFolderCavalier\LinkFolderCavalierEndpoint.cs" />
-    <Compile Include="Modules\Ge\LinkFolderCavalier\LinkFolderCavalierPage.cs" />
-    <Compile Include="Modules\Ge\LinkFolderCavalier\LinkFolderCavalierColumns.cs" />
-    <Compile Include="Modules\Ge\LinkFolderCavalier\LinkFolderCavalierForm.cs" />
+    <Compile Include="Modules\Ge\Folder\LinkFolderCavalier\LinkFolderCavalierRow.cs" />
+    <Compile Include="Modules\Ge\Folder\LinkFolderCavalier\LinkFolderCavalierRepository.cs" />
+    <Compile Include="Modules\Ge\Folder\LinkFolderCavalier\LinkFolderCavalierEndpoint.cs" />
+    <Compile Include="Modules\Ge\Folder\LinkFolderCavalier\LinkFolderCavalierColumns.cs" />
+    <Compile Include="Modules\Ge\Folder\LinkFolderCavalier\LinkFolderCavalierForm.cs" />
     <Compile Include="Modules\Ge\Folder\LinkFolderHorse\LinkFolderHorseRow.cs" />
     <Compile Include="Modules\Ge\Folder\LinkFolderHorse\LinkFolderHorseRepository.cs" />
     <Compile Include="Modules\Ge\Folder\LinkFolderHorse\LinkFolderHorseEndpoint.cs" />
     <Compile Include="Modules\Ge\Folder\LinkFolderHorse\LinkFolderHorseColumns.cs" />
     <Compile Include="Modules\Ge\Folder\LinkFolderHorse\LinkFolderHorseForm.cs" />
-    <Compile Include="Modules\Ge\LinkFolderPerson\LinkFolderPersonRow.cs" />
-    <Compile Include="Modules\Ge\LinkFolderPerson\LinkFolderPersonRepository.cs" />
-    <Compile Include="Modules\Ge\LinkFolderPerson\LinkFolderPersonEndpoint.cs" />
-    <Compile Include="Modules\Ge\LinkFolderPerson\LinkFolderPersonPage.cs" />
-    <Compile Include="Modules\Ge\LinkFolderPerson\LinkFolderPersonColumns.cs" />
-    <Compile Include="Modules\Ge\LinkFolderPerson\LinkFolderPersonForm.cs" />
+    <Compile Include="Modules\Ge\Folder\LinkFolderPerson\LinkFolderPersonRow.cs" />
+    <Compile Include="Modules\Ge\Folder\LinkFolderPerson\LinkFolderPersonRepository.cs" />
+    <Compile Include="Modules\Ge\Folder\LinkFolderPerson\LinkFolderPersonEndpoint.cs" />
+    <Compile Include="Modules\Ge\Folder\LinkFolderPerson\LinkFolderPersonColumns.cs" />
+    <Compile Include="Modules\Ge\Folder\LinkFolderPerson\LinkFolderPersonForm.cs" />
     <Compile Include="Modules\Ge\Folder\ManFolderRow.cs" />
     <Compile Include="Modules\Ge\Folder\ManFolderRepository.cs" />
     <Compile Include="Modules\Ge\Folder\ManFolderEndpoint.cs" />
@@ -2066,12 +2060,12 @@
     <Compile Include="Modules\Ge\Folder\ManFolderColumns.cs" />
     <Compile Include="Modules\Ge\Folder\ManFolderForm.cs" />
     <Compile Include="Modules\Ge\Settings\GlobalsSettings\Sexe\SexeLocalization\SetSexeLangRow.cs" />
-    <Compile Include="Modules\Ge\CorCorporate\CorCorporateRow.cs" />
-    <Compile Include="Modules\Ge\CorCorporate\CorCorporateRepository.cs" />
-    <Compile Include="Modules\Ge\CorCorporate\CorCorporateEndpoint.cs" />
-    <Compile Include="Modules\Ge\CorCorporate\CorCorporatePage.cs" />
-    <Compile Include="Modules\Ge\CorCorporate\CorCorporateColumns.cs" />
-    <Compile Include="Modules\Ge\CorCorporate\CorCorporateForm.cs" />
+    <Compile Include="Modules\Ge\Settings\CorCorporate\CorCorporateRow.cs" />
+    <Compile Include="Modules\Ge\Settings\CorCorporate\CorCorporateRepository.cs" />
+    <Compile Include="Modules\Ge\Settings\CorCorporate\CorCorporateEndpoint.cs" />
+    <Compile Include="Modules\Ge\Settings\CorCorporate\CorCorporatePage.cs" />
+    <Compile Include="Modules\Ge\Settings\CorCorporate\CorCorporateColumns.cs" />
+    <Compile Include="Modules\Ge\Settings\CorCorporate\CorCorporateForm.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -2224,16 +2218,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
-          <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
-          <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:52910/</IISUrl>
-          <NTLMAuthentication>False</NTLMAuthentication>
-          <UseCustomServer>False</UseCustomServer>
-          <CustomServerUrl>
-          </CustomServerUrl>
-          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+          <SaveServerSettingsInUserFile>True</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
     </VisualStudio>

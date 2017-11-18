@@ -1,5 +1,5 @@
 ﻿
-namespace GestionEquestre.Ge.Forms
+namespace GestionEquestre.Ge.Columns
 {
     using Serenity;
     using Serenity.ComponentModel;
@@ -9,11 +9,11 @@ namespace GestionEquestre.Ge.Forms
     using System.Collections.Generic;
     using System.IO;
 
-    [FormScript("Ge.LinkFolderCavalier")]
+    [ColumnsScript("Ge.LinkFolderCavalier")]
     [BasedOnRow(typeof(Entities.LinkFolderCavalierRow))]
-    public class LinkFolderCavalierForm
+    public class LinkFolderCavalierColumns
     {
-        public Int64 Folder { get; set; }
-        public String Cavalier { get; set; }
+        [EditLink]
+        public String CavalierCaption { get; set; }
     }
 }
