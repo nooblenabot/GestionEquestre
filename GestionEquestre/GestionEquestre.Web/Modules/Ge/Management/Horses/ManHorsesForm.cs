@@ -13,21 +13,29 @@ namespace GestionEquestre.Ge.Forms
     [BasedOnRow(typeof(Entities.ManHorsesRow))]
     public class ManHorsesForm
     {
+        [ReadOnly(true)]
         public String Ueln { get; set; }
+        [MaxLength(8),HalfWidth]
         public String Sire { get; set; }
+        [MaxLength(1),QuarterWidth]
         public String CleSire { get; set; }
+        [MaxLength(9)]
         public String Hnin { get; set; }
         public String BirthCountry { get; set; }
         public Int32 BirthOrganization { get; set; }
         public String Name { get; set; }
         public Boolean IsActive { get; set; }
         public Boolean NotArchive { get; set; }
+        [QuarterWidth]
         public DateTime InsertDate { get; set; }
         //  public Int32 InsertUserId { get; set; }
+        [QuarterWidth]
         public String InsertUsername { get; set; }
+        [QuarterWidth]
         [Updatable(false)]
         public DateTime UpdateDate { get; set; }
         //public Int32 UpdateUserId { get; set; }
+        [QuarterWidth]
         [Updatable(false)]
         public String UpdateUsername { get; set; }
         public DateTime Birthday { get; set; }

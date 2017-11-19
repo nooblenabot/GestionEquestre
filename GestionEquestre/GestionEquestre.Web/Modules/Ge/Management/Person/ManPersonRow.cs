@@ -148,8 +148,8 @@ namespace GestionEquestre.Ge.Entities
         }
 
         [DisplayName("Photo"), Size(8000)]
-        [ImageUploadEditor(FilenameFormat = "PersonImage/~", CopyToHistory = true)]
-        public Stream Photo
+        [ImageUploadEditor(FilenameFormat = "PersonImage/~", CopyToHistory = false)]
+        public String Photo
         {
             get { return Fields.Photo[this]; }
             set { Fields.Photo[this] = value; }
@@ -781,7 +781,7 @@ namespace GestionEquestre.Ge.Entities
             public Int64Field BirthCity;
             public Int16Field BirthCountry;
             public Int16Field Nationality;
-            public StreamField Photo;
+            public StringField Photo;
             public StringField Phone;
             public StringField Gsm;
             public StringField WorkPhone;

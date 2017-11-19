@@ -28,7 +28,7 @@ namespace GestionEquestre.Migrations.GEDB
                 .WithColumn("BirthCity").AsInt64().Nullable()
                 .WithColumn("BirthCountry").AsInt16().Nullable()
                 .WithColumn("nationality").AsInt16().Nullable()
-                .WithColumn("Photo").AsBinary().Nullable()
+                .WithColumn("Photo").AsString(120).Nullable()
                 .WithColumn("Phone").AsString(20).Nullable()
                 .WithColumn("GSM").AsString(20).Nullable()
                 .WithColumn("WorkPhone").AsString(20).Nullable()

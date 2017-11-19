@@ -18,7 +18,7 @@
         BirthCity?: number;
         BirthCountry?: number;
         Nationality?: number;
-        Photo?: number[];
+        Photo?: string;
         Phone?: string;
         Gsm?: string;
         WorkPhone?: string;

@@ -15,6 +15,7 @@ namespace GestionEquestre.Ge.Forms
     {
         [Hidden]
         public Int64 Folder { get; set; }
+        [LookupEditor(typeof(Ge.Scripts.ManCavalierActiveLookup), MinimumResultsForSearch = 1, InplaceAdd = true)]
         public String Cavalier { get; set; }
     }
 }

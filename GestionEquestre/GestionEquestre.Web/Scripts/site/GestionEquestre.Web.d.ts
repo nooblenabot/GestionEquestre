@@ -946,7 +946,7 @@ declare namespace GestionEquestre.Ge {
         InsertUsername: Serenity.StringEditor;
         UpdateDate: Serenity.DateEditor;
         UpdateUsername: Serenity.StringEditor;
-        MilesimeLicnece: Serenity.DateEditor;
+        MilesimeLicnece: Serenity.DateYearEditor;
         NiveauGalop: Serenity.LookupEditor;
         LicenceCompetition: Serenity.LookupEditor;
         DateCertificatMedical: Serenity.DateEditor;
@@ -1522,7 +1522,7 @@ declare namespace GestionEquestre.Ge {
         BirthCity?: number;
         BirthCountry?: number;
         Nationality?: number;
-        Photo?: number[];
+        Photo?: string;
         Phone?: string;
         Gsm?: string;
         WorkPhone?: string;
@@ -2983,6 +2983,7 @@ declare namespace GestionEquestre.Ge {
         protected getNameProperty(): string;
         protected getService(): string;
         protected form: ManHorsesForm;
+        constructor();
     }
 }
 declare namespace GestionEquestre.Ge {

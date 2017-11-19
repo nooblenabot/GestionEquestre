@@ -12,7 +12,25 @@ namespace GestionEquestre.Ge {
 
         protected form = new ManHorsesForm(this.idPrefix);
 
+        constructor() {
+            super();
+
+            //this.form.Hnin.change(e => { });
+
+      
+        
 
 
+
+
+
+
+
+
+
+
+
+
+        }
     }
 }

@@ -25,6 +25,7 @@ namespace GestionEquestre.Ge.Forms
         //public Int32 UpdateUserId { get; set; }
         [Updatable(false)]
         public String UpdateUsername { get; set; }
+        [DateYearEditor]
         public DateTime MilesimeLicnece { get; set; }
         public Int16 NiveauGalop { get; set; }
         public Int16 LicenceCompetition { get; set; }

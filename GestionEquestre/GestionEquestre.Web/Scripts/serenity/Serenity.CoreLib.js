@@ -15,7 +15,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-/** 
+/**
  * Represents the completion of an asynchronous operation
  */
 if (typeof Promise === "undefined") {
@@ -1552,6 +1552,10 @@ var Q;
             $(window).resize(layout);
         }
         layout();
+        gridDiv.one('remove', function () {
+            $(window).off('layout', layout);
+            $('body').off('layout', layout);
+        });
         // ugly, but to it is to make old pages work without having to add this
         Q.Router.resolve();
     }
@@ -1879,10 +1883,10 @@ var Q;
                 }
                 if (!obj.__class) {
                     var baseType = ss.getBaseType(obj);
-                    if (baseType.__class)
+                    if (baseType && baseType.__class)
                         obj.__class = true;
                 }
-                if (obj.__class || obj.__enum) {
+                if (obj.__class || obj.__enum || obj.__interface) {
                     obj.__typeName = fullName;
                     if (!obj.__assembly) {
                         obj.__assembly = ss.__assemblies['App'];
@@ -2447,6 +2451,19 @@ var Serenity;
             };
         }
         Decorators.registerClass = registerClass;
+        function registerInterface(intf, asm) {
+            return function (target) {
+                target.__register = true;
+                target.__interface = true;
+                target.__assembly = asm || ss.__assemblies['App'];
+                if (intf)
+                    target.__interfaces = intf;
+                target.isAssignableFrom = function (type) {
+                    return ss.contains(ss.getInterfaces(type), this);
+                };
+            };
+        }
+        Decorators.registerInterface = registerInterface;
         function registerEnum(target, enumKey, asm) {
             if (!target.__enum) {
                 Object.defineProperty(target, '__enum', {
@@ -2640,16 +2657,26 @@ var Serenity;
                         }
                     });
                 }
+                var bsTabs = element.closest('.nav-tabs');
+                if (bsTabs.length > 0) {
+                    bsTabs.one('shown.bs.tab', function (e) {
+                        if (!executed && element.is(':visible')) {
+                            executed = true;
+                            callback();
+                        }
+                    });
+                }
                 var dialog;
                 if (element.hasClass('ui-dialog')) {
                     dialog = element.children('.ui-dialog-content');
                 }
                 else {
-                    dialog = element.closest('.ui-dialog-content');
+                    dialog = element.closest('.ui-dialog-content, .s-TemplatedDialog');
                 }
                 if (dialog.length > 0) {
-                    dialog.bind('dialogopen.' + eventClass, function () {
+                    dialog.bind('dialogopen.' + eventClass + ' panelopen.' + eventClass, function () {
                         dialog.unbind('dialogopen.' + eventClass);
+                        dialog.unbind('panelopen.' + eventClass);
                         if (element.is(':visible') && !executed) {
                             executed = true;
                             element.unbind('shown.' + eventClass);
@@ -2691,9 +2718,9 @@ var Serenity;
             if (uiTabs.length > 0) {
                 uiTabs.bind('tabsactivate.' + eventClass, check);
             }
-            var dialog = element.closest('.ui-dialog-content');
+            var dialog = element.closest('.ui-dialog-content, .s-TemplatedDialog');
             if (dialog.length > 0) {
-                dialog.bind('dialogopen.' + eventClass, check);
+                dialog.bind('dialogopen.' + eventClass + ' panelopen.' + eventClass, check);
             }
             element.bind('shown.' + eventClass, check);
         }
@@ -2913,14 +2940,17 @@ var Serenity;
         TemplatedWidget.prototype.byID = function (id, type) {
             return Serenity.WX.getWidget(this.byId(id), type);
         };
+        TemplatedWidget.noGeneric = function (s) {
+            var dollar = s.indexOf('$');
+            if (dollar >= 0) {
+                return s.substr(0, dollar);
+            }
+            return s;
+        };
+        TemplatedWidget.prototype.getDefaultTemplateName = function () {
+            return TemplatedWidget_1.noGeneric(ss.getTypeName(ss.getInstanceType(this)));
+        };
         TemplatedWidget.prototype.getTemplateName = function () {
-            var noGeneric = function (s) {
-                var dollar = s.indexOf('$');
-                if (dollar >= 0) {
-                    return s.substr(0, dollar);
-                }
-                return s;
-            };
             var type = ss.getInstanceType(this);
             var fullName = ss.getTypeFullName(type);
             var templateNames = TemplatedWidget_1.templateNames;
@@ -2929,7 +2959,7 @@ var Serenity;
                 return cachedName;
             }
             while (type && type !== Serenity.Widget) {
-                var name = noGeneric(ss.getTypeFullName(type));
+                var name = TemplatedWidget_1.noGeneric(ss.getTypeFullName(type));
                 for (var _i = 0, _a = Q.Config.rootNamespaces; _i < _a.length; _i++) {
                     var k = _a[_i];
                     if (Q.startsWith(name, k + '.')) {
@@ -2947,7 +2977,7 @@ var Serenity;
                     templateNames[fullName] = name;
                     return name;
                 }
-                name = noGeneric(ss.getTypeName(type));
+                name = TemplatedWidget_1.noGeneric(ss.getTypeName(type));
                 if (Q.canLoadScriptData('Template.' + name) ||
                     $('script#Template_' + name).length > 0) {
                     TemplatedWidget_1.templateNames[fullName] = name;
@@ -2955,8 +2985,11 @@ var Serenity;
                 }
                 type = ss.getBaseType(type);
             }
-            templateNames[fullName] = cachedName = noGeneric(ss.getTypeName(ss.getInstanceType(this)));
+            templateNames[fullName] = cachedName = this.getDefaultTemplateName();
             return cachedName;
+        };
+        TemplatedWidget.prototype.getFallbackTemplate = function () {
+            return null;
         };
         TemplatedWidget.prototype.getTemplate = function () {
             var templateName = this.getTemplateName();
@@ -2964,7 +2997,14 @@ var Serenity;
             if (script.length > 0) {
                 return script.html();
             }
-            var template = Q.getTemplate(templateName);
+            var template;
+            if (!Q.canLoadScriptData('Template.' + templateName) &&
+                this.getDefaultTemplateName() == templateName) {
+                template = this.getFallbackTemplate();
+                if (template != null)
+                    return template;
+            }
+            template = Q.getTemplate(templateName);
             if (template == null) {
                 throw new Error(Q.format("Can't locate template for widget '{0}' with name '{1}'!", ss.getTypeName(ss.getInstanceType(this)), templateName));
             }
@@ -2984,31 +3024,267 @@ var Serenity;
     var IBooleanValue = /** @class */ (function () {
         function IBooleanValue() {
         }
+        IBooleanValue = __decorate([
+            Serenity.Decorators.registerInterface()
+        ], IBooleanValue);
         return IBooleanValue;
     }());
+    Serenity.IBooleanValue = IBooleanValue;
 })(Serenity || (Serenity = {}));
 var Serenity;
 (function (Serenity) {
     var IDoubleValue = /** @class */ (function () {
         function IDoubleValue() {
         }
+        IDoubleValue = __decorate([
+            Serenity.Decorators.registerInterface()
+        ], IDoubleValue);
         return IDoubleValue;
     }());
+    Serenity.IDoubleValue = IDoubleValue;
+})(Serenity || (Serenity = {}));
+var Serenity;
+(function (Serenity) {
+    var IGetEditValue = /** @class */ (function () {
+        function IGetEditValue() {
+        }
+        IGetEditValue = __decorate([
+            Serenity.Decorators.registerInterface()
+        ], IGetEditValue);
+        return IGetEditValue;
+    }());
+    Serenity.IGetEditValue = IGetEditValue;
+})(Serenity || (Serenity = {}));
+var Serenity;
+(function (Serenity) {
+    var ISetEditValue = /** @class */ (function () {
+        function ISetEditValue() {
+        }
+        ISetEditValue = __decorate([
+            Serenity.Decorators.registerInterface()
+        ], ISetEditValue);
+        return ISetEditValue;
+    }());
+    Serenity.ISetEditValue = ISetEditValue;
 })(Serenity || (Serenity = {}));
 var Serenity;
 (function (Serenity) {
     var IStringValue = /** @class */ (function () {
         function IStringValue() {
         }
+        IStringValue = __decorate([
+            Serenity.Decorators.registerInterface()
+        ], IStringValue);
         return IStringValue;
     }());
+    Serenity.IStringValue = IStringValue;
+})(Serenity || (Serenity = {}));
+var Serenity;
+(function (Serenity) {
+    var BooleanEditor = /** @class */ (function (_super) {
+        __extends(BooleanEditor, _super);
+        function BooleanEditor(input) {
+            var _this = _super.call(this, input) || this;
+            input.removeClass("flexify");
+            return _this;
+        }
+        Object.defineProperty(BooleanEditor.prototype, "value", {
+            get: function () {
+                return this.element.is(":checked");
+            },
+            set: function (value) {
+                this.element.prop("checked", !!value);
+            },
+            enumerable: true,
+            configurable: true
+        });
+        BooleanEditor.prototype.get_value = function () {
+            return this.value;
+        };
+        BooleanEditor.prototype.set_value = function (value) {
+            this.value = value;
+        };
+        BooleanEditor = __decorate([
+            Serenity.Decorators.element('<input type="checkbox"/>'),
+            Serenity.Decorators.registerEditor([Serenity.IBooleanValue])
+        ], BooleanEditor);
+        return BooleanEditor;
+    }(Serenity.Widget));
+    Serenity.BooleanEditor = BooleanEditor;
+})(Serenity || (Serenity = {}));
+var Serenity;
+(function (Serenity) {
+    // http://digitalbush.com/projects/masked-input-plugin/
+    var MaskedEditor = /** @class */ (function (_super) {
+        __extends(MaskedEditor, _super);
+        function MaskedEditor(input, opt) {
+            var _this = _super.call(this, input, opt) || this;
+            input.mask(_this.options.mask || '', {
+                placeholder: Q.coalesce(_this.options.placeholder, '_')
+            });
+            return _this;
+        }
+        Object.defineProperty(MaskedEditor.prototype, "value", {
+            get: function () {
+                this.element.triggerHandler("blur.mask");
+                return this.element.val();
+            },
+            set: function (value) {
+                this.element.val(value);
+            },
+            enumerable: true,
+            configurable: true
+        });
+        MaskedEditor.prototype.get_value = function () {
+            return this.value;
+        };
+        MaskedEditor.prototype.set_value = function (value) {
+            this.value = value;
+        };
+        MaskedEditor = __decorate([
+            Serenity.Decorators.element("<input type=\"text\"/>"),
+            Serenity.Decorators.registerEditor([Serenity.IStringValue])
+        ], MaskedEditor);
+        return MaskedEditor;
+    }(Serenity.Widget));
+    Serenity.MaskedEditor = MaskedEditor;
+})(Serenity || (Serenity = {}));
+var Serenity;
+(function (Serenity) {
+    var StringEditor = /** @class */ (function (_super) {
+        __extends(StringEditor, _super);
+        function StringEditor(input) {
+            return _super.call(this, input) || this;
+        }
+        Object.defineProperty(StringEditor.prototype, "value", {
+            get: function () {
+                return this.element.val();
+            },
+            set: function (value) {
+                this.element.val(value);
+            },
+            enumerable: true,
+            configurable: true
+        });
+        StringEditor.prototype.get_value = function () {
+            return this.value;
+        };
+        StringEditor.prototype.set_value = function (value) {
+            this.value = value;
+        };
+        StringEditor = __decorate([
+            Serenity.Decorators.element("<input type=\"text\"/>"),
+            Serenity.Decorators.registerEditor([Serenity.IStringValue])
+        ], StringEditor);
+        return StringEditor;
+    }(Serenity.Widget));
+    Serenity.StringEditor = StringEditor;
+})(Serenity || (Serenity = {}));
+var Serenity;
+(function (Serenity) {
+    var TextAreaEditor = /** @class */ (function (_super) {
+        __extends(TextAreaEditor, _super);
+        function TextAreaEditor(input, opt) {
+            var _this = _super.call(this, input, opt) || this;
+            if (_this.options.cols !== 0) {
+                input.attr('cols', Q.coalesce(_this.options.cols, 80));
+            }
+            if (_this.options.rows !== 0) {
+                input.attr('rows', Q.coalesce(_this.options.rows, 6));
+            }
+            return _this;
+        }
+        Object.defineProperty(TextAreaEditor.prototype, "value", {
+            get: function () {
+                return this.element.val();
+            },
+            set: function (value) {
+                this.element.val(value);
+            },
+            enumerable: true,
+            configurable: true
+        });
+        TextAreaEditor.prototype.get_value = function () {
+            return this.value;
+        };
+        TextAreaEditor.prototype.set_value = function (value) {
+            this.value = value;
+        };
+        TextAreaEditor = __decorate([
+            Serenity.Decorators.element("<textarea />"),
+            Serenity.Decorators.registerEditor([Serenity.IStringValue])
+        ], TextAreaEditor);
+        return TextAreaEditor;
+    }(Serenity.Widget));
+    Serenity.TextAreaEditor = TextAreaEditor;
+})(Serenity || (Serenity = {}));
+var Serenity;
+(function (Serenity) {
+    var TimeEditor = /** @class */ (function (_super) {
+        __extends(TimeEditor, _super);
+        function TimeEditor(input, opt) {
+            var _this = _super.call(this, input, opt) || this;
+            input.addClass('editor s-TimeEditor hour');
+            if (!_this.options.noEmptyOption) {
+                Q.addOption(input, '', '--');
+            }
+            for (var h = (_this.options.startHour || 0); h <= (_this.options.endHour || 23); h++) {
+                Q.addOption(input, h.toString(), ((h < 10) ? ('0' + h) : h.toString()));
+            }
+            _this.minutes = $('<select/>').addClass('editor s-TimeEditor minute').insertAfter(input);
+            for (var m = 0; m <= 59; m += (_this.options.intervalMinutes || 5)) {
+                Q.addOption(_this.minutes, m.toString(), ((m < 10) ? ('0' + m) : m.toString()));
+            }
+            return _this;
+        }
+        Object.defineProperty(TimeEditor.prototype, "value", {
+            get: function () {
+                var hour = Q.toId(this.element.val());
+                var minute = Q.toId(this.minutes.val());
+                if (hour == null || minute == null) {
+                    return null;
+                }
+                return hour * 60 + minute;
+            },
+            set: function (value) {
+                if (!value) {
+                    if (this.options.noEmptyOption) {
+                        this.element.val(this.options.startHour);
+                        this.minutes.val('0');
+                    }
+                    else {
+                        this.element.val('');
+                        this.minutes.val('0');
+                    }
+                }
+                else {
+                    this.element.val(Math.floor(value / 60).toString());
+                    this.minutes.val(value % 60);
+                }
+            },
+            enumerable: true,
+            configurable: true
+        });
+        TimeEditor.prototype.get_value = function () {
+            return this.value;
+        };
+        TimeEditor.prototype.set_value = function (value) {
+            this.value = value;
+        };
+        TimeEditor = __decorate([
+            Serenity.Decorators.element("<select />"),
+            Serenity.Decorators.registerEditor([Serenity.IDoubleValue])
+        ], TimeEditor);
+        return TimeEditor;
+    }(Serenity.Widget));
+    Serenity.TimeEditor = TimeEditor;
 })(Serenity || (Serenity = {}));
 var Serenity;
 (function (Serenity) {
     var TemplatedDialog = /** @class */ (function (_super) {
         __extends(TemplatedDialog, _super);
         function TemplatedDialog(options) {
-            var _this = _super.call(this, Q.newBodyDiv().addClass('hidden'), options) || this;
+            var _this = _super.call(this, Q.newBodyDiv().addClass('s-TemplatedDialog hidden'), options) || this;
             _this.element.attr("id", _this.uniqueName);
             _this.initValidator();
             _this.initTabs();
@@ -3218,7 +3494,8 @@ var Serenity;
             element.trigger(e);
         };
         TemplatedDialog.prototype.onDialogOpen = function () {
-            $(':input:eq(0)', this.element).focus();
+            if (!$(document.body).hasClass('mobile-device'))
+                $(':input:eq(0)', this.element).focus();
             this.arrange();
             this.tabs && this.tabs.tabs('option', 'active', 0);
         };
@@ -3261,8 +3538,11 @@ var Serenity;
             opt.resizable = ss.getAttributes(type, Serenity.ResizableAttribute, true).length > 0;
             opt.modal = true;
             opt.position = { my: 'center', at: 'center', of: $(window.window) };
-            opt.title = this.element.data('dialogtitle') || '';
+            opt.title = Q.coalesce(this.element.data('dialogtitle'), this.getDialogTitle()) || '';
             return opt;
+        };
+        TemplatedDialog.prototype.getDialogTitle = function () {
+            return "";
         };
         TemplatedDialog.prototype.dialogClose = function () {
             if (this.element.hasClass('ui-dialog-content'))
@@ -3294,9 +3574,9 @@ var Serenity;
         });
         TemplatedDialog.prototype.setupPanelTitle = function () {
             var _this = this;
-            var value = this.dialogTitle;
+            var value = Q.coalesce(this.dialogTitle, this.getDialogTitle());
             var pt = this.element.children('.panel-titlebar');
-            if (value == null) {
+            if (Q.isEmptyOrNull(value)) {
                 pt.remove();
             }
             else {
@@ -5295,24 +5575,59 @@ var Q;
                 jQueryDatepickerInitialization();
         });
     }
-    function jQuerySelect2Initialization() {
+    function jQueryUIInitialization() {
         $.ui.dialog.prototype._allowInteraction = function (event) {
             if ($(event.target).closest(".ui-dialog").length) {
                 return true;
             }
             return !!$(event.target).closest(".ui-datepicker, .select2-drop, .cke, .cke_dialog, #support-modal").length;
         };
+        (function (orig) {
+            $.ui.dialog.prototype._focusTabbable = function () {
+                if ($(document.body).hasClass('mobile-device')) {
+                    this.uiDialog && this.uiDialog.focus();
+                    return;
+                }
+                orig.call(this);
+            };
+        })($.ui.dialog.prototype._focusTabbable);
+        (function (orig) {
+            $.ui.dialog.prototype._createTitlebar = function () {
+                orig.call(this);
+                this.uiDialogTitlebar.find('.ui-dialog-titlebar-close').html('<i class="fa fa-times" />');
+            };
+        })($.ui.dialog.prototype._createTitlebar);
     }
     ;
-    if (window['jQuery'] && window['jQuery']['ui']) {
-        jQuerySelect2Initialization();
+    if (jQuery.ui) {
+        jQueryUIInitialization();
     }
     else {
-        jQuery(function ($) {
-            if (window['jQuery']['ui'])
-                jQuerySelect2Initialization();
+        jQuery(function () {
+            if (jQuery.ui)
+                jQueryUIInitialization();
         });
     }
+    jQuery.cleanData = (function (orig) {
+        return function (elems) {
+            var events, elem, i, e;
+            var cloned = elems;
+            for (i = 0; (elem = cloned[i]) != null; i++) {
+                try {
+                    events = $._data(elem, "events");
+                    if (events && events.remove) {
+                        // html collection might change during remove event, so clone it!
+                        if (cloned === elems)
+                            cloned = Array.prototype.slice.call(elems);
+                        $(elem).triggerHandler("remove");
+                        delete events.remove;
+                    }
+                }
+                catch (e) { }
+            }
+            orig(elems);
+        };
+    })(jQuery.cleanData);
     function ssExceptionInitialization() {
         ss.Exception.prototype.toString = function () {
             return this.get_message();

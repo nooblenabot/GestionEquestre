@@ -34,7 +34,7 @@ namespace GestionEquestre.Ge.Forms
         public Int64 BirthCity { get; set; }
         public Int16 BirthCountry { get; set; }
         public Int16 Nationality { get; set; }
-        public Stream Photo { get; set; }
+        public String Photo { get; set; }
         public String Phone { get; set; }
         public String Gsm { get; set; }
         public String WorkPhone { get; set; }

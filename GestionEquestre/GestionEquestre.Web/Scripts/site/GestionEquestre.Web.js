@@ -898,7 +898,7 @@ var GestionEquestre;
         }(Serenity.PrefixedContext));
         ManCavaliersForm.formKey = 'Ge.ManCavaliers';
         Ge.ManCavaliersForm = ManCavaliersForm;
-        [['LicFfe', function () { return Serenity.StringEditor; }], ['Person', function () { return Serenity.LookupEditor; }], ['IsActive', function () { return Serenity.BooleanEditor; }], ['NotArchive', function () { return Serenity.BooleanEditor; }], ['InsertDate', function () { return Serenity.DateEditor; }], ['InsertUsername', function () { return Serenity.StringEditor; }], ['UpdateDate', function () { return Serenity.DateEditor; }], ['UpdateUsername', function () { return Serenity.StringEditor; }], ['MilesimeLicnece', function () { return Serenity.DateEditor; }], ['NiveauGalop', function () { return Serenity.LookupEditor; }], ['LicenceCompetition', function () { return Serenity.LookupEditor; }], ['DateCertificatMedical', function () { return Serenity.DateEditor; }], ['Caption', function () { return Serenity.StringEditor; }], ['ArchiveDate', function () { return Serenity.DateEditor; }]].forEach(function (x) { return Object.defineProperty(ManCavaliersForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
+        [['LicFfe', function () { return Serenity.StringEditor; }], ['Person', function () { return Serenity.LookupEditor; }], ['IsActive', function () { return Serenity.BooleanEditor; }], ['NotArchive', function () { return Serenity.BooleanEditor; }], ['InsertDate', function () { return Serenity.DateEditor; }], ['InsertUsername', function () { return Serenity.StringEditor; }], ['UpdateDate', function () { return Serenity.DateEditor; }], ['UpdateUsername', function () { return Serenity.StringEditor; }], ['MilesimeLicnece', function () { return Serenity.DateYearEditor; }], ['NiveauGalop', function () { return Serenity.LookupEditor; }], ['LicenceCompetition', function () { return Serenity.LookupEditor; }], ['DateCertificatMedical', function () { return Serenity.DateEditor; }], ['Caption', function () { return Serenity.StringEditor; }], ['ArchiveDate', function () { return Serenity.DateEditor; }]].forEach(function (x) { return Object.defineProperty(ManCavaliersForm.prototype, x[0], { get: function () { return this.w(x[0], x[1]()); }, enumerable: true, configurable: true }); });
     })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
 })(GestionEquestre || (GestionEquestre = {}));
 var GestionEquestre;
@@ -4239,7 +4239,11 @@ var GestionEquestre;
             ManFolderDialog.prototype.loadEntity = function (entity) {
                 _super.prototype.loadEntity.call(this, entity);
                 Serenity.TabsExtensions.setDisabled(this.tabs, 'Horses', this.isNewOrDeleted());
+                Serenity.TabsExtensions.setDisabled(this.tabs, 'Cavaliers', this.isNewOrDeleted());
+                Serenity.TabsExtensions.setDisabled(this.tabs, 'Others Persons', this.isNewOrDeleted());
                 this.FolderHorseGrid.Folder = entity.Id;
+                this.FolderCavalierGrid.Folder = entity.Id;
+                this.FolderPersonGrid.Folder = entity.Id;
             };
             return ManFolderDialog;
         }(Serenity.EntityDialog));
@@ -4793,9 +4797,10 @@ var GestionEquestre;
         var ManHorsesDialog = (function (_super) {
             __extends(ManHorsesDialog, _super);
             function ManHorsesDialog() {
-                var _this = _super !== null && _super.apply(this, arguments) || this;
+                var _this = _super.call(this) || this;
                 _this.form = new Ge.ManHorsesForm(_this.idPrefix);
                 return _this;
+                //this.form.Hnin.change(e => { });
             }
             ManHorsesDialog.prototype.getFormKey = function () { return Ge.ManHorsesForm.formKey; };
             ManHorsesDialog.prototype.getIdProperty = function () { return Ge.ManHorsesRow.idProperty; };
