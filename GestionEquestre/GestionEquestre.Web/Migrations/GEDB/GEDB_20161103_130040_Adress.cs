@@ -12,7 +12,7 @@ namespace GestionEquestre.Migrations.GEDB
         {
             Action<ICreateTableWithColumnSyntax> addUsersColumns = expr => expr
                 .WithColumn("IsActive").AsBoolean().NotNullable().WithDefaultValue(1)
-                .WithColumn("NotArchive").AsBoolean().NotNullable().WithDefaultValue(1)
+                .WithColumn("IsArchive").AsBoolean().NotNullable().WithDefaultValue(0)
                 .WithColumn("InsertDate").AsDateTime().NotNullable()
                 .WithColumn("InsertUserId").AsInt32().NotNullable()
                 .WithColumn("UpdateDate").AsDateTime().Nullable()

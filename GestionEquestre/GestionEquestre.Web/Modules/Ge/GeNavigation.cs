@@ -27,3 +27,4 @@ using Administration = GestionEquestre.Administration.Pages;
 [assembly: NavigationLink(9100, "Settings/Globals Settings/Maritalstatus", typeof(MyPages.SetMaritalstatusController), icon: null)]
 [assembly: NavigationLink(9100, "Settings/Globals Settings/Sexe", typeof(MyPages.SetSexeController), icon: null)]
 [assembly: NavigationLink(9100, "Settings/Globals Settings/Ueln organisation", typeof(MyPages.SetUelnorgaController), icon: null)]
+[assembly: NavigationLink(int.MaxValue, "Ge/Cor Etab", typeof(MyPages.CorEtabController), icon: null)]

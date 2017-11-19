@@ -6,9 +6,9 @@ namespace GestionEquestre.Ge.Repositories
     using Serenity.Services;
     using System;
     using System.Data;
-    using MyRow = Entities.ManFolderRow;
+    using MyRow = Entities.CorEtabRow;
 
-    public class ManFolderRepository
+    public class CorEtabRepository
     {
         private static MyRow.RowFields fld { get { return MyRow.Fields; } }
 
@@ -37,39 +37,8 @@ namespace GestionEquestre.Ge.Repositories
             return new MyListHandler().Process(connection, request);
         }
 
-        private class MySaveHandler : SaveRequestHandler<MyRow>
-        {
-            protected override void BeforeSave()
-            {
-                base.BeforeSave();
-                if (base.IsCreate)
-                {
-                    base.Row.InsertUserId = Convert.ToInt32(Authorization.UserId);
-                    base.Row.InsertDate = DateTime.Now;
-                    base.Row.CreateDate = DateTime.Now;
-                }
-                else
-                {
-                    base.Row.UpdateUserId = Convert.ToInt32(Authorization.UserId);
-                    base.Row.UpdateDate = DateTime.Now;
-                }
-            }
-        }
-        private class MyDeleteHandler : DeleteRequestHandler<MyRow>
-        {
-            protected override void ExecuteDelete()
-            {
-                try
-                {
-                    base.ExecuteDelete();
-                }
-                catch (Exception e)
-                {
-                    SqlExceptionHelper.HandleDeleteForeignKeyException(e);
-                    throw;
-                }
-            }
-        }
+        private class MySaveHandler : SaveRequestHandler<MyRow> { }
+        private class MyDeleteHandler : DeleteRequestHandler<MyRow> { }
         private class MyRetrieveHandler : RetrieveRequestHandler<MyRow> { }
         private class MyListHandler : ListRequestHandler<MyRow> { }
     }

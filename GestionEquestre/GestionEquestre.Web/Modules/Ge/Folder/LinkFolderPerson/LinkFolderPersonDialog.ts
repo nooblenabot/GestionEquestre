@@ -6,6 +6,8 @@ namespace GestionEquestre.Ge {
     export class LinkFolderPersonDialog extends Serenity.EntityDialog<LinkFolderPersonDialog,any> {
         constructor() {
             super();
+
+
         }   
     }
 }

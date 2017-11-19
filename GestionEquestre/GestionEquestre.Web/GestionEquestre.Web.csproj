@@ -864,6 +864,7 @@
     <Content Include="Scripts\SlickGrid\slick.remotemodel.js" />
     <Content Include="Scripts\sortable.js" />
     <Content Include="Scripts\sortable.min.js" />
+    <Content Include="Scripts\vform.js" />
     <Content Include="wkhtmltopdf-license.txt" />
     <Content Include="Modules\Ge\Management\Horses\ManHorsesIndex.cshtml" />
     <Content Include="Scripts\ckeditor\skins\moono\readme.md" />
@@ -1809,6 +1810,9 @@
     <TypeScriptCompile Include="Imports\ServerTypings\Ge.CorCorporateForm.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
+    <Content Include="Modules\GE\CorEtab\CorEtabIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\GE\CorEtab\CorEtabDialog.ts" />
+    <TypeScriptCompile Include="Modules\GE\CorEtab\CorEtabGrid.ts" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
@@ -1840,6 +1844,7 @@
     <Compile Include="Migrations\GEDB\GEDB_20161103_130031_City.cs" />
     <Compile Include="Migrations\GEDB\GEDB_20161103_130040_Adress.cs" />
     <Compile Include="Migrations\GEDB\GEDB_20161103_140000_Horses.cs" />
+    <Compile Include="Migrations\GEDB\GEDB_20161103_140003_Etablishment.cs" />
     <Compile Include="Migrations\GEDB\GEDB_20161103_140002_Corporate.cs" />
     <Compile Include="Migrations\GEDB\GEDB_20161103_140001_Person.cs" />
     <Compile Include="Migrations\GEDB\GEDB_20161103_140010_Cavaliers.cs" />
@@ -2075,6 +2080,12 @@
     <Compile Include="Modules\Ge\Settings\CorCorporate\CorCorporatePage.cs" />
     <Compile Include="Modules\Ge\Settings\CorCorporate\CorCorporateColumns.cs" />
     <Compile Include="Modules\Ge\Settings\CorCorporate\CorCorporateForm.cs" />
+    <Compile Include="Modules\GE\CorEtab\CorEtabRow.cs" />
+    <Compile Include="Modules\GE\CorEtab\CorEtabRepository.cs" />
+    <Compile Include="Modules\GE\CorEtab\CorEtabEndpoint.cs" />
+    <Compile Include="Modules\GE\CorEtab\CorEtabPage.cs" />
+    <Compile Include="Modules\GE\CorEtab\CorEtabColumns.cs" />
+    <Compile Include="Modules\GE\CorEtab\CorEtabForm.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

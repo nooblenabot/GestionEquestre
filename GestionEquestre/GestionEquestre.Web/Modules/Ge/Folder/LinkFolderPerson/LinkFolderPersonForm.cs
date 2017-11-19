@@ -16,7 +16,7 @@ namespace GestionEquestre.Ge.Forms
         [Hidden]
         public Int64 Folder { get; set; }
         [LookupEditor(typeof(Ge.Scripts.ManPersonActiveLookup), MinimumResultsForSearch = 1, InplaceAdd = true)]
-        public String PersonSurname { get; set; }
+        public Int64 PersonId { get; set; }
         public String Caption { get; set; }
     }
 }

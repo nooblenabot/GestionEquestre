@@ -14,7 +14,7 @@
     "~/Scripts/vegas/vegas.js",
     "~/Scripts/saltarelle/mscorlib.js",
     "~/Scripts/serenity/Serenity.CoreLib.js",
-    "~/Scripts/serenity/Serenity.Script.UI.js"
+    "~/Scripts/serenity/Serenity.Script.UI.js"    
   ],
   "Site": [
     "~/Scripts/jquery.autoNumeric.js",
@@ -39,6 +39,7 @@
     "~/Scripts/fastclick/fastclick.js",
     "~/Scripts/adminlte/app.js",
     "~/Scripts/site/GestionEquestre.Web.js",
+    "~/Scripts/vform.js",
     "dynamic://ColumnsBundle",
     "dynamic://FormBundle",
     "dynamic://TemplateBundle"

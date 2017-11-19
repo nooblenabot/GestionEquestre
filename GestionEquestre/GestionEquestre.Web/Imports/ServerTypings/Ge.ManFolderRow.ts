@@ -9,8 +9,7 @@
         UpdateUserId?: number;
         Caption?: string;
         ArchiveDate?: string;
-        Number?: number;
-        CreateeDate?: string;
+        CreateDate?: string;
         CloseRaison?: string;
         CloseDate?: string;
         Establishment?: number;
@@ -39,8 +38,7 @@
             export declare const UpdateUserId: string;
             export declare const Caption: string;
             export declare const ArchiveDate: string;
-            export declare const Number: string;
-            export declare const CreateeDate: string;
+            export declare const CreateDate: string;
             export declare const CloseRaison: string;
             export declare const CloseDate: string;
             export declare const Establishment: string;
@@ -59,8 +57,7 @@
             'UpdateUserId', 
             'Caption', 
             'ArchiveDate', 
-            'Number', 
-            'CreateeDate', 
+            'CreateDate', 
             'CloseRaison', 
             'CloseDate', 
             'Establishment', 

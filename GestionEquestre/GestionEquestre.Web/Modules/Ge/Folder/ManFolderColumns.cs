@@ -24,8 +24,7 @@ namespace GestionEquestre.Ge.Columns
         [EditLink]
         public String Caption { get; set; }
         public DateTime ArchiveDate { get; set; }
-        public Int32 Number { get; set; }
-        public DateTime CreateeDate { get; set; }
+        public DateTime CreateDate { get; set; }
         public String CloseRaison { get; set; }
         public DateTime CloseDate { get; set; }
         public Int32 Establishment { get; set; }

@@ -18,7 +18,7 @@ namespace GestionEquestre.Migrations.GEDB
                 .WithColumn("BirthOrganization").AsInt32().NotNullable()
                 .WithColumn("Name").AsString(100).NotNullable()
                 .WithColumn("IsActive").AsBoolean().NotNullable().WithDefaultValue(1)
-                .WithColumn("NotArchive").AsBoolean().NotNullable().WithDefaultValue(1)
+                .WithColumn("IsArchive").AsBoolean().NotNullable().WithDefaultValue(0)
                 .WithColumn("InsertDate").AsDateTime().NotNullable()
                 .WithColumn("InsertUserId").AsInt32().NotNullable()
                 .WithColumn("UpdateDate").AsDateTime().Nullable()

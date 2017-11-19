@@ -80,18 +80,11 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.ArchiveDate[this] = value; }
         }
 
-        [DisplayName("Number"), NotNull]
-        public Int32? Number
+        [DisplayName("Create Date")]
+        public DateTime? CreateDate
         {
-            get { return Fields.Number[this]; }
-            set { Fields.Number[this] = value; }
-        }
-
-        [DisplayName("Createe Date")]
-        public DateTime? CreateeDate
-        {
-            get { return Fields.CreateeDate[this]; }
-            set { Fields.CreateeDate[this] = value; }
+            get { return Fields.CreateDate[this]; }
+            set { Fields.CreateDate[this] = value; }
         }
 
         [DisplayName("Close Raison"), Size(50)]
@@ -176,8 +169,7 @@ namespace GestionEquestre.Ge.Entities
             public Int32Field UpdateUserId;
             public StringField Caption;
             public DateTimeField ArchiveDate;
-            public Int32Field Number;
-            public DateTimeField CreateeDate;
+            public DateTimeField CreateDate;
             public StringField CloseRaison;
             public DateTimeField CloseDate;
             public Int32Field Establishment;

@@ -12,7 +12,7 @@ namespace GestionEquestre.Migrations.GEDB
         {
             Action<ICreateTableWithColumnSyntax> addUsersColumns = expr => expr
                .WithColumn("IsActive").AsBoolean().NotNullable().WithDefaultValue(1)
-               .WithColumn("NotArchive").AsBoolean().NotNullable().WithDefaultValue(1)
+               .WithColumn("IsArchive").AsBoolean().NotNullable().WithDefaultValue(0)
                .WithColumn("InsertDate").AsDateTime().NotNullable()
                .WithColumn("InsertUserId").AsInt32().NotNullable()
                .WithColumn("UpdateDate").AsDateTime().Nullable()
@@ -20,7 +20,7 @@ namespace GestionEquestre.Migrations.GEDB
                .WithColumn("Caption").AsString(50).Nullable()
                .WithColumn("ArchiveDate").AsDateTime().Nullable()
                .WithColumn("Number").AsInt32().NotNullable()
-               .WithColumn("CreateeDate").AsDateTime().Nullable()
+               .WithColumn("CreateDate").AsDateTime().Nullable()
                .WithColumn("CloseRaison").AsString(50).Nullable()
                .WithColumn("CloseDate").AsDateTime().Nullable()
                .WithColumn("establishment").AsInt32().NotNullable()

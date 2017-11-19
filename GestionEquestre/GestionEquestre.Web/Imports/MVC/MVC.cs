@@ -54,6 +54,11 @@ namespace MVC
                 public const string AccBankaccountIndex = "~/Modules/Ge/AccBankaccount/AccBankaccountIndex.cshtml";
             }
 
+            public static class CorEtab
+            {
+                public const string CorEtabIndex = "~/Modules/Ge/CorEtab/CorEtabIndex.cshtml";
+            }
+
             public static class Folder
             {
                 public const string ManFolderIndex = "~/Modules/Ge/Folder/ManFolderIndex.cshtml";
