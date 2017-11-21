@@ -46,9 +46,9 @@ namespace GestionEquestre.Ge.Repositories
                 {
                     base.Row.InsertUserId = Convert.ToInt32(Authorization.UserId);
                     base.Row.InsertDate = DateTime.Now;
-                    base.Row.CreateDate = DateTime.Now;
+                    // base.Row.CreateDate = DateTime.Now;
                 }
-                else
+                else 
                 {
                     base.Row.UpdateUserId = Convert.ToInt32(Authorization.UserId);
                     base.Row.UpdateDate = DateTime.Now;
@@ -59,15 +59,16 @@ namespace GestionEquestre.Ge.Repositories
         {
             protected override void ExecuteDelete()
             {
-                try
-                {
-                    base.ExecuteDelete();
-                }
+                 try
+                    {
+                        base.ExecuteDelete();
+                    }
                 catch (Exception e)
-                {
-                    SqlExceptionHelper.HandleDeleteForeignKeyException(e);
-                    throw;
-                }
+                    {
+                       SqlExceptionHelper.HandleDeleteForeignKeyException(e);
+                        throw;
+                    }
+         
             }
         }
         private class MyRetrieveHandler : RetrieveRequestHandler<MyRow> { }

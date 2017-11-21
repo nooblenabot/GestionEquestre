@@ -1,836 +1,5 @@
 ﻿/// <reference types="jquery" />
 /// <reference types="jqueryui" />
-declare namespace GestionEquestre.Membership {
-    class SignUpPanel extends Serenity.PropertyPanel<SignUpRequest, any> {
-        protected getFormKey(): string;
-        private form;
-        constructor(container: JQuery);
-    }
-}
-declare namespace GestionEquestre.Membership {
-    class ResetPasswordPanel extends Serenity.PropertyPanel<ResetPasswordRequest, any> {
-        protected getFormKey(): string;
-        private form;
-        constructor(container: JQuery);
-    }
-}
-declare namespace GestionEquestre.Membership {
-    class ForgotPasswordPanel extends Serenity.PropertyPanel<ForgotPasswordRequest, any> {
-        protected getFormKey(): string;
-        private form;
-        constructor(container: JQuery);
-    }
-}
-declare namespace GestionEquestre.Membership {
-    class ChangePasswordPanel extends Serenity.PropertyPanel<ChangePasswordRequest, any> {
-        protected getFormKey(): string;
-        private form;
-        constructor(container: JQuery);
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class SetUelnorgaDialog extends Serenity.EntityDialog<SetUelnorgaRow, any> {
-        protected getFormKey(): string;
-        protected getIdProperty(): string;
-        protected getLocalTextPrefix(): string;
-        protected getNameProperty(): string;
-        protected getService(): string;
-        protected form: SetUelnorgaForm;
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class SetUelnorgaGrid extends Serenity.EntityGrid<SetUelnorgaRow, any> {
-        protected getColumnsKey(): string;
-        protected getDialogType(): typeof SetUelnorgaDialog;
-        protected getIdProperty(): string;
-        protected getLocalTextPrefix(): string;
-        protected getService(): string;
-        constructor(container: JQuery);
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class SetSexeDialog extends Serenity.EntityDialog<SetSexeRow, any> {
-        protected getFormKey(): string;
-        protected getIdProperty(): string;
-        protected getLocalTextPrefix(): string;
-        protected getNameProperty(): string;
-        protected getService(): string;
-        protected form: SetSexeForm;
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class SetSexeGrid extends Serenity.EntityGrid<SetSexeRow, any> {
-        protected getColumnsKey(): string;
-        protected getDialogType(): typeof SetSexeDialog;
-        protected getIdProperty(): string;
-        protected getLocalTextPrefix(): string;
-        protected getService(): string;
-        constructor(container: JQuery);
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class SetMaritalstatusDialog extends Serenity.EntityDialog<SetMaritalstatusRow, any> {
-        protected getFormKey(): string;
-        protected getIdProperty(): string;
-        protected getLocalTextPrefix(): string;
-        protected getNameProperty(): string;
-        protected getService(): string;
-        protected form: SetMaritalstatusForm;
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class SetMaritalstatusGrid extends Serenity.EntityGrid<SetMaritalstatusRow, any> {
-        protected getColumnsKey(): string;
-        protected getDialogType(): typeof SetMaritalstatusDialog;
-        protected getIdProperty(): string;
-        protected getLocalTextPrefix(): string;
-        protected getService(): string;
-        constructor(container: JQuery);
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class SetLfcDialog extends Serenity.EntityDialog<SetLfcRow, any> {
-        protected getFormKey(): string;
-        protected getIdProperty(): string;
-        protected getLocalTextPrefix(): string;
-        protected getNameProperty(): string;
-        protected getService(): string;
-        protected form: SetLfcForm;
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class SetLfcGrid extends Serenity.EntityGrid<SetLfcRow, any> {
-        protected getColumnsKey(): string;
-        protected getDialogType(): typeof SetLfcDialog;
-        protected getIdProperty(): string;
-        protected getLocalTextPrefix(): string;
-        protected getService(): string;
-        constructor(container: JQuery);
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class SetGalopDialog extends Serenity.EntityDialog<SetGalopRow, any> {
-        protected getFormKey(): string;
-        protected getIdProperty(): string;
-        protected getLocalTextPrefix(): string;
-        protected getNameProperty(): string;
-        protected getService(): string;
-        protected form: SetGalopForm;
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class SetGalopGrid extends Serenity.EntityGrid<SetGalopRow, any> {
-        protected getColumnsKey(): string;
-        protected getDialogType(): typeof SetGalopDialog;
-        protected getIdProperty(): string;
-        protected getLocalTextPrefix(): string;
-        protected getService(): string;
-        constructor(container: JQuery);
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class SetCountryDialog extends Serenity.EntityDialog<SetCountryRow, any> {
-        protected getFormKey(): string;
-        protected getIdProperty(): string;
-        protected getLocalTextPrefix(): string;
-        protected getNameProperty(): string;
-        protected getService(): string;
-        protected form: SetCountryForm;
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class SetCountryGrid extends Serenity.EntityGrid<SetCountryRow, any> {
-        protected getColumnsKey(): string;
-        protected getDialogType(): typeof SetCountryDialog;
-        protected getIdProperty(): string;
-        protected getLocalTextPrefix(): string;
-        protected getService(): string;
-        constructor(container: JQuery);
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class SetCityDialog extends Serenity.EntityDialog<SetCityRow, any> {
-        protected getFormKey(): string;
-        protected getIdProperty(): string;
-        protected getLocalTextPrefix(): string;
-        protected getNameProperty(): string;
-        protected getService(): string;
-        protected form: SetCityForm;
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class SetCityGrid extends Serenity.EntityGrid<SetCityRow, any> {
-        protected getColumnsKey(): string;
-        protected getDialogType(): typeof SetCityDialog;
-        protected getIdProperty(): string;
-        protected getLocalTextPrefix(): string;
-        protected getService(): string;
-        constructor(container: JQuery);
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class CorCorporateDialog extends Serenity.EntityDialog<CorCorporateRow, any> {
-        protected getFormKey(): string;
-        protected getIdProperty(): string;
-        protected getLocalTextPrefix(): string;
-        protected getNameProperty(): string;
-        protected getService(): string;
-        protected form: CorCorporateForm;
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class CorCorporateGrid extends Serenity.EntityGrid<CorCorporateRow, any> {
-        protected getColumnsKey(): string;
-        protected getDialogType(): typeof CorCorporateDialog;
-        protected getIdProperty(): string;
-        protected getLocalTextPrefix(): string;
-        protected getService(): string;
-        constructor(container: JQuery);
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class ManPersonDialog extends Serenity.EntityDialog<ManPersonRow, any> {
-        protected getFormKey(): string;
-        protected getIdProperty(): string;
-        protected getLocalTextPrefix(): string;
-        protected getNameProperty(): string;
-        protected getService(): string;
-        protected form: ManPersonForm;
-        V: any;
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class ManPersonGrid extends Serenity.EntityGrid<ManPersonRow, any> {
-        protected getColumnsKey(): string;
-        protected getDialogType(): typeof ManPersonDialog;
-        protected getIdProperty(): string;
-        protected getLocalTextPrefix(): string;
-        protected getService(): string;
-        constructor(container: JQuery);
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class ManOwnerDialog extends Serenity.EntityDialog<ManOwnerRow, any> {
-        protected getFormKey(): string;
-        protected getIdProperty(): string;
-        protected getLocalTextPrefix(): string;
-        protected getNameProperty(): string;
-        protected getService(): string;
-        protected form: ManOwnerForm;
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class ManOwnerGrid extends Serenity.EntityGrid<ManOwnerRow, any> {
-        protected getColumnsKey(): string;
-        protected getDialogType(): typeof ManOwnerDialog;
-        protected getIdProperty(): string;
-        protected getLocalTextPrefix(): string;
-        protected getService(): string;
-        constructor(container: JQuery);
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class ManHorsesDialog extends Serenity.EntityDialog<ManHorsesRow, any> {
-        protected getFormKey(): string;
-        protected getIdProperty(): string;
-        protected getLocalTextPrefix(): string;
-        protected getNameProperty(): string;
-        protected getService(): string;
-        protected form: ManHorsesForm;
-        constructor();
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class ManHorsesGrid extends Serenity.EntityGrid<ManHorsesRow, any> {
-        protected getColumnsKey(): string;
-        protected getDialogType(): typeof ManHorsesDialog;
-        protected getIdProperty(): string;
-        protected getLocalTextPrefix(): string;
-        protected getService(): string;
-        constructor(container: JQuery);
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class ManCavaliersDialog extends Serenity.EntityDialog<ManCavaliersRow, any> {
-        protected getFormKey(): string;
-        protected getIdProperty(): string;
-        protected getLocalTextPrefix(): string;
-        protected getNameProperty(): string;
-        protected getService(): string;
-        protected form: ManCavaliersForm;
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class ManCavaliersGrid extends Serenity.EntityGrid<ManCavaliersRow, any> {
-        protected getColumnsKey(): string;
-        protected getDialogType(): typeof ManCavaliersDialog;
-        protected getIdProperty(): string;
-        protected getLocalTextPrefix(): string;
-        protected getService(): string;
-        constructor(container: JQuery);
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class ManAdressDialog extends Serenity.EntityDialog<ManAdressRow, any> {
-        protected getFormKey(): string;
-        protected getIdProperty(): string;
-        protected getLocalTextPrefix(): string;
-        protected getNameProperty(): string;
-        protected getService(): string;
-        protected form: ManAdressForm;
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class ManAdressGrid extends Serenity.EntityGrid<ManAdressRow, any> {
-        protected getColumnsKey(): string;
-        protected getDialogType(): typeof ManAdressDialog;
-        protected getIdProperty(): string;
-        protected getLocalTextPrefix(): string;
-        protected getService(): string;
-        constructor(container: JQuery);
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class ManFolderDialog extends Serenity.EntityDialog<ManFolderRow, any> {
-        protected getFormKey(): string;
-        protected getIdProperty(): string;
-        protected getLocalTextPrefix(): string;
-        protected getNameProperty(): string;
-        protected getService(): string;
-        protected form: ManFolderForm;
-        private FolderHorseGrid;
-        private FolderCavalierGrid;
-        private FolderPersonGrid;
-        private loadedState;
-        constructor();
-        loadEntity(entity: ManFolderRow): void;
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class ManFolderGrid extends Serenity.EntityGrid<ManFolderRow, any> {
-        protected getColumnsKey(): string;
-        protected getDialogType(): typeof ManFolderDialog;
-        protected getIdProperty(): string;
-        protected getLocalTextPrefix(): string;
-        protected getService(): string;
-        constructor(container: JQuery);
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class LinkFolderPersonDialog extends Serenity.EntityDialog<LinkFolderPersonDialog, any> {
-        constructor();
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class LinkFolderPersonGrid extends Serenity.EntityGrid<LinkFolderPersonRow, any> {
-        protected getColumnsKey(): string;
-        protected getIdProperty(): string;
-        protected getLocalTextPrefix(): string;
-        constructor(container: JQuery);
-        protected getColumns(): Slick.Column[];
-        protected onClick(e: JQueryEventObject, row: number, cell: number): void;
-        protected editItem(entityOrId: any): void;
-        protected initEntityDialog(itemType: any, dialog: any): void;
-        protected createQuickSearchInput(): void;
-        protected getButtons(): Serenity.ToolButton[];
-        protected addButtonClick(): void;
-        protected getInitialTitle(): any;
-        protected usePager(): boolean;
-        protected getGridCanLoad(): boolean;
-        private _Folder;
-        Folder: number;
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class LinkFolderHorseDialog extends Serenity.EntityDialog<LinkFolderHorseDialog, any> {
-        constructor();
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class LinkFolderHorseGrid extends Serenity.EntityGrid<LinkFolderHorseRow, any> {
-        protected getColumnsKey(): string;
-        protected getIdProperty(): string;
-        protected getLocalTextPrefix(): string;
-        constructor(container: JQuery);
-        protected getColumns(): Slick.Column[];
-        protected onClick(e: JQueryEventObject, row: number, cell: number): void;
-        protected editItem(entityOrId: any): void;
-        protected initEntityDialog(itemType: any, dialog: any): void;
-        protected createQuickSearchInput(): void;
-        protected getButtons(): Serenity.ToolButton[];
-        protected addButtonClick(): void;
-        protected getInitialTitle(): any;
-        protected usePager(): boolean;
-        protected getGridCanLoad(): boolean;
-        private _Folder;
-        Folder: number;
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class LinkFolderCavalierDialog extends Serenity.EntityDialog<LinkFolderCavalierDialog, any> {
-        constructor();
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class LinkFolderCavalierGrid extends Serenity.EntityGrid<LinkFolderCavalierRow, any> {
-        protected getColumnsKey(): string;
-        protected getIdProperty(): string;
-        protected getLocalTextPrefix(): string;
-        constructor(container: JQuery);
-        protected getColumns(): Slick.Column[];
-        protected onClick(e: JQueryEventObject, row: number, cell: number): void;
-        protected editItem(entityOrId: any): void;
-        protected initEntityDialog(itemType: any, dialog: any): void;
-        protected createQuickSearchInput(): void;
-        protected getButtons(): Serenity.ToolButton[];
-        protected addButtonClick(): void;
-        protected getInitialTitle(): any;
-        protected usePager(): boolean;
-        protected getGridCanLoad(): boolean;
-        private _Folder;
-        Folder: number;
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class CorEtabDialog extends Serenity.EntityDialog<CorEtabRow, any> {
-        protected getFormKey(): string;
-        protected getIdProperty(): string;
-        protected getLocalTextPrefix(): string;
-        protected getNameProperty(): string;
-        protected getService(): string;
-        protected form: CorEtabForm;
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class CorEtabGrid extends Serenity.EntityGrid<CorEtabRow, any> {
-        protected getColumnsKey(): string;
-        protected getDialogType(): typeof CorEtabDialog;
-        protected getIdProperty(): string;
-        protected getLocalTextPrefix(): string;
-        protected getService(): string;
-        constructor(container: JQuery);
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class AccBankaccountDialog extends Serenity.EntityDialog<AccBankaccountRow, any> {
-        protected getFormKey(): string;
-        protected getIdProperty(): string;
-        protected getLocalTextPrefix(): string;
-        protected getNameProperty(): string;
-        protected getService(): string;
-        protected form: AccBankaccountForm;
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class AccBankaccountGrid extends Serenity.EntityGrid<AccBankaccountRow, any> {
-        protected getColumnsKey(): string;
-        protected getDialogType(): typeof AccBankaccountDialog;
-        protected getIdProperty(): string;
-        protected getLocalTextPrefix(): string;
-        protected getService(): string;
-        constructor(container: JQuery);
-    }
-}
-declare namespace GestionEquestre.LanguageList {
-    function getValue(): string[][];
-}
-declare namespace GestionEquestre.ScriptInitialization {
-}
-declare namespace GestionEquestre.Common {
-    class UserPreferenceStorage implements Serenity.SettingStorage {
-        getItem(key: string): string;
-        setItem(key: string, data: string): void;
-    }
-}
-declare var jsPDF: any;
-declare namespace GestionEquestre.Common {
-    interface PdfExportOptions {
-        grid: Serenity.DataGrid<any, any>;
-        onViewSubmit: () => boolean;
-        title?: string;
-        hint?: string;
-        separator?: boolean;
-        reportTitle?: string;
-        titleTop?: number;
-        titleFontSize?: number;
-        fileName?: string;
-        pageNumbers?: boolean;
-        columnTitles?: {
-            [key: string]: string;
-        };
-        tableOptions?: jsPDF.AutoTableOptions;
-        output?: string;
-        autoPrint?: boolean;
-        printDateTimeHeader?: boolean;
-    }
-    namespace PdfExportHelper {
-        function exportToPdf(options: PdfExportOptions): void;
-        function createToolButton(options: PdfExportOptions): Serenity.ToolButton;
-    }
-}
-declare var jsPDF: any;
-declare namespace GestionEquestre.Common {
-    class ReportDialog extends Serenity.TemplatedDialog<ReportDialogOptions> {
-        private report;
-        private propertyGrid;
-        constructor(options: ReportDialogOptions);
-        protected getDialogButtons(): any;
-        protected createPropertyGrid(): void;
-        protected loadReport(reportKey: string): void;
-        protected updateInterface(): void;
-        executeReport(target: string, ext: string, download: boolean): void;
-        getToolbarButtons(): {
-            title: string;
-            cssClass: string;
-            onClick: () => void;
-        }[];
-    }
-    interface ReportDialogOptions {
-        reportKey: string;
-    }
-}
-declare namespace GestionEquestre.Common {
-    interface ReportExecuteOptions {
-        reportKey: string;
-        download?: boolean;
-        extension?: 'pdf' | 'htm' | 'html' | 'xlsx' | 'docx';
-        getParams?: () => any;
-        params?: {
-            [key: string]: any;
-        };
-        target?: string;
-    }
-    interface ReportButtonOptions extends ReportExecuteOptions {
-        title?: string;
-        cssClass?: string;
-        icon?: string;
-    }
-    namespace ReportHelper {
-        function createToolButton(options: ReportButtonOptions): Serenity.ToolButton;
-        function execute(options: ReportExecuteOptions): void;
-    }
-}
-declare var jsPDF: any;
-declare namespace GestionEquestre.Common {
-    class ReportPage extends Serenity.Widget<any> {
-        private reportKey;
-        private propertyItems;
-        private propertyGrid;
-        constructor(element: JQuery);
-        protected updateMatchFlags(text: string): void;
-        protected categoryClick(e: any): void;
-        protected reportLinkClick(e: any): void;
-    }
-}
-declare namespace GestionEquestre.Common {
-    class LanguageSelection extends Serenity.Widget<any> {
-        constructor(select: JQuery, currentLanguage: string);
-    }
-}
-declare namespace GestionEquestre.Common {
-    class SidebarSearch extends Serenity.Widget<any> {
-        private menuUL;
-        constructor(input: JQuery, menuUL: JQuery);
-        protected updateMatchFlags(text: string): void;
-    }
-}
-declare namespace GestionEquestre.Common {
-    class ThemeSelection extends Serenity.Widget<any> {
-        constructor(select: JQuery);
-        protected getCurrentTheme(): string;
-    }
-}
-declare namespace GestionEquestre {
-    class BasicProgressDialog extends Serenity.TemplatedDialog<any> {
-        constructor();
-        cancelled: boolean;
-        max: number;
-        value: number;
-        title: string;
-        cancelTitle: string;
-        getDialogOptions(): JQueryUI.DialogOptions;
-        initDialog(): void;
-        getTemplate(): string;
-    }
-}
-declare namespace GestionEquestre.Common {
-    class BulkServiceAction {
-        protected keys: string[];
-        protected queue: string[];
-        protected queueIndex: number;
-        protected progressDialog: BasicProgressDialog;
-        protected pendingRequests: number;
-        protected completedRequests: number;
-        protected errorByKey: Q.Dictionary<Serenity.ServiceError>;
-        private successCount;
-        private errorCount;
-        done: () => void;
-        protected createProgressDialog(): void;
-        protected getConfirmationFormat(): string;
-        protected getConfirmationMessage(targetCount: any): string;
-        protected confirm(targetCount: any, action: any): void;
-        protected getNothingToProcessMessage(): string;
-        protected nothingToProcess(): void;
-        protected getParallelRequests(): number;
-        protected getBatchSize(): number;
-        protected startParallelExecution(): void;
-        protected serviceCallCleanup(): void;
-        protected executeForBatch(batch: string[]): void;
-        protected executeNextBatch(): void;
-        protected getAllHadErrorsFormat(): string;
-        protected showAllHadErrors(): void;
-        protected getSomeHadErrorsFormat(): string;
-        protected showSomeHadErrors(): void;
-        protected getAllSuccessFormat(): string;
-        protected showAllSuccess(): void;
-        protected showResults(): void;
-        execute(keys: string[]): void;
-        get_successCount(): any;
-        set_successCount(value: number): void;
-        get_errorCount(): any;
-        set_errorCount(value: number): void;
-    }
-}
-declare namespace GestionEquestre.DialogUtils {
-    function pendingChangesConfirmation(element: JQuery, hasPendingChanges: () => boolean): void;
-}
-declare namespace GestionEquestre.Common {
-    class EnumSelectFormatter implements Slick.Formatter {
-        constructor();
-        format(ctx: Slick.FormatterContext): string;
-        enumKey: string;
-        allowClear: boolean;
-        emptyItemText: string;
-    }
-}
-declare namespace GestionEquestre.Common {
-    interface ExcelExportOptions {
-        grid: Serenity.DataGrid<any, any>;
-        service: string;
-        onViewSubmit: () => boolean;
-        title?: string;
-        hint?: string;
-        separator?: boolean;
-    }
-    namespace ExcelExportHelper {
-        function createToolButton(options: ExcelExportOptions): Serenity.ToolButton;
-    }
-}
-declare namespace GestionEquestre.Common {
-    class GridEditorBase<TEntity> extends Serenity.EntityGrid<TEntity, any> implements Serenity.IGetEditValue, Serenity.ISetEditValue {
-        protected getIdProperty(): string;
-        protected nextId: number;
-        constructor(container: JQuery);
-        protected id(entity: TEntity): any;
-        protected getNextId(): string;
-        protected setNewId(entity: TEntity): void;
-        protected save(opt: Serenity.ServiceOptions<any>, callback: (r: Serenity.ServiceResponse) => void): void;
-        protected deleteEntity(id: number): boolean;
-        protected validateEntity(row: TEntity, id: number): boolean;
-        protected setEntities(items: TEntity[]): void;
-        protected getNewEntity(): TEntity;
-        protected getButtons(): Serenity.ToolButton[];
-        protected editItem(entityOrId: any): void;
-        getEditValue(property: any, target: any): void;
-        setEditValue(source: any, property: any): void;
-        value: TEntity[];
-        protected getGridCanLoad(): boolean;
-        protected usePager(): boolean;
-        protected getInitialTitle(): any;
-        protected createQuickSearchInput(): void;
-    }
-}
-declare namespace GestionEquestre.Common {
-    class GridEditorDialog<TEntity> extends Serenity.EntityDialog<TEntity, any> {
-        protected getIdProperty(): string;
-        onSave: (options: Serenity.ServiceOptions<Serenity.SaveResponse>, callback: (response: Serenity.SaveResponse) => void) => void;
-        onDelete: (options: Serenity.ServiceOptions<Serenity.DeleteResponse>, callback: (response: Serenity.DeleteResponse) => void) => void;
-        destroy(): void;
-        protected updateInterface(): void;
-        protected saveHandler(options: Serenity.ServiceOptions<Serenity.SaveResponse>, callback: (response: Serenity.SaveResponse) => void): void;
-        protected deleteHandler(options: Serenity.ServiceOptions<Serenity.DeleteResponse>, callback: (response: Serenity.DeleteResponse) => void): void;
-    }
-}
-declare namespace GestionEquestre.Administration {
-    class RoleCheckEditor extends Serenity.CheckTreeEditor<Serenity.CheckTreeItem<any>, any> {
-        private searchText;
-        constructor(div: JQuery);
-        protected createToolbarExtensions(): void;
-        protected getButtons(): any[];
-        protected getTreeItems(): Serenity.CheckTreeItem<any>[];
-        protected onViewFilter(item: any): boolean;
-    }
-}
-declare namespace GestionEquestre.Administration {
-    class UserRoleDialog extends Serenity.TemplatedDialog<UserRoleDialogOptions> {
-        private permissions;
-        constructor(opt: UserRoleDialogOptions);
-        protected getDialogOptions(): JQueryUI.DialogOptions;
-        protected getTemplate(): string;
-    }
-    interface UserRoleDialogOptions {
-        userID: number;
-        username: string;
-    }
-}
-declare namespace GestionEquestre.Administration {
-    class PermissionCheckEditor extends Serenity.DataGrid<PermissionCheckItem, PermissionCheckEditorOptions> {
-        protected getIdProperty(): string;
-        private searchText;
-        private byParentKey;
-        constructor(container: JQuery, opt: PermissionCheckEditorOptions);
-        private getItemGrantRevokeClass(item, grant);
-        private roleOrImplicit(key);
-        private getItemEffectiveClass(item);
-        protected getColumns(): Slick.Column[];
-        setItems(items: PermissionCheckItem[]): void;
-        protected onViewSubmit(): boolean;
-        protected onViewFilter(item: PermissionCheckItem): boolean;
-        private matchContains(item);
-        private getDescendants(item, excludeGroups);
-        protected onClick(e: any, row: any, cell: any): void;
-        private getParentKey(key);
-        protected getButtons(): Serenity.ToolButton[];
-        protected createToolbarExtensions(): void;
-        private getSortedGroupAndPermissionKeys(titleByKey);
-        value: UserPermissionRow[];
-        private _rolePermissions;
-        rolePermissions: string[];
-        private _implicitPermissions;
-        implicitPermissions: Q.Dictionary<string[]>;
-    }
-    interface PermissionCheckEditorOptions {
-        showRevoke?: boolean;
-    }
-    interface PermissionCheckItem {
-        ParentKey?: string;
-        Key?: string;
-        Title?: string;
-        IsGroup?: boolean;
-        GrantRevoke?: boolean;
-    }
-}
-declare namespace GestionEquestre.Administration {
-    class UserPermissionDialog extends Serenity.TemplatedDialog<UserPermissionDialogOptions> {
-        private permissions;
-        constructor(opt: UserPermissionDialogOptions);
-        protected getDialogOptions(): JQueryUI.DialogOptions;
-        protected getTemplate(): string;
-    }
-    interface UserPermissionDialogOptions {
-        userID?: number;
-        username?: string;
-    }
-}
-declare namespace GestionEquestre.Administration {
-    class UserDialog extends Serenity.EntityDialog<UserRow, any> {
-        protected getFormKey(): string;
-        protected getIdProperty(): string;
-        protected getIsActiveProperty(): string;
-        protected getLocalTextPrefix(): string;
-        protected getNameProperty(): string;
-        protected getService(): string;
-        protected form: UserForm;
-        constructor();
-        protected getToolbarButtons(): Serenity.ToolButton[];
-        protected updateInterface(): void;
-        protected afterLoadEntity(): void;
-    }
-}
-declare namespace GestionEquestre.Administration {
-    class UserGrid extends Serenity.EntityGrid<UserRow, any> {
-        protected getColumnsKey(): string;
-        protected getDialogType(): typeof UserDialog;
-        protected getIdProperty(): string;
-        protected getIsActiveProperty(): string;
-        protected getLocalTextPrefix(): string;
-        protected getService(): string;
-        constructor(container: JQuery);
-        protected getDefaultSortBy(): string[];
-    }
-}
-declare namespace GestionEquestre.Authorization {
-    let userDefinition: ScriptUserDefinition;
-    function hasPermission(permissionKey: string): boolean;
-}
-declare namespace GestionEquestre.Administration {
-    class TranslationGrid extends Serenity.EntityGrid<TranslationItem, any> {
-        protected getIdProperty(): string;
-        protected getLocalTextPrefix(): string;
-        protected getService(): string;
-        private hasChanges;
-        private searchText;
-        private sourceLanguage;
-        private targetLanguage;
-        private targetLanguageKey;
-        constructor(container: JQuery);
-        protected onClick(e: JQueryEventObject, row: number, cell: number): any;
-        protected getColumns(): Slick.Column[];
-        protected createToolbarExtensions(): void;
-        protected saveChanges(language: string): PromiseLike<any>;
-        protected onViewSubmit(): boolean;
-        protected getButtons(): Serenity.ToolButton[];
-        protected createQuickSearchInput(): void;
-        protected onViewFilter(item: TranslationItem): boolean;
-        protected usePager(): boolean;
-    }
-}
-declare namespace GestionEquestre.Administration {
-    class RolePermissionDialog extends Serenity.TemplatedDialog<RolePermissionDialogOptions> {
-        private permissions;
-        constructor(opt: RolePermissionDialogOptions);
-        protected getDialogOptions(): JQueryUI.DialogOptions;
-        protected getTemplate(): string;
-    }
-    interface RolePermissionDialogOptions {
-        roleID?: number;
-        title?: string;
-    }
-}
-declare namespace GestionEquestre.Administration {
-    class RoleDialog extends Serenity.EntityDialog<RoleRow, any> {
-        protected getFormKey(): string;
-        protected getIdProperty(): string;
-        protected getLocalTextPrefix(): string;
-        protected getNameProperty(): string;
-        protected getService(): string;
-        protected form: RoleForm;
-        protected getToolbarButtons(): Serenity.ToolButton[];
-        protected updateInterface(): void;
-    }
-}
-declare namespace GestionEquestre.Administration {
-    class RoleGrid extends Serenity.EntityGrid<RoleRow, any> {
-        protected getColumnsKey(): string;
-        protected getDialogType(): typeof RoleDialog;
-        protected getIdProperty(): string;
-        protected getLocalTextPrefix(): string;
-        protected getService(): string;
-        constructor(container: JQuery);
-        protected getDefaultSortBy(): string[];
-    }
-}
-declare namespace GestionEquestre.Administration {
-    class LanguageDialog extends Serenity.EntityDialog<LanguageRow, any> {
-        protected getFormKey(): string;
-        protected getIdProperty(): string;
-        protected getLocalTextPrefix(): string;
-        protected getNameProperty(): string;
-        protected getService(): string;
-        protected form: LanguageForm;
-    }
-}
-declare namespace GestionEquestre.Administration {
-    class LanguageGrid extends Serenity.EntityGrid<LanguageRow, any> {
-        protected getColumnsKey(): string;
-        protected getDialogType(): typeof LanguageDialog;
-        protected getIdProperty(): string;
-        protected getLocalTextPrefix(): string;
-        protected getService(): string;
-        constructor(container: JQuery);
-        protected getDefaultSortBy(): string[];
-    }
-}
 declare namespace GestionEquestre.Administration {
 }
 declare namespace GestionEquestre.Administration {
@@ -1338,7 +507,7 @@ declare namespace GestionEquestre.Ge {
     }
     interface CorCorporateForm {
         IsActive: Serenity.BooleanEditor;
-        NotArchive: Serenity.BooleanEditor;
+        IsArchive: Serenity.BooleanEditor;
         InsertDate: Serenity.DateEditor;
         InsertUserId: Serenity.IntegerEditor;
         UpdateDate: Serenity.DateEditor;
@@ -1360,7 +529,7 @@ declare namespace GestionEquestre.Ge {
     interface CorCorporateRow {
         Id?: number;
         IsActive?: boolean;
-        NotArchive?: boolean;
+        IsArchive?: boolean;
         InsertDate?: string;
         InsertUserId?: number;
         UpdateDate?: string;
@@ -1389,7 +558,7 @@ declare namespace GestionEquestre.Ge {
         BankAccountDateLastPrelevement?: string;
         BankAccountTypeOfLastPayment?: number;
         IdAdressIsActive?: boolean;
-        IdAdressNotArchive?: boolean;
+        IdAdressIsArchive?: boolean;
         IdAdressInsertDate?: string;
         IdAdressInsertUserId?: number;
         IdAdressUpdateDate?: string;
@@ -1411,7 +580,7 @@ declare namespace GestionEquestre.Ge {
         namespace Fields {
             const Id: string;
             const IsActive: string;
-            const NotArchive: string;
+            const IsArchive: string;
             const InsertDate: string;
             const InsertUserId: string;
             const UpdateDate: string;
@@ -1440,7 +609,7 @@ declare namespace GestionEquestre.Ge {
             const BankAccountDateLastPrelevement: string;
             const BankAccountTypeOfLastPayment: string;
             const IdAdressIsActive: string;
-            const IdAdressNotArchive: string;
+            const IdAdressIsArchive: string;
             const IdAdressInsertDate: string;
             const IdAdressInsertUserId: string;
             const IdAdressUpdateDate: string;
@@ -1475,6 +644,8 @@ declare namespace GestionEquestre.Ge {
     }
 }
 declare namespace GestionEquestre.Ge {
+}
+declare namespace GestionEquestre.Ge {
     class CorEtabForm extends Serenity.PrefixedContext {
         static formKey: string;
     }
@@ -1491,8 +662,8 @@ declare namespace GestionEquestre.Ge {
         OtherPhone1: Serenity.StringEditor;
         Email1: Serenity.StringEditor;
         Email2: Serenity.StringEditor;
-        BankAccount: Serenity.IntegerEditor;
-        IdAdress: Serenity.IntegerEditor;
+        BankAccount: Serenity.StringEditor;
+        IdAdress: Serenity.StringEditor;
         FrSiret: Serenity.StringEditor;
         Caption: Serenity.StringEditor;
         ArchiveDate: Serenity.DateEditor;
@@ -1531,7 +702,7 @@ declare namespace GestionEquestre.Ge {
         BankAccountDateLastPrelevement?: string;
         BankAccountTypeOfLastPayment?: number;
         IdAdressIsActive?: boolean;
-        IdAdressNotArchive?: boolean;
+        IdAdressIsArchive?: boolean;
         IdAdressInsertDate?: string;
         IdAdressInsertUserId?: number;
         IdAdressUpdateDate?: string;
@@ -1551,51 +722,51 @@ declare namespace GestionEquestre.Ge {
         const nameProperty = "Name";
         const localTextPrefix = "Ge.CorEtab";
         namespace Fields {
-            const Id: any;
-            const IsActive: any;
-            const IsArchive: any;
-            const InsertDate: any;
-            const InsertUserId: any;
-            const UpdateDate: any;
-            const UpdateUserId: any;
-            const Name: any;
-            const Phone: any;
-            const Gsm: any;
-            const OtherPhone1: any;
-            const Email1: any;
-            const Email2: any;
-            const BankAccount: any;
-            const IdAdress: any;
-            const FrSiret: any;
-            const Caption: any;
-            const ArchiveDate: any;
-            const BankAccountCountryCodeIban: any;
-            const BankAccountCheckDigitsIban: any;
-            const BankAccountBban: any;
-            const BankAccountBic: any;
-            const BankAccountAccountOnwer: any;
-            const BankAccountBankAdress: any;
-            const BankAccountCis: any;
-            const BankAccountUrm: any;
-            const BankAccountMandateDateSign: any;
-            const BankAccountTypePayment: any;
-            const BankAccountDateLastPrelevement: any;
-            const BankAccountTypeOfLastPayment: any;
-            const IdAdressIsActive: any;
-            const IdAdressNotArchive: any;
-            const IdAdressInsertDate: any;
-            const IdAdressInsertUserId: any;
-            const IdAdressUpdateDate: any;
-            const IdAdressUpdateUserId: any;
-            const IdAdressAdress1: any;
-            const IdAdressAdress2: any;
-            const IdAdressAdress3: any;
-            const IdAdressCity: any;
-            const IdAdressCountry: any;
-            const IdAdressCedex: any;
-            const IdAdressBuilding: any;
-            const IdAdressCaption: any;
-            const IdAdressArchiveDate: any;
+            const Id: string;
+            const IsActive: string;
+            const IsArchive: string;
+            const InsertDate: string;
+            const InsertUserId: string;
+            const UpdateDate: string;
+            const UpdateUserId: string;
+            const Name: string;
+            const Phone: string;
+            const Gsm: string;
+            const OtherPhone1: string;
+            const Email1: string;
+            const Email2: string;
+            const BankAccount: string;
+            const IdAdress: string;
+            const FrSiret: string;
+            const Caption: string;
+            const ArchiveDate: string;
+            const BankAccountCountryCodeIban: string;
+            const BankAccountCheckDigitsIban: string;
+            const BankAccountBban: string;
+            const BankAccountBic: string;
+            const BankAccountAccountOnwer: string;
+            const BankAccountBankAdress: string;
+            const BankAccountCis: string;
+            const BankAccountUrm: string;
+            const BankAccountMandateDateSign: string;
+            const BankAccountTypePayment: string;
+            const BankAccountDateLastPrelevement: string;
+            const BankAccountTypeOfLastPayment: string;
+            const IdAdressIsActive: string;
+            const IdAdressIsArchive: string;
+            const IdAdressInsertDate: string;
+            const IdAdressInsertUserId: string;
+            const IdAdressUpdateDate: string;
+            const IdAdressUpdateUserId: string;
+            const IdAdressAdress1: string;
+            const IdAdressAdress2: string;
+            const IdAdressAdress3: string;
+            const IdAdressCity: string;
+            const IdAdressCountry: string;
+            const IdAdressCedex: string;
+            const IdAdressBuilding: string;
+            const IdAdressCaption: string;
+            const IdAdressArchiveDate: string;
         }
     }
 }
@@ -1718,7 +889,7 @@ declare namespace GestionEquestre.Ge {
     }
     interface LinkFolderPersonForm {
         Folder: Serenity.StringEditor;
-        PersonSurname: Serenity.LookupEditor;
+        PersonId: Serenity.LookupEditor;
         Caption: Serenity.StringEditor;
     }
 }
@@ -1778,7 +949,7 @@ declare namespace GestionEquestre.Ge {
     }
     interface ManAdressForm {
         IsActive: Serenity.BooleanEditor;
-        NotArchive: Serenity.BooleanEditor;
+        IsArchive: Serenity.BooleanEditor;
         InsertDate: Serenity.DateEditor;
         InsertUsername: Serenity.StringEditor;
         UpdateDate: Serenity.DateEditor;
@@ -1798,7 +969,7 @@ declare namespace GestionEquestre.Ge {
     interface ManAdressRow {
         Id?: number;
         IsActive?: boolean;
-        NotArchive?: boolean;
+        IsArchive?: boolean;
         InsertDate?: string;
         InsertUserId?: number;
         UpdateDate?: string;
@@ -1845,7 +1016,7 @@ declare namespace GestionEquestre.Ge {
         namespace Fields {
             const Id: string;
             const IsActive: string;
-            const NotArchive: string;
+            const IsArchive: string;
             const InsertDate: string;
             const InsertUserId: string;
             const UpdateDate: string;
@@ -1914,7 +1085,7 @@ declare namespace GestionEquestre.Ge {
         LicFfe: Serenity.StringEditor;
         Person: Serenity.LookupEditor;
         IsActive: Serenity.BooleanEditor;
-        NotArchive: Serenity.BooleanEditor;
+        IsArchive: Serenity.BooleanEditor;
         InsertDate: Serenity.DateEditor;
         InsertUsername: Serenity.StringEditor;
         UpdateDate: Serenity.DateEditor;
@@ -1932,7 +1103,7 @@ declare namespace GestionEquestre.Ge {
         LicFfe?: string;
         Person?: number;
         IsActive?: boolean;
-        NotArchive?: boolean;
+        IsArchive?: boolean;
         InsertDate?: string;
         InsertUserId?: number;
         UpdateDate?: string;
@@ -1947,7 +1118,7 @@ declare namespace GestionEquestre.Ge {
         UpdateUsername?: string;
         PersonIsMorale?: boolean;
         PersonIsActive?: boolean;
-        PersonNotArchive?: boolean;
+        PersonIsArchive?: boolean;
         PersonInsertDate?: string;
         PersonInsertUserId?: number;
         PersonUpdateDate?: string;
@@ -2001,7 +1172,7 @@ declare namespace GestionEquestre.Ge {
             const LicFfe: string;
             const Person: string;
             const IsActive: string;
-            const NotArchive: string;
+            const IsArchive: string;
             const InsertDate: string;
             const InsertUserId: string;
             const UpdateDate: string;
@@ -2016,7 +1187,7 @@ declare namespace GestionEquestre.Ge {
             const UpdateUsername: string;
             const PersonIsMorale: string;
             const PersonIsActive: string;
-            const PersonNotArchive: string;
+            const PersonIsArchive: string;
             const PersonInsertDate: string;
             const PersonInsertUserId: string;
             const PersonUpdateDate: string;
@@ -2086,17 +1257,16 @@ declare namespace GestionEquestre.Ge {
         static formKey: string;
     }
     interface ManFolderForm {
-        Id: Serenity.StringEditor;
-        IsActive: Serenity.BooleanEditor;
-        NotArchive: Serenity.BooleanEditor;
         InsertDate: Serenity.DateEditor;
         InsertUsername: Serenity.StringEditor;
         UpdateDate: Serenity.DateEditor;
         UpdateUsername: Serenity.StringEditor;
+        Id: Serenity.StringEditor;
+        IsActive: Serenity.BooleanEditor;
+        IsArchive: Serenity.BooleanEditor;
         Caption: Serenity.StringEditor;
         ArchiveDate: Serenity.DateEditor;
-        Number: Serenity.IntegerEditor;
-        CreateeDate: Serenity.DateEditor;
+        CreateDate: Serenity.DateEditor;
         CloseRaison: Serenity.StringEditor;
         CloseDate: Serenity.DateEditor;
         Establishment: Serenity.LookupEditor;
@@ -2107,15 +1277,14 @@ declare namespace GestionEquestre.Ge {
     interface ManFolderRow {
         Id?: number;
         IsActive?: boolean;
-        NotArchive?: boolean;
+        IsArchive?: boolean;
         InsertDate?: string;
         InsertUserId?: number;
         UpdateDate?: string;
         UpdateUserId?: number;
         Caption?: string;
         ArchiveDate?: string;
-        Number?: number;
-        CreateeDate?: string;
+        CreateDate?: string;
         CloseRaison?: string;
         CloseDate?: string;
         Establishment?: number;
@@ -2132,15 +1301,14 @@ declare namespace GestionEquestre.Ge {
         namespace Fields {
             const Id: string;
             const IsActive: string;
-            const NotArchive: string;
+            const IsArchive: string;
             const InsertDate: string;
             const InsertUserId: string;
             const UpdateDate: string;
             const UpdateUserId: string;
             const Caption: string;
             const ArchiveDate: string;
-            const Number: string;
-            const CreateeDate: string;
+            const CreateDate: string;
             const CloseRaison: string;
             const CloseDate: string;
             const Establishment: string;
@@ -2182,7 +1350,7 @@ declare namespace GestionEquestre.Ge {
         BirthOrganization: Serenity.LookupEditor;
         Name: Serenity.StringEditor;
         IsActive: Serenity.BooleanEditor;
-        NotArchive: Serenity.BooleanEditor;
+        IsArchive: Serenity.BooleanEditor;
         InsertDate: Serenity.DateEditor;
         InsertUsername: Serenity.StringEditor;
         UpdateDate: Serenity.DateEditor;
@@ -2207,7 +1375,7 @@ declare namespace GestionEquestre.Ge {
         BirthOrganization?: number;
         Name?: string;
         IsActive?: boolean;
-        NotArchive?: boolean;
+        IsArchive?: boolean;
         InsertDate?: string;
         InsertUserId?: number;
         UpdateDate?: string;
@@ -2263,7 +1431,7 @@ declare namespace GestionEquestre.Ge {
             const BirthOrganization: string;
             const Name: string;
             const IsActive: string;
-            const NotArchive: string;
+            const IsArchive: string;
             const InsertDate: string;
             const InsertUserId: string;
             const UpdateDate: string;
@@ -2348,7 +1516,7 @@ declare namespace GestionEquestre.Ge {
         HorseBirthOrganization?: number;
         HorseName?: string;
         HorseIsActive?: boolean;
-        HorseNotArchive?: boolean;
+        HorseIsArchive?: boolean;
         HorseInsertDate?: string;
         HorseInsertUserId?: number;
         HorseUpdateDate?: string;
@@ -2363,7 +1531,7 @@ declare namespace GestionEquestre.Ge {
         HorseArchiveDate?: string;
         CavalierPerson?: number;
         CavalierIsActive?: boolean;
-        CavalierNotArchive?: boolean;
+        CavalierIsArchive?: boolean;
         CavalierInsertDate?: string;
         CavalierInsertUserId?: number;
         CavalierUpdateDate?: string;
@@ -2391,7 +1559,7 @@ declare namespace GestionEquestre.Ge {
             const HorseBirthOrganization: string;
             const HorseName: string;
             const HorseIsActive: string;
-            const HorseNotArchive: string;
+            const HorseIsArchive: string;
             const HorseInsertDate: string;
             const HorseInsertUserId: string;
             const HorseUpdateDate: string;
@@ -2406,7 +1574,7 @@ declare namespace GestionEquestre.Ge {
             const HorseArchiveDate: string;
             const CavalierPerson: string;
             const CavalierIsActive: string;
-            const CavalierNotArchive: string;
+            const CavalierIsArchive: string;
             const CavalierInsertDate: string;
             const CavalierInsertUserId: string;
             const CavalierUpdateDate: string;
@@ -2446,7 +1614,7 @@ declare namespace GestionEquestre.Ge {
     interface ManPersonForm {
         IsMorale: Serenity.BooleanEditor;
         IsActive: Serenity.BooleanEditor;
-        NotArchive: Serenity.BooleanEditor;
+        IsArchive: Serenity.BooleanEditor;
         InsertDate: Serenity.DateEditor;
         InsertUsername: Serenity.StringEditor;
         UpdateDate: Serenity.DateEditor;
@@ -2480,7 +1648,7 @@ declare namespace GestionEquestre.Ge {
         Id?: number;
         IsMorale?: boolean;
         IsActive?: boolean;
-        NotArchive?: boolean;
+        IsArchive?: boolean;
         InsertDate?: string;
         InsertUserId?: number;
         UpdateDate?: string;
@@ -2573,7 +1741,7 @@ declare namespace GestionEquestre.Ge {
         BankAccountDateLastPrelevement?: string;
         BankAccountTypeOfLastPayment?: number;
         IdAdressIsActive?: boolean;
-        IdAdressNotArchive?: boolean;
+        IdAdressIsArchive?: boolean;
         IdAdressInsertDate?: string;
         IdAdressInsertUserId?: number;
         IdAdressUpdateDate?: string;
@@ -2598,7 +1766,7 @@ declare namespace GestionEquestre.Ge {
             const Id: string;
             const IsMorale: string;
             const IsActive: string;
-            const NotArchive: string;
+            const IsArchive: string;
             const InsertDate: string;
             const InsertUserId: string;
             const UpdateDate: string;
@@ -2691,7 +1859,7 @@ declare namespace GestionEquestre.Ge {
             const BankAccountDateLastPrelevement: string;
             const BankAccountTypeOfLastPayment: string;
             const IdAdressIsActive: string;
-            const IdAdressNotArchive: string;
+            const IdAdressIsArchive: string;
             const IdAdressInsertDate: string;
             const IdAdressInsertUserId: string;
             const IdAdressUpdateDate: string;
@@ -3385,5 +2553,851 @@ declare namespace GestionEquestre {
         Permissions?: {
             [key: string]: boolean;
         };
+    }
+}
+declare namespace GestionEquestre.Administration {
+    class LanguageDialog extends Serenity.EntityDialog<LanguageRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: LanguageForm;
+    }
+}
+declare namespace GestionEquestre.Administration {
+    class LanguageGrid extends Serenity.EntityGrid<LanguageRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof LanguageDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+        protected getDefaultSortBy(): string[];
+    }
+}
+declare namespace GestionEquestre.Administration {
+    class RoleDialog extends Serenity.EntityDialog<RoleRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: RoleForm;
+        protected getToolbarButtons(): Serenity.ToolButton[];
+        protected updateInterface(): void;
+    }
+}
+declare namespace GestionEquestre.Administration {
+    class RoleGrid extends Serenity.EntityGrid<RoleRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof RoleDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+        protected getDefaultSortBy(): string[];
+    }
+}
+declare namespace GestionEquestre.Administration {
+    class RolePermissionDialog extends Serenity.TemplatedDialog<RolePermissionDialogOptions> {
+        private permissions;
+        constructor(opt: RolePermissionDialogOptions);
+        protected getDialogOptions(): JQueryUI.DialogOptions;
+        protected getTemplate(): string;
+    }
+    interface RolePermissionDialogOptions {
+        roleID?: number;
+        title?: string;
+    }
+}
+declare namespace GestionEquestre.Administration {
+    class TranslationGrid extends Serenity.EntityGrid<TranslationItem, any> {
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        private hasChanges;
+        private searchText;
+        private sourceLanguage;
+        private targetLanguage;
+        private targetLanguageKey;
+        constructor(container: JQuery);
+        protected onClick(e: JQueryEventObject, row: number, cell: number): any;
+        protected getColumns(): Slick.Column[];
+        protected createToolbarExtensions(): void;
+        protected saveChanges(language: string): PromiseLike<any>;
+        protected onViewSubmit(): boolean;
+        protected getButtons(): Serenity.ToolButton[];
+        protected createQuickSearchInput(): void;
+        protected onViewFilter(item: TranslationItem): boolean;
+        protected usePager(): boolean;
+    }
+}
+declare namespace GestionEquestre.Authorization {
+    let userDefinition: ScriptUserDefinition;
+    function hasPermission(permissionKey: string): boolean;
+}
+declare namespace GestionEquestre.Administration {
+    class UserDialog extends Serenity.EntityDialog<UserRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getIsActiveProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: UserForm;
+        constructor();
+        protected getToolbarButtons(): Serenity.ToolButton[];
+        protected updateInterface(): void;
+        protected afterLoadEntity(): void;
+    }
+}
+declare namespace GestionEquestre.Administration {
+    class UserGrid extends Serenity.EntityGrid<UserRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof UserDialog;
+        protected getIdProperty(): string;
+        protected getIsActiveProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+        protected getDefaultSortBy(): string[];
+    }
+}
+declare namespace GestionEquestre.Administration {
+    class PermissionCheckEditor extends Serenity.DataGrid<PermissionCheckItem, PermissionCheckEditorOptions> {
+        protected getIdProperty(): string;
+        private searchText;
+        private byParentKey;
+        constructor(container: JQuery, opt: PermissionCheckEditorOptions);
+        private getItemGrantRevokeClass(item, grant);
+        private roleOrImplicit(key);
+        private getItemEffectiveClass(item);
+        protected getColumns(): Slick.Column[];
+        setItems(items: PermissionCheckItem[]): void;
+        protected onViewSubmit(): boolean;
+        protected onViewFilter(item: PermissionCheckItem): boolean;
+        private matchContains(item);
+        private getDescendants(item, excludeGroups);
+        protected onClick(e: any, row: any, cell: any): void;
+        private getParentKey(key);
+        protected getButtons(): Serenity.ToolButton[];
+        protected createToolbarExtensions(): void;
+        private getSortedGroupAndPermissionKeys(titleByKey);
+        value: UserPermissionRow[];
+        private _rolePermissions;
+        rolePermissions: string[];
+        private _implicitPermissions;
+        implicitPermissions: Q.Dictionary<string[]>;
+    }
+    interface PermissionCheckEditorOptions {
+        showRevoke?: boolean;
+    }
+    interface PermissionCheckItem {
+        ParentKey?: string;
+        Key?: string;
+        Title?: string;
+        IsGroup?: boolean;
+        GrantRevoke?: boolean;
+    }
+}
+declare namespace GestionEquestre.Administration {
+    class UserPermissionDialog extends Serenity.TemplatedDialog<UserPermissionDialogOptions> {
+        private permissions;
+        constructor(opt: UserPermissionDialogOptions);
+        protected getDialogOptions(): JQueryUI.DialogOptions;
+        protected getTemplate(): string;
+    }
+    interface UserPermissionDialogOptions {
+        userID?: number;
+        username?: string;
+    }
+}
+declare namespace GestionEquestre.Administration {
+    class RoleCheckEditor extends Serenity.CheckTreeEditor<Serenity.CheckTreeItem<any>, any> {
+        private searchText;
+        constructor(div: JQuery);
+        protected createToolbarExtensions(): void;
+        protected getButtons(): any[];
+        protected getTreeItems(): Serenity.CheckTreeItem<any>[];
+        protected onViewFilter(item: any): boolean;
+    }
+}
+declare namespace GestionEquestre.Administration {
+    class UserRoleDialog extends Serenity.TemplatedDialog<UserRoleDialogOptions> {
+        private permissions;
+        constructor(opt: UserRoleDialogOptions);
+        protected getDialogOptions(): JQueryUI.DialogOptions;
+        protected getTemplate(): string;
+    }
+    interface UserRoleDialogOptions {
+        userID: number;
+        username: string;
+    }
+}
+declare namespace GestionEquestre {
+    class BasicProgressDialog extends Serenity.TemplatedDialog<any> {
+        constructor();
+        cancelled: boolean;
+        max: number;
+        value: number;
+        title: string;
+        cancelTitle: string;
+        getDialogOptions(): JQueryUI.DialogOptions;
+        initDialog(): void;
+        getTemplate(): string;
+    }
+}
+declare namespace GestionEquestre.Common {
+    class BulkServiceAction {
+        protected keys: string[];
+        protected queue: string[];
+        protected queueIndex: number;
+        protected progressDialog: BasicProgressDialog;
+        protected pendingRequests: number;
+        protected completedRequests: number;
+        protected errorByKey: Q.Dictionary<Serenity.ServiceError>;
+        private successCount;
+        private errorCount;
+        done: () => void;
+        protected createProgressDialog(): void;
+        protected getConfirmationFormat(): string;
+        protected getConfirmationMessage(targetCount: any): string;
+        protected confirm(targetCount: any, action: any): void;
+        protected getNothingToProcessMessage(): string;
+        protected nothingToProcess(): void;
+        protected getParallelRequests(): number;
+        protected getBatchSize(): number;
+        protected startParallelExecution(): void;
+        protected serviceCallCleanup(): void;
+        protected executeForBatch(batch: string[]): void;
+        protected executeNextBatch(): void;
+        protected getAllHadErrorsFormat(): string;
+        protected showAllHadErrors(): void;
+        protected getSomeHadErrorsFormat(): string;
+        protected showSomeHadErrors(): void;
+        protected getAllSuccessFormat(): string;
+        protected showAllSuccess(): void;
+        protected showResults(): void;
+        execute(keys: string[]): void;
+        get_successCount(): any;
+        set_successCount(value: number): void;
+        get_errorCount(): any;
+        set_errorCount(value: number): void;
+    }
+}
+declare namespace GestionEquestre.DialogUtils {
+    function pendingChangesConfirmation(element: JQuery, hasPendingChanges: () => boolean): void;
+}
+declare namespace GestionEquestre.Common {
+    class EnumSelectFormatter implements Slick.Formatter {
+        constructor();
+        format(ctx: Slick.FormatterContext): string;
+        enumKey: string;
+        allowClear: boolean;
+        emptyItemText: string;
+    }
+}
+declare namespace GestionEquestre.Common {
+    interface ExcelExportOptions {
+        grid: Serenity.DataGrid<any, any>;
+        service: string;
+        onViewSubmit: () => boolean;
+        title?: string;
+        hint?: string;
+        separator?: boolean;
+    }
+    namespace ExcelExportHelper {
+        function createToolButton(options: ExcelExportOptions): Serenity.ToolButton;
+    }
+}
+declare namespace GestionEquestre.Common {
+    class GridEditorBase<TEntity> extends Serenity.EntityGrid<TEntity, any> implements Serenity.IGetEditValue, Serenity.ISetEditValue {
+        protected getIdProperty(): string;
+        protected nextId: number;
+        constructor(container: JQuery);
+        protected id(entity: TEntity): any;
+        protected getNextId(): string;
+        protected setNewId(entity: TEntity): void;
+        protected save(opt: Serenity.ServiceOptions<any>, callback: (r: Serenity.ServiceResponse) => void): void;
+        protected deleteEntity(id: number): boolean;
+        protected validateEntity(row: TEntity, id: number): boolean;
+        protected setEntities(items: TEntity[]): void;
+        protected getNewEntity(): TEntity;
+        protected getButtons(): Serenity.ToolButton[];
+        protected editItem(entityOrId: any): void;
+        getEditValue(property: any, target: any): void;
+        setEditValue(source: any, property: any): void;
+        value: TEntity[];
+        protected getGridCanLoad(): boolean;
+        protected usePager(): boolean;
+        protected getInitialTitle(): any;
+        protected createQuickSearchInput(): void;
+    }
+}
+declare namespace GestionEquestre.Common {
+    class GridEditorDialog<TEntity> extends Serenity.EntityDialog<TEntity, any> {
+        protected getIdProperty(): string;
+        onSave: (options: Serenity.ServiceOptions<Serenity.SaveResponse>, callback: (response: Serenity.SaveResponse) => void) => void;
+        onDelete: (options: Serenity.ServiceOptions<Serenity.DeleteResponse>, callback: (response: Serenity.DeleteResponse) => void) => void;
+        destroy(): void;
+        protected updateInterface(): void;
+        protected saveHandler(options: Serenity.ServiceOptions<Serenity.SaveResponse>, callback: (response: Serenity.SaveResponse) => void): void;
+        protected deleteHandler(options: Serenity.ServiceOptions<Serenity.DeleteResponse>, callback: (response: Serenity.DeleteResponse) => void): void;
+    }
+}
+declare namespace GestionEquestre.LanguageList {
+    function getValue(): string[][];
+}
+declare namespace GestionEquestre.Common {
+    class LanguageSelection extends Serenity.Widget<any> {
+        constructor(select: JQuery, currentLanguage: string);
+    }
+}
+declare namespace GestionEquestre.Common {
+    class SidebarSearch extends Serenity.Widget<any> {
+        private menuUL;
+        constructor(input: JQuery, menuUL: JQuery);
+        protected updateMatchFlags(text: string): void;
+    }
+}
+declare namespace GestionEquestre.Common {
+    class ThemeSelection extends Serenity.Widget<any> {
+        constructor(select: JQuery);
+        protected getCurrentTheme(): string;
+    }
+}
+declare var jsPDF: any;
+declare namespace GestionEquestre.Common {
+    interface PdfExportOptions {
+        grid: Serenity.DataGrid<any, any>;
+        onViewSubmit: () => boolean;
+        title?: string;
+        hint?: string;
+        separator?: boolean;
+        reportTitle?: string;
+        titleTop?: number;
+        titleFontSize?: number;
+        fileName?: string;
+        pageNumbers?: boolean;
+        columnTitles?: {
+            [key: string]: string;
+        };
+        tableOptions?: jsPDF.AutoTableOptions;
+        output?: string;
+        autoPrint?: boolean;
+        printDateTimeHeader?: boolean;
+    }
+    namespace PdfExportHelper {
+        function exportToPdf(options: PdfExportOptions): void;
+        function createToolButton(options: PdfExportOptions): Serenity.ToolButton;
+    }
+}
+declare var jsPDF: any;
+declare namespace GestionEquestre.Common {
+    class ReportDialog extends Serenity.TemplatedDialog<ReportDialogOptions> {
+        private report;
+        private propertyGrid;
+        constructor(options: ReportDialogOptions);
+        protected getDialogButtons(): any;
+        protected createPropertyGrid(): void;
+        protected loadReport(reportKey: string): void;
+        protected updateInterface(): void;
+        executeReport(target: string, ext: string, download: boolean): void;
+        getToolbarButtons(): {
+            title: string;
+            cssClass: string;
+            onClick: () => void;
+        }[];
+    }
+    interface ReportDialogOptions {
+        reportKey: string;
+    }
+}
+declare namespace GestionEquestre.Common {
+    interface ReportExecuteOptions {
+        reportKey: string;
+        download?: boolean;
+        extension?: 'pdf' | 'htm' | 'html' | 'xlsx' | 'docx';
+        getParams?: () => any;
+        params?: {
+            [key: string]: any;
+        };
+        target?: string;
+    }
+    interface ReportButtonOptions extends ReportExecuteOptions {
+        title?: string;
+        cssClass?: string;
+        icon?: string;
+    }
+    namespace ReportHelper {
+        function createToolButton(options: ReportButtonOptions): Serenity.ToolButton;
+        function execute(options: ReportExecuteOptions): void;
+    }
+}
+declare var jsPDF: any;
+declare namespace GestionEquestre.Common {
+    class ReportPage extends Serenity.Widget<any> {
+        private reportKey;
+        private propertyItems;
+        private propertyGrid;
+        constructor(element: JQuery);
+        protected updateMatchFlags(text: string): void;
+        protected categoryClick(e: any): void;
+        protected reportLinkClick(e: any): void;
+    }
+}
+declare namespace GestionEquestre.ScriptInitialization {
+}
+declare namespace GestionEquestre.Common {
+    class UserPreferenceStorage implements Serenity.SettingStorage {
+        getItem(key: string): string;
+        setItem(key: string, data: string): void;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class AccBankaccountDialog extends Serenity.EntityDialog<AccBankaccountRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: AccBankaccountForm;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class AccBankaccountGrid extends Serenity.EntityGrid<AccBankaccountRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof AccBankaccountDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class CorEtabDialog extends Serenity.EntityDialog<CorEtabRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: CorEtabForm;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class CorEtabGrid extends Serenity.EntityGrid<CorEtabRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof CorEtabDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+        protected addButtonClick(): void;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class ManFolderDialog extends Serenity.EntityDialog<ManFolderRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: ManFolderForm;
+        private FolderHorseGrid;
+        private FolderCavalierGrid;
+        private FolderPersonGrid;
+        private loadedState;
+        constructor();
+        loadEntity(entity: ManFolderRow): void;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class LinkFolderCavalierDialog extends Serenity.EntityDialog<LinkFolderCavalierDialog, any> {
+        constructor();
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class ManFolderGrid extends Serenity.EntityGrid<ManFolderRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof ManFolderDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+        protected addButtonClick(): void;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class LinkFolderCavalierGrid extends Serenity.EntityGrid<LinkFolderCavalierRow, any> {
+        protected getColumnsKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        constructor(container: JQuery);
+        protected getColumns(): Slick.Column[];
+        protected onClick(e: JQueryEventObject, row: number, cell: number): void;
+        protected editItem(entityOrId: any): void;
+        protected initEntityDialog(itemType: any, dialog: any): void;
+        protected createQuickSearchInput(): void;
+        protected getButtons(): Serenity.ToolButton[];
+        protected addButtonClick(): void;
+        protected getInitialTitle(): any;
+        protected usePager(): boolean;
+        protected getGridCanLoad(): boolean;
+        private _Folder;
+        Folder: number;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class LinkFolderHorseDialog extends Serenity.EntityDialog<LinkFolderHorseDialog, any> {
+        constructor();
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class LinkFolderHorseGrid extends Serenity.EntityGrid<LinkFolderHorseRow, any> {
+        protected getColumnsKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        constructor(container: JQuery);
+        protected getColumns(): Slick.Column[];
+        protected onClick(e: JQueryEventObject, row: number, cell: number): void;
+        protected editItem(entityOrId: any): void;
+        protected initEntityDialog(itemType: any, dialog: any): void;
+        protected createQuickSearchInput(): void;
+        protected getButtons(): Serenity.ToolButton[];
+        protected addButtonClick(): void;
+        protected getInitialTitle(): any;
+        protected usePager(): boolean;
+        protected getGridCanLoad(): boolean;
+        private _Folder;
+        Folder: number;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class LinkFolderPersonDialog extends Serenity.EntityDialog<LinkFolderPersonDialog, any> {
+        constructor();
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class LinkFolderPersonGrid extends Serenity.EntityGrid<LinkFolderPersonRow, any> {
+        protected getColumnsKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        constructor(container: JQuery);
+        protected getColumns(): Slick.Column[];
+        protected onClick(e: JQueryEventObject, row: number, cell: number): void;
+        protected editItem(entityOrId: any): void;
+        protected initEntityDialog(itemType: any, dialog: any): void;
+        protected createQuickSearchInput(): void;
+        protected getButtons(): Serenity.ToolButton[];
+        protected addButtonClick(): void;
+        protected getInitialTitle(): any;
+        protected usePager(): boolean;
+        protected getGridCanLoad(): boolean;
+        private _Folder;
+        Folder: number;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class ManAdressDialog extends Serenity.EntityDialog<ManAdressRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: ManAdressForm;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class ManAdressGrid extends Serenity.EntityGrid<ManAdressRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof ManAdressDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+        protected addButtonClick(): void;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class ManCavaliersDialog extends Serenity.EntityDialog<ManCavaliersRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: ManCavaliersForm;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class ManCavaliersGrid extends Serenity.EntityGrid<ManCavaliersRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof ManCavaliersDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+        protected addButtonClick(): void;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class ManHorsesDialog extends Serenity.EntityDialog<ManHorsesRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: ManHorsesForm;
+        constructor();
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class ManHorsesGrid extends Serenity.EntityGrid<ManHorsesRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof ManHorsesDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+        protected addButtonClick(): void;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class ManOwnerDialog extends Serenity.EntityDialog<ManOwnerRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: ManOwnerForm;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class ManOwnerGrid extends Serenity.EntityGrid<ManOwnerRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof ManOwnerDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+        protected addButtonClick(): void;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class ManPersonDialog extends Serenity.EntityDialog<ManPersonRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: ManPersonForm;
+        V: any;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class ManPersonGrid extends Serenity.EntityGrid<ManPersonRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof ManPersonDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+        protected addButtonClick(): void;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class CorCorporateDialog extends Serenity.EntityDialog<CorCorporateRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: CorCorporateForm;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class CorCorporateGrid extends Serenity.EntityGrid<CorCorporateRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof CorCorporateDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+        protected addButtonClick(): void;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class SetCityDialog extends Serenity.EntityDialog<SetCityRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: SetCityForm;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class SetCityGrid extends Serenity.EntityGrid<SetCityRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof SetCityDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+        protected addButtonClick(): void;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class SetCountryDialog extends Serenity.EntityDialog<SetCountryRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: SetCountryForm;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class SetCountryGrid extends Serenity.EntityGrid<SetCountryRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof SetCountryDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+        protected addButtonClick(): void;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class SetGalopDialog extends Serenity.EntityDialog<SetGalopRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: SetGalopForm;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class SetGalopGrid extends Serenity.EntityGrid<SetGalopRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof SetGalopDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+        protected addButtonClick(): void;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class SetLfcDialog extends Serenity.EntityDialog<SetLfcRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: SetLfcForm;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class SetLfcGrid extends Serenity.EntityGrid<SetLfcRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof SetLfcDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+        protected addButtonClick(): void;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class SetMaritalstatusDialog extends Serenity.EntityDialog<SetMaritalstatusRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: SetMaritalstatusForm;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class SetMaritalstatusGrid extends Serenity.EntityGrid<SetMaritalstatusRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof SetMaritalstatusDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+        protected addButtonClick(): void;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class SetSexeDialog extends Serenity.EntityDialog<SetSexeRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: SetSexeForm;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class SetSexeGrid extends Serenity.EntityGrid<SetSexeRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof SetSexeDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+        protected addButtonClick(): void;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class SetUelnorgaDialog extends Serenity.EntityDialog<SetUelnorgaRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: SetUelnorgaForm;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class SetUelnorgaGrid extends Serenity.EntityGrid<SetUelnorgaRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof SetUelnorgaDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+        protected addButtonClick(): void;
+    }
+}
+declare namespace GestionEquestre.Membership {
+    class ChangePasswordPanel extends Serenity.PropertyPanel<ChangePasswordRequest, any> {
+        protected getFormKey(): string;
+        private form;
+        constructor(container: JQuery);
+    }
+}
+declare namespace GestionEquestre.Membership {
+    class ForgotPasswordPanel extends Serenity.PropertyPanel<ForgotPasswordRequest, any> {
+        protected getFormKey(): string;
+        private form;
+        constructor(container: JQuery);
+    }
+}
+declare namespace GestionEquestre.Membership {
+    class ResetPasswordPanel extends Serenity.PropertyPanel<ResetPasswordRequest, any> {
+        protected getFormKey(): string;
+        private form;
+        constructor(container: JQuery);
+    }
+}
+declare namespace GestionEquestre.Membership {
+    class SignUpPanel extends Serenity.PropertyPanel<SignUpRequest, any> {
+        protected getFormKey(): string;
+        private form;
+        constructor(container: JQuery);
     }
 }

@@ -38,11 +38,11 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.IsActive[this] = value; }
         }
 
-        [DisplayName("Not Archive"), NotNull]
-        public Boolean? NotArchive
+        [DisplayName("IsArchive"), NotNull]
+        public Boolean? IsArchive
         {
-            get { return Fields.NotArchive[this]; }
-            set { Fields.NotArchive[this] = value; }
+            get { return Fields.IsArchive[this]; }
+            set { Fields.IsArchive[this] = value; }
         }
 
         [DisplayName("Insert Date"), HideOnInsert, Updatable(false), DateTimeFormatter]
@@ -143,11 +143,11 @@ namespace GestionEquestre.Ge.Entities
             get { return Fields.PersonIsActive[this]; }
             set { Fields.PersonIsActive[this] = value; }
         }
-        [DisplayName("Person Not Archive"), Expression("jPerson.[NotArchive]")]
-        public Boolean? PersonNotArchive
+        [DisplayName("Person IsArchive"), Expression("jPerson.[IsArchive]")]
+        public Boolean? PersonIsArchive
         {
-            get { return Fields.PersonNotArchive[this]; }
-            set { Fields.PersonNotArchive[this] = value; }
+            get { return Fields.PersonIsArchive[this]; }
+            set { Fields.PersonIsArchive[this] = value; }
         }
         [DisplayName("Person Insert Date"), Expression("jPerson.[InsertDate]")]
         public DateTime? PersonInsertDate
@@ -423,7 +423,7 @@ namespace GestionEquestre.Ge.Entities
             public StringField LicFfe;
             public Int64Field Person;
             public BooleanField IsActive;
-            public BooleanField NotArchive;
+            public BooleanField IsArchive;
             public DateTimeField InsertDate;
             public Int32Field InsertUserId;
             public DateTimeField UpdateDate;
@@ -440,7 +440,7 @@ namespace GestionEquestre.Ge.Entities
 
             public BooleanField PersonIsMorale;
             public BooleanField PersonIsActive;
-            public BooleanField PersonNotArchive;
+            public BooleanField PersonIsArchive;
             public DateTimeField PersonInsertDate;
             public Int32Field PersonInsertUserId;
             public DateTimeField PersonUpdateDate;

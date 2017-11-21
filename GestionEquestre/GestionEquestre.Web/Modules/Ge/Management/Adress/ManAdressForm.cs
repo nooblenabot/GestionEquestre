@@ -14,7 +14,7 @@ namespace GestionEquestre.Ge.Forms
     public class ManAdressForm
     {
         public Boolean IsActive { get; set; }
-        public Boolean NotArchive { get; set; }
+        public Boolean IsArchive { get; set; }
         public DateTime InsertDate { get; set; }
         //  public Int32 InsertUserId { get; set; }
         public String InsertUsername { get; set; }

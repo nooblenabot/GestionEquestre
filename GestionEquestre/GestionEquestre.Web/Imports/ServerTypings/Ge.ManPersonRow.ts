@@ -3,7 +3,7 @@
         Id?: number;
         IsMorale?: boolean;
         IsActive?: boolean;
-        NotArchive?: boolean;
+        IsArchive?: boolean;
         InsertDate?: string;
         InsertUserId?: number;
         UpdateDate?: string;
@@ -96,7 +96,7 @@
         BankAccountDateLastPrelevement?: string;
         BankAccountTypeOfLastPayment?: number;
         IdAdressIsActive?: boolean;
-        IdAdressNotArchive?: boolean;
+        IdAdressIsArchive?: boolean;
         IdAdressInsertDate?: string;
         IdAdressInsertUserId?: number;
         IdAdressUpdateDate?: string;
@@ -126,7 +126,7 @@
             export declare const Id: string;
             export declare const IsMorale: string;
             export declare const IsActive: string;
-            export declare const NotArchive: string;
+            export declare const IsArchive: string;
             export declare const InsertDate: string;
             export declare const InsertUserId: string;
             export declare const UpdateDate: string;
@@ -219,7 +219,7 @@
             export declare const BankAccountDateLastPrelevement: string;
             export declare const BankAccountTypeOfLastPayment: string;
             export declare const IdAdressIsActive: string;
-            export declare const IdAdressNotArchive: string;
+            export declare const IdAdressIsArchive: string;
             export declare const IdAdressInsertDate: string;
             export declare const IdAdressInsertUserId: string;
             export declare const IdAdressUpdateDate: string;
@@ -239,7 +239,7 @@
             'Id', 
             'IsMorale', 
             'IsActive', 
-            'NotArchive', 
+            'IsArchive', 
             'InsertDate', 
             'InsertUserId', 
             'UpdateDate', 
@@ -332,7 +332,7 @@
             'BankAccountDateLastPrelevement', 
             'BankAccountTypeOfLastPayment', 
             'IdAdressIsActive', 
-            'IdAdressNotArchive', 
+            'IdAdressIsArchive', 
             'IdAdressInsertDate', 
             'IdAdressInsertUserId', 
             'IdAdressUpdateDate', 

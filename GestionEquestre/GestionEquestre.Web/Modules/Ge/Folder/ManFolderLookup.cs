@@ -21,7 +21,7 @@ namespace GestionEquestre.Ge.Scripts
                 .Select(fld.Id)
                 .Where(
                 new Criteria(fld.IsActive) == 1
-                & new Criteria(fld.NotArchive) == 1
+                & new Criteria(fld.IsArchive) == 1
 
                 );
         }

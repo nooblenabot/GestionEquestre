@@ -12,5 +12,12 @@ namespace GestionEquestre.Ge {
         constructor(container: JQuery) {
             super(container);
         }
+
+        protected addButtonClick() {
+            let now = new Date();
+            this.editItem(<ManPersonRow>{
+                IsActive: true,
+            });
+        }
     }
 }

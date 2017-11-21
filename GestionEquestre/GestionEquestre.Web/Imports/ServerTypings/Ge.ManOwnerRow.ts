@@ -11,7 +11,7 @@
         HorseBirthOrganization?: number;
         HorseName?: string;
         HorseIsActive?: boolean;
-        HorseNotArchive?: boolean;
+        HorseIsArchive?: boolean;
         HorseInsertDate?: string;
         HorseInsertUserId?: number;
         HorseUpdateDate?: string;
@@ -26,7 +26,7 @@
         HorseArchiveDate?: string;
         CavalierPerson?: number;
         CavalierIsActive?: boolean;
-        CavalierNotArchive?: boolean;
+        CavalierIsArchive?: boolean;
         CavalierInsertDate?: string;
         CavalierInsertUserId?: number;
         CavalierUpdateDate?: string;
@@ -56,7 +56,7 @@
             export declare const HorseBirthOrganization: string;
             export declare const HorseName: string;
             export declare const HorseIsActive: string;
-            export declare const HorseNotArchive: string;
+            export declare const HorseIsArchive: string;
             export declare const HorseInsertDate: string;
             export declare const HorseInsertUserId: string;
             export declare const HorseUpdateDate: string;
@@ -71,7 +71,7 @@
             export declare const HorseArchiveDate: string;
             export declare const CavalierPerson: string;
             export declare const CavalierIsActive: string;
-            export declare const CavalierNotArchive: string;
+            export declare const CavalierIsArchive: string;
             export declare const CavalierInsertDate: string;
             export declare const CavalierInsertUserId: string;
             export declare const CavalierUpdateDate: string;
@@ -96,7 +96,7 @@
             'HorseBirthOrganization', 
             'HorseName', 
             'HorseIsActive', 
-            'HorseNotArchive', 
+            'HorseIsArchive', 
             'HorseInsertDate', 
             'HorseInsertUserId', 
             'HorseUpdateDate', 
@@ -111,7 +111,7 @@
             'HorseArchiveDate', 
             'CavalierPerson', 
             'CavalierIsActive', 
-            'CavalierNotArchive', 
+            'CavalierIsArchive', 
             'CavalierInsertDate', 
             'CavalierInsertUserId', 
             'CavalierUpdateDate', 

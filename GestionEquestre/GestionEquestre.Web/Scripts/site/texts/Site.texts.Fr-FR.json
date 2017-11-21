@@ -1,6 +1,6 @@
 {
   "Authorization.AccessDenied": "non auto",
-  "Controls.ColumnPickerDialog.HiddenColumns": "Collones masquees",
+  "Controls.ColumnPickerDialog.HiddenColumns": "Colones masquees",
   "Controls.ColumnPickerDialog.HideHint": "masquer",
   "Controls.ColumnPickerDialog.ShowHint": "afficher",
   "Controls.Pager.PageStatus": "afficher {from} a {to} sur {total} total",

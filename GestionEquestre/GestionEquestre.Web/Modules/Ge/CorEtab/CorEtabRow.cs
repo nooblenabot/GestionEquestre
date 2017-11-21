@@ -9,7 +9,7 @@ namespace GestionEquestre.Ge.Entities
     using System.ComponentModel;
     using System.IO;
 
-    [ConnectionKey("Ge"), TableName("[dbo].[COR_ETAB]")]
+    [ConnectionKey("GE"), TableName("[dbo].[COR_ETAB]")]
     [DisplayName("Cor Etab"), InstanceName("Cor Etab"), TwoLevelCached]
     [ReadPermission("Administration:General")]
     [ModifyPermission("Administration:General")]
@@ -232,11 +232,11 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.IdAdressIsActive[this] = value; }
         }
 
-        [DisplayName("Id Adress Not Archive"), Expression("jIdAdress.[NotArchive]")]
-        public Boolean? IdAdressNotArchive
+        [DisplayName("Id Adress IsArchive"), Expression("jIdAdress.[IsArchive]")]
+        public Boolean? IdAdressIsArchive
         {
-            get { return Fields.IdAdressNotArchive[this]; }
-            set { Fields.IdAdressNotArchive[this] = value; }
+            get { return Fields.IdAdressIsArchive[this]; }
+            set { Fields.IdAdressIsArchive[this] = value; }
         }
 
         [DisplayName("Id Adress Insert Date"), Expression("jIdAdress.[InsertDate]")]
@@ -382,7 +382,7 @@ namespace GestionEquestre.Ge.Entities
             public Int16Field BankAccountTypeOfLastPayment;
 
             public BooleanField IdAdressIsActive;
-            public BooleanField IdAdressNotArchive;
+            public BooleanField IdAdressIsArchive;
             public DateTimeField IdAdressInsertDate;
             public Int32Field IdAdressInsertUserId;
             public DateTimeField IdAdressUpdateDate;

@@ -30,12 +30,13 @@ namespace GestionEquestre.Ge {
 
             Serenity.TabsExtensions.setDisabled(this.tabs, 'Horses', this.isNewOrDeleted());
             Serenity.TabsExtensions.setDisabled(this.tabs, 'Cavaliers', this.isNewOrDeleted());
-            Serenity.TabsExtensions.setDisabled(this.tabs, 'Others Persons', this.isNewOrDeleted());
+            Serenity.TabsExtensions.setDisabled(this.tabs, 'Others_Persons', this.isNewOrDeleted());
             
 
             this.FolderHorseGrid.Folder = entity.Id;
             this.FolderCavalierGrid.Folder = entity.Id;
             this.FolderPersonGrid.Folder = entity.Id;
         }
+
     }
 }

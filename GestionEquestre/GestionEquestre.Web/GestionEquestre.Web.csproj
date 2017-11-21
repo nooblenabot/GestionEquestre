@@ -864,7 +864,6 @@
     <Content Include="Scripts\SlickGrid\slick.remotemodel.js" />
     <Content Include="Scripts\sortable.js" />
     <Content Include="Scripts\sortable.min.js" />
-    <Content Include="Scripts\vform.js" />
     <Content Include="wkhtmltopdf-license.txt" />
     <Content Include="Modules\Ge\Management\Horses\ManHorsesIndex.cshtml" />
     <Content Include="Scripts\ckeditor\skins\moono\readme.md" />
@@ -1306,6 +1305,18 @@
     <TypeScriptCompile Include="Imports\ServerTypings\Ge.CorCorporateColumns.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.CorEtabColumns.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.CorEtabForm.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.CorEtabRow.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="Imports\ServerTypings\Ge.CorEtabService.ts">
+      <DependentUpon>ServerTypings.tt</DependentUpon>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="Imports\ServerTypings\Ge.LinkFolderCavalierColumns.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
@@ -1518,7 +1529,7 @@
     <Content Include="package.json" />
     <Content Include="tools\Node\lessc.cmd" />
     <Content Include="tools\JsEngine\lib.d.ts_" />
-    <Content Include="Scripts\site\texts\Site.texts.Fr-FR.json" />
+    <Content Include="Scripts\site\texts\Site.texts.fr-FR.json" />
     <Content Include="Scripts\SlickGrid\README.md" />
     <Content Include="Scripts\serenity\texts\serenity.texts.zh-CN.json" />
     <Content Include="Scripts\serenity\texts\serenity.texts.vi-VN.json" />

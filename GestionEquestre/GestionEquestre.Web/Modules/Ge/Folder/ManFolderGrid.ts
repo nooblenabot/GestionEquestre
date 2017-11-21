@@ -14,5 +14,15 @@ namespace GestionEquestre.Ge {
 
         }
 
+        protected addButtonClick() {
+            let now = new Date();
+            this.editItem(<ManFolderRow>{
+                CreateDate: Q.formatDate(now, 'dd-MM-yyyy'),
+                IsActive: true,
+            });
+        }
+
+
+
     }
 }

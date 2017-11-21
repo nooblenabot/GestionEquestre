@@ -25,7 +25,7 @@ namespace GestionEquestre.Ge.Forms
         public Int32 BirthOrganization { get; set; }
         public String Name { get; set; }
         public Boolean IsActive { get; set; }
-        public Boolean NotArchive { get; set; }
+        public Boolean IsArchive { get; set; }
         [QuarterWidth]
         public DateTime InsertDate { get; set; }
         //  public Int32 InsertUserId { get; set; }

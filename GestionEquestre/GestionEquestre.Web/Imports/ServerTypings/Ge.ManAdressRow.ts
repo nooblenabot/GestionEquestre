@@ -2,7 +2,7 @@
     export interface ManAdressRow {
         Id?: number;
         IsActive?: boolean;
-        NotArchive?: boolean;
+        IsArchive?: boolean;
         InsertDate?: string;
         InsertUserId?: number;
         UpdateDate?: string;
@@ -51,7 +51,7 @@
         export namespace Fields {
             export declare const Id: string;
             export declare const IsActive: string;
-            export declare const NotArchive: string;
+            export declare const IsArchive: string;
             export declare const InsertDate: string;
             export declare const InsertUserId: string;
             export declare const UpdateDate: string;
@@ -95,7 +95,7 @@
         [
             'Id', 
             'IsActive', 
-            'NotArchive', 
+            'IsArchive', 
             'InsertDate', 
             'InsertUserId', 
             'UpdateDate', 

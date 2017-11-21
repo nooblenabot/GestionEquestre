@@ -87,11 +87,11 @@ namespace GestionEquestre.Ge.Entities
             get { return Fields.HorseIsActive[this]; }
             set { Fields.HorseIsActive[this] = value; }
         }
-        [DisplayName("Horse Not Archive"), Expression("jHorse.[NotArchive]")]
-        public Boolean? HorseNotArchive
+        [DisplayName("HorseIsArchive"), Expression("jHorse.[IsArchive]")]
+        public Boolean? HorseIsArchive
         {
-            get { return Fields.HorseNotArchive[this]; }
-            set { Fields.HorseNotArchive[this] = value; }
+            get { return Fields.HorseIsArchive[this]; }
+            set { Fields.HorseIsArchive[this] = value; }
         }
         [DisplayName("Horse Insert Date"), Expression("jHorse.[InsertDate]")]
         public DateTime? HorseInsertDate
@@ -177,11 +177,11 @@ namespace GestionEquestre.Ge.Entities
             get { return Fields.CavalierIsActive[this]; }
             set { Fields.CavalierIsActive[this] = value; }
         }
-        [DisplayName("Cavalier Not Archive"), Expression("jCavalier.[NotArchive]")]
-        public Boolean? CavalierNotArchive
+        [DisplayName("Cavalier IsArchive"), Expression("jCavalier.[IsArchive]")]
+        public Boolean? CavalierIsArchive
         {
-            get { return Fields.CavalierNotArchive[this]; }
-            set { Fields.CavalierNotArchive[this] = value; }
+            get { return Fields.CavalierIsArchive[this]; }
+            set { Fields.CavalierIsArchive[this] = value; }
         }
         [DisplayName("Cavalier Insert Date"), Expression("jCavalier.[InsertDate]")]
         public DateTime? CavalierInsertDate
@@ -274,7 +274,7 @@ namespace GestionEquestre.Ge.Entities
             public Int64Field HorseBirthOrganization;
             public StringField HorseName;
             public BooleanField HorseIsActive;
-            public BooleanField HorseNotArchive;
+            public BooleanField HorseIsArchive;
             public DateTimeField HorseInsertDate;
             public Int32Field HorseInsertUserId;
             public DateTimeField HorseUpdateDate;
@@ -290,7 +290,7 @@ namespace GestionEquestre.Ge.Entities
 
             public Int64Field CavalierPerson;
             public BooleanField CavalierIsActive;
-            public BooleanField CavalierNotArchive;
+            public BooleanField CavalierIsArchive;
             public DateTimeField CavalierInsertDate;
             public Int32Field CavalierInsertUserId;
             public DateTimeField CavalierUpdateDate;

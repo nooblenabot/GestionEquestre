@@ -8,7 +8,7 @@
         BirthOrganization?: number;
         Name?: string;
         IsActive?: boolean;
-        NotArchive?: boolean;
+        IsArchive?: boolean;
         InsertDate?: string;
         InsertUserId?: number;
         UpdateDate?: string;
@@ -69,7 +69,7 @@
             export declare const BirthOrganization: string;
             export declare const Name: string;
             export declare const IsActive: string;
-            export declare const NotArchive: string;
+            export declare const IsArchive: string;
             export declare const InsertDate: string;
             export declare const InsertUserId: string;
             export declare const UpdateDate: string;
@@ -120,7 +120,7 @@
             'BirthOrganization', 
             'Name', 
             'IsActive', 
-            'NotArchive', 
+            'IsArchive', 
             'InsertDate', 
             'InsertUserId', 
             'UpdateDate', 

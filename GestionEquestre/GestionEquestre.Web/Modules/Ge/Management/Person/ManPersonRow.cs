@@ -37,11 +37,11 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.IsActive[this] = value; }
         }
 
-        [DisplayName("Not Archive"), NotNull,HideOnInsert]
-        public Boolean? NotArchive
+        [DisplayName("IsArchive"), NotNull,HideOnInsert]
+        public Boolean? IsArchive
         {
-            get { return Fields.NotArchive[this]; }
-            set { Fields.NotArchive[this] = value; }
+            get { return Fields.IsArchive[this]; }
+            set { Fields.IsArchive[this] = value; }
         }
 
         [DisplayName("Insert Date"), HideOnInsert, Updatable(false), DateTimeFormatter]
@@ -656,11 +656,11 @@ namespace GestionEquestre.Ge.Entities
             get { return Fields.IdAdressIsActive[this]; }
             set { Fields.IdAdressIsActive[this] = value; }
         }
-        [DisplayName("Id Adress Not Archive"), Expression("jIdAdress.[NotArchive]")]
-        public Boolean? IdAdressNotArchive
+        [DisplayName("Id Adress IsArchive"), Expression("jIdAdress.[IsArchive]")]
+        public Boolean? IdAdressIsArchive
         {
-            get { return Fields.IdAdressNotArchive[this]; }
-            set { Fields.IdAdressNotArchive[this] = value; }
+            get { return Fields.IdAdressIsArchive[this]; }
+            set { Fields.IdAdressIsArchive[this] = value; }
         }
         [DisplayName("Id Adress Insert Date"), Expression("jIdAdress.[InsertDate]")]
         public DateTime? IdAdressInsertDate
@@ -766,7 +766,7 @@ namespace GestionEquestre.Ge.Entities
             public Int64Field Id;
             public BooleanField IsMorale;
             public BooleanField IsActive;
-            public BooleanField NotArchive;
+            public BooleanField IsArchive;
             public DateTimeField InsertDate;
             public Int32Field InsertUserId;
             public DateTimeField UpdateDate;
@@ -867,7 +867,7 @@ namespace GestionEquestre.Ge.Entities
             public Int16Field BankAccountTypeOfLastPayment;
 
             public BooleanField IdAdressIsActive;
-            public BooleanField IdAdressNotArchive;
+            public BooleanField IdAdressIsArchive;
             public DateTimeField IdAdressInsertDate;
             public Int32Field IdAdressInsertUserId;
             public DateTimeField IdAdressUpdateDate;

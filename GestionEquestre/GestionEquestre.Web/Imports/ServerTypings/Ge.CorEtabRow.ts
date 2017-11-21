@@ -1,5 +1,5 @@
 ﻿namespace GestionEquestre.Ge {
-    export interface CorCorporateRow {
+    export interface CorEtabRow {
         Id?: number;
         IsActive?: boolean;
         IsArchive?: boolean;
@@ -15,7 +15,7 @@
         Email2?: string;
         BankAccount?: number;
         IdAdress?: number;
-        FrSiren?: string;
+        FrSiret?: string;
         Caption?: string;
         ArchiveDate?: string;
         BankAccountCountryCodeIban?: string;
@@ -47,10 +47,10 @@
         IdAdressArchiveDate?: string;
     }
 
-    export namespace CorCorporateRow {
+    export namespace CorEtabRow {
         export const idProperty = 'Id';
         export const nameProperty = 'Name';
-        export const localTextPrefix = 'Ge.CorCorporate';
+        export const localTextPrefix = 'Ge.CorEtab';
 
         export namespace Fields {
             export declare const Id: string;
@@ -68,7 +68,7 @@
             export declare const Email2: string;
             export declare const BankAccount: string;
             export declare const IdAdress: string;
-            export declare const FrSiren: string;
+            export declare const FrSiret: string;
             export declare const Caption: string;
             export declare const ArchiveDate: string;
             export declare const BankAccountCountryCodeIban: string;
@@ -116,7 +116,7 @@
             'Email2', 
             'BankAccount', 
             'IdAdress', 
-            'FrSiren', 
+            'FrSiret', 
             'Caption', 
             'ArchiveDate', 
             'BankAccountCountryCodeIban', 

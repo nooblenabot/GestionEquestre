@@ -39,7 +39,6 @@
     "~/Scripts/fastclick/fastclick.js",
     "~/Scripts/adminlte/app.js",
     "~/Scripts/site/GestionEquestre.Web.js",
-    "~/Scripts/vform.js",
     "dynamic://ColumnsBundle",
     "dynamic://FormBundle",
     "dynamic://TemplateBundle"

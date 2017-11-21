@@ -3,7 +3,7 @@
         LicFfe?: string;
         Person?: number;
         IsActive?: boolean;
-        NotArchive?: boolean;
+        IsArchive?: boolean;
         InsertDate?: string;
         InsertUserId?: number;
         UpdateDate?: string;
@@ -18,7 +18,7 @@
         UpdateUsername?: string;
         PersonIsMorale?: boolean;
         PersonIsActive?: boolean;
-        PersonNotArchive?: boolean;
+        PersonIsArchive?: boolean;
         PersonInsertDate?: string;
         PersonInsertUserId?: number;
         PersonUpdateDate?: string;
@@ -77,7 +77,7 @@
             export declare const LicFfe: string;
             export declare const Person: string;
             export declare const IsActive: string;
-            export declare const NotArchive: string;
+            export declare const IsArchive: string;
             export declare const InsertDate: string;
             export declare const InsertUserId: string;
             export declare const UpdateDate: string;
@@ -92,7 +92,7 @@
             export declare const UpdateUsername: string;
             export declare const PersonIsMorale: string;
             export declare const PersonIsActive: string;
-            export declare const PersonNotArchive: string;
+            export declare const PersonIsArchive: string;
             export declare const PersonInsertDate: string;
             export declare const PersonInsertUserId: string;
             export declare const PersonUpdateDate: string;
@@ -141,7 +141,7 @@
             'LicFfe', 
             'Person', 
             'IsActive', 
-            'NotArchive', 
+            'IsArchive', 
             'InsertDate', 
             'InsertUserId', 
             'UpdateDate', 
@@ -156,7 +156,7 @@
             'UpdateUsername', 
             'PersonIsMorale', 
             'PersonIsActive', 
-            'PersonNotArchive', 
+            'PersonIsArchive', 
             'PersonInsertDate', 
             'PersonInsertUserId', 
             'PersonUpdateDate', 

@@ -32,10 +32,10 @@ namespace GestionEquestre.Ge.Entities
         }
 
         [DisplayName("Not Archive"), NotNull]
-        public Boolean? NotArchive
+        public Boolean? IsArchive
         {
-            get { return Fields.NotArchive[this]; }
-            set { Fields.NotArchive[this] = value; }
+            get { return Fields.IsArchive[this]; }
+            set { Fields.IsArchive[this] = value; }
         }
 
         [DisplayName("Insert Date"), HideOnInsert, Updatable(false), DateTimeFormatter]
@@ -162,7 +162,7 @@ namespace GestionEquestre.Ge.Entities
         {
             public Int64Field Id;
             public BooleanField IsActive;
-            public BooleanField NotArchive;
+            public BooleanField IsArchive;
             public DateTimeField InsertDate;
             public Int32Field InsertUserId;
             public DateTimeField UpdateDate;

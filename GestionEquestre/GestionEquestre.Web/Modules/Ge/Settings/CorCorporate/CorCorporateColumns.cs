@@ -16,7 +16,7 @@ namespace GestionEquestre.Ge.Columns
         [EditLink, DisplayName("Db.Shared.RecordId"), AlignRight]
         public Int16 Id { get; set; }
         public Boolean IsActive { get; set; }
-        public Boolean NotArchive { get; set; }
+        public Boolean IsArchive { get; set; }
         public DateTime InsertDate { get; set; }
         public Int32 InsertUserId { get; set; }
         public DateTime UpdateDate { get; set; }
