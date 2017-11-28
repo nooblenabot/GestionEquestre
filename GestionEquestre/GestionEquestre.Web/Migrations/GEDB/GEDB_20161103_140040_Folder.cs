@@ -24,7 +24,7 @@ namespace GestionEquestre.Migrations.GEDB
                .WithColumn("CloseRaison").AsString(50).Nullable()
                .WithColumn("CloseDate").AsDateTime().Nullable()
                .WithColumn("establishment").AsInt32().NotNullable()
-               .WithColumn("Comment").AsString(200).Nullable();
+               .WithColumn("Comment").AsString(2000).Nullable();
 
             addUsersColumns(IfDatabase(Utils.AllExceptOracle)
                 .Create.Table("MAN_FOLDER")

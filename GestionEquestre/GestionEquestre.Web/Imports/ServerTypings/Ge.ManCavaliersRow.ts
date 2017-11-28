@@ -8,7 +8,7 @@
         InsertUserId?: number;
         UpdateDate?: string;
         UpdateUserId?: number;
-        MilesimeLicnece?: string;
+        MilesimeLicnece?: number;
         NiveauGalop?: number;
         LicenceCompetition?: number;
         DateCertificatMedical?: string;

@@ -23,9 +23,8 @@ namespace GestionEquestre.Ge.Columns
         public DateTime UpdateDate { get; set; }
         // public Int32 UpdateUserId { get; set; }
         public String UpdateUsername { get; set; }
-        [EditLink]
+        [EditLink,Localizable(true)]
         public String Caption { get; set; }
-        public String C { get; set; }
         public String Civility { get; set; }
     }
 }

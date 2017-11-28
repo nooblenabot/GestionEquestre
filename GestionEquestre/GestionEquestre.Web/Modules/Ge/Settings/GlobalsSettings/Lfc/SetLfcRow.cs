@@ -10,7 +10,7 @@ namespace GestionEquestre.Ge.Entities
     using System.IO;
 
     [ConnectionKey("GE"), TableName("[dbo].[SET_LFC]")]
-    [DisplayName("Set Lfc"), InstanceName("Set Lfc"), TwoLevelCached]
+    [DisplayName("Lfc"), InstanceName("Set Lfc"), TwoLevelCached]
     [ReadPermission("Administration:General")]
     [ModifyPermission("Administration:General")]
     public sealed class SetLfcRow : Row, IIdRow, INameRow

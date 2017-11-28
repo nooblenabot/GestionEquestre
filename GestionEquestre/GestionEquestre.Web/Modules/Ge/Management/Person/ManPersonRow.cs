@@ -10,7 +10,7 @@ namespace GestionEquestre.Ge.Entities
     using System.IO;
 
     [ConnectionKey("GE"), TableName("[dbo].[MAN_PERSON]")]
-    [DisplayName("Man Person"), InstanceName("Man Person"), TwoLevelCached]
+    [DisplayName("Person"), InstanceName("Man Person"), TwoLevelCached]
     [ReadPermission("Administration:General")]
     [ModifyPermission("Administration:General")]
     [LookupScript("Ge.Persons")]
@@ -84,6 +84,13 @@ namespace GestionEquestre.Ge.Entities
         {
             get { return Fields.Name[this]; }
             set { Fields.Name[this] = value; }
+        }
+
+        [Expression("CONCAT(T0.[Name], CONCAT(' ', T0.[Surname]))")]
+        public string FullName
+        {
+            get { return Fields.FullName[this]; }
+            set { Fields.FullName[this] = value; }
         }
 
         [DisplayName("Maiden Name"), Size(50),LookupInclude]
@@ -774,6 +781,7 @@ namespace GestionEquestre.Ge.Entities
             public StringField Surname;
             public StringField Name;
             public StringField MaidenName;
+            public StringField FullName;
             public StringField BusinessName;
             public DateTimeField Birthday;
             public Int16Field Sexe;

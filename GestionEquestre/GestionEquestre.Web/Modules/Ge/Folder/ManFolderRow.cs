@@ -11,9 +11,9 @@ namespace GestionEquestre.Ge.Entities
     using System.IO;
 
     [ConnectionKey("GE"), TableName("[dbo].[MAN_FOLDER]")]
-    [DisplayName("Man Folder"), InstanceName("Man Folder"), TwoLevelCached]
-    [ReadPermission("Administration:General")]
-    [ModifyPermission("Administration:General")]
+    [DisplayName("Folder"), InstanceName("Man Folder"), TwoLevelCached]
+    [ReadPermission("Folders:General")]
+    [ModifyPermission("Folders:General")]
     //[LookupScript("Ge.Folders")]
     public sealed class ManFolderRow : Row, IIdRow, INameRow
     {
@@ -102,14 +102,15 @@ namespace GestionEquestre.Ge.Entities
         }
 
         [DisplayName("Establishment"), Column("establishment"), NotNull]
-        [LookupEditor(typeof(Ge.Scripts.SexeHorsesLookup), MinimumResultsForSearch = 1, InplaceAdd = false)]
+        [LookupEditor(typeof(Ge.Scripts.CorEtabLookup), MinimumResultsForSearch = 1, InplaceAdd = false)]
         public Int32? Establishment
         {
             get { return Fields.Establishment[this]; }
             set { Fields.Establishment[this] = value; }
         }
 
-        [DisplayName("Comment"), Size(200)]
+        [DisplayName("Comment"), Size(2000)]
+        [TextAreaEditor(Rows = 8)]
         public String Comment
         {
             get { return Fields.Comment[this]; }

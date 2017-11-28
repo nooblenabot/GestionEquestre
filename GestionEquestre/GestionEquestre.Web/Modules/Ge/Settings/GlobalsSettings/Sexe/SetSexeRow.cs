@@ -10,7 +10,7 @@ namespace GestionEquestre.Ge.Entities
     using System.IO;
 
     [ConnectionKey("GE"), TableName("[dbo].[SET_SEXE]")]
-    [DisplayName("Settings Sexe"), InstanceName("Set Sexe"), TwoLevelCached]
+    [DisplayName("Sexe"), InstanceName("Set Sexe"), TwoLevelCached]
     [ReadPermission("Administration:General")]
     [ModifyPermission("Administration:General")]
     [LocalizationRow(typeof(SetSexeLangRow))]

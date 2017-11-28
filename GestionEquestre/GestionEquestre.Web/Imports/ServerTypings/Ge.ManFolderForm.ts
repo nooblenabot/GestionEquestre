@@ -13,14 +13,14 @@
         IsActive: Serenity.BooleanEditor;
         IsArchive: Serenity.BooleanEditor;
         Caption: Serenity.StringEditor;
-        ArchiveDate: Serenity.DateEditor;
         CreateDate: Serenity.DateEditor;
-        CloseRaison: Serenity.StringEditor;
-        CloseDate: Serenity.DateEditor;
         Establishment: Serenity.LookupEditor;
-        Comment: Serenity.StringEditor;
+        Comment: Serenity.TextAreaEditor;
+        CloseDate: Serenity.DateEditor;
+        CloseRaison: Serenity.StringEditor;
+        ArchiveDate: Serenity.DateEditor;
     }
 
-    [['InsertDate', () => Serenity.DateEditor], ['InsertUsername', () => Serenity.StringEditor], ['UpdateDate', () => Serenity.DateEditor], ['UpdateUsername', () => Serenity.StringEditor], ['Id', () => Serenity.StringEditor], ['IsActive', () => Serenity.BooleanEditor], ['IsArchive', () => Serenity.BooleanEditor], ['Caption', () => Serenity.StringEditor], ['ArchiveDate', () => Serenity.DateEditor], ['CreateDate', () => Serenity.DateEditor], ['CloseRaison', () => Serenity.StringEditor], ['CloseDate', () => Serenity.DateEditor], ['Establishment', () => Serenity.LookupEditor], ['Comment', () => Serenity.StringEditor]].forEach(x => Object.defineProperty(ManFolderForm.prototype, <string>x[0], { get: function () { return this.w(x[0], (x[1] as any)()); }, enumerable: true, configurable: true }));
+    [['InsertDate', () => Serenity.DateEditor], ['InsertUsername', () => Serenity.StringEditor], ['UpdateDate', () => Serenity.DateEditor], ['UpdateUsername', () => Serenity.StringEditor], ['Id', () => Serenity.StringEditor], ['IsActive', () => Serenity.BooleanEditor], ['IsArchive', () => Serenity.BooleanEditor], ['Caption', () => Serenity.StringEditor], ['CreateDate', () => Serenity.DateEditor], ['Establishment', () => Serenity.LookupEditor], ['Comment', () => Serenity.TextAreaEditor], ['CloseDate', () => Serenity.DateEditor], ['CloseRaison', () => Serenity.StringEditor], ['ArchiveDate', () => Serenity.DateEditor]].forEach(x => Object.defineProperty(ManFolderForm.prototype, <string>x[0], { get: function () { return this.w(x[0], (x[1] as any)()); }, enumerable: true, configurable: true }));
 }
 

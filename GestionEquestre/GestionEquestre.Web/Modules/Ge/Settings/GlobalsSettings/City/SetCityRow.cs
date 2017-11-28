@@ -93,6 +93,7 @@ namespace GestionEquestre.Ge.Entities
         }
 
         [DisplayName("Country"), ForeignKey("[dbo].[SET_COUNTRY]", "Id"), LeftJoin("jCountry"), TextualField("CountryName_FR_fr")]
+        [LookupEditor(typeof(Ge.Scripts.SetCountryLookup), MinimumResultsForSearch = 1, InplaceAdd = false)]
         public Int16? Country
         {
             get { return Fields.Country[this]; }

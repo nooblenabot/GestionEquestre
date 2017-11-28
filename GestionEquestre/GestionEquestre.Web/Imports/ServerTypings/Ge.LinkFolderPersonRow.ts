@@ -7,7 +7,7 @@
         PersonIsMorale?: boolean;
         PersonSurname?: string;
         PersonName?: string;
-        PersonMaidenName?: string;
+        PersonFullName?: string;
         PersonBusinessName?: string;
         PersonCaption?: string;
     }
@@ -25,7 +25,7 @@
             export declare const PersonIsMorale: string;
             export declare const PersonSurname: string;
             export declare const PersonName: string;
-            export declare const PersonMaidenName: string;
+            export declare const PersonFullName: string;
             export declare const PersonBusinessName: string;
             export declare const PersonCaption: string;
         }
@@ -38,7 +38,7 @@
             'PersonIsMorale', 
             'PersonSurname', 
             'PersonName', 
-            'PersonMaidenName', 
+            'PersonFullName', 
             'PersonBusinessName', 
             'PersonCaption'
         ].forEach(x => (<any>Fields)[x] = x);

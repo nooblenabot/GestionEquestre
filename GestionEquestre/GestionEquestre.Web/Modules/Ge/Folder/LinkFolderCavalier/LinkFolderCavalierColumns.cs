@@ -14,6 +14,9 @@ namespace GestionEquestre.Ge.Columns
     public class LinkFolderCavalierColumns
     {
         [EditLink]
-        public String CavalierCaption { get; set; }
+        public String Cavalier { get; set; }
+        [EditLink]
+        public String CavalierPerson { get; set; }
+
     }
 }

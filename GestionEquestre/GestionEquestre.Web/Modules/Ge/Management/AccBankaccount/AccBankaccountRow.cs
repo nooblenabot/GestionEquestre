@@ -10,7 +10,7 @@ namespace GestionEquestre.Ge.Entities
     using System.IO;
 
     [ConnectionKey("GE"), TableName("[dbo].[ACC_BANKACCOUNT]")]
-    [DisplayName("Acc Bankaccount"), InstanceName("Acc Bankaccount"), TwoLevelCached]
+    [DisplayName("Bankaccount"), InstanceName("Acc Bankaccount"), TwoLevelCached]
     [ReadPermission("Administration:General")]
     [ModifyPermission("Administration:General")]
     public sealed class AccBankaccountRow : Row, IIdRow, INameRow

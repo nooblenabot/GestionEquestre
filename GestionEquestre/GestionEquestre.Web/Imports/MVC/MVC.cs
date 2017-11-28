@@ -49,16 +49,6 @@ namespace MVC
 
         public static class Ge
         {
-            public static class AccBankaccount
-            {
-                public const string AccBankaccountIndex = "~/Modules/Ge/AccBankaccount/AccBankaccountIndex.cshtml";
-            }
-
-            public static class CorEtab
-            {
-                public const string CorEtabIndex = "~/Modules/Ge/CorEtab/CorEtabIndex.cshtml";
-            }
-
             public static class Folder
             {
                 public const string ManFolderIndex = "~/Modules/Ge/Folder/ManFolderIndex.cshtml";
@@ -66,6 +56,11 @@ namespace MVC
 
             public static class Management
             {
+                public static class AccBankaccount
+                {
+                    public const string AccBankaccountIndex = "~/Modules/Ge/Management/AccBankaccount/AccBankaccountIndex.cshtml";
+                }
+
                 public static class Adress
                 {
                     public const string ManAdressIndex = "~/Modules/Ge/Management/Adress/ManAdressIndex.cshtml";
@@ -79,11 +74,10 @@ namespace MVC
                 public static class Horses
                 {
                     public const string ManHorsesIndex = "~/Modules/Ge/Management/Horses/ManHorsesIndex.cshtml";
-                }
-
-                public static class Owner
-                {
-                    public const string ManOwnerIndex = "~/Modules/Ge/Management/Owner/ManOwnerIndex.cshtml";
+                    public static class Owner
+                    {
+                        public const string ManOwnerIndex = "~/Modules/Ge/Management/Horses/Owner/ManOwnerIndex.cshtml";
+                    }
                 }
 
                 public static class Person
@@ -95,9 +89,18 @@ namespace MVC
 
             public static class Settings
             {
-                public static class CorCorporate
+                public static class Administration
                 {
-                    public const string CorCorporateIndex = "~/Modules/Ge/Settings/CorCorporate/CorCorporateIndex.cshtml";
+                    public static class CorCorporate
+                    {
+                        public const string CorCorporateIndex = "~/Modules/Ge/Settings/Administration/CorCorporate/CorCorporateIndex.cshtml";
+                    }
+
+                    public static class CorEtab
+                    {
+                        public const string CorEtabIndex = "~/Modules/Ge/Settings/Administration/CorEtab/CorEtabIndex.cshtml";
+                    }
+
                 }
 
                 public static class GlobalsSettings

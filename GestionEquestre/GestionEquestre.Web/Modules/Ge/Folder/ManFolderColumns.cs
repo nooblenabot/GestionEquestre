@@ -15,14 +15,14 @@ namespace GestionEquestre.Ge.Columns
     {
         [EditLink, DisplayName("Db.Shared.RecordId"), AlignRight]
         public Int64 Id { get; set; }
+              [EditLink]
+        public String Caption { get; set; }
         public Boolean IsActive { get; set; }
         public Boolean IsArchive { get; set; }
         public DateTime InsertDate { get; set; }
         public String InsertUsername { get; set; }
         public DateTime UpdateDate { get; set; }
         public String UpdateUsername { get; set; }
-        [EditLink]
-        public String Caption { get; set; }
         public DateTime ArchiveDate { get; set; }
         public DateTime CreateDate { get; set; }
         public String CloseRaison { get; set; }

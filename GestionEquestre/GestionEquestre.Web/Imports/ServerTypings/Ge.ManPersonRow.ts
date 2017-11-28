@@ -11,6 +11,7 @@
         Surname?: string;
         Name?: string;
         MaidenName?: string;
+        FullName?: string;
         BusinessName?: string;
         Birthday?: string;
         Sexe?: number;
@@ -134,6 +135,7 @@
             export declare const Surname: string;
             export declare const Name: string;
             export declare const MaidenName: string;
+            export declare const FullName: string;
             export declare const BusinessName: string;
             export declare const Birthday: string;
             export declare const Sexe: string;
@@ -247,6 +249,7 @@
             'Surname', 
             'Name', 
             'MaidenName', 
+            'FullName', 
             'BusinessName', 
             'Birthday', 
             'Sexe', 

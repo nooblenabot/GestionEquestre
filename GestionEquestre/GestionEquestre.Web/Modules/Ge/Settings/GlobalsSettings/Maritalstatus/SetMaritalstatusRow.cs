@@ -10,7 +10,7 @@ namespace GestionEquestre.Ge.Entities
     using System.IO;
 
     [ConnectionKey("GE"), TableName("[dbo].[SET_MARITALSTATUS]")]
-    [DisplayName("Set Maritalstatus"), InstanceName("Set Maritalstatus"), TwoLevelCached]
+    [DisplayName("Maritalstatus"), InstanceName("Set Maritalstatus"), TwoLevelCached]
     [ReadPermission("Administration:General")]
     [ModifyPermission("Administration:General")]
     public sealed class SetMaritalstatusRow : Row, IIdRow, INameRow

@@ -11,8 +11,9 @@ namespace GestionEquestre.Ge.Scripts
        public SexeHorsesLookup()
         {
             IdField = Entities.SetSexeRow.Fields.SexeId.PropertyName;
-            //TextField = Entities.SetSexeLangRow.Fields.Caption.PropertyName;
+            //TextField = Entities.SetSexeRow.Fields.Caption.PropertyName;
             TextField = Entities.SetSexeRow.Fields.Caption.PropertyName;
+
 
         }
 

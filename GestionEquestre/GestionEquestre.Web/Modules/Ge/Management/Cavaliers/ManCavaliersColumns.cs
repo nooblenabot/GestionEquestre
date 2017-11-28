@@ -25,7 +25,7 @@ namespace GestionEquestre.Ge.Columns
         public DateTime UpdateDate { get; set; }
         // public Int32 UpdateUserId { get; set; }
         public String UpdateUsername { get; set; }
-        public DateTime MilesimeLicnece { get; set; }
+        public Int32 MilesimeLicnece { get; set; }
         public String NiveauGalopCaption { get; set; }
         public String LicenceCompetitionCaption { get; set; }
         public DateTime DateCertificatMedical { get; set; }

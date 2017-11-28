@@ -52,7 +52,7 @@ namespace GestionEquestre.Ge.Scripts
 
         protected override void ApplyOrder(SqlQuery query)
         {
-        
+
         }
     }
 }

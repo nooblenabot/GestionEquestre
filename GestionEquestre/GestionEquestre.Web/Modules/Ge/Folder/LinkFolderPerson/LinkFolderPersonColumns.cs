@@ -14,8 +14,12 @@ namespace GestionEquestre.Ge.Columns
     public class LinkFolderPersonColumns
     {
         [EditLink]
-        public String PersonName { get; set; }
-        [EditLink]
         public String Caption { get; set; }
+        [EditLink]
+        public String PersonFullName { get; set; }
+        //[EditLink]
+        //public String PersonSurname { get; set; }
+        [EditLink]
+        public String PersonBusinessName { get; set; }
     }
 }

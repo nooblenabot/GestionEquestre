@@ -10,7 +10,7 @@ namespace GestionEquestre.Ge.Entities
     using System.IO;
 
     [ConnectionKey("GE"), TableName("[dbo].[SET_UELNORGA]")]
-    [DisplayName("Set Uelnorga"), InstanceName("Set Uelnorga"), TwoLevelCached]
+    [DisplayName("Uelnorga"), InstanceName("Set Uelnorga"), TwoLevelCached]
     [ReadPermission("Administration:General")]
     [ModifyPermission("Administration:General")]
     public sealed class SetUelnorgaRow : Row, IIdRow, INameRow

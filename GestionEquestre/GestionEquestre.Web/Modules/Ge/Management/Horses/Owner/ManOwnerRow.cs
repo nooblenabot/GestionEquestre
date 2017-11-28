@@ -10,7 +10,7 @@ namespace GestionEquestre.Ge.Entities
     using System.IO;
 
     [ConnectionKey("GE"), TableName("[dbo].[MAN_OWNER]")]
-    [DisplayName("Man Owner"), InstanceName("Man Owner"), TwoLevelCached]
+    [DisplayName("Owner"), InstanceName("Man Owner"), TwoLevelCached]
     [ReadPermission("Administration:General")]
     [ModifyPermission("Administration:General")]
     public sealed class ManOwnerRow : Row, IIdRow, INameRow

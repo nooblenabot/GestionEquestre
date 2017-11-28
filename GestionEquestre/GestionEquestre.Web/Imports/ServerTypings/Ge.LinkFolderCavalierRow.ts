@@ -4,6 +4,7 @@
         Folder?: number;
         Cavalier?: string;
         CavalierPerson?: number;
+        CavalierName?: string;
     }
 
     export namespace LinkFolderCavalierRow {
@@ -16,13 +17,15 @@
             export declare const Folder: string;
             export declare const Cavalier: string;
             export declare const CavalierPerson: string;
+            export declare const CavalierName: string;
         }
 
         [
             'Id', 
             'Folder', 
             'Cavalier', 
-            'CavalierPerson'
+            'CavalierPerson', 
+            'CavalierName'
         ].forEach(x => (<any>Fields)[x] = x);
     }
 }

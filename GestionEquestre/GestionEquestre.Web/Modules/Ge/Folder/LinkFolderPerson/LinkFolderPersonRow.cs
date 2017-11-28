@@ -63,11 +63,11 @@ namespace GestionEquestre.Ge.Entities
             get { return Fields.PersonName[this]; }
             set { Fields.PersonName[this] = value; }
         }
-        [DisplayName("Person Maiden Name"), Expression("jPerson.[MaidenName]")]
-        public String PersonMaidenName
+        [DisplayName("Person Full Name"), Expression("jPerson.[FullName]")]
+        public String PersonFullName
         {
-            get { return Fields.PersonMaidenName[this]; }
-            set { Fields.PersonMaidenName[this] = value; }
+            get { return Fields.PersonFullName[this]; }
+            set { Fields.PersonFullName[this] = value; }
         }
         [DisplayName("Person Business Name"), Expression("jPerson.[BusinessName]")]
         public String PersonBusinessName
@@ -110,7 +110,7 @@ namespace GestionEquestre.Ge.Entities
             public BooleanField PersonIsMorale;
             public StringField PersonSurname;
             public StringField PersonName;
-            public StringField PersonMaidenName;
+            public StringField PersonFullName;
             public StringField PersonBusinessName;
 
             public StringField PersonCaption;

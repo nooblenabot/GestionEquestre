@@ -10,7 +10,7 @@ namespace GestionEquestre.Ge.Entities
     using System.IO;
 
     [ConnectionKey("GE"), TableName("[dbo].[MAN_CAVALIERS]")]
-    [DisplayName("Man Cavaliers"), InstanceName("Man Cavaliers"), TwoLevelCached]
+    [DisplayName("Cavaliers"), InstanceName("Man Cavaliers"), TwoLevelCached]
     [ReadPermission("Administration:General")]
     [ModifyPermission("Administration:General")]
     [LookupScript("Ge.Cavaliers")]
@@ -74,7 +74,7 @@ namespace GestionEquestre.Ge.Entities
         }
 
         [DisplayName("Milesime Licnece")]
-        public DateTime? MilesimeLicnece
+        public Int32? MilesimeLicnece
         {
             get { return Fields.MilesimeLicnece[this]; }
             set { Fields.MilesimeLicnece[this] = value; }
@@ -428,7 +428,7 @@ namespace GestionEquestre.Ge.Entities
             public Int32Field InsertUserId;
             public DateTimeField UpdateDate;
             public Int32Field UpdateUserId;
-            public DateTimeField MilesimeLicnece;
+            public Int32Field MilesimeLicnece;
             public Int16Field NiveauGalop;
             public Int16Field LicenceCompetition;
             public DateTimeField DateCertificatMedical;

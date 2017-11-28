@@ -10,8 +10,19 @@ namespace GestionEquestre.Ge.Scripts
     {
        public ManPersonActiveLookup()
         {
+
+            string _Name = Entities.ManPersonRow.Fields.Name.PropertyName;
+            string _Surname = Entities.ManPersonRow.Fields.Surname.PropertyName;
+
+            _Surname = " " + _Surname.Trim();
+
+
+
+            var txt = Entities.ManPersonRow.Fields.Name.PropertyName + "_" + Entities.ManPersonRow.Fields.Surname.PropertyName;
             IdField = Entities.ManPersonRow.Fields.Id.PropertyName;
-            TextField = Entities.ManPersonRow.Fields.Name.PropertyName;
+            //TextField = Entities.ManPersonRow.Fields.FullName.PropertyName;
+            //TextField = Entities.ManPersonRow.Fields.Name.PropertyName;
+            TextField = string.Concat(_Name,_Surname);
 
         }
 

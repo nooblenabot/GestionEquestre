@@ -1377,6 +1377,7 @@
     <TypeScriptCompile Include="Modules\Ge\Folder\LinkFolderHorse\LinkFolderHorseGrid.ts" />
     <TypeScriptCompile Include="Modules\Ge\Management\Horses\ManHorsesDialog.ts" />
     <TypeScriptCompile Include="Modules\Ge\Management\Horses\ManHorsesGrid.ts" />
+    <TypeScriptCompile Include="Modules\Ge\Management\Person\ManPersonLookupEditor.ts" />
     <TypeScriptCompile Include="node_modules\%40types\jquery\index.d.ts" />
     <TypeScriptCompile Include="node_modules\%40types\jqueryui\index.d.ts" />
     <TypeScriptCompile Include="node_modules\%40types\jquery.blockui\index.d.ts" />
@@ -1623,9 +1624,9 @@
     <TypeScriptCompile Include="Imports\ServerTypings\Ge.AccBankaccountService.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
-    <Content Include="Modules\Ge\AccBankaccount\AccBankaccountIndex.cshtml" />
-    <TypeScriptCompile Include="Modules\Ge\AccBankaccount\AccBankaccountDialog.ts" />
-    <TypeScriptCompile Include="Modules\Ge\AccBankaccount\AccBankaccountGrid.ts" />
+    <Content Include="Modules\Ge\Management\AccBankaccount\AccBankaccountIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\Ge\Management\AccBankaccount\AccBankaccountDialog.ts" />
+    <TypeScriptCompile Include="Modules\Ge\Management\AccBankaccount\AccBankaccountGrid.ts" />
     <TypeScriptCompile Include="Imports\ServerTypings\Ge.AccBankaccountForm.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
@@ -1660,9 +1661,9 @@
     <TypeScriptCompile Include="Imports\ServerTypings\Ge.ManOwnerService.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
-    <Content Include="Modules\Ge\Management\Owner\ManOwnerIndex.cshtml" />
-    <TypeScriptCompile Include="Modules\Ge\Management\Owner\ManOwnerDialog.ts" />
-    <TypeScriptCompile Include="Modules\Ge\Management\Owner\ManOwnerGrid.ts" />
+    <Content Include="Modules\Ge\Management\Horses\Owner\ManOwnerIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\Ge\Management\Horses\Owner\ManOwnerDialog.ts" />
+    <TypeScriptCompile Include="Modules\Ge\Management\Horses\Owner\ManOwnerGrid.ts" />
     <TypeScriptCompile Include="Imports\ServerTypings\Ge.ManOwnerForm.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
@@ -1815,15 +1816,15 @@
     <TypeScriptCompile Include="Imports\ServerTypings\Ge.CorCorporateService.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
-    <Content Include="Modules\Ge\Settings\CorCorporate\CorCorporateIndex.cshtml" />
-    <TypeScriptCompile Include="Modules\Ge\Settings\CorCorporate\CorCorporateDialog.ts" />
-    <TypeScriptCompile Include="Modules\Ge\Settings\CorCorporate\CorCorporateGrid.ts" />
+    <Content Include="Modules\Ge\Settings\Administration\CorCorporate\CorCorporateIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\Ge\Settings\Administration\CorCorporate\CorCorporateDialog.ts" />
+    <TypeScriptCompile Include="Modules\Ge\Settings\Administration\CorCorporate\CorCorporateGrid.ts" />
     <TypeScriptCompile Include="Imports\ServerTypings\Ge.CorCorporateForm.ts">
       <DependentUpon>ServerTypings.tt</DependentUpon>
     </TypeScriptCompile>
-    <Content Include="Modules\GE\CorEtab\CorEtabIndex.cshtml" />
-    <TypeScriptCompile Include="Modules\GE\CorEtab\CorEtabDialog.ts" />
-    <TypeScriptCompile Include="Modules\GE\CorEtab\CorEtabGrid.ts" />
+    <Content Include="Modules\Ge\Settings\Administration\CorEtab\CorEtabIndex.cshtml" />
+    <TypeScriptCompile Include="Modules\Ge\Settings\Administration\CorEtab\CorEtabDialog.ts" />
+    <TypeScriptCompile Include="Modules\Ge\Settings\Administration\CorEtab\CorEtabGrid.ts" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
@@ -1840,6 +1841,9 @@
     <Compile Include="App_Start\SiteInitialization.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Imports\ClientTypes\Ge.ManPersonLookupEditorAttribute.cs">
+      <DependentUpon>ClientTypes.tt</DependentUpon>
     </Compile>
     <Compile Include="Migrations\GEDB\GEDB_20141103_140000_Initial.cs" />
     <Compile Include="Migrations\GEDB\GEDB_20141111_113000_Permissions.cs" />
@@ -1929,6 +1933,7 @@
     <Compile Include="Modules\Ge\Management\Cavaliers\ManCavalierLookup.cs" />
     <Compile Include="Modules\Ge\Management\Horses\ManHorsesLookup.cs" />
     <Compile Include="Modules\Ge\Management\Person\ManPersonLookup.cs" />
+    <Compile Include="Modules\Ge\Settings\Administration\CorEtab\CorEtabLookup.cs" />
     <Compile Include="Modules\Ge\Settings\GlobalsSettings\City\SetCityLookup.cs" />
     <Compile Include="Modules\Ge\Settings\GlobalsSettings\Country\SetCountryLookup.cs" />
     <Compile Include="Modules\Ge\Settings\GlobalsSettings\Galop\SetGalopLookup.cs" />
@@ -1990,12 +1995,12 @@
     <Compile Include="Modules\Administration\UserPermission\UserPermissionRow.cs" />
     <Compile Include="Modules\Administration\UserPermission\UserPermissionRepository.cs" />
     <Compile Include="Modules\Administration\UserPermission\UserPermissionEndpoint.cs" />
-    <Compile Include="Modules\Ge\AccBankaccount\AccBankaccountRow.cs" />
-    <Compile Include="Modules\Ge\AccBankaccount\AccBankaccountRepository.cs" />
-    <Compile Include="Modules\Ge\AccBankaccount\AccBankaccountEndpoint.cs" />
-    <Compile Include="Modules\Ge\AccBankaccount\AccBankaccountPage.cs" />
-    <Compile Include="Modules\Ge\AccBankaccount\AccBankaccountColumns.cs" />
-    <Compile Include="Modules\Ge\AccBankaccount\AccBankaccountForm.cs" />
+    <Compile Include="Modules\Ge\Management\AccBankaccount\AccBankaccountRow.cs" />
+    <Compile Include="Modules\Ge\Management\AccBankaccount\AccBankaccountRepository.cs" />
+    <Compile Include="Modules\Ge\Management\AccBankaccount\AccBankaccountEndpoint.cs" />
+    <Compile Include="Modules\Ge\Management\AccBankaccount\AccBankaccountPage.cs" />
+    <Compile Include="Modules\Ge\Management\AccBankaccount\AccBankaccountColumns.cs" />
+    <Compile Include="Modules\Ge\Management\AccBankaccount\AccBankaccountForm.cs" />
     <Compile Include="Modules\Ge\GeNavigation.cs" />
     <Compile Include="Modules\Ge\Management\Adress\ManAdressRow.cs" />
     <Compile Include="Modules\Ge\Management\Adress\ManAdressRepository.cs" />
@@ -2009,12 +2014,12 @@
     <Compile Include="Modules\Ge\Management\Cavaliers\ManCavaliersPage.cs" />
     <Compile Include="Modules\Ge\Management\Cavaliers\ManCavaliersColumns.cs" />
     <Compile Include="Modules\Ge\Management\Cavaliers\ManCavaliersForm.cs" />
-    <Compile Include="Modules\Ge\Management\Owner\ManOwnerRow.cs" />
-    <Compile Include="Modules\Ge\Management\Owner\ManOwnerRepository.cs" />
-    <Compile Include="Modules\Ge\Management\Owner\ManOwnerEndpoint.cs" />
-    <Compile Include="Modules\Ge\Management\Owner\ManOwnerPage.cs" />
-    <Compile Include="Modules\Ge\Management\Owner\ManOwnerColumns.cs" />
-    <Compile Include="Modules\Ge\Management\Owner\ManOwnerForm.cs" />
+    <Compile Include="Modules\Ge\Management\Horses\Owner\ManOwnerRow.cs" />
+    <Compile Include="Modules\Ge\Management\Horses\Owner\ManOwnerRepository.cs" />
+    <Compile Include="Modules\Ge\Management\Horses\Owner\ManOwnerEndpoint.cs" />
+    <Compile Include="Modules\Ge\Management\Horses\Owner\ManOwnerPage.cs" />
+    <Compile Include="Modules\Ge\Management\Horses\Owner\ManOwnerColumns.cs" />
+    <Compile Include="Modules\Ge\Management\Horses\Owner\ManOwnerForm.cs" />
     <Compile Include="Modules\Ge\Management\Person\ManPersonRow.cs" />
     <Compile Include="Modules\Ge\Management\Person\ManPersonRepository.cs" />
     <Compile Include="Modules\Ge\Management\Person\ManPersonEndpoint.cs" />
@@ -2085,22 +2090,21 @@
     <Compile Include="Modules\Ge\Folder\ManFolderColumns.cs" />
     <Compile Include="Modules\Ge\Folder\ManFolderForm.cs" />
     <Compile Include="Modules\Ge\Settings\GlobalsSettings\Sexe\SexeLocalization\SetSexeLangRow.cs" />
-    <Compile Include="Modules\Ge\Settings\CorCorporate\CorCorporateRow.cs" />
-    <Compile Include="Modules\Ge\Settings\CorCorporate\CorCorporateRepository.cs" />
-    <Compile Include="Modules\Ge\Settings\CorCorporate\CorCorporateEndpoint.cs" />
-    <Compile Include="Modules\Ge\Settings\CorCorporate\CorCorporatePage.cs" />
-    <Compile Include="Modules\Ge\Settings\CorCorporate\CorCorporateColumns.cs" />
-    <Compile Include="Modules\Ge\Settings\CorCorporate\CorCorporateForm.cs" />
-    <Compile Include="Modules\GE\CorEtab\CorEtabRow.cs" />
-    <Compile Include="Modules\GE\CorEtab\CorEtabRepository.cs" />
-    <Compile Include="Modules\GE\CorEtab\CorEtabEndpoint.cs" />
-    <Compile Include="Modules\GE\CorEtab\CorEtabPage.cs" />
-    <Compile Include="Modules\GE\CorEtab\CorEtabColumns.cs" />
-    <Compile Include="Modules\GE\CorEtab\CorEtabForm.cs" />
+    <Compile Include="Modules\Ge\Settings\Administration\CorCorporate\CorCorporateRow.cs" />
+    <Compile Include="Modules\Ge\Settings\Administration\CorCorporate\CorCorporateRepository.cs" />
+    <Compile Include="Modules\Ge\Settings\Administration\CorCorporate\CorCorporateEndpoint.cs" />
+    <Compile Include="Modules\Ge\Settings\Administration\CorCorporate\CorCorporatePage.cs" />
+    <Compile Include="Modules\Ge\Settings\Administration\CorCorporate\CorCorporateColumns.cs" />
+    <Compile Include="Modules\Ge\Settings\Administration\CorCorporate\CorCorporateForm.cs" />
+    <Compile Include="Modules\Ge\Settings\Administration\CorEtab\CorEtabRow.cs" />
+    <Compile Include="Modules\Ge\Settings\Administration\CorEtab\CorEtabRepository.cs" />
+    <Compile Include="Modules\Ge\Settings\Administration\CorEtab\CorEtabEndpoint.cs" />
+    <Compile Include="Modules\Ge\Settings\Administration\CorEtab\CorEtabPage.cs" />
+    <Compile Include="Modules\Ge\Settings\Administration\CorEtab\CorEtabColumns.cs" />
+    <Compile Include="Modules\Ge\Settings\Administration\CorEtab\CorEtabForm.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Modules\Ge\Settings\Administration\" />
     <Folder Include="Scripts\site\texts\meeting\" />
     <Folder Include="Scripts\site\texts\organization\" />
   </ItemGroup>

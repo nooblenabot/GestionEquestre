@@ -18,7 +18,7 @@ namespace GestionEquestre.Migrations.GEDB
                 .WithColumn("InsertUserId").AsInt32().NotNullable()
                 .WithColumn("UpdateDate").AsDateTime().Nullable()
                 .WithColumn("UpdateUserId").AsInt32().Nullable()
-                .WithColumn("MilesimeLicnece").AsDate().Nullable()
+                .WithColumn("MilesimeLicnece").AsInt32().Nullable()
                 .WithColumn("NiveauGalop").AsInt16().Nullable().WithDefaultValue(1)
                 .WithColumn("LicenceCompetition").AsInt16().Nullable()
                 .WithColumn("DateCertificatMedical").AsDate().Nullable()

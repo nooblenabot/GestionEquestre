@@ -24,10 +24,15 @@ namespace GestionEquestre.Ge.Forms
         //public Int32 UpdateUserId { get; set; }
         [Updatable(false)]
         public String UpdateUsername { get; set; }
+        [PersonNameEditor]
         public String Surname { get; set; }
+        [PersonNameEditor]
         public String Name { get; set; }
+        public String FullName { get; set; }
+        [PersonNameEditor]
         public String MaidenName { get; set; }
         public String BusinessName { get; set; }
+        public String Caption { get; set; }
         public DateTime Birthday { get; set; }
         public Int16 Sexe { get; set; }
         public Int16 MaritalStatus { get; set; }
@@ -35,16 +40,22 @@ namespace GestionEquestre.Ge.Forms
         public Int16 BirthCountry { get; set; }
         public Int16 Nationality { get; set; }
         public String Photo { get; set; }
+        [PhoneEditor]
         public String Phone { get; set; }
+        [PhoneEditor]
         public String Gsm { get; set; }
+        [PhoneEditor]
         public String WorkPhone { get; set; }
+        [PhoneEditor]
         public String OtherPhone1 { get; set; }
+        [PhoneEditor]
         public String OtherPhone2 { get; set; }
+        [EmailEditor]
         public String Email1 { get; set; }
+        [EmailEditor]
         public String Email2 { get; set; }
         public Int64 BankAccount { get; set; }
         public Int64 IdAdress { get; set; }
-        public String Caption { get; set; }
         public DateTime ArchiveDate { get; set; }
     }
 }

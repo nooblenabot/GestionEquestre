@@ -51,6 +51,11 @@
         export const idProperty = 'Id';
         export const nameProperty = 'Name';
         export const localTextPrefix = 'Ge.CorEtab';
+        export const lookupKey = 'Ge.CorEtab';
+
+        export function getLookup(): Q.Lookup<CorEtabRow> {
+            return Q.getLookup<CorEtabRow>('Ge.CorEtab');
+        }
 
         export namespace Fields {
             export declare const Id: string;

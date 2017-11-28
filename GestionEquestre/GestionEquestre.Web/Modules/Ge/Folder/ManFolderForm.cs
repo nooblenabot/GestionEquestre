@@ -13,11 +13,11 @@ namespace GestionEquestre.Ge.Forms
     [BasedOnRow(typeof(Entities.ManFolderRow))]
     public class ManFolderForm
     {
-        [Tab("Info")]
-        [QuarterWidth]
+       // [Tab("Info")]
+        [QuarterWidth,ReadOnly(true)    ]
         public DateTime InsertDate { get; set; }
         //  public Int32 InsertUserId { get; set; }
-        [QuarterWidth]
+        [QuarterWidth,ReadOnly(true)]
         public String InsertUsername { get; set; }
         [Updatable(false)]
         [QuarterWidth]
@@ -26,21 +26,27 @@ namespace GestionEquestre.Ge.Forms
         [Updatable(false)]
         [QuarterWidth]
         public String UpdateUsername { get; set; }
-        [Category("Folder")]
+        [Category("info")]
         [ReadOnly(true),Insertable(false),QuarterWidth]
         public Int64 Id { get; set; }
         [QuarterWidth]
         public Boolean IsActive { get; set; }
-        [QuarterWidth]
+        [QuarterWidth,ReadOnly(true)]
         public Boolean IsArchive { get; set; }       
         public String Caption { get; set; }
-        public DateTime ArchiveDate { get; set; }
+        [ReadOnly(true), QuarterWidth]
         public DateTime CreateDate { get; set; }
-        public String CloseRaison { get; set; }
-        public DateTime CloseDate { get; set; }
         public Int32 Establishment { get; set; }
-        [Tab("Comments")]
-        public String Comment { get; set; }
+          
+      //  [Tab("Comments")]
+       public String Comment { get; set; }
+
+        [ReadOnly(true), QuarterWidth]
+        public DateTime CloseDate { get; set; }
+        [ReadOnly(true), HalfWidth]
+        public String CloseRaison { get; set; }
+        [ReadOnly(true), QuarterWidth]
+        public DateTime ArchiveDate { get; set; }
 
         //[Tab("Shipping")]
         //[Category("Info")]

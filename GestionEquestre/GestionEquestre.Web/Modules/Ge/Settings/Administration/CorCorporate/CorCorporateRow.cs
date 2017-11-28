@@ -10,7 +10,7 @@ namespace GestionEquestre.Ge.Entities
     using System.IO;
 
     [ConnectionKey("GE"), TableName("[dbo].[COR_CORPORATE]")]
-    [DisplayName("Cor Corporate"), InstanceName("Cor Corporate"), TwoLevelCached]
+    [DisplayName("Corporate"), InstanceName("Cor Corporate"), TwoLevelCached]
     [ReadPermission("Administration:General")]
     [ModifyPermission("Administration:General")]
     public sealed class CorCorporateRow : Row, IIdRow, INameRow

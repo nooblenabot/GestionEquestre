@@ -20,6 +20,7 @@ namespace GestionEquestre.Migrations.GEDB
                 .WithColumn("UpdateUserId").AsInt32().Nullable()
                 .WithColumn("Surname").AsString(50).Nullable()
                 .WithColumn("Name").AsString(50).Nullable()
+                .WithColumn("FullName").AsString(100).Nullable()
                 .WithColumn("MaidenName").AsString(50).Nullable()
                 .WithColumn("BusinessName").AsString(200).Nullable()
                 .WithColumn("Birthday").AsDate().Nullable()

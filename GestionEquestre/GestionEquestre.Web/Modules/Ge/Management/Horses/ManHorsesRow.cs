@@ -10,20 +10,21 @@ namespace GestionEquestre.Ge.Entities
     using System.IO;
 
     [ConnectionKey("GE"), TableName("[dbo].[MAN_HORSES]")]
-    [DisplayName("Man Horses"), InstanceName("Man Horses"), TwoLevelCached]
-    [ReadPermission("Administration:General")]
+    [DisplayName("Horses"), InstanceName("Man Horses"), TwoLevelCached]
+    [ReadPermission("Management:Horses")]
     [ModifyPermission("Administration:General")]
     [LookupScript("Ge.Horses")]
     public sealed class ManHorsesRow : Row, IIdRow, INameRow
     {
-        [DisplayName("Ueln"), Column("UELN"), Size(15), PrimaryKey, QuickSearch,]
+        [DisplayName("Ueln"), Column("UELN"), Size(15), PrimaryKey, QuickSearch]
+        //[Expression("CONCAT(T0.[BirthCountry],CONCAT(T0.[BirthOrganization],T0.[HNIN]))")]
         public String Ueln
         {
             get { return Fields.Ueln[this]; }
             set { Fields.Ueln[this] = value; }
         }
 
-        [DisplayName("Sire"), Column("SIRE"), Size(8)]
+        [DisplayName("Sire"), Column("SIRE"), Size(8), SetFieldFlags(FieldFlags.Trim)]
         public String Sire
         {
             get { return Fields.Sire[this]; }
@@ -38,6 +39,7 @@ namespace GestionEquestre.Ge.Entities
         }
 
         [DisplayName("Hnin"), Column("HNIN"), Size(9), NotNull]
+        //[Expression("CONCAT(T0.[SIRE],T0.[CLE_SIRE]) WHERE T0.[SIRE] is not NULL")]
         public String Hnin
         {
             get { return Fields.Hnin[this]; }
@@ -117,7 +119,7 @@ namespace GestionEquestre.Ge.Entities
         }
 
         [DisplayName("Sexe"), ForeignKey("[dbo].[SET_SEXE]", "SexeId"), LeftJoin("jSexe"), TextualField("SexeCaption")]
-        [LookupEditor(typeof(Ge.Scripts.SexeHorsesLookup), MinimumResultsForSearch = 1, InplaceAdd = false)]
+        [LookupEditor(typeof(Ge.Scripts.SexeHorsesLookup), MinimumResultsForSearch = -1, InplaceAdd = false)]
                 public Int16? Sexe
         {
             get { return Fields.Sexe[this]; }

@@ -42,6 +42,12 @@ namespace GestionEquestre.Ge.Entities
             get { return Fields.CavalierPerson[this]; }
             set { Fields.CavalierPerson[this] = value; }
         }
+        [DisplayName("Cavalier Name"), Expression("jCavalier.[Person]")]
+        public String CavalierName
+        {
+            get { return Fields.CavalierName[this]; }
+            set { Fields.CavalierName[this] = value; }
+        }
         IIdField IIdRow.IdField
         {
             get { return Fields.Id; }
@@ -66,6 +72,7 @@ namespace GestionEquestre.Ge.Entities
             public StringField Cavalier;
 
             public Int64Field CavalierPerson;
+            public StringField CavalierName;
 
             public RowFields()
                 : base()
