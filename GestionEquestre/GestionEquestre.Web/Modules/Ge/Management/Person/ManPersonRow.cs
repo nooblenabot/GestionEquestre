@@ -115,7 +115,8 @@ namespace GestionEquestre.Ge.Entities
         }
 
         [DisplayName("Sexe"), ForeignKey("[dbo].[SET_SEXE]", "SexeId"), LeftJoin("jSexe"), TextualField("SexeCaption")]
-        [LookupEditor(typeof(Ge.Scripts.SexePersonLookup), MinimumResultsForSearch = 1, InplaceAdd = false)]
+        [LookupEditor(typeof(SetSexeRow), MinimumResultsForSearch = -1, InplaceAdd = false,FilterField = "IsActive" ,FilterValue = SetSexeRow.IsActive.HasValue(true))]
+        //[LookupEditor(typeof(Ge.Scripts.SexePersonLookup), MinimumResultsForSearch = -1, InplaceAdd = false)]
         public Int16? Sexe
         {
             get { return Fields.Sexe[this]; }
@@ -123,7 +124,7 @@ namespace GestionEquestre.Ge.Entities
         }
 
         [DisplayName("Marital Status"), ForeignKey("[dbo].[SET_MARITALSTATUS]", "Id"), LeftJoin("jMaritalStatus"), TextualField("MaritalStatusCaption")]
-        [LookupEditor(typeof(Ge.Scripts.SetMaritalstatusLookup), MinimumResultsForSearch = 1, InplaceAdd = false)]
+        [LookupEditor(typeof(Ge.Scripts.SetMaritalstatusLookup), MinimumResultsForSearch = -1, InplaceAdd = false)]
         public Int16? MaritalStatus
         {
             get { return Fields.MaritalStatus[this]; }
@@ -138,7 +139,7 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.BirthCity[this] = value; }
         }
 
-        [DisplayName("Birth Country"), ForeignKey("[dbo].[SET_COUNTRY]", "Id"), LeftJoin("jBirthCountry"), TextualField("BirthCountryNameFr")]
+        [DisplayName("Birth Country"), ForeignKey("[dbo].[SET_COUNTRY]", "Id"), LeftJoin("jBirthCountry"), TextualField("BirthCountryName_FR_fr")]
         [LookupEditor(typeof(Ge.Scripts.SetCountryLookup), MinimumResultsForSearch = 1, InplaceAdd = false)]
         public Int16? BirthCountry
         {

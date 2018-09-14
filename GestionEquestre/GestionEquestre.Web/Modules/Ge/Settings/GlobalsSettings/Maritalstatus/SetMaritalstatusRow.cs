@@ -29,7 +29,7 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.DefaultValue[this] = value; }
         }
 
-        [DisplayName("Is Active"), NotNull]
+        [DisplayName("Is Active"), NotNull, LookupInclude]
         public Boolean? IsActive
         {
             get { return Fields.IsActive[this]; }

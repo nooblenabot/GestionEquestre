@@ -14,6 +14,7 @@ namespace GestionEquestre.Ge.Entities
     [ReadPermission("Administration:General")]
     [ModifyPermission("Administration:General")]
     [LocalizationRow(typeof(SetSexeLangRow))]
+    [LookupScript("Ge.SexeHorses")]
     public sealed class SetSexeRow : Row, IIdRow, INameRow
     {
         [DisplayName("Sexe Id"), PrimaryKey,LookupInclude, NotNull]
@@ -30,7 +31,7 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.DefaultValue[this] = value; }
         }
 
-        [DisplayName("Is Active"), NotNull]
+        [DisplayName("Is Active"), NotNull,LookupInclude]
         public Boolean? IsActive
         {
             get { return Fields.IsActive[this]; }

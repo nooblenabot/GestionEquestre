@@ -38,9 +38,5 @@ namespace GestionEquestre.Ge {
             this.FolderPersonGrid.Folder = entity.Id;
         }
 
-    //    protected {
-
-    //}
-
     }
 }

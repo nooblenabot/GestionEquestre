@@ -40,15 +40,10 @@ namespace GestionEquestre.Ge.Forms
         public Int16 BirthCountry { get; set; }
         public Int16 Nationality { get; set; }
         public String Photo { get; set; }
-        [PhoneEditor]
         public String Phone { get; set; }
-        [PhoneEditor]
         public String Gsm { get; set; }
-        [PhoneEditor]
         public String WorkPhone { get; set; }
-        [PhoneEditor]
         public String OtherPhone1 { get; set; }
-        [PhoneEditor]
         public String OtherPhone2 { get; set; }
         [EmailEditor]
         public String Email1 { get; set; }

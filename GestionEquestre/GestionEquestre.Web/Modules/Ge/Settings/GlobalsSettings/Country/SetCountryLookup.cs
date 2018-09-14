@@ -19,7 +19,7 @@ namespace GestionEquestre.Ge.Scripts
         {
             var fld = Entities.SetCountryRow.Fields;
             query.Distinct(true)
-                .Select(fld.Id, fld.Name_FR_fr, fld.ISOcode)
+                .Select(fld.Id, fld.Name_FR_fr)
                 .Where(
                 new Criteria(fld.IsActive) == 1
                 );
@@ -29,7 +29,8 @@ namespace GestionEquestre.Ge.Scripts
 
         }
 
-    }
+    };
+
     [LookupScript("Ge.SetCountry")]
     public class SetCISOcodeLookup : RowLookupScript<Entities.SetCountryRow>
     {
