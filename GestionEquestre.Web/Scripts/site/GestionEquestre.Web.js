@@ -715,6 +715,1485 @@ var GestionEquestre;
 })(GestionEquestre || (GestionEquestre = {}));
 var GestionEquestre;
 (function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var AccBankaccountForm = /** @class */ (function (_super) {
+            __extends(AccBankaccountForm, _super);
+            function AccBankaccountForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!AccBankaccountForm.init) {
+                    AccBankaccountForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.StringEditor;
+                    var w1 = s.DateEditor;
+                    var w2 = s.IntegerEditor;
+                    Q.initFormType(AccBankaccountForm, [
+                        'CountryCodeIban', w0,
+                        'CheckDigitsIban', w0,
+                        'Bban', w0,
+                        'Bic', w0,
+                        'AccountOnwer', w0,
+                        'BankAdress', w0,
+                        'Cis', w0,
+                        'Urm', w0,
+                        'MandateDateSign', w1,
+                        'TypePayment', w2,
+                        'DateLastPrelevement', w1,
+                        'TypeOfLastPayment', w2
+                    ]);
+                }
+                return _this;
+            }
+            AccBankaccountForm.formKey = 'Ge.AccBankaccount';
+            return AccBankaccountForm;
+        }(Serenity.PrefixedContext));
+        Ge.AccBankaccountForm = AccBankaccountForm;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var AccBankaccountRow;
+        (function (AccBankaccountRow) {
+            AccBankaccountRow.idProperty = 'Id';
+            AccBankaccountRow.nameProperty = 'CountryCodeIban';
+            AccBankaccountRow.localTextPrefix = 'Ge.AccBankaccount';
+            AccBankaccountRow.deletePermission = 'Administration:General';
+            AccBankaccountRow.insertPermission = 'Administration:General';
+            AccBankaccountRow.readPermission = 'Administration:General';
+            AccBankaccountRow.updatePermission = 'Administration:General';
+        })(AccBankaccountRow = Ge.AccBankaccountRow || (Ge.AccBankaccountRow = {}));
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var AccBankaccountService;
+        (function (AccBankaccountService) {
+            AccBankaccountService.baseUrl = 'Ge/AccBankaccount';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                AccBankaccountService[x] = function (r, s, o) {
+                    return Q.serviceRequest(AccBankaccountService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(AccBankaccountService = Ge.AccBankaccountService || (Ge.AccBankaccountService = {}));
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var CorCorporateForm = /** @class */ (function (_super) {
+            __extends(CorCorporateForm, _super);
+            function CorCorporateForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!CorCorporateForm.init) {
+                    CorCorporateForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.BooleanEditor;
+                    var w1 = s.DateEditor;
+                    var w2 = s.IntegerEditor;
+                    var w3 = s.StringEditor;
+                    Q.initFormType(CorCorporateForm, [
+                        'IsActive', w0,
+                        'IsArchive', w0,
+                        'InsertDate', w1,
+                        'InsertUserId', w2,
+                        'UpdateDate', w1,
+                        'UpdateUserId', w2,
+                        'Name', w3,
+                        'Phone', w3,
+                        'Gsm', w3,
+                        'OtherPhone1', w3,
+                        'Email1', w3,
+                        'Email2', w3,
+                        'BankAccount', w3,
+                        'IdAdress', w3,
+                        'FrSiren', w3,
+                        'Caption', w3,
+                        'ArchiveDate', w1
+                    ]);
+                }
+                return _this;
+            }
+            CorCorporateForm.formKey = 'Ge.CorCorporate';
+            return CorCorporateForm;
+        }(Serenity.PrefixedContext));
+        Ge.CorCorporateForm = CorCorporateForm;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var CorCorporateRow;
+        (function (CorCorporateRow) {
+            CorCorporateRow.idProperty = 'Id';
+            CorCorporateRow.nameProperty = 'Name';
+            CorCorporateRow.localTextPrefix = 'Ge.CorCorporate';
+            CorCorporateRow.deletePermission = 'Administration:General';
+            CorCorporateRow.insertPermission = 'Administration:General';
+            CorCorporateRow.readPermission = 'Administration:General';
+            CorCorporateRow.updatePermission = 'Administration:General';
+        })(CorCorporateRow = Ge.CorCorporateRow || (Ge.CorCorporateRow = {}));
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var CorCorporateService;
+        (function (CorCorporateService) {
+            CorCorporateService.baseUrl = 'Ge/CorCorporate';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                CorCorporateService[x] = function (r, s, o) {
+                    return Q.serviceRequest(CorCorporateService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(CorCorporateService = Ge.CorCorporateService || (Ge.CorCorporateService = {}));
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var CorEtabForm = /** @class */ (function (_super) {
+            __extends(CorEtabForm, _super);
+            function CorEtabForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!CorEtabForm.init) {
+                    CorEtabForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.BooleanEditor;
+                    var w1 = s.DateEditor;
+                    var w2 = s.IntegerEditor;
+                    var w3 = s.StringEditor;
+                    Q.initFormType(CorEtabForm, [
+                        'IsActive', w0,
+                        'IsArchive', w0,
+                        'InsertDate', w1,
+                        'InsertUserId', w2,
+                        'UpdateDate', w1,
+                        'UpdateUserId', w2,
+                        'Name', w3,
+                        'Phone', w3,
+                        'Gsm', w3,
+                        'OtherPhone1', w3,
+                        'Email1', w3,
+                        'Email2', w3,
+                        'BankAccount', w3,
+                        'IdAdress', w3,
+                        'FrSiret', w3,
+                        'Caption', w3,
+                        'ArchiveDate', w1
+                    ]);
+                }
+                return _this;
+            }
+            CorEtabForm.formKey = 'Ge.CorEtab';
+            return CorEtabForm;
+        }(Serenity.PrefixedContext));
+        Ge.CorEtabForm = CorEtabForm;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var CorEtabRow;
+        (function (CorEtabRow) {
+            CorEtabRow.idProperty = 'Id';
+            CorEtabRow.nameProperty = 'Name';
+            CorEtabRow.localTextPrefix = 'Ge.CorEtab';
+            CorEtabRow.lookupKey = 'Ge.CorEtab';
+            function getLookup() {
+                return Q.getLookup('Ge.CorEtab');
+            }
+            CorEtabRow.getLookup = getLookup;
+            CorEtabRow.deletePermission = 'Administration:General';
+            CorEtabRow.insertPermission = 'Administration:General';
+            CorEtabRow.readPermission = 'Administration:General';
+            CorEtabRow.updatePermission = 'Administration:General';
+        })(CorEtabRow = Ge.CorEtabRow || (Ge.CorEtabRow = {}));
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var CorEtabService;
+        (function (CorEtabService) {
+            CorEtabService.baseUrl = 'Ge/CorEtab';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                CorEtabService[x] = function (r, s, o) {
+                    return Q.serviceRequest(CorEtabService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(CorEtabService = Ge.CorEtabService || (Ge.CorEtabService = {}));
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var LinkFolderCavalierForm = /** @class */ (function (_super) {
+            __extends(LinkFolderCavalierForm, _super);
+            function LinkFolderCavalierForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!LinkFolderCavalierForm.init) {
+                    LinkFolderCavalierForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.StringEditor;
+                    var w1 = s.LookupEditor;
+                    Q.initFormType(LinkFolderCavalierForm, [
+                        'Folder', w0,
+                        'Cavalier', w1
+                    ]);
+                }
+                return _this;
+            }
+            LinkFolderCavalierForm.formKey = 'Ge.LinkFolderCavalier';
+            return LinkFolderCavalierForm;
+        }(Serenity.PrefixedContext));
+        Ge.LinkFolderCavalierForm = LinkFolderCavalierForm;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var LinkFolderCavalierRow;
+        (function (LinkFolderCavalierRow) {
+            LinkFolderCavalierRow.idProperty = 'Id';
+            LinkFolderCavalierRow.nameProperty = 'Cavalier';
+            LinkFolderCavalierRow.localTextPrefix = 'Ge.LinkFolderCavalier';
+            LinkFolderCavalierRow.deletePermission = 'Administration:General';
+            LinkFolderCavalierRow.insertPermission = 'Administration:General';
+            LinkFolderCavalierRow.readPermission = 'Administration:General';
+            LinkFolderCavalierRow.updatePermission = 'Administration:General';
+        })(LinkFolderCavalierRow = Ge.LinkFolderCavalierRow || (Ge.LinkFolderCavalierRow = {}));
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var LinkFolderCavalierService;
+        (function (LinkFolderCavalierService) {
+            LinkFolderCavalierService.baseUrl = 'Ge/LinkFolderCavalier';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                LinkFolderCavalierService[x] = function (r, s, o) {
+                    return Q.serviceRequest(LinkFolderCavalierService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(LinkFolderCavalierService = Ge.LinkFolderCavalierService || (Ge.LinkFolderCavalierService = {}));
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var LinkFolderHorseForm = /** @class */ (function (_super) {
+            __extends(LinkFolderHorseForm, _super);
+            function LinkFolderHorseForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!LinkFolderHorseForm.init) {
+                    LinkFolderHorseForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.StringEditor;
+                    var w1 = s.LookupEditor;
+                    Q.initFormType(LinkFolderHorseForm, [
+                        'Folder', w0,
+                        'Horse', w1
+                    ]);
+                }
+                return _this;
+            }
+            LinkFolderHorseForm.formKey = 'Ge.LinkFolderHorse';
+            return LinkFolderHorseForm;
+        }(Serenity.PrefixedContext));
+        Ge.LinkFolderHorseForm = LinkFolderHorseForm;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var LinkFolderHorseRow;
+        (function (LinkFolderHorseRow) {
+            LinkFolderHorseRow.idProperty = 'Id';
+            LinkFolderHorseRow.nameProperty = 'Horse';
+            LinkFolderHorseRow.localTextPrefix = 'Ge.LinkFolderHorse';
+            LinkFolderHorseRow.deletePermission = 'Administration:General';
+            LinkFolderHorseRow.insertPermission = 'Administration:General';
+            LinkFolderHorseRow.readPermission = 'Administration:General';
+            LinkFolderHorseRow.updatePermission = 'Administration:General';
+        })(LinkFolderHorseRow = Ge.LinkFolderHorseRow || (Ge.LinkFolderHorseRow = {}));
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var LinkFolderHorseService;
+        (function (LinkFolderHorseService) {
+            LinkFolderHorseService.baseUrl = 'Ge/LinkFolderHorse';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                LinkFolderHorseService[x] = function (r, s, o) {
+                    return Q.serviceRequest(LinkFolderHorseService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(LinkFolderHorseService = Ge.LinkFolderHorseService || (Ge.LinkFolderHorseService = {}));
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var LinkFolderPersonForm = /** @class */ (function (_super) {
+            __extends(LinkFolderPersonForm, _super);
+            function LinkFolderPersonForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!LinkFolderPersonForm.init) {
+                    LinkFolderPersonForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.StringEditor;
+                    var w1 = s.LookupEditor;
+                    Q.initFormType(LinkFolderPersonForm, [
+                        'Folder', w0,
+                        'PersonId', w1,
+                        'Caption', w0
+                    ]);
+                }
+                return _this;
+            }
+            LinkFolderPersonForm.formKey = 'Ge.LinkFolderPerson';
+            return LinkFolderPersonForm;
+        }(Serenity.PrefixedContext));
+        Ge.LinkFolderPersonForm = LinkFolderPersonForm;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var LinkFolderPersonRow;
+        (function (LinkFolderPersonRow) {
+            LinkFolderPersonRow.idProperty = 'Id';
+            LinkFolderPersonRow.nameProperty = 'Caption';
+            LinkFolderPersonRow.localTextPrefix = 'Ge.LinkFolderPerson';
+            LinkFolderPersonRow.deletePermission = 'Administration:General';
+            LinkFolderPersonRow.insertPermission = 'Administration:General';
+            LinkFolderPersonRow.readPermission = 'Administration:General';
+            LinkFolderPersonRow.updatePermission = 'Administration:General';
+        })(LinkFolderPersonRow = Ge.LinkFolderPersonRow || (Ge.LinkFolderPersonRow = {}));
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var LinkFolderPersonService;
+        (function (LinkFolderPersonService) {
+            LinkFolderPersonService.baseUrl = 'Ge/LinkFolderPerson';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                LinkFolderPersonService[x] = function (r, s, o) {
+                    return Q.serviceRequest(LinkFolderPersonService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(LinkFolderPersonService = Ge.LinkFolderPersonService || (Ge.LinkFolderPersonService = {}));
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var ManAdressForm = /** @class */ (function (_super) {
+            __extends(ManAdressForm, _super);
+            function ManAdressForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!ManAdressForm.init) {
+                    ManAdressForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.BooleanEditor;
+                    var w1 = s.DateEditor;
+                    var w2 = s.StringEditor;
+                    var w3 = s.IntegerEditor;
+                    Q.initFormType(ManAdressForm, [
+                        'IsActive', w0,
+                        'IsArchive', w0,
+                        'InsertDate', w1,
+                        'InsertUsername', w2,
+                        'UpdateDate', w1,
+                        'UpdateUsername', w2,
+                        'Adress1', w2,
+                        'Adress2', w2,
+                        'Adress3', w2,
+                        'City', w2,
+                        'Country', w3,
+                        'Cedex', w2,
+                        'Building', w2,
+                        'Caption', w2,
+                        'ArchiveDate', w1
+                    ]);
+                }
+                return _this;
+            }
+            ManAdressForm.formKey = 'Ge.ManAdress';
+            return ManAdressForm;
+        }(Serenity.PrefixedContext));
+        Ge.ManAdressForm = ManAdressForm;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var ManAdressRow;
+        (function (ManAdressRow) {
+            ManAdressRow.idProperty = 'Id';
+            ManAdressRow.nameProperty = 'Adress1';
+            ManAdressRow.localTextPrefix = 'Ge.ManAdress';
+            ManAdressRow.deletePermission = 'Administration:General';
+            ManAdressRow.insertPermission = 'Administration:General';
+            ManAdressRow.readPermission = 'Administration:General';
+            ManAdressRow.updatePermission = 'Administration:General';
+        })(ManAdressRow = Ge.ManAdressRow || (Ge.ManAdressRow = {}));
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var ManAdressService;
+        (function (ManAdressService) {
+            ManAdressService.baseUrl = 'Ge/ManAdress';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                ManAdressService[x] = function (r, s, o) {
+                    return Q.serviceRequest(ManAdressService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(ManAdressService = Ge.ManAdressService || (Ge.ManAdressService = {}));
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var ManCavaliersForm = /** @class */ (function (_super) {
+            __extends(ManCavaliersForm, _super);
+            function ManCavaliersForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!ManCavaliersForm.init) {
+                    ManCavaliersForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.StringEditor;
+                    var w1 = s.LookupEditor;
+                    var w2 = s.BooleanEditor;
+                    var w3 = s.DateEditor;
+                    var w4 = s.DateYearEditor;
+                    Q.initFormType(ManCavaliersForm, [
+                        'LicFfe', w0,
+                        'Person', w1,
+                        'IsActive', w2,
+                        'IsArchive', w2,
+                        'InsertDate', w3,
+                        'InsertUsername', w0,
+                        'UpdateDate', w3,
+                        'UpdateUsername', w0,
+                        'MilesimeLicnece', w4,
+                        'NiveauGalop', w1,
+                        'LicenceCompetition', w1,
+                        'DateCertificatMedical', w3,
+                        'Caption', w0,
+                        'ArchiveDate', w3
+                    ]);
+                }
+                return _this;
+            }
+            ManCavaliersForm.formKey = 'Ge.ManCavaliers';
+            return ManCavaliersForm;
+        }(Serenity.PrefixedContext));
+        Ge.ManCavaliersForm = ManCavaliersForm;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var ManCavaliersRow;
+        (function (ManCavaliersRow) {
+            ManCavaliersRow.idProperty = 'LicFfe';
+            ManCavaliersRow.nameProperty = 'LicFfe';
+            ManCavaliersRow.localTextPrefix = 'Ge.ManCavaliers';
+            ManCavaliersRow.lookupKey = 'Ge.Cavaliers';
+            function getLookup() {
+                return Q.getLookup('Ge.Cavaliers');
+            }
+            ManCavaliersRow.getLookup = getLookup;
+            ManCavaliersRow.deletePermission = 'Administration:General';
+            ManCavaliersRow.insertPermission = 'Administration:General';
+            ManCavaliersRow.readPermission = 'Administration:General';
+            ManCavaliersRow.updatePermission = 'Administration:General';
+        })(ManCavaliersRow = Ge.ManCavaliersRow || (Ge.ManCavaliersRow = {}));
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var ManCavaliersService;
+        (function (ManCavaliersService) {
+            ManCavaliersService.baseUrl = 'Ge/ManCavaliers';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                ManCavaliersService[x] = function (r, s, o) {
+                    return Q.serviceRequest(ManCavaliersService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(ManCavaliersService = Ge.ManCavaliersService || (Ge.ManCavaliersService = {}));
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var ManFolderForm = /** @class */ (function (_super) {
+            __extends(ManFolderForm, _super);
+            function ManFolderForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!ManFolderForm.init) {
+                    ManFolderForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.DateEditor;
+                    var w1 = s.StringEditor;
+                    var w2 = s.BooleanEditor;
+                    var w3 = s.LookupEditor;
+                    var w4 = s.TextAreaEditor;
+                    Q.initFormType(ManFolderForm, [
+                        'InsertDate', w0,
+                        'InsertUsername', w1,
+                        'UpdateDate', w0,
+                        'UpdateUsername', w1,
+                        'Id', w1,
+                        'IsActive', w2,
+                        'IsArchive', w2,
+                        'Caption', w1,
+                        'CreateDate', w0,
+                        'Establishment', w3,
+                        'Comment', w4,
+                        'CloseDate', w0,
+                        'CloseRaison', w1,
+                        'ArchiveDate', w0
+                    ]);
+                }
+                return _this;
+            }
+            ManFolderForm.formKey = 'Ge.ManFolder';
+            return ManFolderForm;
+        }(Serenity.PrefixedContext));
+        Ge.ManFolderForm = ManFolderForm;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var ManFolderRow;
+        (function (ManFolderRow) {
+            ManFolderRow.idProperty = 'Id';
+            ManFolderRow.nameProperty = 'Caption';
+            ManFolderRow.localTextPrefix = 'Ge.ManFolder';
+            ManFolderRow.lookupKey = 'Ge.ManFolder';
+            function getLookup() {
+                return Q.getLookup('Ge.ManFolder');
+            }
+            ManFolderRow.getLookup = getLookup;
+            ManFolderRow.deletePermission = 'Folders:General';
+            ManFolderRow.insertPermission = 'Folders:General';
+            ManFolderRow.readPermission = 'Folders:General';
+            ManFolderRow.updatePermission = 'Folders:General';
+        })(ManFolderRow = Ge.ManFolderRow || (Ge.ManFolderRow = {}));
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var ManFolderService;
+        (function (ManFolderService) {
+            ManFolderService.baseUrl = 'Ge/ManFolder';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                ManFolderService[x] = function (r, s, o) {
+                    return Q.serviceRequest(ManFolderService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(ManFolderService = Ge.ManFolderService || (Ge.ManFolderService = {}));
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var ManHorsesForm = /** @class */ (function (_super) {
+            __extends(ManHorsesForm, _super);
+            function ManHorsesForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!ManHorsesForm.init) {
+                    ManHorsesForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.StringEditor;
+                    var w1 = s.LookupEditor;
+                    var w2 = s.BooleanEditor;
+                    var w3 = s.DateEditor;
+                    Q.initFormType(ManHorsesForm, [
+                        'Ueln', w0,
+                        'Sire', w0,
+                        'CleSire', w0,
+                        'Hnin', w0,
+                        'BirthCountry', w1,
+                        'BirthOrganization', w1,
+                        'Name', w0,
+                        'IsActive', w2,
+                        'IsArchive', w2,
+                        'InsertDate', w3,
+                        'InsertUsername', w0,
+                        'UpdateDate', w3,
+                        'UpdateUsername', w0,
+                        'Birthday', w3,
+                        'Sexe', w1,
+                        'Color', w0,
+                        'Race', w0,
+                        'Transponder', w0,
+                        'FinalExit', w3,
+                        'Description', w0,
+                        'ArchiveDate', w3
+                    ]);
+                }
+                return _this;
+            }
+            ManHorsesForm.formKey = 'Ge.ManHorses';
+            return ManHorsesForm;
+        }(Serenity.PrefixedContext));
+        Ge.ManHorsesForm = ManHorsesForm;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var ManHorsesRow;
+        (function (ManHorsesRow) {
+            ManHorsesRow.idProperty = 'Ueln';
+            ManHorsesRow.nameProperty = 'Ueln';
+            ManHorsesRow.localTextPrefix = 'Ge.ManHorses';
+            ManHorsesRow.lookupKey = 'Ge.Horses';
+            function getLookup() {
+                return Q.getLookup('Ge.Horses');
+            }
+            ManHorsesRow.getLookup = getLookup;
+            ManHorsesRow.deletePermission = 'Administration:General';
+            ManHorsesRow.insertPermission = 'Administration:General';
+            ManHorsesRow.readPermission = 'Management:Horses';
+            ManHorsesRow.updatePermission = 'Administration:General';
+        })(ManHorsesRow = Ge.ManHorsesRow || (Ge.ManHorsesRow = {}));
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var ManHorsesService;
+        (function (ManHorsesService) {
+            ManHorsesService.baseUrl = 'Ge/ManHorses';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                ManHorsesService[x] = function (r, s, o) {
+                    return Q.serviceRequest(ManHorsesService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(ManHorsesService = Ge.ManHorsesService || (Ge.ManHorsesService = {}));
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var ManOwnerForm = /** @class */ (function (_super) {
+            __extends(ManOwnerForm, _super);
+            function ManOwnerForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!ManOwnerForm.init) {
+                    ManOwnerForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.StringEditor;
+                    var w1 = s.LookupEditor;
+                    var w2 = s.DecimalEditor;
+                    Q.initFormType(ManOwnerForm, [
+                        'Horse', w0,
+                        'Cavalier', w1,
+                        'Part', w2
+                    ]);
+                }
+                return _this;
+            }
+            ManOwnerForm.formKey = 'Ge.ManOwner';
+            return ManOwnerForm;
+        }(Serenity.PrefixedContext));
+        Ge.ManOwnerForm = ManOwnerForm;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var ManOwnerRow;
+        (function (ManOwnerRow) {
+            ManOwnerRow.idProperty = 'Id';
+            ManOwnerRow.nameProperty = 'Horse';
+            ManOwnerRow.localTextPrefix = 'Ge.ManOwner';
+            ManOwnerRow.deletePermission = 'Administration:General';
+            ManOwnerRow.insertPermission = 'Administration:General';
+            ManOwnerRow.readPermission = 'Administration:General';
+            ManOwnerRow.updatePermission = 'Administration:General';
+        })(ManOwnerRow = Ge.ManOwnerRow || (Ge.ManOwnerRow = {}));
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var ManOwnerService;
+        (function (ManOwnerService) {
+            ManOwnerService.baseUrl = 'Ge/ManOwner';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                ManOwnerService[x] = function (r, s, o) {
+                    return Q.serviceRequest(ManOwnerService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(ManOwnerService = Ge.ManOwnerService || (Ge.ManOwnerService = {}));
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var ManPersonForm = /** @class */ (function (_super) {
+            __extends(ManPersonForm, _super);
+            function ManPersonForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!ManPersonForm.init) {
+                    ManPersonForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.BooleanEditor;
+                    var w1 = s.DateEditor;
+                    var w2 = s.StringEditor;
+                    var w3 = s.LookupEditor;
+                    var w4 = s.ImageUploadEditor;
+                    var w5 = s.EmailEditor;
+                    Q.initFormType(ManPersonForm, [
+                        'IsMorale', w0,
+                        'IsActive', w0,
+                        'IsArchive', w0,
+                        'InsertDate', w1,
+                        'InsertUsername', w2,
+                        'UpdateDate', w1,
+                        'UpdateUsername', w2,
+                        'Surname', w2,
+                        'Name', w2,
+                        'FullName', w2,
+                        'MaidenName', w2,
+                        'BusinessName', w2,
+                        'Caption', w2,
+                        'Birthday', w1,
+                        'Sexe', w3,
+                        'MaritalStatus', w3,
+                        'BirthCity', w3,
+                        'BirthCountry', w3,
+                        'Nationality', w3,
+                        'Photo', w4,
+                        'Phone', w2,
+                        'Gsm', w2,
+                        'WorkPhone', w2,
+                        'OtherPhone1', w2,
+                        'OtherPhone2', w2,
+                        'Email1', w5,
+                        'Email2', w5,
+                        'BankAccount', w2,
+                        'IdAdress', w2,
+                        'ArchiveDate', w1
+                    ]);
+                }
+                return _this;
+            }
+            ManPersonForm.formKey = 'Ge.ManPerson';
+            return ManPersonForm;
+        }(Serenity.PrefixedContext));
+        Ge.ManPersonForm = ManPersonForm;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var ManPersonRow;
+        (function (ManPersonRow) {
+            ManPersonRow.idProperty = 'Id';
+            ManPersonRow.nameProperty = 'Surname';
+            ManPersonRow.localTextPrefix = 'Ge.ManPerson';
+            ManPersonRow.lookupKey = 'Ge.Persons';
+            function getLookup() {
+                return Q.getLookup('Ge.Persons');
+            }
+            ManPersonRow.getLookup = getLookup;
+            ManPersonRow.deletePermission = 'Administration:General';
+            ManPersonRow.insertPermission = 'Administration:General';
+            ManPersonRow.readPermission = 'Administration:General';
+            ManPersonRow.updatePermission = 'Administration:General';
+        })(ManPersonRow = Ge.ManPersonRow || (Ge.ManPersonRow = {}));
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var ManPersonService;
+        (function (ManPersonService) {
+            ManPersonService.baseUrl = 'Ge/ManPerson';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                ManPersonService[x] = function (r, s, o) {
+                    return Q.serviceRequest(ManPersonService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(ManPersonService = Ge.ManPersonService || (Ge.ManPersonService = {}));
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var SetCityForm = /** @class */ (function (_super) {
+            __extends(SetCityForm, _super);
+            function SetCityForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!SetCityForm.init) {
+                    SetCityForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.BooleanEditor;
+                    var w1 = s.DateEditor;
+                    var w2 = s.StringEditor;
+                    var w3 = s.LookupEditor;
+                    Q.initFormType(SetCityForm, [
+                        'DefaultValue', w0,
+                        'IsActive', w0,
+                        'InsertDate', w1,
+                        'InsertUsername', w2,
+                        'UpdateDate', w1,
+                        'UpdateUsername', w2,
+                        'FrCodeInsee', w2,
+                        'Caption', w2,
+                        'City', w2,
+                        'PostCode', w2,
+                        'Country', w3
+                    ]);
+                }
+                return _this;
+            }
+            SetCityForm.formKey = 'Ge.SetCity';
+            return SetCityForm;
+        }(Serenity.PrefixedContext));
+        Ge.SetCityForm = SetCityForm;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var SetCityRow;
+        (function (SetCityRow) {
+            SetCityRow.idProperty = 'Id';
+            SetCityRow.nameProperty = 'FrCodeInsee';
+            SetCityRow.localTextPrefix = 'Ge.SetCity';
+            SetCityRow.lookupKey = 'Ge.SetCity';
+            function getLookup() {
+                return Q.getLookup('Ge.SetCity');
+            }
+            SetCityRow.getLookup = getLookup;
+            SetCityRow.deletePermission = 'Administration:General';
+            SetCityRow.insertPermission = 'Administration:General';
+            SetCityRow.readPermission = 'Administration:General';
+            SetCityRow.updatePermission = 'Administration:General';
+        })(SetCityRow = Ge.SetCityRow || (Ge.SetCityRow = {}));
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var SetCityService;
+        (function (SetCityService) {
+            SetCityService.baseUrl = 'Ge/SetCity';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                SetCityService[x] = function (r, s, o) {
+                    return Q.serviceRequest(SetCityService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(SetCityService = Ge.SetCityService || (Ge.SetCityService = {}));
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var SetCountryForm = /** @class */ (function (_super) {
+            __extends(SetCountryForm, _super);
+            function SetCountryForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!SetCountryForm.init) {
+                    SetCountryForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.BooleanEditor;
+                    var w1 = s.DateEditor;
+                    var w2 = s.StringEditor;
+                    var w3 = s.IntegerEditor;
+                    Q.initFormType(SetCountryForm, [
+                        'DefaultValue', w0,
+                        'IsActive', w0,
+                        'InsertDate', w1,
+                        'InsertUsername', w2,
+                        'UpdateDate', w1,
+                        'UpdateUsername', w2,
+                        'Name_FR_fr', w2,
+                        'Name_EN_gb', w2,
+                        'alpha3', w2,
+                        'alpha2', w2,
+                        'CodeUe', w3,
+                        'ISOcode', w2
+                    ]);
+                }
+                return _this;
+            }
+            SetCountryForm.formKey = 'Ge.SetCountry';
+            return SetCountryForm;
+        }(Serenity.PrefixedContext));
+        Ge.SetCountryForm = SetCountryForm;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var SetCountryRow;
+        (function (SetCountryRow) {
+            SetCountryRow.idProperty = 'Id';
+            SetCountryRow.nameProperty = 'Name_FR_fr';
+            SetCountryRow.localTextPrefix = 'Ge.SetCountry';
+            SetCountryRow.lookupKey = 'Ge.SetCountry';
+            function getLookup() {
+                return Q.getLookup('Ge.SetCountry');
+            }
+            SetCountryRow.getLookup = getLookup;
+            SetCountryRow.deletePermission = 'Administration:General';
+            SetCountryRow.insertPermission = 'Administration:General';
+            SetCountryRow.readPermission = 'Administration:General';
+            SetCountryRow.updatePermission = 'Administration:General';
+        })(SetCountryRow = Ge.SetCountryRow || (Ge.SetCountryRow = {}));
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var SetCountryService;
+        (function (SetCountryService) {
+            SetCountryService.baseUrl = 'Ge/SetCountry';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                SetCountryService[x] = function (r, s, o) {
+                    return Q.serviceRequest(SetCountryService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(SetCountryService = Ge.SetCountryService || (Ge.SetCountryService = {}));
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var SetGalopForm = /** @class */ (function (_super) {
+            __extends(SetGalopForm, _super);
+            function SetGalopForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!SetGalopForm.init) {
+                    SetGalopForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.BooleanEditor;
+                    var w1 = s.DateEditor;
+                    var w2 = s.StringEditor;
+                    Q.initFormType(SetGalopForm, [
+                        'DefaultValue', w0,
+                        'IsActive', w0,
+                        'InsertDate', w1,
+                        'InsertUsername', w2,
+                        'UpdateDate', w1,
+                        'UpdateUsername', w2,
+                        'Caption', w2,
+                        'Code', w2
+                    ]);
+                }
+                return _this;
+            }
+            SetGalopForm.formKey = 'Ge.SetGalop';
+            return SetGalopForm;
+        }(Serenity.PrefixedContext));
+        Ge.SetGalopForm = SetGalopForm;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var SetGalopRow;
+        (function (SetGalopRow) {
+            SetGalopRow.idProperty = 'Id';
+            SetGalopRow.nameProperty = 'Caption';
+            SetGalopRow.localTextPrefix = 'Ge.SetGalop';
+            SetGalopRow.lookupKey = 'Ge.SetGalop';
+            function getLookup() {
+                return Q.getLookup('Ge.SetGalop');
+            }
+            SetGalopRow.getLookup = getLookup;
+            SetGalopRow.deletePermission = 'Administration:General';
+            SetGalopRow.insertPermission = 'Administration:General';
+            SetGalopRow.readPermission = 'Administration:General';
+            SetGalopRow.updatePermission = 'Administration:General';
+        })(SetGalopRow = Ge.SetGalopRow || (Ge.SetGalopRow = {}));
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var SetGalopService;
+        (function (SetGalopService) {
+            SetGalopService.baseUrl = 'Ge/SetGalop';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                SetGalopService[x] = function (r, s, o) {
+                    return Q.serviceRequest(SetGalopService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(SetGalopService = Ge.SetGalopService || (Ge.SetGalopService = {}));
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var SetLfcForm = /** @class */ (function (_super) {
+            __extends(SetLfcForm, _super);
+            function SetLfcForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!SetLfcForm.init) {
+                    SetLfcForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.BooleanEditor;
+                    var w1 = s.DateEditor;
+                    var w2 = s.StringEditor;
+                    Q.initFormType(SetLfcForm, [
+                        'DefaultValue', w0,
+                        'IsActive', w0,
+                        'InsertDate', w1,
+                        'InsertUsername', w2,
+                        'UpdateDate', w1,
+                        'UpdateUsername', w2,
+                        'Caption', w2,
+                        'Code', w2
+                    ]);
+                }
+                return _this;
+            }
+            SetLfcForm.formKey = 'Ge.SetLfc';
+            return SetLfcForm;
+        }(Serenity.PrefixedContext));
+        Ge.SetLfcForm = SetLfcForm;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var SetLfcRow;
+        (function (SetLfcRow) {
+            SetLfcRow.idProperty = 'Id';
+            SetLfcRow.nameProperty = 'Caption';
+            SetLfcRow.localTextPrefix = 'Ge.SetLfc';
+            SetLfcRow.lookupKey = 'Ge.SetLfc';
+            function getLookup() {
+                return Q.getLookup('Ge.SetLfc');
+            }
+            SetLfcRow.getLookup = getLookup;
+            SetLfcRow.deletePermission = 'Administration:General';
+            SetLfcRow.insertPermission = 'Administration:General';
+            SetLfcRow.readPermission = 'Administration:General';
+            SetLfcRow.updatePermission = 'Administration:General';
+        })(SetLfcRow = Ge.SetLfcRow || (Ge.SetLfcRow = {}));
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var SetLfcService;
+        (function (SetLfcService) {
+            SetLfcService.baseUrl = 'Ge/SetLfc';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                SetLfcService[x] = function (r, s, o) {
+                    return Q.serviceRequest(SetLfcService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(SetLfcService = Ge.SetLfcService || (Ge.SetLfcService = {}));
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var SetMaritalstatusForm = /** @class */ (function (_super) {
+            __extends(SetMaritalstatusForm, _super);
+            function SetMaritalstatusForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!SetMaritalstatusForm.init) {
+                    SetMaritalstatusForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.BooleanEditor;
+                    var w1 = s.DateEditor;
+                    var w2 = s.StringEditor;
+                    Q.initFormType(SetMaritalstatusForm, [
+                        'DefaultValue', w0,
+                        'IsActive', w0,
+                        'InsertDate', w1,
+                        'InsertUsername', w2,
+                        'UpdateDate', w1,
+                        'UpdateUsername', w2,
+                        'Caption', w2,
+                        'Code', w2
+                    ]);
+                }
+                return _this;
+            }
+            SetMaritalstatusForm.formKey = 'Ge.SetMaritalstatus';
+            return SetMaritalstatusForm;
+        }(Serenity.PrefixedContext));
+        Ge.SetMaritalstatusForm = SetMaritalstatusForm;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var SetMaritalstatusRow;
+        (function (SetMaritalstatusRow) {
+            SetMaritalstatusRow.idProperty = 'Id';
+            SetMaritalstatusRow.nameProperty = 'Caption';
+            SetMaritalstatusRow.localTextPrefix = 'Ge.SetMaritalstatus';
+            SetMaritalstatusRow.lookupKey = 'Ge.SetMaritalstatus';
+            function getLookup() {
+                return Q.getLookup('Ge.SetMaritalstatus');
+            }
+            SetMaritalstatusRow.getLookup = getLookup;
+            SetMaritalstatusRow.deletePermission = 'Administration:General';
+            SetMaritalstatusRow.insertPermission = 'Administration:General';
+            SetMaritalstatusRow.readPermission = 'Administration:General';
+            SetMaritalstatusRow.updatePermission = 'Administration:General';
+        })(SetMaritalstatusRow = Ge.SetMaritalstatusRow || (Ge.SetMaritalstatusRow = {}));
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var SetMaritalstatusService;
+        (function (SetMaritalstatusService) {
+            SetMaritalstatusService.baseUrl = 'Ge/SetMaritalstatus';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                SetMaritalstatusService[x] = function (r, s, o) {
+                    return Q.serviceRequest(SetMaritalstatusService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(SetMaritalstatusService = Ge.SetMaritalstatusService || (Ge.SetMaritalstatusService = {}));
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var SetSexeForm = /** @class */ (function (_super) {
+            __extends(SetSexeForm, _super);
+            function SetSexeForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!SetSexeForm.init) {
+                    SetSexeForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.IntegerEditor;
+                    var w1 = s.BooleanEditor;
+                    var w2 = s.DateEditor;
+                    var w3 = s.StringEditor;
+                    Q.initFormType(SetSexeForm, [
+                        'SexeId', w0,
+                        'DefaultValue', w1,
+                        'IsActive', w1,
+                        'InsertDate', w2,
+                        'InsertUsername', w3,
+                        'UpdateDate', w2,
+                        'UpdateUsername', w3,
+                        'Caption', w3,
+                        'Civility', w3
+                    ]);
+                }
+                return _this;
+            }
+            SetSexeForm.formKey = 'Ge.SetSexe';
+            return SetSexeForm;
+        }(Serenity.PrefixedContext));
+        Ge.SetSexeForm = SetSexeForm;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var SetSexeLangRow;
+        (function (SetSexeLangRow) {
+            SetSexeLangRow.idProperty = 'Id';
+            SetSexeLangRow.nameProperty = 'Caption';
+            SetSexeLangRow.localTextPrefix = 'Ge.SetSexeLang';
+            SetSexeLangRow.deletePermission = 'Administration:General';
+            SetSexeLangRow.insertPermission = 'Administration:General';
+            SetSexeLangRow.readPermission = 'Administration:General';
+            SetSexeLangRow.updatePermission = 'Administration:General';
+        })(SetSexeLangRow = Ge.SetSexeLangRow || (Ge.SetSexeLangRow = {}));
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var SetSexeRow;
+        (function (SetSexeRow) {
+            SetSexeRow.idProperty = 'SexeId';
+            SetSexeRow.nameProperty = 'Caption';
+            SetSexeRow.localTextPrefix = 'Ge.SetSexe';
+            SetSexeRow.lookupKey = 'Ge.SexeHorses';
+            function getLookup() {
+                return Q.getLookup('Ge.SexeHorses');
+            }
+            SetSexeRow.getLookup = getLookup;
+            SetSexeRow.deletePermission = 'Administration:General';
+            SetSexeRow.insertPermission = 'Administration:General';
+            SetSexeRow.readPermission = 'Administration:General';
+            SetSexeRow.updatePermission = 'Administration:General';
+        })(SetSexeRow = Ge.SetSexeRow || (Ge.SetSexeRow = {}));
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var SetSexeService;
+        (function (SetSexeService) {
+            SetSexeService.baseUrl = 'Ge/SetSexe';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                SetSexeService[x] = function (r, s, o) {
+                    return Q.serviceRequest(SetSexeService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(SetSexeService = Ge.SetSexeService || (Ge.SetSexeService = {}));
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var SetUelnorgaForm = /** @class */ (function (_super) {
+            __extends(SetUelnorgaForm, _super);
+            function SetUelnorgaForm(prefix) {
+                var _this = _super.call(this, prefix) || this;
+                if (!SetUelnorgaForm.init) {
+                    SetUelnorgaForm.init = true;
+                    var s = Serenity;
+                    var w0 = s.BooleanEditor;
+                    var w1 = s.DateEditor;
+                    var w2 = s.StringEditor;
+                    Q.initFormType(SetUelnorgaForm, [
+                        'DefaultValue', w0,
+                        'IsActive', w0,
+                        'InsertDate', w1,
+                        'InsertUsername', w2,
+                        'UpdateDate', w1,
+                        'UpdateUsername', w2,
+                        'Organization', w2,
+                        'UelnCode', w2
+                    ]);
+                }
+                return _this;
+            }
+            SetUelnorgaForm.formKey = 'Ge.SetUelnorga';
+            return SetUelnorgaForm;
+        }(Serenity.PrefixedContext));
+        Ge.SetUelnorgaForm = SetUelnorgaForm;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var SetUelnorgaRow;
+        (function (SetUelnorgaRow) {
+            SetUelnorgaRow.idProperty = 'Id';
+            SetUelnorgaRow.nameProperty = 'Organization';
+            SetUelnorgaRow.localTextPrefix = 'Ge.SetUelnorga';
+            SetUelnorgaRow.lookupKey = 'Ge.SetUelnorga';
+            function getLookup() {
+                return Q.getLookup('Ge.SetUelnorga');
+            }
+            SetUelnorgaRow.getLookup = getLookup;
+            SetUelnorgaRow.deletePermission = 'Administration:General';
+            SetUelnorgaRow.insertPermission = 'Administration:General';
+            SetUelnorgaRow.readPermission = 'Administration:General';
+            SetUelnorgaRow.updatePermission = 'Administration:General';
+        })(SetUelnorgaRow = Ge.SetUelnorgaRow || (Ge.SetUelnorgaRow = {}));
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var SetUelnorgaService;
+        (function (SetUelnorgaService) {
+            SetUelnorgaService.baseUrl = 'Ge/SetUelnorga';
+            [
+                'Create',
+                'Update',
+                'Delete',
+                'Retrieve',
+                'List'
+            ].forEach(function (x) {
+                SetUelnorgaService[x] = function (r, s, o) {
+                    return Q.serviceRequest(SetUelnorgaService.baseUrl + '/' + x, r, s, o);
+                };
+            });
+        })(SetUelnorgaService = Ge.SetUelnorgaService || (Ge.SetUelnorgaService = {}));
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
     var Membership;
     (function (Membership) {
         var ChangePasswordForm = /** @class */ (function (_super) {
@@ -1787,7 +3266,7 @@ var GestionEquestre;
 (function (GestionEquestre) {
     var Texts;
     (function (Texts) {
-        GestionEquestre['Texts'] = Q.proxyTexts(Texts, '', { Db: { Administration: { Language: { Id: 1, LanguageId: 1, LanguageName: 1 }, Role: { RoleId: 1, RoleName: 1 }, RolePermission: { PermissionKey: 1, RoleId: 1, RolePermissionId: 1, RoleRoleName: 1 }, Translation: { CustomText: 1, EntityPlural: 1, Key: 1, OverrideConfirmation: 1, SaveChangesButton: 1, SourceLanguage: 1, SourceText: 1, TargetLanguage: 1, TargetText: 1 }, User: { DisplayName: 1, Email: 1, InsertDate: 1, InsertUserId: 1, IsActive: 1, LastDirectoryUpdate: 1, Password: 1, PasswordConfirm: 1, PasswordHash: 1, PasswordSalt: 1, Source: 1, UpdateDate: 1, UpdateUserId: 1, UserId: 1, UserImage: 1, Username: 1 }, UserPermission: { Granted: 1, PermissionKey: 1, User: 1, UserId: 1, UserPermissionId: 1, Username: 1 }, UserRole: { RoleId: 1, User: 1, UserId: 1, UserRoleId: 1, Username: 1 } }, Common: { UserPreference: { Name: 1, PreferenceType: 1, UserId: 1, UserPreferenceId: 1, Value: 1 } }, Northwind: { Category: { CategoryID: 1, CategoryName: 1, Description: 1, Picture: 1 }, CategoryLang: { CategoryId: 1, CategoryName: 1, Description: 1, Id: 1, LanguageId: 1 }, Customer: { Address: 1, City: 1, CompanyName: 1, ContactName: 1, ContactTitle: 1, Country: 1, CustomerID: 1, Email: 1, Fax: 1, ID: 1, LastContactDate: 1, LastContactedBy: 1, NoteList: 1, Phone: 1, PostalCode: 1, Region: 1, Representatives: 1, SendBulletin: 1 }, CustomerCustomerDemo: { CustomerAddress: 1, CustomerCity: 1, CustomerCompanyName: 1, CustomerContactName: 1, CustomerContactTitle: 1, CustomerCountry: 1, CustomerFax: 1, CustomerID: 1, CustomerPhone: 1, CustomerPostalCode: 1, CustomerRegion: 1, CustomerTypeCustomerDesc: 1, CustomerTypeID: 1, ID: 1 }, CustomerDemographic: { CustomerDesc: 1, CustomerTypeID: 1, ID: 1 }, CustomerDetails: { Email: 1, Id: 1, LastContactDate: 1, LastContactedBy: 1, LastContactedByAddress: 1, LastContactedByBirthDate: 1, LastContactedByCity: 1, LastContactedByCountry: 1, LastContactedByExtension: 1, LastContactedByFirstName: 1, LastContactedByHireDate: 1, LastContactedByHomePhone: 1, LastContactedByLastName: 1, LastContactedByNotes: 1, LastContactedByPhoto: 1, LastContactedByPhotoPath: 1, LastContactedByPostalCode: 1, LastContactedByRegion: 1, LastContactedByReportsTo: 1, LastContactedByTitle: 1, LastContactedByTitleOfCourtesy: 1, SendBulletin: 1 }, CustomerGrossSales: { ContactName: 1, CustomerId: 1, GrossAmount: 1, ProductId: 1, ProductName: 1 }, CustomerRepresentatives: { CustomerId: 1, EmployeeId: 1, RepresentativeId: 1 }, DragDropSample: { Id: 1, ParentId: 1, Title: 1 }, Employee: { Address: 1, BirthDate: 1, City: 1, Country: 1, EmployeeID: 1, Extension: 1, FirstName: 1, FullName: 1, Gender: 1, HireDate: 1, HomePhone: 1, LastName: 1, Notes: 1, Photo: 1, PhotoPath: 1, PostalCode: 1, Region: 1, ReportsTo: 1, ReportsToAddress: 1, ReportsToBirthDate: 1, ReportsToCity: 1, ReportsToCountry: 1, ReportsToExtension: 1, ReportsToFirstName: 1, ReportsToFullName: 1, ReportsToHireDate: 1, ReportsToHomePhone: 1, ReportsToLastName: 1, ReportsToNotes: 1, ReportsToPhoto: 1, ReportsToPhotoPath: 1, ReportsToPostalCode: 1, ReportsToRegion: 1, ReportsToReportsTo: 1, ReportsToTitle: 1, ReportsToTitleOfCourtesy: 1, Title: 1, TitleOfCourtesy: 1 }, EmployeeTerritory: { EmployeeAddress: 1, EmployeeBirthDate: 1, EmployeeCity: 1, EmployeeCountry: 1, EmployeeExtension: 1, EmployeeFirstName: 1, EmployeeHireDate: 1, EmployeeHomePhone: 1, EmployeeID: 1, EmployeeLastName: 1, EmployeeNotes: 1, EmployeePhoto: 1, EmployeePhotoPath: 1, EmployeePostalCode: 1, EmployeeRegion: 1, EmployeeReportsTo: 1, EmployeeTitle: 1, EmployeeTitleOfCourtesy: 1, TerritoryID: 1, TerritoryRegionID: 1, TerritoryTerritoryDescription: 1 }, Note: { EntityId: 1, EntityType: 1, InsertDate: 1, InsertUserDisplayName: 1, InsertUserId: 1, NoteId: 1, Text: 1 }, Order: { CustomerCity: 1, CustomerCompanyName: 1, CustomerContactName: 1, CustomerContactTitle: 1, CustomerCountry: 1, CustomerFax: 1, CustomerID: 1, CustomerPhone: 1, CustomerRegion: 1, DetailList: 1, EmployeeFullName: 1, EmployeeGender: 1, EmployeeID: 1, EmployeeReportsToFullName: 1, Freight: 1, OrderDate: 1, OrderID: 1, RequiredDate: 1, ShipAddress: 1, ShipCity: 1, ShipCountry: 1, ShipName: 1, ShipPostalCode: 1, ShipRegion: 1, ShipVia: 1, ShipViaCompanyName: 1, ShipViaPhone: 1, ShippedDate: 1, ShippingState: 1 }, OrderDetail: { DetailID: 1, Discount: 1, LineTotal: 1, OrderCustomerID: 1, OrderDate: 1, OrderEmployeeID: 1, OrderID: 1, OrderShipCity: 1, OrderShipCountry: 1, OrderShipVia: 1, OrderShippedDate: 1, ProductDiscontinued: 1, ProductID: 1, ProductName: 1, ProductQuantityPerUnit: 1, ProductSupplierID: 1, ProductUnitPrice: 1, Quantity: 1, UnitPrice: 1 }, Product: { CategoryDescription: 1, CategoryID: 1, CategoryName: 1, CategoryPicture: 1, Discontinued: 1, ProductID: 1, ProductImage: 1, ProductName: 1, QuantityPerUnit: 1, ReorderLevel: 1, SupplierAddress: 1, SupplierCity: 1, SupplierCompanyName: 1, SupplierContactName: 1, SupplierContactTitle: 1, SupplierCountry: 1, SupplierFax: 1, SupplierHomePage: 1, SupplierID: 1, SupplierPhone: 1, SupplierPostalCode: 1, SupplierRegion: 1, UnitPrice: 1, UnitsInStock: 1, UnitsOnOrder: 1 }, ProductLang: { Id: 1, LanguageId: 1, ProductId: 1, ProductName: 1 }, ProductLog: { CategoryID: 1, ChangingUserId: 1, Discontinued: 1, OperationType: 1, ProductID: 1, ProductImage: 1, ProductLogID: 1, ProductName: 1, QuantityPerUnit: 1, ReorderLevel: 1, SupplierID: 1, UnitPrice: 1, UnitsInStock: 1, UnitsOnOrder: 1, ValidFrom: 1, ValidUntil: 1 }, Region: { RegionDescription: 1, RegionID: 1 }, SalesByCategory: { CategoryId: 1, CategoryName: 1, ProductName: 1, ProductSales: 1 }, Shipper: { CompanyName: 1, Phone: 1, ShipperID: 1 }, Supplier: { Address: 1, City: 1, CompanyName: 1, ContactName: 1, ContactTitle: 1, Country: 1, Fax: 1, HomePage: 1, Phone: 1, PostalCode: 1, Region: 1, SupplierID: 1 }, Territory: { ID: 1, RegionDescription: 1, RegionID: 1, TerritoryDescription: 1, TerritoryID: 1 } } }, Forms: { Membership: { ChangePassword: { FormTitle: 1, SubmitButton: 1, Success: 1 }, ForgotPassword: { BackToLogin: 1, FormInfo: 1, FormTitle: 1, SubmitButton: 1, Success: 1 }, Login: { FacebookButton: 1, ForgotPassword: 1, FormTitle: 1, GoogleButton: 1, OR: 1, RememberMe: 1, SignInButton: 1, SignUpButton: 1 }, ResetPassword: { BackToLogin: 1, EmailSubject: 1, FormTitle: 1, SubmitButton: 1, Success: 1 }, SignUp: { AcceptTerms: 1, ActivateEmailSubject: 1, ActivationCompleteMessage: 1, BackToLogin: 1, ConfirmEmail: 1, ConfirmPassword: 1, DisplayName: 1, Email: 1, FormInfo: 1, FormTitle: 1, Password: 1, SubmitButton: 1, Success: 1 } } }, Site: { AccessDenied: { ClickToChangeUser: 1, ClickToLogin: 1, LackPermissions: 1, NotLoggedIn: 1, PageTitle: 1 }, BasicProgressDialog: { CancelTitle: 1, PleaseWait: 1 }, BulkServiceAction: { AllHadErrorsFormat: 1, AllSuccessFormat: 1, ConfirmationFormat: 1, ErrorCount: 1, NothingToProcess: 1, SomeHadErrorsFormat: 1, SuccessCount: 1 }, Dashboard: { ContentDescription: 1 }, Layout: { FooterCopyright: 1, FooterInfo: 1, FooterRights: 1, GeneralSettings: 1, Language: 1, Theme: 1, ThemeBlack: 1, ThemeBlackLight: 1, ThemeBlue: 1, ThemeBlueLight: 1, ThemeGreen: 1, ThemeGreenLight: 1, ThemePurple: 1, ThemePurpleLight: 1, ThemeRed: 1, ThemeRedLight: 1, ThemeYellow: 1, ThemeYellowLight: 1 }, RolePermissionDialog: { DialogTitle: 1, EditButton: 1, SaveSuccess: 1 }, UserDialog: { EditPermissionsButton: 1, EditRolesButton: 1 }, UserPermissionDialog: { DialogTitle: 1, Grant: 1, Permission: 1, Revoke: 1, SaveSuccess: 1 }, UserRoleDialog: { DialogTitle: 1, SaveSuccess: 1 }, ValidationError: { Title: 1 } }, Validation: { AuthenticationError: 1, CantFindUserWithEmail: 1, CurrentPasswordMismatch: 1, DeleteForeignKeyError: 1, EmailConfirm: 1, EmailInUse: 1, InvalidActivateToken: 1, InvalidResetToken: 1, MinRequiredPasswordLength: 1, NorthwindPhone: 1, NorthwindPhoneMultiple: 1, SavePrimaryKeyError: 1 } });
+        GestionEquestre['Texts'] = Q.proxyTexts(Texts, '', { Db: { Administration: { Language: { Id: 1, LanguageId: 1, LanguageName: 1 }, Role: { RoleId: 1, RoleName: 1 }, RolePermission: { PermissionKey: 1, RoleId: 1, RolePermissionId: 1, RoleRoleName: 1 }, Translation: { CustomText: 1, EntityPlural: 1, Key: 1, OverrideConfirmation: 1, SaveChangesButton: 1, SourceLanguage: 1, SourceText: 1, TargetLanguage: 1, TargetText: 1 }, User: { DisplayName: 1, Email: 1, InsertDate: 1, InsertUserId: 1, IsActive: 1, LastDirectoryUpdate: 1, Password: 1, PasswordConfirm: 1, PasswordHash: 1, PasswordSalt: 1, Source: 1, UpdateDate: 1, UpdateUserId: 1, UserId: 1, UserImage: 1, Username: 1 }, UserPermission: { Granted: 1, PermissionKey: 1, User: 1, UserId: 1, UserPermissionId: 1, Username: 1 }, UserRole: { RoleId: 1, User: 1, UserId: 1, UserRoleId: 1, Username: 1 } }, Common: { UserPreference: { Name: 1, PreferenceType: 1, UserId: 1, UserPreferenceId: 1, Value: 1 } }, Ge: { AccBankaccount: { AccountOnwer: 1, BankAdress: 1, Bban: 1, Bic: 1, CheckDigitsIban: 1, Cis: 1, CountryCodeIban: 1, DateLastPrelevement: 1, Id: 1, MandateDateSign: 1, TypeOfLastPayment: 1, TypePayment: 1, Urm: 1 }, CorCorporate: { ArchiveDate: 1, BankAccount: 1, BankAccountAccountOnwer: 1, BankAccountBankAdress: 1, BankAccountBban: 1, BankAccountBic: 1, BankAccountCheckDigitsIban: 1, BankAccountCis: 1, BankAccountCountryCodeIban: 1, BankAccountDateLastPrelevement: 1, BankAccountMandateDateSign: 1, BankAccountTypeOfLastPayment: 1, BankAccountTypePayment: 1, BankAccountUrm: 1, Caption: 1, Email1: 1, Email2: 1, FrSiren: 1, Gsm: 1, Id: 1, IdAdress: 1, IdAdressAdress1: 1, IdAdressAdress2: 1, IdAdressAdress3: 1, IdAdressArchiveDate: 1, IdAdressBuilding: 1, IdAdressCaption: 1, IdAdressCedex: 1, IdAdressCity: 1, IdAdressCountry: 1, IdAdressInsertDate: 1, IdAdressInsertUserId: 1, IdAdressIsActive: 1, IdAdressIsArchive: 1, IdAdressUpdateDate: 1, IdAdressUpdateUserId: 1, InsertDate: 1, InsertUserId: 1, IsActive: 1, IsArchive: 1, Name: 1, OtherPhone1: 1, Phone: 1, UpdateDate: 1, UpdateUserId: 1 }, CorEtab: { ArchiveDate: 1, BankAccount: 1, BankAccountAccountOnwer: 1, BankAccountBankAdress: 1, BankAccountBban: 1, BankAccountBic: 1, BankAccountCheckDigitsIban: 1, BankAccountCis: 1, BankAccountCountryCodeIban: 1, BankAccountDateLastPrelevement: 1, BankAccountMandateDateSign: 1, BankAccountTypeOfLastPayment: 1, BankAccountTypePayment: 1, BankAccountUrm: 1, Caption: 1, Email1: 1, Email2: 1, FrSiret: 1, Gsm: 1, Id: 1, IdAdress: 1, IdAdressAdress1: 1, IdAdressAdress2: 1, IdAdressAdress3: 1, IdAdressArchiveDate: 1, IdAdressBuilding: 1, IdAdressCaption: 1, IdAdressCedex: 1, IdAdressCity: 1, IdAdressCountry: 1, IdAdressInsertDate: 1, IdAdressInsertUserId: 1, IdAdressIsActive: 1, IdAdressIsArchive: 1, IdAdressUpdateDate: 1, IdAdressUpdateUserId: 1, InsertDate: 1, InsertUserId: 1, IsActive: 1, IsArchive: 1, Name: 1, OtherPhone1: 1, Phone: 1, UpdateDate: 1, UpdateUserId: 1 }, LinkFolderCavalier: { Cavalier: 1, CavalierName: 1, CavalierPerson: 1, Folder: 1, Id: 1 }, LinkFolderHorse: { Folder: 1, Horse: 1, HorseName: 1, Id: 1 }, LinkFolderPerson: { Caption: 1, Folder: 1, Id: 1, PersonBusinessName: 1, PersonCaption: 1, PersonFullName: 1, PersonId: 1, PersonIsMorale: 1, PersonName: 1, PersonSurname: 1 }, ManAdress: { Adress1: 1, Adress2: 1, Adress3: 1, ArchiveDate: 1, Building: 1, Caption: 1, Cedex: 1, City: 1, City1: 1, CityCaption: 1, CityCountry: 1, CityDefaultValue: 1, CityFrCodeInsee: 1, CityInsertDate: 1, CityInsertUserId: 1, CityIsActive: 1, CityPostCode: 1, CityUpdateDate: 1, CityUpdateUserId: 1, Country: 1, CountryCodeUe: 1, CountryDefaultValue: 1, CountryISOcode: 1, CountryInsertDate: 1, CountryInsertUserId: 1, CountryIsActive: 1, CountryName_EN_gb: 1, CountryName_FR_fr: 1, CountryUpdateDate: 1, CountryUpdateUserId: 1, Countryalpha2: 1, Countryalpha3: 1, Id: 1, InsertDate: 1, InsertUserId: 1, InsertUsername: 1, IsActive: 1, IsArchive: 1, UpdateDate: 1, UpdateUserId: 1, UpdateUsername: 1 }, ManCavaliers: { ArchiveDate: 1, Caption: 1, DateCertificatMedical: 1, InsertDate: 1, InsertUserId: 1, InsertUsername: 1, IsActive: 1, IsArchive: 1, LicFfe: 1, LicenceCompetition: 1, LicenceCompetitionCaption: 1, LicenceCompetitionCode: 1, LicenceCompetitionDefaultValue: 1, LicenceCompetitionInsertDate: 1, LicenceCompetitionInsertUserId: 1, LicenceCompetitionIsActive: 1, LicenceCompetitionUpdateDate: 1, LicenceCompetitionUpdateUserId: 1, MilesimeLicnece: 1, NiveauGalop: 1, NiveauGalopCaption: 1, NiveauGalopCode: 1, NiveauGalopDefaultValue: 1, NiveauGalopInsertDate: 1, NiveauGalopInsertUserId: 1, NiveauGalopIsActive: 1, NiveauGalopUpdateDate: 1, NiveauGalopUpdateUserId: 1, Person: 1, PersonArchiveDate: 1, PersonBankAccount: 1, PersonBirthCity: 1, PersonBirthCountry: 1, PersonBirthday: 1, PersonBusinessName: 1, PersonCaption: 1, PersonEmail1: 1, PersonEmail2: 1, PersonGsm: 1, PersonIdAdress: 1, PersonInsertDate: 1, PersonInsertUserId: 1, PersonIsActive: 1, PersonIsArchive: 1, PersonIsMorale: 1, PersonMaidenName: 1, PersonMaritalStatus: 1, PersonName: 1, PersonNationality: 1, PersonOtherPhone1: 1, PersonOtherPhone2: 1, PersonPhone: 1, PersonPhoto: 1, PersonSexe: 1, PersonSurname: 1, PersonUpdateDate: 1, PersonUpdateUserId: 1, PersonWorkPhone: 1, UpdateDate: 1, UpdateUserId: 1, UpdateUsername: 1 }, ManFolder: { ArchiveDate: 1, Caption: 1, CloseDate: 1, CloseRaison: 1, Comment: 1, CreateDate: 1, Establishment: 1, Id: 1, InsertDate: 1, InsertUserId: 1, InsertUsername: 1, IsActive: 1, IsArchive: 1, UpdateDate: 1, UpdateUserId: 1, UpdateUsername: 1 }, ManHorses: { ArchiveDate: 1, BirthCountry: 1, BirthCountryDefaultValue: 1, BirthCountryISOcode: 1, BirthCountryInsertDate: 1, BirthCountryInsertUserId: 1, BirthCountryIsActive: 1, BirthCountryName_FR_fr: 1, BirthCountryUpdateDate: 1, BirthCountryUpdateUserId: 1, BirthCountryalpha3: 1, BirthOrganization: 1, BirthOrganizationDefaultValue: 1, BirthOrganizationInsertDate: 1, BirthOrganizationInsertUserId: 1, BirthOrganizationIsActive: 1, BirthOrganizationOrganization: 1, BirthOrganizationUelnCode: 1, BirthOrganizationUpdateDate: 1, BirthOrganizationUpdateUserId: 1, Birthday: 1, CleSire: 1, Color: 1, Description: 1, FinalExit: 1, Hnin: 1, InsertDate: 1, InsertUserId: 1, InsertUsername: 1, IsActive: 1, IsArchive: 1, Name: 1, Race: 1, Sexe: 1, SexeCaption: 1, SexeCivility: 1, SexeDefaultValue: 1, SexeInsertDate: 1, SexeInsertUserId: 1, SexeIsActive: 1, SexeUpdateDate: 1, SexeUpdateUserId: 1, Sire: 1, Transponder: 1, Ueln: 1, UpdateDate: 1, UpdateUserId: 1, UpdateUsername: 1 }, ManOwner: { Cavalier: 1, CavalierArchiveDate: 1, CavalierCaption: 1, CavalierDateCertificatMedical: 1, CavalierInsertDate: 1, CavalierInsertUserId: 1, CavalierIsActive: 1, CavalierIsArchive: 1, CavalierLicenceCompetition: 1, CavalierMilesimeLicnece: 1, CavalierNiveauGalop: 1, CavalierPerson: 1, CavalierUpdateDate: 1, CavalierUpdateUserId: 1, Horse: 1, HorseArchiveDate: 1, HorseBirthCountry: 1, HorseBirthOrganization: 1, HorseBirthday: 1, HorseCleSire: 1, HorseColor: 1, HorseDescription: 1, HorseFinalExit: 1, HorseHnin: 1, HorseInsertDate: 1, HorseInsertUserId: 1, HorseIsActive: 1, HorseIsArchive: 1, HorseName: 1, HorseRace: 1, HorseSexe: 1, HorseSire: 1, HorseTransponder: 1, HorseUpdateDate: 1, HorseUpdateUserId: 1, Id: 1, Part: 1 }, ManPerson: { ArchiveDate: 1, BankAccount: 1, BankAccountAccountOnwer: 1, BankAccountBankAdress: 1, BankAccountBban: 1, BankAccountBic: 1, BankAccountCheckDigitsIban: 1, BankAccountCis: 1, BankAccountCountryCodeIban: 1, BankAccountDateLastPrelevement: 1, BankAccountMandateDateSign: 1, BankAccountTypeOfLastPayment: 1, BankAccountTypePayment: 1, BankAccountUrm: 1, BirthCity: 1, BirthCityCaption: 1, BirthCityCity: 1, BirthCityCountry: 1, BirthCityDefaultValue: 1, BirthCityFrCodeInsee: 1, BirthCityInsertDate: 1, BirthCityInsertUserId: 1, BirthCityIsActive: 1, BirthCityPostCode: 1, BirthCityUpdateDate: 1, BirthCityUpdateUserId: 1, BirthCountry: 1, BirthCountryCodeUe: 1, BirthCountryDefaultValue: 1, BirthCountryISOcode: 1, BirthCountryInsertDate: 1, BirthCountryInsertUserId: 1, BirthCountryIsActive: 1, BirthCountryName_EN_gb: 1, BirthCountryName_FR_fr: 1, BirthCountryUpdateDate: 1, BirthCountryUpdateUserId: 1, BirthCountryalpha2: 1, BirthCountryalpha3: 1, Birthday: 1, BusinessName: 1, Caption: 1, Email1: 1, Email2: 1, FullName: 1, Gsm: 1, Id: 1, IdAdress: 1, IdAdressAdress1: 1, IdAdressAdress2: 1, IdAdressAdress3: 1, IdAdressArchiveDate: 1, IdAdressBuilding: 1, IdAdressCaption: 1, IdAdressCedex: 1, IdAdressCity: 1, IdAdressCountry: 1, IdAdressInsertDate: 1, IdAdressInsertUserId: 1, IdAdressIsActive: 1, IdAdressIsArchive: 1, IdAdressUpdateDate: 1, IdAdressUpdateUserId: 1, InsertDate: 1, InsertUserId: 1, InsertUsername: 1, IsActive: 1, IsArchive: 1, IsMorale: 1, MaidenName: 1, MaritalStatus: 1, MaritalStatusCaption: 1, MaritalStatusCode: 1, MaritalStatusDefaultValue: 1, MaritalStatusInsertDate: 1, MaritalStatusInsertUserId: 1, MaritalStatusIsActive: 1, MaritalStatusUpdateDate: 1, MaritalStatusUpdateUserId: 1, Name: 1, Nationality: 1, NationalityCodeUe: 1, NationalityDefaultValue: 1, NationalityISOcode: 1, NationalityInsertDate: 1, NationalityInsertUserId: 1, NationalityIsActive: 1, NationalityName_EN_gb: 1, NationalityName_FR_fr: 1, NationalityUpdateDate: 1, NationalityUpdateUserId: 1, Nationalityalpha2: 1, Nationalityalpha3: 1, OtherPhone1: 1, OtherPhone2: 1, Phone: 1, Photo: 1, Sexe: 1, SexeCaption: 1, SexeCivility: 1, SexeDefaultValue: 1, SexeInsertDate: 1, SexeInsertUserId: 1, SexeIsActive: 1, SexeUpdateDate: 1, SexeUpdateUserId: 1, Surname: 1, UpdateDate: 1, UpdateUserId: 1, UpdateUsername: 1, WorkPhone: 1 }, SetCity: { Caption: 1, City: 1, Country: 1, CountryCodeUe: 1, CountryDefaultValue: 1, CountryISOcode: 1, CountryInsertDate: 1, CountryInsertUserId: 1, CountryIsActive: 1, CountryName_FR_fr: 1, CountryUpdateDate: 1, CountryUpdateUserId: 1, Countryalpha3: 1, DefaultValue: 1, FrCodeInsee: 1, Id: 1, InsertDate: 1, InsertUserId: 1, InsertUsername: 1, IsActive: 1, PostCode: 1, UpdateDate: 1, UpdateUserId: 1, UpdateUsername: 1 }, SetCountry: { CodeUe: 1, DefaultValue: 1, ISOcode: 1, Id: 1, InsertDate: 1, InsertUserId: 1, InsertUsername: 1, IsActive: 1, Name_EN_gb: 1, Name_FR_fr: 1, UpdateDate: 1, UpdateUserId: 1, UpdateUsername: 1, alpha2: 1, alpha3: 1 }, SetGalop: { Caption: 1, Code: 1, DefaultValue: 1, Id: 1, InsertDate: 1, InsertUserId: 1, InsertUsername: 1, IsActive: 1, UpdateDate: 1, UpdateUserId: 1, UpdateUsername: 1 }, SetLfc: { Caption: 1, Code: 1, DefaultValue: 1, Id: 1, InsertDate: 1, InsertUserId: 1, InsertUsername: 1, IsActive: 1, UpdateDate: 1, UpdateUserId: 1, UpdateUsername: 1 }, SetMaritalstatus: { Caption: 1, Code: 1, DefaultValue: 1, Id: 1, InsertDate: 1, InsertUserId: 1, InsertUsername: 1, IsActive: 1, UpdateDate: 1, UpdateUserId: 1, UpdateUsername: 1 }, SetSexe: { Caption: 1, Civility: 1, DefaultValue: 1, InsertDate: 1, InsertUserId: 1, InsertUsername: 1, IsActive: 1, SexeId: 1, UpdateDate: 1, UpdateUserId: 1, UpdateUsername: 1 }, SetSexeLang: { Caption: 1, Id: 1, LanguageId: 1, SexeCaption: 1, SexeCivility: 1, SexeDefaultValue: 1, SexeId: 1, SexeInsertDate: 1, SexeInsertUserId: 1, SexeIsActive: 1, SexeUpdateDate: 1, SexeUpdateUserId: 1 }, SetUelnorga: { DefaultValue: 1, Id: 1, InsertDate: 1, InsertUserId: 1, InsertUsername: 1, IsActive: 1, Organization: 1, UelnCode: 1, UpdateDate: 1, UpdateUserId: 1, UpdateUsername: 1 } }, Northwind: { Category: { CategoryID: 1, CategoryName: 1, Description: 1, Picture: 1 }, CategoryLang: { CategoryId: 1, CategoryName: 1, Description: 1, Id: 1, LanguageId: 1 }, Customer: { Address: 1, City: 1, CompanyName: 1, ContactName: 1, ContactTitle: 1, Country: 1, CustomerID: 1, Email: 1, Fax: 1, ID: 1, LastContactDate: 1, LastContactedBy: 1, NoteList: 1, Phone: 1, PostalCode: 1, Region: 1, Representatives: 1, SendBulletin: 1 }, CustomerCustomerDemo: { CustomerAddress: 1, CustomerCity: 1, CustomerCompanyName: 1, CustomerContactName: 1, CustomerContactTitle: 1, CustomerCountry: 1, CustomerFax: 1, CustomerID: 1, CustomerPhone: 1, CustomerPostalCode: 1, CustomerRegion: 1, CustomerTypeCustomerDesc: 1, CustomerTypeID: 1, ID: 1 }, CustomerDemographic: { CustomerDesc: 1, CustomerTypeID: 1, ID: 1 }, CustomerDetails: { Email: 1, Id: 1, LastContactDate: 1, LastContactedBy: 1, LastContactedByAddress: 1, LastContactedByBirthDate: 1, LastContactedByCity: 1, LastContactedByCountry: 1, LastContactedByExtension: 1, LastContactedByFirstName: 1, LastContactedByHireDate: 1, LastContactedByHomePhone: 1, LastContactedByLastName: 1, LastContactedByNotes: 1, LastContactedByPhoto: 1, LastContactedByPhotoPath: 1, LastContactedByPostalCode: 1, LastContactedByRegion: 1, LastContactedByReportsTo: 1, LastContactedByTitle: 1, LastContactedByTitleOfCourtesy: 1, SendBulletin: 1 }, CustomerGrossSales: { ContactName: 1, CustomerId: 1, GrossAmount: 1, ProductId: 1, ProductName: 1 }, CustomerRepresentatives: { CustomerId: 1, EmployeeId: 1, RepresentativeId: 1 }, DragDropSample: { Id: 1, ParentId: 1, Title: 1 }, Employee: { Address: 1, BirthDate: 1, City: 1, Country: 1, EmployeeID: 1, Extension: 1, FirstName: 1, FullName: 1, Gender: 1, HireDate: 1, HomePhone: 1, LastName: 1, Notes: 1, Photo: 1, PhotoPath: 1, PostalCode: 1, Region: 1, ReportsTo: 1, ReportsToAddress: 1, ReportsToBirthDate: 1, ReportsToCity: 1, ReportsToCountry: 1, ReportsToExtension: 1, ReportsToFirstName: 1, ReportsToFullName: 1, ReportsToHireDate: 1, ReportsToHomePhone: 1, ReportsToLastName: 1, ReportsToNotes: 1, ReportsToPhoto: 1, ReportsToPhotoPath: 1, ReportsToPostalCode: 1, ReportsToRegion: 1, ReportsToReportsTo: 1, ReportsToTitle: 1, ReportsToTitleOfCourtesy: 1, Title: 1, TitleOfCourtesy: 1 }, EmployeeTerritory: { EmployeeAddress: 1, EmployeeBirthDate: 1, EmployeeCity: 1, EmployeeCountry: 1, EmployeeExtension: 1, EmployeeFirstName: 1, EmployeeHireDate: 1, EmployeeHomePhone: 1, EmployeeID: 1, EmployeeLastName: 1, EmployeeNotes: 1, EmployeePhoto: 1, EmployeePhotoPath: 1, EmployeePostalCode: 1, EmployeeRegion: 1, EmployeeReportsTo: 1, EmployeeTitle: 1, EmployeeTitleOfCourtesy: 1, TerritoryID: 1, TerritoryRegionID: 1, TerritoryTerritoryDescription: 1 }, Note: { EntityId: 1, EntityType: 1, InsertDate: 1, InsertUserDisplayName: 1, InsertUserId: 1, NoteId: 1, Text: 1 }, Order: { CustomerCity: 1, CustomerCompanyName: 1, CustomerContactName: 1, CustomerContactTitle: 1, CustomerCountry: 1, CustomerFax: 1, CustomerID: 1, CustomerPhone: 1, CustomerRegion: 1, DetailList: 1, EmployeeFullName: 1, EmployeeGender: 1, EmployeeID: 1, EmployeeReportsToFullName: 1, Freight: 1, OrderDate: 1, OrderID: 1, RequiredDate: 1, ShipAddress: 1, ShipCity: 1, ShipCountry: 1, ShipName: 1, ShipPostalCode: 1, ShipRegion: 1, ShipVia: 1, ShipViaCompanyName: 1, ShipViaPhone: 1, ShippedDate: 1, ShippingState: 1 }, OrderDetail: { DetailID: 1, Discount: 1, LineTotal: 1, OrderCustomerID: 1, OrderDate: 1, OrderEmployeeID: 1, OrderID: 1, OrderShipCity: 1, OrderShipCountry: 1, OrderShipVia: 1, OrderShippedDate: 1, ProductDiscontinued: 1, ProductID: 1, ProductName: 1, ProductQuantityPerUnit: 1, ProductSupplierID: 1, ProductUnitPrice: 1, Quantity: 1, UnitPrice: 1 }, Product: { CategoryDescription: 1, CategoryID: 1, CategoryName: 1, CategoryPicture: 1, Discontinued: 1, ProductID: 1, ProductImage: 1, ProductName: 1, QuantityPerUnit: 1, ReorderLevel: 1, SupplierAddress: 1, SupplierCity: 1, SupplierCompanyName: 1, SupplierContactName: 1, SupplierContactTitle: 1, SupplierCountry: 1, SupplierFax: 1, SupplierHomePage: 1, SupplierID: 1, SupplierPhone: 1, SupplierPostalCode: 1, SupplierRegion: 1, UnitPrice: 1, UnitsInStock: 1, UnitsOnOrder: 1 }, ProductLang: { Id: 1, LanguageId: 1, ProductId: 1, ProductName: 1 }, ProductLog: { CategoryID: 1, ChangingUserId: 1, Discontinued: 1, OperationType: 1, ProductID: 1, ProductImage: 1, ProductLogID: 1, ProductName: 1, QuantityPerUnit: 1, ReorderLevel: 1, SupplierID: 1, UnitPrice: 1, UnitsInStock: 1, UnitsOnOrder: 1, ValidFrom: 1, ValidUntil: 1 }, Region: { RegionDescription: 1, RegionID: 1 }, SalesByCategory: { CategoryId: 1, CategoryName: 1, ProductName: 1, ProductSales: 1 }, Shipper: { CompanyName: 1, Phone: 1, ShipperID: 1 }, Supplier: { Address: 1, City: 1, CompanyName: 1, ContactName: 1, ContactTitle: 1, Country: 1, Fax: 1, HomePage: 1, Phone: 1, PostalCode: 1, Region: 1, SupplierID: 1 }, Territory: { ID: 1, RegionDescription: 1, RegionID: 1, TerritoryDescription: 1, TerritoryID: 1 } } }, Forms: { Membership: { ChangePassword: { FormTitle: 1, SubmitButton: 1, Success: 1 }, ForgotPassword: { BackToLogin: 1, FormInfo: 1, FormTitle: 1, SubmitButton: 1, Success: 1 }, Login: { FacebookButton: 1, ForgotPassword: 1, FormTitle: 1, GoogleButton: 1, OR: 1, RememberMe: 1, SignInButton: 1, SignUpButton: 1 }, ResetPassword: { BackToLogin: 1, EmailSubject: 1, FormTitle: 1, SubmitButton: 1, Success: 1 }, SignUp: { AcceptTerms: 1, ActivateEmailSubject: 1, ActivationCompleteMessage: 1, BackToLogin: 1, ConfirmEmail: 1, ConfirmPassword: 1, DisplayName: 1, Email: 1, FormInfo: 1, FormTitle: 1, Password: 1, SubmitButton: 1, Success: 1 } } }, Site: { AccessDenied: { ClickToChangeUser: 1, ClickToLogin: 1, LackPermissions: 1, NotLoggedIn: 1, PageTitle: 1 }, BasicProgressDialog: { CancelTitle: 1, PleaseWait: 1 }, BulkServiceAction: { AllHadErrorsFormat: 1, AllSuccessFormat: 1, ConfirmationFormat: 1, ErrorCount: 1, NothingToProcess: 1, SomeHadErrorsFormat: 1, SuccessCount: 1 }, Dashboard: { ContentDescription: 1 }, Layout: { FooterCopyright: 1, FooterInfo: 1, FooterRights: 1, GeneralSettings: 1, Language: 1, Theme: 1, ThemeBlack: 1, ThemeBlackLight: 1, ThemeBlue: 1, ThemeBlueLight: 1, ThemeGreen: 1, ThemeGreenLight: 1, ThemePurple: 1, ThemePurpleLight: 1, ThemeRed: 1, ThemeRedLight: 1, ThemeYellow: 1, ThemeYellowLight: 1 }, RolePermissionDialog: { DialogTitle: 1, EditButton: 1, SaveSuccess: 1 }, UserDialog: { EditPermissionsButton: 1, EditRolesButton: 1 }, UserPermissionDialog: { DialogTitle: 1, Grant: 1, Permission: 1, Revoke: 1, SaveSuccess: 1 }, UserRoleDialog: { DialogTitle: 1, SaveSuccess: 1 }, ValidationError: { Title: 1 } }, Validation: { AuthenticationError: 1, CantFindUserWithEmail: 1, CurrentPasswordMismatch: 1, DeleteForeignKeyError: 1, EmailConfirm: 1, EmailInUse: 1, InvalidActivateToken: 1, InvalidResetToken: 1, MinRequiredPasswordLength: 1, NorthwindPhone: 1, NorthwindPhoneMultiple: 1, SavePrimaryKeyError: 1 } });
     })(Texts = GestionEquestre.Texts || (GestionEquestre.Texts = {}));
 })(GestionEquestre || (GestionEquestre = {}));
 var GestionEquestre;
@@ -7278,6 +8757,1335 @@ var GestionEquestre;
         }());
         Common.UserPreferenceStorage = UserPreferenceStorage;
     })(Common = GestionEquestre.Common || (GestionEquestre.Common = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var ManFolderDialog = /** @class */ (function (_super) {
+            __extends(ManFolderDialog, _super);
+            function ManFolderDialog() {
+                var _this = _super.call(this) || this;
+                _this.form = new Ge.ManFolderForm(_this.idPrefix);
+                _this.FolderHorseGrid = new Ge.LinkFolderHorseGrid(_this.byId("FolderHorseGrid"));
+                _this.FolderCavalierGrid = new Ge.LinkFolderCavalierGrid(_this.byId("FolderCavalierGrid"));
+                _this.FolderPersonGrid = new Ge.LinkFolderPersonGrid(_this.byId("FolderPersonGrid"));
+                return _this;
+            }
+            ManFolderDialog.prototype.getFormKey = function () { return Ge.ManFolderForm.formKey; };
+            ManFolderDialog.prototype.getIdProperty = function () { return Ge.ManFolderRow.idProperty; };
+            ManFolderDialog.prototype.getLocalTextPrefix = function () { return Ge.ManFolderRow.localTextPrefix; };
+            ManFolderDialog.prototype.getNameProperty = function () { return Ge.ManFolderRow.nameProperty; };
+            ManFolderDialog.prototype.getService = function () { return Ge.ManFolderService.baseUrl; };
+            ManFolderDialog.prototype.loadEntity = function (entity) {
+                _super.prototype.loadEntity.call(this, entity);
+                Serenity.TabsExtensions.setDisabled(this.tabs, 'Horses', this.isNewOrDeleted());
+                Serenity.TabsExtensions.setDisabled(this.tabs, 'Cavaliers', this.isNewOrDeleted());
+                Serenity.TabsExtensions.setDisabled(this.tabs, 'Others_Persons', this.isNewOrDeleted());
+                this.FolderHorseGrid.Folder = entity.Id;
+                this.FolderCavalierGrid.Folder = entity.Id;
+                this.FolderPersonGrid.Folder = entity.Id;
+            };
+            ManFolderDialog = __decorate([
+                Serenity.Decorators.registerClass(),
+                Serenity.Decorators.responsive()
+            ], ManFolderDialog);
+            return ManFolderDialog;
+        }(Serenity.EntityDialog));
+        Ge.ManFolderDialog = ManFolderDialog;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var ManFolderGrid = /** @class */ (function (_super) {
+            __extends(ManFolderGrid, _super);
+            function ManFolderGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            ManFolderGrid.prototype.getColumnsKey = function () { return 'Ge.ManFolder'; };
+            ManFolderGrid.prototype.getDialogType = function () { return Ge.ManFolderDialog; };
+            ManFolderGrid.prototype.getIdProperty = function () { return Ge.ManFolderRow.idProperty; };
+            ManFolderGrid.prototype.getLocalTextPrefix = function () { return Ge.ManFolderRow.localTextPrefix; };
+            ManFolderGrid.prototype.getService = function () { return Ge.ManFolderService.baseUrl; };
+            ManFolderGrid.prototype.addButtonClick = function () {
+                var now = new Date();
+                this.editItem({
+                    CreateDate: Q.formatDate(now, 'dd-MM-yyyy'),
+                    IsActive: true,
+                });
+            };
+            ManFolderGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], ManFolderGrid);
+            return ManFolderGrid;
+        }(Serenity.EntityGrid));
+        Ge.ManFolderGrid = ManFolderGrid;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+/// <reference path="../ManFolderDialog.ts" />
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var LinkFolderCavalierDialog = /** @class */ (function (_super) {
+            __extends(LinkFolderCavalierDialog, _super);
+            function LinkFolderCavalierDialog() {
+                return _super.call(this) || this;
+            }
+            LinkFolderCavalierDialog = __decorate([
+                Serenity.Decorators.registerClass(),
+                Serenity.Decorators.responsive()
+            ], LinkFolderCavalierDialog);
+            return LinkFolderCavalierDialog;
+        }(Serenity.EntityDialog));
+        Ge.LinkFolderCavalierDialog = LinkFolderCavalierDialog;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+/// <reference path="../ManFolderGrid.ts" />
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var LinkFolderCavalierGrid = /** @class */ (function (_super) {
+            __extends(LinkFolderCavalierGrid, _super);
+            function LinkFolderCavalierGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            LinkFolderCavalierGrid.prototype.getColumnsKey = function () { return 'Ge.LinkFolderCavalier'; };
+            LinkFolderCavalierGrid.prototype.getIdProperty = function () { return Ge.LinkFolderCavalierRow.idProperty; };
+            LinkFolderCavalierGrid.prototype.getLocalTextPrefix = function () { return Ge.LinkFolderCavalierRow.localTextPrefix; };
+            LinkFolderCavalierGrid.prototype.getColumns = function () {
+                //let fld = LinkFolderHorseRow.Fields;
+                //return super.getColumns().filter(x => x.field !== fld.Horse);
+                var columns = _super.prototype.getColumns.call(this);
+                columns.unshift({
+                    field: 'Delete Row',
+                    name: '',
+                    format: function (ctx) { return '<a class="inline-action delete-row" title="delete">' +
+                        '<i class="fa fa-trash-o text-red"></i></a>'; },
+                    width: 24,
+                    minWidth: 24,
+                    maxWidth: 24
+                });
+                //var fld = Ge.LinkFolderHorseRow.Fields;
+                //Q.first(columns, x => x.field == fld.Horse).format =
+                //    ctx => `<a href="javascript:;" class="Horse-link">${Q.htmlEncode(ctx.value)}</a>`;
+                return columns;
+            };
+            LinkFolderCavalierGrid.prototype.onClick = function (e, row, cell) {
+                var _this = this;
+                // let base grid handle clicks for its edit links
+                _super.prototype.onClick.call(this, e, row, cell);
+                // if base grid already handled, we shouldn"t handle it again
+                if (e.isDefaultPrevented())
+                    return;
+                var item = this.itemAt(row);
+                var target = $(e.target);
+                if (target.parent().hasClass('inline-action'))
+                    target = target.parent();
+                if (target.hasClass('inline-action')) {
+                    e.preventDefault();
+                    if (target.hasClass('delete-row')) {
+                        Q.confirm('Delete record?', function () {
+                            Ge.LinkFolderCavalierService.Delete({
+                                EntityId: item.Id,
+                            }, function (response) {
+                                _this.refresh();
+                            });
+                        });
+                    }
+                }
+            };
+            LinkFolderCavalierGrid.prototype.editItem = function (entityOrId) {
+                // check that this is an edit link click, not add button, ID is always a string
+                if (typeof entityOrId == "string") {
+                    var item = this.view.getItemById(Q.toId(entityOrId));
+                    //var item = this.itemAt(row);
+                    var Cavalier = Q.first(Ge.ManCavaliersRow.getLookup().items, function (x) { return x.LicFfe == item.Cavalier; });
+                    new Ge.ManCavaliersDialog().loadByIdAndOpenDialog(Cavalier.LicFfe);
+                }
+                else {
+                    _super.prototype.editItem.call(this, entityOrId);
+                }
+            };
+            LinkFolderCavalierGrid.prototype.initEntityDialog = function (itemType, dialog) {
+                _super.prototype.initEntityDialog.call(this, itemType, dialog);
+                Serenity.SubDialogHelper.cascade(dialog, this.element.closest('.ui-dialog'));
+            };
+            LinkFolderCavalierGrid.prototype.createQuickSearchInput = function () {
+                // Nothing
+            };
+            LinkFolderCavalierGrid.prototype.getButtons = function () {
+                var buttons = _super.prototype.getButtons.call(this);
+                //buttons.splice(Q.indexOf(buttons, x => x.cssClass == "add-button"), 1);
+                buttons.splice(Q.indexOf(buttons, function (x) { return x.cssClass == "refresh-button"; }), 1);
+                buttons.splice(Q.indexOf(buttons, function (x) { return x.cssClass == "column-picker-button"; }), 1);
+                return buttons;
+            };
+            //protected getAddButtonCaption() {
+            //    return "Add Horse";
+            //}
+            LinkFolderCavalierGrid.prototype.addButtonClick = function () {
+                var eq = this.view.params.EqualityFilter;
+                this.editItem({
+                    Folder: eq ? eq.Folder : null
+                });
+            };
+            LinkFolderCavalierGrid.prototype.getInitialTitle = function () {
+                return null;
+            };
+            LinkFolderCavalierGrid.prototype.usePager = function () {
+                return false;
+            };
+            LinkFolderCavalierGrid.prototype.getGridCanLoad = function () {
+                return _super.prototype.getGridCanLoad.call(this) && !!this.Folder;
+            };
+            Object.defineProperty(LinkFolderCavalierGrid.prototype, "Folder", {
+                get: function () {
+                    return this._Folder;
+                },
+                set: function (value) {
+                    if (this._Folder != value) {
+                        this._Folder = value;
+                        this.setEquality('Folder', value);
+                        this.refresh();
+                    }
+                },
+                enumerable: true,
+                configurable: true
+            });
+            LinkFolderCavalierGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], LinkFolderCavalierGrid);
+            return LinkFolderCavalierGrid;
+        }(Serenity.EntityGrid));
+        Ge.LinkFolderCavalierGrid = LinkFolderCavalierGrid;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+/// <reference path="../ManFolderDialog.ts" />
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var LinkFolderHorseDialog = /** @class */ (function (_super) {
+            __extends(LinkFolderHorseDialog, _super);
+            function LinkFolderHorseDialog() {
+                return _super.call(this) || this;
+            }
+            LinkFolderHorseDialog = __decorate([
+                Serenity.Decorators.registerClass(),
+                Serenity.Decorators.responsive()
+            ], LinkFolderHorseDialog);
+            return LinkFolderHorseDialog;
+        }(Serenity.EntityDialog));
+        Ge.LinkFolderHorseDialog = LinkFolderHorseDialog;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+/// <reference path="../ManFolderGrid.ts" />
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var LinkFolderHorseGrid = /** @class */ (function (_super) {
+            __extends(LinkFolderHorseGrid, _super);
+            function LinkFolderHorseGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            LinkFolderHorseGrid.prototype.getColumnsKey = function () { return 'Ge.LinkFolderHorse'; };
+            LinkFolderHorseGrid.prototype.getIdProperty = function () { return Ge.LinkFolderHorseRow.idProperty; };
+            LinkFolderHorseGrid.prototype.getLocalTextPrefix = function () { return Ge.LinkFolderHorseRow.localTextPrefix; };
+            LinkFolderHorseGrid.prototype.getColumns = function () {
+                //let fld = LinkFolderHorseRow.Fields;
+                //return super.getColumns().filter(x => x.field !== fld.Horse);
+                var columns = _super.prototype.getColumns.call(this);
+                columns.unshift({
+                    field: 'Delete Row',
+                    name: '',
+                    format: function (ctx) { return '<a class="inline-action delete-row" title="delete">' +
+                        '<i class="fa fa-trash-o text-red"></i></a>'; },
+                    width: 24,
+                    minWidth: 24,
+                    maxWidth: 24
+                });
+                //var fld = Ge.LinkFolderHorseRow.Fields;
+                //Q.first(columns, x => x.field == fld.Horse).format =
+                //    ctx => `<a href="javascript:;" class="Horse-link">${Q.htmlEncode(ctx.value)}</a>`;
+                return columns;
+            };
+            LinkFolderHorseGrid.prototype.onClick = function (e, row, cell) {
+                var _this = this;
+                // let base grid handle clicks for its edit links
+                _super.prototype.onClick.call(this, e, row, cell);
+                // if base grid already handled, we shouldn"t handle it again
+                if (e.isDefaultPrevented())
+                    return;
+                var item = this.itemAt(row);
+                var target = $(e.target);
+                if (target.parent().hasClass('inline-action'))
+                    target = target.parent();
+                if (target.hasClass('inline-action')) {
+                    e.preventDefault();
+                    if (target.hasClass('delete-row')) {
+                        Q.confirm('Delete record?', function () {
+                            Ge.LinkFolderHorseService.Delete({
+                                EntityId: item.Id,
+                            }, function (response) {
+                                _this.refresh();
+                            });
+                        });
+                    }
+                }
+            };
+            LinkFolderHorseGrid.prototype.editItem = function (entityOrId) {
+                // check that this is an edit link click, not add button, ID is always a string
+                if (typeof entityOrId == "string") {
+                    var item = this.view.getItemById(Q.toId(entityOrId));
+                    //var item = this.itemAt(row);
+                    var Horse = Q.first(Ge.ManHorsesRow.getLookup().items, function (x) { return x.Ueln == item.Horse; });
+                    new Ge.ManHorsesDialog().loadByIdAndOpenDialog(Horse.Ueln);
+                }
+                else {
+                    _super.prototype.editItem.call(this, entityOrId);
+                }
+            };
+            LinkFolderHorseGrid.prototype.initEntityDialog = function (itemType, dialog) {
+                _super.prototype.initEntityDialog.call(this, itemType, dialog);
+                Serenity.SubDialogHelper.cascade(dialog, this.element.closest('.ui-dialog'));
+            };
+            LinkFolderHorseGrid.prototype.createQuickSearchInput = function () {
+                // Nothing
+            };
+            LinkFolderHorseGrid.prototype.getButtons = function () {
+                var buttons = _super.prototype.getButtons.call(this);
+                //buttons.splice(Q.indexOf(buttons, x => x.cssClass == "add-button"), 1);
+                buttons.splice(Q.indexOf(buttons, function (x) { return x.cssClass == "refresh-button"; }), 1);
+                buttons.splice(Q.indexOf(buttons, function (x) { return x.cssClass == "column-picker-button"; }), 1);
+                return buttons;
+            };
+            //protected getAddButtonCaption() {
+            //    return "Add Horse";
+            //}
+            LinkFolderHorseGrid.prototype.addButtonClick = function () {
+                var eq = this.view.params.EqualityFilter;
+                this.editItem({
+                    Folder: eq ? eq.Folder : null
+                });
+            };
+            LinkFolderHorseGrid.prototype.getInitialTitle = function () {
+                return null;
+            };
+            LinkFolderHorseGrid.prototype.usePager = function () {
+                return false;
+            };
+            LinkFolderHorseGrid.prototype.getGridCanLoad = function () {
+                return _super.prototype.getGridCanLoad.call(this) && !!this.Folder;
+            };
+            Object.defineProperty(LinkFolderHorseGrid.prototype, "Folder", {
+                get: function () {
+                    return this._Folder;
+                },
+                set: function (value) {
+                    if (this._Folder != value) {
+                        this._Folder = value;
+                        this.setEquality('Folder', value);
+                        this.refresh();
+                    }
+                },
+                enumerable: true,
+                configurable: true
+            });
+            LinkFolderHorseGrid = __decorate([
+                Serenity.Decorators.registerClass()
+                //export class LinkFolderHorseGrid extends ManFolderGrid{
+            ], LinkFolderHorseGrid);
+            return LinkFolderHorseGrid;
+        }(Serenity.EntityGrid));
+        Ge.LinkFolderHorseGrid = LinkFolderHorseGrid;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+/// <reference path="../ManFolderDialog.ts" />
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var LinkFolderPersonDialog = /** @class */ (function (_super) {
+            __extends(LinkFolderPersonDialog, _super);
+            function LinkFolderPersonDialog() {
+                var _this = _super.call(this) || this;
+                _this.form = new Ge.LinkFolderPersonForm(_this.idPrefix);
+                _this.form.PersonId.changeSelect2(function (e) {
+                    var person = _this.form.PersonId.value;
+                    if (Q.isEmptyOrNull(person)) {
+                        _this.setPersonDetails({});
+                        return;
+                    }
+                    // in northwind CustomerID is a string like "ALFKI", 
+                    // while its actual integer ID value is 1.
+                    // so we need to convert customer ID to ID.
+                    // you won't have to do this conversion with your tables
+                    //var id = Q.first(Northwind.CustomerRow.getLookup().items, x => x.CustomerID == customerID).ID;
+                    //Northwind.CustomerService.Retrieve({
+                    //    EntityId: id
+                    //}, response => {
+                    //    this.setCustomerDetails(response.Entity);
+                    //});
+                });
+                return _this;
+            }
+            LinkFolderPersonDialog.prototype.getFormKey = function () { return Ge.LinkFolderPersonForm.formKey; };
+            LinkFolderPersonDialog.prototype.getIdProperty = function () { return Ge.LinkFolderPersonRow.idProperty; };
+            LinkFolderPersonDialog.prototype.getLocalTextPrefix = function () { return Ge.LinkFolderPersonRow.localTextPrefix; };
+            LinkFolderPersonDialog.prototype.getNameProperty = function () { return Ge.LinkFolderPersonRow.nameProperty; };
+            LinkFolderPersonDialog.prototype.getService = function () { return Ge.LinkFolderPersonService.baseUrl; };
+            LinkFolderPersonDialog.prototype.setPersonDetails = function (details) {
+                this.form.Caption.value = details.Caption;
+            };
+            LinkFolderPersonDialog = __decorate([
+                Serenity.Decorators.registerClass(),
+                Serenity.Decorators.responsive()
+            ], LinkFolderPersonDialog);
+            return LinkFolderPersonDialog;
+        }(Serenity.EntityDialog));
+        Ge.LinkFolderPersonDialog = LinkFolderPersonDialog;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+/// <reference path="../ManFolderGrid.ts" />
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var LinkFolderPersonGrid = /** @class */ (function (_super) {
+            __extends(LinkFolderPersonGrid, _super);
+            function LinkFolderPersonGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            LinkFolderPersonGrid.prototype.getColumnsKey = function () { return 'Ge.LinkFolderPerson'; };
+            LinkFolderPersonGrid.prototype.getIdProperty = function () { return Ge.LinkFolderPersonRow.idProperty; };
+            LinkFolderPersonGrid.prototype.getLocalTextPrefix = function () { return Ge.LinkFolderPersonRow.localTextPrefix; };
+            LinkFolderPersonGrid.prototype.getColumns = function () {
+                //let fld = LinkFolderHorseRow.Fields;
+                //return super.getColumns().filter(x => x.field !== fld.Horse);
+                var columns = _super.prototype.getColumns.call(this);
+                columns.unshift({
+                    field: 'Delete Row',
+                    name: '',
+                    format: function (ctx) { return '<a class="inline-action delete-row" title="delete">' +
+                        '<i class="fa fa-trash-o text-red"></i></a>'; },
+                    width: 24,
+                    minWidth: 24,
+                    maxWidth: 24
+                });
+                //var fld = Ge.LinkFolderHorseRow.Fields;
+                //Q.first(columns, x => x.field == fld.Horse).format =
+                //    ctx => `<a href="javascript:;" class="Horse-link">${Q.htmlEncode(ctx.value)}</a>`;
+                return columns;
+            };
+            LinkFolderPersonGrid.prototype.onClick = function (e, row, cell) {
+                var _this = this;
+                // let base grid handle clicks for its edit links
+                _super.prototype.onClick.call(this, e, row, cell);
+                // if base grid already handled, we shouldn"t handle it again
+                if (e.isDefaultPrevented())
+                    return;
+                var item = this.itemAt(row);
+                var target = $(e.target);
+                if (target.parent().hasClass('inline-action'))
+                    target = target.parent();
+                if (target.hasClass('inline-action')) {
+                    e.preventDefault();
+                    if (target.hasClass('delete-row')) {
+                        Q.confirm('Delete record?', function () {
+                            Ge.LinkFolderPersonService.Delete({
+                                EntityId: item.Id,
+                            }, function (response) {
+                                _this.refresh();
+                            });
+                        });
+                    }
+                }
+            };
+            LinkFolderPersonGrid.prototype.editItem = function (entityOrId) {
+                // check that this is an edit link click, not add button, ID is always a string
+                if (typeof entityOrId == "string") {
+                    var item = this.view.getItemById(Q.toId(entityOrId));
+                    //var item = this.itemAt(row);
+                    var Person = Q.first(Ge.ManPersonRow.getLookup().items, function (x) { return x.Id == item.PersonId; });
+                    new Ge.ManPersonDialog().loadByIdAndOpenDialog(Person.Id);
+                }
+                else {
+                    _super.prototype.editItem.call(this, entityOrId);
+                }
+            };
+            LinkFolderPersonGrid.prototype.initEntityDialog = function (itemType, dialog) {
+                _super.prototype.initEntityDialog.call(this, itemType, dialog);
+                Serenity.SubDialogHelper.cascade(dialog, this.element.closest('.ui-dialog'));
+            };
+            LinkFolderPersonGrid.prototype.createQuickSearchInput = function () {
+                // Nothing
+            };
+            LinkFolderPersonGrid.prototype.getButtons = function () {
+                var buttons = _super.prototype.getButtons.call(this);
+                //buttons.splice(Q.indexOf(buttons, x => x.cssClass == "add-button"), 1);
+                buttons.splice(Q.indexOf(buttons, function (x) { return x.cssClass == "refresh-button"; }), 1);
+                buttons.splice(Q.indexOf(buttons, function (x) { return x.cssClass == "column-picker-button"; }), 1);
+                return buttons;
+            };
+            //protected getAddButtonCaption() {
+            //    return "Add Horse";
+            //}
+            LinkFolderPersonGrid.prototype.addButtonClick = function () {
+                var eq = this.view.params.EqualityFilter;
+                this.editItem({
+                    Folder: eq ? eq.Folder : null
+                });
+            };
+            LinkFolderPersonGrid.prototype.getInitialTitle = function () {
+                return null;
+            };
+            LinkFolderPersonGrid.prototype.usePager = function () {
+                return false;
+            };
+            LinkFolderPersonGrid.prototype.getGridCanLoad = function () {
+                return _super.prototype.getGridCanLoad.call(this) && !!this.Folder;
+            };
+            Object.defineProperty(LinkFolderPersonGrid.prototype, "Folder", {
+                get: function () {
+                    return this._Folder;
+                },
+                set: function (value) {
+                    if (this._Folder != value) {
+                        this._Folder = value;
+                        this.setEquality('Folder', value);
+                        this.refresh();
+                    }
+                },
+                enumerable: true,
+                configurable: true
+            });
+            LinkFolderPersonGrid = __decorate([
+                Serenity.Decorators.registerClass()
+                //export class LinkFolderHorseGrid extends ManFolderGrid{
+            ], LinkFolderPersonGrid);
+            return LinkFolderPersonGrid;
+        }(Serenity.EntityGrid));
+        Ge.LinkFolderPersonGrid = LinkFolderPersonGrid;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var AccBankaccountDialog = /** @class */ (function (_super) {
+            __extends(AccBankaccountDialog, _super);
+            function AccBankaccountDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new Ge.AccBankaccountForm(_this.idPrefix);
+                return _this;
+            }
+            AccBankaccountDialog.prototype.getFormKey = function () { return Ge.AccBankaccountForm.formKey; };
+            AccBankaccountDialog.prototype.getIdProperty = function () { return Ge.AccBankaccountRow.idProperty; };
+            AccBankaccountDialog.prototype.getLocalTextPrefix = function () { return Ge.AccBankaccountRow.localTextPrefix; };
+            AccBankaccountDialog.prototype.getNameProperty = function () { return Ge.AccBankaccountRow.nameProperty; };
+            AccBankaccountDialog.prototype.getService = function () { return Ge.AccBankaccountService.baseUrl; };
+            AccBankaccountDialog = __decorate([
+                Serenity.Decorators.registerClass(),
+                Serenity.Decorators.responsive()
+            ], AccBankaccountDialog);
+            return AccBankaccountDialog;
+        }(Serenity.EntityDialog));
+        Ge.AccBankaccountDialog = AccBankaccountDialog;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var AccBankaccountGrid = /** @class */ (function (_super) {
+            __extends(AccBankaccountGrid, _super);
+            function AccBankaccountGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            AccBankaccountGrid.prototype.getColumnsKey = function () { return 'Ge.AccBankaccount'; };
+            AccBankaccountGrid.prototype.getDialogType = function () { return Ge.AccBankaccountDialog; };
+            AccBankaccountGrid.prototype.getIdProperty = function () { return Ge.AccBankaccountRow.idProperty; };
+            AccBankaccountGrid.prototype.getLocalTextPrefix = function () { return Ge.AccBankaccountRow.localTextPrefix; };
+            AccBankaccountGrid.prototype.getService = function () { return Ge.AccBankaccountService.baseUrl; };
+            AccBankaccountGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], AccBankaccountGrid);
+            return AccBankaccountGrid;
+        }(Serenity.EntityGrid));
+        Ge.AccBankaccountGrid = AccBankaccountGrid;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var ManAdressDialog = /** @class */ (function (_super) {
+            __extends(ManAdressDialog, _super);
+            function ManAdressDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new Ge.ManAdressForm(_this.idPrefix);
+                return _this;
+            }
+            ManAdressDialog.prototype.getFormKey = function () { return Ge.ManAdressForm.formKey; };
+            ManAdressDialog.prototype.getIdProperty = function () { return Ge.ManAdressRow.idProperty; };
+            ManAdressDialog.prototype.getLocalTextPrefix = function () { return Ge.ManAdressRow.localTextPrefix; };
+            ManAdressDialog.prototype.getNameProperty = function () { return Ge.ManAdressRow.nameProperty; };
+            ManAdressDialog.prototype.getService = function () { return Ge.ManAdressService.baseUrl; };
+            ManAdressDialog = __decorate([
+                Serenity.Decorators.registerClass(),
+                Serenity.Decorators.responsive()
+            ], ManAdressDialog);
+            return ManAdressDialog;
+        }(Serenity.EntityDialog));
+        Ge.ManAdressDialog = ManAdressDialog;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var ManAdressGrid = /** @class */ (function (_super) {
+            __extends(ManAdressGrid, _super);
+            function ManAdressGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            ManAdressGrid.prototype.getColumnsKey = function () { return 'Ge.ManAdress'; };
+            ManAdressGrid.prototype.getDialogType = function () { return Ge.ManAdressDialog; };
+            ManAdressGrid.prototype.getIdProperty = function () { return Ge.ManAdressRow.idProperty; };
+            ManAdressGrid.prototype.getLocalTextPrefix = function () { return Ge.ManAdressRow.localTextPrefix; };
+            ManAdressGrid.prototype.getService = function () { return Ge.ManAdressService.baseUrl; };
+            ManAdressGrid.prototype.addButtonClick = function () {
+                var now = new Date();
+                this.editItem({
+                    IsActive: true,
+                });
+            };
+            ManAdressGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], ManAdressGrid);
+            return ManAdressGrid;
+        }(Serenity.EntityGrid));
+        Ge.ManAdressGrid = ManAdressGrid;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var ManCavaliersDialog = /** @class */ (function (_super) {
+            __extends(ManCavaliersDialog, _super);
+            function ManCavaliersDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new Ge.ManCavaliersForm(_this.idPrefix);
+                return _this;
+            }
+            ManCavaliersDialog.prototype.getFormKey = function () { return Ge.ManCavaliersForm.formKey; };
+            ManCavaliersDialog.prototype.getIdProperty = function () { return Ge.ManCavaliersRow.idProperty; };
+            ManCavaliersDialog.prototype.getLocalTextPrefix = function () { return Ge.ManCavaliersRow.localTextPrefix; };
+            ManCavaliersDialog.prototype.getNameProperty = function () { return Ge.ManCavaliersRow.nameProperty; };
+            ManCavaliersDialog.prototype.getService = function () { return Ge.ManCavaliersService.baseUrl; };
+            ManCavaliersDialog = __decorate([
+                Serenity.Decorators.registerClass(),
+                Serenity.Decorators.responsive()
+            ], ManCavaliersDialog);
+            return ManCavaliersDialog;
+        }(Serenity.EntityDialog));
+        Ge.ManCavaliersDialog = ManCavaliersDialog;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var ManCavaliersGrid = /** @class */ (function (_super) {
+            __extends(ManCavaliersGrid, _super);
+            function ManCavaliersGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            ManCavaliersGrid.prototype.getColumnsKey = function () { return 'Ge.ManCavaliers'; };
+            ManCavaliersGrid.prototype.getDialogType = function () { return Ge.ManCavaliersDialog; };
+            ManCavaliersGrid.prototype.getIdProperty = function () { return Ge.ManCavaliersRow.idProperty; };
+            ManCavaliersGrid.prototype.getLocalTextPrefix = function () { return Ge.ManCavaliersRow.localTextPrefix; };
+            ManCavaliersGrid.prototype.getService = function () { return Ge.ManCavaliersService.baseUrl; };
+            ManCavaliersGrid.prototype.addButtonClick = function () {
+                var now = new Date();
+                this.editItem({
+                    IsActive: true,
+                });
+            };
+            ManCavaliersGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], ManCavaliersGrid);
+            return ManCavaliersGrid;
+        }(Serenity.EntityGrid));
+        Ge.ManCavaliersGrid = ManCavaliersGrid;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var ManHorsesDialog = /** @class */ (function (_super) {
+            __extends(ManHorsesDialog, _super);
+            function ManHorsesDialog() {
+                var _this = _super.call(this) || this;
+                _this.form = new Ge.ManHorsesForm(_this.idPrefix);
+                return _this;
+                //this.form.Hnin.change(e => { });
+            }
+            ManHorsesDialog.prototype.getFormKey = function () { return Ge.ManHorsesForm.formKey; };
+            ManHorsesDialog.prototype.getIdProperty = function () { return Ge.ManHorsesRow.idProperty; };
+            ManHorsesDialog.prototype.getLocalTextPrefix = function () { return Ge.ManHorsesRow.localTextPrefix; };
+            ManHorsesDialog.prototype.getNameProperty = function () { return Ge.ManHorsesRow.nameProperty; };
+            ManHorsesDialog.prototype.getService = function () { return Ge.ManHorsesService.baseUrl; };
+            ManHorsesDialog = __decorate([
+                Serenity.Decorators.registerClass(),
+                Serenity.Decorators.responsive()
+            ], ManHorsesDialog);
+            return ManHorsesDialog;
+        }(Serenity.EntityDialog));
+        Ge.ManHorsesDialog = ManHorsesDialog;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var ManHorsesGrid = /** @class */ (function (_super) {
+            __extends(ManHorsesGrid, _super);
+            function ManHorsesGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            ManHorsesGrid.prototype.getColumnsKey = function () { return 'Ge.ManHorses'; };
+            ManHorsesGrid.prototype.getDialogType = function () { return Ge.ManHorsesDialog; };
+            ManHorsesGrid.prototype.getIdProperty = function () { return Ge.ManHorsesRow.idProperty; };
+            ManHorsesGrid.prototype.getLocalTextPrefix = function () { return Ge.ManHorsesRow.localTextPrefix; };
+            ManHorsesGrid.prototype.getService = function () { return Ge.ManHorsesService.baseUrl; };
+            ManHorsesGrid.prototype.addButtonClick = function () {
+                var now = new Date();
+                this.editItem({
+                    IsActive: true,
+                });
+            };
+            ManHorsesGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], ManHorsesGrid);
+            return ManHorsesGrid;
+        }(Serenity.EntityGrid));
+        Ge.ManHorsesGrid = ManHorsesGrid;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var ManOwnerDialog = /** @class */ (function (_super) {
+            __extends(ManOwnerDialog, _super);
+            function ManOwnerDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new Ge.ManOwnerForm(_this.idPrefix);
+                return _this;
+            }
+            ManOwnerDialog.prototype.getFormKey = function () { return Ge.ManOwnerForm.formKey; };
+            ManOwnerDialog.prototype.getIdProperty = function () { return Ge.ManOwnerRow.idProperty; };
+            ManOwnerDialog.prototype.getLocalTextPrefix = function () { return Ge.ManOwnerRow.localTextPrefix; };
+            ManOwnerDialog.prototype.getNameProperty = function () { return Ge.ManOwnerRow.nameProperty; };
+            ManOwnerDialog.prototype.getService = function () { return Ge.ManOwnerService.baseUrl; };
+            ManOwnerDialog = __decorate([
+                Serenity.Decorators.registerClass(),
+                Serenity.Decorators.responsive()
+            ], ManOwnerDialog);
+            return ManOwnerDialog;
+        }(Serenity.EntityDialog));
+        Ge.ManOwnerDialog = ManOwnerDialog;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var ManOwnerGrid = /** @class */ (function (_super) {
+            __extends(ManOwnerGrid, _super);
+            function ManOwnerGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            ManOwnerGrid.prototype.getColumnsKey = function () { return 'Ge.ManOwner'; };
+            ManOwnerGrid.prototype.getDialogType = function () { return Ge.ManOwnerDialog; };
+            ManOwnerGrid.prototype.getIdProperty = function () { return Ge.ManOwnerRow.idProperty; };
+            ManOwnerGrid.prototype.getLocalTextPrefix = function () { return Ge.ManOwnerRow.localTextPrefix; };
+            ManOwnerGrid.prototype.getService = function () { return Ge.ManOwnerService.baseUrl; };
+            ManOwnerGrid.prototype.addButtonClick = function () {
+                var now = new Date();
+                this.editItem({
+                    IsActive: true,
+                });
+            };
+            ManOwnerGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], ManOwnerGrid);
+            return ManOwnerGrid;
+        }(Serenity.EntityGrid));
+        Ge.ManOwnerGrid = ManOwnerGrid;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var ManPersonDialog = /** @class */ (function (_super) {
+            __extends(ManPersonDialog, _super);
+            function ManPersonDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new Ge.ManPersonForm(_this.idPrefix);
+                return _this;
+            }
+            ManPersonDialog.prototype.getFormKey = function () { return Ge.ManPersonForm.formKey; };
+            ManPersonDialog.prototype.getIdProperty = function () { return Ge.ManPersonRow.idProperty; };
+            ManPersonDialog.prototype.getLocalTextPrefix = function () { return Ge.ManPersonRow.localTextPrefix; };
+            ManPersonDialog.prototype.getNameProperty = function () { return Ge.ManPersonRow.nameProperty; };
+            ManPersonDialog.prototype.getService = function () { return Ge.ManPersonService.baseUrl; };
+            ManPersonDialog = __decorate([
+                Serenity.Decorators.registerClass(),
+                Serenity.Decorators.responsive()
+            ], ManPersonDialog);
+            return ManPersonDialog;
+        }(Serenity.EntityDialog));
+        Ge.ManPersonDialog = ManPersonDialog;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var ManPersonGrid = /** @class */ (function (_super) {
+            __extends(ManPersonGrid, _super);
+            function ManPersonGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            ManPersonGrid.prototype.getColumnsKey = function () { return 'Ge.ManPerson'; };
+            ManPersonGrid.prototype.getDialogType = function () { return Ge.ManPersonDialog; };
+            ManPersonGrid.prototype.getIdProperty = function () { return Ge.ManPersonRow.idProperty; };
+            ManPersonGrid.prototype.getLocalTextPrefix = function () { return Ge.ManPersonRow.localTextPrefix; };
+            ManPersonGrid.prototype.getService = function () { return Ge.ManPersonService.baseUrl; };
+            ManPersonGrid.prototype.addButtonClick = function () {
+                var now = new Date();
+                this.editItem({
+                    IsActive: true,
+                });
+            };
+            ManPersonGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], ManPersonGrid);
+            return ManPersonGrid;
+        }(Serenity.EntityGrid));
+        Ge.ManPersonGrid = ManPersonGrid;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var ManPersonLookupEditor = /** @class */ (function (_super) {
+            __extends(ManPersonLookupEditor, _super);
+            function ManPersonLookupEditor(container, options) {
+                return _super.call(this, container, options) || this;
+            }
+            ManPersonLookupEditor.prototype.GetLookupKey = function () {
+                return Ge.ManPersonRow.lookupKey;
+            };
+            ManPersonLookupEditor.prototype.getItemText = function (item, lookup) {
+                return _super.prototype.getItemText.call(this, item, lookup) +
+                    '(' + (item.Surname);
+            };
+            ManPersonLookupEditor = __decorate([
+                Serenity.Decorators.registerEditor()
+            ], ManPersonLookupEditor);
+            return ManPersonLookupEditor;
+        }(Serenity.LookupEditorBase));
+        Ge.ManPersonLookupEditor = ManPersonLookupEditor;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var CorCorporateDialog = /** @class */ (function (_super) {
+            __extends(CorCorporateDialog, _super);
+            function CorCorporateDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new Ge.CorCorporateForm(_this.idPrefix);
+                return _this;
+            }
+            CorCorporateDialog.prototype.getFormKey = function () { return Ge.CorCorporateForm.formKey; };
+            CorCorporateDialog.prototype.getIdProperty = function () { return Ge.CorCorporateRow.idProperty; };
+            CorCorporateDialog.prototype.getLocalTextPrefix = function () { return Ge.CorCorporateRow.localTextPrefix; };
+            CorCorporateDialog.prototype.getNameProperty = function () { return Ge.CorCorporateRow.nameProperty; };
+            CorCorporateDialog.prototype.getService = function () { return Ge.CorCorporateService.baseUrl; };
+            CorCorporateDialog = __decorate([
+                Serenity.Decorators.registerClass(),
+                Serenity.Decorators.responsive()
+            ], CorCorporateDialog);
+            return CorCorporateDialog;
+        }(Serenity.EntityDialog));
+        Ge.CorCorporateDialog = CorCorporateDialog;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var CorCorporateGrid = /** @class */ (function (_super) {
+            __extends(CorCorporateGrid, _super);
+            function CorCorporateGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            CorCorporateGrid.prototype.getColumnsKey = function () { return 'Ge.CorCorporate'; };
+            CorCorporateGrid.prototype.getDialogType = function () { return Ge.CorCorporateDialog; };
+            CorCorporateGrid.prototype.getIdProperty = function () { return Ge.CorCorporateRow.idProperty; };
+            CorCorporateGrid.prototype.getLocalTextPrefix = function () { return Ge.CorCorporateRow.localTextPrefix; };
+            CorCorporateGrid.prototype.getService = function () { return Ge.CorCorporateService.baseUrl; };
+            CorCorporateGrid.prototype.addButtonClick = function () {
+                var now = new Date();
+                this.editItem({
+                    IsActive: true,
+                });
+            };
+            CorCorporateGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], CorCorporateGrid);
+            return CorCorporateGrid;
+        }(Serenity.EntityGrid));
+        Ge.CorCorporateGrid = CorCorporateGrid;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var CorEtabDialog = /** @class */ (function (_super) {
+            __extends(CorEtabDialog, _super);
+            function CorEtabDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new Ge.CorEtabForm(_this.idPrefix);
+                return _this;
+            }
+            CorEtabDialog.prototype.getFormKey = function () { return Ge.CorEtabForm.formKey; };
+            CorEtabDialog.prototype.getIdProperty = function () { return Ge.CorEtabRow.idProperty; };
+            CorEtabDialog.prototype.getLocalTextPrefix = function () { return Ge.CorEtabRow.localTextPrefix; };
+            CorEtabDialog.prototype.getNameProperty = function () { return Ge.CorEtabRow.nameProperty; };
+            CorEtabDialog.prototype.getService = function () { return Ge.CorEtabService.baseUrl; };
+            CorEtabDialog = __decorate([
+                Serenity.Decorators.registerClass(),
+                Serenity.Decorators.responsive()
+            ], CorEtabDialog);
+            return CorEtabDialog;
+        }(Serenity.EntityDialog));
+        Ge.CorEtabDialog = CorEtabDialog;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var CorEtabGrid = /** @class */ (function (_super) {
+            __extends(CorEtabGrid, _super);
+            function CorEtabGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            CorEtabGrid.prototype.getColumnsKey = function () { return 'Ge.CorEtab'; };
+            CorEtabGrid.prototype.getDialogType = function () { return Ge.CorEtabDialog; };
+            CorEtabGrid.prototype.getIdProperty = function () { return Ge.CorEtabRow.idProperty; };
+            CorEtabGrid.prototype.getLocalTextPrefix = function () { return Ge.CorEtabRow.localTextPrefix; };
+            CorEtabGrid.prototype.getService = function () { return Ge.CorEtabService.baseUrl; };
+            CorEtabGrid.prototype.addButtonClick = function () {
+                var now = new Date();
+                this.editItem({
+                    IsActive: true,
+                });
+            };
+            CorEtabGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], CorEtabGrid);
+            return CorEtabGrid;
+        }(Serenity.EntityGrid));
+        Ge.CorEtabGrid = CorEtabGrid;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var SetCityDialog = /** @class */ (function (_super) {
+            __extends(SetCityDialog, _super);
+            function SetCityDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new Ge.SetCityForm(_this.idPrefix);
+                return _this;
+            }
+            SetCityDialog.prototype.getFormKey = function () { return Ge.SetCityForm.formKey; };
+            SetCityDialog.prototype.getIdProperty = function () { return Ge.SetCityRow.idProperty; };
+            SetCityDialog.prototype.getLocalTextPrefix = function () { return Ge.SetCityRow.localTextPrefix; };
+            SetCityDialog.prototype.getNameProperty = function () { return Ge.SetCityRow.nameProperty; };
+            SetCityDialog.prototype.getService = function () { return Ge.SetCityService.baseUrl; };
+            SetCityDialog = __decorate([
+                Serenity.Decorators.registerClass(),
+                Serenity.Decorators.responsive()
+            ], SetCityDialog);
+            return SetCityDialog;
+        }(Serenity.EntityDialog));
+        Ge.SetCityDialog = SetCityDialog;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var SetCityGrid = /** @class */ (function (_super) {
+            __extends(SetCityGrid, _super);
+            function SetCityGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            SetCityGrid.prototype.getColumnsKey = function () { return 'Ge.SetCity'; };
+            SetCityGrid.prototype.getDialogType = function () { return Ge.SetCityDialog; };
+            SetCityGrid.prototype.getIdProperty = function () { return Ge.SetCityRow.idProperty; };
+            SetCityGrid.prototype.getLocalTextPrefix = function () { return Ge.SetCityRow.localTextPrefix; };
+            SetCityGrid.prototype.getService = function () { return Ge.SetCityService.baseUrl; };
+            SetCityGrid.prototype.addButtonClick = function () {
+                var now = new Date();
+                this.editItem({
+                    IsActive: true,
+                });
+            };
+            SetCityGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], SetCityGrid);
+            return SetCityGrid;
+        }(Serenity.EntityGrid));
+        Ge.SetCityGrid = SetCityGrid;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var SetCountryDialog = /** @class */ (function (_super) {
+            __extends(SetCountryDialog, _super);
+            function SetCountryDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new Ge.SetCountryForm(_this.idPrefix);
+                return _this;
+            }
+            SetCountryDialog.prototype.getFormKey = function () { return Ge.SetCountryForm.formKey; };
+            SetCountryDialog.prototype.getIdProperty = function () { return Ge.SetCountryRow.idProperty; };
+            SetCountryDialog.prototype.getLocalTextPrefix = function () { return Ge.SetCountryRow.localTextPrefix; };
+            SetCountryDialog.prototype.getNameProperty = function () { return Ge.SetCountryRow.nameProperty; };
+            SetCountryDialog.prototype.getService = function () { return Ge.SetCountryService.baseUrl; };
+            SetCountryDialog = __decorate([
+                Serenity.Decorators.registerClass(),
+                Serenity.Decorators.responsive()
+            ], SetCountryDialog);
+            return SetCountryDialog;
+        }(Serenity.EntityDialog));
+        Ge.SetCountryDialog = SetCountryDialog;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var SetCountryGrid = /** @class */ (function (_super) {
+            __extends(SetCountryGrid, _super);
+            function SetCountryGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            SetCountryGrid.prototype.getColumnsKey = function () { return 'Ge.SetCountry'; };
+            SetCountryGrid.prototype.getDialogType = function () { return Ge.SetCountryDialog; };
+            SetCountryGrid.prototype.getIdProperty = function () { return Ge.SetCountryRow.idProperty; };
+            SetCountryGrid.prototype.getLocalTextPrefix = function () { return Ge.SetCountryRow.localTextPrefix; };
+            SetCountryGrid.prototype.getService = function () { return Ge.SetCountryService.baseUrl; };
+            SetCountryGrid.prototype.addButtonClick = function () {
+                var now = new Date();
+                this.editItem({
+                    IsActive: true,
+                });
+            };
+            SetCountryGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], SetCountryGrid);
+            return SetCountryGrid;
+        }(Serenity.EntityGrid));
+        Ge.SetCountryGrid = SetCountryGrid;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var SetGalopDialog = /** @class */ (function (_super) {
+            __extends(SetGalopDialog, _super);
+            function SetGalopDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new Ge.SetGalopForm(_this.idPrefix);
+                return _this;
+            }
+            SetGalopDialog.prototype.getFormKey = function () { return Ge.SetGalopForm.formKey; };
+            SetGalopDialog.prototype.getIdProperty = function () { return Ge.SetGalopRow.idProperty; };
+            SetGalopDialog.prototype.getLocalTextPrefix = function () { return Ge.SetGalopRow.localTextPrefix; };
+            SetGalopDialog.prototype.getNameProperty = function () { return Ge.SetGalopRow.nameProperty; };
+            SetGalopDialog.prototype.getService = function () { return Ge.SetGalopService.baseUrl; };
+            SetGalopDialog = __decorate([
+                Serenity.Decorators.registerClass(),
+                Serenity.Decorators.responsive()
+            ], SetGalopDialog);
+            return SetGalopDialog;
+        }(Serenity.EntityDialog));
+        Ge.SetGalopDialog = SetGalopDialog;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var SetGalopGrid = /** @class */ (function (_super) {
+            __extends(SetGalopGrid, _super);
+            function SetGalopGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            SetGalopGrid.prototype.getColumnsKey = function () { return 'Ge.SetGalop'; };
+            SetGalopGrid.prototype.getDialogType = function () { return Ge.SetGalopDialog; };
+            SetGalopGrid.prototype.getIdProperty = function () { return Ge.SetGalopRow.idProperty; };
+            SetGalopGrid.prototype.getLocalTextPrefix = function () { return Ge.SetGalopRow.localTextPrefix; };
+            SetGalopGrid.prototype.getService = function () { return Ge.SetGalopService.baseUrl; };
+            SetGalopGrid.prototype.addButtonClick = function () {
+                var now = new Date();
+                this.editItem({
+                    IsActive: true,
+                });
+            };
+            SetGalopGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], SetGalopGrid);
+            return SetGalopGrid;
+        }(Serenity.EntityGrid));
+        Ge.SetGalopGrid = SetGalopGrid;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var SetLfcDialog = /** @class */ (function (_super) {
+            __extends(SetLfcDialog, _super);
+            function SetLfcDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new Ge.SetLfcForm(_this.idPrefix);
+                return _this;
+            }
+            SetLfcDialog.prototype.getFormKey = function () { return Ge.SetLfcForm.formKey; };
+            SetLfcDialog.prototype.getIdProperty = function () { return Ge.SetLfcRow.idProperty; };
+            SetLfcDialog.prototype.getLocalTextPrefix = function () { return Ge.SetLfcRow.localTextPrefix; };
+            SetLfcDialog.prototype.getNameProperty = function () { return Ge.SetLfcRow.nameProperty; };
+            SetLfcDialog.prototype.getService = function () { return Ge.SetLfcService.baseUrl; };
+            SetLfcDialog = __decorate([
+                Serenity.Decorators.registerClass(),
+                Serenity.Decorators.responsive()
+            ], SetLfcDialog);
+            return SetLfcDialog;
+        }(Serenity.EntityDialog));
+        Ge.SetLfcDialog = SetLfcDialog;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var SetLfcGrid = /** @class */ (function (_super) {
+            __extends(SetLfcGrid, _super);
+            function SetLfcGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            SetLfcGrid.prototype.getColumnsKey = function () { return 'Ge.SetLfc'; };
+            SetLfcGrid.prototype.getDialogType = function () { return Ge.SetLfcDialog; };
+            SetLfcGrid.prototype.getIdProperty = function () { return Ge.SetLfcRow.idProperty; };
+            SetLfcGrid.prototype.getLocalTextPrefix = function () { return Ge.SetLfcRow.localTextPrefix; };
+            SetLfcGrid.prototype.getService = function () { return Ge.SetLfcService.baseUrl; };
+            SetLfcGrid.prototype.addButtonClick = function () {
+                var now = new Date();
+                this.editItem({
+                    IsActive: true,
+                });
+            };
+            SetLfcGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], SetLfcGrid);
+            return SetLfcGrid;
+        }(Serenity.EntityGrid));
+        Ge.SetLfcGrid = SetLfcGrid;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var SetMaritalstatusDialog = /** @class */ (function (_super) {
+            __extends(SetMaritalstatusDialog, _super);
+            function SetMaritalstatusDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new Ge.SetMaritalstatusForm(_this.idPrefix);
+                return _this;
+            }
+            SetMaritalstatusDialog.prototype.getFormKey = function () { return Ge.SetMaritalstatusForm.formKey; };
+            SetMaritalstatusDialog.prototype.getIdProperty = function () { return Ge.SetMaritalstatusRow.idProperty; };
+            SetMaritalstatusDialog.prototype.getLocalTextPrefix = function () { return Ge.SetMaritalstatusRow.localTextPrefix; };
+            SetMaritalstatusDialog.prototype.getNameProperty = function () { return Ge.SetMaritalstatusRow.nameProperty; };
+            SetMaritalstatusDialog.prototype.getService = function () { return Ge.SetMaritalstatusService.baseUrl; };
+            SetMaritalstatusDialog = __decorate([
+                Serenity.Decorators.registerClass(),
+                Serenity.Decorators.responsive()
+            ], SetMaritalstatusDialog);
+            return SetMaritalstatusDialog;
+        }(Serenity.EntityDialog));
+        Ge.SetMaritalstatusDialog = SetMaritalstatusDialog;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var SetMaritalstatusGrid = /** @class */ (function (_super) {
+            __extends(SetMaritalstatusGrid, _super);
+            function SetMaritalstatusGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            SetMaritalstatusGrid.prototype.getColumnsKey = function () { return 'Ge.SetMaritalstatus'; };
+            SetMaritalstatusGrid.prototype.getDialogType = function () { return Ge.SetMaritalstatusDialog; };
+            SetMaritalstatusGrid.prototype.getIdProperty = function () { return Ge.SetMaritalstatusRow.idProperty; };
+            SetMaritalstatusGrid.prototype.getLocalTextPrefix = function () { return Ge.SetMaritalstatusRow.localTextPrefix; };
+            SetMaritalstatusGrid.prototype.getService = function () { return Ge.SetMaritalstatusService.baseUrl; };
+            SetMaritalstatusGrid.prototype.addButtonClick = function () {
+                var now = new Date();
+                this.editItem({
+                    IsActive: true,
+                });
+            };
+            SetMaritalstatusGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], SetMaritalstatusGrid);
+            return SetMaritalstatusGrid;
+        }(Serenity.EntityGrid));
+        Ge.SetMaritalstatusGrid = SetMaritalstatusGrid;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var SetSexeDialog = /** @class */ (function (_super) {
+            __extends(SetSexeDialog, _super);
+            function SetSexeDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new Ge.SetSexeForm(_this.idPrefix);
+                return _this;
+            }
+            SetSexeDialog.prototype.getFormKey = function () { return Ge.SetSexeForm.formKey; };
+            SetSexeDialog.prototype.getIdProperty = function () { return Ge.SetSexeRow.idProperty; };
+            SetSexeDialog.prototype.getLocalTextPrefix = function () { return Ge.SetSexeRow.localTextPrefix; };
+            SetSexeDialog.prototype.getNameProperty = function () { return Ge.SetSexeRow.nameProperty; };
+            SetSexeDialog.prototype.getService = function () { return Ge.SetSexeService.baseUrl; };
+            SetSexeDialog = __decorate([
+                Serenity.Decorators.registerClass(),
+                Serenity.Decorators.responsive()
+            ], SetSexeDialog);
+            return SetSexeDialog;
+        }(Serenity.EntityDialog));
+        Ge.SetSexeDialog = SetSexeDialog;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var SetSexeGrid = /** @class */ (function (_super) {
+            __extends(SetSexeGrid, _super);
+            function SetSexeGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            SetSexeGrid.prototype.getColumnsKey = function () { return 'Ge.SetSexe'; };
+            SetSexeGrid.prototype.getDialogType = function () { return Ge.SetSexeDialog; };
+            SetSexeGrid.prototype.getIdProperty = function () { return Ge.SetSexeRow.idProperty; };
+            SetSexeGrid.prototype.getLocalTextPrefix = function () { return Ge.SetSexeRow.localTextPrefix; };
+            SetSexeGrid.prototype.getService = function () { return Ge.SetSexeService.baseUrl; };
+            SetSexeGrid.prototype.addButtonClick = function () {
+                var now = new Date();
+                this.editItem({
+                    IsActive: true,
+                });
+            };
+            SetSexeGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], SetSexeGrid);
+            return SetSexeGrid;
+        }(Serenity.EntityGrid));
+        Ge.SetSexeGrid = SetSexeGrid;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var SetUelnorgaDialog = /** @class */ (function (_super) {
+            __extends(SetUelnorgaDialog, _super);
+            function SetUelnorgaDialog() {
+                var _this = _super !== null && _super.apply(this, arguments) || this;
+                _this.form = new Ge.SetUelnorgaForm(_this.idPrefix);
+                return _this;
+            }
+            SetUelnorgaDialog.prototype.getFormKey = function () { return Ge.SetUelnorgaForm.formKey; };
+            SetUelnorgaDialog.prototype.getIdProperty = function () { return Ge.SetUelnorgaRow.idProperty; };
+            SetUelnorgaDialog.prototype.getLocalTextPrefix = function () { return Ge.SetUelnorgaRow.localTextPrefix; };
+            SetUelnorgaDialog.prototype.getNameProperty = function () { return Ge.SetUelnorgaRow.nameProperty; };
+            SetUelnorgaDialog.prototype.getService = function () { return Ge.SetUelnorgaService.baseUrl; };
+            SetUelnorgaDialog = __decorate([
+                Serenity.Decorators.registerClass(),
+                Serenity.Decorators.responsive()
+            ], SetUelnorgaDialog);
+            return SetUelnorgaDialog;
+        }(Serenity.EntityDialog));
+        Ge.SetUelnorgaDialog = SetUelnorgaDialog;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
+})(GestionEquestre || (GestionEquestre = {}));
+var GestionEquestre;
+(function (GestionEquestre) {
+    var Ge;
+    (function (Ge) {
+        var SetUelnorgaGrid = /** @class */ (function (_super) {
+            __extends(SetUelnorgaGrid, _super);
+            function SetUelnorgaGrid(container) {
+                return _super.call(this, container) || this;
+            }
+            SetUelnorgaGrid.prototype.getColumnsKey = function () { return 'Ge.SetUelnorga'; };
+            SetUelnorgaGrid.prototype.getDialogType = function () { return Ge.SetUelnorgaDialog; };
+            SetUelnorgaGrid.prototype.getIdProperty = function () { return Ge.SetUelnorgaRow.idProperty; };
+            SetUelnorgaGrid.prototype.getLocalTextPrefix = function () { return Ge.SetUelnorgaRow.localTextPrefix; };
+            SetUelnorgaGrid.prototype.getService = function () { return Ge.SetUelnorgaService.baseUrl; };
+            SetUelnorgaGrid.prototype.addButtonClick = function () {
+                var now = new Date();
+                this.editItem({
+                    IsActive: true,
+                });
+            };
+            SetUelnorgaGrid = __decorate([
+                Serenity.Decorators.registerClass()
+            ], SetUelnorgaGrid);
+            return SetUelnorgaGrid;
+        }(Serenity.EntityGrid));
+        Ge.SetUelnorgaGrid = SetUelnorgaGrid;
+    })(Ge = GestionEquestre.Ge || (GestionEquestre.Ge = {}));
 })(GestionEquestre || (GestionEquestre = {}));
 var GestionEquestre;
 (function (GestionEquestre) {

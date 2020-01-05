@@ -690,6 +690,2160 @@ declare namespace GestionEquestre {
         ErrorList?: string[];
     }
 }
+declare namespace GestionEquestre.Ge {
+}
+declare namespace GestionEquestre.Ge {
+    interface AccBankaccountForm {
+        CountryCodeIban: Serenity.StringEditor;
+        CheckDigitsIban: Serenity.StringEditor;
+        Bban: Serenity.StringEditor;
+        Bic: Serenity.StringEditor;
+        AccountOnwer: Serenity.StringEditor;
+        BankAdress: Serenity.StringEditor;
+        Cis: Serenity.StringEditor;
+        Urm: Serenity.StringEditor;
+        MandateDateSign: Serenity.DateEditor;
+        TypePayment: Serenity.IntegerEditor;
+        DateLastPrelevement: Serenity.DateEditor;
+        TypeOfLastPayment: Serenity.IntegerEditor;
+    }
+    class AccBankaccountForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace GestionEquestre.Ge {
+    interface AccBankaccountRow {
+        Id?: number;
+        CountryCodeIban?: string;
+        CheckDigitsIban?: string;
+        Bban?: string;
+        Bic?: string;
+        AccountOnwer?: string;
+        BankAdress?: string;
+        Cis?: string;
+        Urm?: string;
+        MandateDateSign?: string;
+        TypePayment?: number;
+        DateLastPrelevement?: string;
+        TypeOfLastPayment?: number;
+    }
+    namespace AccBankaccountRow {
+        const idProperty = "Id";
+        const nameProperty = "CountryCodeIban";
+        const localTextPrefix = "Ge.AccBankaccount";
+        const deletePermission = "Administration:General";
+        const insertPermission = "Administration:General";
+        const readPermission = "Administration:General";
+        const updatePermission = "Administration:General";
+        const enum Fields {
+            Id = "Id",
+            CountryCodeIban = "CountryCodeIban",
+            CheckDigitsIban = "CheckDigitsIban",
+            Bban = "Bban",
+            Bic = "Bic",
+            AccountOnwer = "AccountOnwer",
+            BankAdress = "BankAdress",
+            Cis = "Cis",
+            Urm = "Urm",
+            MandateDateSign = "MandateDateSign",
+            TypePayment = "TypePayment",
+            DateLastPrelevement = "DateLastPrelevement",
+            TypeOfLastPayment = "TypeOfLastPayment"
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+    namespace AccBankaccountService {
+        const baseUrl = "Ge/AccBankaccount";
+        function Create(request: Serenity.SaveRequest<AccBankaccountRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<AccBankaccountRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<AccBankaccountRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<AccBankaccountRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "Ge/AccBankaccount/Create",
+            Update = "Ge/AccBankaccount/Update",
+            Delete = "Ge/AccBankaccount/Delete",
+            Retrieve = "Ge/AccBankaccount/Retrieve",
+            List = "Ge/AccBankaccount/List"
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+}
+declare namespace GestionEquestre.Ge {
+    interface CorCorporateForm {
+        IsActive: Serenity.BooleanEditor;
+        IsArchive: Serenity.BooleanEditor;
+        InsertDate: Serenity.DateEditor;
+        InsertUserId: Serenity.IntegerEditor;
+        UpdateDate: Serenity.DateEditor;
+        UpdateUserId: Serenity.IntegerEditor;
+        Name: Serenity.StringEditor;
+        Phone: Serenity.StringEditor;
+        Gsm: Serenity.StringEditor;
+        OtherPhone1: Serenity.StringEditor;
+        Email1: Serenity.StringEditor;
+        Email2: Serenity.StringEditor;
+        BankAccount: Serenity.StringEditor;
+        IdAdress: Serenity.StringEditor;
+        FrSiren: Serenity.StringEditor;
+        Caption: Serenity.StringEditor;
+        ArchiveDate: Serenity.DateEditor;
+    }
+    class CorCorporateForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace GestionEquestre.Ge {
+    interface CorCorporateRow {
+        Id?: number;
+        IsActive?: boolean;
+        IsArchive?: boolean;
+        InsertDate?: string;
+        InsertUserId?: number;
+        UpdateDate?: string;
+        UpdateUserId?: number;
+        Name?: string;
+        Phone?: string;
+        Gsm?: string;
+        OtherPhone1?: string;
+        Email1?: string;
+        Email2?: string;
+        BankAccount?: number;
+        IdAdress?: number;
+        FrSiren?: string;
+        Caption?: string;
+        ArchiveDate?: string;
+        BankAccountCountryCodeIban?: string;
+        BankAccountCheckDigitsIban?: string;
+        BankAccountBban?: string;
+        BankAccountBic?: string;
+        BankAccountAccountOnwer?: string;
+        BankAccountBankAdress?: string;
+        BankAccountCis?: string;
+        BankAccountUrm?: string;
+        BankAccountMandateDateSign?: string;
+        BankAccountTypePayment?: number;
+        BankAccountDateLastPrelevement?: string;
+        BankAccountTypeOfLastPayment?: number;
+        IdAdressIsActive?: boolean;
+        IdAdressIsArchive?: boolean;
+        IdAdressInsertDate?: string;
+        IdAdressInsertUserId?: number;
+        IdAdressUpdateDate?: string;
+        IdAdressUpdateUserId?: number;
+        IdAdressAdress1?: string;
+        IdAdressAdress2?: string;
+        IdAdressAdress3?: string;
+        IdAdressCity?: number;
+        IdAdressCountry?: number;
+        IdAdressCedex?: string;
+        IdAdressBuilding?: string;
+        IdAdressCaption?: string;
+        IdAdressArchiveDate?: string;
+    }
+    namespace CorCorporateRow {
+        const idProperty = "Id";
+        const nameProperty = "Name";
+        const localTextPrefix = "Ge.CorCorporate";
+        const deletePermission = "Administration:General";
+        const insertPermission = "Administration:General";
+        const readPermission = "Administration:General";
+        const updatePermission = "Administration:General";
+        const enum Fields {
+            Id = "Id",
+            IsActive = "IsActive",
+            IsArchive = "IsArchive",
+            InsertDate = "InsertDate",
+            InsertUserId = "InsertUserId",
+            UpdateDate = "UpdateDate",
+            UpdateUserId = "UpdateUserId",
+            Name = "Name",
+            Phone = "Phone",
+            Gsm = "Gsm",
+            OtherPhone1 = "OtherPhone1",
+            Email1 = "Email1",
+            Email2 = "Email2",
+            BankAccount = "BankAccount",
+            IdAdress = "IdAdress",
+            FrSiren = "FrSiren",
+            Caption = "Caption",
+            ArchiveDate = "ArchiveDate",
+            BankAccountCountryCodeIban = "BankAccountCountryCodeIban",
+            BankAccountCheckDigitsIban = "BankAccountCheckDigitsIban",
+            BankAccountBban = "BankAccountBban",
+            BankAccountBic = "BankAccountBic",
+            BankAccountAccountOnwer = "BankAccountAccountOnwer",
+            BankAccountBankAdress = "BankAccountBankAdress",
+            BankAccountCis = "BankAccountCis",
+            BankAccountUrm = "BankAccountUrm",
+            BankAccountMandateDateSign = "BankAccountMandateDateSign",
+            BankAccountTypePayment = "BankAccountTypePayment",
+            BankAccountDateLastPrelevement = "BankAccountDateLastPrelevement",
+            BankAccountTypeOfLastPayment = "BankAccountTypeOfLastPayment",
+            IdAdressIsActive = "IdAdressIsActive",
+            IdAdressIsArchive = "IdAdressIsArchive",
+            IdAdressInsertDate = "IdAdressInsertDate",
+            IdAdressInsertUserId = "IdAdressInsertUserId",
+            IdAdressUpdateDate = "IdAdressUpdateDate",
+            IdAdressUpdateUserId = "IdAdressUpdateUserId",
+            IdAdressAdress1 = "IdAdressAdress1",
+            IdAdressAdress2 = "IdAdressAdress2",
+            IdAdressAdress3 = "IdAdressAdress3",
+            IdAdressCity = "IdAdressCity",
+            IdAdressCountry = "IdAdressCountry",
+            IdAdressCedex = "IdAdressCedex",
+            IdAdressBuilding = "IdAdressBuilding",
+            IdAdressCaption = "IdAdressCaption",
+            IdAdressArchiveDate = "IdAdressArchiveDate"
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+    namespace CorCorporateService {
+        const baseUrl = "Ge/CorCorporate";
+        function Create(request: Serenity.SaveRequest<CorCorporateRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<CorCorporateRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<CorCorporateRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<CorCorporateRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "Ge/CorCorporate/Create",
+            Update = "Ge/CorCorporate/Update",
+            Delete = "Ge/CorCorporate/Delete",
+            Retrieve = "Ge/CorCorporate/Retrieve",
+            List = "Ge/CorCorporate/List"
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+}
+declare namespace GestionEquestre.Ge {
+    interface CorEtabForm {
+        IsActive: Serenity.BooleanEditor;
+        IsArchive: Serenity.BooleanEditor;
+        InsertDate: Serenity.DateEditor;
+        InsertUserId: Serenity.IntegerEditor;
+        UpdateDate: Serenity.DateEditor;
+        UpdateUserId: Serenity.IntegerEditor;
+        Name: Serenity.StringEditor;
+        Phone: Serenity.StringEditor;
+        Gsm: Serenity.StringEditor;
+        OtherPhone1: Serenity.StringEditor;
+        Email1: Serenity.StringEditor;
+        Email2: Serenity.StringEditor;
+        BankAccount: Serenity.StringEditor;
+        IdAdress: Serenity.StringEditor;
+        FrSiret: Serenity.StringEditor;
+        Caption: Serenity.StringEditor;
+        ArchiveDate: Serenity.DateEditor;
+    }
+    class CorEtabForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace GestionEquestre.Ge {
+    interface CorEtabRow {
+        Id?: number;
+        IsActive?: boolean;
+        IsArchive?: boolean;
+        InsertDate?: string;
+        InsertUserId?: number;
+        UpdateDate?: string;
+        UpdateUserId?: number;
+        Name?: string;
+        Phone?: string;
+        Gsm?: string;
+        OtherPhone1?: string;
+        Email1?: string;
+        Email2?: string;
+        BankAccount?: number;
+        IdAdress?: number;
+        FrSiret?: string;
+        Caption?: string;
+        ArchiveDate?: string;
+        BankAccountCountryCodeIban?: string;
+        BankAccountCheckDigitsIban?: string;
+        BankAccountBban?: string;
+        BankAccountBic?: string;
+        BankAccountAccountOnwer?: string;
+        BankAccountBankAdress?: string;
+        BankAccountCis?: string;
+        BankAccountUrm?: string;
+        BankAccountMandateDateSign?: string;
+        BankAccountTypePayment?: number;
+        BankAccountDateLastPrelevement?: string;
+        BankAccountTypeOfLastPayment?: number;
+        IdAdressIsActive?: boolean;
+        IdAdressIsArchive?: boolean;
+        IdAdressInsertDate?: string;
+        IdAdressInsertUserId?: number;
+        IdAdressUpdateDate?: string;
+        IdAdressUpdateUserId?: number;
+        IdAdressAdress1?: string;
+        IdAdressAdress2?: string;
+        IdAdressAdress3?: string;
+        IdAdressCity?: number;
+        IdAdressCountry?: number;
+        IdAdressCedex?: string;
+        IdAdressBuilding?: string;
+        IdAdressCaption?: string;
+        IdAdressArchiveDate?: string;
+    }
+    namespace CorEtabRow {
+        const idProperty = "Id";
+        const nameProperty = "Name";
+        const localTextPrefix = "Ge.CorEtab";
+        const lookupKey = "Ge.CorEtab";
+        function getLookup(): Q.Lookup<CorEtabRow>;
+        const deletePermission = "Administration:General";
+        const insertPermission = "Administration:General";
+        const readPermission = "Administration:General";
+        const updatePermission = "Administration:General";
+        const enum Fields {
+            Id = "Id",
+            IsActive = "IsActive",
+            IsArchive = "IsArchive",
+            InsertDate = "InsertDate",
+            InsertUserId = "InsertUserId",
+            UpdateDate = "UpdateDate",
+            UpdateUserId = "UpdateUserId",
+            Name = "Name",
+            Phone = "Phone",
+            Gsm = "Gsm",
+            OtherPhone1 = "OtherPhone1",
+            Email1 = "Email1",
+            Email2 = "Email2",
+            BankAccount = "BankAccount",
+            IdAdress = "IdAdress",
+            FrSiret = "FrSiret",
+            Caption = "Caption",
+            ArchiveDate = "ArchiveDate",
+            BankAccountCountryCodeIban = "BankAccountCountryCodeIban",
+            BankAccountCheckDigitsIban = "BankAccountCheckDigitsIban",
+            BankAccountBban = "BankAccountBban",
+            BankAccountBic = "BankAccountBic",
+            BankAccountAccountOnwer = "BankAccountAccountOnwer",
+            BankAccountBankAdress = "BankAccountBankAdress",
+            BankAccountCis = "BankAccountCis",
+            BankAccountUrm = "BankAccountUrm",
+            BankAccountMandateDateSign = "BankAccountMandateDateSign",
+            BankAccountTypePayment = "BankAccountTypePayment",
+            BankAccountDateLastPrelevement = "BankAccountDateLastPrelevement",
+            BankAccountTypeOfLastPayment = "BankAccountTypeOfLastPayment",
+            IdAdressIsActive = "IdAdressIsActive",
+            IdAdressIsArchive = "IdAdressIsArchive",
+            IdAdressInsertDate = "IdAdressInsertDate",
+            IdAdressInsertUserId = "IdAdressInsertUserId",
+            IdAdressUpdateDate = "IdAdressUpdateDate",
+            IdAdressUpdateUserId = "IdAdressUpdateUserId",
+            IdAdressAdress1 = "IdAdressAdress1",
+            IdAdressAdress2 = "IdAdressAdress2",
+            IdAdressAdress3 = "IdAdressAdress3",
+            IdAdressCity = "IdAdressCity",
+            IdAdressCountry = "IdAdressCountry",
+            IdAdressCedex = "IdAdressCedex",
+            IdAdressBuilding = "IdAdressBuilding",
+            IdAdressCaption = "IdAdressCaption",
+            IdAdressArchiveDate = "IdAdressArchiveDate"
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+    namespace CorEtabService {
+        const baseUrl = "Ge/CorEtab";
+        function Create(request: Serenity.SaveRequest<CorEtabRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<CorEtabRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<CorEtabRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<CorEtabRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "Ge/CorEtab/Create",
+            Update = "Ge/CorEtab/Update",
+            Delete = "Ge/CorEtab/Delete",
+            Retrieve = "Ge/CorEtab/Retrieve",
+            List = "Ge/CorEtab/List"
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+}
+declare namespace GestionEquestre.Ge {
+    interface LinkFolderCavalierForm {
+        Folder: Serenity.StringEditor;
+        Cavalier: Serenity.LookupEditor;
+    }
+    class LinkFolderCavalierForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace GestionEquestre.Ge {
+    interface LinkFolderCavalierRow {
+        Id?: number;
+        Folder?: number;
+        Cavalier?: string;
+        CavalierPerson?: number;
+        CavalierName?: string;
+    }
+    namespace LinkFolderCavalierRow {
+        const idProperty = "Id";
+        const nameProperty = "Cavalier";
+        const localTextPrefix = "Ge.LinkFolderCavalier";
+        const deletePermission = "Administration:General";
+        const insertPermission = "Administration:General";
+        const readPermission = "Administration:General";
+        const updatePermission = "Administration:General";
+        const enum Fields {
+            Id = "Id",
+            Folder = "Folder",
+            Cavalier = "Cavalier",
+            CavalierPerson = "CavalierPerson",
+            CavalierName = "CavalierName"
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+    namespace LinkFolderCavalierService {
+        const baseUrl = "Ge/LinkFolderCavalier";
+        function Create(request: Serenity.SaveRequest<LinkFolderCavalierRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<LinkFolderCavalierRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<LinkFolderCavalierRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<LinkFolderCavalierRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "Ge/LinkFolderCavalier/Create",
+            Update = "Ge/LinkFolderCavalier/Update",
+            Delete = "Ge/LinkFolderCavalier/Delete",
+            Retrieve = "Ge/LinkFolderCavalier/Retrieve",
+            List = "Ge/LinkFolderCavalier/List"
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+}
+declare namespace GestionEquestre.Ge {
+    interface LinkFolderHorseForm {
+        Folder: Serenity.StringEditor;
+        Horse: Serenity.LookupEditor;
+    }
+    class LinkFolderHorseForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace GestionEquestre.Ge {
+    interface LinkFolderHorseRow {
+        Id?: number;
+        Folder?: number;
+        Horse?: string;
+        HorseName?: string;
+    }
+    namespace LinkFolderHorseRow {
+        const idProperty = "Id";
+        const nameProperty = "Horse";
+        const localTextPrefix = "Ge.LinkFolderHorse";
+        const deletePermission = "Administration:General";
+        const insertPermission = "Administration:General";
+        const readPermission = "Administration:General";
+        const updatePermission = "Administration:General";
+        const enum Fields {
+            Id = "Id",
+            Folder = "Folder",
+            Horse = "Horse",
+            HorseName = "HorseName"
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+    namespace LinkFolderHorseService {
+        const baseUrl = "Ge/LinkFolderHorse";
+        function Create(request: Serenity.SaveRequest<LinkFolderHorseRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<LinkFolderHorseRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<LinkFolderHorseRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<LinkFolderHorseRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "Ge/LinkFolderHorse/Create",
+            Update = "Ge/LinkFolderHorse/Update",
+            Delete = "Ge/LinkFolderHorse/Delete",
+            Retrieve = "Ge/LinkFolderHorse/Retrieve",
+            List = "Ge/LinkFolderHorse/List"
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+}
+declare namespace GestionEquestre.Ge {
+    interface LinkFolderPersonForm {
+        Folder: Serenity.StringEditor;
+        PersonId: Serenity.LookupEditor;
+        Caption: Serenity.StringEditor;
+    }
+    class LinkFolderPersonForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace GestionEquestre.Ge {
+    interface LinkFolderPersonRow {
+        Id?: number;
+        Folder?: number;
+        PersonId?: number;
+        Caption?: string;
+        PersonIsMorale?: boolean;
+        PersonSurname?: string;
+        PersonName?: string;
+        PersonFullName?: string;
+        PersonBusinessName?: string;
+        PersonCaption?: string;
+    }
+    namespace LinkFolderPersonRow {
+        const idProperty = "Id";
+        const nameProperty = "Caption";
+        const localTextPrefix = "Ge.LinkFolderPerson";
+        const deletePermission = "Administration:General";
+        const insertPermission = "Administration:General";
+        const readPermission = "Administration:General";
+        const updatePermission = "Administration:General";
+        const enum Fields {
+            Id = "Id",
+            Folder = "Folder",
+            PersonId = "PersonId",
+            Caption = "Caption",
+            PersonIsMorale = "PersonIsMorale",
+            PersonSurname = "PersonSurname",
+            PersonName = "PersonName",
+            PersonFullName = "PersonFullName",
+            PersonBusinessName = "PersonBusinessName",
+            PersonCaption = "PersonCaption"
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+    namespace LinkFolderPersonService {
+        const baseUrl = "Ge/LinkFolderPerson";
+        function Create(request: Serenity.SaveRequest<LinkFolderPersonRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<LinkFolderPersonRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<LinkFolderPersonRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<LinkFolderPersonRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "Ge/LinkFolderPerson/Create",
+            Update = "Ge/LinkFolderPerson/Update",
+            Delete = "Ge/LinkFolderPerson/Delete",
+            Retrieve = "Ge/LinkFolderPerson/Retrieve",
+            List = "Ge/LinkFolderPerson/List"
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+}
+declare namespace GestionEquestre.Ge {
+    interface ManAdressForm {
+        IsActive: Serenity.BooleanEditor;
+        IsArchive: Serenity.BooleanEditor;
+        InsertDate: Serenity.DateEditor;
+        InsertUsername: Serenity.StringEditor;
+        UpdateDate: Serenity.DateEditor;
+        UpdateUsername: Serenity.StringEditor;
+        Adress1: Serenity.StringEditor;
+        Adress2: Serenity.StringEditor;
+        Adress3: Serenity.StringEditor;
+        City: Serenity.StringEditor;
+        Country: Serenity.IntegerEditor;
+        Cedex: Serenity.StringEditor;
+        Building: Serenity.StringEditor;
+        Caption: Serenity.StringEditor;
+        ArchiveDate: Serenity.DateEditor;
+    }
+    class ManAdressForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace GestionEquestre.Ge {
+    interface ManAdressRow {
+        Id?: number;
+        IsActive?: boolean;
+        IsArchive?: boolean;
+        InsertDate?: string;
+        InsertUserId?: number;
+        UpdateDate?: string;
+        UpdateUserId?: number;
+        Adress1?: string;
+        Adress2?: string;
+        Adress3?: string;
+        City?: number;
+        Country?: number;
+        Cedex?: string;
+        Building?: string;
+        Caption?: string;
+        ArchiveDate?: string;
+        InsertUsername?: string;
+        UpdateUsername?: string;
+        CityDefaultValue?: boolean;
+        CityIsActive?: boolean;
+        CityInsertDate?: string;
+        CityInsertUserId?: number;
+        CityUpdateDate?: string;
+        CityUpdateUserId?: number;
+        CityFrCodeInsee?: string;
+        CityCaption?: string;
+        City1?: string;
+        CityPostCode?: string;
+        CityCountry?: number;
+        CountryDefaultValue?: boolean;
+        CountryIsActive?: boolean;
+        CountryInsertDate?: string;
+        CountryInsertUserId?: number;
+        CountryUpdateDate?: string;
+        CountryUpdateUserId?: number;
+        CountryName_FR_fr?: string;
+        CountryName_EN_gb?: string;
+        Countryalpha3?: string;
+        Countryalpha2?: string;
+        CountryCodeUe?: number;
+        CountryISOcode?: string;
+    }
+    namespace ManAdressRow {
+        const idProperty = "Id";
+        const nameProperty = "Adress1";
+        const localTextPrefix = "Ge.ManAdress";
+        const deletePermission = "Administration:General";
+        const insertPermission = "Administration:General";
+        const readPermission = "Administration:General";
+        const updatePermission = "Administration:General";
+        const enum Fields {
+            Id = "Id",
+            IsActive = "IsActive",
+            IsArchive = "IsArchive",
+            InsertDate = "InsertDate",
+            InsertUserId = "InsertUserId",
+            UpdateDate = "UpdateDate",
+            UpdateUserId = "UpdateUserId",
+            Adress1 = "Adress1",
+            Adress2 = "Adress2",
+            Adress3 = "Adress3",
+            City = "City",
+            Country = "Country",
+            Cedex = "Cedex",
+            Building = "Building",
+            Caption = "Caption",
+            ArchiveDate = "ArchiveDate",
+            InsertUsername = "InsertUsername",
+            UpdateUsername = "UpdateUsername",
+            CityDefaultValue = "CityDefaultValue",
+            CityIsActive = "CityIsActive",
+            CityInsertDate = "CityInsertDate",
+            CityInsertUserId = "CityInsertUserId",
+            CityUpdateDate = "CityUpdateDate",
+            CityUpdateUserId = "CityUpdateUserId",
+            CityFrCodeInsee = "CityFrCodeInsee",
+            CityCaption = "CityCaption",
+            City1 = "City1",
+            CityPostCode = "CityPostCode",
+            CityCountry = "CityCountry",
+            CountryDefaultValue = "CountryDefaultValue",
+            CountryIsActive = "CountryIsActive",
+            CountryInsertDate = "CountryInsertDate",
+            CountryInsertUserId = "CountryInsertUserId",
+            CountryUpdateDate = "CountryUpdateDate",
+            CountryUpdateUserId = "CountryUpdateUserId",
+            CountryName_FR_fr = "CountryName_FR_fr",
+            CountryName_EN_gb = "CountryName_EN_gb",
+            Countryalpha3 = "Countryalpha3",
+            Countryalpha2 = "Countryalpha2",
+            CountryCodeUe = "CountryCodeUe",
+            CountryISOcode = "CountryISOcode"
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+    namespace ManAdressService {
+        const baseUrl = "Ge/ManAdress";
+        function Create(request: Serenity.SaveRequest<ManAdressRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<ManAdressRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<ManAdressRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<ManAdressRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "Ge/ManAdress/Create",
+            Update = "Ge/ManAdress/Update",
+            Delete = "Ge/ManAdress/Delete",
+            Retrieve = "Ge/ManAdress/Retrieve",
+            List = "Ge/ManAdress/List"
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+}
+declare namespace GestionEquestre.Ge {
+    interface ManCavaliersForm {
+        LicFfe: Serenity.StringEditor;
+        Person: Serenity.LookupEditor;
+        IsActive: Serenity.BooleanEditor;
+        IsArchive: Serenity.BooleanEditor;
+        InsertDate: Serenity.DateEditor;
+        InsertUsername: Serenity.StringEditor;
+        UpdateDate: Serenity.DateEditor;
+        UpdateUsername: Serenity.StringEditor;
+        MilesimeLicnece: Serenity.DateYearEditor;
+        NiveauGalop: Serenity.LookupEditor;
+        LicenceCompetition: Serenity.LookupEditor;
+        DateCertificatMedical: Serenity.DateEditor;
+        Caption: Serenity.StringEditor;
+        ArchiveDate: Serenity.DateEditor;
+    }
+    class ManCavaliersForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace GestionEquestre.Ge {
+    interface ManCavaliersRow {
+        LicFfe?: string;
+        Person?: number;
+        IsActive?: boolean;
+        IsArchive?: boolean;
+        InsertDate?: string;
+        InsertUserId?: number;
+        UpdateDate?: string;
+        UpdateUserId?: number;
+        MilesimeLicnece?: number;
+        NiveauGalop?: number;
+        LicenceCompetition?: number;
+        DateCertificatMedical?: string;
+        Caption?: string;
+        ArchiveDate?: string;
+        InsertUsername?: string;
+        UpdateUsername?: string;
+        PersonIsMorale?: boolean;
+        PersonIsActive?: boolean;
+        PersonIsArchive?: boolean;
+        PersonInsertDate?: string;
+        PersonInsertUserId?: number;
+        PersonUpdateDate?: string;
+        PersonUpdateUserId?: number;
+        PersonSurname?: string;
+        PersonName?: string;
+        PersonMaidenName?: string;
+        PersonBusinessName?: string;
+        PersonBirthday?: string;
+        PersonSexe?: number;
+        PersonMaritalStatus?: number;
+        PersonBirthCity?: number;
+        PersonBirthCountry?: number;
+        PersonNationality?: number;
+        PersonPhoto?: number[];
+        PersonPhone?: string;
+        PersonGsm?: string;
+        PersonWorkPhone?: string;
+        PersonOtherPhone1?: string;
+        PersonOtherPhone2?: string;
+        PersonEmail1?: string;
+        PersonEmail2?: string;
+        PersonBankAccount?: number;
+        PersonIdAdress?: number;
+        PersonCaption?: string;
+        PersonArchiveDate?: string;
+        NiveauGalopDefaultValue?: boolean;
+        NiveauGalopIsActive?: boolean;
+        NiveauGalopInsertDate?: string;
+        NiveauGalopInsertUserId?: number;
+        NiveauGalopUpdateDate?: string;
+        NiveauGalopUpdateUserId?: number;
+        NiveauGalopCaption?: string;
+        NiveauGalopCode?: string;
+        LicenceCompetitionDefaultValue?: boolean;
+        LicenceCompetitionIsActive?: boolean;
+        LicenceCompetitionInsertDate?: string;
+        LicenceCompetitionInsertUserId?: number;
+        LicenceCompetitionUpdateDate?: string;
+        LicenceCompetitionUpdateUserId?: number;
+        LicenceCompetitionCaption?: string;
+        LicenceCompetitionCode?: string;
+    }
+    namespace ManCavaliersRow {
+        const idProperty = "LicFfe";
+        const nameProperty = "LicFfe";
+        const localTextPrefix = "Ge.ManCavaliers";
+        const lookupKey = "Ge.Cavaliers";
+        function getLookup(): Q.Lookup<ManCavaliersRow>;
+        const deletePermission = "Administration:General";
+        const insertPermission = "Administration:General";
+        const readPermission = "Administration:General";
+        const updatePermission = "Administration:General";
+        const enum Fields {
+            LicFfe = "LicFfe",
+            Person = "Person",
+            IsActive = "IsActive",
+            IsArchive = "IsArchive",
+            InsertDate = "InsertDate",
+            InsertUserId = "InsertUserId",
+            UpdateDate = "UpdateDate",
+            UpdateUserId = "UpdateUserId",
+            MilesimeLicnece = "MilesimeLicnece",
+            NiveauGalop = "NiveauGalop",
+            LicenceCompetition = "LicenceCompetition",
+            DateCertificatMedical = "DateCertificatMedical",
+            Caption = "Caption",
+            ArchiveDate = "ArchiveDate",
+            InsertUsername = "InsertUsername",
+            UpdateUsername = "UpdateUsername",
+            PersonIsMorale = "PersonIsMorale",
+            PersonIsActive = "PersonIsActive",
+            PersonIsArchive = "PersonIsArchive",
+            PersonInsertDate = "PersonInsertDate",
+            PersonInsertUserId = "PersonInsertUserId",
+            PersonUpdateDate = "PersonUpdateDate",
+            PersonUpdateUserId = "PersonUpdateUserId",
+            PersonSurname = "PersonSurname",
+            PersonName = "PersonName",
+            PersonMaidenName = "PersonMaidenName",
+            PersonBusinessName = "PersonBusinessName",
+            PersonBirthday = "PersonBirthday",
+            PersonSexe = "PersonSexe",
+            PersonMaritalStatus = "PersonMaritalStatus",
+            PersonBirthCity = "PersonBirthCity",
+            PersonBirthCountry = "PersonBirthCountry",
+            PersonNationality = "PersonNationality",
+            PersonPhoto = "PersonPhoto",
+            PersonPhone = "PersonPhone",
+            PersonGsm = "PersonGsm",
+            PersonWorkPhone = "PersonWorkPhone",
+            PersonOtherPhone1 = "PersonOtherPhone1",
+            PersonOtherPhone2 = "PersonOtherPhone2",
+            PersonEmail1 = "PersonEmail1",
+            PersonEmail2 = "PersonEmail2",
+            PersonBankAccount = "PersonBankAccount",
+            PersonIdAdress = "PersonIdAdress",
+            PersonCaption = "PersonCaption",
+            PersonArchiveDate = "PersonArchiveDate",
+            NiveauGalopDefaultValue = "NiveauGalopDefaultValue",
+            NiveauGalopIsActive = "NiveauGalopIsActive",
+            NiveauGalopInsertDate = "NiveauGalopInsertDate",
+            NiveauGalopInsertUserId = "NiveauGalopInsertUserId",
+            NiveauGalopUpdateDate = "NiveauGalopUpdateDate",
+            NiveauGalopUpdateUserId = "NiveauGalopUpdateUserId",
+            NiveauGalopCaption = "NiveauGalopCaption",
+            NiveauGalopCode = "NiveauGalopCode",
+            LicenceCompetitionDefaultValue = "LicenceCompetitionDefaultValue",
+            LicenceCompetitionIsActive = "LicenceCompetitionIsActive",
+            LicenceCompetitionInsertDate = "LicenceCompetitionInsertDate",
+            LicenceCompetitionInsertUserId = "LicenceCompetitionInsertUserId",
+            LicenceCompetitionUpdateDate = "LicenceCompetitionUpdateDate",
+            LicenceCompetitionUpdateUserId = "LicenceCompetitionUpdateUserId",
+            LicenceCompetitionCaption = "LicenceCompetitionCaption",
+            LicenceCompetitionCode = "LicenceCompetitionCode"
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+    namespace ManCavaliersService {
+        const baseUrl = "Ge/ManCavaliers";
+        function Create(request: Serenity.SaveRequest<ManCavaliersRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<ManCavaliersRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<ManCavaliersRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<ManCavaliersRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "Ge/ManCavaliers/Create",
+            Update = "Ge/ManCavaliers/Update",
+            Delete = "Ge/ManCavaliers/Delete",
+            Retrieve = "Ge/ManCavaliers/Retrieve",
+            List = "Ge/ManCavaliers/List"
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+}
+declare namespace GestionEquestre.Ge {
+    interface ManFolderForm {
+        InsertDate: Serenity.DateEditor;
+        InsertUsername: Serenity.StringEditor;
+        UpdateDate: Serenity.DateEditor;
+        UpdateUsername: Serenity.StringEditor;
+        Id: Serenity.StringEditor;
+        IsActive: Serenity.BooleanEditor;
+        IsArchive: Serenity.BooleanEditor;
+        Caption: Serenity.StringEditor;
+        CreateDate: Serenity.DateEditor;
+        Establishment: Serenity.LookupEditor;
+        Comment: Serenity.TextAreaEditor;
+        CloseDate: Serenity.DateEditor;
+        CloseRaison: Serenity.StringEditor;
+        ArchiveDate: Serenity.DateEditor;
+    }
+    class ManFolderForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace GestionEquestre.Ge {
+    interface ManFolderRow {
+        Id?: number;
+        IsActive?: boolean;
+        IsArchive?: boolean;
+        InsertDate?: string;
+        InsertUserId?: number;
+        UpdateDate?: string;
+        UpdateUserId?: number;
+        Caption?: string;
+        ArchiveDate?: string;
+        CreateDate?: string;
+        CloseRaison?: string;
+        CloseDate?: string;
+        Establishment?: number;
+        Comment?: string;
+        InsertUsername?: string;
+        UpdateUsername?: string;
+    }
+    namespace ManFolderRow {
+        const idProperty = "Id";
+        const nameProperty = "Caption";
+        const localTextPrefix = "Ge.ManFolder";
+        const lookupKey = "Ge.ManFolder";
+        function getLookup(): Q.Lookup<ManFolderRow>;
+        const deletePermission = "Folders:General";
+        const insertPermission = "Folders:General";
+        const readPermission = "Folders:General";
+        const updatePermission = "Folders:General";
+        const enum Fields {
+            Id = "Id",
+            IsActive = "IsActive",
+            IsArchive = "IsArchive",
+            InsertDate = "InsertDate",
+            InsertUserId = "InsertUserId",
+            UpdateDate = "UpdateDate",
+            UpdateUserId = "UpdateUserId",
+            Caption = "Caption",
+            ArchiveDate = "ArchiveDate",
+            CreateDate = "CreateDate",
+            CloseRaison = "CloseRaison",
+            CloseDate = "CloseDate",
+            Establishment = "Establishment",
+            Comment = "Comment",
+            InsertUsername = "InsertUsername",
+            UpdateUsername = "UpdateUsername"
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+    namespace ManFolderService {
+        const baseUrl = "Ge/ManFolder";
+        function Create(request: Serenity.SaveRequest<ManFolderRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<ManFolderRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<ManFolderRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<ManFolderRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "Ge/ManFolder/Create",
+            Update = "Ge/ManFolder/Update",
+            Delete = "Ge/ManFolder/Delete",
+            Retrieve = "Ge/ManFolder/Retrieve",
+            List = "Ge/ManFolder/List"
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+}
+declare namespace GestionEquestre.Ge {
+    interface ManHorsesForm {
+        Ueln: Serenity.StringEditor;
+        Sire: Serenity.StringEditor;
+        CleSire: Serenity.StringEditor;
+        Hnin: Serenity.StringEditor;
+        BirthCountry: Serenity.LookupEditor;
+        BirthOrganization: Serenity.LookupEditor;
+        Name: Serenity.StringEditor;
+        IsActive: Serenity.BooleanEditor;
+        IsArchive: Serenity.BooleanEditor;
+        InsertDate: Serenity.DateEditor;
+        InsertUsername: Serenity.StringEditor;
+        UpdateDate: Serenity.DateEditor;
+        UpdateUsername: Serenity.StringEditor;
+        Birthday: Serenity.DateEditor;
+        Sexe: Serenity.LookupEditor;
+        Color: Serenity.StringEditor;
+        Race: Serenity.StringEditor;
+        Transponder: Serenity.StringEditor;
+        FinalExit: Serenity.DateEditor;
+        Description: Serenity.StringEditor;
+        ArchiveDate: Serenity.DateEditor;
+    }
+    class ManHorsesForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace GestionEquestre.Ge {
+    interface ManHorsesRow {
+        Ueln?: string;
+        Sire?: string;
+        CleSire?: string;
+        Hnin?: string;
+        BirthCountry?: string;
+        BirthOrganization?: number;
+        Name?: string;
+        IsActive?: boolean;
+        IsArchive?: boolean;
+        InsertDate?: string;
+        InsertUserId?: number;
+        UpdateDate?: string;
+        UpdateUserId?: number;
+        Birthday?: string;
+        Sexe?: number;
+        Color?: string;
+        Race?: string;
+        Transponder?: string;
+        FinalExit?: string;
+        Description?: string;
+        ArchiveDate?: string;
+        InsertUsername?: string;
+        UpdateUsername?: string;
+        BirthCountryDefaultValue?: boolean;
+        BirthCountryIsActive?: boolean;
+        BirthCountryInsertDate?: string;
+        BirthCountryInsertUserId?: number;
+        BirthCountryUpdateDate?: string;
+        BirthCountryUpdateUserId?: number;
+        BirthCountryName_FR_fr?: string;
+        BirthCountryalpha3?: string;
+        BirthCountryISOcode?: string;
+        BirthOrganizationDefaultValue?: boolean;
+        BirthOrganizationIsActive?: boolean;
+        BirthOrganizationInsertDate?: string;
+        BirthOrganizationInsertUserId?: number;
+        BirthOrganizationUpdateDate?: string;
+        BirthOrganizationUpdateUserId?: number;
+        BirthOrganizationOrganization?: string;
+        BirthOrganizationUelnCode?: string;
+        SexeDefaultValue?: boolean;
+        SexeIsActive?: boolean;
+        SexeInsertDate?: string;
+        SexeInsertUserId?: number;
+        SexeUpdateDate?: string;
+        SexeUpdateUserId?: number;
+        SexeCaption?: string;
+        SexeCivility?: string;
+    }
+    namespace ManHorsesRow {
+        const idProperty = "Ueln";
+        const nameProperty = "Ueln";
+        const localTextPrefix = "Ge.ManHorses";
+        const lookupKey = "Ge.Horses";
+        function getLookup(): Q.Lookup<ManHorsesRow>;
+        const deletePermission = "Administration:General";
+        const insertPermission = "Administration:General";
+        const readPermission = "Management:Horses";
+        const updatePermission = "Administration:General";
+        const enum Fields {
+            Ueln = "Ueln",
+            Sire = "Sire",
+            CleSire = "CleSire",
+            Hnin = "Hnin",
+            BirthCountry = "BirthCountry",
+            BirthOrganization = "BirthOrganization",
+            Name = "Name",
+            IsActive = "IsActive",
+            IsArchive = "IsArchive",
+            InsertDate = "InsertDate",
+            InsertUserId = "InsertUserId",
+            UpdateDate = "UpdateDate",
+            UpdateUserId = "UpdateUserId",
+            Birthday = "Birthday",
+            Sexe = "Sexe",
+            Color = "Color",
+            Race = "Race",
+            Transponder = "Transponder",
+            FinalExit = "FinalExit",
+            Description = "Description",
+            ArchiveDate = "ArchiveDate",
+            InsertUsername = "InsertUsername",
+            UpdateUsername = "UpdateUsername",
+            BirthCountryDefaultValue = "BirthCountryDefaultValue",
+            BirthCountryIsActive = "BirthCountryIsActive",
+            BirthCountryInsertDate = "BirthCountryInsertDate",
+            BirthCountryInsertUserId = "BirthCountryInsertUserId",
+            BirthCountryUpdateDate = "BirthCountryUpdateDate",
+            BirthCountryUpdateUserId = "BirthCountryUpdateUserId",
+            BirthCountryName_FR_fr = "BirthCountryName_FR_fr",
+            BirthCountryalpha3 = "BirthCountryalpha3",
+            BirthCountryISOcode = "BirthCountryISOcode",
+            BirthOrganizationDefaultValue = "BirthOrganizationDefaultValue",
+            BirthOrganizationIsActive = "BirthOrganizationIsActive",
+            BirthOrganizationInsertDate = "BirthOrganizationInsertDate",
+            BirthOrganizationInsertUserId = "BirthOrganizationInsertUserId",
+            BirthOrganizationUpdateDate = "BirthOrganizationUpdateDate",
+            BirthOrganizationUpdateUserId = "BirthOrganizationUpdateUserId",
+            BirthOrganizationOrganization = "BirthOrganizationOrganization",
+            BirthOrganizationUelnCode = "BirthOrganizationUelnCode",
+            SexeDefaultValue = "SexeDefaultValue",
+            SexeIsActive = "SexeIsActive",
+            SexeInsertDate = "SexeInsertDate",
+            SexeInsertUserId = "SexeInsertUserId",
+            SexeUpdateDate = "SexeUpdateDate",
+            SexeUpdateUserId = "SexeUpdateUserId",
+            SexeCaption = "SexeCaption",
+            SexeCivility = "SexeCivility"
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+    namespace ManHorsesService {
+        const baseUrl = "Ge/ManHorses";
+        function Create(request: Serenity.SaveRequest<ManHorsesRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<ManHorsesRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<ManHorsesRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<ManHorsesRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "Ge/ManHorses/Create",
+            Update = "Ge/ManHorses/Update",
+            Delete = "Ge/ManHorses/Delete",
+            Retrieve = "Ge/ManHorses/Retrieve",
+            List = "Ge/ManHorses/List"
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+}
+declare namespace GestionEquestre.Ge {
+    interface ManOwnerForm {
+        Horse: Serenity.StringEditor;
+        Cavalier: Serenity.LookupEditor;
+        Part: Serenity.DecimalEditor;
+    }
+    class ManOwnerForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace GestionEquestre.Ge {
+    interface ManOwnerRow {
+        Id?: number;
+        Horse?: string;
+        Cavalier?: string;
+        Part?: number;
+        HorseSire?: string;
+        HorseCleSire?: string;
+        HorseHnin?: string;
+        HorseBirthCountry?: number;
+        HorseBirthOrganization?: number;
+        HorseName?: string;
+        HorseIsActive?: boolean;
+        HorseIsArchive?: boolean;
+        HorseInsertDate?: string;
+        HorseInsertUserId?: number;
+        HorseUpdateDate?: string;
+        HorseUpdateUserId?: number;
+        HorseBirthday?: string;
+        HorseSexe?: number;
+        HorseColor?: string;
+        HorseRace?: string;
+        HorseTransponder?: string;
+        HorseFinalExit?: string;
+        HorseDescription?: string;
+        HorseArchiveDate?: string;
+        CavalierPerson?: number;
+        CavalierIsActive?: boolean;
+        CavalierIsArchive?: boolean;
+        CavalierInsertDate?: string;
+        CavalierInsertUserId?: number;
+        CavalierUpdateDate?: string;
+        CavalierUpdateUserId?: number;
+        CavalierMilesimeLicnece?: string;
+        CavalierNiveauGalop?: number;
+        CavalierLicenceCompetition?: number;
+        CavalierDateCertificatMedical?: string;
+        CavalierCaption?: string;
+        CavalierArchiveDate?: string;
+    }
+    namespace ManOwnerRow {
+        const idProperty = "Id";
+        const nameProperty = "Horse";
+        const localTextPrefix = "Ge.ManOwner";
+        const deletePermission = "Administration:General";
+        const insertPermission = "Administration:General";
+        const readPermission = "Administration:General";
+        const updatePermission = "Administration:General";
+        const enum Fields {
+            Id = "Id",
+            Horse = "Horse",
+            Cavalier = "Cavalier",
+            Part = "Part",
+            HorseSire = "HorseSire",
+            HorseCleSire = "HorseCleSire",
+            HorseHnin = "HorseHnin",
+            HorseBirthCountry = "HorseBirthCountry",
+            HorseBirthOrganization = "HorseBirthOrganization",
+            HorseName = "HorseName",
+            HorseIsActive = "HorseIsActive",
+            HorseIsArchive = "HorseIsArchive",
+            HorseInsertDate = "HorseInsertDate",
+            HorseInsertUserId = "HorseInsertUserId",
+            HorseUpdateDate = "HorseUpdateDate",
+            HorseUpdateUserId = "HorseUpdateUserId",
+            HorseBirthday = "HorseBirthday",
+            HorseSexe = "HorseSexe",
+            HorseColor = "HorseColor",
+            HorseRace = "HorseRace",
+            HorseTransponder = "HorseTransponder",
+            HorseFinalExit = "HorseFinalExit",
+            HorseDescription = "HorseDescription",
+            HorseArchiveDate = "HorseArchiveDate",
+            CavalierPerson = "CavalierPerson",
+            CavalierIsActive = "CavalierIsActive",
+            CavalierIsArchive = "CavalierIsArchive",
+            CavalierInsertDate = "CavalierInsertDate",
+            CavalierInsertUserId = "CavalierInsertUserId",
+            CavalierUpdateDate = "CavalierUpdateDate",
+            CavalierUpdateUserId = "CavalierUpdateUserId",
+            CavalierMilesimeLicnece = "CavalierMilesimeLicnece",
+            CavalierNiveauGalop = "CavalierNiveauGalop",
+            CavalierLicenceCompetition = "CavalierLicenceCompetition",
+            CavalierDateCertificatMedical = "CavalierDateCertificatMedical",
+            CavalierCaption = "CavalierCaption",
+            CavalierArchiveDate = "CavalierArchiveDate"
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+    namespace ManOwnerService {
+        const baseUrl = "Ge/ManOwner";
+        function Create(request: Serenity.SaveRequest<ManOwnerRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<ManOwnerRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<ManOwnerRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<ManOwnerRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "Ge/ManOwner/Create",
+            Update = "Ge/ManOwner/Update",
+            Delete = "Ge/ManOwner/Delete",
+            Retrieve = "Ge/ManOwner/Retrieve",
+            List = "Ge/ManOwner/List"
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+}
+declare namespace GestionEquestre.Ge {
+    interface ManPersonForm {
+        IsMorale: Serenity.BooleanEditor;
+        IsActive: Serenity.BooleanEditor;
+        IsArchive: Serenity.BooleanEditor;
+        InsertDate: Serenity.DateEditor;
+        InsertUsername: Serenity.StringEditor;
+        UpdateDate: Serenity.DateEditor;
+        UpdateUsername: Serenity.StringEditor;
+        Surname: Serenity.StringEditor;
+        Name: Serenity.StringEditor;
+        FullName: Serenity.StringEditor;
+        MaidenName: Serenity.StringEditor;
+        BusinessName: Serenity.StringEditor;
+        Caption: Serenity.StringEditor;
+        Birthday: Serenity.DateEditor;
+        Sexe: Serenity.LookupEditor;
+        MaritalStatus: Serenity.LookupEditor;
+        BirthCity: Serenity.LookupEditor;
+        BirthCountry: Serenity.LookupEditor;
+        Nationality: Serenity.LookupEditor;
+        Photo: Serenity.ImageUploadEditor;
+        Phone: Serenity.StringEditor;
+        Gsm: Serenity.StringEditor;
+        WorkPhone: Serenity.StringEditor;
+        OtherPhone1: Serenity.StringEditor;
+        OtherPhone2: Serenity.StringEditor;
+        Email1: Serenity.EmailEditor;
+        Email2: Serenity.EmailEditor;
+        BankAccount: Serenity.StringEditor;
+        IdAdress: Serenity.StringEditor;
+        ArchiveDate: Serenity.DateEditor;
+    }
+    class ManPersonForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace GestionEquestre.Ge {
+    interface ManPersonRow {
+        Id?: number;
+        IsMorale?: boolean;
+        IsActive?: boolean;
+        IsArchive?: boolean;
+        InsertDate?: string;
+        InsertUserId?: number;
+        UpdateDate?: string;
+        UpdateUserId?: number;
+        Surname?: string;
+        Name?: string;
+        MaidenName?: string;
+        FullName?: string;
+        BusinessName?: string;
+        Birthday?: string;
+        Sexe?: number;
+        MaritalStatus?: number;
+        BirthCity?: number;
+        BirthCountry?: number;
+        Nationality?: number;
+        Photo?: string;
+        Phone?: string;
+        Gsm?: string;
+        WorkPhone?: string;
+        OtherPhone1?: string;
+        OtherPhone2?: string;
+        Email1?: string;
+        Email2?: string;
+        BankAccount?: number;
+        IdAdress?: number;
+        Caption?: string;
+        ArchiveDate?: string;
+        InsertUsername?: string;
+        UpdateUsername?: string;
+        SexeDefaultValue?: boolean;
+        SexeIsActive?: boolean;
+        SexeInsertDate?: string;
+        SexeInsertUserId?: number;
+        SexeUpdateDate?: string;
+        SexeUpdateUserId?: number;
+        SexeCaption?: string;
+        SexeCivility?: string;
+        MaritalStatusDefaultValue?: boolean;
+        MaritalStatusIsActive?: boolean;
+        MaritalStatusInsertDate?: string;
+        MaritalStatusInsertUserId?: number;
+        MaritalStatusUpdateDate?: string;
+        MaritalStatusUpdateUserId?: number;
+        MaritalStatusCaption?: string;
+        MaritalStatusCode?: string;
+        BirthCityDefaultValue?: boolean;
+        BirthCityIsActive?: boolean;
+        BirthCityInsertDate?: string;
+        BirthCityInsertUserId?: number;
+        BirthCityUpdateDate?: string;
+        BirthCityUpdateUserId?: number;
+        BirthCityFrCodeInsee?: string;
+        BirthCityCaption?: string;
+        BirthCityCity?: string;
+        BirthCityPostCode?: string;
+        BirthCityCountry?: number;
+        BirthCountryDefaultValue?: boolean;
+        BirthCountryIsActive?: boolean;
+        BirthCountryInsertDate?: string;
+        BirthCountryInsertUserId?: number;
+        BirthCountryUpdateDate?: string;
+        BirthCountryUpdateUserId?: number;
+        BirthCountryName_FR_fr?: string;
+        BirthCountryName_EN_gb?: string;
+        BirthCountryalpha3?: string;
+        BirthCountryalpha2?: string;
+        BirthCountryCodeUe?: number;
+        BirthCountryISOcode?: string;
+        NationalityDefaultValue?: boolean;
+        NationalityIsActive?: boolean;
+        NationalityInsertDate?: string;
+        NationalityInsertUserId?: number;
+        NationalityUpdateDate?: string;
+        NationalityUpdateUserId?: number;
+        NationalityName_FR_fr?: string;
+        NationalityName_EN_gb?: string;
+        Nationalityalpha3?: string;
+        Nationalityalpha2?: string;
+        NationalityCodeUe?: number;
+        NationalityISOcode?: string;
+        BankAccountCountryCodeIban?: string;
+        BankAccountCheckDigitsIban?: string;
+        BankAccountBban?: string;
+        BankAccountBic?: string;
+        BankAccountAccountOnwer?: string;
+        BankAccountBankAdress?: string;
+        BankAccountCis?: string;
+        BankAccountUrm?: string;
+        BankAccountMandateDateSign?: string;
+        BankAccountTypePayment?: number;
+        BankAccountDateLastPrelevement?: string;
+        BankAccountTypeOfLastPayment?: number;
+        IdAdressIsActive?: boolean;
+        IdAdressIsArchive?: boolean;
+        IdAdressInsertDate?: string;
+        IdAdressInsertUserId?: number;
+        IdAdressUpdateDate?: string;
+        IdAdressUpdateUserId?: number;
+        IdAdressAdress1?: string;
+        IdAdressAdress2?: string;
+        IdAdressAdress3?: string;
+        IdAdressCity?: number;
+        IdAdressCountry?: number;
+        IdAdressCedex?: string;
+        IdAdressBuilding?: string;
+        IdAdressCaption?: string;
+        IdAdressArchiveDate?: string;
+    }
+    namespace ManPersonRow {
+        const idProperty = "Id";
+        const nameProperty = "Surname";
+        const localTextPrefix = "Ge.ManPerson";
+        const lookupKey = "Ge.Persons";
+        function getLookup(): Q.Lookup<ManPersonRow>;
+        const deletePermission = "Administration:General";
+        const insertPermission = "Administration:General";
+        const readPermission = "Administration:General";
+        const updatePermission = "Administration:General";
+        const enum Fields {
+            Id = "Id",
+            IsMorale = "IsMorale",
+            IsActive = "IsActive",
+            IsArchive = "IsArchive",
+            InsertDate = "InsertDate",
+            InsertUserId = "InsertUserId",
+            UpdateDate = "UpdateDate",
+            UpdateUserId = "UpdateUserId",
+            Surname = "Surname",
+            Name = "Name",
+            MaidenName = "MaidenName",
+            FullName = "FullName",
+            BusinessName = "BusinessName",
+            Birthday = "Birthday",
+            Sexe = "Sexe",
+            MaritalStatus = "MaritalStatus",
+            BirthCity = "BirthCity",
+            BirthCountry = "BirthCountry",
+            Nationality = "Nationality",
+            Photo = "Photo",
+            Phone = "Phone",
+            Gsm = "Gsm",
+            WorkPhone = "WorkPhone",
+            OtherPhone1 = "OtherPhone1",
+            OtherPhone2 = "OtherPhone2",
+            Email1 = "Email1",
+            Email2 = "Email2",
+            BankAccount = "BankAccount",
+            IdAdress = "IdAdress",
+            Caption = "Caption",
+            ArchiveDate = "ArchiveDate",
+            InsertUsername = "InsertUsername",
+            UpdateUsername = "UpdateUsername",
+            SexeDefaultValue = "SexeDefaultValue",
+            SexeIsActive = "SexeIsActive",
+            SexeInsertDate = "SexeInsertDate",
+            SexeInsertUserId = "SexeInsertUserId",
+            SexeUpdateDate = "SexeUpdateDate",
+            SexeUpdateUserId = "SexeUpdateUserId",
+            SexeCaption = "SexeCaption",
+            SexeCivility = "SexeCivility",
+            MaritalStatusDefaultValue = "MaritalStatusDefaultValue",
+            MaritalStatusIsActive = "MaritalStatusIsActive",
+            MaritalStatusInsertDate = "MaritalStatusInsertDate",
+            MaritalStatusInsertUserId = "MaritalStatusInsertUserId",
+            MaritalStatusUpdateDate = "MaritalStatusUpdateDate",
+            MaritalStatusUpdateUserId = "MaritalStatusUpdateUserId",
+            MaritalStatusCaption = "MaritalStatusCaption",
+            MaritalStatusCode = "MaritalStatusCode",
+            BirthCityDefaultValue = "BirthCityDefaultValue",
+            BirthCityIsActive = "BirthCityIsActive",
+            BirthCityInsertDate = "BirthCityInsertDate",
+            BirthCityInsertUserId = "BirthCityInsertUserId",
+            BirthCityUpdateDate = "BirthCityUpdateDate",
+            BirthCityUpdateUserId = "BirthCityUpdateUserId",
+            BirthCityFrCodeInsee = "BirthCityFrCodeInsee",
+            BirthCityCaption = "BirthCityCaption",
+            BirthCityCity = "BirthCityCity",
+            BirthCityPostCode = "BirthCityPostCode",
+            BirthCityCountry = "BirthCityCountry",
+            BirthCountryDefaultValue = "BirthCountryDefaultValue",
+            BirthCountryIsActive = "BirthCountryIsActive",
+            BirthCountryInsertDate = "BirthCountryInsertDate",
+            BirthCountryInsertUserId = "BirthCountryInsertUserId",
+            BirthCountryUpdateDate = "BirthCountryUpdateDate",
+            BirthCountryUpdateUserId = "BirthCountryUpdateUserId",
+            BirthCountryName_FR_fr = "BirthCountryName_FR_fr",
+            BirthCountryName_EN_gb = "BirthCountryName_EN_gb",
+            BirthCountryalpha3 = "BirthCountryalpha3",
+            BirthCountryalpha2 = "BirthCountryalpha2",
+            BirthCountryCodeUe = "BirthCountryCodeUe",
+            BirthCountryISOcode = "BirthCountryISOcode",
+            NationalityDefaultValue = "NationalityDefaultValue",
+            NationalityIsActive = "NationalityIsActive",
+            NationalityInsertDate = "NationalityInsertDate",
+            NationalityInsertUserId = "NationalityInsertUserId",
+            NationalityUpdateDate = "NationalityUpdateDate",
+            NationalityUpdateUserId = "NationalityUpdateUserId",
+            NationalityName_FR_fr = "NationalityName_FR_fr",
+            NationalityName_EN_gb = "NationalityName_EN_gb",
+            Nationalityalpha3 = "Nationalityalpha3",
+            Nationalityalpha2 = "Nationalityalpha2",
+            NationalityCodeUe = "NationalityCodeUe",
+            NationalityISOcode = "NationalityISOcode",
+            BankAccountCountryCodeIban = "BankAccountCountryCodeIban",
+            BankAccountCheckDigitsIban = "BankAccountCheckDigitsIban",
+            BankAccountBban = "BankAccountBban",
+            BankAccountBic = "BankAccountBic",
+            BankAccountAccountOnwer = "BankAccountAccountOnwer",
+            BankAccountBankAdress = "BankAccountBankAdress",
+            BankAccountCis = "BankAccountCis",
+            BankAccountUrm = "BankAccountUrm",
+            BankAccountMandateDateSign = "BankAccountMandateDateSign",
+            BankAccountTypePayment = "BankAccountTypePayment",
+            BankAccountDateLastPrelevement = "BankAccountDateLastPrelevement",
+            BankAccountTypeOfLastPayment = "BankAccountTypeOfLastPayment",
+            IdAdressIsActive = "IdAdressIsActive",
+            IdAdressIsArchive = "IdAdressIsArchive",
+            IdAdressInsertDate = "IdAdressInsertDate",
+            IdAdressInsertUserId = "IdAdressInsertUserId",
+            IdAdressUpdateDate = "IdAdressUpdateDate",
+            IdAdressUpdateUserId = "IdAdressUpdateUserId",
+            IdAdressAdress1 = "IdAdressAdress1",
+            IdAdressAdress2 = "IdAdressAdress2",
+            IdAdressAdress3 = "IdAdressAdress3",
+            IdAdressCity = "IdAdressCity",
+            IdAdressCountry = "IdAdressCountry",
+            IdAdressCedex = "IdAdressCedex",
+            IdAdressBuilding = "IdAdressBuilding",
+            IdAdressCaption = "IdAdressCaption",
+            IdAdressArchiveDate = "IdAdressArchiveDate"
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+    namespace ManPersonService {
+        const baseUrl = "Ge/ManPerson";
+        function Create(request: Serenity.SaveRequest<ManPersonRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<ManPersonRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<ManPersonRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<ManPersonRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "Ge/ManPerson/Create",
+            Update = "Ge/ManPerson/Update",
+            Delete = "Ge/ManPerson/Delete",
+            Retrieve = "Ge/ManPerson/Retrieve",
+            List = "Ge/ManPerson/List"
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+}
+declare namespace GestionEquestre.Ge {
+    interface SetCityForm {
+        DefaultValue: Serenity.BooleanEditor;
+        IsActive: Serenity.BooleanEditor;
+        InsertDate: Serenity.DateEditor;
+        InsertUsername: Serenity.StringEditor;
+        UpdateDate: Serenity.DateEditor;
+        UpdateUsername: Serenity.StringEditor;
+        FrCodeInsee: Serenity.StringEditor;
+        Caption: Serenity.StringEditor;
+        City: Serenity.StringEditor;
+        PostCode: Serenity.StringEditor;
+        Country: Serenity.LookupEditor;
+    }
+    class SetCityForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace GestionEquestre.Ge {
+    interface SetCityRow {
+        Id?: number;
+        DefaultValue?: boolean;
+        IsActive?: boolean;
+        InsertDate?: string;
+        InsertUserId?: number;
+        UpdateDate?: string;
+        UpdateUserId?: number;
+        FrCodeInsee?: string;
+        Caption?: string;
+        City?: string;
+        PostCode?: string;
+        Country?: number;
+        InsertUsername?: string;
+        UpdateUsername?: string;
+        CountryDefaultValue?: boolean;
+        CountryIsActive?: boolean;
+        CountryInsertDate?: string;
+        CountryInsertUserId?: number;
+        CountryUpdateDate?: string;
+        CountryUpdateUserId?: number;
+        CountryName_FR_fr?: string;
+        Countryalpha3?: string;
+        CountryCodeUe?: number;
+        CountryISOcode?: string;
+    }
+    namespace SetCityRow {
+        const idProperty = "Id";
+        const nameProperty = "FrCodeInsee";
+        const localTextPrefix = "Ge.SetCity";
+        const lookupKey = "Ge.SetCity";
+        function getLookup(): Q.Lookup<SetCityRow>;
+        const deletePermission = "Administration:General";
+        const insertPermission = "Administration:General";
+        const readPermission = "Administration:General";
+        const updatePermission = "Administration:General";
+        const enum Fields {
+            Id = "Id",
+            DefaultValue = "DefaultValue",
+            IsActive = "IsActive",
+            InsertDate = "InsertDate",
+            InsertUserId = "InsertUserId",
+            UpdateDate = "UpdateDate",
+            UpdateUserId = "UpdateUserId",
+            FrCodeInsee = "FrCodeInsee",
+            Caption = "Caption",
+            City = "City",
+            PostCode = "PostCode",
+            Country = "Country",
+            InsertUsername = "InsertUsername",
+            UpdateUsername = "UpdateUsername",
+            CountryDefaultValue = "CountryDefaultValue",
+            CountryIsActive = "CountryIsActive",
+            CountryInsertDate = "CountryInsertDate",
+            CountryInsertUserId = "CountryInsertUserId",
+            CountryUpdateDate = "CountryUpdateDate",
+            CountryUpdateUserId = "CountryUpdateUserId",
+            CountryName_FR_fr = "CountryName_FR_fr",
+            Countryalpha3 = "Countryalpha3",
+            CountryCodeUe = "CountryCodeUe",
+            CountryISOcode = "CountryISOcode"
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+    namespace SetCityService {
+        const baseUrl = "Ge/SetCity";
+        function Create(request: Serenity.SaveRequest<SetCityRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<SetCityRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<SetCityRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<SetCityRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "Ge/SetCity/Create",
+            Update = "Ge/SetCity/Update",
+            Delete = "Ge/SetCity/Delete",
+            Retrieve = "Ge/SetCity/Retrieve",
+            List = "Ge/SetCity/List"
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+}
+declare namespace GestionEquestre.Ge {
+    interface SetCountryForm {
+        DefaultValue: Serenity.BooleanEditor;
+        IsActive: Serenity.BooleanEditor;
+        InsertDate: Serenity.DateEditor;
+        InsertUsername: Serenity.StringEditor;
+        UpdateDate: Serenity.DateEditor;
+        UpdateUsername: Serenity.StringEditor;
+        Name_FR_fr: Serenity.StringEditor;
+        Name_EN_gb: Serenity.StringEditor;
+        alpha3: Serenity.StringEditor;
+        alpha2: Serenity.StringEditor;
+        CodeUe: Serenity.IntegerEditor;
+        ISOcode: Serenity.StringEditor;
+    }
+    class SetCountryForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace GestionEquestre.Ge {
+    interface SetCountryRow {
+        Id?: number;
+        DefaultValue?: boolean;
+        IsActive?: boolean;
+        InsertDate?: string;
+        InsertUserId?: number;
+        UpdateDate?: string;
+        UpdateUserId?: number;
+        Name_FR_fr?: string;
+        Name_EN_gb?: string;
+        alpha3?: string;
+        alpha2?: string;
+        CodeUe?: number;
+        ISOcode?: string;
+        InsertUsername?: string;
+        UpdateUsername?: string;
+    }
+    namespace SetCountryRow {
+        const idProperty = "Id";
+        const nameProperty = "Name_FR_fr";
+        const localTextPrefix = "Ge.SetCountry";
+        const lookupKey = "Ge.SetCountry";
+        function getLookup(): Q.Lookup<SetCountryRow>;
+        const deletePermission = "Administration:General";
+        const insertPermission = "Administration:General";
+        const readPermission = "Administration:General";
+        const updatePermission = "Administration:General";
+        const enum Fields {
+            Id = "Id",
+            DefaultValue = "DefaultValue",
+            IsActive = "IsActive",
+            InsertDate = "InsertDate",
+            InsertUserId = "InsertUserId",
+            UpdateDate = "UpdateDate",
+            UpdateUserId = "UpdateUserId",
+            Name_FR_fr = "Name_FR_fr",
+            Name_EN_gb = "Name_EN_gb",
+            alpha3 = "alpha3",
+            alpha2 = "alpha2",
+            CodeUe = "CodeUe",
+            ISOcode = "ISOcode",
+            InsertUsername = "InsertUsername",
+            UpdateUsername = "UpdateUsername"
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+    namespace SetCountryService {
+        const baseUrl = "Ge/SetCountry";
+        function Create(request: Serenity.SaveRequest<SetCountryRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<SetCountryRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<SetCountryRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<SetCountryRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "Ge/SetCountry/Create",
+            Update = "Ge/SetCountry/Update",
+            Delete = "Ge/SetCountry/Delete",
+            Retrieve = "Ge/SetCountry/Retrieve",
+            List = "Ge/SetCountry/List"
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+}
+declare namespace GestionEquestre.Ge {
+    interface SetGalopForm {
+        DefaultValue: Serenity.BooleanEditor;
+        IsActive: Serenity.BooleanEditor;
+        InsertDate: Serenity.DateEditor;
+        InsertUsername: Serenity.StringEditor;
+        UpdateDate: Serenity.DateEditor;
+        UpdateUsername: Serenity.StringEditor;
+        Caption: Serenity.StringEditor;
+        Code: Serenity.StringEditor;
+    }
+    class SetGalopForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace GestionEquestre.Ge {
+    interface SetGalopRow {
+        Id?: number;
+        DefaultValue?: boolean;
+        IsActive?: boolean;
+        InsertDate?: string;
+        InsertUserId?: number;
+        UpdateDate?: string;
+        UpdateUserId?: number;
+        Caption?: string;
+        Code?: string;
+        InsertUsername?: string;
+        UpdateUsername?: string;
+    }
+    namespace SetGalopRow {
+        const idProperty = "Id";
+        const nameProperty = "Caption";
+        const localTextPrefix = "Ge.SetGalop";
+        const lookupKey = "Ge.SetGalop";
+        function getLookup(): Q.Lookup<SetGalopRow>;
+        const deletePermission = "Administration:General";
+        const insertPermission = "Administration:General";
+        const readPermission = "Administration:General";
+        const updatePermission = "Administration:General";
+        const enum Fields {
+            Id = "Id",
+            DefaultValue = "DefaultValue",
+            IsActive = "IsActive",
+            InsertDate = "InsertDate",
+            InsertUserId = "InsertUserId",
+            UpdateDate = "UpdateDate",
+            UpdateUserId = "UpdateUserId",
+            Caption = "Caption",
+            Code = "Code",
+            InsertUsername = "InsertUsername",
+            UpdateUsername = "UpdateUsername"
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+    namespace SetGalopService {
+        const baseUrl = "Ge/SetGalop";
+        function Create(request: Serenity.SaveRequest<SetGalopRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<SetGalopRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<SetGalopRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<SetGalopRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "Ge/SetGalop/Create",
+            Update = "Ge/SetGalop/Update",
+            Delete = "Ge/SetGalop/Delete",
+            Retrieve = "Ge/SetGalop/Retrieve",
+            List = "Ge/SetGalop/List"
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+}
+declare namespace GestionEquestre.Ge {
+    interface SetLfcForm {
+        DefaultValue: Serenity.BooleanEditor;
+        IsActive: Serenity.BooleanEditor;
+        InsertDate: Serenity.DateEditor;
+        InsertUsername: Serenity.StringEditor;
+        UpdateDate: Serenity.DateEditor;
+        UpdateUsername: Serenity.StringEditor;
+        Caption: Serenity.StringEditor;
+        Code: Serenity.StringEditor;
+    }
+    class SetLfcForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace GestionEquestre.Ge {
+    interface SetLfcRow {
+        Id?: number;
+        DefaultValue?: boolean;
+        IsActive?: boolean;
+        InsertDate?: string;
+        InsertUserId?: number;
+        UpdateDate?: string;
+        UpdateUserId?: number;
+        Caption?: string;
+        Code?: string;
+        InsertUsername?: string;
+        UpdateUsername?: string;
+    }
+    namespace SetLfcRow {
+        const idProperty = "Id";
+        const nameProperty = "Caption";
+        const localTextPrefix = "Ge.SetLfc";
+        const lookupKey = "Ge.SetLfc";
+        function getLookup(): Q.Lookup<SetLfcRow>;
+        const deletePermission = "Administration:General";
+        const insertPermission = "Administration:General";
+        const readPermission = "Administration:General";
+        const updatePermission = "Administration:General";
+        const enum Fields {
+            Id = "Id",
+            DefaultValue = "DefaultValue",
+            IsActive = "IsActive",
+            InsertDate = "InsertDate",
+            InsertUserId = "InsertUserId",
+            UpdateDate = "UpdateDate",
+            UpdateUserId = "UpdateUserId",
+            Caption = "Caption",
+            Code = "Code",
+            InsertUsername = "InsertUsername",
+            UpdateUsername = "UpdateUsername"
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+    namespace SetLfcService {
+        const baseUrl = "Ge/SetLfc";
+        function Create(request: Serenity.SaveRequest<SetLfcRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<SetLfcRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<SetLfcRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<SetLfcRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "Ge/SetLfc/Create",
+            Update = "Ge/SetLfc/Update",
+            Delete = "Ge/SetLfc/Delete",
+            Retrieve = "Ge/SetLfc/Retrieve",
+            List = "Ge/SetLfc/List"
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+}
+declare namespace GestionEquestre.Ge {
+    interface SetMaritalstatusForm {
+        DefaultValue: Serenity.BooleanEditor;
+        IsActive: Serenity.BooleanEditor;
+        InsertDate: Serenity.DateEditor;
+        InsertUsername: Serenity.StringEditor;
+        UpdateDate: Serenity.DateEditor;
+        UpdateUsername: Serenity.StringEditor;
+        Caption: Serenity.StringEditor;
+        Code: Serenity.StringEditor;
+    }
+    class SetMaritalstatusForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace GestionEquestre.Ge {
+    interface SetMaritalstatusRow {
+        Id?: number;
+        DefaultValue?: boolean;
+        IsActive?: boolean;
+        InsertDate?: string;
+        InsertUserId?: number;
+        UpdateDate?: string;
+        UpdateUserId?: number;
+        Caption?: string;
+        Code?: string;
+        InsertUsername?: string;
+        UpdateUsername?: string;
+    }
+    namespace SetMaritalstatusRow {
+        const idProperty = "Id";
+        const nameProperty = "Caption";
+        const localTextPrefix = "Ge.SetMaritalstatus";
+        const lookupKey = "Ge.SetMaritalstatus";
+        function getLookup(): Q.Lookup<SetMaritalstatusRow>;
+        const deletePermission = "Administration:General";
+        const insertPermission = "Administration:General";
+        const readPermission = "Administration:General";
+        const updatePermission = "Administration:General";
+        const enum Fields {
+            Id = "Id",
+            DefaultValue = "DefaultValue",
+            IsActive = "IsActive",
+            InsertDate = "InsertDate",
+            InsertUserId = "InsertUserId",
+            UpdateDate = "UpdateDate",
+            UpdateUserId = "UpdateUserId",
+            Caption = "Caption",
+            Code = "Code",
+            InsertUsername = "InsertUsername",
+            UpdateUsername = "UpdateUsername"
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+    namespace SetMaritalstatusService {
+        const baseUrl = "Ge/SetMaritalstatus";
+        function Create(request: Serenity.SaveRequest<SetMaritalstatusRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<SetMaritalstatusRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<SetMaritalstatusRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<SetMaritalstatusRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "Ge/SetMaritalstatus/Create",
+            Update = "Ge/SetMaritalstatus/Update",
+            Delete = "Ge/SetMaritalstatus/Delete",
+            Retrieve = "Ge/SetMaritalstatus/Retrieve",
+            List = "Ge/SetMaritalstatus/List"
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+}
+declare namespace GestionEquestre.Ge {
+    interface SetSexeForm {
+        SexeId: Serenity.IntegerEditor;
+        DefaultValue: Serenity.BooleanEditor;
+        IsActive: Serenity.BooleanEditor;
+        InsertDate: Serenity.DateEditor;
+        InsertUsername: Serenity.StringEditor;
+        UpdateDate: Serenity.DateEditor;
+        UpdateUsername: Serenity.StringEditor;
+        Caption: Serenity.StringEditor;
+        Civility: Serenity.StringEditor;
+    }
+    class SetSexeForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace GestionEquestre.Ge {
+    interface SetSexeLangRow {
+        Id?: number;
+        SexeId?: number;
+        LanguageId?: number;
+        Caption?: string;
+        SexeDefaultValue?: boolean;
+        SexeIsActive?: boolean;
+        SexeInsertDate?: string;
+        SexeInsertUserId?: number;
+        SexeUpdateDate?: string;
+        SexeUpdateUserId?: number;
+        SexeCaption?: string;
+        SexeCivility?: string;
+    }
+    namespace SetSexeLangRow {
+        const idProperty = "Id";
+        const nameProperty = "Caption";
+        const localTextPrefix = "Ge.SetSexeLang";
+        const deletePermission = "Administration:General";
+        const insertPermission = "Administration:General";
+        const readPermission = "Administration:General";
+        const updatePermission = "Administration:General";
+        const enum Fields {
+            Id = "Id",
+            SexeId = "SexeId",
+            LanguageId = "LanguageId",
+            Caption = "Caption",
+            SexeDefaultValue = "SexeDefaultValue",
+            SexeIsActive = "SexeIsActive",
+            SexeInsertDate = "SexeInsertDate",
+            SexeInsertUserId = "SexeInsertUserId",
+            SexeUpdateDate = "SexeUpdateDate",
+            SexeUpdateUserId = "SexeUpdateUserId",
+            SexeCaption = "SexeCaption",
+            SexeCivility = "SexeCivility"
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+    interface SetSexeRow {
+        SexeId?: number;
+        DefaultValue?: boolean;
+        IsActive?: boolean;
+        InsertDate?: string;
+        InsertUserId?: number;
+        UpdateDate?: string;
+        UpdateUserId?: number;
+        Caption?: string;
+        Civility?: string;
+        InsertUsername?: string;
+        UpdateUsername?: string;
+    }
+    namespace SetSexeRow {
+        const idProperty = "SexeId";
+        const nameProperty = "Caption";
+        const localTextPrefix = "Ge.SetSexe";
+        const lookupKey = "Ge.SexeHorses";
+        function getLookup(): Q.Lookup<SetSexeRow>;
+        const deletePermission = "Administration:General";
+        const insertPermission = "Administration:General";
+        const readPermission = "Administration:General";
+        const updatePermission = "Administration:General";
+        const enum Fields {
+            SexeId = "SexeId",
+            DefaultValue = "DefaultValue",
+            IsActive = "IsActive",
+            InsertDate = "InsertDate",
+            InsertUserId = "InsertUserId",
+            UpdateDate = "UpdateDate",
+            UpdateUserId = "UpdateUserId",
+            Caption = "Caption",
+            Civility = "Civility",
+            InsertUsername = "InsertUsername",
+            UpdateUsername = "UpdateUsername"
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+    namespace SetSexeService {
+        const baseUrl = "Ge/SetSexe";
+        function Create(request: Serenity.SaveRequest<SetSexeRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<SetSexeRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<SetSexeRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<SetSexeRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "Ge/SetSexe/Create",
+            Update = "Ge/SetSexe/Update",
+            Delete = "Ge/SetSexe/Delete",
+            Retrieve = "Ge/SetSexe/Retrieve",
+            List = "Ge/SetSexe/List"
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+}
+declare namespace GestionEquestre.Ge {
+    interface SetUelnorgaForm {
+        DefaultValue: Serenity.BooleanEditor;
+        IsActive: Serenity.BooleanEditor;
+        InsertDate: Serenity.DateEditor;
+        InsertUsername: Serenity.StringEditor;
+        UpdateDate: Serenity.DateEditor;
+        UpdateUsername: Serenity.StringEditor;
+        Organization: Serenity.StringEditor;
+        UelnCode: Serenity.StringEditor;
+    }
+    class SetUelnorgaForm extends Serenity.PrefixedContext {
+        static formKey: string;
+        private static init;
+        constructor(prefix: string);
+    }
+}
+declare namespace GestionEquestre.Ge {
+    interface SetUelnorgaRow {
+        Id?: number;
+        DefaultValue?: boolean;
+        IsActive?: boolean;
+        InsertDate?: string;
+        InsertUserId?: number;
+        UpdateDate?: string;
+        UpdateUserId?: number;
+        Organization?: string;
+        UelnCode?: string;
+        InsertUsername?: string;
+        UpdateUsername?: string;
+    }
+    namespace SetUelnorgaRow {
+        const idProperty = "Id";
+        const nameProperty = "Organization";
+        const localTextPrefix = "Ge.SetUelnorga";
+        const lookupKey = "Ge.SetUelnorga";
+        function getLookup(): Q.Lookup<SetUelnorgaRow>;
+        const deletePermission = "Administration:General";
+        const insertPermission = "Administration:General";
+        const readPermission = "Administration:General";
+        const updatePermission = "Administration:General";
+        const enum Fields {
+            Id = "Id",
+            DefaultValue = "DefaultValue",
+            IsActive = "IsActive",
+            InsertDate = "InsertDate",
+            InsertUserId = "InsertUserId",
+            UpdateDate = "UpdateDate",
+            UpdateUserId = "UpdateUserId",
+            Organization = "Organization",
+            UelnCode = "UelnCode",
+            InsertUsername = "InsertUsername",
+            UpdateUsername = "UpdateUsername"
+        }
+    }
+}
+declare namespace GestionEquestre.Ge {
+    namespace SetUelnorgaService {
+        const baseUrl = "Ge/SetUelnorga";
+        function Create(request: Serenity.SaveRequest<SetUelnorgaRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Update(request: Serenity.SaveRequest<SetUelnorgaRow>, onSuccess?: (response: Serenity.SaveResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Delete(request: Serenity.DeleteRequest, onSuccess?: (response: Serenity.DeleteResponse) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function Retrieve(request: Serenity.RetrieveRequest, onSuccess?: (response: Serenity.RetrieveResponse<SetUelnorgaRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        function List(request: Serenity.ListRequest, onSuccess?: (response: Serenity.ListResponse<SetUelnorgaRow>) => void, opt?: Q.ServiceOptions<any>): JQueryXHR;
+        const enum Methods {
+            Create = "Ge/SetUelnorga/Create",
+            Update = "Ge/SetUelnorga/Update",
+            Delete = "Ge/SetUelnorga/Delete",
+            Retrieve = "Ge/SetUelnorga/Retrieve",
+            List = "Ge/SetUelnorga/List"
+        }
+    }
+}
 declare namespace GestionEquestre {
     interface GetNextNumberRequest extends Serenity.ServiceRequest {
         Prefix?: string;
@@ -3279,6 +5433,441 @@ declare namespace GestionEquestre.Common {
     class UserPreferenceStorage implements Serenity.SettingStorage {
         getItem(key: string): string;
         setItem(key: string, data: string): void;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class ManFolderDialog extends Serenity.EntityDialog<ManFolderRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: ManFolderForm;
+        private FolderHorseGrid;
+        private FolderCavalierGrid;
+        private FolderPersonGrid;
+        private loadedState;
+        constructor();
+        loadEntity(entity: ManFolderRow): void;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class ManFolderGrid extends Serenity.EntityGrid<ManFolderRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof ManFolderDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+        protected addButtonClick(): void;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class LinkFolderCavalierDialog extends Serenity.EntityDialog<LinkFolderCavalierDialog, any> {
+        constructor();
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class LinkFolderCavalierGrid extends Serenity.EntityGrid<LinkFolderCavalierRow, any> {
+        protected getColumnsKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        constructor(container: JQuery);
+        protected getColumns(): Slick.Column[];
+        protected onClick(e: JQueryEventObject, row: number, cell: number): void;
+        protected editItem(entityOrId: any): void;
+        protected initEntityDialog(itemType: any, dialog: any): void;
+        protected createQuickSearchInput(): void;
+        protected getButtons(): Serenity.ToolButton[];
+        protected addButtonClick(): void;
+        protected getInitialTitle(): any;
+        protected usePager(): boolean;
+        protected getGridCanLoad(): boolean;
+        private _Folder;
+        get Folder(): number;
+        set Folder(value: number);
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class LinkFolderHorseDialog extends Serenity.EntityDialog<LinkFolderHorseDialog, any> {
+        constructor();
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class LinkFolderHorseGrid extends Serenity.EntityGrid<LinkFolderHorseRow, any> {
+        protected getColumnsKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        constructor(container: JQuery);
+        protected getColumns(): Slick.Column[];
+        protected onClick(e: JQueryEventObject, row: number, cell: number): void;
+        protected editItem(entityOrId: any): void;
+        protected initEntityDialog(itemType: any, dialog: any): void;
+        protected createQuickSearchInput(): void;
+        protected getButtons(): Serenity.ToolButton[];
+        protected addButtonClick(): void;
+        protected getInitialTitle(): any;
+        protected usePager(): boolean;
+        protected getGridCanLoad(): boolean;
+        private _Folder;
+        get Folder(): number;
+        set Folder(value: number);
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class LinkFolderPersonDialog extends Serenity.EntityDialog<LinkFolderPersonDialog, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: LinkFolderPersonForm;
+        constructor();
+        private setPersonDetails;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class LinkFolderPersonGrid extends Serenity.EntityGrid<LinkFolderPersonRow, any> {
+        protected getColumnsKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        constructor(container: JQuery);
+        protected getColumns(): Slick.Column[];
+        protected onClick(e: JQueryEventObject, row: number, cell: number): void;
+        protected editItem(entityOrId: any): void;
+        protected initEntityDialog(itemType: any, dialog: any): void;
+        protected createQuickSearchInput(): void;
+        protected getButtons(): Serenity.ToolButton[];
+        protected addButtonClick(): void;
+        protected getInitialTitle(): any;
+        protected usePager(): boolean;
+        protected getGridCanLoad(): boolean;
+        private _Folder;
+        get Folder(): number;
+        set Folder(value: number);
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class AccBankaccountDialog extends Serenity.EntityDialog<AccBankaccountRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: AccBankaccountForm;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class AccBankaccountGrid extends Serenity.EntityGrid<AccBankaccountRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof AccBankaccountDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class ManAdressDialog extends Serenity.EntityDialog<ManAdressRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: ManAdressForm;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class ManAdressGrid extends Serenity.EntityGrid<ManAdressRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof ManAdressDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+        protected addButtonClick(): void;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class ManCavaliersDialog extends Serenity.EntityDialog<ManCavaliersRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: ManCavaliersForm;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class ManCavaliersGrid extends Serenity.EntityGrid<ManCavaliersRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof ManCavaliersDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+        protected addButtonClick(): void;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class ManHorsesDialog extends Serenity.EntityDialog<ManHorsesRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: ManHorsesForm;
+        constructor();
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class ManHorsesGrid extends Serenity.EntityGrid<ManHorsesRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof ManHorsesDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+        protected addButtonClick(): void;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class ManOwnerDialog extends Serenity.EntityDialog<ManOwnerRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: ManOwnerForm;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class ManOwnerGrid extends Serenity.EntityGrid<ManOwnerRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof ManOwnerDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+        protected addButtonClick(): void;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class ManPersonDialog extends Serenity.EntityDialog<ManPersonRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: ManPersonForm;
+        V: any;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class ManPersonGrid extends Serenity.EntityGrid<ManPersonRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof ManPersonDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+        protected addButtonClick(): void;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class ManPersonLookupEditor extends Serenity.LookupEditorBase<Serenity.LookupEditorOptions, ManPersonRow> {
+        constructor(container: JQuery, options: Serenity.LookupEditorOptions);
+        protected GetLookupKey(): string;
+        protected getItemText(item: Ge.ManPersonRow, lookup: Q.Lookup<Ge.ManPersonRow>): string;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class CorCorporateDialog extends Serenity.EntityDialog<CorCorporateRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: CorCorporateForm;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class CorCorporateGrid extends Serenity.EntityGrid<CorCorporateRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof CorCorporateDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+        protected addButtonClick(): void;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class CorEtabDialog extends Serenity.EntityDialog<CorEtabRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: CorEtabForm;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class CorEtabGrid extends Serenity.EntityGrid<CorEtabRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof CorEtabDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+        protected addButtonClick(): void;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class SetCityDialog extends Serenity.EntityDialog<SetCityRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: SetCityForm;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class SetCityGrid extends Serenity.EntityGrid<SetCityRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof SetCityDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+        protected addButtonClick(): void;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class SetCountryDialog extends Serenity.EntityDialog<SetCountryRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: SetCountryForm;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class SetCountryGrid extends Serenity.EntityGrid<SetCountryRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof SetCountryDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+        protected addButtonClick(): void;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class SetGalopDialog extends Serenity.EntityDialog<SetGalopRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: SetGalopForm;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class SetGalopGrid extends Serenity.EntityGrid<SetGalopRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof SetGalopDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+        protected addButtonClick(): void;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class SetLfcDialog extends Serenity.EntityDialog<SetLfcRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: SetLfcForm;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class SetLfcGrid extends Serenity.EntityGrid<SetLfcRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof SetLfcDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+        protected addButtonClick(): void;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class SetMaritalstatusDialog extends Serenity.EntityDialog<SetMaritalstatusRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: SetMaritalstatusForm;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class SetMaritalstatusGrid extends Serenity.EntityGrid<SetMaritalstatusRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof SetMaritalstatusDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+        protected addButtonClick(): void;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class SetSexeDialog extends Serenity.EntityDialog<SetSexeRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: SetSexeForm;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class SetSexeGrid extends Serenity.EntityGrid<SetSexeRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof SetSexeDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+        protected addButtonClick(): void;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class SetUelnorgaDialog extends Serenity.EntityDialog<SetUelnorgaRow, any> {
+        protected getFormKey(): string;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getNameProperty(): string;
+        protected getService(): string;
+        protected form: SetUelnorgaForm;
+    }
+}
+declare namespace GestionEquestre.Ge {
+    class SetUelnorgaGrid extends Serenity.EntityGrid<SetUelnorgaRow, any> {
+        protected getColumnsKey(): string;
+        protected getDialogType(): typeof SetUelnorgaDialog;
+        protected getIdProperty(): string;
+        protected getLocalTextPrefix(): string;
+        protected getService(): string;
+        constructor(container: JQuery);
+        protected addButtonClick(): void;
     }
 }
 declare namespace GestionEquestre.Membership {

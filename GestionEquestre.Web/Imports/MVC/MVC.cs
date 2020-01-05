@@ -287,6 +287,103 @@ namespace MVC
             public const string ValidationError = "~/Views/Errors/ValidationError.cshtml";
         }
 
+        public static class Ge
+        {
+            public static class Folder
+            {
+                public const string ManFolderIndex = "~/Modules/Ge/Folder/ManFolderIndex.cshtml";
+            }
+
+            public static class Management
+            {
+                public static class AccBankaccount
+                {
+                    public const string AccBankaccountIndex = "~/Modules/Ge/Management/AccBankaccount/AccBankaccountIndex.cshtml";
+                }
+
+                public static class Adress
+                {
+                    public const string ManAdressIndex = "~/Modules/Ge/Management/Adress/ManAdressIndex.cshtml";
+                }
+
+                public static class Cavaliers
+                {
+                    public const string ManCavaliersIndex = "~/Modules/Ge/Management/Cavaliers/ManCavaliersIndex.cshtml";
+                }
+
+                public static class Horses
+                {
+                    public const string ManHorsesIndex = "~/Modules/Ge/Management/Horses/ManHorsesIndex.cshtml";
+                    public static class Owner
+                    {
+                        public const string ManOwnerIndex = "~/Modules/Ge/Management/Horses/Owner/ManOwnerIndex.cshtml";
+                    }
+                }
+
+                public static class Person
+                {
+                    public const string ManPersonIndex = "~/Modules/Ge/Management/Person/ManPersonIndex.cshtml";
+                }
+
+            }
+
+            public static class Settings
+            {
+                public static class Administration
+                {
+                    public static class CorCorporate
+                    {
+                        public const string CorCorporateIndex = "~/Modules/Ge/Settings/Administration/CorCorporate/CorCorporateIndex.cshtml";
+                    }
+
+                    public static class CorEtab
+                    {
+                        public const string CorEtabIndex = "~/Modules/Ge/Settings/Administration/CorEtab/CorEtabIndex.cshtml";
+                    }
+
+                }
+
+                public static class GlobalsSettings
+                {
+                    public static class City
+                    {
+                        public const string SetCityIndex = "~/Modules/Ge/Settings/GlobalsSettings/City/SetCityIndex.cshtml";
+                    }
+
+                    public static class Country
+                    {
+                        public const string SetCountryIndex = "~/Modules/Ge/Settings/GlobalsSettings/Country/SetCountryIndex.cshtml";
+                    }
+
+                    public static class Galop
+                    {
+                        public const string SetGalopIndex = "~/Modules/Ge/Settings/GlobalsSettings/Galop/SetGalopIndex.cshtml";
+                    }
+
+                    public static class Lfc
+                    {
+                        public const string SetLfcIndex = "~/Modules/Ge/Settings/GlobalsSettings/Lfc/SetLfcIndex.cshtml";
+                    }
+
+                    public static class Maritalstatus
+                    {
+                        public const string SetMaritalstatusIndex = "~/Modules/Ge/Settings/GlobalsSettings/Maritalstatus/SetMaritalstatusIndex.cshtml";
+                    }
+
+                    public static class Sexe
+                    {
+                        public const string SetSexeIndex = "~/Modules/Ge/Settings/GlobalsSettings/Sexe/SetSexeIndex.cshtml";
+                    }
+
+                    public static class Uelnorga
+                    {
+                        public const string SetUelnorgaIndex = "~/Modules/Ge/Settings/GlobalsSettings/Uelnorga/SetUelnorgaIndex.cshtml";
+                    }
+                }
+            }
+
+        }
+
         public static class Membership
         {
             public static class Account
