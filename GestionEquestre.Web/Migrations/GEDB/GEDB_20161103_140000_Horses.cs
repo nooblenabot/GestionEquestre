@@ -13,7 +13,7 @@ namespace GestionEquestre.Migrations.GEDB
             Action<ICreateTableWithColumnSyntax> addUsersColumns = expr => expr
                 .WithColumn("SIRE").AsFixedLengthString(8).Nullable()
                 .WithColumn("CLE_SIRE").AsFixedLengthString(1).Nullable()
-                .WithColumn("HNIN").AsFixedLengthString(9).NotNullable()
+                .WithColumn("HNIN").AsFixedLengthString(9).Nullable()
                 .WithColumn("BirthCountry").AsString(3).NotNullable()
                 .WithColumn("BirthOrganization").AsInt32().NotNullable()
                 .WithColumn("Name").AsString(100).NotNullable()

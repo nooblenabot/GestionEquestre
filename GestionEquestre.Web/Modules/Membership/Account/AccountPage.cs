@@ -47,6 +47,7 @@ namespace GestionEquestre.Membership.Pages
                 if (WebSecurityHelper.Authenticate(ref username, request.Password, false))
                     return new ServiceResponse();
 
+                
                 throw new ValidationError("AuthenticationError", Texts.Validation.AuthenticationError);
             });
         }

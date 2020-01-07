@@ -17,10 +17,10 @@
         export const idProperty = 'SexeId';
         export const nameProperty = 'Caption';
         export const localTextPrefix = 'Ge.SetSexe';
-        export const lookupKey = 'Ge.SexeHorses';
+        export const lookupKey = 'Ge.Sexe';
 
         export function getLookup(): Q.Lookup<SetSexeRow> {
-            return Q.getLookup<SetSexeRow>('Ge.SexeHorses');
+            return Q.getLookup<SetSexeRow>('Ge.Sexe');
         }
         export const deletePermission = 'Administration:General';
         export const insertPermission = 'Administration:General';

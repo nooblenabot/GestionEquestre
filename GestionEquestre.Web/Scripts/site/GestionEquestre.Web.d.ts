@@ -2731,7 +2731,7 @@ declare namespace GestionEquestre.Ge {
         const idProperty = "SexeId";
         const nameProperty = "Caption";
         const localTextPrefix = "Ge.SetSexe";
-        const lookupKey = "Ge.SexeHorses";
+        const lookupKey = "Ge.Sexe";
         function getLookup(): Q.Lookup<SetSexeRow>;
         const deletePermission = "Administration:General";
         const insertPermission = "Administration:General";

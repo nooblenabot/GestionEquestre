@@ -17,7 +17,6 @@ namespace GestionEquestre.Ge.Entities
     public sealed class ManHorsesRow : Row, IIdRow, INameRow
     {
         [DisplayName("Ueln"), Column("UELN"), Size(15), PrimaryKey, QuickSearch]
-        //[Expression("CONCAT(T0.[BirthCountry],CONCAT(T0.[BirthOrganization],T0.[HNIN]))")]
         public String Ueln
         {
             get { return Fields.Ueln[this]; }
@@ -38,8 +37,7 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.CleSire[this] = value; }
         }
 
-        [DisplayName("Hnin"), Column("HNIN"), Size(9), NotNull]
-        //[Expression("CONCAT(T0.[SIRE],T0.[CLE_SIRE]) WHERE T0.[SIRE] is not NULL")]
+        [DisplayName("Hnin"), Column("HNIN"), Size(9),HideOnInsert,HideOnUpdate]
         public String Hnin
         {
             get { return Fields.Hnin[this]; }

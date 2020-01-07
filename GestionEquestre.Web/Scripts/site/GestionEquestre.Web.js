@@ -2084,9 +2084,9 @@ var GestionEquestre;
             SetSexeRow.idProperty = 'SexeId';
             SetSexeRow.nameProperty = 'Caption';
             SetSexeRow.localTextPrefix = 'Ge.SetSexe';
-            SetSexeRow.lookupKey = 'Ge.SexeHorses';
+            SetSexeRow.lookupKey = 'Ge.Sexe';
             function getLookup() {
-                return Q.getLookup('Ge.SexeHorses');
+                return Q.getLookup('Ge.Sexe');
             }
             SetSexeRow.getLookup = getLookup;
             SetSexeRow.deletePermission = 'Administration:General';
@@ -9435,8 +9435,35 @@ var GestionEquestre;
             function ManHorsesDialog() {
                 var _this = _super.call(this) || this;
                 _this.form = new Ge.ManHorsesForm(_this.idPrefix);
+                _this.form.Sire.change(function (e) {
+                    var Sire = _this.form.Sire.value;
+                    var CleSire = _this.form.CleSire.value;
+                    var BirthCountry = _this.form.BirthCountry.value;
+                    var BirthOrganization = _this.form.BirthOrganization.value;
+                    _this.form.Ueln.value = BirthCountry + BirthOrganization + Sire + CleSire;
+                });
+                _this.form.CleSire.change(function (e) {
+                    var Sire = _this.form.Sire.value;
+                    var CleSire = _this.form.CleSire.value;
+                    var BirthCountry = _this.form.BirthCountry.value;
+                    var BirthOrganization = _this.form.BirthOrganization.value;
+                    _this.form.Ueln.value = BirthCountry + BirthOrganization + Sire + CleSire;
+                });
+                _this.form.BirthCountry.change(function (e) {
+                    var Sire = _this.form.Sire.value;
+                    var CleSire = _this.form.CleSire.value;
+                    var BirthCountry = _this.form.BirthCountry.value;
+                    var BirthOrganization = _this.form.BirthOrganization.value;
+                    _this.form.Ueln.value = BirthCountry + BirthOrganization + Sire + CleSire;
+                });
+                _this.form.BirthOrganization.change(function (e) {
+                    var Sire = _this.form.Sire.value;
+                    var CleSire = _this.form.CleSire.value;
+                    var BirthCountry = _this.form.BirthCountry.value;
+                    var BirthOrganization = _this.form.BirthOrganization.value;
+                    _this.form.Ueln.value = BirthCountry + BirthOrganization + Sire + CleSire;
+                });
                 return _this;
-                //this.form.Hnin.change(e => { });
             }
             ManHorsesDialog.prototype.getFormKey = function () { return Ge.ManHorsesForm.formKey; };
             ManHorsesDialog.prototype.getIdProperty = function () { return Ge.ManHorsesRow.idProperty; };

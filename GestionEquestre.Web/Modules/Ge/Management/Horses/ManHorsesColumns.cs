@@ -18,6 +18,7 @@ namespace GestionEquestre.Ge.Columns
         public String Ueln { get; set; }
         public String Sire { get; set; }
         public String CleSire { get; set; }
+        [Hidden]
         public String Hnin { get; set; }
         public String BirthCountryName_FR_fr { get; set; }
         public String BirthOrganizationOrganization { get; set; }
