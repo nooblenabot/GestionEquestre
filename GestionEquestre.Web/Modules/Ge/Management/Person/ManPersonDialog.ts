@@ -12,7 +12,42 @@ namespace GestionEquestre.Ge {
 
         protected form = new ManPersonForm(this.idPrefix);
 
-        V
+        constructor() {
+            super();
+
+            this.form.Name.change(e => {
+                var Name = this.form.Name.value;
+                var Surname = this.form.Surname.value;
+                var MaidenName = this.form.MaidenName.value;
+                var BusinessName = this.form.BusinessName.value;
+                this.form.FullName.value = BusinessName +' ' + Surname + ' ' + MaidenName + ' ' + Name;
+            });
+
+            this.form.Surname.change(e => {
+                var Name = this.form.Name.value;
+                var Surname = this.form.Surname.value;
+                var MaidenName = this.form.MaidenName.value;
+                var BusinessName = this.form.BusinessName.value;
+                this.form.FullName.value = BusinessName + ' ' + Surname + ' ' + MaidenName + ' ' + Name;
+            });
+
+            this.form.MaidenName.change(e => {
+                var Name = this.form.Name.value;
+                var Surname = this.form.Surname.value;
+                var MaidenName = this.form.MaidenName.value;
+                var BusinessName = this.form.BusinessName.value;
+                this.form.FullName.value = BusinessName + ' ' + Surname + ' ' + MaidenName + ' ' + Name;
+            });
+
+            this.form.BusinessName.change(e => {
+                var Name = this.form.Name.value;
+                var Surname = this.form.Surname.value;
+                var MaidenName = this.form.MaidenName.value;
+                var BusinessName = this.form.BusinessName.value;
+                this.form.FullName.value = BusinessName + ' ' + Surname + ' ' + MaidenName + ' ' + Name;
+            });
+
+        }
 
     }
 }

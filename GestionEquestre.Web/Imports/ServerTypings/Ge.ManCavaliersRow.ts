@@ -27,6 +27,7 @@
         PersonName?: string;
         PersonMaidenName?: string;
         PersonBusinessName?: string;
+        PersonFullName?: string;
         PersonBirthday?: string;
         PersonSexe?: number;
         PersonMaritalStatus?: number;
@@ -105,6 +106,7 @@
             PersonName = "PersonName",
             PersonMaidenName = "PersonMaidenName",
             PersonBusinessName = "PersonBusinessName",
+            PersonFullName = "PersonFullName",
             PersonBirthday = "PersonBirthday",
             PersonSexe = "PersonSexe",
             PersonMaritalStatus = "PersonMaritalStatus",

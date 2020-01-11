@@ -15,8 +15,7 @@ namespace GestionEquestre.Ge.Columns
     {
         [EditLink, DisplayName("Db.Shared.RecordId"), AlignRight]
         public String LicFfe { get; set; }
-        public String DisplayName { get; set; }
-        public String PersonSurname { get; set; }
+        public String PersonFullName { get; set; }
         public Boolean IsActive { get; set; }
         public Boolean IsArchive { get; set; }
         public DateTime InsertDate { get; set; }

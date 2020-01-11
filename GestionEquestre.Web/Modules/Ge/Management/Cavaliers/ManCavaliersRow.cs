@@ -23,8 +23,8 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.LicFfe[this] = value; }
         }
 
-        [DisplayName("Person"), NotNull, ForeignKey("[dbo].[MAN_PERSON]", "Id"), LeftJoin("jPerson"), TextualField("PersonSurname")]
-        [LookupEditor(typeof(Ge.Scripts.ManPersonActiveLookup), MinimumResultsForSearch = 1, InplaceAdd = false),LookupInclude]
+        [DisplayName("Person"), NotNull, ForeignKey("[dbo].[MAN_PERSON]", "Id"), LeftJoin("jPerson"), TextualField("PersonFullName")]
+        [LookupEditor(typeof(Scripts.ManPersonActiveLookup), MinimumResultsForSearch = 1, InplaceAdd = false)]
         public Int64? Person
         {
             get { return Fields.Person[this]; }
@@ -196,6 +196,12 @@ namespace GestionEquestre.Ge.Entities
         {
             get { return Fields.PersonBusinessName[this]; }
             set { Fields.PersonBusinessName[this] = value; }
+        }
+        [DisplayName("Person Full Name"), Expression("jPerson.[FullName]"), LookupInclude]
+        public String PersonFullName
+        {
+            get { return Fields.PersonFullName[this]; }
+            set { Fields.PersonFullName[this] = value; }
         }
         [DisplayName("Person Birthday"), Expression("jPerson.[Birthday]")]
         public DateTime? PersonBirthday
@@ -449,6 +455,7 @@ namespace GestionEquestre.Ge.Entities
             public StringField PersonName;
             public StringField PersonMaidenName;
             public StringField PersonBusinessName;
+            public StringField PersonFullName;
             public DateTimeField PersonBirthday;
             public Int16Field PersonSexe;
             public Int16Field PersonMaritalStatus;

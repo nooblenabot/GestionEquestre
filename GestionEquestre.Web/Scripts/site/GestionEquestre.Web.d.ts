@@ -1441,6 +1441,7 @@ declare namespace GestionEquestre.Ge {
         PersonName?: string;
         PersonMaidenName?: string;
         PersonBusinessName?: string;
+        PersonFullName?: string;
         PersonBirthday?: string;
         PersonSexe?: number;
         PersonMaritalStatus?: number;
@@ -1514,6 +1515,7 @@ declare namespace GestionEquestre.Ge {
             PersonName = "PersonName",
             PersonMaidenName = "PersonMaidenName",
             PersonBusinessName = "PersonBusinessName",
+            PersonFullName = "PersonFullName",
             PersonBirthday = "PersonBirthday",
             PersonSexe = "PersonSexe",
             PersonMaritalStatus = "PersonMaritalStatus",
@@ -2098,7 +2100,7 @@ declare namespace GestionEquestre.Ge {
     }
     namespace ManPersonRow {
         const idProperty = "Id";
-        const nameProperty = "Surname";
+        const nameProperty = "FullName";
         const localTextPrefix = "Ge.ManPerson";
         const lookupKey = "Ge.Persons";
         function getLookup(): Q.Lookup<ManPersonRow>;
@@ -5660,7 +5662,7 @@ declare namespace GestionEquestre.Ge {
         protected getNameProperty(): string;
         protected getService(): string;
         protected form: ManPersonForm;
-        V: any;
+        constructor();
     }
 }
 declare namespace GestionEquestre.Ge {
@@ -5672,13 +5674,6 @@ declare namespace GestionEquestre.Ge {
         protected getService(): string;
         constructor(container: JQuery);
         protected addButtonClick(): void;
-    }
-}
-declare namespace GestionEquestre.Ge {
-    class ManPersonLookupEditor extends Serenity.LookupEditorBase<Serenity.LookupEditorOptions, ManPersonRow> {
-        constructor(container: JQuery, options: Serenity.LookupEditorOptions);
-        protected GetLookupKey(): string;
-        protected getItemText(item: Ge.ManPersonRow, lookup: Q.Lookup<Ge.ManPersonRow>): string;
     }
 }
 declare namespace GestionEquestre.Ge {

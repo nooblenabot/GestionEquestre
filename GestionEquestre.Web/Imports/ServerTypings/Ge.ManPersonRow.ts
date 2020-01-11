@@ -115,7 +115,7 @@
 
     export namespace ManPersonRow {
         export const idProperty = 'Id';
-        export const nameProperty = 'Surname';
+        export const nameProperty = 'FullName';
         export const localTextPrefix = 'Ge.ManPerson';
         export const lookupKey = 'Ge.Persons';
 

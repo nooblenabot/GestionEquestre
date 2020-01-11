@@ -72,35 +72,34 @@ namespace GestionEquestre.Ge.Entities
             set { Fields.UpdateUserId[this] = value; }
         }
 
-        [DisplayName("Surname"), Size(50), LookupInclude]
+        [DisplayName("Surname"), Size(50)]
         public String Surname
         {
             get { return Fields.Surname[this]; }
             set { Fields.Surname[this] = value; }
         }
 
-        [DisplayName("Name"), Size(50),LookupInclude]
+        [DisplayName("Name"), Size(50)]
         public String Name
         {
             get { return Fields.Name[this]; }
             set { Fields.Name[this] = value; }
         }
-
-        [Expression("CONCAT(T0.[Name], CONCAT(' ', T0.[Surname]))")]
+        [LookupInclude, QuickSearch]
         public string FullName
         {
             get { return Fields.FullName[this]; }
             set { Fields.FullName[this] = value; }
         }
 
-        [DisplayName("Maiden Name"), Size(50),LookupInclude]
+        [DisplayName("Maiden Name"), Size(50)]
         public String MaidenName
         {
             get { return Fields.MaidenName[this]; }
             set { Fields.MaidenName[this] = value; }
         }
 
-        [DisplayName("Business Name"), Size(200),LookupInclude]
+        [DisplayName("Business Name"), Size(200)]
         public String BusinessName
         {
             get { return Fields.BusinessName[this]; }
@@ -759,7 +758,7 @@ namespace GestionEquestre.Ge.Entities
 
         StringField INameRow.NameField
         {
-            get { return Fields.Surname; }
+            get { return Fields.FullName; }
         }
 
         public static readonly RowFields Fields = new RowFields().Init();

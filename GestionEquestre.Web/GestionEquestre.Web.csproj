@@ -1378,7 +1378,6 @@
     <TypeScriptCompile Include="Modules\Ge\Management\Horses\Owner\ManOwnerGrid.ts" />
     <TypeScriptCompile Include="Modules\Ge\Management\Person\ManPersonDialog.ts" />
     <TypeScriptCompile Include="Modules\Ge\Management\Person\ManPersonGrid.ts" />
-    <TypeScriptCompile Include="Modules\Ge\Management\Person\ManPersonLookupEditor.ts" />
     <TypeScriptCompile Include="Modules\Ge\Settings\Administration\CorCorporate\CorCorporateDialog.ts" />
     <TypeScriptCompile Include="Modules\Ge\Settings\Administration\CorCorporate\CorCorporateGrid.ts" />
     <TypeScriptCompile Include="Modules\Ge\Settings\Administration\CorEtab\CorEtabDialog.ts" />
@@ -2194,9 +2193,6 @@
     <Compile Include="App_Start\SiteInitialization.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="Imports\ClientTypes\Ge.ManPersonLookupEditorAttribute.cs">
-      <DependentUpon>ClientTypes.tt</DependentUpon>
     </Compile>
     <Compile Include="Migrations\GEDB\GEDB_20141103_140000_Initial.cs" />
     <Compile Include="Migrations\GEDB\GEDB_20141111_113000_Permissions.cs" />
