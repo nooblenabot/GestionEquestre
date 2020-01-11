@@ -15,36 +15,42 @@ namespace GestionEquestre.Ge {
         constructor() {
             super();
 
+            this.form = new ManHorsesForm(this.idPrefix);
+
             this.form.Sire.change(e => {
                 var Sire = this.form.Sire.value;
                 var CleSire = this.form.CleSire.value;
                 var BirthCountry = this.form.BirthCountry.value;
-                var BirthOrganization = this.form.BirthOrganization.value;
-                this.form.Ueln.value = BirthCountry + BirthOrganization + Sire + CleSire; 
+                var BirthOrganizationCodeId = this.form.BirthOrganization.value;
+                var BirthOrganizationCode = Ge.SetUelnorgaRow.getLookup().itemById[BirthOrganizationCodeId].UelnCode;
+                this.form.Ueln.value = BirthCountry + BirthOrganizationCode + Sire + CleSire; 
             });
 
             this.form.CleSire.change(e => {
                 var Sire = this.form.Sire.value;
                 var CleSire = this.form.CleSire.value;
                 var BirthCountry = this.form.BirthCountry.value;
-                var BirthOrganization = this.form.BirthOrganization.value;
-                this.form.Ueln.value = BirthCountry + BirthOrganization + Sire + CleSire;
+                var BirthOrganizationCodeId = this.form.BirthOrganization.value;
+                var BirthOrganizationCode = Ge.SetUelnorgaRow.getLookup().itemById[BirthOrganizationCodeId].UelnCode;
+                this.form.Ueln.value = BirthCountry + BirthOrganizationCode + Sire + CleSire;
             });
 
             this.form.BirthCountry.change(e => {
                 var Sire = this.form.Sire.value;
                 var CleSire = this.form.CleSire.value;
                 var BirthCountry = this.form.BirthCountry.value;
-                var BirthOrganization = this.form.BirthOrganization.value;
-                this.form.Ueln.value = BirthCountry + BirthOrganization + Sire + CleSire;
+                var BirthOrganizationCodeId = this.form.BirthOrganization.value;
+                var BirthOrganizationCode = Ge.SetUelnorgaRow.getLookup().itemById[BirthOrganizationCodeId].UelnCode;
+                this.form.Ueln.value = BirthCountry + BirthOrganizationCode + Sire + CleSire;
             });
 
             this.form.BirthOrganization.change(e => {
                 var Sire = this.form.Sire.value;
                 var CleSire = this.form.CleSire.value;
                 var BirthCountry = this.form.BirthCountry.value;
-                var BirthOrganization = this.form.BirthOrganization.value;
-                this.form.Ueln.value = BirthCountry + BirthOrganization + Sire + CleSire;
+                var BirthOrganizationCodeId = this.form.BirthOrganization.value;
+                var BirthOrganizationCode = Ge.SetUelnorgaRow.getLookup().itemById[BirthOrganizationCodeId].UelnCode;
+                this.form.Ueln.value = BirthCountry + BirthOrganizationCode + Sire + CleSire;
             });
       
         
